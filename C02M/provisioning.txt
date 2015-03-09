@@ -41,7 +41,7 @@
       • One doesn't know about their OS
       • Things can go really well despite the fact we don't know how to
         do it right
-  • Automated provisioning is handle by [kitchenplan]
+  • Automated provisioning is handled by [kitchenplan]
 
 
   [kitchenplan] https://github.com/grettke/kitchenplan
