@@ -1,0 +1,61 @@
+
+Manually install these fonts out of the ALEC dir:
+
+- DejaVu
+- NotoSans
+- NotoSansSymbols
+- Quivira
+- Symbola
+
+Then add them to OSX.
+
+- Extract if necessary
+- Start FontBook
+- Create a new COLLECTION "Emacs Fonts"
+- Drag them into that group
+  - You may drag the whole directory, Font Book will do the right thing
+
+Run it. Approve it. Configure it with with the following. Look for the
+heading with the name below following "Modify".
+
+#+begin_src sh
+Modify "Change Return Key".
+Check:
+"Return to Control_L
+(+ When you type Return only, send Return)"
+#+end_src
+
+Run it. Approve it. Set it to run at login.
+
+- GENERAL
+  - Launch Bartender at login: yes.
+  - At bartender launch: show bartender bar: NO.
+  - Bartender bar: autohides, YES.
+- Menu bar icon highlight
+  - Show when bartender bar is open: YES.
+  - Bartender menu baricon:
+- ADVANCED
+  - Bartender menu bar icon: visible YES.
+  - Clicking on bartender will: open bartender bar.
+  - For everything moved into the gutter
+  - I made it display in the main for 5m.
+
+- Ordered them (reorder by holding ⌘ and dragging them)
+  - little snitch
+  - wifi (AirPort)
+  - bluetooth
+  - dropbox
+  - skype
+  - battery
+  - date
+  - time
+  - volume
+  - user
+  - Keychain Access
+  - bartender
+  - Applications Menu Settings
+  - Spotlight
+  - Notification center
+
+Theory is most activity or cared about increasing to decreasing and then
+increasing again.

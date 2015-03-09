@@ -1,0 +1,78 @@
+
+Sign in. Just sync everything after copying locally of course.
+In Login Items, start Dropbox.
+
+As of writing, the installer just gets downloaded and you need to run it like
+this:
+
+#+begin_src sh
+/opt/homebrew-cask/Caskroom/little-snitch/3.5.1/Little Snitch Installer.app
+#+end_src
+
+- Gen
+  - Show inactive warning
+  - Silent mode: no
+  - Show status in menu bar.
+- Alert:
+  - Detail level: Show full details
+  - No: Confirm automatically
+  - NO: Confirm with return and escape.
+- Monitor:
+  - Keyboard shortcut: no
+  - Show network activity in menu bar.
+    - Show data rates numerically. Monochrome.
+  - Show auto when mouse enters. Hide in 2s.
+- APS
+  - No: Enable automatic profile switching
+  - Yes: Save geolocation of networks.
+- Security
+  - Allow rules and profile edit.
+  - Allow profile switch.
+  - Allow preference editing
+  - Respect privacy.
+- Advanced
+  - Approve rules automatically.
+Update
+  - Automatically check for updates daily
+Incoming connections
+  - Allow incoming connections from local networks, UDP, and ICMP.
+
+Sign into Chrome. Let the settings sync. All of the JS disabling stuff needs
+you to approve it. It is irritating. You always forget to approve it and make
+it worse. Disable ScriptSafe right away. Turn it on as needed.
+
+Install the standard plugins: NoScript, Blur.
+
+Set up Filezilla for WnW.
+
+Log in automatically. Preferences General. Never set my status away.
+Do not notify when I sign in or out, and others, and when they become
+available do nothing. Display technical call information yes. Do not collect
+call information. Login Items, add Skype in here.
+
+Log into SourceTree make sure it works.
+
+Copy over my .vimrc, once one exists.
+
+License it.
+
+Sign in. Make sure it works. Download everything so it is there.
+You can see files downloaded versus avalable to be sure.
+
+I haven't used R in a long time but I want to get it set up right again.
+Link my configs from ~/ into where they live now.
+This installer asks for my password, which halts the install. How will I deal
+with this?
+
+This doesn't need any config I think.
+
+Install the Vagrant provider for VMWare!!!
+
+- Terminal Preference: Terminal
+- Status Bar Icon Theme: Clean
+- Launch at login: Yes
+- Following settings: No
+- Refresh every: 5 seconds
+- Following settings: No
+- Allowed Updates: stable
+- Send anonymous profile data: Yes

@@ -1,0 +1,1105 @@
+			     ━━━━━━━━━━━━━━
+			      PROVISIONING
+
+
+			      Grant Rettke
+			     ━━━━━━━━━━━━━━
+
+
+
+
+
+1 Reminders
+═══════════
+
+  • Right-click to paste text into the terminal
+    • If you ⌘-v it, it doesn’t work right
+  • Make scripts executable and run them
+    • `sh' doesn’t do what you want and you always forget that
+  • If one of your purchased apps doesn’t show up in AppStore then just
+    buy it again
+    • The store will detect that you already own it ask you to install
+      it
+    • Growl always has this problem
+    • Used to reboot to fix it, but unreliable
+  • This whole thing only makes sense when you read it line by line
+    • The order is critical
+    • A lot of the steps are automated and you can run them all
+      automatically
+    • There is are still a lot of manual steps though
+    • For example automate app installs and manually configure them,
+      *before* moving on to the next section
+    • Every-thing must be completed before moving on to the next thing
+  • Try running every program
+    • Only way to identify failures
+    • Only way to automate the correct way
+    • Continue to find new issues and fixes
+  • Total transparency
+    • I've run this 5 times already
+    • Every time I run it I find new bugs and new improvements
+    • Provisioning reveals just how much
+      • One doesn't know about their OS
+      • Things can go really well despite the fact we don't know how to
+        do it right
+
+
+2 Prerequisites, Manual
+═══════════════════════
+
+2.1 Scripts
+───────────
+
+  • Copy current provsioning scripts to USB drive for reference and use
+
+
+2.2 Image Disk
+──────────────
+
+  • Boot from EF4829
+  • Wipe C02M
+  • Restore 01 to C02M
+  • Restore rescue partition on C02M
+  • Boot from C02M
+
+
+2.3 Recovery Partition
+──────────────────────
+
+  • ⌘-r to boot into it
+  • This makes sure that it works
+
+
+2.3.1 Console Password (One Time Only)
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • Set the firmware password
+
+
+2.4 System Preferences
+──────────────────────
+
+2.4.1 Keyboard
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • Swapped caps lock and control
+
+
+2.4.2 Displays
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • Mirror screens
+
+
+2.5 Software Updates
+────────────────────
+
+  • Installed software updates followed by manual reboot
+
+
+2.6 Profile
+───────────
+
+  Download the `~/.profile' and evaluate it.
+
+  ┌────
+  │ export PS1='\u@\h:\w> '
+  │ export HOMEBREW_NO_EMOJI=1
+  │ export INFOPATH='/usr/local/share/info:/usr/share/info'
+  │ export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+  │ source `brew --repository`/Library/Contributions/brew_bash_completion.sh
+  │ export EELIB="/Users/$(whoami)/EELIB"
+  │ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home"
+  │ export PATH=/usr/local/bin:$JAVA_HOME:$PATH
+  │ alias r='r --no-save'
+  │ alias R='r --no-save'
+  │ alias bc='~/git/github-grettke/stathon/stathon.py ~/git/bitbucket-grettke/ | grep True'
+  │ alias gc='~/git/github-grettke/stathon/stathon.py ~/git/github-grettke/ | grep True'
+  └────
+
+
+2.7 Xcode Command Line Tools
+────────────────────────────
+
+  Install the XCode Command Line Tools.
+
+  Reminder: choose "Install".
+
+  ┌────
+  │ xcode-select --install
+  └────
+
+
+2.8 Brew and BrewCask
+─────────────────────
+
+  Brew is [here].
+
+  BrewCask is [here].
+
+
+  [here] http://brew.sh
+
+  [here] http://caskroom.io
+
+
+3 Git, Semi-Automated
+═════════════════════
+
+3.1 Manual
+──────────
+
+  Install XQuartz and Meld.
+
+  This is the first BrewCask install, so it asks you for your password.
+
+  ┌────
+  │ brew cask install xquartz
+  └────
+
+  That is why I need a space in between calls here and it is manual.
+
+  I am unsure of using Meld here. Meld is fine. However meld requires
+  Python and a bunch of other stuff to be installed. OSX already comes
+  with Python. So now there are two Pythons installed, Apple and Brew. I
+  just don't like that. It feels like needless complexity. For now I am
+  happy with Meld so I will leave this alone.
+
+  This is an example of dependencies here. Since python is installed
+  here, I may install the python-git stuff later.
+
+  ┌────
+  │ brew install homebrew/x11/meld
+  └────
+
+
+3.2 Automated
+─────────────
+
+  Generate the key key. There is no passphrase.
+  ┌────
+  │ mkdir ~/.ssh
+  │ cd ~/.ssh
+  │ ssh-keygen -N '' -t rsa -C "gcr@wisdomandwonder.com" -f orion_gcr_rsa
+  └────
+
+  Set permissions so that `ssh' will run.
+
+  ┌────
+  │ chmod 600 ~/.ssh/orion_gcr_rsa
+  │ chmod 600 ~/.ssh/orion_gcr_rsa.pub
+  │ ssh-add -K ~/.ssh/orion_gcr_rsa
+  └────
+
+  Install git.
+
+  ┌────
+  │ brew install git
+  └────
+
+  OSX creates this directory everywhere and it must be ignored.
+  ┌────
+  │ echo .DS_Store >> ~/.gitignore_global
+  │ git config --global core.excludesfile ~/.gitignore_global
+  └────
+
+  Add they key to Bitbucket and Github.
+  ┌────
+  │ cat ~/.ssh/orion_gcr_rsa.pub | pbcopy
+  │ read -p "The new key is in your clipboard. Go and add this key to BitBucket and GitHub. When you are finished, hit [enter] to continue."
+  └────
+
+  Set up ~/.ssh/config.
+
+  ┌────
+  │ cat > ~/.ssh/config << EOF
+  │ Host github-grettke
+  │      HostName github.com
+  │      User git
+  │      PreferredAuthentications publickey
+  │      IdentityFile ~/.ssh/orion_gcr_rsa.pub
+  │ Host bitbucket-grettke
+  │      HostName bitbucket.org
+  │      User git
+  │      PreferredAuthentications publickey
+  │      IdentityFile ~/.ssh/orion_gcr_rsa.pub
+  │ EOF
+  └────
+
+  Test each one out.
+  ┌────
+  │ ssh -T github-grettke
+  │ read -p "Did it work? If not, fix it."
+  └────
+
+  Separate them to allow for easier copy-pasting.
+
+  ┌────
+  │ ssh -T bitbucket-grettke
+  │ read -p "Did it work? If not, fix it."
+  └────
+
+  Set up my preferences.
+  ┌────
+  │ git config --global user.name "Grant Rettke"
+  │ git config --global user.email gcr@wisdomandwonder.com
+  │ git config --global core.editor vi
+  │ git config --global color.ui true
+  │ git config --global core.autocrlf
+  │ git config --global diff.external /Users/gcr/bin/ndiff.py
+  │ git config --global alias.st status
+  │ git config --global alias.ci commit
+  └────
+
+  Set up a GUI diff for me.
+  ┌────
+  │ mkdir ~/bin
+  │ cat > ~/bin/ndiff.py << EOF
+  │ #!/usr/local/bin/python
+  │ import sys
+  │ import os
+  │ os.system('meld "%s" "%s"' % (sys.argv[2], sys.argv[5]))
+  │ EOF
+  │ chmod +x ~/bin/ndiff.py
+  └────
+
+  Check out projects to get basic stuff working.
+  ┌────
+  │ mkdir -p ~/git/bitbucket-grettke
+  │ mkdir -p ~/git/github-grettke
+  │ mkdir -p ~/git/github-anon
+  │ cd ~/git/bitbucket-grettke
+  │ git clone bitbucket-grettke:grettke/alec.git
+  │ git clone bitbucket-grettke:grettke/list.git
+  │ git clone bitbucket-grettke:grettke/hardware.git
+  │ git clone bitbucket-grettke:grettke/resume.git
+  │ git clone bitbucket-grettke:grettke/rule-engine-notes.git
+  │ cd ~/git/github-grettke
+  │ git clone github-grettke:grettke/home.git
+  │ git clone github-grettke:grettke/kitchenplan.gi
+  │ git clone github-grettke:grettke/stathon.git
+  │ cd ~/git/github-anon
+  │ git clone git@github.com:tomislav/osx-terminal.app-colors-solarized.git
+  └────
+
+  Install lib for stathon.
+  ┌────
+  │ pip install GitPython==0.3.2.RC1
+  └────
+
+
+4 OSX GUI Config, Manual
+════════════════════════
+
+  Read the [directions].
+
+  ┌────
+  │ sudo gem install kitchenplan
+  └────
+
+  Configure it using my config on GitHub.
+
+  Give my aliased URL so I can work right out of that directory.
+
+  ┌────
+  │ github-grettke:grettke/kitchenplan.git
+  └────
+
+  ┌────
+  │ kitchenplan setup
+  └────
+
+  Provision it. If the directory ownership was changed, you have to sudo
+  here, and only once.
+
+  ┌────
+  │ kitchenplan provision
+  └────
+
+  Reboot to see changes.
+
+  The first two times I tested this, the desktop picture was set
+  correctly. The 3rd time it was not. I'm leaving that alone for now. OK
+  I didn't. I tried another 3 times. It worked the first 2 and didn't
+  the last 3. I am not git bisecting this to find out why.
+
+
+  [directions] https://github.com/kitchenplan/kitchenplan
+
+
+5 Emacs Environment Semi-Automated
+══════════════════════════════════
+
+  This is what it takes to get an Emacs+Org development environment set
+  up. Nearly everything is included but for LaTeX, which has an enormous
+  download.
+
+  First all of the supporting applications and their configuration are
+  setup, and second is Emacs itself.
+
+
+5.1 System Software
+───────────────────
+
+5.1.1 Manual
+╌╌╌╌╌╌╌╌╌╌╌╌
+
+◊ 5.1.1.1 Fonts
+
+  ┌────
+  │ Manually install these fonts out of the ALEC dir:
+  │
+  │ - DejaVu
+  │ - NotoSans
+  │ - NotoSansSymbols
+  │ - Quivira
+  │ - Symbola
+  │
+  │ Then add them to OSX.
+  │
+  │ - Extract if necessary
+  │ - Start FontBook
+  │ - Create a new COLLECTION "Emacs Fonts"
+  │ - Drag them into that group
+  │   - You may drag the whole directory, Font Book will do the right thing
+  └────
+
+
+◊ 5.1.1.2 Terminal
+
+  Select the Solarized dark theme. It is checked out in Github-Anon. Go
+  into preferences, choose it, and set it as the default.
+
+  Set the font to DJSM 18.
+
+
+◊ 5.1.1.3 Growl
+
+  Install Growl via AppStore. Run it. Enable it to run on login.
+
+
+5.1.2 Automated
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Do the manual configuration of this stuff right away. The system is
+  unusable without it. For some reason I find it easy to forget that.
+
+
+◊ 5.1.2.1 Karabiner
+
+  ┌────
+  │ brew cask install karabiner
+  └────
+
+  ┌────
+  │ Run it. Approve it. Configure it with with the following. Look for the
+  │ heading with the name below following "Modify".
+  │
+  │ #+begin_src sh
+  │ Modify "Change Return Key".
+  │ Check:
+  │ "Return to Control_L
+  │ (+ When you type Return only, send Return)"
+  │ #+end_src
+  └────
+
+
+◊ 5.1.2.2 Spectacle
+
+  ┌────
+  │ brew cask install spectacle
+  └────
+
+  ┌────
+  │ Run it. Approve it. Set it to run at login.
+  └────
+
+
+◊ 5.1.2.3 Bartender
+
+  ┌────
+  │ brew cask install bartender
+  └────
+
+  ┌────
+  │ - GENERAL
+  │   - Launch Bartender at login: yes.
+  │   - At bartender launch: show bartender bar: NO.
+  │   - Bartender bar: autohides, YES.
+  │ - Menu bar icon highlight
+  │   - Show when bartender bar is open: YES.
+  │   - Bartender menu baricon:
+  │ - ADVANCED
+  │   - Bartender menu bar icon: visible YES.
+  │   - Clicking on bartender will: open bartender bar.
+  │   - For everything moved into the gutter
+  │   - I made it display in the main for 5m.
+  │
+  │ - Ordered them (reorder by holding ⌘ and dragging them)
+  │   - little snitch
+  │   - wifi (AirPort)
+  │   - bluetooth
+  │   - dropbox
+  │   - skype
+  │   - battery
+  │   - date
+  │   - time
+  │   - volume
+  │   - user
+  │   - Keychain Access
+  │   - bartender
+  │   - Applications Menu Settings
+  │   - Spotlight
+  │   - Notification center
+  │
+  │ Theory is most activity or cared about increasing to decreasing and then
+  │ increasing again.
+  └────
+
+
+◊ 5.1.2.4 Growlnotify
+
+  ┌────
+  │ brew cask install growlnotify
+  └────
+
+
+◊ 5.1.2.5 CCrypt
+
+  ┌────
+  │ brew install ccrypt
+  └────
+
+
+◊ 5.1.2.6 Aspell
+
+  ┌────
+  │ brew install aspell -all
+  └────
+
+
+◊ 5.1.2.7 Java
+
+  At this point, test out Java and Langtool. The full Org stuff requires
+  more configuration, like Ditaa.
+
+  ┌────
+  │ brew cask install java
+  └────
+
+
+5.2 Emacs
+─────────
+
+  Add the tap to get it.
+
+  ┌────
+  │ brew tap railwaycat/emacsmacport
+  └────
+
+  Pour it.
+
+  ┌────
+  │ brew install emacs-mac --icon-official --with-gnutls
+  │ brew linkapps
+  └────
+
+  The install lists caveats. Do I need to know of these for each
+  installer???
+
+  Now link my .emacs.el and try tangling.
+
+  ┌────
+  │ ln -s ~/git/bitbucket-grettke/alec/.emacs.el ~/.emacs.el
+  │ ln -s ~/git/bitbucket-grettke/alec/.aspell.en.pws ~/.aspell.en.pws
+  │ ln -s ~/git/bitbucket-grettke/alec/.aspell.en.prepl ~/.aspell.en.prepl
+  │ ln -s ~/git/bitbucket-grettke/alec/eshell/ ~/.emacs.d/eshell
+  └────
+
+  Start Emacs. Remember any Emacs fixes. Everything should work.
+
+
+6 Productivity Semi-Automated
+═════════════════════════════
+
+  To be immediately productive with the most common use cases, I need
+  all of these apps.
+
+  Use cases:
+
+  • Communications
+  • Productivity
+  • Word processing
+  • Productivity is pretty broadly defined here. It means everything.
+
+
+6.1 Dropbox
+───────────
+
+  This one is first so that I'll have easy access to licenses.
+
+  ┌────
+  │ brew cask install dropbox
+  └────
+
+  ┌────
+  │ Sign in. Just sync everything after copying locally of course.
+  │ In Login Items, start Dropbox.
+  └────
+
+
+6.2 Little Snitch
+─────────────────
+
+  ┌────
+  │ brew cask install little-snitch
+  └────
+
+  ┌────
+  │ As of writing, the installer just gets downloaded and you need to run it like
+  │ this:
+  │
+  │ #+begin_src sh
+  │ /opt/homebrew-cask/Caskroom/little-snitch/3.5.1/Little Snitch Installer.app
+  │ #+end_src
+  │
+  │ - Gen
+  │   - Show inactive warning
+  │   - Silent mode: no
+  │   - Show status in menu bar.
+  │ - Alert:
+  │   - Detail level: Show full details
+  │   - No: Confirm automatically
+  │   - NO: Confirm with return and escape.
+  │ - Monitor:
+  │   - Keyboard shortcut: no
+  │   - Show network activity in menu bar.
+  │     - Show data rates numerically. Monochrome.
+  │   - Show auto when mouse enters. Hide in 2s.
+  │ - APS
+  │   - No: Enable automatic profile switching
+  │   - Yes: Save geolocation of networks.
+  │ - Security
+  │   - Allow rules and profile edit.
+  │   - Allow profile switch.
+  │   - Allow preference editing
+  │   - Respect privacy.
+  │ - Advanced
+  │   - Approve rules automatically.
+  │ Update
+  │   - Automatically check for updates daily
+  │ Incoming connections
+  │   - Allow incoming connections from local networks, UDP, and ICMP.
+  └────
+
+
+6.3 Chrome
+──────────
+
+  ┌────
+  │ brew cask install google-chrome
+  └────
+
+  ┌────
+  │ Sign into Chrome. Let the settings sync. All of the JS disabling stuff needs
+  │ you to approve it. It is irritating. You always forget to approve it and make
+  │ it worse. Disable ScriptSafe right away. Turn it on as needed.
+  └────
+
+
+6.4 Firefox
+───────────
+
+  ┌────
+  │ brew cask install firefox
+  └────
+
+  ┌────
+  │ Install the standard plugins: NoScript, Blur.
+  └────
+
+
+6.5 Filezilla
+─────────────
+
+  ┌────
+  │ brew cask install filezilla
+  └────
+
+  ┌────
+  │ Set up Filezilla for WnW.
+  └────
+
+
+6.6 Skype
+─────────
+
+  ┌────
+  │ brew cask install skype
+  └────
+
+  ┌────
+  │ Log in automatically. Preferences General. Never set my status away.
+  │ Do not notify when I sign in or out, and others, and when they become
+  │ available do nothing. Display technical call information yes. Do not collect
+  │ call information. Login Items, add Skype in here.
+  └────
+
+
+6.7 SourceTree
+──────────────
+
+  ┌────
+  │ brew cask install sourcetree
+  └────
+
+  ┌────
+  │ Log into SourceTree make sure it works.
+  └────
+
+
+6.8 Racket
+──────────
+
+  Need this for resume stuff. At this point at least Racket is
+  installed. Here I found that pandoc was not set up right. After
+  everything is done, including manually installing MacTeX, I could
+  build my resume here.
+
+  ┌────
+  │ brew cask install racket
+  └────
+
+
+6.9 Freemind
+────────────
+
+  I use mindmaps.
+
+  ┌────
+  │ brew cask install freemind
+  └────
+
+
+6.10 VIM & MacVIM
+─────────────────
+
+  ┌────
+  │ brew install vim
+  └────
+
+  ┌────
+  │ brew cask install macvim
+  └────
+
+  ┌────
+  │ Copy over my .vimrc, once one exists.
+  └────
+
+
+6.11 Virtualbox
+───────────────
+
+  ┌────
+  │ brew cask install virtualbox
+  └────
+
+
+6.12 VMWare Fusion
+──────────────────
+
+  ┌────
+  │ brew cask install vmware-fusion
+  └────
+
+  ┌────
+  │ License it.
+  └────
+
+
+6.13 Libre Office
+─────────────────
+
+  ┌────
+  │ brew cask install libreoffice
+  └────
+
+
+6.14 Kindle
+───────────
+
+  ┌────
+  │ brew cask install kindle
+  └────
+
+  ┌────
+  │ Sign in. Make sure it works. Download everything so it is there.
+  │ You can see files downloaded versus avalable to be sure.
+  └────
+
+
+6.15 VLC
+────────
+
+  ┌────
+  │ brew cask install vlc
+  └────
+
+
+6.16 Programs That Don't Need Any Configuration
+───────────────────────────────────────────────
+
+6.16.1 Part A
+╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  ┌────
+  │ brew install cvs
+  │ brew install bzr
+  │ brew install hg
+  │ brew install graphviz
+  │ brew install archey
+  │ brew install figlet
+  │ brew install pandoc
+  └────
+
+
+6.16.2 Everything Inbetween
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+◊ 6.16.2.1 Install Xcode
+
+  Surprise! Yes, Xcode Command Line Tools is already installed. I know
+  that. You know that. When you try building SML/NJ, though, you find
+  out that it requires both Xcode and XcodeCLT to build as per [this].
+
+  Thus far we have built the system with CLT. Eg:
+
+  ┌────
+  │ xcode-select --print-path
+  └────
+
+  ┌────
+  │ /Library/Developer/CommandLineTools
+  └────
+
+  You can easily use both XcodeCLT and Xcode according to the man page
+  for `xcode-select'.
+
+  Go into AppStore. Install Xcode. Run it and agree to all of the
+  questions.
+
+  You can see now the path has changed:
+
+  ┌────
+  │ xcode-select --print-path
+  └────
+
+  ┌────
+  │ /Applications/Xcode.app/Contents/Developer
+  └────
+
+
+  [this] https://github.com/Homebrew/homebrew/issues/32915
+
+
+6.16.3 Part Z
+╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Do the SML/NJ install with Xcode.
+  ┌────
+  │ brew install smlnj
+  └────
+
+  Do everything else with the XcodeCLT.
+
+  I am unsure whether it makes a difference or not using one or the
+  other. At least I will document this here. As I go through this
+  learning, surely things are resulting in an interesting way.
+
+  ┌────
+  │ sudo xcode-select --switch /Library/Developer/CommandLineTools
+  │ brew install gnuplot --with-latex --with-pdflib-lite --with-tests --with-x11
+  │ brew install gforth
+  │ brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libvo-aacenc --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-opus --with-rtmpdump --with-schroedinger --with-speex --with-theora --with-tools --with-faac
+  │ brew linkapps
+  │ brew brew
+  │ brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
+  │ brew install povray --with-openexr
+  │ brew linkapps
+  └────
+
+
+6.17 Stuff That Asks For My Password
+────────────────────────────────────
+
+6.17.1 R
+╌╌╌╌╌╌╌╌
+
+  ┌────
+  │ brew cask install r
+  │ ln -s ~/git/bitbucket-grettke/alec/.Renviron ~/.Renviron
+  │ ln -s ~/git/bitbucket-grettke/alec/.Rprofile ~/.Rprofile
+  │ rm -rf ~/.Rpackages
+  │ mkdir ~/.Rpackages
+  └────
+
+  ┌────
+  │ I haven't used R in a long time but I want to get it set up right again.
+  │ Link my configs from ~/ into where they live now.
+  │ This installer asks for my password, which halts the install. How will I deal
+  │ with this?
+  └────
+
+
+◊ 6.17.1.1 R Studio
+
+  ┌────
+  │ brew cask install rstudio
+  └────
+
+  ┌────
+  │ This doesn't need any config I think.
+  └────
+
+
+6.17.2 Vagrant
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  ┌────
+  │ brew cask install vagrant
+  └────
+
+  ┌────
+  │ Install the Vagrant provider for VMWare!!!
+  └────
+
+
+◊ 6.17.2.1 Vagrant Manager
+
+  ┌────
+  │ brew cask install vagrant-manager
+  └────
+
+  ┌────
+  │ - Terminal Preference: Terminal
+  │ - Status Bar Icon Theme: Clean
+  │ - Launch at login: Yes
+  │ - Following settings: No
+  │ - Refresh every: 5 seconds
+  │ - Following settings: No
+  │ - Allowed Updates: stable
+  │ - Send anonymous profile data: Yes
+  └────
+
+
+7 Productivity, Manual
+══════════════════════
+
+7.1 Microsoft Remote Desktop
+────────────────────────────
+
+  App store. Don't open the session full-screen.
+
+
+7.2 Entropy
+───────────
+
+  This is a [download] and manual install.
+
+
+  [download] http://www.eigenlogik.com/entropy/
+
+
+7.3 Text2Speech PRO
+───────────────────
+
+  • From App store
+
+
+7.4 Guitar Pro
+──────────────
+
+  [Here].
+
+
+  [Here] http://www.guitar-pro.com/en/index.php
+
+
+7.5 Cepestral Callie & David
+────────────────────────────
+
+  [Here].
+
+  Can't seem to copy the license from the PDF. Copying from the email in
+  the browser works.
+
+  Log out and in again to make the "Cepstral Voices" appear in System
+  Preferences.
+
+
+  [Here] http://www.cepstral.com/
+
+
+7.6 PixelMator
+──────────────
+
+  App store.
+
+
+7.7 Microsoft Office
+────────────────────
+
+  This is in BrewCask, but the download is waste of time. I have it
+  locally.
+
+  I keep going back and forth on this one. Is it worth saving 15 minutes
+  having to install it myself?
+
+  Start it. It asks for your name. It asks about updates and stuff. Get
+  them all. Start Outlook. Enter in new license for that.
+
+
+7.8 MacTex
+──────────
+
+  This is 2.4 GiB. That is not much. If you get the US mirror it is 20
+  minutes.
+
+  That is if you are lucky.
+
+  That makes the automated installer very slow. I just don't like it.
+
+  I will deal with it by installing it manually [here].
+
+  At this point, definitely I can build my resume here.
+
+
+  [here] https://tug.org/mactex/mirrorpage.html
+
+
+8 User Options, Manual
+══════════════════════
+
+  • Not really a user option, but open Keychain Access
+    • Preferences
+    • YES: Show keychain status in menu bar
+      • This gives you a lock-screen GUI command
+
+
+8.1 Background
+──────────────
+
+  The automatic setting works intermittently If it failed, set it
+  manually. The image is [here].
+
+
+  [here]
+  http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2015/02/M101-ORG.jpg
+
+
+8.2 Desktop & Screen Saver
+──────────────────────────
+
+  • Screen saver: Flurry. After 10 minutes.
+  • Hot corner
+    • Top left: Start screen saver
+    • Top right: Put display to sleep
+    • Bottom left: Disable screen saver
+
+
+8.3 Energy Saver
+────────────────
+
+  • Energy Saver, Power Adapter
+    • Automatic graphics switching: yes
+    • Turn display off after minutes: 15
+    • Prevent computer from sleeping automatically when the display is
+      off: yes
+    • Put hard disks to sleep when possible: yes
+    • Wake for network access: yes
+    • Enable power nap when plugged in: yes
+    • Show battery status in menu bar: yes
+
+
+8.4 Users & Groups → Login Options
+──────────────────────────────────
+
+  • Automatic login: off
+  • Display login window as: Name and password
+  • Show the Sleep, Restart, and Shut Down buttons: yes
+  • Show input menu in login window: no
+  • Show password hints: no.
+  • Show fast user switching menu as: icon
+  • Use VoiceOver in the login window: no
+
+
+8.5 Security & Privacy
+──────────────────────
+
+8.5.1 General
+╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • User: Require password _ after sleep or screen saver begins: yes,
+    after 5 minutes
+  • Disable automatic login: yes
+  • Advanced → Require an administrator password to make system wide
+    changes: yes
+
+
+8.5.2 Firewall
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • Turn it on.
+  • Block all incoming connections: no
+  • Automatically allow signed software to receive connections: no
+  • Enable stealth mode: yes
+
+
+9 Full System Backups
+═════════════════════
+
+  Doing provisioning using Kitchenplan and Brew and BrewCask still takes
+  at least 6 hours. You still need to perform manual steps. For me, it
+  is unavoidable. This is painful. This is a waste of 6 hours. It is the
+  waste of your evening. It is a waste of your weekend.
+
+  My new plan is to get the box provisioned and image it there. I want
+  to minimize provisioning ever again. The opportunity here is that you
+  learn new things each time. That is cool. The problem is that your
+  goal is not to learn new things every time. It is a decision, and it
+  needs to be thoughtfully made. This evidence is valuable. It has
+  helped me understand my decision to work in virtuals here.
+
+  To image a full system:
+
+  • Note the base configuration, `01'
+  • Get system and application updates
+  • Trim contents of included-folders
+    • Most of my stuff will never be in them anyway
+    • More like DropBox and Git
+      • Keep Git checkouts. Simpler. Update will get new stuff.
+    • `/Users/gcr/Documents'
+    • Run `bc' and `gc'
+  • Disk utility
+    • Verify disk permissions
+      • Logs a lot of info
+      • Unsure if any of it is useful
+    • Repair disk permissions if necessary
+      • At the very bottom will log "Permissions repair complete"
+    • Verify disk
+    • Repair disk if necessary
+  • For the clone exclude
+    • `/Users/gcr/Downloads'
+    • `/Users/gcr/Dropbox'
+    • `/Users/gcr/tmp'
+    • `/tmp'
+    • `/Users/gcr/.Trash'
+    • `/Users/gcr/.vagrant.d/boxes'
+      • [http://docs-v1.vagrantup.com/v1/docs/boxes.html]
+    • `/Users/gcr/Documents/Virtual Machines'
+      • [http://kb.vmware.com/selfservice/search.do?cmd=displayKC&docType=kc&docTypeID=DT_KB_1_1&externalId=2056798]
+  • Make sure that this configuration, including Kitchenplan, is tagged
+  • Note that tag here:
+    • Built from image
+    • Provisioning Tag
+    • Timestamp
+    • 01-v1.0-2015-03-08T11:02:26-0500
