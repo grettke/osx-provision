@@ -1,4 +1,4 @@
 # osx-provision
 OSX provider and provision configuration.
 
-See provisioning.txt for steps.
+See /<machine>/provisioning.txt for steps.
