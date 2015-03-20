@@ -17,12 +17,6 @@ ssh-add -K ~/.ssh/orion_gcr_rsa
 
 # [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Automated][Automated:1]]
 
-brew install git
-
-# Automated:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Automated][Automated:1]]
-
 echo .DS_Store >> ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 
@@ -73,22 +67,13 @@ git config --global user.email gcr@wisdomandwonder.com
 git config --global core.editor vi
 git config --global color.ui true
 git config --global core.autocrlf
-git config --global diff.external /Users/gcr/bin/ndiff.py
 git config --global alias.st status
 git config --global alias.ci commit
-
-# Automated:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Automated][Automated:1]]
-
-mkdir ~/bin
-cat > ~/bin/ndiff.py << EOF
-#!/usr/local/bin/python
-import sys
-import os
-os.system('meld "%s" "%s"' % (sys.argv[2], sys.argv[5]))
-EOF
-chmod +x ~/bin/ndiff.py
+git config --global merge.tool diffmerge
+git config --global mergetool.diffmerge.cmd "/usr/local/bin/diffmerge --merge --result=\$MERGED \$LOCAL \$BASE \$REMOTE"
+git config --global mergetool.keepBackup false
+git config --global diff.tool diffmerge
+git config --global difftool.diffmerge.cmd "/usr/local/bin/diffmerge \$LOCAL \$REMOTE"
 
 # Automated:1 ends here
 
@@ -107,6 +92,7 @@ cd ~/git/github-grettke
 git clone github-grettke:grettke/home.git
 git clone github-grettke:grettke/kitchenplan.gi
 git clone github-grettke:grettke/stathon.git
+git clone github-grettke:grettke/osx-provision.git
 cd ~/git/github-anon
 git clone git@github.com:tomislav/osx-terminal.app-colors-solarized.git
 
@@ -114,6 +100,15 @@ git clone git@github.com:tomislav/osx-terminal.app-colors-solarized.git
 
 # [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Automated][Automated:1]]
 
-pip install GitPython==0.3.2.RC1
+mkdir ~/tmp
+cd ~/tmp
+curl -O https://bootstrap.pypa.io/get-pip.py
+sudo -H python ./get-pip.py
+
+# Automated:1 ends here
+
+# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Automated][Automated:1]]
+
+sudo pip install GitPython==0.3.2.RC1
 
 # Automated:1 ends here

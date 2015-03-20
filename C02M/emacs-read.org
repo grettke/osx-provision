@@ -1,21 +1,30 @@
 
-Manually install these fonts out of the ALEC dir:
+# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Fonts][Fonts:1]]
 
+Manually install fonts used for Emacs.
+
+Fonts that will be installed:
 - DejaVu
 - NotoSans
 - NotoSansSymbols
 - Quivira
 - Symbola
 
-Then add them to OSX.
+They live in the font dir in the ALEC project.
 
-- Extract if necessary
-- Start FontBook
-- Create a new COLLECTION "Emacs Fonts"
-- Drag them into that group
-  - You may drag the whole directory, Font Book will do the right thing
+Steps to install them:
+- Extract them
+- Start Font Book
+- Create a new COLLECTION "Emacs"
+- Drag the top-level  directory into the collection
+  - Font Book will search through it recursively for fonts and add them
+- Correct any resolution issues, which happen every time so far
 
-Run it. Approve it. Configure it with with the following. Look for the
+# Fonts:1 ends here
+
+# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Karabiner][Karabiner:1]]
+
+Run it. Approve it. Configure it with the following. Look for the
 heading with the name below following "Modify".
 
 #+begin_src sh
@@ -25,7 +34,15 @@ Check:
 (+ When you type Return only, send Return)"
 #+end_src
 
+# Karabiner:1 ends here
+
+# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Spectacle][Spectacle:1]]
+
 Run it. Approve it. Set it to run at login.
+
+# Spectacle:1 ends here
+
+# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Bartender][Bartender:1]]
 
 - GENERAL
   - Launch Bartender at login: yes.
@@ -40,22 +57,34 @@ Run it. Approve it. Set it to run at login.
   - For everything moved into the gutter
   - I made it display in the main for 5m.
 
-- Ordered them (reorder by holding ⌘ and dragging them)
+- Ordered them (reorder by holding Pretzel and dragging them) (do this after installing everything)
   - little snitch
-  - wifi (AirPort)
-  - bluetooth
-  - dropbox
-  - skype
-  - battery
-  - date
-  - time
-  - volume
-  - user
+    - Can't move this one at all anyway
+  - Date/Time
+  - Volume
   - Keychain Access
-  - bartender
+  - Battery
+  - Bluetooth
+  - Wifi
+  - Vagrant Manager
+  - Dropbox
+  - Fast User Switching Menu
   - Applications Menu Settings
-  - Spotlight
   - Notification center
+  - Spotlight
+  - Bartender
 
-Theory is most activity or cared about increasing to decreasing and then
-increasing again.
+  - Hide
+    - Growl
+    - Karabiner
+    - Spectacle
+    - Carbon Copy Cloner
+    - AirPort Display
+    - Time Machine (completely)
+    - Google Chrome (Hangouts)
+    - Microsoft Remote Desktop
+
+Arrangement-algorithm is most activity or cared about on the outside and less so
+in the middle.
+
+# Bartender:1 ends here

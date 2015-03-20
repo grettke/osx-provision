@@ -1,4 +1,6 @@
 
+brew cask install xquartz
+
 brew cask install karabiner
 
 brew cask install spectacle
@@ -11,12 +13,16 @@ brew install ccrypt
 
 brew install aspell -all
 
-brew tap railwaycat/emacsmacport
+brew cask install java
 
-brew install emacs-mac --icon-official --with-gnutls
+brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
+
+brew install emacs --cocoa --with-gnutls --with-imagemagick
 brew linkapps
 
 ln -s ~/git/bitbucket-grettke/alec/.emacs.el ~/.emacs.el
 ln -s ~/git/bitbucket-grettke/alec/.aspell.en.pws ~/.aspell.en.pws
 ln -s ~/git/bitbucket-grettke/alec/.aspell.en.prepl ~/.aspell.en.prepl
+
+mkdir ~/.emacs.d
 ln -s ~/git/bitbucket-grettke/alec/eshell/ ~/.emacs.d/eshell
