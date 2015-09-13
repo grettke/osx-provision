@@ -1,0 +1,2907 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 2015-09-12 Sat 20:00 -->
+<meta  charset="utf-8">
+<meta  name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Grant Rettke">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2"><a id="README"></a><span class="section-number-2">1</span> README</h2>
+<div class="outline-text-2" id="text-1">
+<pre class="example">
+ID: README
+</pre>
+</div>
+
+<div id="outline-container-orgheadline1" class="outline-3">
+<h3 id="orgheadline1"><span class="section-number-3">1.1</span> Literate DevOps: OS X Development System</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Setting up a development system is a non-trivial investment.
+</p>
+
+<p>
+This document captures the steps required and automates as much as possible.
+</p>
+
+<p>
+The Style Guide is a <b>must read</b> for the operator.
+</p>
+
+<p>
+<a href="http://orgmode.org/">Org-Mode</a> converted this unpleasant, tedious, and error prone task to a
+manageable, nearly reproducible, and error-free process.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3"><a id="STYLEGUIDE"></a><span class="section-number-2">2</span> Style Guide</h2>
+<div class="outline-text-2" id="text-2">
+<pre class="example">
+ID: STYLEGUIDE
+</pre>
+
+<ul class="org-ul">
+<li>The means justify the ends
+<ul class="org-ul">
+<li>Makes entirety of the effort achievable, sensible, and valuable</li>
+</ul></li>
+<li>Be ready for surprises
+<ul class="org-ul">
+<li>You will learn new things every run</li>
+<li>You will be surprised by things every run</li>
+<li>You have to decide if it is an opportunity to better things or
+it is something to get upset about
+<ul class="org-ul">
+<li>Only you may decide</li>
+</ul></li>
+</ul></li>
+<li>Each top level section might be completed in entirety
+<ul class="org-ul">
+<li>Take brakes between them</li>
+<li>Take over-night breaks</li>
+<li>The whole thing takes a while</li>
+</ul></li>
+<li>Right-click to paste text into the terminal
+<ul class="org-ul">
+<li>If you Pretzel-v it, it doesn&rsquo; work right</li>
+</ul></li>
+<li>Make scripts executable and run them
+<ul class="org-ul">
+<li><code>sh</code> doesn&rsquo; do what you want and you always forget that</li>
+</ul></li>
+<li>If one of your purchased apps doesn&rsquo; show up in AppStore then just buy it again
+<ul class="org-ul">
+<li>The store will detect that you already own it and ask you to install it</li>
+<li>Growl always has this problem</li>
+<li>Used to reboot to fix it, but unreliable</li>
+</ul></li>
+<li>This whole thing only makes sense when you read each line
+<ul class="org-ul">
+<li>Partially because you forget after not doing it for a while</li>
+<li>The order is critical</li>
+<li>A lot of the steps are automated and only make sense after you understand
+the entire script</li>
+<li>There are still a lot of manual steps though</li>
+<li>For example automate app installs and manually configure them, <b>before</b> moving
+on to the next section</li>
+<li>Everything must be completed before moving on to the next thing</li>
+</ul></li>
+<li>Disk image verification
+<ul class="org-ul">
+<li>Recipes exist to disable it</li>
+<li>I don&rsquo;t use them; I want to know every time that all of my disk images are
+in a known good state</li>
+</ul></li>
+<li>Try running every program
+<ul class="org-ul">
+<li>Only way to identify failures</li>
+<li>Only way to automate the correct way</li>
+<li>Continue to find new issues and fixes</li>
+</ul></li>
+<li>Total transparency
+<ul class="org-ul">
+<li>I&rsquo;ve run this 7 times already</li>
+<li>Every time I run it I find new bugs and new improvements</li>
+<li>Provisioning reveals just how much
+<ul class="org-ul">
+<li>One doesn&rsquo;t know about their OS</li>
+<li>Things can go really well despite the fact we don&rsquo;t know how to do it
+right</li>
+</ul></li>
+</ul></li>
+<li>Automated provisioning is handled by <a href="https://github.com/grettke/kitchenplan">kitchenplan</a></li>
+<li>Be thoughtful
+<ul class="org-ul">
+<li>This is not unique to this box, I just always forget</li>
+<li>For example when I install Emacs
+<ul class="org-ul">
+<li>I didn&rsquo;t think about using the main GNU release versus railwaycat&rsquo;s
+<ul class="org-ul">
+<li>That was dumb because I didn&rsquo;t think about the implications</li>
+</ul></li>
+<li>First time, I installed all additional libraries
+<ul class="org-ul">
+<li>That was dumb because you should only install what you specifically need</li>
+</ul></li>
+<li>Brew
+<ul class="org-ul">
+<li>It is very easy to use Brew</li>
+<li>It will install a lot of stuff to make you happy</li>
+<li>If you don&rsquo;t pay attention to what it does to make you happy then it
+will eventually make you unhappy</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Only run this setup with a reliable high-speed Internet connection
+<ul class="org-ul">
+<li>Ran this at off-site, and 40% of the downloads failed</li>
+</ul></li>
+<li>Once you get comfortable a couple of things happen
+<ul class="org-ul">
+<li>You try to paralellize stuff to save time and it is a big mistake which
+totally defeats the purpose of taking it slowly and easy because inevitably
+you will make mistakes</li>
+<li>You forget that the means justify the ends; take it slowly and easy and
+perform the steps in that manner</li>
+<li>You will form an opinion based upon experience rather than fantasy
+<ul class="org-ul">
+<li>Everyone is entitled to an opinion</li>
+<li>Some opinions are more valuable then others</li>
+<li>Experience trumps fantasy <b>every</b> time</li>
+<li>Take this dev-ops task as an opportunity to form your own
+personal-preference</li>
+<li>Valuable opinions come about as a result of a lot of good learning</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline16" class="outline-2">
+<h2 id="orgheadline16"><a id="ID-E637243E-248A-4343-8A4E-DCB8B686A54A"></a><span class="section-number-2">3</span> Prerequisites, Manual</h2>
+<div class="outline-text-2" id="text-3">
+<pre class="example">
+ID: E637243E-248A-4343-8A4E-DCB8B686A54A
+</pre>
+</div>
+
+<div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4"><a id="ID-4B84F9B0-665D-408D-B504-423A0903AACB"></a><span class="section-number-3">3.1</span> Scripts</h3>
+<div class="outline-text-3" id="text-3-1">
+<pre class="example">
+ID: 4B84F9B0-665D-408D-B504-423A0903AACB
+</pre>
+
+<ul class="org-ul">
+<li>Log into BitBucket/GitHub using Safari</li>
+<li>Download the this repo to get a current copy all the artifacts</li>
+<li>Keep the setup guide open both on a smartphone and on the computer and
+track what is happening where
+<ul class="org-ul">
+<li>Seems like overkill but it is really simpler because it is easy to lose your
+place during reboots when OSX &ldquo;forgets&rdquo; the line that you were on</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5"><a id="ID-702C1D63-B635-40DE-A174-4EC9D379A7A3"></a><span class="section-number-3">3.2</span> Image Disk</h3>
+<div class="outline-text-3" id="text-3-2">
+<pre class="example">
+ID: 702C1D63-B635-40DE-A174-4EC9D379A7A3
+</pre>
+
+<ul class="org-ul">
+<li>Boot from EF4829</li>
+<li>Dismount C02M</li>
+<li>Erase C02M
+<ul class="org-ul">
+<li>You have the ability to specify the file system (FS) here</li>
+<li>For this guide, it is not required, because Carbon Copy Cloner (CCC) will
+restore a disk image that has a file system that is Mac OS Extended
+Journaled (MOSEJ)</li>
+<li>The default is Mac OS Extended (not journaled)</li>
+<li>I suspect though that if I don&rsquo;t specify it here, then at some point I will
+either copy or move this passage of text, and since it does not mention the
+desired file system (MOSEJ), that it will result in a documentation bug</li>
+<li>When you do this, specify the FS and MOSEJ</li>
+</ul></li>
+<li>Mount 01</li>
+<li>Restore 01 to C02M</li>
+<li>Dismount 01</li>
+<li>Restore rescue partition on C02M</li>
+<li>Boot from C02M</li>
+<li>Dismount EF4829</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline7" class="outline-3">
+<h3 id="orgheadline7"><a id="ID-C33955D4-6C56-44F1-A6BF-33225CA2CF9D"></a><span class="section-number-3">3.3</span> Recovery Partition</h3>
+<div class="outline-text-3" id="text-3-3">
+<pre class="example">
+ID: C33955D4-6C56-44F1-A6BF-33225CA2CF9D
+</pre>
+
+<ul class="org-ul">
+<li>Pretzel-r on boot to enter it</li>
+<li>This makes sure that it works</li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline6" class="outline-4">
+<h4 id="orgheadline6"><a id="ID-5E43A4A7-A029-40DE-B94C-F1C5FE5C2574"></a><span class="section-number-4">3.3.1</span> Console Password (One Time Only)</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<pre class="example">
+ID: 5E43A4A7-A029-40DE-B94C-F1C5FE5C2574
+</pre>
+
+<ul class="org-ul">
+<li>Set the firmware password</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline11" class="outline-3">
+<h3 id="orgheadline11"><a id="ID-727763EA-26B6-495F-845B-18B16B3F97C0"></a><span class="section-number-3">3.4</span> System Preferences</h3>
+<div class="outline-text-3" id="text-3-4">
+<pre class="example">
+ID: 727763EA-26B6-495F-845B-18B16B3F97C0
+</pre>
+</div>
+
+<div id="outline-container-orgheadline8" class="outline-4">
+<h4 id="orgheadline8"><a id="ID-D61B4384-B5F5-4B1D-BF11-428F0090451E"></a><span class="section-number-4">3.4.1</span> Keyboard</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<pre class="example">
+ID: D61B4384-B5F5-4B1D-BF11-428F0090451E
+</pre>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">From</th>
+<th scope="col" class="org-left">To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Caps Lock ⇪</td>
+<td class="org-left">Option ⌥</td>
+</tr>
+
+<tr>
+<td class="org-left">Control ^</td>
+<td class="org-left">Caps Lock ⇪</td>
+</tr>
+
+<tr>
+<td class="org-left">Option ⌥</td>
+<td class="org-left">Command ⌘</td>
+</tr>
+
+<tr>
+<td class="org-left">Command ⌘</td>
+<td class="org-left">Control ⌃</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-4">
+<h4 id="orgheadline9"><a id="ID-2FDE3655-A1C8-4C96-AC63-A97E8783D640"></a><span class="section-number-4">3.4.2</span> Displays</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<pre class="example">
+ID: 2FDE3655-A1C8-4C96-AC63-A97E8783D640
+</pre>
+
+<ul class="org-ul">
+<li>Resolution: Scaled
+<ul class="org-ul">
+<li>More Space (1920x1200</li>
+</ul></li>
+
+<li>Arrangement
+<ul class="org-ul">
+<li>Mirror screens</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline10" class="outline-4">
+<h4 id="orgheadline10"><a id="ID-2B1596FB-1C41-4779-8ADF-B030961D4DE5"></a><span class="section-number-4">3.4.3</span> Printer</h4>
+<div class="outline-text-4" id="text-3-4-3">
+<pre class="example">
+ID: 2B1596FB-1C41-4779-8ADF-B030961D4DE5
+</pre>
+
+<p>
+Set it up.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline12" class="outline-3">
+<h3 id="orgheadline12"><a id="ID-73C615D6-F743-43DB-B67F-B908C1394CD7"></a><span class="section-number-3">3.5</span> Software Updates</h3>
+<div class="outline-text-3" id="text-3-5">
+<pre class="example">
+ID: 73C615D6-F743-43DB-B67F-B908C1394CD7
+</pre>
+
+<ul class="org-ul">
+<li>Installed software updates
+<ul class="org-ul">
+<li>Previously this was followed by manual reboot and that was needless</li>
+</ul></li>
+<li>On restart, check updates again by clicking on it to see if there are more and
+if there are then install them
+<ul class="org-ul">
+<li>There is a slight delay where the screen says that there are no updates
+<i>before</i> it refreshes and tells you that it is again checking</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline13" class="outline-3">
+<h3 id="orgheadline13"><a id="ID-791C0B00-7071-4C95-8402-1FF45BE4DB9E"></a><span class="section-number-3">3.6</span> Profile</h3>
+<div class="outline-text-3" id="text-3-6">
+<pre class="example">
+ID: 791C0B00-7071-4C95-8402-1FF45BE4DB9E
+</pre>
+
+<p>
+Download the <code>~/.profile</code> and evaluate it. This may be a download, or just copy
+from the download of the repo. I am working through the best option, as both
+have seemed fine.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock1"><span class="org-builtin">export</span> <span class="org-variable-name">PS1</span>=<span class="org-string">'\u@\h:\w&gt; '</span>
+<span class="org-builtin">export</span> <span class="org-variable-name">HOMEBREW_NO_EMOJI</span>=1
+<span class="org-builtin">export</span> <span class="org-variable-name">INFOPATH</span>=<span class="org-string">'/usr/local/share/info:/usr/share/info'</span>
+<span class="org-builtin">export</span> <span class="org-variable-name">VAGRANT_DEFAULT_PROVIDER</span>=vmware_fusion
+<span class="org-builtin">export</span> <span class="org-variable-name">CCRYPT</span>=<span class="org-string">"/usr/local/Cellar/ccrypt/1.10/share/emacs/site-lisp"</span>
+<span class="org-builtin">source</span> <span class="org-sh-quoted-exec">`brew --repository`</span>/Library/Contributions/brew_bash_completion.sh
+<span class="org-builtin">export</span> <span class="org-variable-name">EELIB</span>=<span class="org-string">"/Users/$(</span><span class="org-sh-quoted-exec">whoami</span><span class="org-string">)/EELIB"</span>
+<span class="org-builtin">export</span> <span class="org-variable-name">JAVA_HOME</span>=<span class="org-string">"/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home"</span>
+<span class="org-builtin">export</span> <span class="org-variable-name">MACTEX_BIN</span>=<span class="org-string">"/usr/local/texlive/2014/bin/x86_64-darwin"</span>
+<span class="org-builtin">export</span> <span class="org-variable-name">PATH</span>=/usr/local/bin:$<span class="org-variable-name">JAVA_HOME</span>/bin:$<span class="org-variable-name">MACTEX_BIN</span>:~/bin:$<span class="org-variable-name">PATH</span>
+<span class="org-builtin">alias</span> <span class="org-variable-name">e</span>=<span class="org-string">'open /Applications/Emacs.app --args --debug-init'</span>
+<span class="org-builtin">alias</span> <span class="org-variable-name">ec</span>=<span class="org-string">'/usr/local/Cellar/emacs/24.4/Emacs.app/Contents/MacOS/Emacs -nw --debug-init'</span>
+<span class="org-builtin">alias</span> <span class="org-variable-name">r</span>=<span class="org-string">'r --no-save'</span>
+<span class="org-builtin">alias</span> <span class="org-variable-name">R</span>=<span class="org-string">'r --no-save'</span>
+<span class="org-builtin">alias</span> <span class="org-variable-name">bbc</span>=<span class="org-string">'~/git/github/stathon/stathon.py ~/git/bitbucket/ | grep True'</span>
+<span class="org-builtin">alias</span> <span class="org-variable-name">gbc</span>=<span class="org-string">'~/git/github/stathon/stathon.py ~/git/github/ | grep True'</span>
+<span class="org-builtin">alias</span> <span class="org-variable-name">gpom</span>=<span class="org-string">'git push origin master'</span>
+<span class="org-builtin">alias</span> <span class="org-variable-name">gst</span>=<span class="org-string">'git status'</span>
+</pre>
+</div>
+
+<p>
+The OSX file system is somewhat-case-sensitive. I did not choose a
+case-sensitive operating system when I installed it. If you run <code>r</code> or <code>R</code> then
+OSX will start R. However, if you run an alias with the same name but upper
+versus lower case then it will execute the correct alias. I learned this today.
+This is why there are two aliases for starting <code>R</code>; I want a more OSX like
+behavior. I am curious about having a Mac-like console.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock2"><span class="org-builtin">alias</span> <span class="org-variable-name">r</span>=<span class="org-string">'r --no-save'</span>
+<span class="org-builtin">alias</span> <span class="org-variable-name">R</span>=<span class="org-string">'r --no-save'</span>
+</pre>
+</div>
+
+<p>
+After setting up the system, just link it here:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock3"><span class="org-builtin">cd</span> ~/
+rm .profile
+ln -s ~/git/bitbucket/hardware/apple/macbookpro/c02m/.profile .profile
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline14" class="outline-3">
+<h3 id="orgheadline14"><a id="ID-A6E80ED9-4E97-4263-9D23-431160F50C53"></a><span class="section-number-3">3.7</span> Install XCode</h3>
+<div class="outline-text-3" id="text-3-7">
+<pre class="example">
+ID: A6E80ED9-4E97-4263-9D23-431160F50C53
+</pre>
+
+<p>
+I want Xcode. I want the CLT. I want the IDE and more. I also want KitchenPlan.
+The installation order of these things was not obvious to me. I got it wrong 3
+times. Now it works correctly. Install Xcode and then CLT and then everyone
+seems to be happy.
+</p>
+
+<p>
+Go to the App Store and install it.
+</p>
+
+<p>
+You must start Xcode and agree to its licensing. Afterwards, close it.
+</p>
+
+<p>
+For reference, see where it lives.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock4">xcode-select --print-path
+</pre>
+</div>
+
+<pre class="example">
+/Applications/Xcode.app/Contents/Developer
+</pre>
+
+<p>
+Now install the CLT. Choose <b>Install</b>.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock5">xcode-select --install
+</pre>
+</div>
+
+<p>
+Note here that the Xcode path does not change. I don&rsquo;t understand this. What I
+think is happening is that Xcode is installed and that it is providing
+everything that is required and CLT piggy-backs on it.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock6">xcode-select --print-path
+</pre>
+</div>
+
+<pre class="example">
+/Applications/Xcode.app/Contents/Developer
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgheadline15" class="outline-3">
+<h3 id="orgheadline15"><a id="ID-680FF6B3-CB76-4F99-86BD-E1A8C70ACF95"></a><span class="section-number-3">3.8</span> Brew and BrewCask</h3>
+<div class="outline-text-3" id="text-3-8">
+<pre class="example">
+ID: 680FF6B3-CB76-4F99-86BD-E1A8C70ACF95
+</pre>
+
+<p>
+Brew is <a href="http://brew.sh/">here</a>.
+</p>
+
+<p>
+Run
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock7">brew doctor
+</pre>
+</div>
+
+<p>
+BrewCask is <a href="http://caskroom.io/">here</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline20" class="outline-2">
+<h2 id="orgheadline20"><a id="ID-9D7AA569-39C7-4E74-B8A7-8932AA180DFE"></a><span class="section-number-2">4</span> Git, Semi-Automated</h2>
+<div class="outline-text-2" id="text-4">
+<pre class="example">
+ID: 9D7AA569-39C7-4E74-B8A7-8932AA180DFE
+</pre>
+
+<p>
+After setting up this box, check out your stuff later before imaging.
+</p>
+</div>
+
+<div id="outline-container-orgheadline18" class="outline-3">
+<h3 id="orgheadline18"><a id="ID-B8467CEB-891A-4199-ABAC-1AEB29A4B7E5"></a><span class="section-number-3">4.1</span> Manual</h3>
+<div class="outline-text-3" id="text-4-1">
+<pre class="example">
+ID: B8467CEB-891A-4199-ABAC-1AEB29A4B7E5
+</pre>
+</div>
+
+<div id="outline-container-orgheadline17" class="outline-4">
+<h4 id="orgheadline17"><a id="ID-58C17FB4-D6BB-4264-BE35-99FBD4313693"></a><span class="section-number-4">4.1.1</span> DeltaWalker</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<pre class="example">
+ID: 58C17FB4-D6BB-4264-BE35-99FBD4313693
+</pre>
+
+<p>
+Install DeltaWalker.
+</p>
+
+<p>
+Previously I used Meld. That worked fine. It was in Python. Brew installed it&rsquo;s
+own Python. I didn&rsquo;t like that. That is why I switched to DiffMerge. I didn&rsquo;t
+want to install Brew Python in addition to OSX Python. Personal preference.
+</p>
+
+<p>
+Previously I used DiffMerge. It didn&rsquo;t have block-merge. That is why I switched
+to DeltaWalker.
+</p>
+
+<p>
+My old setup had a problem. In Git I set up the external.diff to Meld.
+external.diff is only for command line tools. Meld is a GUI. That was wrong.
+I got a poor-user experience with git and vc-diff and Magit as a result.
+</p>
+
+<p>
+This is the first BrewCask install, so it asks you for your password.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock8">brew cask install deltawalker
+</pre>
+</div>
+
+<p>
+The full setup follows. This documentation will show up in the productivity
+setup steps, and after the fonts are installed.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock9">- Expanded DMG
+  - Open /opt/homebrew-cask/Caskroom/deltawalker/
+- Drag DeltaWalker into Applications
+- Set up the DeltaWalker.workflow
+- Copy the samples folder to test out the app and workflow later
+- Start it
+- Register it
+  - Help, Install License Key
+- Set preferences for new comparisons (be sure of this, easy not to)
+  - General
+    - Date formatting: English (United States)
+    - Max available memory: 4096MiB
+    - <span class="org-bold">[X]</span> Automatically find new updates and notify me
+    - Colors and Fonts
+      - Basic::Text Font and Text Editor Block Selection Font: DJSM 14
+      - Differences::Font: DJSM 14
+  - All Comparisons
+    - <span class="org-bold">[ ]</span> Use text differencing optimized for speed
+    - <span class="org-bold">[X]</span> Use text differencing optimized for accuracy
+    - <span class="org-bold">[X]</span> Follow symbolic links
+    - <span class="org-bold">[ ]</span> Ignore differences in whitespace
+      - Want to know about tabs versus spaces
+    - <span class="org-bold">[ ]</span> Ignore differences in character case
+      - Interesting but default do care
+    - <span class="org-bold">[X]</span> Ignore differences in line endings (CF and LF)
+      - Most systems don't care
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline19" class="outline-3">
+<h3 id="orgheadline19"><a id="ID-0C2714A7-1900-4E21-9611-0BE64EF565F3"></a><span class="section-number-3">4.2</span> Automated</h3>
+<div class="outline-text-3" id="text-4-2">
+<pre class="example">
+tangle: git.sh
+comments: no
+ID: 0C2714A7-1900-4E21-9611-0BE64EF565F3
+</pre>
+
+<p>
+Generate the key. There is no passphrase.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock10">mkdir ~/.ssh
+<span class="org-builtin">cd</span> ~/.ssh
+ssh-keygen -N <span class="org-string">''</span> -t rsa -C <span class="org-string">"gcr@wisdomandwonder.com"</span> -f orion_gcr_rsa
+</pre>
+</div>
+
+<p>
+Set permissions so that <code>ssh</code> will run.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock11">chmod 600 ~/.ssh/orion_gcr_rsa
+chmod 600 ~/.ssh/orion_gcr_rsa.pub
+ssh-add -K ~/.ssh/orion_gcr_rsa
+</pre>
+</div>
+
+<p>
+OSX creates this directory everywhere and it must be ignored.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh"><span class="org-builtin">echo</span> .DS_Store &gt;&gt; ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+</pre>
+</div>
+
+<p>
+Add they key to Bitbucket and Github.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock12">cat ~/.ssh/orion_gcr_rsa.pub | pbcopy
+<span class="org-builtin">read</span> -p <span class="org-string">"The new key is in your clipboard. Go and add this key to BitBucket and GitHub. When you </span><span class="org-writegood-passive-voice"><span class="org-string">are finished</span></span><span class="org-string">, hit [enter] to continue."</span>
+</pre>
+</div>
+
+<p>
+Set up ~/.ssh/config.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock13">cat &gt; ~/.ssh/config &lt;&lt; EOF
+<span class="org-sh-heredoc">Host github-grettke</span>
+<span class="org-sh-heredoc">     HostName github.com</span>
+<span class="org-sh-heredoc">     User git</span>
+<span class="org-sh-heredoc">     PreferredAuthentications publickey</span>
+<span class="org-sh-heredoc">     IdentityFile ~/.ssh/orion_gcr_rsa.pub</span>
+<span class="org-sh-heredoc">Host bitbucket-grettke</span>
+<span class="org-sh-heredoc">     HostName bitbucket.org</span>
+<span class="org-sh-heredoc">     User git</span>
+<span class="org-sh-heredoc">     PreferredAuthentications publickey</span>
+<span class="org-sh-heredoc">     IdentityFile ~/.ssh/orion_gcr_rsa.pub</span>
+<span class="org-sh-heredoc">EOF</span>
+</pre>
+</div>
+
+<p>
+Test each one out.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock14">ssh -T github-grettke
+<span class="org-builtin">read</span> -p <span class="org-string">"Did it work? If not, fix it."</span>
+</pre>
+</div>
+
+<p>
+Separate them to allow for easier copy-pasting.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock15">ssh -T bitbucket-grettke
+<span class="org-builtin">read</span> -p <span class="org-string">"Did it work? If not, fix it."</span>
+</pre>
+</div>
+
+<p>
+Set up my preferences.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock16">git config --global user.name <span class="org-string">"Grant Rettke"</span>
+git config --global user.email gcr@wisdomandwonder.com
+git config --global core.editor vi
+git config --global color.ui true
+git config --global core.autocrlf
+git config --global alias.st status
+git config --global alias.ci commit
+git config --global alias.dt difftool
+git config --global alias.mt mergetool
+git config --global diff.tool deltawalker
+git config --global difftool.deltawalker.cmd <span class="org-string">"/Applications/DeltaWalker.app/Contents/MacOS/git-diff foo \$LOCAL </span><span class="org-writegood-duplicates"><span class="org-string">foo foo</span></span><span class="org-string"> \$REMOTE"</span>
+git config --global difftool.prompt false
+git config --global merge.tool deltawalker
+git config --global mergetool.deltawalker.cmd <span class="org-string">"/Applications/DeltaWalker.app/Contents/MacOS/git-merge \$LOCAL \$REMOTE \$BASE \$MERGED"</span>
+git config --global mergetool.keepBackup false
+</pre>
+</div>
+
+<p>
+Check out projects to get basic stuff working.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock17">mkdir -p ~/bin
+mkdir -p ~/git/bitbucket
+mkdir -p ~/git/github
+mkdir -p ~/git/github-anon
+<span class="org-builtin">cd</span> ~/git/bitbucket
+git clone bitbucket-grettke:grettke/alec.git
+git clone bitbucket-grettke:grettke/list.git
+git clone bitbucket-grettke:grettke/hardware.git
+git clone bitbucket-grettke:grettke/resume.git
+git clone bitbucket-grettke:grettke/rule-engine-notes.git
+git clone bitbucket-grettke:grettke/notes.git
+git clone bitbucket-grettke:grettke/signature.git
+git clone bitbucket-grettke:grettke/grant-personal.git
+git clone bitbucket-grettke:grettke/cover-letter.git
+git clone bitbucket-grettke:grettke/correspondence.git
+git clone bitbucket-grettke:grettke/texmf.git
+<span class="org-builtin">cd</span> ~/git/github
+git clone github-grettke:grettke/help.git
+git clone github-grettke:grettke/home.git
+git clone github-grettke:grettke/kitchenplan.gi
+git clone github-grettke:grettke/stathon.git
+git clone github-grettke:grettke/osx-provision.git
+git clone github-grettke:tomislav/osx-terminal.app-colors-solarized.git
+</pre>
+</div>
+
+<p>
+There are a lot of ways to manage libraries for Python. There are also many ways
+to manage Python installations. I am not considering any of them here. My
+approach is to use the base-box as a base. It needs to do certain things well.
+These directions are for my current approach.
+</p>
+
+<p>
+Directions for installing Pip live <a href="https://pip.pypa.io/en/latest/installing.html">here</a>.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock18">mkdir ~/tmp
+<span class="org-builtin">cd</span> ~/tmp
+curl -O https://bootstrap.pypa.io/get-pip.py
+sudo -H python ./get-pip.py
+</pre>
+</div>
+
+<p>
+Install GitPython for Stathon.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock19">sudo pip install <span class="org-variable-name">GitPython</span>==0.3.2.RC1
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline21" class="outline-2">
+<h2 id="orgheadline21"><a id="ID-2CF80D6B-BE09-4805-89BC-E28E8081159D"></a><span class="section-number-2">5</span> OSX GUI Config, Manual</h2>
+<div class="outline-text-2" id="text-5">
+<pre class="example">
+ID: 2CF80D6B-BE09-4805-89BC-E28E8081159D
+</pre>
+
+<p>
+Read the <a href="https://github.com/kitchenplan/kitchenplan">directions</a>.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock20">sudo gem install kitchenplan
+</pre>
+</div>
+
+<p>
+Start the setup.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock21">kitchenplan setup
+</pre>
+</div>
+
+<p>
+When it asks, give my aliased URL so I can work right out of that directory.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock22">github-grettke:grettke/kitchenplan.git
+</pre>
+</div>
+
+<p>
+Provision it.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock23">kitchenplan provision
+</pre>
+</div>
+
+<p>
+Log in and out again to see changes. Previously I would reboot the machine, but
+that seems unnecessary.
+</p>
+
+<p>
+The first two times I tested this, the desktop picture was set correctly. The
+3rd time it was not. Also 4-6. I&rsquo;m leaving that alone for now.
+</p>
+
+<p>
+KitchenPlan may be run repeatedly. After completing various sections of this
+script I re-ran KitchenPlan. It worked correctly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline37" class="outline-2">
+<h2 id="orgheadline37"><a id="ID-2AE931ED-463D-4113-AB3A-A72161E301A0"></a><span class="section-number-2">6</span> Emacs Environment Semi-Automated</h2>
+<div class="outline-text-2" id="text-6">
+<pre class="example">
+ID: 2AE931ED-463D-4113-AB3A-A72161E301A0
+</pre>
+
+<p>
+This is what it takes to get an Emacs+Org development environment set up.
+Nearly everything is included but for LaTeX, which has an enormous download
+and installed by hand later.
+</p>
+
+<p>
+The way that I like to go through this is to:
+</p>
+<ul class="org-ul">
+<li>Perform the steps in the manual section</li>
+<li>Execute <code>emacs-run.sh</code> for the automated stuff</li>
+<li>Perform the manual configuration for everything that got installed
+<ul class="org-ul">
+<li>Directions are in <code>emacs-read.org</code></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline35" class="outline-3">
+<h3 id="orgheadline35"><a id="ID-D47E9374-04FB-41AB-94A6-2A4B0D3F1D71"></a><span class="section-number-3">6.1</span> System Software</h3>
+<div class="outline-text-3" id="text-6-1">
+<pre class="example">
+ID: D47E9374-04FB-41AB-94A6-2A4B0D3F1D71
+</pre>
+</div>
+
+<div id="outline-container-orgheadline25" class="outline-4">
+<h4 id="orgheadline25"><a id="ID-78BCFE77-0D00-488A-9C64-556AF2CE1F64"></a><span class="section-number-4">6.1.1</span> Manual</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<pre class="example">
+ID: 78BCFE77-0D00-488A-9C64-556AF2CE1F64
+</pre>
+</div>
+
+<ol class="org-ol"><li><a id="orgheadline22"></a><a id="ID-C54893B7-4372-4723-8E29-02E2EB3A7556"></a>Fonts<br ><div class="outline-text-5" id="text-6-1-1-1">
+<pre class="example">
+ID: C54893B7-4372-4723-8E29-02E2EB3A7556
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock24">Manually install fonts used for Emacs.
+
+Fonts that will <span class="org-writegood-passive-voice">be installed</span>:
+- DejaVu
+- NotoSans
+- NotoSansSymbols
+- Quivira
+- Symbola
+
+They live in the font dir in the ALEC project.
+
+Steps to install them:
+- Extract them
+- Start Font Book
+- Create a new COLLECTION "Emacs"
+- Drag the top-level  directory into the collection
+  - Font Book will search through it recursively for fonts and add them
+- Correct any resolution issues, which happen every time so far
+</pre>
+</div>
+</div></li>
+
+<li><a id="orgheadline23"></a><a id="ID-37EFA2A6-C467-4211-9DF2-80B2D238D07D"></a>Terminal<br ><div class="outline-text-5" id="text-6-1-1-2">
+<pre class="example">
+ID: 37EFA2A6-C467-4211-9DF2-80B2D238D07D
+</pre>
+
+<p>
+Select the Solarized dark theme. It is checked out in Github-Anon. Go into
+preferences, choose it, and set it as the default.
+</p>
+
+<p>
+Set the font to DJSM 17.
+</p>
+</div></li>
+
+<li><a id="orgheadline24"></a><a id="ID-7C14A841-1223-4D4F-9D10-32B90A5095E1"></a>Growl<br ><div class="outline-text-5" id="text-6-1-1-3">
+<pre class="example">
+ID: 7C14A841-1223-4D4F-9D10-32B90A5095E1
+</pre>
+
+<p>
+Install Growl via AppStore. Run it. Enable it to run on login.
+</p>
+
+<p>
+Smoke theme. Top left corner since EMACS is usually on right-half. Large.
+</p>
+</div></li></ol>
+</div>
+
+<div id="outline-container-orgheadline34" class="outline-4">
+<h4 id="orgheadline34"><a id="ID-24B4EC99-6A54-470D-B6A1-00AA2F5E41DB"></a><span class="section-number-4">6.1.2</span> Automated</h4>
+<div class="outline-text-4" id="text-6-1-2">
+<pre class="example">
+ID: 24B4EC99-6A54-470D-B6A1-00AA2F5E41DB
+</pre>
+
+<p>
+Do the manual configuration of this stuff right away. The system is unusable
+without it. For some reason I find it easy to forget that.
+</p>
+</div>
+
+<ol class="org-ol"><li><a id="orgheadline26"></a><a id="ID-A11D2C45-BBD9-42CD-97F6-DBE125A17EB5"></a>XQuartz<br ><div class="outline-text-5" id="text-6-1-2-1">
+<pre class="example">
+ID: A11D2C45-BBD9-42CD-97F6-DBE125A17EB5
+</pre>
+
+<p>
+Why is this here? It used to be for Meld. Meld went away. It definitely <i>feels</i>
+right to be here. It is nice to have a X-Server. Stuff like the <code>dot</code> tool
+use X. I am staying true-enough here.
+</p>
+
+<p>
+This install asks for a password. I am done researching what asks for a password
+and what does not. Perfect world I would do that and break out the steps into
+things that ask for a password and things that to do not. In that perfect world,
+time does not exist. To do this in a world with time will take a lot of it.
+</p>
+
+<p>
+Asking for passwords appears to be an application-specific event and not based
+on order of Brew and BrewCask installs. Even if there is more to it, I am not
+researching it more now.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock25">brew cask install xquartz
+</pre>
+</div>
+</div></li>
+
+<li><a id="orgheadline27"></a><a id="ID-C3F3E565-0AC8-408E-BEB9-58601A87DDA8"></a>Karabiner<br ><div class="outline-text-5" id="text-6-1-2-2">
+<pre class="example">
+ID: C3F3E565-0AC8-408E-BEB9-58601A87DDA8
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock26">brew cask install karabiner
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock27">Run it. Approve it. Configure it with the following. Look for the
+heading with the name below following "Modify".
+
+Check:
+- Return to Option<span class="org-org-latex-and-related">L</span>
+  (+ When you type Return only, send Return)
+</pre>
+</div>
+</div></li>
+
+<li><a id="orgheadline28"></a><a id="ID-4380D20F-9359-470A-97B3-37C56AE9A8E6"></a>Spectacle<br ><div class="outline-text-5" id="text-6-1-2-3">
+<pre class="example">
+ID: 4380D20F-9359-470A-97B3-37C56AE9A8E6
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock28">brew cask install spectacle
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock29">Run it. Approve it. Set it to run at login.
+</pre>
+</div>
+</div></li>
+
+<li><a id="orgheadline29"></a><a id="ID-16E49B61-10C0-4A8C-9EFB-68FE01A16935"></a>Bartender<br ><div class="outline-text-5" id="text-6-1-2-4">
+<pre class="example">
+ID: 16E49B61-10C0-4A8C-9EFB-68FE01A16935
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock30">brew cask install bartender
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock31">- GENERAL
+  - Launch Bartender at login: yes.
+  - At bartender launch: show bartender bar: NO.
+  - Bartender bar: autohides, YES.
+- Menu bar icon highlight
+  - Show when bartender bar is open: YES.
+  - Bartender menu baricon:
+- ADVANCED
+  - Bartender menu bar icon: visible YES.
+  - Clicking on bartender will: open bartender bar.
+  - For everything moved into the gutter
+  - I made it display in the main for 5m.
+
+- Ordered them (reorder by holding Pretzel and dragging them) (do this after installing everything)
+  - little snitch
+    - Can't move this one at all anyway
+  - Date/Time
+  - Volume
+  - Keychain Access
+  - Battery
+  - Bluetooth
+  - Wifi
+  - Vagrant Manager
+  - Dropbox
+  - Fast User Switching Menu
+  - Applications Menu Settings
+  - Notification center
+  - Spotlight
+  - Bartender
+
+  - Hide
+    - Growl
+    - Karabiner
+    - Spectacle
+    - Carbon Copy Cloner
+    - AirPort Display
+    - Time Machine (<span class="org-writegood-weasels">completely</span>)
+    - Google Chrome (Hangouts)
+    - Microsoft Remote Desktop
+
+Arrangement-algorithm is most activity or cared about on the outside and less so
+in the middle.
+</pre>
+</div>
+</div></li>
+
+<li><a id="orgheadline30"></a><a id="ID-32EC8433-55E8-4F2D-A4DB-217BA654FEC3"></a>Growlnotify<br ><div class="outline-text-5" id="text-6-1-2-5">
+<pre class="example">
+ID: 32EC8433-55E8-4F2D-A4DB-217BA654FEC3
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock32">brew cask install growlnotify
+</pre>
+</div>
+</div></li>
+
+<li><a id="orgheadline31"></a><a id="ID-6E28AA90-2D64-493F-9D90-FD41897F3A0A"></a>CCrypt<br ><div class="outline-text-5" id="text-6-1-2-6">
+<pre class="example">
+ID: 6E28AA90-2D64-493F-9D90-FD41897F3A0A
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock33">brew install ccrypt
+</pre>
+</div>
+</div></li>
+
+<li><a id="orgheadline32"></a><a id="ID-DF3016FA-FBBA-4C87-9D5A-B5373B9BE5F7"></a>Aspell<br ><div class="outline-text-5" id="text-6-1-2-7">
+<pre class="example">
+ID: DF3016FA-FBBA-4C87-9D5A-B5373B9BE5F7
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock34">brew install aspell -all
+</pre>
+</div>
+</div></li>
+
+<li><a id="orgheadline33"></a><a id="ID-64A80CB9-6DAB-49EF-8E3C-0EF11E7BA3B1"></a>Java<br ><div class="outline-text-5" id="text-6-1-2-8">
+<pre class="example">
+ID: 64A80CB9-6DAB-49EF-8E3C-0EF11E7BA3B1
+</pre>
+
+<p>
+At this point, test out Java and Langtool. The full Org stuff requires more
+configuration, like Ditaa. This assumes that you&rsquo;ve done the Emacs final config
+stuff based on warnings at startup of Emacs; not on directions on this document.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock35">brew cask install java
+</pre>
+</div>
+</div></li></ol>
+</div>
+</div>
+
+<div id="outline-container-orgheadline36" class="outline-3">
+<h3 id="orgheadline36"><a id="ID-FE9C3050-9F4B-42E3-A120-ADBF1913A2B3"></a><span class="section-number-3">6.2</span> Emacs</h3>
+<div class="outline-text-3" id="text-6-2">
+<pre class="example">
+ID: FE9C3050-9F4B-42E3-A120-ADBF1913A2B3
+</pre>
+
+<p>
+I quit using railwaycat&rsquo;s emacs mac port. It was really nice. One night I
+reprovisionined my machine. railwaycat&rsquo;s repo was down. I learned that it was a
+one-man show. I never thought about it. It means that it is not supported well.
+Things that are supported well are likely to be available. I switched to the
+GNU Emacs app. It has those desirable traits.
+</p>
+
+<p>
+ImageMagic is required for the Emacs install, so install it first.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock36">brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
+</pre>
+</div>
+
+<p>
+With all of Emacs prerequisites satisfied, install it now.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock37">brew install emacs --cocoa --with-gnutls --with-imagemagick
+brew linkapps
+</pre>
+</div>
+
+<p>
+The installer lists caveats. Do I need to know of these for each installer???
+</p>
+
+<p>
+Now link my .emacs.el and try tangling.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock38">ln -s ~/git/github/help/.emacs.el ~/.emacs.el
+ln -s ~/git/bitbucket/alec/.aspell.en.pws ~/.aspell.en.pws
+ln -s ~/git/bitbucket/alec/.aspell.en.prepl ~/.aspell.en.prepl
+</pre>
+</div>
+
+<p>
+The eshell config lives under .emacs.d. It doesn&rsquo;t exist until Emacs is run.
+This setup creates a link to the real .emacs.d. Create the directory first and
+then link it.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock39">mkdir ~/.emacs.d
+ln -s ~/git/github/help/eshell/ ~/.emacs.d/eshell
+</pre>
+</div>
+
+<p>
+Start Emacs. Remember any Emacs fixes. Everything should work.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline63" class="outline-2">
+<h2 id="orgheadline63"><a id="ID-F448220B-7657-44BE-96BE-66D4A82DCAD9"></a><span class="section-number-2">7</span> Productivity Semi-Automated</h2>
+<div class="outline-text-2" id="text-7">
+<pre class="example">
+ID: F448220B-7657-44BE-96BE-66D4A82DCAD9
+</pre>
+
+<p>
+To be immediately productive with the most common use cases, I need all of
+these apps.
+</p>
+
+<p>
+Use cases:
+</p>
+
+<ul class="org-ul">
+<li>Communications</li>
+<li>Productivity</li>
+<li>Word processing</li>
+<li>Productivity is pretty broadly defined here. It means everything.</li>
+</ul>
+
+<p>
+The installation process is similar to Emacs up above:
+</p>
+
+<ul class="org-ul">
+<li>Install the software automatically</li>
+<li>Configure it manually</li>
+<li>Manually run it and make sure that it is happy
+<ul class="org-ul">
+<li>You will find new stuff every time you do this and you will get better at
+dev-ops and automate as much of it as you can and want to do</li>
+</ul></li>
+</ul>
+
+<p>
+I am curious about how best to automate this portion of the installation. My
+approaches were in order:
+</p>
+
+<ul class="org-ul">
+<li>Just let it run and try stuff later
+<ul class="org-ul">
+<li>Allows for installation failures which I don&rsquo;t like, it wastes time
+discovering the issue and resolving it</li>
+</ul></li>
+<li>Verify that each app starts
+<ul class="org-ul">
+<li>This is a fine approach. I would like to know at installation time though if
+there is a failure. Reading the transcript would be a good approach. Perhaps
+I should capture it, too.</li>
+<li>Works easily for command line stuff via a script. GUI stuff is slower when
+I run it through Spotlight. Perhaps it is worth tracking down the
+installation directories of everything and starting them up via <code>open</code>?
+<ul class="org-ul">
+<li>Is this level of reproducibility required? Might need to quantify this.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+Read through the installation messages at least once. You will learn things and
+then you will improve the installation process.
+</p>
+</div>
+
+<div id="outline-container-orgheadline38" class="outline-3">
+<h3 id="orgheadline38"><a id="ID-1AE57BD9-F842-4D7C-A18A-58740A9A6ACB"></a><span class="section-number-3">7.1</span> Files</h3>
+<div class="outline-text-3" id="text-7-1">
+<pre class="example">
+ID: 1AE57BD9-F842-4D7C-A18A-58740A9A6ACB
+</pre>
+
+<p>
+I always end up keeping these temp files. Yes, temp files. They don&rsquo;t live in
+source control.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock40">touch ~/tmp/post.org
+touch ~/tmp/scratch.org
+touch ~/tmp/todo.org
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline39" class="outline-3">
+<h3 id="orgheadline39"><a id="ID-F8E6CF70-B933-4DAB-9067-22D8A8A6B306"></a><span class="section-number-3">7.2</span> Dropbox</h3>
+<div class="outline-text-3" id="text-7-2">
+<pre class="example">
+ID: F8E6CF70-B933-4DAB-9067-22D8A8A6B306
+</pre>
+
+<p>
+This one is first so that I&rsquo;ll have easy access to licenses.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock41">brew cask install dropbox
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock42">Sign in.
+In Login Items, start Dropbox.
+When on highspeed, just sync everything after copying locally of course.
+When on lowspeed, just sync required.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline40" class="outline-3">
+<h3 id="orgheadline40"><a id="ID-9BEF8392-9623-495D-9D78-2FE97B65931A"></a><span class="section-number-3">7.3</span> Little Snitch</h3>
+<div class="outline-text-3" id="text-7-3">
+<pre class="example">
+ID: 9BEF8392-9623-495D-9D78-2FE97B65931A
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock43">brew cask install little-snitch
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock44">As of writing, the installer just gets downloaded and you need to run it like
+this:
+
+<span class="org-org-block-begin-line">#+begin_src sh</span>
+<span class="org-org-block">open /opt/homebrew-cask/Caskroom/little-snitch/3.5.1/Little Snitch Installer.app/</span>
+<span class="org-org-block-end-line">#+end_src</span>
+
+Typical usage is to grant every program full access for any connection, forever,
+until there is a reason not to do so.
+
+- Gen
+  - Show inactive warning
+  - Silent mode: no
+  - Show status in menu bar.
+- Alert:
+  - Detail level: Show full details
+  - No: Confirm automatically
+  - NO: Confirm with return and escape.
+- Monitor:
+  - Keyboard shortcut: On
+  - Show network activity in menu bar.
+    - Show data rates numerically. Monochrome.
+  - Show auto when mouse enters. Hide in 2s.
+- APS
+  - No: Enable automatic profile switching
+  - Yes: Save geolocation of networks.
+- Security
+  - Allow rules and profile edit.
+  - Allow profile switch.
+  - Allow preference editing
+  - Respect privacy.
+- Advanced
+  - Approve rules automatically.
+Update
+  - Automatically check for updates daily
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline41" class="outline-3">
+<h3 id="orgheadline41"><a id="ID-12B7CE2E-3AEF-44AD-98DC-F4E4EACD4FDF"></a><span class="section-number-3">7.4</span> Chrome</h3>
+<div class="outline-text-3" id="text-7-4">
+<pre class="example">
+ID: 12B7CE2E-3AEF-44AD-98DC-F4E4EACD4FDF
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock45">brew cask install google-chrome
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock46">Sign into Chrome. Let the settings sync. All the JS disabling stuff needs
+you to approve it. It is irritating. You always forget to approve it and make
+it worse. Disable ScriptSafe right away. Turn it on as needed.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline42" class="outline-3">
+<h3 id="orgheadline42"><a id="ID-61E12D72-B4EB-4AA9-AA86-BB620E1D90A5"></a><span class="section-number-3">7.5</span> Firefox</h3>
+<div class="outline-text-3" id="text-7-5">
+<pre class="example">
+ID: 61E12D72-B4EB-4AA9-AA86-BB620E1D90A5
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock47">brew cask install firefox
+</pre>
+</div>
+
+<p>
+Sometimes this install fails. I checked the file download. The file exists. The
+name hasn&rsquo;t changed. Did a manual install instead.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock48">Install the standard plugins: NoScript, Blur.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline43" class="outline-3">
+<h3 id="orgheadline43"><a id="ID-3F67D0FE-1FE7-4578-9C71-DE4DBD6F75C2"></a><span class="section-number-3">7.6</span> Filezilla</h3>
+<div class="outline-text-3" id="text-7-6">
+<pre class="example">
+ID: 3F67D0FE-1FE7-4578-9C71-DE4DBD6F75C2
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock49">brew cask install filezilla
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock50">Set up Filezilla for WnW.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline44" class="outline-3">
+<h3 id="orgheadline44"><a id="ID-934F774C-A87E-42A9-A558-152B7FEA1670"></a><span class="section-number-3">7.7</span> Skype</h3>
+<div class="outline-text-3" id="text-7-7">
+<pre class="example">
+ID: 934F774C-A87E-42A9-A558-152B7FEA1670
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock51">brew cask install skype
+</pre>
+</div>
+
+<p>
+Got a surprise today. After doing 7 runs, Skype was installed but it was not
+successfully linked into /Application. That is surprising. It is installed
+under the BrewCask (cask room) location:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock52">/opt/homebrew/Caskroom/skype/latest/Skype
+</pre>
+</div>
+
+<p>
+The link to Applications didn&rsquo;t exist so Skype was not added to Login
+Items. I manually added it. I clicked <code>+</code>. This Mac. Searched for &ldquo;Skype&rdquo;. Then I
+chose it.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock53">Log in automatically. Don't grant access to contacts.
+Preferences General. Never set my status away. Don't show birthday notifications. Don't always keep Skype up to date.
+Messaing: Don't use larg emotions. Use compact chat style. Don't show when I am typing.
+Notifications: Do not notify when I sign in or out, and others, and when they become
+available do nothing.
+Advanced: Display technical call information yes. Do not collect
+call information.
+Login Items, add Skype in here.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline45" class="outline-3">
+<h3 id="orgheadline45"><a id="ID-FB6C94D0-0CE2-478E-88FB-C9D0B2D5E687"></a><span class="section-number-3">7.8</span> SourceTree</h3>
+<div class="outline-text-3" id="text-7-8">
+<pre class="example">
+ID: FB6C94D0-0CE2-478E-88FB-C9D0B2D5E687
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock54">brew cask install sourcetree
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock55">Log into SourceTree.
+Let it scan the BitBucket folder to add those projects to SourceTree.
+Preferences.
+General: Disallow SourceTree from modifying yoru global Git config file
+Diff: Set font to DJSM 14.
+Manually:
+- Go through the licensing process
+- Old app just let you type it into the GUI, not seeing it here now
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline46" class="outline-3">
+<h3 id="orgheadline46"><a id="ID-A8A0F670-7277-4648-9045-9B7D59C0AC54"></a><span class="section-number-3">7.9</span> Racket</h3>
+<div class="outline-text-3" id="text-7-9">
+<pre class="example">
+ID: A8A0F670-7277-4648-9045-9B7D59C0AC54
+</pre>
+
+<p>
+Need this for resume stuff. At this point at least Racket is installed.
+Here I found that Pandoc was not set up right. After everything is done,
+including manually installing MacTeX, I could build my resume here.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock56">brew cask install racket
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock57">racket --version
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline47" class="outline-3">
+<h3 id="orgheadline47"><a id="ID-451994D9-2351-4867-9798-7522388F6207"></a><span class="section-number-3">7.10</span> Freemind</h3>
+<div class="outline-text-3" id="text-7-10">
+<pre class="example">
+ID: 451994D9-2351-4867-9798-7522388F6207
+</pre>
+
+<p>
+I use mindmaps.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock58">brew cask install freemind
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock59">Run it.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline48" class="outline-3">
+<h3 id="orgheadline48"><a id="ID-54E89ACB-1573-4D11-B687-97A754A3908E"></a><span class="section-number-3">7.11</span> VIM &amp; MacVIM</h3>
+<div class="outline-text-3" id="text-7-11">
+<pre class="example">
+ID: 54E89ACB-1573-4D11-B687-97A754A3908E
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock60">brew install vim
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock61">brew cask install macvim
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock62">Copy over my .vimrc, once one exists.
+Run it.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline49" class="outline-3">
+<h3 id="orgheadline49"><a id="ID-57403E53-993D-493B-B756-32F2D71A412B"></a><span class="section-number-3">7.12</span> Guile</h3>
+<div class="outline-text-3" id="text-7-12">
+<pre class="example">
+ID: 57403E53-993D-493B-B756-32F2D71A412B
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp" id="orgsrcblock63">brew install guile
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline50" class="outline-3">
+<h3 id="orgheadline50"><a id="ID-D3DBFD98-040E-4049-A438-944A53EC2EA5"></a><span class="section-number-3">7.13</span> Enscript</h3>
+<div class="outline-text-3" id="text-7-13">
+<pre class="example">
+ID: D3DBFD98-040E-4049-A438-944A53EC2EA5
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock64">brew install enscript
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock65">Run Enscript.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline51" class="outline-3">
+<h3 id="orgheadline51"><a id="ID-6B0AAEB8-5589-4D36-962A-C2F8C0061B64"></a><span class="section-number-3">7.14</span> Virtualbox</h3>
+<div class="outline-text-3" id="text-7-14">
+<pre class="example">
+ID: 6B0AAEB8-5589-4D36-962A-C2F8C0061B64
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock66">brew cask install virtualbox
+</pre>
+</div>
+
+<p>
+Sometimes this install succeeds but the application does not appear to be
+installed. Not sure if this is a Spotlight/FS thing or what.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock67">Boot up at least one Vagrant box using Virtualbox to make sure it is happy.
+The directions are with Vagrant.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline52" class="outline-3">
+<h3 id="orgheadline52"><a id="ID-8B59D8B4-54FD-4418-8945-AA484142BCF1"></a><span class="section-number-3">7.15</span> VMWare Fusion</h3>
+<div class="outline-text-3" id="text-7-15">
+<pre class="example">
+ID: 8B59D8B4-54FD-4418-8945-AA484142BCF1
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock68">brew cask install vmware-fusion
+</pre>
+</div>
+
+<p>
+Sometimes this fails, just like with VirtualBox. Perhaps it is a network speed
+thing?
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock69">License it.
+Boot up at least one Vagrant box using VMWare Fusion to make sure it is happy.
+The directions are with Vagrant.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline53" class="outline-3">
+<h3 id="orgheadline53"><a id="ID-076697D3-8062-466C-B417-F311FA963C7F"></a><span class="section-number-3">7.16</span> Libre Office</h3>
+<div class="outline-text-3" id="text-7-16">
+<pre class="example">
+ID: 076697D3-8062-466C-B417-F311FA963C7F
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock70">brew cask install libreoffice
+</pre>
+</div>
+
+<p>
+This failed on the slow network.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock71">Run it.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline54" class="outline-3">
+<h3 id="orgheadline54"><a id="ID-907B99E7-1B10-437E-9211-03846B287305"></a><span class="section-number-3">7.17</span> Kindle</h3>
+<div class="outline-text-3" id="text-7-17">
+<pre class="example">
+ID: 907B99E7-1B10-437E-9211-03846B287305
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock72">brew cask install kindle
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock73">Sign in. Make sure it works. Download everything so it is there.
+You can see files downloaded versus avalable to be sure. Or not.
+The upside is reading without Internet connectivity.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline55" class="outline-3">
+<h3 id="orgheadline55"><a id="ID-C623E9CE-FD57-4E73-A831-77E34E0A91BB"></a><span class="section-number-3">7.18</span> VLC</h3>
+<div class="outline-text-3" id="text-7-18">
+<pre class="example">
+ID: C623E9CE-FD57-4E73-A831-77E34E0A91BB
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock74">brew cask install vlc
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock75">Run it.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline57" class="outline-3">
+<h3 id="orgheadline57"><a id="ID-3BA23E12-77B9-4414-8498-3979897F27DD"></a><span class="section-number-3">7.19</span> Programs That Don&rsquo;t Need Any Configuration</h3>
+<div class="outline-text-3" id="text-7-19">
+<pre class="example">
+ID: 3BA23E12-77B9-4414-8498-3979897F27DD
+</pre>
+</div>
+
+<div id="outline-container-orgheadline56" class="outline-4">
+<h4 id="orgheadline56"><a id="ID-882E8D8B-A25F-4074-92D3-DA75B75B4803"></a><span class="section-number-4">7.19.1</span> Part A</h4>
+<div class="outline-text-4" id="text-7-19-1">
+<pre class="example">
+ID: 882E8D8B-A25F-4074-92D3-DA75B75B4803
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock76">Remember to run these. Just do a version check or something.
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock77">brew install smlnj
+brew install cvs
+brew install bzr
+brew install hg
+brew install graphviz
+brew install tree
+brew install archey
+brew install figlet
+brew install pandoc
+brew install gforth
+brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libvo-aacenc --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-opus --with-rtmpdump --with-schroedinger --with-speex --with-theora --with-tools --with-faac
+brew linkapps
+brew install povray --with-openexr
+brew linkapps
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline62" class="outline-3">
+<h3 id="orgheadline62"><a id="ID-5DEE57DD-5703-4EC9-86E2-1CC519C1B837"></a><span class="section-number-3">7.20</span> Stuff That Asks For My Password</h3>
+<div class="outline-text-3" id="text-7-20">
+<pre class="example">
+ID: 5DEE57DD-5703-4EC9-86E2-1CC519C1B837
+</pre>
+</div>
+
+<div id="outline-container-orgheadline59" class="outline-4">
+<h4 id="orgheadline59"><a id="ID-B8D8B260-441F-4B70-8850-6C209ABDA3D1"></a><span class="section-number-4">7.20.1</span> R</h4>
+<div class="outline-text-4" id="text-7-20-1">
+<pre class="example">
+ID: B8D8B260-441F-4B70-8850-6C209ABDA3D1
+</pre>
+
+<p>
+This is the first BrewCask install where I saw a check-sum error:
+</p>
+
+<pre class="example">
+==&gt; Caveats
+Cask r installs files under "/usr/local".  The presence of such
+files can cause warnings when running "brew doctor", which is considered
+to be a bug in homebrew-cask.
+
+==&gt; Satisfying dependencies
+complete
+==&gt; Downloading http://cran.rstudio.com/bin/macosx/R-3.1.3-mavericks.pkg
+######################################################################## 100.0%
+==&gt; Note: running "brew update" may fix sha256 checksum errors
+Error: sha256 mismatch
+Expected: bd150f488c36e3d793febd3b7f619c076fc3bccfe673592af3134c32118d1c5e
+Actual: 28445419c73b03dd3e0e1199114e23c83e56a5140f8c43f37b63cb550dc0eba7
+File: /Library/Caches/Homebrew/r-3.1.3.pkg
+To retry an incomplete download, remove the file above.
+</pre>
+
+<p>
+The software was downloaded. Its check-sum was wrong. Now what? This isn&rsquo;t the
+end of the world. I am glad it reported it. I am not investigating the mismatch.
+I suspect that there is a newer release and the formula wasn&rsquo;t updated. That is
+fine. I will delete that download and install it manually. This is a story I
+want to capture. Things aren&rsquo;t always perfect. There are so many moving parts
+that this is bound to happen. Patches are usually always welcomed, too.
+</p>
+
+<p>
+To handle this manual install, I read the OSX page for R. They explain that
+we ought to compare the check-sum of the download and show how. The current
+hashes are:
+</p>
+
+<pre class="example">
+MD5-hash: 2f263bbb394361b5c3dd0d882d1d2e70
+SHA1-hash: 200349fbcfd14b8b4769b52340164dd728c3995c
+(ca. 68MB)
+</pre>
+
+<p>
+You may see the download size in MiB via:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock78"><span class="org-builtin">cd</span> ~/Downloads
+du -h R-3.1.3-mavericks.pkg
+</pre>
+</div>
+
+<pre class="example">
+ 68M    R-3.1.3-mavericks.pkg
+</pre>
+
+<p>
+You may check the check-sum via:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock79"><span class="org-builtin">cd</span> ~/Downloads
+md5 R-3.1.3-mavericks.pkg
+</pre>
+</div>
+
+<pre class="example">
+MD5 (R-3.1.3-mavericks.pkg) = 2f263bbb394361b5c3dd0d882d1d2e70
+</pre>
+
+<p>
+Install the software.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock80">brew cask install r
+ln -s ~/git/bitbucket/alec/.Renviron ~/.Renviron
+ln -s ~/git/bitbucket/alec/.Rprofile ~/.Rprofile
+ln -s ~/git/bitbucket/alec/.Rinstall ~/.Rinstall
+rm -rf ~/.Rpackages
+mkdir ~/.Rpackages
+</pre>
+</div>
+
+<p>
+Explain what to do with it.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock81">I haven't used R in a long time but I want to get it set up right again.
+Link my configs from ~/ into where they live now.
+This installer asks for my password, which halts the install. How will I deal
+with this?
+There is a <span class="org-org-verbatim">.Rinstall</span> file in my setup to get all of the packages installed. Be s
+sure to run that, too. All of my notes live in R.org already.
+</pre>
+</div>
+</div>
+
+<ol class="org-ol"><li><a id="orgheadline58"></a><a id="ID-BEA57758-A9E8-415C-9D89-A0C5722A6383"></a>R Studio<br ><div class="outline-text-5" id="text-7-20-1-1">
+<pre class="example">
+ID: BEA57758-A9E8-415C-9D89-A0C5722A6383
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock82">brew cask install rstudio
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock83">This doesn't need any config I think.
+Run it.
+</pre>
+</div>
+</div></li></ol>
+</div>
+
+<div id="outline-container-orgheadline61" class="outline-4">
+<h4 id="orgheadline61"><a id="ID-7B45D9BF-6FD5-4624-9F06-671D33D76A78"></a><span class="section-number-4">7.20.2</span> Vagrant</h4>
+<div class="outline-text-4" id="text-7-20-2">
+<pre class="example">
+ID: 7B45D9BF-6FD5-4624-9F06-671D33D76A78
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock84">brew cask install vagrant
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock85">Install the VMWare provider for Vagrant and then license it.
+
+Remember to <span class="org-org-link"><a href="http://docs.vagrantup.com/v2/other/debugging.html">log</a></span> appropriately.
+
+It goes something like this:
+
+<span class="org-org-block-begin-line">#+begin_src sh</span>
+<span class="org-org-block">vagrant plugin install vagrant-vmware-fusion</span>
+<span class="org-org-block">mkdir ~/.vagrant</span>
+<span class="org-org-block">cd ~/.vagrant</span>
+<span class="org-org-block"># copy that license file in there</span>
+<span class="org-org-block">vagrant plugin license vagrant-vmware-fusion license.lic</span>
+<span class="org-org-block-end-line">#+end_src</span>
+
+Test out VirtualBox box:
+
+<span class="org-org-block-begin-line">#+begin_src sh</span>
+<span class="org-org-block">cd ~/tmp</span>
+<span class="org-org-block">vagrant init hashicorp/precise32</span>
+<span class="org-org-block">vagrant up --provider virtualbox</span>
+<span class="org-org-block-end-line">#+end_src</span>
+
+The first time I tried this, it failed. I restarted OSX. Then it worked.
+
+Test out VMWare:
+
+<span class="org-org-block-begin-line">#+begin_src sh</span>
+<span class="org-org-block">cd ~/tmp</span>
+<span class="org-org-block">vagrant init chef/ubuntu-14.04</span>
+<span class="org-org-block">vagrant up</span>
+<span class="org-org-block-end-line">#+end_src</span>
+</pre>
+</div>
+</div>
+
+<ol class="org-ol"><li><a id="orgheadline60"></a><a id="ID-2384B1E5-6EBB-4C43-80CE-FDD2476E40D3"></a>Vagrant Manager<br ><div class="outline-text-5" id="text-7-20-2-1">
+<pre class="example">
+ID: 2384B1E5-6EBB-4C43-80CE-FDD2476E40D3
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock86">brew cask install vagrant-manager
+</pre>
+</div>
+
+<p>
+Tonight I had a surprise. Vagrant reported a failure. It was trying to copy a
+machine into a non-existent directory ~/.vagrant. That is where I keep the
+VMWare Vagrant license. That was surprising. Support has see this before when
+Vagrant Manager is running. I closed it and tried again and it worked fine. The
+value of Vagrant Manager is that it makes visible machines that you have
+running. Support explained that Vagrant Manager might be doing it. It was. He
+opened a ticket. I added to <a href="https://github.com/lanayotech/vagrant-manager/issues/78">it</a>.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-org" id="orgsrcblock87">- Terminal Preference: Terminal
+- Status Bar Icon Theme: Clean
+- Launch at login: Yes
+- Following settings: No
+- Refresh every: 5 seconds
+- Following settings: No
+- Allowed Updates: stable
+- Send anonymous profile data: Yes
+</pre>
+</div>
+</div></li></ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline77" class="outline-2">
+<h2 id="orgheadline77"><a id="ID-5BF2F31A-8713-4BE0-89E7-66AA327E070C"></a><span class="section-number-2">8</span> Productivity, Manual</h2>
+<div class="outline-text-2" id="text-8">
+<pre class="example">
+ID: 5BF2F31A-8713-4BE0-89E7-66AA327E070C
+</pre>
+</div>
+
+<div id="outline-container-orgheadline75" class="outline-3">
+<h3 id="orgheadline75"><a id="ID-AB75D588-C667-4C2B-A54B-15E513EBF920"></a><span class="section-number-3">8.1</span> By Hand</h3>
+<div class="outline-text-3" id="text-8-1">
+<pre class="example">
+ID: AB75D588-C667-4C2B-A54B-15E513EBF920
+</pre>
+</div>
+
+<div id="outline-container-orgheadline64" class="outline-4">
+<h4 id="orgheadline64"><a id="ID-C8E3A6E9-16E6-4ABD-A667-0E952D38D3E4"></a><span class="section-number-4">8.1.1</span> OSX Enhanced Voice Dictation</h4>
+<div class="outline-text-4" id="text-8-1-1">
+<pre class="example">
+ID: C8E3A6E9-16E6-4ABD-A667-0E952D38D3E4
+</pre>
+
+<p>
+Somehow I activated the installer for &ldquo;OSX Enhanced Voice Dictation&rdquo;. I said &ldquo;Yes&rdquo;.
+Found <a href="https://support.apple.com/en-us/HT202584">this</a> guide and here are the steps:
+</p>
+
+<ul class="org-ul">
+<li>Apple</li>
+<li>System Preferences</li>
+<li>Dictation &amp; Speech</li>
+<li>Dictation</li>
+<li>Enable</li>
+<li>Yes: Use Enhanced Dictation</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline65" class="outline-4">
+<h4 id="orgheadline65"><a id="ID-07ADFC51-E81C-46C1-8D1F-40FB11A93BEC"></a><span class="section-number-4">8.1.2</span> Visible Body</h4>
+<div class="outline-text-4" id="text-8-1-2">
+<pre class="example">
+ID: 07ADFC51-E81C-46C1-8D1F-40FB11A93BEC
+</pre>
+
+<ul class="org-ul">
+<li>Human Anatomy Atlas</li>
+<li>Muscle Premium</li>
+<li>Skeleton Premium</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline66" class="outline-4">
+<h4 id="orgheadline66"><a id="ID-2DC289B4-939F-4A3F-B343-C1E86BA7E360"></a><span class="section-number-4">8.1.3</span> PyCharm Professional</h4>
+<div class="outline-text-4" id="text-8-1-3">
+<pre class="example">
+ID: 2DC289B4-939F-4A3F-B343-C1E86BA7E360
+</pre>
+
+<ul class="org-ul">
+<li>No Brew Cask for this</li>
+<li>Download and install</li>
+<li>&ldquo;use your JetBrains Account credentials in PyCharm to use this license&rdquo;</li>
+<li>Import settings: I do not have any</li>
+<li>Allow it to accept incoming network connections</li>
+<li>PyCharm initial configuration
+<ul class="org-ul">
+<li>Keymap: Emacs</li>
+<li>Theme: Default</li>
+<li>Editor colors and fonts: Default</li>
+<li>Enable opening files CMD: Yes <code>/usr/local/bin/charm</code></li>
+</ul></li>
+<li>Preferences
+<ul class="org-ul">
+<li>Appearance &amp; Behavior
+<ul class="org-ul">
+<li>System Settings
+<ul class="org-ul">
+<li>Usage Statistics
+<ul class="org-ul">
+<li>Do send anonymous statistics: weekly</li>
+</ul></li>
+</ul></li>
+<li>Appearance
+<ul class="org-ul">
+<li>Show tool window bars</li>
+</ul></li>
+</ul></li>
+<li>Editor
+<ul class="org-ul">
+<li>General
+<ul class="org-ul">
+<li>Use soft wraps</li>
+<li>Use soft wraps in console</li>
+<li>Appearance
+<ul class="org-ul">
+<li>Show line numbers</li>
+<li>Use block caret</li>
+<li>nil Caret blinking</li>
+</ul></li>
+</ul></li>
+<li>Colors &amp; Fonts
+<ul class="org-ul">
+<li><a href="https://github.com/jkaving/intellij-colors-solarized">Solarized Theme</a>: Dark</li>
+<li>General
+<ul class="org-ul">
+<li>Caret: #839496</li>
+</ul></li>
+<li>Font
+<ul class="org-ul">
+<li>DJSM 17</li>
+</ul></li>
+</ul></li>
+<li>Code Style
+<ul class="org-ul">
+<li>Right margin column: 80</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline67" class="outline-4">
+<h4 id="orgheadline67"><a id="ID-0C295430-3FF3-4ABC-BA15-1AEC5E26A603"></a><span class="section-number-4">8.1.4</span> WebStorm</h4>
+<div class="outline-text-4" id="text-8-1-4">
+<pre class="example">
+ID: 0C295430-3FF3-4ABC-BA15-1AEC5E26A603
+</pre>
+
+<ul class="org-ul">
+<li>Same configuration as PyCharm</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline68" class="outline-4">
+<h4 id="orgheadline68"><a id="ID-A1592C54-F939-4C7E-938C-1C13EC8A2AAF"></a><span class="section-number-4">8.1.5</span> Textual IRC Client</h4>
+<div class="outline-text-4" id="text-8-1-5">
+<pre class="example">
+ID: A1592C54-F939-4C7E-938C-1C13EC8A2AAF
+</pre>
+
+<ul class="org-ul">
+<li>AppStore.</li>
+</ul>
+
+<p>
+Only note changes from the current default
+</p>
+
+<p>
+Set up preferences:
+</p>
+
+<ul class="org-ul">
+<li>Preferences.</li>
+<li>General.
+<ul class="org-ul">
+<li>NO: Display MOTD</li>
+<li>YES: Save the state of queries</li>
+</ul></li>
+<li>Highlights.</li>
+<li>Notifications.</li>
+<li>Controls.</li>
+<li>Interface.</li>
+<li>Style.
+<ul class="org-ul">
+<li>General.
+<ul class="org-ul">
+<li>Style: nox.</li>
+<li>Font: DJSM 17</li>
+</ul></li>
+<li>Inline Media.
+<ul class="org-ul">
+<li>YES: Show images inline</li>
+</ul></li>
+</ul></li>
+<li>Addons.</li>
+<li>Advanced.
+<ul class="org-ul">
+<li>Default Identity.
+<ul class="org-ul">
+<li>grettke</li>
+<li>grettke💤</li>
+<li>grettke</li>
+<li>Grant Rettke</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+Server preferences:
+</p>
+
+<ul class="org-ul">
+<li>Basic Settings.
+<ul class="org-ul">
+<li>General
+<ul class="org-ul">
+<li>YES: Recomment when server disconnects</li>
+<li>Messages.
+<ul class="org-ul">
+<li>Part &amp; Quit:
+<ul class="org-ul">
+<li>Thompson</li>
+</ul></li>
+<li>Computer Sleep &amp; Quit
+<ul class="org-ul">
+<li>Hamming</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Connect commands: identify</li>
+</ul></li>
+<li>Identity
+<ul class="org-ul">
+<li>Wait for ID before joining</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline69" class="outline-4">
+<h4 id="orgheadline69"><a id="ID-9EDE18B7-DDA1-4FC1-8866-256596BA54D0"></a><span class="section-number-4">8.1.6</span> Entropy</h4>
+<div class="outline-text-4" id="text-8-1-6">
+<pre class="example">
+ID: 9EDE18B7-DDA1-4FC1-8866-256596BA54D0
+</pre>
+
+<p>
+This is a <a href="http://www.eigenlogik.com/entropy/">download</a> and manual install.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline70" class="outline-4">
+<h4 id="orgheadline70"><a id="ID-36F3F9F6-31D1-4517-94F3-B7A787F2C166"></a><span class="section-number-4">8.1.7</span> Guitar Pro</h4>
+<div class="outline-text-4" id="text-8-1-7">
+<pre class="example">
+ID: 36F3F9F6-31D1-4517-94F3-B7A787F2C166
+</pre>
+
+<p>
+<a href="http://www.guitar-pro.com/en/index.php">Here</a>. Sign into MySongBook.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline71" class="outline-4">
+<h4 id="orgheadline71"><a id="ID-A3271ECD-A07A-45E2-A0DE-A82EE8FA6833"></a><span class="section-number-4">8.1.8</span> GotoMeeting &amp; Fuse</h4>
+<div class="outline-text-4" id="text-8-1-8">
+<pre class="example">
+ID: A3271ECD-A07A-45E2-A0DE-A82EE8FA6833
+</pre>
+
+<p>
+WebMeeting software.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline72" class="outline-4">
+<h4 id="orgheadline72"><a id="ID-FB2138CF-B62C-4BCB-A892-AB855A61535A"></a><span class="section-number-4">8.1.9</span> Cepestral Callie &amp; David</h4>
+<div class="outline-text-4" id="text-8-1-9">
+<pre class="example">
+ID: FB2138CF-B62C-4BCB-A892-AB855A61535A
+</pre>
+
+<p>
+<a href="http://www.cepstral.com/">Here</a>.
+</p>
+
+<p>
+You might need to log out and in again to make the &ldquo;Cepstral Voices&rdquo; appear in
+System Preferences.
+</p>
+
+<p>
+License them. Test them.
+</p>
+
+<p>
+Set Dictation &amp; Text to Speech to: Callie
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline73" class="outline-4">
+<h4 id="orgheadline73"><a id="ID-568C1BC2-1569-4E3A-8246-594E0C889244"></a><span class="section-number-4">8.1.10</span> Microsoft Office</h4>
+<div class="outline-text-4" id="text-8-1-10">
+<pre class="example">
+ID: 568C1BC2-1569-4E3A-8246-594E0C889244
+</pre>
+
+<p>
+This is in BrewCask, but the download is waste of time. I have it locally.
+</p>
+
+<p>
+I keep going back and forth on this one. Is it worth saving 15 minutes having to
+install it myself?
+</p>
+
+<p>
+Start it. It asks for your name. It asks about updates and stuff. Get them all.
+Start Outlook. Enter in new license for that.
+</p>
+
+<p>
+When activation occurs, the app always locks up then I quit it and it restarts
+after sending an error report.
+</p>
+
+<p>
+Don&rsquo;t let it access Contacts.
+</p>
+
+<p>
+When it checks for updates, tell it to check daily.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline74" class="outline-4">
+<h4 id="orgheadline74"><a id="ID-4769C0C6-AA8F-4073-B233-253691004873"></a><span class="section-number-4">8.1.11</span> MacTex &amp; GnuPlot</h4>
+<div class="outline-text-4" id="text-8-1-11">
+<pre class="example">
+ID: 4769C0C6-AA8F-4073-B233-253691004873
+</pre>
+
+<p>
+This is 2.4 GiB. That is not much. If you get the US mirror it is 20 minutes.
+</p>
+
+<p>
+That is if you are lucky.
+</p>
+
+<p>
+That makes the automated installer very slow. I just don&rsquo;t like it.
+</p>
+
+<p>
+I will deal with it by installing it manually <a href="https://tug.org/mactex/mirrorpage.html">here</a>.
+</p>
+
+<p>
+At this point, definitely I can build my resume here.
+</p>
+
+<p>
+Once that is installed, install gnuplot:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock88">brew install gnuplot --with-latex --with-pdflib-lite --with-tests --with-x11
+</pre>
+</div>
+
+<p>
+Set up my TeX stuff for KOMA-script. Backup the default configuration first.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock89">ls /usr/local/texlive/2014
+sudo cp /usr/local/texlive/2014/texmf.cnf /usr/local/texlive/2014/texmf.cnf-<span class="org-sh-quoted-exec">`date '+%Y_%m_%d__%H_%M_%S'`</span>
+ls /usr/local/texlive/2014
+sudo tlmgr conf texmf TEXMFHOME ~/git/bitbucket/texmf/
+</pre>
+</div>
+
+<p>
+Check that the path is really updated.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock90">kpsewhich KomaDefault.lco
+</pre>
+</div>
+
+<pre class="example">
+/Users/gcr/git/bitbucket/texmf/tex/latex/KomaDefault.lco
+</pre>
+
+<p>
+The documents say to maybe do the following. I did it.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock91">sudo mktexlsr
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline76" class="outline-3">
+<h3 id="orgheadline76"><a id="ID-798AD4C6-AFB7-4AB6-B794-16E1E83CDF5C"></a><span class="section-number-3">8.2</span> App Store Installs</h3>
+<div class="outline-text-3" id="text-8-2">
+<pre class="example">
+ID: 798AD4C6-AFB7-4AB6-B794-16E1E83CDF5C
+</pre>
+
+<ul class="org-ul">
+<li>First check purchases, then the store</li>
+
+<li>Microsoft Remote Desktop
+<ul class="org-ul">
+<li>Don&rsquo;t open the session full-screen.</li>
+</ul></li>
+<li>Text2Speech PRO
+<ul class="org-ul">
+<li>Set default voice to Callie</li>
+</ul></li>
+<li>PixelMator</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline85" class="outline-2">
+<h2 id="orgheadline85"><a id="ID-548170EE-5409-4DF6-96BB-B1D384FC734B"></a><span class="section-number-2">9</span> User Options, Manual</h2>
+<div class="outline-text-2" id="text-9">
+<pre class="example">
+ID: 548170EE-5409-4DF6-96BB-B1D384FC734B
+</pre>
+
+<ul class="org-ul">
+<li>Not really a user option, but open Keychain Access
+<ul class="org-ul">
+<li>Preferences</li>
+<li>YES: Show keychain status in menu bar
+<ul class="org-ul">
+<li>This gives you a lock-screen GUI command</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-orgheadline78" class="outline-3">
+<h3 id="orgheadline78"><a id="ID-996317F3-BB3B-43ED-A54B-AF469A8BBF3B"></a><span class="section-number-3">9.1</span> Desktop &amp; Screen Saver</h3>
+<div class="outline-text-3" id="text-9-1">
+<pre class="example">
+ID: 996317F3-BB3B-43ED-A54B-AF469A8BBF3B
+</pre>
+
+<ul class="org-ul">
+<li>Desktop</li>
+</ul>
+
+<p>
+The automatic setting works intermittently. If it failed, set it manually.
+The image is <a href="http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2015/02/M101-ORG.jpg">here</a>. I downloaded it, too.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh" id="orgsrcblock92"><span class="org-builtin">cd</span> ~/Pictures/
+curl -O http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2015/02/M101-ORG.jpg
+<span class="org-builtin">cd</span> ~/
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Screen Saver
+<ul class="org-ul">
+<li>Screen saver: Flurry. After 10 minutes.</li>
+<li>Hot corner
+<ul class="org-ul">
+<li>Top left: Start screen saver</li>
+<li>Top right: Put display to sleep</li>
+<li>Bottom left: Disable screen saver</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline79" class="outline-3">
+<h3 id="orgheadline79"><a id="ID-51E4DE03-0ED5-4951-A772-2BB41A9CE56E"></a><span class="section-number-3">9.2</span> Energy Saver</h3>
+<div class="outline-text-3" id="text-9-2">
+<pre class="example">
+ID: 51E4DE03-0ED5-4951-A772-2BB41A9CE56E
+</pre>
+
+<ul class="org-ul">
+<li>Energy Saver, Power Adapter
+<ul class="org-ul">
+<li>Automatic graphics switching: yes</li>
+<li>Turn display off after minutes: 15</li>
+<li>Prevent computer from sleeping automatically when the display is off: yes</li>
+<li>Put hard disks to sleep when possible: yes</li>
+<li>Wake for network access: yes</li>
+<li>Enable power nap when plugged in: yes</li>
+<li>Show battery status in menu bar: yes</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline80" class="outline-3">
+<h3 id="orgheadline80"><a id="ID-83C37544-BD69-4791-8C47-5AB8CEC01330"></a><span class="section-number-3">9.3</span> Users &amp; Groups &rarr; Login Options</h3>
+<div class="outline-text-3" id="text-9-3">
+<pre class="example">
+ID: 83C37544-BD69-4791-8C47-5AB8CEC01330
+</pre>
+
+<ul class="org-ul">
+<li>Automatic login: off</li>
+<li>Display login window as: Name and password</li>
+<li>Show the Sleep, Restart, and Shut Down buttons: yes</li>
+<li>Show input menu in login window: no</li>
+<li>Show password hints: no.</li>
+<li>Show fast user switching menu as: icon</li>
+<li>Use VoiceOver in the login window: no</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline84" class="outline-3">
+<h3 id="orgheadline84"><a id="ID-8FC611D4-B8EA-4698-8981-E20B736F5F40"></a><span class="section-number-3">9.4</span> Security &amp; Privacy</h3>
+<div class="outline-text-3" id="text-9-4">
+<pre class="example">
+ID: 8FC611D4-B8EA-4698-8981-E20B736F5F40
+</pre>
+</div>
+
+<div id="outline-container-orgheadline81" class="outline-4">
+<h4 id="orgheadline81"><a id="ID-92BBCCA2-B373-4085-A69F-2F1A747D4FDC"></a><span class="section-number-4">9.4.1</span> General</h4>
+<div class="outline-text-4" id="text-9-4-1">
+<pre class="example">
+ID: 92BBCCA2-B373-4085-A69F-2F1A747D4FDC
+</pre>
+
+<ul class="org-ul">
+<li>User: Require password _ after sleep or screen saver begins: yes, after 15 minutes</li>
+<li>Disable automatic login: yes</li>
+<li>Advanced &rarr; Require an administrator password access system-wide preferences: yes</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline82" class="outline-4">
+<h4 id="orgheadline82"><a id="ID-ABEF9B70-2310-4A45-BA8E-F0E81B601222"></a><span class="section-number-4">9.4.2</span> Firewall</h4>
+<div class="outline-text-4" id="text-9-4-2">
+<pre class="example">
+ID: ABEF9B70-2310-4A45-BA8E-F0E81B601222
+</pre>
+
+<ul class="org-ul">
+<li>Turn it on.</li>
+<li>Block all incoming connections: no</li>
+<li>Automatically allow signed software to receive connections: no</li>
+<li>Enable stealth mode: yes</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline83" class="outline-4">
+<h4 id="orgheadline83"><a id="ID-F0E82C32-275D-4C66-8C19-13C21586D37D"></a><span class="section-number-4">9.4.3</span> HOSTS</h4>
+<div class="outline-text-4" id="text-9-4-3">
+<pre class="example">
+ID: F0E82C32-275D-4C66-8C19-13C21586D37D
+</pre>
+
+<p>
+Update it appropriately.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline86" class="outline-2">
+<h2 id="orgheadline86"><a id="ID-01B5C019-E0D3-45A1-9C36-A6B493C03DE8"></a><span class="section-number-2">10</span> Full System Backups</h2>
+<div class="outline-text-2" id="text-10">
+<pre class="example">
+ID: 01B5C019-E0D3-45A1-9C36-A6B493C03DE8
+</pre>
+
+<p>
+Doing provisioning using Kitchenplan and Brew and BrewCask still takes at least
+6 hours. You still need to perform manual steps. For me, it is unavoidable. This
+is painful. This is a waste of 6 hours. It is the waste of your evening. It is a
+waste of your weekend.
+</p>
+
+<p>
+My new plan is to get the box provisioned and image it there. I want to minimize
+provisioning ever again. The opportunity here is that you learn new things each
+time. That is cool. The problem is that your goal is not to learn new things
+every time. It is a decision, and it needs to be thoughtfully made. This
+evidence is valuable. It has helped me understand my decision to work in
+virtuals here forward.
+</p>
+
+<p>
+To image a full system:
+</p>
+
+<ul class="org-ul">
+<li>Note the base configuration, <code>01</code></li>
+<li>Get system and application updates</li>
+<li>Trim contents of included-folders
+<ul class="org-ul">
+<li>Most of my stuff will never be in them anyway</li>
+<li>More like DropBox and Git
+<ul class="org-ul">
+<li>Keep Git checkouts. Simpler. Update will get new stuff.</li>
+</ul></li>
+<li><code>/Users/gcr/Documents</code></li>
+<li>Empty the trash</li>
+<li>Vagrant box definitions will exist under source control, but the individual
+boxes will only ever live in the storage locations configured for the
+provider</li>
+<li>Double-check that all of your Git working-copies are pushed home.</li>
+</ul></li>
+<li>Disk utility
+<ul class="org-ul">
+<li>Verify disk permissions
+<ul class="org-ul">
+<li>Logs a lot of info</li>
+<li>Unsure if any of it is useful</li>
+</ul></li>
+<li>Repair disk permissions if necessary
+<ul class="org-ul">
+<li>At the very bottom will log &ldquo;Permissions repair complete&rdquo;</li>
+</ul></li>
+<li>Verify disk</li>
+<li>Repair disk if necessary</li>
+</ul></li>
+<li>For the clone exclude
+<ul class="org-ul">
+<li><code>/Users/gcr/Downloads</code></li>
+<li><code>/Users/gcr/Dropbox</code></li>
+<li><code>/Users/gcr/tmp</code></li>
+<li><code>/Users/gcr/.vagrant.d/boxes</code>
+<ul class="org-ul">
+<li><a href="http://docs-v1.vagrantup.com/v1/docs/boxes.html">Reference</a></li>
+<li>How this works is that when CCC cloned that disk image back to the machine,
+this directory was present, and it was empty. I was curious about whether
+the directory would be present or not and happy to see it was.</li>
+<li>After upping a box successfully, I verified that the base box was
+installed here as expected</li>
+</ul></li>
+<li><code>/VirtualBox VMs</code>
+<ul class="org-ul">
+<li>VirtualBox stores its VMS here by default</li>
+<li>When you start making changes to a Vagrant box, they are saved <a href="https://stackoverflow.com/questions/8225820/where-is-vagrant-saving-changes-to-the-vm">here</a></li>
+<li>For example I booted up the Vagrant box from &ldquo;Getting started&rdquo;, created a
+hello world file, logged out and halted it, and this directory was
+<code>tmp_default_1426807980079_94539</code> was created in there and it contained all
+of the .vbox stuff for that machine.
+<ul class="org-ul">
+<li>Verified that <code>vagrant destroy</code> deletes that directory</li>
+</ul></li>
+</ul></li>
+<li><code>/Users/gcr/Documents/Virtual Machines</code>
+<ul class="org-ul">
+<li><a href="http://kb.vmware.com/selfservice/search.do?cmd=displayKC&amp;docType=kc&amp;docTypeID=DT_KB_1_1&amp;externalId=2056798">http://kb.vmware.com/selfservice/search.do?cmd=displayKC&amp;docType=kc&amp;docTypeID=DT_KB_1_1&amp;externalId=2056798</a></li>
+<li>This seems to be the directory where VMWare creates machines when you do
+so through the GUI</li>
+</ul></li>
+<li>When Vagrant VMWare Fusion creates machines it creates them inside of a
+<code>.vagrant</code> directory where the Vagrantfile lives.
+<ul class="org-ul">
+<li>The path is <code>&lt;directory where the Vagrant file lives&gt;/.vagrant/machines/default/vmware_fusion</code></li>
+<li>Found this info <a href="https://blog.safaribooksonline.com/2014/01/16/building-vagrant-vms-with-the-vmware-fusion-provider/">here</a> and verified it on my machine</li>
+<li>Verified that <code>vagrant destroy</code> deletes that directory</li>
+</ul></li>
+</ul></li>
+<li>Make sure that this configuration, including Kitchenplan, is tagged</li>
+<li>Note that tag here:
+<ul class="org-ul">
+<li>Machine name</li>
+<li>Built from image</li>
+<li>Provisioning Tag</li>
+<li>Timestamp</li>
+<li>c02M-01-v1.7-2015-03-17T18:58:40-0500</li>
+</ul></li>
+<li>On successful creation of the new image
+<ul class="org-ul">
+<li>Erase the machine and clone the new image to it
+<ul class="org-ul">
+<li>Address any image restoration issues now</li>
+</ul></li>
+<li>Backup this new image to Stargate</li>
+<li>Copy the Dropbox folder</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Grant Rettke</p>
+<p class="date">Created: 2015-09-12 Sat 20:00</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
