@@ -1,6 +1,22 @@
-* Reminders
+* README
   :PROPERTIES:
-  :ID:       8D40DC3B-8379-4657-BD0A-62787B3269F5
+  :ID:       README
+  :END:
+
+** Literate DevOps: OS X Development System
+
+Setting up a development system is a non-trivial investment.
+
+This document captures the steps required and automates as much as possible.
+
+The Style Guide is a *must read* for the operator.
+
+[[http://orgmode.org/][Org-Mode]] converted this unpleasant, tedious, and error prone task to a
+manageable, nearly reproducible, and error-free process.
+
+* Style Guide
+  :PROPERTIES:
+  :ID:       STYLEGUIDE
   :END:
 
 - The means justify the ends
@@ -1896,4 +1912,4 @@ To image a full system:
 #  LocalWords:  MOTD nox Addons grettke Rettke Recomment MySongBook GotoMeeting
 #  LocalWords:  WebMeeting Cepestral Cepstral MacTex GnuPlot GiB gnuplot KOMA
 #  LocalWords:  PixelMator Keychain keychain rarr VoiceOver virtuals DropBox bc
-#  LocalWords:  gc VMs tmp vbox Timestamp Stargate
+#  LocalWords:  gc VMs tmp vbox Timestamp Stargate README DevOps Cloner
