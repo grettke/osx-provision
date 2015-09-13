@@ -269,7 +269,7 @@ For reference, see where it lives.
 xcode-select --print-path
 #+end_src
 
-#+NAME:
+#+NAME: 9455101D-6BA7-4706-B5CF-69F31FF17465
 #+begin_example
 /Applications/Xcode.app/Contents/Developer
 #+end_example
@@ -290,7 +290,7 @@ everything that is required and CLT piggy-backs on it.
 xcode-select --print-path
 #+end_src
 
-#+NAME:
+#+NAME: 8732A9DA-8C9F-446F-9769-AECD504AAE08
 #+begin_example
 /Applications/Xcode.app/Contents/Developer
 #+end_example
@@ -1348,7 +1348,7 @@ cd ~/Downloads
 du -h R-3.1.3-mavericks.pkg
 #+end_src
 
-#+NAME:
+#+NAME: 3DEEBC3B-FD10-4E4E-9971-8872B21BC3AC
 #+begin_example
  68M    R-3.1.3-mavericks.pkg
 #+end_example
@@ -1361,7 +1361,7 @@ cd ~/Downloads
 md5 R-3.1.3-mavericks.pkg
 #+end_src
 
-#+NAME:
+#+NAME: 6C94E188-B67F-4CA1-A67F-3E5495F70CD9
 #+begin_example
 MD5 (R-3.1.3-mavericks.pkg) = 2f263bbb394361b5c3dd0d882d1d2e70
 #+end_example
