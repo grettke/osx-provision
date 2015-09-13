@@ -498,6 +498,7 @@ git clone bitbucket-grettke:grettke/grant-personal.git
 git clone bitbucket-grettke:grettke/cover-letter.git
 git clone bitbucket-grettke:grettke/correspondence.git
 git clone bitbucket-grettke:grettke/texmf.git
+git clone bitbucket-grettke:grettke/sas.git
 cd ~/git/github
 git clone github-grettke:grettke/help.git
 git clone github-grettke:grettke/home.git
