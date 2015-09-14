@@ -1494,6 +1494,10 @@ opened a ticket. I added to [[https://github.com/lanayotech/vagrant-manager/issu
    :ID:       AB75D588-C667-4C2B-A54B-15E513EBF920
    :END:
 
+*** SAS University Edition
+
+- 4096 MB RAM    
+
 *** OSX Enhanced Voice Dictation
     :PROPERTIES:
     :ID:       C8E3A6E9-16E6-4ABD-A667-0E952D38D3E4
