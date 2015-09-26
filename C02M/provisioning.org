@@ -1455,11 +1455,12 @@ vagrant up --provider virtualbox
 
 The first time I tried this, it failed. I restarted OSX. Then it worked.
 
-Test out VMWare:
+Test out VMWare. The default provider is vmware, so don't have to specify
+provider.
 
 ,#+begin_src sh
 cd ~/tmp/vgtest
-vagrant up --provider vmware_fusion
+vagrant up
 ,#+end_src
 
 #+end_src
