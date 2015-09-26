@@ -1445,7 +1445,9 @@ Test out VirtualBox box:
 
 ,#+begin_src sh
 cd ~/tmp
-vagrant init hashicorp/precise32
+mkdir vgtest
+cd vgtest
+vagrant init hashicorp/precise64
 vagrant up --provider virtualbox
 ,#+end_src
 
@@ -1454,9 +1456,8 @@ The first time I tried this, it failed. I restarted OSX. Then it worked.
 Test out VMWare:
 
 ,#+begin_src sh
-cd ~/tmp
-vagrant init chef/ubuntu-14.04
-vagrant up
+cd ~/tmp/vgtest
+vagrant up --provider vmware_fusion
 ,#+end_src
 
 #+end_src
