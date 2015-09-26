@@ -1436,7 +1436,7 @@ cd
 rm -rf ~/.vagrant
 ,#+end_src
 
-Verify the plug is licensed and happy:
+Verify the plugin is licensed and happy:
 
 ,#+NAME: CCCFA8CD-1754-4BD6-A355-7907E885B6C4
 ,#+BEGIN_SRC sh
