@@ -1434,6 +1434,13 @@ cd ~/.vagrant
 vagrant plugin license vagrant-vmware-fusion license.lic
 ,#+end_src
 
+Verify the plug is licensed and happy:
+
+,#+NAME: CCCFA8CD-1754-4BD6-A355-7907E885B6C4
+,#+BEGIN_SRC sh
+vagrant plugin list
+,#+END_SRC
+
 Test out VirtualBox box:
 
 ,#+begin_src sh
