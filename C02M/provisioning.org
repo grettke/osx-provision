@@ -1193,6 +1193,26 @@ Boot up at least one Vagrant box using Virtualbox to make sure it is happy.
 The directions are with Vagrant.
 #+end_src
 
+** VMWare Fusion
+   :PROPERTIES:
+   :ID:       8B59D8B4-54FD-4418-8945-AA484142BCF1
+   :END:
+
+#+NAME: 6C2FE527-BBA8-4D9B-8D41-5025D130BA7B
+#+begin_src sh :tangle productivity-run.sh :comments no
+brew cask install vmware-fusion
+#+end_src
+
+Sometimes this fails, just like with VirtualBox. Perhaps it is a network speed
+thing?
+
+#+NAME: 791CD029-62D4-466B-A816-7D4802816365
+#+begin_src org :tangle productivity-read.org
+License it.
+Boot up at least one Vagrant box using VMWare Fusion to make sure it is happy.
+The directions are with Vagrant.
+#+end_src
+
 ** Libre Office
    :PROPERTIES:
    :ID:       076697D3-8062-466C-B417-F311FA963C7F
@@ -1473,13 +1493,6 @@ opened a ticket. I added to [[https://github.com/lanayotech/vagrant-manager/issu
    :PROPERTIES:
    :ID:       AB75D588-C667-4C2B-A54B-15E513EBF920
    :END:
-
-*** VMWare Fusion
-    :PROPERTIES:
-    :ID:       8B59D8B4-54FD-4418-8945-AA484142BCF1
-    :END:
-
-Easier to keep track of updates; even as infrequent as they are.
 
 *** SAS University Edition
 
