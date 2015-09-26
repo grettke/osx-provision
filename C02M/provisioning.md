@@ -10,8 +10,9 @@ This document captures the steps required and automates as much as possible.
 
 The Style Guide is a **must read** for the operator.
 
-[Org-Mode](http://orgmode.org/) converted this unpleasant, tedious, and error prone task to a
-manageable, nearly reproducible, and error-free process.
+[Org-Mode](http://orgmode.org/) converted this manual, tedious, and error prone task to a
+semi-automated, nearly reproducible, and error-less process, for *me*. This document
+has never been beta tested; I am it&rsquo;s **only** user.
 
 # Style Guide
 
@@ -490,6 +491,7 @@ git clone bitbucket-grettke:grettke/grant-personal.git
 git clone bitbucket-grettke:grettke/cover-letter.git
 git clone bitbucket-grettke:grettke/correspondence.git
 git clone bitbucket-grettke:grettke/texmf.git
+git clone bitbucket-grettke:grettke/sas.git
 cd ~/git/github
 git clone github-grettke:grettke/help.git
 git clone github-grettke:grettke/home.git
@@ -1302,23 +1304,34 @@ mkdir ~/.vagrant
 cd ~/.vagrant
 # copy that license file in there
 vagrant plugin license vagrant-vmware-fusion license.lic
+cd
+rm -rf ~/.vagrant
 #+end_src
+
+Verify the plugin is licensed and happy:
+
+#+NAME: CCCFA8CD-1754-4BD6-A355-7907E885B6C4
+#+BEGIN_SRC sh
+vagrant plugin list
+#+END_SRC
 
 Test out VirtualBox box:
 
 #+begin_src sh
 cd ~/tmp
-vagrant init hashicorp/precise32
+mkdir vgtest
+cd vgtest
+vagrant init hashicorp/precise64
 vagrant up --provider virtualbox
 #+end_src
 
 The first time I tried this, it failed. I restarted OSX. Then it worked.
 
-Test out VMWare:
+Test out VMWare. The default provider is vmware, so don't have to specify
+provider.
 
 #+begin_src sh
-cd ~/tmp
-vagrant init chef/ubuntu-14.04
+cd ~/tmp/vgtest
 vagrant up
 #+end_src
 ```
@@ -1357,6 +1370,10 @@ vagrant up
 ## By Hand
 
     ID: AB75D588-C667-4C2B-A54B-15E513EBF920
+
+### SAS University Edition
+
+-   4096 MB RAM
 
 ### OSX Enhanced Voice Dictation
 

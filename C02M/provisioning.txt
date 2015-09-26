@@ -17,8 +17,9 @@ Grant Rettke
 
   The Style Guide is a *must read* for the operator.
 
-  [Org-Mode] converted this unpleasant, tedious, and error prone task to
-  a manageable, nearly reproducible, and error-free process.
+  [Org-Mode] converted this manual, tedious, and error prone task to a
+  semi-automated, nearly reproducible, and error-less process, for /me/.
+  This document has never been beta tested; I am it's *only* user.
 
 
   [Org-Mode] http://orgmode.org/
@@ -522,6 +523,7 @@ Grant Rettke
   | git clone bitbucket-grettke:grettke/cover-letter.git
   | git clone bitbucket-grettke:grettke/correspondence.git
   | git clone bitbucket-grettke:grettke/texmf.git
+  | git clone bitbucket-grettke:grettke/sas.git
   | cd ~/git/github
   | git clone github-grettke:grettke/help.git
   | git clone github-grettke:grettke/home.git
@@ -1431,23 +1433,34 @@ Grant Rettke
   | cd ~/.vagrant
   | # copy that license file in there
   | vagrant plugin license vagrant-vmware-fusion license.lic
+  | cd
+  | rm -rf ~/.vagrant
   | #+end_src
+  |
+  | Verify the plugin is licensed and happy:
+  |
+  | #+NAME: CCCFA8CD-1754-4BD6-A355-7907E885B6C4
+  | #+BEGIN_SRC sh
+  | vagrant plugin list
+  | #+END_SRC
   |
   | Test out VirtualBox box:
   |
   | #+begin_src sh
   | cd ~/tmp
-  | vagrant init hashicorp/precise32
+  | mkdir vgtest
+  | cd vgtest
+  | vagrant init hashicorp/precise64
   | vagrant up --provider virtualbox
   | #+end_src
   |
   | The first time I tried this, it failed. I restarted OSX. Then it worked.
   |
-  | Test out VMWare:
+  | Test out VMWare. The default provider is vmware, so don't have to specify
+  | provider.
   |
   | #+begin_src sh
-  | cd ~/tmp
-  | vagrant init chef/ubuntu-14.04
+  | cd ~/tmp/vgtest
   | vagrant up
   | #+end_src
   `----
@@ -1497,7 +1510,13 @@ Grant Rettke
   ID: AB75D588-C667-4C2B-A54B-15E513EBF920
 
 
-8.1.1 OSX Enhanced Voice Dictation
+8.1.1 SAS University Edition
+----------------------------
+
+  - 4096 MB RAM
+
+
+8.1.2 OSX Enhanced Voice Dictation
 ----------------------------------
 
   ID: C8E3A6E9-16E6-4ABD-A667-0E952D38D3E4
@@ -1516,7 +1535,7 @@ Grant Rettke
   [this] https://support.apple.com/en-us/HT202584
 
 
-8.1.2 Visible Body
+8.1.3 Visible Body
 ------------------
 
   ID: 07ADFC51-E81C-46C1-8D1F-40FB11A93BEC
@@ -1526,7 +1545,7 @@ Grant Rettke
   - Skeleton Premium
 
 
-8.1.3 PyCharm Professional
+8.1.4 PyCharm Professional
 --------------------------
 
   ID: 2DC289B4-939F-4A3F-B343-C1E86BA7E360
@@ -1570,7 +1589,7 @@ Grant Rettke
   [Solarized Theme] https://github.com/jkaving/intellij-colors-solarized
 
 
-8.1.4 WebStorm
+8.1.5 WebStorm
 --------------
 
   ID: 0C295430-3FF3-4ABC-BA15-1AEC5E26A603
@@ -1578,7 +1597,7 @@ Grant Rettke
   - Same configuration as PyCharm
 
 
-8.1.5 Textual IRC Client
+8.1.6 Textual IRC Client
 ------------------------
 
   ID: A1592C54-F939-4C7E-938C-1C13EC8A2AAF
@@ -1626,7 +1645,7 @@ Grant Rettke
     - Wait for ID before joining
 
 
-8.1.6 Entropy
+8.1.7 Entropy
 -------------
 
   ID: 9EDE18B7-DDA1-4FC1-8866-256596BA54D0
@@ -1637,7 +1656,7 @@ Grant Rettke
   [download] http://www.eigenlogik.com/entropy/
 
 
-8.1.7 Guitar Pro
+8.1.8 Guitar Pro
 ----------------
 
   ID: 36F3F9F6-31D1-4517-94F3-B7A787F2C166
@@ -1648,7 +1667,7 @@ Grant Rettke
   [Here] http://www.guitar-pro.com/en/index.php
 
 
-8.1.8 GotoMeeting & Fuse
+8.1.9 GotoMeeting & Fuse
 ------------------------
 
   ID: A3271ECD-A07A-45E2-A0DE-A82EE8FA6833
@@ -1656,8 +1675,8 @@ Grant Rettke
   WebMeeting software.
 
 
-8.1.9 Cepestral Callie & David
-------------------------------
+8.1.10 Cepestral Callie & David
+-------------------------------
 
   ID: FB2138CF-B62C-4BCB-A892-AB855A61535A
 
@@ -1674,7 +1693,7 @@ Grant Rettke
   [Here] http://www.cepstral.com/
 
 
-8.1.10 Microsoft Office
+8.1.11 Microsoft Office
 -----------------------
 
   ID: 568C1BC2-1569-4E3A-8246-594E0C889244
@@ -1696,7 +1715,7 @@ Grant Rettke
   When it checks for updates, tell it to check daily.
 
 
-8.1.11 MacTex & GnuPlot
+8.1.12 MacTex & GnuPlot
 -----------------------
 
   ID: 4769C0C6-AA8F-4073-B233-253691004873

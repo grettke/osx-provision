@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- 2015-09-12 Sat 20:00 -->
+<!-- 2015-09-26 Sat 15:26 -->
 <meta  charset="utf-8">
 <meta  name="viewport" content="width=device-width, initial-scale=1">
 <title></title>
@@ -165,8 +165,9 @@ The Style Guide is a <b>must read</b> for the operator.
 </p>
 
 <p>
-<a href="http://orgmode.org/">Org-Mode</a> converted this unpleasant, tedious, and error prone task to a
-manageable, nearly reproducible, and error-free process.
+<a href="http://orgmode.org/">Org-Mode</a> converted this manual, tedious, and error prone task to a
+semi-automated, nearly reproducible, and error-less process, for <i>me</i>. This document
+has never been beta tested; I am it&rsquo;s <b>only</b> user.
 </p>
 </div>
 </div>
@@ -891,6 +892,7 @@ git clone bitbucket-grettke:grettke/grant-personal.git
 git clone bitbucket-grettke:grettke/cover-letter.git
 git clone bitbucket-grettke:grettke/correspondence.git
 git clone bitbucket-grettke:grettke/texmf.git
+git clone bitbucket-grettke:grettke/sas.git
 <span class="org-builtin">cd</span> ~/git/github
 git clone github-grettke:grettke/help.git
 git clone github-grettke:grettke/home.git
@@ -2137,23 +2139,34 @@ It goes something like this:
 <span class="org-org-block">cd ~/.vagrant</span>
 <span class="org-org-block"># copy that license file in there</span>
 <span class="org-org-block">vagrant plugin license vagrant-vmware-fusion license.lic</span>
+<span class="org-org-block">cd</span>
+<span class="org-org-block">rm -rf ~/.vagrant</span>
 <span class="org-org-block-end-line">#+end_src</span>
+
+Verify the plugin <span class="org-writegood-passive-voice">is licensed</span> and happy:
+
+<span class="org-org-meta-line">#+NAME: CCCFA8CD-1754-4BD6-A355-7907E885B6C4</span>
+<span class="org-org-block-begin-line">#+BEGIN_SRC sh</span>
+<span class="org-org-block">vagrant plugin list</span>
+<span class="org-org-block-end-line">#+END_SRC</span>
 
 Test out VirtualBox box:
 
 <span class="org-org-block-begin-line">#+begin_src sh</span>
 <span class="org-org-block">cd ~/tmp</span>
-<span class="org-org-block">vagrant init hashicorp/precise32</span>
+<span class="org-org-block">mkdir vgtest</span>
+<span class="org-org-block">cd vgtest</span>
+<span class="org-org-block">vagrant init hashicorp/precise64</span>
 <span class="org-org-block">vagrant up --provider virtualbox</span>
 <span class="org-org-block-end-line">#+end_src</span>
 
 The first time I tried this, it failed. I restarted OSX. Then it worked.
 
-Test out VMWare:
+Test out VMWare. The default provider is vmware, so don't have to specify
+provider.
 
 <span class="org-org-block-begin-line">#+begin_src sh</span>
-<span class="org-org-block">cd ~/tmp</span>
-<span class="org-org-block">vagrant init chef/ubuntu-14.04</span>
+<span class="org-org-block">cd ~/tmp/vgtest</span>
 <span class="org-org-block">vagrant up</span>
 <span class="org-org-block-end-line">#+end_src</span>
 </pre>
@@ -2198,16 +2211,16 @@ opened a ticket. I added to <a href="https://github.com/lanayotech/vagrant-manag
 </div>
 </div>
 
-<div id="outline-container-orgheadline77" class="outline-2">
-<h2 id="orgheadline77"><a id="ID-5BF2F31A-8713-4BE0-89E7-66AA327E070C"></a><span class="section-number-2">8</span> Productivity, Manual</h2>
+<div id="outline-container-orgheadline78" class="outline-2">
+<h2 id="orgheadline78"><a id="ID-5BF2F31A-8713-4BE0-89E7-66AA327E070C"></a><span class="section-number-2">8</span> Productivity, Manual</h2>
 <div class="outline-text-2" id="text-8">
 <pre class="example">
 ID: 5BF2F31A-8713-4BE0-89E7-66AA327E070C
 </pre>
 </div>
 
-<div id="outline-container-orgheadline75" class="outline-3">
-<h3 id="orgheadline75"><a id="ID-AB75D588-C667-4C2B-A54B-15E513EBF920"></a><span class="section-number-3">8.1</span> By Hand</h3>
+<div id="outline-container-orgheadline76" class="outline-3">
+<h3 id="orgheadline76"><a id="ID-AB75D588-C667-4C2B-A54B-15E513EBF920"></a><span class="section-number-3">8.1</span> By Hand</h3>
 <div class="outline-text-3" id="text-8-1">
 <pre class="example">
 ID: AB75D588-C667-4C2B-A54B-15E513EBF920
@@ -2215,8 +2228,17 @@ ID: AB75D588-C667-4C2B-A54B-15E513EBF920
 </div>
 
 <div id="outline-container-orgheadline64" class="outline-4">
-<h4 id="orgheadline64"><a id="ID-C8E3A6E9-16E6-4ABD-A667-0E952D38D3E4"></a><span class="section-number-4">8.1.1</span> OSX Enhanced Voice Dictation</h4>
+<h4 id="orgheadline64"><span class="section-number-4">8.1.1</span> SAS University Edition</h4>
 <div class="outline-text-4" id="text-8-1-1">
+<ul class="org-ul">
+<li>4096 MB RAM</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline65" class="outline-4">
+<h4 id="orgheadline65"><a id="ID-C8E3A6E9-16E6-4ABD-A667-0E952D38D3E4"></a><span class="section-number-4">8.1.2</span> OSX Enhanced Voice Dictation</h4>
+<div class="outline-text-4" id="text-8-1-2">
 <pre class="example">
 ID: C8E3A6E9-16E6-4ABD-A667-0E952D38D3E4
 </pre>
@@ -2237,9 +2259,9 @@ Found <a href="https://support.apple.com/en-us/HT202584">this</a> guide and here
 </div>
 </div>
 
-<div id="outline-container-orgheadline65" class="outline-4">
-<h4 id="orgheadline65"><a id="ID-07ADFC51-E81C-46C1-8D1F-40FB11A93BEC"></a><span class="section-number-4">8.1.2</span> Visible Body</h4>
-<div class="outline-text-4" id="text-8-1-2">
+<div id="outline-container-orgheadline66" class="outline-4">
+<h4 id="orgheadline66"><a id="ID-07ADFC51-E81C-46C1-8D1F-40FB11A93BEC"></a><span class="section-number-4">8.1.3</span> Visible Body</h4>
+<div class="outline-text-4" id="text-8-1-3">
 <pre class="example">
 ID: 07ADFC51-E81C-46C1-8D1F-40FB11A93BEC
 </pre>
@@ -2252,9 +2274,9 @@ ID: 07ADFC51-E81C-46C1-8D1F-40FB11A93BEC
 </div>
 </div>
 
-<div id="outline-container-orgheadline66" class="outline-4">
-<h4 id="orgheadline66"><a id="ID-2DC289B4-939F-4A3F-B343-C1E86BA7E360"></a><span class="section-number-4">8.1.3</span> PyCharm Professional</h4>
-<div class="outline-text-4" id="text-8-1-3">
+<div id="outline-container-orgheadline67" class="outline-4">
+<h4 id="orgheadline67"><a id="ID-2DC289B4-939F-4A3F-B343-C1E86BA7E360"></a><span class="section-number-4">8.1.4</span> PyCharm Professional</h4>
+<div class="outline-text-4" id="text-8-1-4">
 <pre class="example">
 ID: 2DC289B4-939F-4A3F-B343-C1E86BA7E360
 </pre>
@@ -2323,9 +2345,9 @@ ID: 2DC289B4-939F-4A3F-B343-C1E86BA7E360
 </div>
 </div>
 
-<div id="outline-container-orgheadline67" class="outline-4">
-<h4 id="orgheadline67"><a id="ID-0C295430-3FF3-4ABC-BA15-1AEC5E26A603"></a><span class="section-number-4">8.1.4</span> WebStorm</h4>
-<div class="outline-text-4" id="text-8-1-4">
+<div id="outline-container-orgheadline68" class="outline-4">
+<h4 id="orgheadline68"><a id="ID-0C295430-3FF3-4ABC-BA15-1AEC5E26A603"></a><span class="section-number-4">8.1.5</span> WebStorm</h4>
+<div class="outline-text-4" id="text-8-1-5">
 <pre class="example">
 ID: 0C295430-3FF3-4ABC-BA15-1AEC5E26A603
 </pre>
@@ -2336,9 +2358,9 @@ ID: 0C295430-3FF3-4ABC-BA15-1AEC5E26A603
 </div>
 </div>
 
-<div id="outline-container-orgheadline68" class="outline-4">
-<h4 id="orgheadline68"><a id="ID-A1592C54-F939-4C7E-938C-1C13EC8A2AAF"></a><span class="section-number-4">8.1.5</span> Textual IRC Client</h4>
-<div class="outline-text-4" id="text-8-1-5">
+<div id="outline-container-orgheadline69" class="outline-4">
+<h4 id="orgheadline69"><a id="ID-A1592C54-F939-4C7E-938C-1C13EC8A2AAF"></a><span class="section-number-4">8.1.6</span> Textual IRC Client</h4>
+<div class="outline-text-4" id="text-8-1-6">
 <pre class="example">
 ID: A1592C54-F939-4C7E-938C-1C13EC8A2AAF
 </pre>
@@ -2423,9 +2445,9 @@ Server preferences:
 </div>
 </div>
 
-<div id="outline-container-orgheadline69" class="outline-4">
-<h4 id="orgheadline69"><a id="ID-9EDE18B7-DDA1-4FC1-8866-256596BA54D0"></a><span class="section-number-4">8.1.6</span> Entropy</h4>
-<div class="outline-text-4" id="text-8-1-6">
+<div id="outline-container-orgheadline70" class="outline-4">
+<h4 id="orgheadline70"><a id="ID-9EDE18B7-DDA1-4FC1-8866-256596BA54D0"></a><span class="section-number-4">8.1.7</span> Entropy</h4>
+<div class="outline-text-4" id="text-8-1-7">
 <pre class="example">
 ID: 9EDE18B7-DDA1-4FC1-8866-256596BA54D0
 </pre>
@@ -2436,9 +2458,9 @@ This is a <a href="http://www.eigenlogik.com/entropy/">download</a> and manual i
 </div>
 </div>
 
-<div id="outline-container-orgheadline70" class="outline-4">
-<h4 id="orgheadline70"><a id="ID-36F3F9F6-31D1-4517-94F3-B7A787F2C166"></a><span class="section-number-4">8.1.7</span> Guitar Pro</h4>
-<div class="outline-text-4" id="text-8-1-7">
+<div id="outline-container-orgheadline71" class="outline-4">
+<h4 id="orgheadline71"><a id="ID-36F3F9F6-31D1-4517-94F3-B7A787F2C166"></a><span class="section-number-4">8.1.8</span> Guitar Pro</h4>
+<div class="outline-text-4" id="text-8-1-8">
 <pre class="example">
 ID: 36F3F9F6-31D1-4517-94F3-B7A787F2C166
 </pre>
@@ -2449,9 +2471,9 @@ ID: 36F3F9F6-31D1-4517-94F3-B7A787F2C166
 </div>
 </div>
 
-<div id="outline-container-orgheadline71" class="outline-4">
-<h4 id="orgheadline71"><a id="ID-A3271ECD-A07A-45E2-A0DE-A82EE8FA6833"></a><span class="section-number-4">8.1.8</span> GotoMeeting &amp; Fuse</h4>
-<div class="outline-text-4" id="text-8-1-8">
+<div id="outline-container-orgheadline72" class="outline-4">
+<h4 id="orgheadline72"><a id="ID-A3271ECD-A07A-45E2-A0DE-A82EE8FA6833"></a><span class="section-number-4">8.1.9</span> GotoMeeting &amp; Fuse</h4>
+<div class="outline-text-4" id="text-8-1-9">
 <pre class="example">
 ID: A3271ECD-A07A-45E2-A0DE-A82EE8FA6833
 </pre>
@@ -2462,9 +2484,9 @@ WebMeeting software.
 </div>
 </div>
 
-<div id="outline-container-orgheadline72" class="outline-4">
-<h4 id="orgheadline72"><a id="ID-FB2138CF-B62C-4BCB-A892-AB855A61535A"></a><span class="section-number-4">8.1.9</span> Cepestral Callie &amp; David</h4>
-<div class="outline-text-4" id="text-8-1-9">
+<div id="outline-container-orgheadline73" class="outline-4">
+<h4 id="orgheadline73"><a id="ID-FB2138CF-B62C-4BCB-A892-AB855A61535A"></a><span class="section-number-4">8.1.10</span> Cepestral Callie &amp; David</h4>
+<div class="outline-text-4" id="text-8-1-10">
 <pre class="example">
 ID: FB2138CF-B62C-4BCB-A892-AB855A61535A
 </pre>
@@ -2488,9 +2510,9 @@ Set Dictation &amp; Text to Speech to: Callie
 </div>
 </div>
 
-<div id="outline-container-orgheadline73" class="outline-4">
-<h4 id="orgheadline73"><a id="ID-568C1BC2-1569-4E3A-8246-594E0C889244"></a><span class="section-number-4">8.1.10</span> Microsoft Office</h4>
-<div class="outline-text-4" id="text-8-1-10">
+<div id="outline-container-orgheadline74" class="outline-4">
+<h4 id="orgheadline74"><a id="ID-568C1BC2-1569-4E3A-8246-594E0C889244"></a><span class="section-number-4">8.1.11</span> Microsoft Office</h4>
+<div class="outline-text-4" id="text-8-1-11">
 <pre class="example">
 ID: 568C1BC2-1569-4E3A-8246-594E0C889244
 </pre>
@@ -2524,9 +2546,9 @@ When it checks for updates, tell it to check daily.
 </div>
 </div>
 
-<div id="outline-container-orgheadline74" class="outline-4">
-<h4 id="orgheadline74"><a id="ID-4769C0C6-AA8F-4073-B233-253691004873"></a><span class="section-number-4">8.1.11</span> MacTex &amp; GnuPlot</h4>
-<div class="outline-text-4" id="text-8-1-11">
+<div id="outline-container-orgheadline75" class="outline-4">
+<h4 id="orgheadline75"><a id="ID-4769C0C6-AA8F-4073-B233-253691004873"></a><span class="section-number-4">8.1.12</span> MacTex &amp; GnuPlot</h4>
+<div class="outline-text-4" id="text-8-1-12">
 <pre class="example">
 ID: 4769C0C6-AA8F-4073-B233-253691004873
 </pre>
@@ -2601,8 +2623,8 @@ The documents say to maybe do the following. I did it.
 </div>
 </div>
 
-<div id="outline-container-orgheadline76" class="outline-3">
-<h3 id="orgheadline76"><a id="ID-798AD4C6-AFB7-4AB6-B794-16E1E83CDF5C"></a><span class="section-number-3">8.2</span> App Store Installs</h3>
+<div id="outline-container-orgheadline77" class="outline-3">
+<h3 id="orgheadline77"><a id="ID-798AD4C6-AFB7-4AB6-B794-16E1E83CDF5C"></a><span class="section-number-3">8.2</span> App Store Installs</h3>
 <div class="outline-text-3" id="text-8-2">
 <pre class="example">
 ID: 798AD4C6-AFB7-4AB6-B794-16E1E83CDF5C
@@ -2625,8 +2647,8 @@ ID: 798AD4C6-AFB7-4AB6-B794-16E1E83CDF5C
 </div>
 </div>
 
-<div id="outline-container-orgheadline85" class="outline-2">
-<h2 id="orgheadline85"><a id="ID-548170EE-5409-4DF6-96BB-B1D384FC734B"></a><span class="section-number-2">9</span> User Options, Manual</h2>
+<div id="outline-container-orgheadline86" class="outline-2">
+<h2 id="orgheadline86"><a id="ID-548170EE-5409-4DF6-96BB-B1D384FC734B"></a><span class="section-number-2">9</span> User Options, Manual</h2>
 <div class="outline-text-2" id="text-9">
 <pre class="example">
 ID: 548170EE-5409-4DF6-96BB-B1D384FC734B
@@ -2644,8 +2666,8 @@ ID: 548170EE-5409-4DF6-96BB-B1D384FC734B
 </ul>
 </div>
 
-<div id="outline-container-orgheadline78" class="outline-3">
-<h3 id="orgheadline78"><a id="ID-996317F3-BB3B-43ED-A54B-AF469A8BBF3B"></a><span class="section-number-3">9.1</span> Desktop &amp; Screen Saver</h3>
+<div id="outline-container-orgheadline79" class="outline-3">
+<h3 id="orgheadline79"><a id="ID-996317F3-BB3B-43ED-A54B-AF469A8BBF3B"></a><span class="section-number-3">9.1</span> Desktop &amp; Screen Saver</h3>
 <div class="outline-text-3" id="text-9-1">
 <pre class="example">
 ID: 996317F3-BB3B-43ED-A54B-AF469A8BBF3B
@@ -2683,8 +2705,8 @@ curl -O http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2015/02/M101
 </div>
 </div>
 
-<div id="outline-container-orgheadline79" class="outline-3">
-<h3 id="orgheadline79"><a id="ID-51E4DE03-0ED5-4951-A772-2BB41A9CE56E"></a><span class="section-number-3">9.2</span> Energy Saver</h3>
+<div id="outline-container-orgheadline80" class="outline-3">
+<h3 id="orgheadline80"><a id="ID-51E4DE03-0ED5-4951-A772-2BB41A9CE56E"></a><span class="section-number-3">9.2</span> Energy Saver</h3>
 <div class="outline-text-3" id="text-9-2">
 <pre class="example">
 ID: 51E4DE03-0ED5-4951-A772-2BB41A9CE56E
@@ -2705,8 +2727,8 @@ ID: 51E4DE03-0ED5-4951-A772-2BB41A9CE56E
 </div>
 </div>
 
-<div id="outline-container-orgheadline80" class="outline-3">
-<h3 id="orgheadline80"><a id="ID-83C37544-BD69-4791-8C47-5AB8CEC01330"></a><span class="section-number-3">9.3</span> Users &amp; Groups &rarr; Login Options</h3>
+<div id="outline-container-orgheadline81" class="outline-3">
+<h3 id="orgheadline81"><a id="ID-83C37544-BD69-4791-8C47-5AB8CEC01330"></a><span class="section-number-3">9.3</span> Users &amp; Groups &rarr; Login Options</h3>
 <div class="outline-text-3" id="text-9-3">
 <pre class="example">
 ID: 83C37544-BD69-4791-8C47-5AB8CEC01330
@@ -2724,16 +2746,16 @@ ID: 83C37544-BD69-4791-8C47-5AB8CEC01330
 </div>
 </div>
 
-<div id="outline-container-orgheadline84" class="outline-3">
-<h3 id="orgheadline84"><a id="ID-8FC611D4-B8EA-4698-8981-E20B736F5F40"></a><span class="section-number-3">9.4</span> Security &amp; Privacy</h3>
+<div id="outline-container-orgheadline85" class="outline-3">
+<h3 id="orgheadline85"><a id="ID-8FC611D4-B8EA-4698-8981-E20B736F5F40"></a><span class="section-number-3">9.4</span> Security &amp; Privacy</h3>
 <div class="outline-text-3" id="text-9-4">
 <pre class="example">
 ID: 8FC611D4-B8EA-4698-8981-E20B736F5F40
 </pre>
 </div>
 
-<div id="outline-container-orgheadline81" class="outline-4">
-<h4 id="orgheadline81"><a id="ID-92BBCCA2-B373-4085-A69F-2F1A747D4FDC"></a><span class="section-number-4">9.4.1</span> General</h4>
+<div id="outline-container-orgheadline82" class="outline-4">
+<h4 id="orgheadline82"><a id="ID-92BBCCA2-B373-4085-A69F-2F1A747D4FDC"></a><span class="section-number-4">9.4.1</span> General</h4>
 <div class="outline-text-4" id="text-9-4-1">
 <pre class="example">
 ID: 92BBCCA2-B373-4085-A69F-2F1A747D4FDC
@@ -2747,8 +2769,8 @@ ID: 92BBCCA2-B373-4085-A69F-2F1A747D4FDC
 </div>
 </div>
 
-<div id="outline-container-orgheadline82" class="outline-4">
-<h4 id="orgheadline82"><a id="ID-ABEF9B70-2310-4A45-BA8E-F0E81B601222"></a><span class="section-number-4">9.4.2</span> Firewall</h4>
+<div id="outline-container-orgheadline83" class="outline-4">
+<h4 id="orgheadline83"><a id="ID-ABEF9B70-2310-4A45-BA8E-F0E81B601222"></a><span class="section-number-4">9.4.2</span> Firewall</h4>
 <div class="outline-text-4" id="text-9-4-2">
 <pre class="example">
 ID: ABEF9B70-2310-4A45-BA8E-F0E81B601222
@@ -2763,8 +2785,8 @@ ID: ABEF9B70-2310-4A45-BA8E-F0E81B601222
 </div>
 </div>
 
-<div id="outline-container-orgheadline83" class="outline-4">
-<h4 id="orgheadline83"><a id="ID-F0E82C32-275D-4C66-8C19-13C21586D37D"></a><span class="section-number-4">9.4.3</span> HOSTS</h4>
+<div id="outline-container-orgheadline84" class="outline-4">
+<h4 id="orgheadline84"><a id="ID-F0E82C32-275D-4C66-8C19-13C21586D37D"></a><span class="section-number-4">9.4.3</span> HOSTS</h4>
 <div class="outline-text-4" id="text-9-4-3">
 <pre class="example">
 ID: F0E82C32-275D-4C66-8C19-13C21586D37D
@@ -2778,8 +2800,8 @@ Update it appropriately.
 </div>
 </div>
 
-<div id="outline-container-orgheadline86" class="outline-2">
-<h2 id="orgheadline86"><a id="ID-01B5C019-E0D3-45A1-9C36-A6B493C03DE8"></a><span class="section-number-2">10</span> Full System Backups</h2>
+<div id="outline-container-orgheadline87" class="outline-2">
+<h2 id="orgheadline87"><a id="ID-01B5C019-E0D3-45A1-9C36-A6B493C03DE8"></a><span class="section-number-2">10</span> Full System Backups</h2>
 <div class="outline-text-2" id="text-10">
 <pre class="example">
 ID: 01B5C019-E0D3-45A1-9C36-A6B493C03DE8
@@ -2900,7 +2922,7 @@ so through the GUI</li>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Grant Rettke</p>
-<p class="date">Created: 2015-09-12 Sat 20:00</p>
+<p class="date">Created: 2015-09-26 Sat 15:26</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
