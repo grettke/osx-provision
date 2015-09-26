@@ -1432,6 +1432,8 @@ mkdir ~/.vagrant
 cd ~/.vagrant
 # copy that license file in there
 vagrant plugin license vagrant-vmware-fusion license.lic
+cd
+rm -rf ~/.vagrant
 ,#+end_src
 
 Verify the plug is licensed and happy:
