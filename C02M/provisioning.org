@@ -1737,13 +1737,18 @@ sudo mktexlsr
    :ID:       798AD4C6-AFB7-4AB6-B794-16E1E83CDF5C
    :END:
 
-- First check purchases, then the store
+*** First check purchases, then the store
 
-- Microsoft Remote Desktop
-  - Don't open the session full-screen.
-- Text2Speech PRO
-  - Set default voice to Callie
-- PixelMator
+*** Microsoft Remote Desktop
+
+- Don't open the session full-screen.
+
+
+*** Text2Speech PRO
+
+- Set default voice to Callie
+
+*** PixelMator
 
 * User Options, Manual
   :PROPERTIES:
