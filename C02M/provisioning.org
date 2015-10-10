@@ -1750,6 +1750,8 @@ sudo mktexlsr
 
 *** PixelMator
 
+*** Slack
+
 * User Options, Manual
   :PROPERTIES:
   :ID:       548170EE-5409-4DF6-96BB-B1D384FC734B
