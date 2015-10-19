@@ -4,6 +4,9 @@
   :END:
 
 ** Literate DevOps: OS X Development System
+   :PROPERTIES:
+   :ID:       F2853BE6-3271-43F6-80ED-A4B60ED5C1C9
+   :END:
 
 Setting up a development system is a non-trivial investment.
 
@@ -410,6 +413,7 @@ ssh-add -K ~/.ssh/orion_gcr_rsa
 OSX creates this directory everywhere and it must be ignored.
 #+NAME: F17E2D3C-13C1-4E89-8BB7-DD2276BE9D21
 
+#+NAME: 53F16E84-34DC-48D1-998C-B9214B32AD1E
 #+begin_src sh
 echo .DS_Store >> ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
@@ -1506,6 +1510,9 @@ opened a ticket. I added to [[https://github.com/lanayotech/vagrant-manager/issu
    :END:
 
 *** SAS University Edition
+    :PROPERTIES:
+    :ID:       3BE67982-9DDC-4FAC-BC9D-FB4F87DE58E3
+    :END:
 
 - 4096 MB RAM
 
@@ -1738,19 +1745,34 @@ sudo mktexlsr
    :END:
 
 *** First check purchases, then the store
+    :PROPERTIES:
+    :ID:       593C6354-5F68-4D9A-B186-FBCBAE6FB27F
+    :END:
 
 *** Microsoft Remote Desktop
+    :PROPERTIES:
+    :ID:       BF68C6A0-9F79-4372-8503-CD8B0BE3331A
+    :END:
 
 - Don't open the session full-screen.
 
 
 *** Text2Speech PRO
+    :PROPERTIES:
+    :ID:       40206D84-014A-43FC-8299-D4C8594FE691
+    :END:
 
 - Set default voice to Callie
 
 *** PixelMator
+    :PROPERTIES:
+    :ID:       76178B97-5BEE-4341-86C7-757138319E18
+    :END:
 
 *** Slack
+    :PROPERTIES:
+    :ID:       695F0839-A63F-4D64-859A-0DEE63FEDAD0
+    :END:
 
 * User Options, Manual
   :PROPERTIES:

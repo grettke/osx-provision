@@ -1,4 +1,3 @@
-
 brew cask install xquartz
 
 brew cask install karabiner
@@ -20,9 +19,9 @@ brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
 brew install emacs --cocoa --with-gnutls --with-imagemagick
 brew linkapps
 
-ln -s ~/git/bitbucket-grettke/alec/.emacs.el ~/.emacs.el
-ln -s ~/git/bitbucket-grettke/alec/.aspell.en.pws ~/.aspell.en.pws
-ln -s ~/git/bitbucket-grettke/alec/.aspell.en.prepl ~/.aspell.en.prepl
+ln -s ~/git/github/help/.emacs.el ~/.emacs.el
+ln -s ~/git/bitbucket/alec/.aspell.en.pws ~/.aspell.en.pws
+ln -s ~/git/bitbucket/alec/.aspell.en.prepl ~/.aspell.en.prepl
 
 mkdir ~/.emacs.d
-ln -s ~/git/bitbucket-grettke/alec/eshell/ ~/.emacs.d/eshell
+ln -s ~/git/github/help/eshell/ ~/.emacs.d/eshell

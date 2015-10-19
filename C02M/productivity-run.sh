@@ -1,3 +1,4 @@
+brew install guile
 
 touch ~/tmp/post.org
 touch ~/tmp/scratch.org
@@ -25,6 +26,8 @@ brew install vim
 
 brew cask install macvim
 
+brew install enscript
+
 brew cask install virtualbox
 
 brew cask install vmware-fusion
@@ -51,9 +54,9 @@ brew install povray --with-openexr
 brew linkapps
 
 brew cask install r
-ln -s ~/git/bitbucket-grettke/alec/.Renviron ~/.Renviron
-ln -s ~/git/bitbucket-grettke/alec/.Rprofile ~/.Rprofile
-ln -s ~/git/bitbucket-grettke/alec/.Rinstall ~/.Rinstall
+ln -s ~/git/bitbucket/alec/.Renviron ~/.Renviron
+ln -s ~/git/bitbucket/alec/.Rprofile ~/.Rprofile
+ln -s ~/git/bitbucket/alec/.Rinstall ~/.Rinstall
 rm -rf ~/.Rpackages
 mkdir ~/.Rpackages
 

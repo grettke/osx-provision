@@ -1,6 +1,4 @@
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Fonts][Fonts:1]]
-
+# [[file:provisioning.org::*Fonts][FCD4900F-F99B-4FB2-9540-F6F35E4AE11D]]
 Manually install fonts used for Emacs.
 
 Fonts that will be installed:
@@ -19,31 +17,22 @@ Steps to install them:
 - Drag the top-level  directory into the collection
   - Font Book will search through it recursively for fonts and add them
 - Correct any resolution issues, which happen every time so far
+# FCD4900F-F99B-4FB2-9540-F6F35E4AE11D ends here
 
-# Fonts:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Karabiner][Karabiner:1]]
-
+# [[file:provisioning.org::*Karabiner][E398EC25-E744-4AC1-B1BA-E0A05C4D7BF8]]
 Run it. Approve it. Configure it with the following. Look for the
 heading with the name below following "Modify".
 
-#+begin_src sh
-Modify "Change Return Key".
 Check:
-"Return to Control_L
-(+ When you type Return only, send Return)"
-#+end_src
+- Return to Option_L
+  (+ When you type Return only, send Return)
+# E398EC25-E744-4AC1-B1BA-E0A05C4D7BF8 ends here
 
-# Karabiner:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Spectacle][Spectacle:1]]
-
+# [[file:provisioning.org::*Spectacle][B2B30F0B-49F9-4057-A3E8-24944C274D20]]
 Run it. Approve it. Set it to run at login.
+# B2B30F0B-49F9-4057-A3E8-24944C274D20 ends here
 
-# Spectacle:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Bartender][Bartender:1]]
-
+# [[file:provisioning.org::*Bartender][73C79D0A-A852-4224-A75C-8754EECFE975]]
 - GENERAL
   - Launch Bartender at login: yes.
   - At bartender launch: show bartender bar: NO.
@@ -86,5 +75,4 @@ Run it. Approve it. Set it to run at login.
 
 Arrangement-algorithm is most activity or cared about on the outside and less so
 in the middle.
-
-# Bartender:1 ends here
+# 73C79D0A-A852-4224-A75C-8754EECFE975 ends here

@@ -1,15 +1,40 @@
+# [[file:provisioning.org::*DeltaWalker][E5A81542-9DA9-446A-B7A2-FF9CA74491F6]]
+- Expanded DMG
+  - Open /opt/homebrew-cask/Caskroom/deltawalker/
+- Drag DeltaWalker into Applications
+- Set up the DeltaWalker.workflow
+- Copy the samples folder to test out the app and workflow later
+- Start it
+- Register it
+  - Help, Install License Key
+- Set preferences for new comparisons (be sure of this, easy not to)
+  - General
+    - Date formatting: English (United States)
+    - Max available memory: 4096MiB
+    - [X] Automatically find new updates and notify me
+    - Colors and Fonts
+      - Basic::Text Font and Text Editor Block Selection Font: DJSM 14
+      - Differences::Font: DJSM 14
+  - All Comparisons
+    - [ ] Use text differencing optimized for speed
+    - [X] Use text differencing optimized for accuracy
+    - [X] Follow symbolic links
+    - [ ] Ignore differences in whitespace
+      - Want to know about tabs versus spaces
+    - [ ] Ignore differences in character case
+      - Interesting but default do care
+    - [X] Ignore differences in line endings (CF and LF)
+      - Most systems don't care
+# E5A81542-9DA9-446A-B7A2-FF9CA74491F6 ends here
 
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Dropbox][Dropbox:1]]
-
+# [[file:provisioning.org::*Dropbox][D35A49A8-AD04-416F-94C5-46886823D623]]
 Sign in.
 In Login Items, start Dropbox.
 When on highspeed, just sync everything after copying locally of course.
 When on lowspeed, just sync required.
+# D35A49A8-AD04-416F-94C5-46886823D623 ends here
 
-# Dropbox:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Little%20Snitch][Little\ Snitch:1]]
-
+# [[file:provisioning.org::*Little%20Snitch][B694BF8F-7EA0-4CFA-82F7-E71E0D00D281]]
 As of writing, the installer just gets downloaded and you need to run it like
 this:
 
@@ -45,31 +70,23 @@ until there is a reason not to do so.
   - Approve rules automatically.
 Update
   - Automatically check for updates daily
+# B694BF8F-7EA0-4CFA-82F7-E71E0D00D281 ends here
 
-# Little\ Snitch:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Chrome][Chrome:1]]
-
+# [[file:provisioning.org::*Chrome][158C3D16-016A-4733-993F-A83F7BDA37D3]]
 Sign into Chrome. Let the settings sync. All the JS disabling stuff needs
 you to approve it. It is irritating. You always forget to approve it and make
 it worse. Disable ScriptSafe right away. Turn it on as needed.
+# 158C3D16-016A-4733-993F-A83F7BDA37D3 ends here
 
-# Chrome:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Firefox][Firefox:1]]
-
+# [[file:provisioning.org::*Firefox][8B270986-7876-4AB9-B8B5-EC54327B8598]]
 Install the standard plugins: NoScript, Blur.
+# 8B270986-7876-4AB9-B8B5-EC54327B8598 ends here
 
-# Firefox:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Filezilla][Filezilla:1]]
-
+# [[file:provisioning.org::*Filezilla][807F3D55-909E-44BE-A200-5D8B7F545FC2]]
 Set up Filezilla for WnW.
+# 807F3D55-909E-44BE-A200-5D8B7F545FC2 ends here
 
-# Filezilla:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Skype][Skype:1]]
-
+# [[file:provisioning.org::*Skype][42319391-DB0C-4958-980E-FE7AC92EF37E]]
 Log in automatically. Don't grant access to contacts.
 Preferences General. Never set my status away. Don't show birthday notifications. Don't always keep Skype up to date.
 Messaing: Don't use larg emotions. Use compact chat style. Don't show when I am typing.
@@ -78,11 +95,9 @@ available do nothing.
 Advanced: Display technical call information yes. Do not collect
 call information.
 Login Items, add Skype in here.
+# 42319391-DB0C-4958-980E-FE7AC92EF37E ends here
 
-# Skype:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*SourceTree][SourceTree:1]]
-
+# [[file:provisioning.org::*SourceTree][EABF16B0-086B-4D91-944A-2A79058281EE]]
 Log into SourceTree.
 Let it scan the BitBucket folder to add those projects to SourceTree.
 Preferences.
@@ -91,89 +106,69 @@ Diff: Set font to DJSM 14.
 Manually:
 - Go through the licensing process
 - Old app just let you type it into the GUI, not seeing it here now
+# EABF16B0-086B-4D91-944A-2A79058281EE ends here
 
-# SourceTree:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Racket][Racket:1]]
-
+# [[file:provisioning.org::*Racket][8217EF3F-2763-4143-A868-1624E2A6CFC0]]
 racket --version
+# 8217EF3F-2763-4143-A868-1624E2A6CFC0 ends here
 
-# Racket:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Freemind][Freemind:1]]
-
+# [[file:provisioning.org::*Freemind][EFF0F034-3B58-4E07-A620-6358E53459A1]]
 Run it.
+# EFF0F034-3B58-4E07-A620-6358E53459A1 ends here
 
-# Freemind:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*VIM%20&%20MacVIM][VIM\ &\ MacVIM:1]]
-
+# [[file:provisioning.org::*VIM%20&%20MacVIM][F1A8F4DC-F732-425C-B2C5-EC9365CDF430]]
 Copy over my .vimrc, once one exists.
 Run it.
+# F1A8F4DC-F732-425C-B2C5-EC9365CDF430 ends here
 
-# VIM\ &\ MacVIM:1 ends here
+# [[file:provisioning.org::*Enscript][C70340CA-F969-4BD5-A031-F2431994E25B]]
+Run Enscript.
+# C70340CA-F969-4BD5-A031-F2431994E25B ends here
 
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Virtualbox][Virtualbox:1]]
-
+# [[file:provisioning.org::*Virtualbox][A79E0019-FAFD-4430-9CE8-B4E95A26215E]]
 Boot up at least one Vagrant box using Virtualbox to make sure it is happy.
 The directions are with Vagrant.
+# A79E0019-FAFD-4430-9CE8-B4E95A26215E ends here
 
-# Virtualbox:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*VMWare%20Fusion][VMWare\ Fusion:1]]
-
+# [[file:provisioning.org::*VMWare%20Fusion][791CD029-62D4-466B-A816-7D4802816365]]
 License it.
 Boot up at least one Vagrant box using VMWare Fusion to make sure it is happy.
 The directions are with Vagrant.
+# 791CD029-62D4-466B-A816-7D4802816365 ends here
 
-# VMWare\ Fusion:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Libre%20Office][Libre\ Office:1]]
-
+# [[file:provisioning.org::*Libre%20Office][6A7FC626-DB8C-4C8C-A080-7792209D54E0]]
 Run it.
+# 6A7FC626-DB8C-4C8C-A080-7792209D54E0 ends here
 
-# Libre\ Office:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Kindle][Kindle:1]]
-
+# [[file:provisioning.org::*Kindle][B4DCF7F7-23B5-41A3-8817-B961009369C4]]
 Sign in. Make sure it works. Download everything so it is there.
 You can see files downloaded versus avalable to be sure. Or not.
 The upside is reading without Internet connectivity.
+# B4DCF7F7-23B5-41A3-8817-B961009369C4 ends here
 
-# Kindle:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*VLC][VLC:1]]
-
+# [[file:provisioning.org::*VLC][7E1430C9-0FD6-4883-8815-9A438CE7FC21]]
 Run it.
+# 7E1430C9-0FD6-4883-8815-9A438CE7FC21 ends here
 
-# VLC:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Part%20A][Part\ A:1]]
-
+# [[file:provisioning.org::*Part%20A][13D57060-D028-4227-9421-936895CF7BFB]]
 Remember to run these. Just do a version check or something.
+# 13D57060-D028-4227-9421-936895CF7BFB ends here
 
-# Part\ A:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*R][R:1]]
-
+# [[file:provisioning.org::*R][3152F571-970C-4502-956C-D5E33CFEA768]]
 I haven't used R in a long time but I want to get it set up right again.
 Link my configs from ~/ into where they live now.
 This installer asks for my password, which halts the install. How will I deal
 with this?
 There is a =.Rinstall= file in my setup to get all of the packages installed. Be s
 sure to run that, too. All of my notes live in R.org already.
+# 3152F571-970C-4502-956C-D5E33CFEA768 ends here
 
-# R:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*R%20Studio][R\ Studio:1]]
-
+# [[file:provisioning.org::*R%20Studio][A64B8C68-9FA9-44FC-BF68-7B76716E4EC1]]
 This doesn't need any config I think.
 Run it.
+# A64B8C68-9FA9-44FC-BF68-7B76716E4EC1 ends here
 
-# R\ Studio:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Vagrant][Vagrant:1]]
-
+# [[file:provisioning.org::*Vagrant][51C62035-888C-4AB9-928B-F6B6AD8BDC83]]
 Install the VMWare provider for Vagrant and then license it.
 
 Remember to [[http://docs.vagrantup.com/v2/other/debugging.html][log]] appropriately.
@@ -186,30 +181,39 @@ mkdir ~/.vagrant
 cd ~/.vagrant
 # copy that license file in there
 vagrant plugin license vagrant-vmware-fusion license.lic
+cd
+rm -rf ~/.vagrant
 #+end_src
+
+Verify the plugin is licensed and happy:
+
+#+NAME: CCCFA8CD-1754-4BD6-A355-7907E885B6C4
+#+BEGIN_SRC sh
+vagrant plugin list
+#+END_SRC
 
 Test out VirtualBox box:
 
 #+begin_src sh
 cd ~/tmp
-vagrant init hashicorp/precise32
+mkdir vgtest
+cd vgtest
+vagrant init hashicorp/precise64
 vagrant up --provider virtualbox
 #+end_src
 
 The first time I tried this, it failed. I restarted OSX. Then it worked.
 
-Test out VMWare:
+Test out VMWare. The default provider is vmware, so don't have to specify
+provider.
 
 #+begin_src sh
-cd ~/tmp
-vagrant init chef/ubuntu-14.04
+cd ~/tmp/vgtest
 vagrant up
 #+end_src
+# 51C62035-888C-4AB9-928B-F6B6AD8BDC83 ends here
 
-# Vagrant:1 ends here
-
-# [[file:~/git/bitbucket-grettke/hardware/apple/macbookpro/c02m/provisioning.org::*Vagrant%20Manager][Vagrant\ Manager:1]]
-
+# [[file:provisioning.org::*Vagrant%20Manager][81E23844-38DF-49C8-888B-4FE4084061B7]]
 - Terminal Preference: Terminal
 - Status Bar Icon Theme: Clean
 - Launch at login: Yes
@@ -218,5 +222,4 @@ vagrant up
 - Following settings: No
 - Allowed Updates: stable
 - Send anonymous profile data: Yes
-
-# Vagrant\ Manager:1 ends here
+# 81E23844-38DF-49C8-888B-4FE4084061B7 ends here
