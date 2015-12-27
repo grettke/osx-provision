@@ -194,6 +194,11 @@ Steps unique to the host are indicated.
 :ID:       0B05FB9A-08DF-448C-AE2E-0715B0B217F8
 :END:
 
+Aggressively debug.
+#+BEGIN_SRC shell
+set -x
+#+END_SRC
+
 Set the computer name.
 #+NAME: 291FDE06-DF44-4156-A013-B763A8727B00
 #+BEGIN_SRC shell
@@ -232,6 +237,11 @@ sudo spctl --master-disable
 :tangle-mode: (identity #o755)
 :ID:       E9F72C01-7B0C-4714-9661-B7D75F98C56E
 :END:
+
+Aggressively debug.
+#+BEGIN_SRC shell
+set -x
+#+END_SRC
 
 - These commands are all [[https://github.com/kitchenplan/chef-osxdefaults/tree/master/recipes][copied]]
   - Including the documentation

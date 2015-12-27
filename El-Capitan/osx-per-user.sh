@@ -1,4 +1,8 @@
 # [[file:provisioning.org::*Globals,%20Logical%20or%20Literal][6755B45A-4331-4CA4-89D5-7A5906C3966A]]
+
+set -x
+read -p "Press [Enter] key to continue..."
+
 cd ~/Pictures/
 curl -O http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2015/02/M101-ORG.jpg
 sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '~/Pictures/M101-ORG.jpg'";
