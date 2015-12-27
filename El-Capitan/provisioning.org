@@ -116,7 +116,7 @@ Use CCC to clone this Mac's partition, =Support:Macintosh HD=, to a partition on
 to =Support Computer=. Create a new partition big enough to hold it and perform
 the clone. Name it =EXT:Utility=. Reboot to it to test it.
 
-** Host Computer
+** Host Computer: 44fad7
 :PROPERTIES:
 :ID:       EE23E7E0-4BAC-4B57-96EA-764F84A2F054
 :END:
@@ -758,25 +758,65 @@ Sort Activity Monitor results by CPU usageefaults write com.apple.ActivityMonito
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 #+END_SRC
 
-#  LocalWords:  PHOSI PHOSDI
 * Guest Configuration
-** Base
+** Base : 09d89d
 
-- Provisioned like a host; and nothing more
-- Used for quickly cloning by anyone
+- Configured with a =sysop= like above
+- Unprovisioned
+- Used for quickly cloning for user for anything
 
-** gcr
+**** Steps
 
-*Full-Clone of Base*
+- Obtain the OS X Installer via the App Store
+  - Can do this on a Mac or in a VM of a prior version of OSX
+  - Back it up to both =External:Storage= and =Host:Storage=
+- Start VMWare Fusion, click File \rarr New, the "Select the Installation Method"
+  dialog appears
+- Create a new machine by dragging the OS X Installer onto the dialog
+- Name it "El Capitan - Base" and leave all of the default machine configuration
+  alone
+  - Default 2 core, 2GB, 40GB seems fine and allows you to have another VM
+    running for notes during configuration
+  - Assuming that 40GB will be enough to allow OS updates as they occur over
+    the lifetime of the operating system
+  - Full-Clones will configure the machine in unique ways not worth capturing
+    here
+- Installation takes 20m every time
+  - Installer reports "35s remaining" accurately, and 0s remaining inaccurately
+  - Then it reports 20m remaining which is accurate within 2-4 minutes
+- Perform a configuration like the =sysop= for this machine, configuring as little
+  as possible
+- Shutdown and take a snapshot "Installed 2015-12-27T15:14:59-0600"
+- Never use this again and always take Full-Clones from the snapshot
 
-*** Base
+** GCR : 3a546a
 
-- Provsionined like base; and nothing more
-- Used for quickly cloning by gcr
+*** Base : 3d4a52
 
-*** CLT
+- *Full-Clone of Base*
+  - Right Click 09d89d:"Installed 2015-12-27T15:14:59-0600"
+    \rarr Create Full Clone\ldots
+  - Named "El Capitan GCR 3a546a"
+- Machine config
+  - Processors
+    - 3 cores
+    - 6144 RAM
+    - Enable hypervisor
+    - Enable code profiling
+  - 250GB HD
+  - Share =Host:Storage=
+- Install VMWare Tools
+- Maximize resolution
+- Provisioned
+
+*** Version Control/Dev : 39e716
 
 - Installed xcode
 - Installed clt
+- Installed brew
+- Installed cask
+- Installed git
 
-*** EMACS/Dev
+*** EMACS : 8ef276
+
+#  LocalWords:  PHOSI PHOSDI
