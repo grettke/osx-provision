@@ -168,8 +168,8 @@ the clone. Name it =EXT:Utility=. Reboot to it to test it.
 
 Steps unique to the host are indicated.
 
-- Make a user named =sysop=, System Operator
 - During configuration personalize/configure/install nothing but timezone
+- Make a user named =sysop=, System Operator
 - Host :: Bluetooth mouse
 - Slowish mouse
 - Swap control keys
