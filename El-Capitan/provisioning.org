@@ -173,7 +173,7 @@ Steps unique to the host are indicated.
 - Host :: Bluetooth mouse
 - Slowish mouse
 - Swap control keys
-- Host :: Install Karabiner, allow, start at boot, return once sends option
+- Host :: Install Karabiner, allow, Change Return Key, Return to Option_L + When you type Return only
 - Host :: Maximize resolution
 - Show Keychain Access in Menubar
 - Screensaver: Flurry, 10m
