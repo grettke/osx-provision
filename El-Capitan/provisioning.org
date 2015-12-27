@@ -1,6 +1,12 @@
 * Goal
+:PROPERTIES:
+:ID:       572893EF-E80B-411B-9355-8CAB3DB23C27
+:END:
 
 ** Desire
+:PROPERTIES:
+:ID:       17BA9F22-3B3E-427E-AC9B-0DF8D10BFD32
+:END:
 
 - To quickly and easily
   - Explore cognitive spaces using operating systems and software
@@ -13,6 +19,9 @@
   - Share
 
 ** Satisfaction
+:PROPERTIES:
+:ID:       77F8D1AF-B388-4512-B9C2-79F97533CC88
+:END:
 
 - First-class support for OS X, Windows, Linux and all of their software
 - Manage machines as easily and flexibly as you would with version control
@@ -21,6 +30,9 @@
 - Virtual machines (VM)
 
 ** Decision
+:PROPERTIES:
+:ID:       643E82D4-08E8-40B5-9006-3936A0775A35
+:END:
 
 - Current:
   - Macintosh Computer (Mac)
@@ -32,8 +44,14 @@
   - CPU count and speed
 
 * Preparation
+:PROPERTIES:
+:ID:       1BF6D42F-2F80-467E-B75C-DB2C88F0B4BE
+:END:
 
 ** External Drive
+:PROPERTIES:
+:ID:       9EC3FF1F-8416-449D-8860-3B4ABCEBB09B
+:END:
 
 Get a 7200RPM 1TB external disk drive with USB3 or Lightning.
 
@@ -44,15 +62,27 @@ of the name of the partition itself. I'll use that naming also to indicate
 computers that contain a single disk drive.
 
 ** Software
+:PROPERTIES:
+:ID:       3BC9B846-919F-4395-8926-8C2AABB0FF6A
+:END:
 *** Carbon Copy Cloner (CCC)
+:PROPERTIES:
+:ID:       93F797EC-1166-4667-A2ED-C8251CB9998A
+:END:
 
 [[https://bombich.com/][Purchase]] the latest version that supports El Capitan. Download it along with the
 license to =EXT:Storage=. Install it on the =Support Computer=.
 *** VMWare Fusion
+:PROPERTIES:
+:ID:       B846A16A-4E1C-4968-B303-301923989BD8
+:END:
 
 [[https://www.vmware.com/products/fusion][Purchase]] a copy and download it to =EXT:Storage=. Download your license key.
 
 ** Support Computer
+:PROPERTIES:
+:ID:       74903C97-520F-4FE1-B2AA-09F1DAB976D7
+:END:
 
 Keep a working Mac nearby. You will use it to work with the contents of
 your Git repositories, research configuration steps, and rest easy knowing that
@@ -70,6 +100,9 @@ to =Support Computer=. Create a new partition big enough to hold it and perform
 the clone. Name it =EXT:Utility=. Reboot to it to test it.
 
 ** Host Computer
+:PROPERTIES:
+:ID:       EE23E7E0-4BAC-4B57-96EA-764F84A2F054
+:END:
 
 - Collect the Pristine Host Operating System Image (PHOSI)
   - Pristine means that it has never been logged into or configured
@@ -110,12 +143,21 @@ the clone. Name it =EXT:Utility=. Reboot to it to test it.
       - Scripts
 
 * Host Configuration
+:PROPERTIES:
+:ID:       29CB47C1-03D5-4495-8182-486513A2079C
+:END:
 
 ** Starting Point
+:PROPERTIES:
+:ID:       B4E2D4A0-1525-40D3-AB8D-345494B2403D
+:END:
 
 - Image your machine using =PHOSDI=
 
 ** Manual Steps
+:PROPERTIES:
+:ID:       6507AFFC-5F3D-40D7-AA9A-53384A03EA0B
+:END:
 
 Steps unique to the host are indicated.
 
