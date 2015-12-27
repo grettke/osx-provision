@@ -168,16 +168,16 @@ the clone. Name it =EXT:Utility=. Reboot to it to test it.
 
 Steps unique to the host are indicated.
 
+- Swap control keys
+- Host :: Bluetooth mouse
+- Speedup mouse
 - During configuration personalize/configure/install nothing but timezone
 - Host :: Maximize resolution
 - Make a user named =sysop=, System Operator
 - Show Keychain Access in Menubar
 - Screensaver: Flurry, 10m
 - Host :: Add printer
-- Host :: Bluetooth mouse
-- Speedup mouse
 - Energy saver: non-aggressive, never sleep
-- Swap control keys
 - Install Spectacle, allow, start at boot
 - Host :: Install Karabiner, allow, start at boot, return once sends option
 - Host :: Install VMWare Fusion Professional
