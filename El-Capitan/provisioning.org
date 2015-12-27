@@ -178,7 +178,7 @@ Steps unique to the host are indicated.
 - Show Keychain Access in Menubar
 - Screensaver: Flurry, 10m
 - Host :: Add printer
-- Energy saver: non-aggressive, never sleep
+- Energy saver: 15m, never sleep
 - Install Spectacle, allow, start at boot
 - Host :: Install VMWare Fusion Professional
 
