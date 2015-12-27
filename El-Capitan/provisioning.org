@@ -742,3 +742,23 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 #  LocalWords:  PHOSI PHOSDI
 * Guest Configuration
+** Base
+
+- Provsionined like a host; and nothing more
+- Used for quickly cloning by anyone
+
+** gcr
+
+*Branched from Base*
+
+*** Base
+
+- Provsionined like base; and nothing more
+- Used for quickly cloning by gcr
+
+*** CLT
+
+- Installed xcode
+- Installed clt
+  
+*** EMACS/Dev
