@@ -831,7 +831,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 :ID:       0B390891-5510-4703-97D7-29949F3D4436
 :END:
 
-- *Full-Clone of Base*
+- *Full-Clone of 09d89d*
   - Right Click 09d89d:"Installed 2015-12-27T15:14:59-0600"
     \rarr Create Full Clone\ldots
   - Named "El Capitan - gcr (3a546a)"
