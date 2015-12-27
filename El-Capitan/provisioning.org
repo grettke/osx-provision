@@ -170,7 +170,7 @@ Steps unique to the host are indicated.
 
 - During configuration personalize/configure/install nothing but timezone
 - Host :: Bluetooth mouse
-- Speedup mouse
+- Slowish mouse
 - Swap control keys
 - Host :: Install Karabiner, allow, start at boot, return once sends option
 - Host :: Maximize resolution
