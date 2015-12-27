@@ -51,7 +51,14 @@
 - Verify easily verifiable operations
   - Installation scripts often reveal new information
 - Either name things with a meaningful name or a 6 digit UUID from
-  [[https://www.uuidgenerator.net/][Online UUID Generator]]    
+  [[https://www.uuidgenerator.net/][Online UUID Generator]]
+- Evidence based; no fantasy or delusion
+  - Decide using experience; in absence make a best decision and move on
+- "Thinking ahead" is crippling
+- Version after expensive operations
+  - Can always delete them later
+- Don't go to sleep in the middle of configuration sections
+- Get the fastest Internet sold before starting
 
 * Preparation
 :PROPERTIES:
