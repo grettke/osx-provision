@@ -133,4 +133,557 @@ Steps unique to the host are indicated.
 - Host :: Install Karabiner, allow, start at boot, return once sends option
 - Host :: Install VMWare Fusion Professional
 
+* Defaults
+:PROPERTIES:
+:ID:       E72C95F4-9D62-4864-9BD5-441C7635BAA4
+:END:
+** Per Host
+:PROPERTIES:
+:tangle:   ./osx-per-host.sh
+:tangle-mode: (identity #o755)
+:ID:       0B05FB9A-08DF-448C-AE2E-0715B0B217F8
+:END:
+
+Set the computer name.
+#+NAME: 291FDE06-DF44-4156-A013-B763A8727B00
+#+BEGIN_SRC shell
+sudo scutil --set ComputerName orion
+sudo scutil --set HostName orion
+sudo scutil --set LocalHostName orion
+sudo defaults write 'com.apple.smb.server' NetBIOSName -string orion
+#+END_SRC
+
+Display login window as name and password.
+#+NAME: 2F39C8B9-CA25-4C94-8E77-AD348D5235A9
+#+BEGIN_SRC shell
+sudo defaults write /Library/Preferences/com.apple.loginwindow.plist SHOWFULLNAME -bool true
+#+END_SRC
+
+Login message.
+#+NAME: 850816F3-B82E-4EE0-9895-6E99CB6A7593
+#+BEGIN_SRC shell
+sudo defaults write /Library/Preferences/com.apple.loginwindow.plist LoginwindowText -string "
+All creativity is an extended form of a joke.
+          — Alan Kay"
+#+END_SRC
+
+Disable Gatekeeper.
+#+NAME: DBE84671-1CC0-4DBA-AC7C-72F9EAC857A0
+#+BEGIN_SRC shell
+sudo spctl --master-disable
+#+END_SRC
+
+** Per User
+:PROPERTIES:
+:tangle:   ./osx-per-user.sh
+:tangle-mode: (identity #o755)
+:ID:       E9F72C01-7B0C-4714-9661-B7D75F98C56E
+:END:
+
+- These commands are all [[https://github.com/kitchenplan/chef-osxdefaults/tree/master/recipes][copied]]
+  - Including the documentation
+  - Some of them have corrections and changes
+
+**** Globals, Logical or Literal
+:PROPERTIES:
+:ID:       EC01CF33-40EE-4F63-8A27-A88DE32FC557
+:END:
+
+Set background.
+#+NAME: 6755B45A-4331-4CA4-89D5-7A5906C3966A
+#+BEGIN_SRC shell
+cd ~/Pictures/
+curl -O http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2015/02/M101-ORG.jpg
+sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '~/Pictures/M101-ORG.jpg'";
+#+END_SRC
+
+Set default volume.
+#+NAME: 57F27EEA-630B-4CB4-9A04-27091C4AD4CB
+#+BEGIN_SRC shell
+osascript -e 'set volume output volume 50'
+#+END_SRC
+
+Disable auto-correct.
+#+NAME: 02346DB0-0D1F-4A80-89ED-C8B723C05BB6
+#+BEGIN_SRC shell
+defaults write 'NSGlobalDomain' NSAutomaticSpellingCorrectionEnabled -bool false
+#+END_SRC
+
+Expand print panel by default.
+#+NAME: 207B6C0E-E636-4FAB-A859-6E3CA370C40E
+#+BEGIN_SRC shell
+defaults write 'NSGlobalDomain' PMPrintingExpandedStateForPrint -bool true
+defaults write 'NSGlobalDomain' PMPrintingExpandedStateForPrint2 -bool true
+#+END_SRC
+
+Expand save panel by default.
+#+NAME: FBAD5CA1-F984-46AE-940D-90B1FC6C8454
+#+BEGIN_SRC shell
+defaults write 'NSGlobalDomain' NSNavPanelExpandedStateForSaveMode -bool true
+defaults write 'NSGlobalDomain' NSNavPanelExpandedStateForSaveMode2 -bool true
+#+END_SRC
+
+Automatically quit printer app once the print jobs complete.
+#+NAME: F6899984-2233-4027-BBEF-1005657C7B5E
+#+BEGIN_SRC shell
+defaults write 'com.apple.print.PrintingPrefs' 'Quit When Finished' -bool true
+#+END_SRC
+
+Add battery percentage in menubar.
+#+NAME: 8351B207-A376-4149-A876-4E3E8CE06732
+#+BEGIN_SRC shell
+defaults write 'com.apple.menuextra.battery' ShowPercent -bool true
+#+END_SRC
+
+Add date in menubar clock.
+#+NAME: 3525C306-F373-4146-8579-60E38D765425
+#+BEGIN_SRC shell
+defaults write 'com.apple.menuextra.clock' DateFormat -string "EEE MMM d  HH:mm"
+#+END_SRC
+
+Prevent Time Machine from prompting to use new hard drives as backup volume.
+#+NAME: B7665462-71BC-4929-86C9-4766C3BAA9DB
+#+BEGIN_SRC shell
+defaults write 'com.apple.TimeMachine' DoNotOfferNewDisksForBackup -bool true
+#+END_SRC
+
+Avoid creating .DS_Store files on network volumes.
+#+NAME: EE3BD935-46A0-425C-9DAB-0CB341D5E501
+#+BEGIN_SRC shell
+defaults write 'com.apple.desktopservices' DSDontWriteNetworkStores -bool true
+#+END_SRC
+
+Save to disk (not to iCloud) by default.
+#+NAME: 526B969F-94AD-441B-8F5D-52141EDA0507
+#+BEGIN_SRC shell
+defaults write 'NSGlobalDomain' NSDocumentSaveNewDocumentsToCloud -bool false
+#+END_SRC
+
+Increase window resize speed for Cocoa applications.
+#+NAME: 16416BAF-CFEE-43E2-9B6B-C2B85C73D627
+#+BEGIN_SRC shell
+defaults write 'NSGlobalDomain' NSWindowResizeTime -float 0.001
+#+END_SRC
+
+Use the Graphite theme.
+#+NAME: 8D12169D-8717-46D4-920E-D4C322C4458E
+#+BEGIN_SRC shell
+defaults write 'NSGlobalDomain' AppleAquaColorVariant -int 6
+#+END_SRC
+
+Use dark menu bar and Dock
+#+NAME: 337E87AE-39CC-41F5-B115-11B994E125B5
+#+BEGIN_SRC shell
+defaults write 'NSGlobalDomain' AppleInterfaceStyle -string Dark
+#+END_SRC
+
+Disable the “Are you sure you want to open this application?” dialog.
+#+NAME: F89AEE9E-D5D6-4EF9-9914-CE2C3AE53B9B
+#+BEGIN_SRC shell
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+#+END_SRC
+
+Display ASCII control characters using caret notation in standard text views.
+Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`.
+#+NAME: A2CDF5C4-9239-47AD-9978-09582362316C
+#+BEGIN_SRC shell
+defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
+#+END_SRC
+
+Disable automatic termination of inactive apps.
+#+NAME: 4FDA48E0-AC9B-48B9-A09D-E54F72787F64
+#+BEGIN_SRC shell
+defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+#+END_SRC
+
+Disable the crash reporter.
+#+NAME: E102244A-C691-4E62-BE68-3BF1EB8D340F
+#+BEGIN_SRC shell
+defaults write com.apple.CrashReporter DialogType -string "none"
+#+END_SRC
+
+Set Help Viewer windows to non-floating mode.
+#+NAME: FC22C88E-44B4-4C50-B00A-82DB0DCDB519
+#+BEGIN_SRC shell
+defaults write com.apple.helpviewer DevMode -bool true
+#+END_SRC
+
+Restart automatically if the computer freezes.
+#+NAME: F3347821-BEB6-4D91-8ADC-D968F825D491
+#+BEGIN_SRC shell
+sudo systemsetup -setrestartfreeze on
+#+END_SRC
+
+Check for software updates daily, not just once per week.
+#+NAME: B0166A42-EB93-444D-ACDA-A0E2AED02543
+#+BEGIN_SRC shell
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+#+END_SRC
+
+Disable Notification Center and remove the menu bar icon.
+#+NAME: 493ABAF1-8385-4ADF-90C3-B61699A5603B
+#+BEGIN_SRC shell
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+#+END_SRC
+
+Disable smart quotes as they’re annoying when typing code.
+#+NAME: 1450BB2D-B822-48D3-ADC8-46FFF00B730C
+#+BEGIN_SRC shell
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+#+END_SRC
+
+Disable smart dashes as they’re annoying when typing code.
+#+NAME: B829AB6A-309B-406F-A51F-2CF38C183210
+#+BEGIN_SRC shell
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+#+END_SRC
+
+**** Hardware
+:PROPERTIES:
+:ID:       F6533ADA-A21F-49E7-8DD7-4447CF69A528
+:END:
+
+Disable press-and-hold for keys in favor of key repeat.
+#+NAME: 9078E7EB-65AE-4B8E-978A-E6687DB2C4EA
+#+BEGIN_SRC shell
+defaults write 'NSGlobalDomain' ApplePressAndHoldEnabled -bool false
+#+END_SRC
+
+Use all F1, F2, etc. keys as standard function keys.
+#+NAME: 662F5288-F102-4FCA-B052-31933DFEFC0B
+#+BEGIN_SRC shell
+defaults write 'NSGlobalDomain' com.apple.keyboard.fnState -bool true
+#+END_SRC
+
+Increase sound quality for Bluetooth headphones/headsets.
+#+NAME: 03E4D631-C6E3-4E4E-BCE9-BDB87D8549FD
+#+BEGIN_SRC shell
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+#+END_SRC
+
+**** Dock
+:PROPERTIES:
+:ID:       B3122846-4906-4F7C-AD02-63A84B47A92D
+:END:
+
+Automatically hide and show the dock.
+#+NAME: 44629106-AB81-4099-AAAE-2A1692110652
+#+BEGIN_SRC shell
+defaults write com.apple.dock autohide -bool true && killall Dock
+#+END_SRC
+
+Do not animate opening applications from the Dock.
+#+NAME: 3A5370F0-1F37-47A9-8AD2-5A54F7BEBAF6
+#+BEGIN_SRC shell
+defaults write com.apple.dock launchanim -bool false && killall Dock
+#+END_SRC
+
+Enable highlight hover effect for the grid view of a stack.
+#+NAME: 2E431E6C-083A-40C3-844A-187F6523CB77
+#+BEGIN_SRC shell
+defaults write com.apple.dock mouse-over-hilte-stack -bool true && killall Dock
+#+END_SRC
+
+Make Dock icons of hidden applications translucent.
+#+NAME: 2E431E6C-083A-40C3-844A-187F6523CB77
+#+BEGIN_SRC shell
+defaults write com.apple.dock showhidden -bool true && killall Dock
+#+END_SRC
+
+Minimize to application.
+#+NAME: 6AB142A8-9150-4B3B-8709-237D468212E0
+#+BEGIN_SRC shell
+defaults write com.apple.dock minimize-to-application -bool true && killall Dock
+#+END_SRC
+
+Move the Dock to the left side of the screen.
+#+NAME: 7CF0E408-7318-4921-B8BE-F834C8A63BC7
+#+BEGIN_SRC shell
+defaults write com.apple.dock orientation -string left && killall Dock
+#+END_SRC
+
+Remove the animation when hiding/showing the dock.
+#+NAME: 2250EED5-046B-4F55-B64E-04787C078F5B
+#+BEGIN_SRC shell
+defaults write com.apple.Dock autohide-time-modifier -float 0 && killall Dock
+#+END_SRC
+
+Remove the auto-hiding Dock delay".
+#+NAME: CA55EDF7-AB57-450A-A80A-D9BCE9219951
+#+BEGIN_SRC shell
+defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
+#+END_SRC
+
+Set the icon size of Dock items to 50 pixels.
+#+NAME: C92642D8-BA50-46E4-B9D0-A0A7DEEAF0B9
+#+BEGIN_SRC shell
+defaults write com.apple.Dock tilesize -int 50 && killall Dock
+#+END_SRC
+
+Show indicator lights for open applications in the Dock.
+#+NAME: 9402CBD6-530E-4832-8D6A-405EB9172F37
+#+BEGIN_SRC shell
+defaults write com.apple.Dock show-process-indicators -bool true && killall Dock
+#+END_SRC
+
+Wipe all (default) app icons from Dock.
+#+NAME: 9402CBD6-530E-4832-8D6A-405EB9172F37
+#+BEGIN_SRC shell
+defaults write 'com.apple.dock' persistent-apps -array '' && killall Dock
+#+END_SRC
+
+Speed up Mission Control animations.
+#+NAME: 2AEA50FA-CA94-438A-B82E-3B465CAA2E12
+#+BEGIN_SRC shell
+defaults write 'com.apple.dock' expose-animation-duration -float 0.1 && killall Dock
+#+END_SRC
+
+**** Finder
+:PROPERTIES:
+:ID:       E7984F15-4360-4F00-B754-CC00FC4D4124
+:END:
+
+Allow text selection in Quick Look.
+#+NAME: A6759B25-1B21-40C2-A75C-B2DF18A3CAC1
+#+BEGIN_SRC shell
+defaults write 'com.apple.finder' QLEnableTextSelection -bool true && killall Finder
+#+END_SRC
+
+Automatically open a new Finder window when a volume is mounted.
+#+NAME: DCDE10BB-3848-4C70-9B7A-8F5641950CCB
+#+BEGIN_SRC shell
+defaults write 'com.apple.frameworks.diskimages' auto-open-ro-root -bool true && killall Finder
+defaults write 'com.apple.frameworks.diskimages' auto-open-rw-root -bool true && killall Finder
+defaults write 'com.apple.finder' OpenWindowForNewRemovableDisk -bool true && killall Finder
+#+END_SRC
+
+Disable the warning before emptying the Trash.
+#+NAME: 4647036E-8DB1-4119-B6D1-2028941B9A91
+#+BEGIN_SRC shell
+defaults write 'com.apple.finder' WarnOnEmptyTrash -bool false && killall Finder
+#+END_SRC
+
+Disable the warning when changing a file extension.
+#+NAME: 00CEF20F-FDD2-464F-B8E4-968682A62B26
+#+BEGIN_SRC shell
+defaults write 'com.apple.finder' FXEnableExtensionChangeWarning -bool false && killall Finder
+#+END_SRC
+
+Set finder to display full path in title bar.
+#+NAME: 1C946EE8-4D17-4D03-BF58-F2C5C1280739
+#+BEGIN_SRC shell
+defaults write 'com.apple.finder' _FXShowPosixPathInTitle -bool true && killall Finder
+#+END_SRC
+
+New Finder window shows the homefolder.
+#+NAME: 85E615B8-24C6-4819-B437-BB1ED2384E82
+#+BEGIN_SRC shell
+defaults write 'com.apple.finder' NewWindowTarget -string PfHm && killall Finder
+#+END_SRC
+
+When performing a search, search the current folder by default.
+#+NAME: FB3EFB97-6BEC-4BE4-B8D5-8EACD289CE66
+#+BEGIN_SRC shell
+defaults write 'com.apple.finder' FXDefaultSearchScope -string SCcf && killall Finder
+#+END_SRC
+
+Show all files in Finder.
+#+NAME: 5F5E19CE-ECA4-4633-8C67-299C2237C7E2
+#+BEGIN_SRC shell
+defaults write 'com.apple.finder' AppleShowAllFiles -bool true && killall Finder
+#+END_SRC
+
+Show file extensions in Finder.
+#+NAME: 7C10B346-5B87-456F-B424-1ED79C2ADE2B
+#+BEGIN_SRC shell
+defaults write 'com.apple.finder' AppleShowAllExtensions -bool true && killall Finder
+#+END_SRC
+
+Show path bar in Finder.
+#+NAME: 69400DBC-BA03-4CB4-B724-BA22C070CB2B
+#+BEGIN_SRC shell
+defaults write 'com.apple.finder' ShowPathbar -bool true && killall Finder
+#+END_SRC
+
+Show status bar in Finder.
+#+NAME: 6D032485-D6D0-47A4-9B14-06FE6FC0CB80
+#+BEGIN_SRC shell
+defaults write 'com.apple.finder' ShowStatusBar -bool true && killall Finder
+#+END_SRC
+
+Sidebar icon size Small.
+#+NAME: 38B74BA0-FFCD-4E46-A1F0-BA839DF631DB
+#+BEGIN_SRC shell
+defaults write 'NSGlobalDomain' NSTableViewDefaultSizeMode -bool true && killall Finder
+#+END_SRC
+
+View style.
+#+NAME: 17D25945-67E7-4F54-9DAA-C23FD89A2758
+#+BEGIN_SRC shell
+defaults write 'com.apple.Finder' FXPreferredViewStyle clmv && killall Finder
+#+END_SRC
+
+Finder: disable window animations and Get Info animations.
+#+NAME: AF8A02A4-CFFC-4740-A6E9-3341F912906A
+#+BEGIN_SRC shell
+defaults write com.apple.finder DisableAllAnimations -bool true
+#+END_SRC
+
+Show icons for hard drives, servers, and removable media on the desktop.
+#+NAME: 5F9ED39D-B319-46AE-B64F-F8CCE66C14CB
+#+BEGIN_SRC shell
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+#+END_SRC
+
+**** Screen
+:PROPERTIES:
+:ID:       76D10582-3909-4CBB-9770-DF3D4F7C9DB0
+:END:
+
+Require password immediately after sleep or screen saver begins.
+#+NAME: A73210E6-B619-4523-BD19-A5F8951E8495
+#+BEGIN_SRC shell
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+#+END_SRC
+
+Disable shadow in screenshots.
+#+NAME: E99413DF-0D11-4824-873D-3514F9333D6E
+#+BEGIN_SRC shell
+defaults write com.apple.screencapture disable-shadow -bool true
+#+END_SRC
+
+Save screenshots in PNG format.
+#+NAME: EE876749-BDB9-466F-A0FC-567EBBF9C5C2
+#+BEGIN_SRC shell
+defaults write 'com.apple.screencapture' type -string png && killall SystemUIServer
+#+END_SRC
+
+Enable subpixel font rendering on non-Apple LCDs.
+#+NAME: 66472988-E3AE-44D0-9423-17E9FEA0F5F1
+#+BEGIN_SRC shell
+defaults write 'NSGlobalDomain' AppleFontSmoothing -int 2
+#+END_SRC
+
+[[https://github.com/robb/.dotfiles/blob/master/osx/defaults.install][Via]]
+#+NAME: 598BE517-CC5C-4D99-AD0B-41D2D906E376
+#+BEGIN_SRC shell
+mkdir -p ~/Screen\ Shots
+defaults write com.apple.screencapture location ~/Screen\ Shots
+#+END_SRC
+
+**** Hotcorners
+:PROPERTIES:
+:ID:       14E7437D-7BE9-4149-818B-ADC7B145A822
+:END:
+
+- Possible values:
+  - 0 :: no-op
+  - 2 :: Mission Control
+  - 3 :: Show application windows
+  - 4 :: Desktop
+  - 5 :: Start screen saver
+  - 6 :: Disable screen saver
+  - 7 :: Dashboard
+  - 10 :: Put display to sleep
+  - 11 :: Launchpad
+  - 12 :: Notification Center
+
+Top left screen corner → Mission Control.
+#+NAME: 446CE2EF-BCBE-4D83-9ACC-2A1E2F91C64B
+#+BEGIN_SRC shell
+defaults write com.apple.dock wvous-tl-corner -int 2
+defaults write com.apple.dock wvous-tl-modifier -int 0
+#+END_SRC
+
+Top right screen corner → Desktop.
+#+NAME: FF4E8A69-A137-4E50-A4E4-59DA58A082B5
+#+BEGIN_SRC shell
+defaults write com.apple.dock wvous-tr-corner -int 4
+defaults write com.apple.dock wvous-tr-modifier -int 0
+#+END_SRC
+
+Bottom left screen corner → Start screen saver.
+#+NAME: 6A561511-8354-408E-8805-201BAAE80A04
+#+BEGIN_SRC shell
+defaults write com.apple.dock wvous-bl-corner -int 5
+defaults write com.apple.dock wvous-bl-modifier -int 0
+#+END_SRC
+
+Bottom right screen corner → Application window.
+#+NAME: 7C9DE1C5-BBF8-4D40-8FAC-E78D5B85231E
+#+BEGIN_SRC shell
+defaults write com.apple.dock wvous-bl-corner -int 3
+defaults write com.apple.dock wvous-bl-modifier -int 0
+#+END_SRC
+
+**** Spaces
+:PROPERTIES:
+:ID:       A76717BD-1BF0-48D3-8E69-3A03BFE2B4A2
+:END:
+
+[[Y][Via]]
+
+#+NAME: 77191228-16CC-4B95-A030-A5C2DF90CD50
+#+BEGIN_SRC shell
+# Don’t automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
+# Set edge-dragging delay to 0.7
+defaults write com.apple.dock workspaces-edge-delay -float 1.0
+#+END_SRC
+
+**** Mouse
+:PROPERTIES:
+:ID:       319EDC92-B863-4D2E-A951-8479F9171FFF
+:END:
+
+Reasonably fast.
+#+NAME: 9B804905-E9D0-43BE-8106-DC53009C58C4
+#+BEGIN_SRC shell
+defaults write 'NSGlobalDomain' com.apple.mouse.scaling -float 2
+#+END_SRC
+
+**** Terminal
+:PROPERTIES:
+:ID:       20C7C795-5C0A-442A-9D0F-669D1637A1D2
+:END:
+
+Only use UTF-8 in Terminal.app.
+#+NAME: 9AF4BB62-76D4-4943-88FC-704A7BA492AC
+#+BEGIN_SRC shell
+defaults write com.apple.terminal StringEncodings -array 4
+#+END_SRC
+
+**** Activity Monitor                                                            #
+:PROPERTIES:
+:ID:       D36D6B69-54DC-4666-AB48-731A2FA7130F
+:END:
+
+Show the main window when launching Activity Monitor.
+#+NAME: BC6F1328-5EA2-4B1D-AC72-654D829BDB31
+#+BEGIN_SRC shell
+defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
+#+END_SRC
+
+Visualize CPU usage in the Activity Monitor Dock icon.
+#+NAME: 81FD865B-E76D-4873-8C12-42C6194AB300
+#+BEGIN_SRC shell
+defaults write com.apple.ActivityMonitor IconType -int 5
+#+END_SRC
+
+Show all processes in Activity Monitor.
+#+NAME: F02FC4BB-0B04-4B8A-965C-71B181139FC8
+#+BEGIN_SRC shell
+defaults write com.apple.ActivityMonitor ShowCategory -int 0
+#+END_SRC
+
+Sort Activity Monitor results by CPU usageefaults write com.apple.ActivityMonitor Sort.Column -string "CPUUsage".
+#+NAME: C2C6F54C-D4B7-4CBE-AF80-E45CE40C9A54
+#+BEGIN_SRC shell
+defaults write com.apple.ActivityMonitor SortDirection -int 0
+#+END_SRC
+
 #  LocalWords:  PHOSI PHOSDI
