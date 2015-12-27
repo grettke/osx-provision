@@ -204,6 +204,7 @@ Steps unique to the host are indicated.
 :END:
 
 Aggressively debug.
+#+NAME: C3D25C79-DF2D-4A1D-AE4F-16F20395AA95
 #+BEGIN_SRC shell
 set -x
 #+END_SRC
@@ -248,6 +249,7 @@ sudo spctl --master-disable
 :END:
 
 Aggressively debug.
+#+NAME: A275F237-6C96-481A-AFD5-413933B3036E
 #+BEGIN_SRC shell
 set -x
 #+END_SRC
@@ -759,13 +761,22 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 #+END_SRC
 
 * Guest Configuration
+:PROPERTIES:
+:ID:       2A536BBD-5CF0-43B8-A87C-9E2260ADE2F5
+:END:
 ** Base (09d89d)
+:PROPERTIES:
+:ID:       33FE2B6C-EE9E-407E-96C3-41675669C9AE
+:END:
 
 - Configured with a =sysop= like above
 - Unprovisioned
 - Used for quickly cloning for user for anything
 
 **** Steps
+:PROPERTIES:
+:ID:       CC55FA18-ADF8-4FE2-AA8E-477A3449F86F
+:END:
 
 - Obtain the OS X Installer via the App Store
   - Can do this on a Mac or in a VM of a prior version of OSX
@@ -798,15 +809,27 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 - Shutdown
 
 **** Snapshots
+:PROPERTIES:
+:ID:       7DB397B7-D0EC-4AD1-9BC8-3B80452D8890
+:END:
 
 ***** First Run (d0a475)
+:PROPERTIES:
+:ID:       9F90A8E9-E4B3-486D-A9BD-243EF10CEAF1
+:END:
 
 - Installed, created user, shutdown
 - This was the first run
 
 ** gcr (3a546a)
+:PROPERTIES:
+:ID:       E6395620-7A49-4FEC-9E06-15B27C1FC21C
+:END:
 
 *** Base (3d4a52)
+:PROPERTIES:
+:ID:       0B390891-5510-4703-97D7-29949F3D4436
+:END:
 
 - *Full-Clone of Base*
   - Right Click 09d89d:"Installed 2015-12-27T15:14:59-0600"
@@ -844,6 +867,9 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 - Setup and provision =gcr=
 
 *** Version Control/Dev (39e716)
+:PROPERTIES:
+:ID:       87802E09-F643-468B-819B-3C8EEB2D3E09
+:END:
 
 - Installed xcode
 - Installed clt
@@ -852,5 +878,8 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 - Installed git
 
 *** EMACS (8ef276)
+:PROPERTIES:
+:ID:       EFF4453A-BB19-4841-9472-D8A89700CE06
+:END:
 
 #  LocalWords:  PHOSI PHOSDI

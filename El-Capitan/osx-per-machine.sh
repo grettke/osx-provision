@@ -1,8 +1,9 @@
-# [[file:provisioning.org::*Per%20Machine][291FDE06-DF44-4156-A013-B763A8727B00]]
-
+# [[file:provisioning.org::*Per%20Machine][C3D25C79-DF2D-4A1D-AE4F-16F20395AA95]]
 set -x
 read -p "Press [Enter] key to continue..."
+# C3D25C79-DF2D-4A1D-AE4F-16F20395AA95 ends here
 
+# [[file:provisioning.org::*Per%20Machine][291FDE06-DF44-4156-A013-B763A8727B00]]
 echo "Enter machine name: "
 read ivar
 echo "You entered: $ivar"
