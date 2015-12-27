@@ -140,7 +140,6 @@ the clone. Name it =EXT:Utility=. Reboot to it to test it.
   - Boot into =EXT:Support=
   - Create 1 new partition on =Host=, named =Utility=: 16GB
     - Now there are 3: =Macintosh HD=, =Support=, and =Utility=
-  - Use CCC to clone =PHOSDI= to =Host:Support=
   - Verify that you can
     - Boot into =Host:Support=
     - Install CCC
@@ -169,7 +168,7 @@ the clone. Name it =EXT:Utility=. Reboot to it to test it.
 
 Steps unique to the host are indicated.
 
-- During configuration personalize/configure/install nothing
+- During configuration personalize/configure/install nothing but timezone
 - Host :: Maximize resolution
 - Make a user named =sysop=, System Operator
 - Show Keychain Access in Menubar
