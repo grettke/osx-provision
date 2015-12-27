@@ -861,7 +861,8 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
     confirm.
 - Set user picture to an owl and change the password
 - Install VMWare Tools
-  - Maximize resolution
+  - In El Capitan, the display driver works correctly so you can set any
+    resolution via VMWare Fusion. You can verify in the VM.
 - Provision =sysop=
 - Setup and provision =gcr=
 
