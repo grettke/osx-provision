@@ -832,8 +832,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 :END:
 
 - *Full-Clone of 09d89d*
-  - Right Click 09d89d:"Installed 2015-12-27T15:14:59-0600"
-    \rarr Create Full Clone\ldots
+  - Right Click d0a475 \rarr Create Full Clone\ldots
   - Named "El Capitan - gcr (3a546a)"
 - Machine config
   - Processors
