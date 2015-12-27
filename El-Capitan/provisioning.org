@@ -50,6 +50,8 @@
 
 - Verify easily verifiable operations
   - Installation scripts often reveal new information
+- Either name things with a meaningful name or a 6 digit UUID from
+  [[https://www.uuidgenerator.net/][Online UUID Generator]]    
 
 * Preparation
 :PROPERTIES:
