@@ -133,7 +133,7 @@ Steps unique to the host are indicated.
 - Host :: Install Karabiner, allow, start at boot, return once sends option
 - Host :: Install VMWare Fusion Professional
 
-** Defaults
+** Automated Steps
 :PROPERTIES:
 :ID:       E72C95F4-9D62-4864-9BD5-441C7635BAA4
 :END:
