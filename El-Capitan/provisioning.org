@@ -841,7 +841,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
     - Enable hypervisor
     - Enable code profiling
   - Hard Disk
-    - 250GB HD
+    - 250.00 GB HD
   - Sharing
     - =Host:Storage=
 - Start the VM
