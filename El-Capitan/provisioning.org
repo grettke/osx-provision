@@ -109,4 +109,28 @@ the clone. Name it =EXT:Utility=. Reboot to it to test it.
       - Software
       - Scripts
 
+* Host Configuration
+
+** Starting Point
+
+- Image your machine using =PHOSDI=
+
+** Manual Steps
+
+Steps unique to the host are indicated.
+
+- During configuration personalize/configure/install nothing
+- Host :: Maximize resolution
+- Make a user named =sysop=, System Operator
+- Show Keychain Access in Menubar
+- Screensaver: Flurry, 10m
+- Host :: Add printer
+- Host :: Bluetooth mouse
+- Speedup mouse
+- Energy saver: non-aggressive, never sleep
+- Swap control keys
+- Install Spectacle, allow, start at boot
+- Host :: Install Karabiner, allow, start at boot, return once sends option
+- Host :: Install VMWare Fusion Professional
+
 #  LocalWords:  PHOSI PHOSDI
