@@ -753,7 +753,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 * Guest Configuration
 ** Base
 
-- Provsionined like a host; and nothing more
+- Provisioned like a host; and nothing more
 - Used for quickly cloning by anyone
 
 ** gcr
