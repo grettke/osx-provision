@@ -758,7 +758,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 ** gcr
 
-*Branched from Base*
+*Full-Clone of Base*
 
 *** Base
 
@@ -769,5 +769,5 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 - Installed xcode
 - Installed clt
-  
+
 *** EMACS/Dev
