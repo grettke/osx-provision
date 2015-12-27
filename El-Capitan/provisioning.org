@@ -1,0 +1,31 @@
+* Goal
+
+** Desire
+
+- To quickly and easily
+  - Explore cognitive spaces using operating systems and software
+  - Try, fail, learn, improve, and repeat
+  - For expensive operations measured in time and complexity
+    - Minimize their execution time
+      - Central Processing Unit (CPU)
+      - Input/Output (IO)
+    - Rebound from failure
+  - Share
+
+** Satisfaction
+
+- First-class support for OS X, Windows, Linux and all of their software
+- Manage machines as easily and flexibly as you would with version control
+- Use the fastest devices possible for every operation
+- First class operating system image management
+- Virtual machines (VM)  
+
+** Decision
+
+- Current:
+  - OS X
+  - VMWare Fusion Professional
+- With /Best/:
+  - Solid State Disk (SSD)
+  - RAM
+  - CPU count and speed
