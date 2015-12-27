@@ -168,13 +168,13 @@ the clone. Name it =EXT:Utility=. Reboot to it to test it.
 
 Steps unique to the host are indicated.
 
+- Make a user named =sysop=, System Operator
 - During configuration personalize/configure/install nothing but timezone
 - Host :: Bluetooth mouse
 - Slowish mouse
 - Swap control keys
 - Host :: Install Karabiner, allow, start at boot, return once sends option
 - Host :: Maximize resolution
-- Make a user named =sysop=, System Operator
 - Show Keychain Access in Menubar
 - Screensaver: Flurry, 10m
 - Host :: Add printer
