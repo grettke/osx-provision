@@ -840,7 +840,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
     - 6144 RAM
     - Enable hypervisor
     - Enable code profiling
-  - Disk
+  - Hard Disk
     - 250GB HD
   - Sharing
     - =Host:Storage=
