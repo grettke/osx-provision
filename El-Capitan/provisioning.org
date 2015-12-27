@@ -137,9 +137,9 @@ Steps unique to the host are indicated.
 :PROPERTIES:
 :ID:       E72C95F4-9D62-4864-9BD5-441C7635BAA4
 :END:
-*** Per Host
+*** Per Machine
 :PROPERTIES:
-:tangle:   ./osx-per-host.sh
+:tangle:   ./osx-per-machine.sh
 :tangle-mode: (identity #o755)
 :ID:       0B05FB9A-08DF-448C-AE2E-0715B0B217F8
 :END:
