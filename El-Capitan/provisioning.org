@@ -736,30 +736,30 @@ defaults write com.apple.terminal StringEncodings -array 4
 
 Show the main window when launching Activity Monitor.
 #+NAME: BC6F1328-5EA2-4B1D-AC72-654D829BDB31
-#+BEGIN_SRC shell
+#+BEGIN_SRC shell :results output silent
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 #+END_SRC
 
 Visualize CPU usage in the Activity Monitor Dock icon.
 #+NAME: 81FD865B-E76D-4873-8C12-42C6194AB300
-#+BEGIN_SRC shell
+#+BEGIN_SRC shell :results output silent
 defaults write com.apple.ActivityMonitor IconType -int 5
 #+END_SRC
 
 Show all processes in Activity Monitor.
 #+NAME: F02FC4BB-0B04-4B8A-965C-71B181139FC8
-#+BEGIN_SRC shell
+#+BEGIN_SRC shell :results output silent
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
 #+END_SRC
 
 Sort Activity Monitor results by CPU usageefaults write com.apple.ActivityMonitor Sort.Column -string "CPUUsage".
 #+NAME: C2C6F54C-D4B7-4CBE-AF80-E45CE40C9A54
-#+BEGIN_SRC shell
+#+BEGIN_SRC shell :results output silent
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 #+END_SRC
 
 * Guest Configuration
-** Base : 09d89d
+** Base (09d89d)
 
 - Configured with a =sysop= like above
 - Unprovisioned
@@ -773,43 +773,77 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 - Start VMWare Fusion, click File \rarr New, the "Select the Installation Method"
   dialog appears
 - Create a new machine by dragging the OS X Installer onto the dialog
-- Name it "El Capitan - Base" and leave all of the default machine configuration
-  alone
-  - Default 2 core, 2GB, 40GB seems fine and allows you to have another VM
+- Continue
+- Default configuration don't change anything
+  - 40GB HD, 2 CPU, 2GB RAM seems fine and allows you to have another VM
     running for notes during configuration
   - Assuming that 40GB will be enough to allow OS updates as they occur over
     the lifetime of the operating system
   - Full-Clones will configure the machine in unique ways not worth capturing
     here
+- Click Finish
+  - Name it "El Capitan - Base (09d89d)" and leave all of the default machine configuration
+    alone
 - Installation takes 20m every time
-  - Installer reports "35s remaining" accurately, and 0s remaining inaccurately
-  - Then it reports 20m remaining which is accurate within 2-4 minutes
-- Perform a configuration like the =sysop= for this machine, configuring as little
-  as possible
-- Shutdown and take a snapshot "Installed 2015-12-27T15:14:59-0600"
-- Never use this again and always take Full-Clones from the snapshot
+  - Installer reports "35s remaining" accurately, and then 0s remaining
+    inaccurately, and sits there for about 5 minutes
+  - Then it reports 20m remaining, and completes in 15m
+  any personal information or configuration
+- Set up box and create =sysop=, don't configure, don't provision:
+  - Use the name =sysop= and password =sysop=
+  - Don't do it like you set up the host
+  - Don't provision or customize anything
+  - Don't set up printers or resolution
+  - Just create the account and do nothing more
+- Shutdown
 
-** GCR : 3a546a
+**** Snapshots
 
-*** Base : 3d4a52
+***** First Run (d0a475)
+
+- Installed, created user, shutdown
+- This was the first run
+
+** gcr (3a546a)
+
+*** Base (3d4a52)
 
 - *Full-Clone of Base*
   - Right Click 09d89d:"Installed 2015-12-27T15:14:59-0600"
     \rarr Create Full Clone\ldots
-  - Named "El Capitan GCR 3a546a"
+  - Named "El Capitan - gcr (3a546a)"
 - Machine config
   - Processors
     - 3 cores
     - 6144 RAM
     - Enable hypervisor
     - Enable code profiling
-  - 250GB HD
-  - Share =Host:Storage=
+  - Disk
+    - 250GB HD
+  - Sharing
+    - =Host:Storage=
+- Start the VM
+- Resize the disk
+  - Note that on a real Mac you can't resize a partition that OS X has
+    booted from so you might boot from the Recovery Parittion to perform
+    the resize instead. This doesn't work on the VMWare drive. If you try it,
+    it will fail for a couple of reasons like "The partition is not journaled"
+    or "The operation filed". Instead, boot into the OS and resize the partition
+    there.
+  - Choose VMWare Virtual SATA hard Drive Media
+  - Click "Partition"
+  - Enter "999" and hit tab to let the GUI fill out the max partition size,
+    in this case 267.44
+  - Click "Apply"
+  - The change will not be reflected immediately. Restart Disk Utility to
+    confirm.
+- Set user picture to an owl and change the password
 - Install VMWare Tools
-- Maximize resolution
-- Provisioned
+  - Maximize resolution
+- Provision =sysop=
+- Setup and provision =gcr=
 
-*** Version Control/Dev : 39e716
+*** Version Control/Dev (39e716)
 
 - Installed xcode
 - Installed clt
@@ -817,6 +851,6 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 - Installed cask
 - Installed git
 
-*** EMACS : 8ef276
+*** EMACS (8ef276)
 
 #  LocalWords:  PHOSI PHOSDI
