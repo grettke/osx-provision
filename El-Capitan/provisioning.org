@@ -43,6 +43,14 @@
   - RAM
   - CPU count and speed
 
+** Lessons Learned
+:PROPERTIES:
+:ID:       0D8B4834-2E1E-4F1A-9299-5948A1FFAC55
+:END:
+
+- Verify easily verifiable operations
+  - Installation scripts often reveal new information
+
 * Preparation
 :PROPERTIES:
 :ID:       1BF6D42F-2F80-467E-B75C-DB2C88F0B4BE
@@ -178,6 +186,7 @@ Steps unique to the host are indicated.
 ** Automated Steps
 :PROPERTIES:
 :ID:       E72C95F4-9D62-4864-9BD5-441C7635BAA4
+:header-args: :epilogue "read -p \"Press [Enter] key to continue...\""
 :END:
 *** Per Machine
 :PROPERTIES:
