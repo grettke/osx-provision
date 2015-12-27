@@ -133,11 +133,11 @@ Steps unique to the host are indicated.
 - Host :: Install Karabiner, allow, start at boot, return once sends option
 - Host :: Install VMWare Fusion Professional
 
-* Defaults
+** Defaults
 :PROPERTIES:
 :ID:       E72C95F4-9D62-4864-9BD5-441C7635BAA4
 :END:
-** Per Host
+*** Per Host
 :PROPERTIES:
 :tangle:   ./osx-per-host.sh
 :tangle-mode: (identity #o755)
@@ -173,7 +173,7 @@ Disable Gatekeeper.
 sudo spctl --master-disable
 #+END_SRC
 
-** Per User
+*** Per User
 :PROPERTIES:
 :tangle:   ./osx-per-user.sh
 :tangle-mode: (identity #o755)
@@ -184,7 +184,7 @@ sudo spctl --master-disable
   - Including the documentation
   - Some of them have corrections and changes
 
-**** Globals, Logical or Literal
+***** Globals, Logical or Literal
 :PROPERTIES:
 :ID:       EC01CF33-40EE-4F63-8A27-A88DE32FC557
 :END:
@@ -338,7 +338,7 @@ Disable smart dashes as they’re annoying when typing code.
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 #+END_SRC
 
-**** Hardware
+***** Hardware
 :PROPERTIES:
 :ID:       F6533ADA-A21F-49E7-8DD7-4447CF69A528
 :END:
@@ -361,7 +361,7 @@ Increase sound quality for Bluetooth headphones/headsets.
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 #+END_SRC
 
-**** Dock
+***** Dock
 :PROPERTIES:
 :ID:       B3122846-4906-4F7C-AD02-63A84B47A92D
 :END:
@@ -438,7 +438,7 @@ Speed up Mission Control animations.
 defaults write 'com.apple.dock' expose-animation-duration -float 0.1 && killall Dock
 #+END_SRC
 
-**** Finder
+***** Finder
 :PROPERTIES:
 :ID:       E7984F15-4360-4F00-B754-CC00FC4D4124
 :END:
@@ -538,7 +538,7 @@ defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 #+END_SRC
 
-**** Screen
+***** Screen
 :PROPERTIES:
 :ID:       76D10582-3909-4CBB-9770-DF3D4F7C9DB0
 :END:
@@ -575,7 +575,7 @@ mkdir -p ~/Screen\ Shots
 defaults write com.apple.screencapture location ~/Screen\ Shots
 #+END_SRC
 
-**** Hotcorners
+***** Hotcorners
 :PROPERTIES:
 :ID:       14E7437D-7BE9-4149-818B-ADC7B145A822
 :END:
@@ -620,7 +620,7 @@ defaults write com.apple.dock wvous-bl-corner -int 3
 defaults write com.apple.dock wvous-bl-modifier -int 0
 #+END_SRC
 
-**** Spaces
+***** Spaces
 :PROPERTIES:
 :ID:       A76717BD-1BF0-48D3-8E69-3A03BFE2B4A2
 :END:
@@ -635,7 +635,7 @@ defaults write com.apple.dock mru-spaces -bool false
 defaults write com.apple.dock workspaces-edge-delay -float 1.0
 #+END_SRC
 
-**** Mouse
+***** Mouse
 :PROPERTIES:
 :ID:       319EDC92-B863-4D2E-A951-8479F9171FFF
 :END:
@@ -646,7 +646,7 @@ Reasonably fast.
 defaults write 'NSGlobalDomain' com.apple.mouse.scaling -float 2
 #+END_SRC
 
-**** Terminal
+***** Terminal
 :PROPERTIES:
 :ID:       20C7C795-5C0A-442A-9D0F-669D1637A1D2
 :END:
@@ -657,7 +657,7 @@ Only use UTF-8 in Terminal.app.
 defaults write com.apple.terminal StringEncodings -array 4
 #+END_SRC
 
-**** Activity Monitor                                                            #
+***** Activity Monitor                                                            #
 :PROPERTIES:
 :ID:       D36D6B69-54DC-4666-AB48-731A2FA7130F
 :END:
