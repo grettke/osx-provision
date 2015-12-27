@@ -1,8 +1,11 @@
 # [[file:provisioning.org::*Per%20Machine][291FDE06-DF44-4156-A013-B763A8727B00]]
-sudo scutil --set ComputerName orion
-sudo scutil --set HostName orion
-sudo scutil --set LocalHostName orion
-sudo defaults write 'com.apple.smb.server' NetBIOSName -string orion
+echo "Enter machine name: "
+read ivar
+echo "You entered: $ivar"
+sudo scutil --set ComputerName $ivar
+sudo scutil --set HostName $ivar
+sudo scutil --set LocalHostName $ivar
+sudo defaults write 'com.apple.smb.server' NetBIOSName -string $ivar
 read -p "Press [Enter] key to continue..."
 # 291FDE06-DF44-4156-A013-B763A8727B00 ends here
 
