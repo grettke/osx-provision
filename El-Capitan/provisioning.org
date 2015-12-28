@@ -1060,6 +1060,10 @@ Set up the "Compare with DeltaWalker.workflow" by following the directions
     - [X] Ignore differences in line endings (CF and LF)
       - Most systems don't care
 
+There are files to test with [[/opt/homebrew-cask/Caskroom/deltawalker/2.1.2/Extras/samples%0A][here]]. Test them using the Finder integration.
+
+After Git it set up, test it there ,too.
+
 ***** Profile
 :PROPERTIES:
 :ID:       214656DF-ED9E-43B6-9E77-71BB88E6BC9C
@@ -1216,6 +1220,8 @@ git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
 cd ~/src
 git clone github-grettke:grettke/help.git
 #+end_src
+
+Test DeltaWalker integration.
 
 ***** Terminal
 :PROPERTIES:
