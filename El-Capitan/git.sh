@@ -45,7 +45,7 @@ git config --global alias.ci commit
 git config --global alias.dt difftool
 git config --global alias.mt mergetool
 git config --global diff.tool deltawalker
-git config --global difftool.deltawalker.cmd=/Applications/DeltaWalker.app/Contents/MacOS/git-diff $
+git config --global difftool.deltawalker.cmd=/Applications/DeltaWalker.app/Contents/MacOS/git-diff $LOCAL $REMOTE
 git config --global difftool.prompt false
 git config --global merge.tool deltawalker
 git config --global mergetool.deltawalker.cmd=/Applications/DeltaWalker.app/Contents/MacOS/git-merge $LOCAL $REMOTE $BASE $MERGED
