@@ -1,3 +1,5 @@
+set -x
+
 brew install git
 
 mkdir ~/.ssh
