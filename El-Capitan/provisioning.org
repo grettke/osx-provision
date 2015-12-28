@@ -1224,6 +1224,13 @@ cd ~/src
 git clone github-grettke:grettke/help.git
 #+end_src
 
+***** Terminal
+
+Select the Solarized dark theme. It is checked out in Github-Anon. Go into
+preferences, choose it, and set it as the default.
+
+Set the font to DJSM 17.
+
 ****** Writing (8ef276)
 :PROPERTIES:
 :ID:       EFF4453A-BB19-4841-9472-D8A89700CE06
