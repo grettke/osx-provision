@@ -181,13 +181,15 @@ Steps unique to the host are indicated.
 - Make a user named =sysop=, System Operator
 - Host :: Bluetooth mouse
 - Slowish mouse
-- Swap control keys
+- Host :: Swap control keys
 - Host :: Install Karabiner, allow, Change Return Key, Return to Option_L + When you type Return only
 - Host :: Maximize resolution
 - Show Keychain Access in Menubar
 - Screensaver: Flurry, 10m
 - Host :: Add printer
-- Energy saver: On power, 15m, never auto sleep when display is off
+- Energy saver
+  - Host :: On power, 15m, never auto sleep when display is off
+  - Guest :: Computer sleep 15, Screen sleep 15
 - Install Spectacle, allow, start at boot
 - Host :: Install VMWare Fusion Professional
 
@@ -196,6 +198,14 @@ Steps unique to the host are indicated.
 :ID:       E72C95F4-9D62-4864-9BD5-441C7635BAA4
 :header-args: :epilogue "read -p \"Press [Enter] key to continue...\""
 :END:
+
+This file creates two script files:
+- osx-per-machine.sh :: Provisions a single machine
+- osx-per-user.sh :: Provisions a single user on a machine
+
+They are generalized and re-usable scripts. The points in this document that
+refer to "provsioning" mean to do so using these scripts.
+
 *** Per Machine
 :PROPERTIES:
 :tangle:   ./osx-per-machine.sh
@@ -830,7 +840,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 :PROPERTIES:
 :ID:       0B390891-5510-4703-97D7-29949F3D4436
 :END:
-
+**** Plan
 - *Full-Clone of 09d89d*
   - Right Click d0a475 \rarr Create Full Clone\ldots
   - Named "El Capitan - gcr (3a546a)"
@@ -871,23 +881,60 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
   - In El Capitan, the display driver works correctly so you can set any
     resolution via VMWare Fusion. You can verify in the VM.
 - Provision this machine
-- Provision =sysop=  
-- Setup and provision =gcr=
+  - Use the UUID
+- Perform the "Manual Steps" setup for the sysop user on this box just like the
+  host
+  - The host =sysop= instruction note things unique to the host and guest
+- Provision =sysop=
+- Create, login as, perform the "Manual Stes", and provision =gcr=,
+  log out and in again
+- Install software updates via App Store
+- Shutdown
 
-*** Version Control/Dev (39e716)
+*** Xcode (39e716)
 :PROPERTIES:
 :ID:       87802E09-F643-468B-819B-3C8EEB2D3E09
 :END:
 
-- Installed xcode
-- Installed clt
-- Installed brew
-- Installed cask
-- Installed git
+Downloading Xcode takes a long time so snapshot it.
 
-*** EMACS (8ef276)
+**** Plan
+
+***** Little Snitch
+
+Manually install and license it. Required to track download activity and speed.
+
+The App Store reports downloade status under "Purchased".
+
+***** Install XCode
+
+I want Xcode. I want the CLT. I want the IDE and more. Everyone
+seems to be happy when you install in that order.
+
+Go to the App Store and install Xcode.
+
+You must start Xcode and agree to its licensing. Afterwards, close it.
+
+***** Install CLT
+
+Now install the CLT. Choose *Install*.
+
+#+NAME: E0FB4DC2-E07D-4462-A997-99E112066E37
+#+BEGIN_SRC shell
+xcode-select --install
+#+END_SRC
+
+*** VC (283c98)
+
+Configuring Git, the working copies, and support tools takes a long time so
+snapshot it. I don't want to have =.profile= defined two places, so I define two
+of them in this document and rename them when I deploy the system.
+**** Plan
+
+*** Writing (8ef276)
 :PROPERTIES:
 :ID:       EFF4453A-BB19-4841-9472-D8A89700CE06
 :END:
-
-#  LocalWords:  PHOSI PHOSDI
+**** Plan
+***** Speech
+***** Emacs
