@@ -1050,7 +1050,7 @@ Install git; don't use the built-in.
 
 #+NAME: 681F11A6-332E-424B-B878-CEF576BAAD1D
 #+BEGIN_SRC shell
-brew cask install git
+brew install git
 #+END_SRC
 
 Generate the key. There is no passphrase.
@@ -1135,10 +1135,10 @@ git config --global alias.ci commit
 git config --global alias.dt difftool
 git config --global alias.mt mergetool
 git config --global diff.tool deltawalker
-git config --global difftool.deltawalker.cmd "/Applications/DeltaWalker.app/Contents/MacOS/git-diff foo \$LOCAL foo foo \$REMOTE"
+git config --global difftool.deltawalker.cmd=/Applications/DeltaWalker.app/Contents/MacOS/git-diff $
 git config --global difftool.prompt false
 git config --global merge.tool deltawalker
-git config --global mergetool.deltawalker.cmd "/Applications/DeltaWalker.app/Contents/MacOS/git-merge \$LOCAL \$REMOTE \$BASE \$MERGED"
+git config --global mergetool.deltawalker.cmd=/Applications/DeltaWalker.app/Contents/MacOS/git-merge $LOCAL $REMOTE $BASE $MERGED
 git config --global mergetool.keepBackup false
 #+end_src
 
