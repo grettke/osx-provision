@@ -56,22 +56,14 @@ mkdir -p ~/git/github
 mkdir -p ~/git/github-anon
 mkdir -p ~/src
 cd ~/git/bitbucket
-git clone bitbucket-grettke:grettke/alec.git
 git clone bitbucket-grettke:grettke/list.git
-git clone bitbucket-grettke:grettke/hardware.git
 git clone bitbucket-grettke:grettke/resume.git
-git clone bitbucket-grettke:grettke/rule-engine-notes.git
 git clone bitbucket-grettke:grettke/notes.git
 git clone bitbucket-grettke:grettke/signature.git
 git clone bitbucket-grettke:grettke/grant-personal.git
-git clone bitbucket-grettke:grettke/cover-letter.git
 git clone bitbucket-grettke:grettke/correspondence.git
 git clone bitbucket-grettke:grettke/texmf.git
-git clone bitbucket-grettke:grettke/sas.git
 cd ~/git/github
-git clone github-grettke:grettke/home.git
-git clone github-grettke:grettke/kitchenplan.gi
-git clone github-grettke:grettke/stathon.git
 git clone github-grettke:grettke/osx-provision.git
 cd ~/git/github
 git clone github-grettke:tomislav/osx-terminal.app-colors-solarized.git
