@@ -924,12 +924,107 @@ Now install the CLT. Choose *Install*.
 xcode-select --install
 #+END_SRC
 
-*** VC (283c98)
+*** VC/Shell (283c98)
 
 Configuring Git, the working copies, and support tools takes a long time so
 snapshot it. I don't want to have =.profile= defined two places, so I define two
 of them in this document and rename them when I deploy the system.
+
 **** Plan
+***** Bash
+
+[[http://clubmate.fi/upgrade-to-bash-4-in-mac-os-x/][Via]]. Run this by hand. Restart Terminal.
+
+#+NAME: ADE3737D-A638-4BBD-9DD5-C42681EA1C0D
+#+BEGIN_SRC shell
+brew install bash
+sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+chsh -s /usr/local/bin/bash
+echo $BASH_VERSION
+#+END_SRC
+
+***** Brew and BrewCask
+
+Install both.
+
+Brew is [[http://brew.sh][here]].
+
+BrewCask is [[http://caskroom.io][here]].
+
+***** Java
+
+#+NAME: 41DCC7AD-FC9C-4EF5-9A1A-A43C22991B3D
+#+BEGIN_SRC shell
+brew cask install java
+#+END_SRC
+***** Fonts
+
+These could be used by any app; but they are defined specifically for use by
+Emacs later on. DeltaWalker uses DejaVuSans Mono for example.
+
+Add the font tap.
+
+#+NAME: F39B442C-E329-4604-8A1A-EF4681A6AC31
+#+BEGIN_SRC shell
+brew tap caskroom/fonts
+#+END_SRC
+
+Install them automatically.
+
+#+NAME: 59BFD86F-ED4D-4D50-85CC-BDE92854E153
+#+BEGIN_SRC shell
+brew cask install font-dejavu-sans
+brew cask install font-quivira
+brew cask install font-noto-sans
+brew cask install font-noto-sans-symbols
+#+END_SRC
+
+Download and install
+- Symbola
+
+Steps to install them:
+- Extract them
+- Start Font Book
+- Drag the top-level directory into the collection "All Fonts"
+  - Font Book will search through it recursively for fonts and add them
+- Automatically correct any resolution issues, which happen every time so far
+
+***** Deltawalker
+
+#+NAME: 82653612-8AFE-4FF7-86D8-921DDA662EB9
+#+BEGIN_SRC shell
+brew cask install deltawalker
+#+END_SRC
+
+License it.
+
+- Set preferences for new comparisons (be sure of this, easy not to)
+  - General
+    - Date formatting: English (United States)
+    - Max available memory: 1024
+    - [X] Automatically find new updates and notify me
+    - Colors and Fonts
+      - Basic::Text Font and Text Editor Block Selection Font: DJSM 14
+      - Differences::Font: DJSM 14
+  - All Comparisons
+    - [ ] Use text differencing optimized for speed
+    - [X] Use text differencing optimized for accuracy
+    - [X] Follow symbolic links
+    - [ ] Ignore differences in whitespace
+      - Want to know about tabs versus spaces
+    - [ ] Ignore differences in character case
+      - Interesting but default do care
+    - [X] Ignore differences in line endings (CF and LF)
+      - Most systems don't care
+
+***** Profile
+
+#+NAME: 25086576-D16D-45F4-9141-1A45E2C8F8FD
+#+BEGIN_SRC shell :tangle ./.profile-vc
+export HOMEBREW_NO_EMOJI=1
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66-b17.jdk/Contents/Home"
+export PATH=/usr/local/bin:$JAVA_HOME/bin:$PATH
+#+END_SRC
 
 *** Writing (8ef276)
 :PROPERTIES:
