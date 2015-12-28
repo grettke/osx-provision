@@ -1026,7 +1026,7 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66-b17.jdk/Contents
 export PATH=/usr/local/bin:$JAVA_HOME/bin:$PATH
 #+END_SRC
 
-** Automated
+***** Automated
    :PROPERTIES:
    :tangle:  git.sh
    :comments: no
@@ -1174,10 +1174,10 @@ Install GitPython for Stathon.
 sudo pip install GitPython==0.3.2.RC1
 #+end_src
 
-*** Writing (8ef276)
+****** Writing (8ef276)
 :PROPERTIES:
 :ID:       EFF4453A-BB19-4841-9472-D8A89700CE06
 :END:
-**** Plan
-***** Speech
-***** Emacs
+******* Plan
+******** Speech
+******** Emacs
