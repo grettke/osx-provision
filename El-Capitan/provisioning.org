@@ -1069,12 +1069,27 @@ After Git it set up, test it there ,too.
 :ID:       214656DF-ED9E-43B6-9E77-71BB88E6BC9C
 :END:
 
-#+NAME: 25086576-D16D-45F4-9141-1A45E2C8F8FD
-#+BEGIN_SRC shell :tangle ./.profile-vc :comments no
+#+NAME: pbod1
+#+BEGIN_SRC sh
 export PS1='\u@\h:\w> '
 export HOMEBREW_NO_EMOJI=1
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66-b17.jdk/Contents/Home"
-export PATH=/usr/local/bin:$JAVA_HOME/bin:$PATH
+#+END_SRC
+
+#+NAME: ppathpre
+#+BEGIN_SRC sh
+/usr/local/bin
+#+END_SRC
+
+#+NAME: ppathpost
+#+BEGIN_SRC sh
+$JAVA_HOME/bin:$PATH
+#+END_SRC
+
+#+NAME: 25086576-D16D-45F4-9141-1A45E2C8F8FD
+#+BEGIN_SRC shell :tangle ./.profile-vc :noweb yes :comments no
+<<pbod1>>
+export PATH=<<ppathpre>>:<<ppathpost>>
 #+END_SRC
 
 ***** Git Setup
