@@ -852,18 +852,26 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
     it will fail for a couple of reasons like "The partition is not journaled"
     or "The operation filed". Instead, boot into the OS and resize the partition
     there.
-  - Choose VMWare Virtual SATA hard Drive Media
+  - Start Disk Utility
+  - Choose VMWare Virtual SATA Hard Drive Media
   - Click "Partition"
-  - Enter "999" and hit tab to let the GUI fill out the max partition size,
-    in this case 267.44
-  - Click "Apply"
-  - The change will not be reflected immediately. Restart Disk Utility to
-    confirm.
-- Set user picture to an owl and change the password
+  - Look at it to get a sense of the space for the main partition and what is
+    actually available
+  - Close Disk Utility
+  - Read [[https://themacwrangler.wordpress.com/2015/10/21/resizing-el-capitan-mac-volumes-under-vmware-fusion/][this]] for a reference
+  - Open Terminal
+  - Execute:
+    #+BEGIN_SRC sh
+    sudo diskutil resizeVolume / R
+    #+END_SRC
+  - View the results, they should be what you expect
+  - Verify in Disk Utility
+- Change =sysop= password
 - Install VMWare Tools
   - In El Capitan, the display driver works correctly so you can set any
     resolution via VMWare Fusion. You can verify in the VM.
-- Provision =sysop=
+- Provision this machine
+- Provision =sysop=  
 - Setup and provision =gcr=
 
 *** Version Control/Dev (39e716)
