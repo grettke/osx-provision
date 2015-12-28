@@ -1089,6 +1089,12 @@ This script is set up to me. To customize it just search and replace on:
 
 Execute it to perform all of the steps.
 
+Aggressively debug.
+
+#+BEGIN_SRC sh
+set -x
+#+END_SRC
+
 Install git; don't use the built-in.
 
 #+NAME: 681F11A6-332E-424B-B878-CEF576BAAD1D
