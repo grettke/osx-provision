@@ -841,6 +841,9 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 :ID:       0B390891-5510-4703-97D7-29949F3D4436
 :END:
 **** Plan
+:PROPERTIES:
+:ID:       0967F184-B4A0-4B24-AB0D-5D3E95C3BB13
+:END:
 - *Full-Clone of 09d89d*
   - Right Click d0a475 \rarr Create Full Clone\ldots
   - Named "El Capitan - gcr (3a546a)"
@@ -871,6 +874,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
   - Read [[https://themacwrangler.wordpress.com/2015/10/21/resizing-el-capitan-mac-volumes-under-vmware-fusion/][this]] for a reference
   - Open Terminal
   - Execute:
+    #+NAME: 1C325C18-9A6B-4A33-A969-42CC4DBE0598
     #+BEGIN_SRC sh
     sudo diskutil resizeVolume / R
     #+END_SRC
@@ -899,14 +903,23 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 Downloading Xcode takes a long time so snapshot it.
 
 **** Plan
+:PROPERTIES:
+:ID:       4688E28F-F55F-444F-96DF-CDE4CED3C08D
+:END:
 
 ***** Little Snitch
+:PROPERTIES:
+:ID:       19ACB164-B255-4F8D-916D-557975884C1C
+:END:
 
 Manually install and license it. Required to track download activity and speed.
 
 The App Store reports downloade status under "Purchased".
 
 ***** Install XCode
+:PROPERTIES:
+:ID:       1094C0BB-F13F-4D43-8AAF-3432E8A9BB95
+:END:
 
 I want Xcode. I want the CLT. I want the IDE and more. Everyone
 seems to be happy when you install in that order.
@@ -916,6 +929,9 @@ Go to the App Store and install Xcode.
 You must start Xcode and agree to its licensing. Afterwards, close it.
 
 ***** Install CLT
+:PROPERTIES:
+:ID:       6164B479-E80F-4506-A4E5-DC5ABFBD3F81
+:END:
 
 Now install the CLT. Choose *Install*.
 
@@ -925,13 +941,22 @@ xcode-select --install
 #+END_SRC
 
 *** VC/Shell (283c98)
+:PROPERTIES:
+:ID:       C31C9412-2922-4E4A-80BB-20749A95D742
+:END:
 
 Configuring Git, the working copies, and support tools takes a long time so
 snapshot it. I don't want to have =.profile= defined two places, so I define two
 of them in this document and rename them when I deploy the system.
 
 **** Plan
+:PROPERTIES:
+:ID:       C39854E4-8FA7-42AF-9DDC-E62A96123965
+:END:
 ***** Bash
+:PROPERTIES:
+:ID:       223C4BB3-2F4D-418C-93B4-8AFF0801BD43
+:END:
 
 [[http://clubmate.fi/upgrade-to-bash-4-in-mac-os-x/][Via]]. Run this by hand. Restart Terminal.
 
@@ -944,6 +969,9 @@ echo $BASH_VERSION
 #+END_SRC
 
 ***** Brew and BrewCask
+:PROPERTIES:
+:ID:       571FE633-5DC4-411B-8B5C-62F572125326
+:END:
 
 Install both.
 
@@ -952,12 +980,18 @@ Brew is [[http://brew.sh][here]].
 BrewCask is [[http://caskroom.io][here]].
 
 ***** Java
+:PROPERTIES:
+:ID:       F0B50014-1E62-4182-9628-CA5EC737B41A
+:END:
 
 #+NAME: 41DCC7AD-FC9C-4EF5-9A1A-A43C22991B3D
 #+BEGIN_SRC shell
 brew cask install java
 #+END_SRC
 ***** Fonts
+:PROPERTIES:
+:ID:       03993E03-45DF-498A-B197-283C61313E39
+:END:
 
 These could be used by any app; but they are defined specifically for use by
 Emacs later on. DeltaWalker uses DejaVuSans Mono for example.
@@ -990,6 +1024,9 @@ Steps to install them:
 - Automatically correct any resolution issues, which happen every time so far
 
 ***** Deltawalker
+:PROPERTIES:
+:ID:       D8E6483D-FF38-4A25-BA43-3CA7516B8789
+:END:
 
 #+NAME: 82653612-8AFE-4FF7-86D8-921DDA662EB9
 #+BEGIN_SRC shell
@@ -1024,6 +1061,9 @@ Set up the "Compare with DeltaWalker.workflow" by following the directions
       - Most systems don't care
 
 ***** Profile
+:PROPERTIES:
+:ID:       214656DF-ED9E-43B6-9E77-71BB88E6BC9C
+:END:
 
 #+NAME: 25086576-D16D-45F4-9141-1A45E2C8F8FD
 #+BEGIN_SRC shell :tangle ./.profile-vc
@@ -1036,6 +1076,7 @@ export PATH=/usr/local/bin:$JAVA_HOME/bin:$PATH
    :PROPERTIES:
    :tangle:  git.sh
    :comments: no
+   :ID:       5CA6B1A3-079D-4D1E-A20A-DFC8E19A68CD
    :END:
 
 This script is set up to me. To customize it just search and replace on:
@@ -1046,10 +1087,12 @@ This script is set up to me. To customize it just search and replace on:
 - github-grettke :: your SSH alias for Github
 - bitbucket-grettke :: your SSH alias for Bitbucket
 
+Execute it to perform all of the steps.
+
 Install git; don't use the built-in.
 
 #+NAME: 681F11A6-332E-424B-B878-CEF576BAAD1D
-#+BEGIN_SRC shell
+#+BEGIN_SRC sh
 brew install git
 #+END_SRC
 
@@ -1146,10 +1189,10 @@ Check out projects to get basic stuff working.
 
 #+NAME: 5BD1669B-8E2A-46B5-AB80-88DA5764DEEB
 #+begin_src sh
-mkdir -p ~/bin
 mkdir -p ~/git/bitbucket
 mkdir -p ~/git/github
 mkdir -p ~/git/github-anon
+mkdir -p ~/src
 cd ~/git/bitbucket
 git clone bitbucket-grettke:grettke/alec.git
 git clone bitbucket-grettke:grettke/list.git
@@ -1164,34 +1207,14 @@ git clone bitbucket-grettke:grettke/correspondence.git
 git clone bitbucket-grettke:grettke/texmf.git
 git clone bitbucket-grettke:grettke/sas.git
 cd ~/git/github
-git clone github-grettke:grettke/help.git
 git clone github-grettke:grettke/home.git
 git clone github-grettke:grettke/kitchenplan.gi
 git clone github-grettke:grettke/stathon.git
 git clone github-grettke:grettke/osx-provision.git
+cd ~/git/github
 git clone github-grettke:tomislav/osx-terminal.app-colors-solarized.git
-#+end_src
-
-There are a lot of ways to manage libraries for Python. There are also many ways
-to manage Python installations. I am not considering any of them here. My
-approach is to use the base-box as a base. It needs to do certain things well.
-These directions are for my current approach.
-
-Directions for installing Pip live [[https://pip.pypa.io/en/latest/installing.html][here]].
-
-#+NAME: AA98A023-F2EE-4D42-AC8B-A86B84F204E0
-#+begin_src sh
-mkdir ~/tmp
-cd ~/tmp
-curl -O https://bootstrap.pypa.io/get-pip.py
-sudo -H python ./get-pip.py
-#+end_src
-
-Install GitPython for Stathon.
-
-#+NAME: 302B6409-A7B1-445A-9A09-CC0CD6D10501
-#+begin_src sh
-sudo pip install GitPython==0.3.2.RC1
+cd ~/src
+git clone github-grettke:grettke/help.git
 #+end_src
 
 ****** Writing (8ef276)
@@ -1199,5 +1222,14 @@ sudo pip install GitPython==0.3.2.RC1
 :ID:       EFF4453A-BB19-4841-9472-D8A89700CE06
 :END:
 ******* Plan
+:PROPERTIES:
+:ID:       2FE33595-5B40-44C1-BD73-CE07C7211561
+:END:
 ******** Speech
+:PROPERTIES:
+:ID:       16B663CB-40CE-4527-BC9B-343FAB9E29B1
+:END:
 ******** Emacs
+:PROPERTIES:
+:ID:       FD0FE04A-1AA4-4557-AA40-D77EBB82B147
+:END:
