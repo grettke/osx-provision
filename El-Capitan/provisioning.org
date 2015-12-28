@@ -947,7 +947,11 @@ xcode-select --install
 
 Configuring Git, the working copies, and support tools takes a long time so
 snapshot it. I don't want to have =.profile= defined two places, so I define two
-of them in this document and rename them when I deploy the system.
+of them in this document and rename them when I deploy the system. Since I had
+Git, I configured the Terminal after checking out a working copy for it. I
+checked out all of the projects that I'm likely to use because this and the
+next section are closely related. I don't consider the system usable until
+installing and configuring EMACS.
 
 **** Plan
 :PROPERTIES:
