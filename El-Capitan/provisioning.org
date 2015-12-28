@@ -996,7 +996,13 @@ Steps to install them:
 brew cask install deltawalker
 #+END_SRC
 
+Got to it's Cellar location and drag it into Applications.
+
 License it.
+
+Set up the "Compare with DeltaWalker.workflow" by following the directions
+- Copying it to the user library
+- Opening it in Automator by double clicking it in Finder
 
 - Set preferences for new comparisons (be sure of this, easy not to)
   - General
@@ -1026,12 +1032,26 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66-b17.jdk/Contents
 export PATH=/usr/local/bin:$JAVA_HOME/bin:$PATH
 #+END_SRC
 
-***** Automated
+***** Git Setup
    :PROPERTIES:
    :tangle:  git.sh
    :comments: no
-   :ID:       0C2714A7-1900-4E21-9611-0BE64EF565F3
    :END:
+
+This script is set up to me. To customize it just search and replace on:
+- gcr@wisdomandwonder.com :: your email address for your SSH key
+- orion :: the host name where this key lives
+- gcr :: your username using this key
+- =orgion_gcr_rsa= :: the name of your key used for Git
+- github-grettke :: your SSH alias for Github
+- bitbucket-grettke :: your SSH alias for Bitbucket
+
+Install git; don't use the built-in.
+
+#+NAME: 681F11A6-332E-424B-B878-CEF576BAAD1D
+#+BEGIN_SRC shell
+brew cask install git
+#+END_SRC
 
 Generate the key. There is no passphrase.
 #+NAME: 41FF7AA3-8273-4281-A7E8-C60B048723D4
