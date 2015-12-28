@@ -1091,6 +1091,7 @@ Execute it to perform all of the steps.
 
 Aggressively debug.
 
+#+NAME: B807D882-CDAB-4029-9FFE-FB967D0DB38F
 #+BEGIN_SRC sh
 set -x
 #+END_SRC
