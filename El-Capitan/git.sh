@@ -65,7 +65,7 @@ git clone bitbucket-grettke:grettke/correspondence.git
 git clone bitbucket-grettke:grettke/texmf.git
 cd ~/git/github
 git clone github-grettke:grettke/osx-provision.git
-cd ~/git/github
-git clone github-grettke:tomislav/osx-terminal.app-colors-solarized.git
+cd ~/git/github-anon
+git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
 cd ~/src
 git clone github-grettke:grettke/help.git
