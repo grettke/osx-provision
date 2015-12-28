@@ -1,4 +1,5 @@
 # [[file:provisioning.org::*Profile][25086576-D16D-45F4-9141-1A45E2C8F8FD]]
+export PS1='\u@\h:\w> '
 export HOMEBREW_NO_EMOJI=1
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66-b17.jdk/Contents/Home"
 export PATH=/usr/local/bin:$JAVA_HOME/bin:$PATH
