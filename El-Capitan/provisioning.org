@@ -1026,6 +1026,154 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66-b17.jdk/Contents
 export PATH=/usr/local/bin:$JAVA_HOME/bin:$PATH
 #+END_SRC
 
+** Automated
+   :PROPERTIES:
+   :tangle:  git.sh
+   :comments: no
+   :ID:       0C2714A7-1900-4E21-9611-0BE64EF565F3
+   :END:
+
+Generate the key. There is no passphrase.
+#+NAME: 41FF7AA3-8273-4281-A7E8-C60B048723D4
+#+begin_src sh
+mkdir ~/.ssh
+cd ~/.ssh
+ssh-keygen -N '' -t rsa -C "gcr@wisdomandwonder.com" -f orion_gcr_rsa
+#+end_src
+
+Set permissions so that =ssh= will run.
+
+#+NAME: 298B36CF-28A0-45CC-BACF-787EAB06F348
+#+begin_src sh
+chmod 600 ~/.ssh/orion_gcr_rsa
+chmod 600 ~/.ssh/orion_gcr_rsa.pub
+ssh-add -K ~/.ssh/orion_gcr_rsa
+#+end_src
+
+OSX creates this directory everywhere and it must be ignored.
+#+NAME: F17E2D3C-13C1-4E89-8BB7-DD2276BE9D21
+
+#+NAME: 53F16E84-34DC-48D1-998C-B9214B32AD1E
+#+begin_src sh
+echo .DS_Store >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+#+end_src
+
+Add they key to Bitbucket and Github.
+
+#+NAME: 3934CA71-20AE-4136-AB57-1DEF8EBC0ADB
+#+begin_src sh
+cat ~/.ssh/orion_gcr_rsa.pub | pbcopy
+read -p "The new key is in your clipboard. Go and add this key to BitBucket and GitHub. When you are finished, hit [enter] to continue."
+#+end_src
+
+Set up ~/.ssh/config.
+
+#+NAME: 70D5D9F2-6CFC-4FB5-BC45-416B4ABA029F
+#+begin_src sh
+cat > ~/.ssh/config << EOF
+Host github-grettke
+     HostName github.com
+     User git
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/orion_gcr_rsa.pub
+Host bitbucket-grettke
+     HostName bitbucket.org
+     User git
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/orion_gcr_rsa.pub
+EOF
+#+end_src
+
+Test each one out.
+
+#+NAME: 07933181-5F02-43CB-9DF8-232DA213E4BB
+#+begin_src sh
+ssh -T github-grettke
+read -p "Did it work? If not, fix it."
+#+end_src
+
+Separate them to allow for easier copy-pasting.
+
+#+NAME: 66DAC891-FB97-48A8-9C8B-0292095F13A6
+#+begin_src sh
+ssh -T bitbucket-grettke
+read -p "Did it work? If not, fix it."
+#+end_src
+
+Set up my preferences.
+
+#+NAME: C85D0036-9DDA-4786-9621-470FB418BBD6
+#+begin_src sh
+git config --global user.name "Grant Rettke"
+git config --global user.email gcr@wisdomandwonder.com
+git config --global core.editor vi
+git config --global color.ui true
+git config --global core.autocrlf
+git config --global alias.st status
+git config --global alias.ci commit
+git config --global alias.dt difftool
+git config --global alias.mt mergetool
+git config --global diff.tool deltawalker
+git config --global difftool.deltawalker.cmd "/Applications/DeltaWalker.app/Contents/MacOS/git-diff foo \$LOCAL foo foo \$REMOTE"
+git config --global difftool.prompt false
+git config --global merge.tool deltawalker
+git config --global mergetool.deltawalker.cmd "/Applications/DeltaWalker.app/Contents/MacOS/git-merge \$LOCAL \$REMOTE \$BASE \$MERGED"
+git config --global mergetool.keepBackup false
+#+end_src
+
+Check out projects to get basic stuff working.
+
+#+NAME: 5BD1669B-8E2A-46B5-AB80-88DA5764DEEB
+#+begin_src sh
+mkdir -p ~/bin
+mkdir -p ~/git/bitbucket
+mkdir -p ~/git/github
+mkdir -p ~/git/github-anon
+cd ~/git/bitbucket
+git clone bitbucket-grettke:grettke/alec.git
+git clone bitbucket-grettke:grettke/list.git
+git clone bitbucket-grettke:grettke/hardware.git
+git clone bitbucket-grettke:grettke/resume.git
+git clone bitbucket-grettke:grettke/rule-engine-notes.git
+git clone bitbucket-grettke:grettke/notes.git
+git clone bitbucket-grettke:grettke/signature.git
+git clone bitbucket-grettke:grettke/grant-personal.git
+git clone bitbucket-grettke:grettke/cover-letter.git
+git clone bitbucket-grettke:grettke/correspondence.git
+git clone bitbucket-grettke:grettke/texmf.git
+git clone bitbucket-grettke:grettke/sas.git
+cd ~/git/github
+git clone github-grettke:grettke/help.git
+git clone github-grettke:grettke/home.git
+git clone github-grettke:grettke/kitchenplan.gi
+git clone github-grettke:grettke/stathon.git
+git clone github-grettke:grettke/osx-provision.git
+git clone github-grettke:tomislav/osx-terminal.app-colors-solarized.git
+#+end_src
+
+There are a lot of ways to manage libraries for Python. There are also many ways
+to manage Python installations. I am not considering any of them here. My
+approach is to use the base-box as a base. It needs to do certain things well.
+These directions are for my current approach.
+
+Directions for installing Pip live [[https://pip.pypa.io/en/latest/installing.html][here]].
+
+#+NAME: AA98A023-F2EE-4D42-AC8B-A86B84F204E0
+#+begin_src sh
+mkdir ~/tmp
+cd ~/tmp
+curl -O https://bootstrap.pypa.io/get-pip.py
+sudo -H python ./get-pip.py
+#+end_src
+
+Install GitPython for Stathon.
+
+#+NAME: 302B6409-A7B1-445A-9A09-CC0CD6D10501
+#+begin_src sh
+sudo pip install GitPython==0.3.2.RC1
+#+end_src
+
 *** Writing (8ef276)
 :PROPERTIES:
 :ID:       EFF4453A-BB19-4841-9472-D8A89700CE06
