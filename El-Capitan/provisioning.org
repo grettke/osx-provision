@@ -1518,3 +1518,36 @@ rm -rf ~/.emacs.d
 mkdir ~/.emacs.d
 ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 #+END_SRC
+**** Test stuff out: using HELP and help.org
+:PROPERTIES:
+:ID:       B1B9A22B-578D-4DFA-9A8A-803AB11A8D0D
+:END:
+
+- [ ] Get Emacs running
+  - Usually problems with package loads
+    - EG dimnish
+- [ ] tangle
+  - Tangle the document successfully
+- [ ] execution
+  - Delete every result block: just do it manually search for =#+RESULT=
+  - Delete all image output
+  - Execute entire document successfully
+  - Images re-appear
+- [ ] Export to everything
+  - This is used for publishing
+  - First delete everything
+  - [ ] html
+    - Images are links, not images
+  - [ ] md
+    - Images are links, not images
+  - [ ] pdf
+  - [ ] txt
+- [ ] eshell
+  - Run it
+  - Emacs uses correct HELP directory
+- [ ] Correspondence
+  - Pick a letter
+  - Address and signature and everything looks right
+- [ ] ccrypt
+- [ ] ispell
+- [ ] langtool
