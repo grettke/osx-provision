@@ -1485,3 +1485,36 @@ Once that is installed, install gnuplot.
 brew install gnuplot --with-latex --with-pdflib-lite --with-test --with-x11
 #+end_src
 
+Note:
+#+BEGIN_QUOTE
+==> Pouring lua-5.2.4_1.el_capitan.bottle.tar.gz
+==> Caveats
+Please be aware due to the way Luarocks is designed any binaries installed
+via Luarocks-5.2 AND 5.1 will overwrite each other in /usr/local/bin.
+
+This is, for now, unavoidable. If this is troublesome for you, you can build
+rocks with the `--tree=` command to a special, non-conflicting location and
+then add that to your `$PATH`.
+#+END_QUOTE
+
+**** Dotfiles
+:PROPERTIES:
+:ID:       6B76A015-45CC-4FB7-B075-0D3DDA2C22EA
+:END:
+
+This script is idempotent.
+
+Link Emacs dot files to their implementation.
+
+#+NAME: C86B35D4-0009-499F-A779-5E148FF231FB
+#+BEGIN_SRC sh :tangle ./link-emacs-dotfiles.sh
+rm ~/.emacs.el
+ln -s ~/src/help/.emacs.el ~/.emacs.el
+rm ~/.aspell.en.pws
+ln -s ~/git/bitbucket/list/.aspell.en.pws ~/.aspell.en.pws
+rm ~/.aspell.en.prepl
+ln -s ~/git/bitbucket/list/.aspell.en.prepl ~/.aspell.en.prepl
+rm -rf ~/.emacs.d
+mkdir ~/.emacs.d
+ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
+#+END_SRC
