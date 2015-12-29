@@ -1,0 +1,8 @@
+export PS1='\u@\h:\w> '
+export HOMEBREW_NO_EMOJI=1
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66-b17.jdk/Contents/Home"
+export INFOPATH='/usr/local/share/info:/usr/share/info'
+export CCRYPT="/usr/local/Cellar/ccrypt/1.10/share/emacs/site-lisp"
+export EELIB="/Users/$(whoami)/EELIB"
+export MACTEX_BIN="/usr/local/texlive/2015/bin/x86_64-darwin"
+export PATH=/usr/local/bin:$MACTEX_BIN:$JAVA_HOME/bin:$PATH

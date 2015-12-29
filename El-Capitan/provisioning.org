@@ -1105,14 +1105,14 @@ $JAVA_HOME/bin:$PATH
 #+END_SRC
 
 #+NAME: 25086576-D16D-45F4-9141-1A45E2C8F8FD
-#+BEGIN_SRC shell :tangle ./.profile-vc :noweb yes :comments no
+#+BEGIN_SRC shell :tangle ./profile-vc :noweb yes :comments no
 <<pbod1>>
 export PATH=<<ppathpre>>:<<ppathpost>>
 #+END_SRC
 
 ***** Git Setup
    :PROPERTIES:
-   :tangle:  git.sh
+   :tangle:   git.sh
    :comments: no
    :ID:       5CA6B1A3-079D-4D1E-A20A-DFC8E19A68CD
    :END:
@@ -1386,6 +1386,24 @@ git clone https://github.com/jwiegley/use-package.git
   - Extract it here
   - Rename the directory to "LanguageTool"
   - Took 8 tries to download it; kept stalling at 80%
+
+**** Profile
+:PROPERTIES:
+:ID:       D0B61BD6-13D8-4569-8696-30256456A05C
+:END:
+
+Now everything is in place for the new profile. The new profile is required
+to continue installation
+
+#+NAME: B2E241B5-2075-4CD8-BF41-C0D22FAE8233
+#+BEGIN_SRC shell :tangle ./profile-final :noweb yes :comments no
+<<pbod1>>
+export INFOPATH='/usr/local/share/info:/usr/share/info'
+export CCRYPT="/usr/local/Cellar/ccrypt/1.10/share/emacs/site-lisp"
+export EELIB="/Users/$(whoami)/EELIB"
+export MACTEX_BIN="/usr/local/texlive/2015/bin/x86_64-darwin"
+export PATH=<<ppathpre>>:$MACTEX_BIN:<<ppathpost>>
+#+END_SRC
 
 **** MacTex & GnuPlot
     :PROPERTIES:
