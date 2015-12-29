@@ -1543,7 +1543,7 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
   - Delete all image output
   - Execute entire document successfully
   - Images re-appear
-- [ ] eshell
+- [X] eshell
   - Run it
   - Emacs uses correct HELP directory
 - [ ] Correspondence
@@ -1555,7 +1555,7 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
   - Verify installation, can have the wrong dir and the tool just says that
     there are no issues
 - [ ] Messages
-  - Make sure that there are no startup warnings or issues    
+  - Make sure that there are no startup warnings or issues
 - [ ] Export to everything
   - Longest test
   - This is used for publishing
