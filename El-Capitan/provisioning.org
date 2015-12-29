@@ -1286,6 +1286,8 @@ Run the script or paste it in.
 
 It is idempotent.
 
+The =xquartz= installer takes 5 minutes.
+
 #+NAME: 34E00A11-AB89-4C94-B52E-7B4C94401252
 #+BEGIN_SRC sh :tangle ./install-emacs-and-stuff.sh
 brew cask install xquartz
