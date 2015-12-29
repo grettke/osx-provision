@@ -1543,15 +1543,6 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
   - Delete all image output
   - Execute entire document successfully
   - Images re-appear
-- [ ] Export to everything
-  - This is used for publishing
-  - First delete everything
-  - [ ] html
-    - Images are links, not images
-  - [ ] md
-    - Images are links, not images
-  - [ ] pdf
-  - [ ] txt
 - [ ] eshell
   - Run it
   - Emacs uses correct HELP directory
@@ -1563,3 +1554,13 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 - [ ] langtool
   - Verify installation, can have the wrong dir and the tool just says that
     there are no issues
+- [ ] Export to everything
+  - Longest test
+  - This is used for publishing
+  - First delete everything
+  - [ ] html
+    - Images are links, not images
+  - [ ] md
+    - Images are links, not images
+  - [ ] pdf
+  - [ ] txt
