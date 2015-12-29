@@ -1536,7 +1536,7 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
         broken. My config debugs on error. The goal is to always have
         a working system. Sometimes, I copy over a working copy of Org
         or any of the libraries onto the host if there are issues.
-- [ ] tangle
+- [X] tangle
   - Tangle the document successfully
 - [ ] execution
   - Delete every result block: just do it manually search for =#+RESULT=
