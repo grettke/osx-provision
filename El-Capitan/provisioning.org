@@ -65,8 +65,9 @@
   - You will forget to do this
   - You will only care after something got wrecked
 - VMWare's folder sharing
-  - Works perfectly for sharing between two guests, 75% of the time. When it
+  - Works perfectly for sharing between two guests a lot of the time. When it
     quits working I log in and out of one of the guests and it works again
+    - Happens often
   - Is happy with Finder and unhappy with Eshell, so don't use Eshell in shared
     directories. They just stop working.
 
