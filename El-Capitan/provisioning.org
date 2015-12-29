@@ -1554,6 +1554,8 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 - [ ] langtool
   - Verify installation, can have the wrong dir and the tool just says that
     there are no issues
+- [ ] Messages
+  - Make sure that there are no startup warnings or issues    
 - [ ] Export to everything
   - Longest test
   - This is used for publishing
