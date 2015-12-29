@@ -1325,4 +1325,8 @@ Then to load emacs now:
   launchctl load ~/Library/LaunchAgents/homebrew.mxcl.emacs.plist
 .app bundles were installed.
 Run `brew linkapps emacs` to symlink these to /Applications.
+==> Pouring pandoc-1.15.2.1.el_capitan.bottle.tar.gz
+==> Caveats
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
 #+END_QUOTE
