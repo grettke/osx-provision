@@ -1308,3 +1308,21 @@ brew install pandoc
 read -p "Review the installation. Press return to continue."
 brew linkapps
 #+END_SRC
+
+Note:
+#+BEGIN_QUOTE
+==> ./configure --prefix=/usr/local/Cellar/emacs/24.5 --enable-locallisppath=/usr/local/share/emacs/
+==> make
+==> make install
+==> Caveats
+A command line wrapper for the cocoa app was installed to:
+  /usr/local/Cellar/emacs/24.5/bin/emacs
+
+To have launchd start emacs at login:
+  mkdir -p ~/Library/LaunchAgents
+  ln -sfv /usr/local/opt/emacs/*.plist ~/Library/LaunchAgents
+Then to load emacs now:
+  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.emacs.plist
+.app bundles were installed.
+Run `brew linkapps emacs` to symlink these to /Applications.
+#+END_QUOTE
