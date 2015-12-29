@@ -1563,7 +1563,7 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 - [X] Correspondence
   - Pick a letter
   - Address and signature and everything looks right
-- [ ] Messages
+- [X] Messages
   - Make sure that there are no startup warnings or issues
 - [ ] Export to everything
   - Longest test
