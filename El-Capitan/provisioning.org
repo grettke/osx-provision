@@ -64,7 +64,7 @@
 - Snapshot frequently; you never know how things will go.
 - VMWare's folder sharing is happy with Finder and unhappy with
   Eshell, so don't use Eshell in shared directories. They just
-  stop working.  
+  stop working.
 
 * Preparation
 :PROPERTIES:
@@ -1362,3 +1362,82 @@ git clone github-grettke:punchagan/org2blog.git
 cd ~/src
 git clone https://github.com/jwiegley/use-package.git
 #+END_SRC
+
+**** EELIB
+:PROPERTIES:
+:ID:       65AD0341-DCA6-42E8-9768-3DA41A274F8F
+:END:
+
+- Make a directory =~/EELIB=
+  #+NAME: 19FF07B8-3DFE-4CC4-9ABA-9BED5C430F02
+  #+BEGIN_SRC shell
+  mkdir ~/EELIB
+  #+END_SRC
+- Download the following JAR files to that folder
+- [[http://plantuml.com/][PlantUML]] to it, either downloading the unversioned JAR or
+   renaming it to "plantuml.jar"
+- [[http://ditaa.sourceforge.net/][ditaa]] to it, extract the versioned JAR, and rename it to "ditaa.jar"
+- [[https://www.languagetool.org/][LanguageTool]]
+  - Use the "daily build" if the download is too slow
+  - Extract it here
+  - Rename the directory to "LanguageTool"
+  - Took 8 tries to download it; kept stalling at 80%
+
+**** MacTex & GnuPlot
+    :PROPERTIES:
+    :ID:       4769C0C6-AA8F-4073-B233-253691004873
+    :header-args: :tangle ./mactex-gnuplot.sh
+    :END:
+
+This is 2.4 GiB. That is not much. If you get the US mirror it is 20 minutes or
+2 hours. The Torrent is a better option.
+
+Read the installation directions and install it.
+
+- Update your installation for OS X 10.11 via
+  https://tug.org/mactex/UpdatingForElCapitan.pdf
+  - Updated the texlive utility to point in the right place, it was at 1.21,
+    fix is in 1.23
+
+- tex live utility
+  - Set paper size
+
+From here either use the script which is idempotent or copy and paste.
+
+Set up my TeX stuff for KOMA-script. Backup the default configuration first.
+
+#+NAME: F70EC578-023C-45CD-A584-F00AE7D33400
+#+begin_src sh
+set -x
+ls /usr/local/texlive/2015
+sudo cp /usr/local/texlive/2015/texmf.cnf /usr/local/texlive/2015/texmf.cnf-`date '+%Y_%m_%d__%H_%M_%S'`
+ls /usr/local/texlive/2015
+sudo tlmgr conf texmf TEXMFHOME ~/git/bitbucket/texmf/
+#+end_src
+
+Check that the path is really updated.
+
+#+NAME: 34890901-8E9D-46E5-9738-2718CD26908E
+#+begin_src sh
+kpsewhich KomaDefault.lco
+#+end_src
+
+The documents say to maybe do the following. I did it.
+
+#+NAME: 008DCE01-EE0D-4A96-93A5-7B6E91D7C951
+#+begin_src sh
+sudo mktexlsr
+#+end_src
+
+***** Install GNUPlot
+:PROPERTIES:
+:ID:       F66605AC-4989-481C-986A-2879A7F32F33
+:END:
+
+Once that is installed, install gnuplot.
+
+#+NAME: FB8E0242-CDD6-45E4-86A7-10871990595A
+#+begin_src sh
+brew install gnuplot --with-latex --with-pdflib-lite --with-test --with-x11
+#+end_src
+
