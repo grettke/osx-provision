@@ -1551,6 +1551,7 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
   - Address and signature and everything looks right
 - [X] ccrypt
 - [X] ispell
+- [ ] weasel words  
 - [ ] langtool
   - Verify installation, can have the wrong dir and the tool just says that
     there are no issues
