@@ -1549,7 +1549,7 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 - [ ] Correspondence
   - Pick a letter
   - Address and signature and everything looks right
-- [ ] ccrypt
+- [X] ccrypt
 - [ ] ispell
 - [ ] langtool
   - Verify installation, can have the wrong dir and the tool just says that
