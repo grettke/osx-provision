@@ -9,7 +9,7 @@ brew install aspell -all
 read -p "Review the installation. Press return to continue."
 brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
 read -p "Review the installation. Press return to continue."
-brew install emacs --cocoa --with-gnutls --with-imagemagick
+brew install emacs --with-cocoa --with-gnutls --with-imagemagick
 read -p "Review the installation. Press return to continue."
 brew install graphviz
 read -p "Review the installation. Press return to continue."

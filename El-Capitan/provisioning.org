@@ -1282,6 +1282,8 @@ Set the font to DJSM 17.
 
 Run the script or paste it in.
 
+It is idempotent.
+
 #+NAME: 34E00A11-AB89-4C94-B52E-7B4C94401252
 #+BEGIN_SRC sh :tangle ./install-emacs-and-stuff.sh
 brew cask install xquartz
@@ -1294,7 +1296,7 @@ brew install aspell -all
 read -p "Review the installation. Press return to continue."
 brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
 read -p "Review the installation. Press return to continue."
-brew install emacs --cocoa --with-gnutls --with-imagemagick
+brew install emacs --with-cocoa --with-gnutls --with-imagemagick
 read -p "Review the installation. Press return to continue."
 brew install graphviz
 read -p "Review the installation. Press return to continue."
