@@ -1251,6 +1251,9 @@ git clone bitbucket-grettke:grettke/notes.git
 git clone bitbucket-grettke:grettke/signature.git
 git clone bitbucket-grettke:grettke/grant-personal.git
 git clone bitbucket-grettke:grettke/correspondence.git
+cd ./correspondence
+ln -s ../signature/GCR-PixelMator-PNG-Export.png GCR-PixelMator-PNG-Export.png
+cd ..
 git clone bitbucket-grettke:grettke/texmf.git
 cd ~/git/github
 git clone github-grettke:grettke/osx-provision.git
