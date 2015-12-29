@@ -1525,7 +1525,7 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 
 - [ ] Get Emacs running
   - Usually problems with package loads
-    - EG dimnish
+    - EG dimnish, =list-package= and install it and restart
 - [ ] tangle
   - Tangle the document successfully
 - [ ] execution
