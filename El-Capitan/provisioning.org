@@ -227,7 +227,7 @@ refer to "provsioning" mean to do so using these scripts.
 :ID:       0B05FB9A-08DF-448C-AE2E-0715B0B217F8
 :END:
 
-This script is idempotent.
+This script should be idempotent.
 
 Aggressively debug.
 #+NAME: C3D25C79-DF2D-4A1D-AE4F-16F20395AA95
@@ -274,7 +274,7 @@ sudo spctl --master-disable
 :ID:       E9F72C01-7B0C-4714-9661-B7D75F98C56E
 :END:
 
-This script is idempotent.
+This script should be idempotent.
 
 Aggressively debug.
 #+NAME: A275F237-6C96-481A-AFD5-413933B3036E
@@ -1304,7 +1304,7 @@ Set the font to DJSM 17.
 
 Run the script or paste it in.
 
-It is idempotent.
+It should be idempotent.
 
 The =xquartz= installer takes 5 minutes.
 
@@ -1356,7 +1356,7 @@ Bash completion has been installed to:
 :ID:       63AFF6C1-2214-44F2-9069-BA156C1D322E
 :END:
 
-This script is idempotent.
+This script should be idempotent.
 
 #+NAME: 916D6512-03E7-4971-8BAC-53D6FA258BBD
 #+BEGIN_SRC shell :tangle ./org-and-stuff.sh
@@ -1414,7 +1414,7 @@ alias e='open /Applications/Emacs.app --args --debug-init'
 alias ec='/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw --debug-init'
 #+END_SRC
 
-Source it or start a new shell or run this; it is idempotent.
+Source it or start a new shell or run this; it should be idempotent.
 
 #+NAME: 4E3EF76D-AD57-40C5-B9D6-CC9080576293
 #+BEGIN_SRC shell :tangle ./new-profile.sh :comments no
@@ -1452,7 +1452,7 @@ Read the installation directions and install it.
 - tex live utility
   - Set paper size
 
-From here either use the script which is idempotent or copy and paste.
+From here either use the script which should be idempotent or copy and paste.
 
 Set up my TeX stuff for KOMA-script. Backup the default configuration first.
 
@@ -1508,7 +1508,7 @@ then add that to your `$PATH`.
 :ID:       6B76A015-45CC-4FB7-B075-0D3DDA2C22EA
 :END:
 
-This script is idempotent.
+This script should be idempotent.
 
 Link Emacs dot files to their implementation.
 
@@ -1565,13 +1565,13 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
   - Address and signature and everything looks right
 - [X] Messages
   - Make sure that there are no startup warnings or issues
-- [ ] Export to everything
+- [X] Export to everything
   - Longest test
   - This is used for publishing
   - First delete everything
-  - [ ] html
+  - [X] html
     - Images are links, not images
-  - [ ] md
+  - [X] md
     - Images are links, not images
-  - [ ] pdf
-  - [ ] txt
+  - [X] pdf
+  - [X] txt
