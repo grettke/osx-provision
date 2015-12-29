@@ -1439,7 +1439,7 @@ Read the installation directions and install it.
     For previous versions of TEX Live Utility Open TEX Live Utility Preferences
     and click on the Choose. . . button as in Figure (4). That opens a file
     chooser. Type Shift-Cmd-G, enter ~/Library/TeX~ into the dialog box as shown in
-    Figure (5) and then press Return. Finally Double-Click on texbin.
+    Figure (5) and then press Return. Finally Double-Click on ~texbin~.
     #+END_QUOTE
 
 - tex live utility
