@@ -59,6 +59,8 @@
   - Can always delete them later
 - Don't go to sleep in the middle of configuration sections
 - Get the fastest Internet sold before starting
+- Remember that Control-Command-F pressed inside of a host works against VMWare
+  to go to and from full-screen.  
 
 * Preparation
 :PROPERTIES:
