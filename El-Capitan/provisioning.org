@@ -1402,6 +1402,12 @@ Read the installation directions and install it.
   https://tug.org/mactex/UpdatingForElCapitan.pdf
   - Updated the texlive utility to point in the right place, it was at 1.21,
     fix is in 1.23
+    #+BEGIN_QUOTE
+    For previous versions of TEX Live Utility Open TEX Live Utility Preferences
+    and click on the Choose. . . button as in Figure (4). That opens a file
+    chooser. Type Shift-Cmd-G, enter /Library/ TeX into the dialog box as shown in
+    Figure (5) and then press Return. Finally Double-Click on texbin.
+    #+END_QUOTE
 
 - tex live utility
   - Set paper size
