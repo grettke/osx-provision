@@ -1538,7 +1538,7 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
         or any of the libraries onto the host if there are issues.
 - [X] tangle
   - Tangle the document successfully
-- [ ] execution
+- [X] execution
   - Delete every result block: just do it manually search for =#+RESULT=
   - Delete all image output
   - Execute entire document successfully
