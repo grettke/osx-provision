@@ -1274,7 +1274,7 @@ Set the font to DJSM 17.
 
 - Start it
 - enable run on login
-- top left corn
+- top left corner
 - crystal
 
 **** Emacs and supporting apps
