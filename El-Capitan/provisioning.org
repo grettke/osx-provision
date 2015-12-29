@@ -216,6 +216,8 @@ refer to "provsioning" mean to do so using these scripts.
 :ID:       0B05FB9A-08DF-448C-AE2E-0715B0B217F8
 :END:
 
+This script is idempotent.
+
 Aggressively debug.
 #+NAME: C3D25C79-DF2D-4A1D-AE4F-16F20395AA95
 #+BEGIN_SRC shell
@@ -260,6 +262,8 @@ sudo spctl --master-disable
 :tangle-mode: (identity #o755)
 :ID:       E9F72C01-7B0C-4714-9661-B7D75F98C56E
 :END:
+
+This script is idempotent.
 
 Aggressively debug.
 #+NAME: A275F237-6C96-481A-AFD5-413933B3036E
@@ -1106,6 +1110,8 @@ export PATH=<<ppathpre>>:<<ppathpost>>
    :ID:       5CA6B1A3-079D-4D1E-A20A-DFC8E19A68CD
    :END:
 
+This script is *not* idempotent.
+
 This script is set up to me. To customize it just search and replace on:
 - gcr@wisdomandwonder.com :: your email address for your SSH key
 - orion :: the host name where this key lives
@@ -1330,3 +1336,26 @@ Run `brew linkapps emacs` to symlink these to /Applications.
 Bash completion has been installed to:
   /usr/local/etc/bash_completion.d
 #+END_QUOTE
+
+****  Install Org Mode and supporting stuff per HELP
+:PROPERTIES:
+:ID:       63AFF6C1-2214-44F2-9069-BA156C1D322E
+:END:
+
+This script is idempotent.
+
+#+NAME: 916D6512-03E7-4971-8BAC-53D6FA258BBD
+#+BEGIN_SRC shell :tangle ./org-and-stuff.sh
+set -x
+rm -rf ~/src/org-mode
+rm -rf ~/src/org2blog
+rm -rf ~/src/use-package
+cd ~/src
+git clone git://orgmode.org/org-mode.git
+cd org-mode
+emacs -batch -Q -L lisp -l ../mk/org-fixup -f org-make-autoloads
+cd ~/src
+git clone github-grettke:punchagan/org2blog.git
+cd ~/src
+git clone https://github.com/jwiegley/use-package.git
+#+END_SRC
