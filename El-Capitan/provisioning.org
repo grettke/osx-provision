@@ -61,7 +61,7 @@
 - Get the fastest Internet sold before starting
 - Remember that Control-Command-F pressed inside of a host works against VMWare
   to go to and from full-screen.
-- Snapshot frequently; you never know how things will go.  
+- Snapshot frequently; you never know how things will go.
 
 * Preparation
 :PROPERTIES:
@@ -1276,6 +1276,7 @@ Set the font to DJSM 17.
 - enable run on login
 - top left corn
 - crystal
+
 **** Emacs and supporting apps
 :PROPERTIES:
 :ID:       F4DF417B-AB87-49B5-B26D-B202C1F98640
