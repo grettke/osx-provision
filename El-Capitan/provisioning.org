@@ -72,7 +72,7 @@
     directories. They just stop working.
 - Java
   - Sometimes the installation directory includes the build number. Sometimes
-    it does not.    
+    it does not.
 
 * Preparation
 :PROPERTIES:
@@ -1555,10 +1555,11 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 - [X] ccrypt
 - [X] ispell
 - [X] weasel words
-- [ ] langtool
+- [X] langtool
   - Verify installation, can have the wrong dir and the tool just says that
     there are no issues
   - Run =langtool-check-buffer=
+  - qkc does the scan, qkC suggests corrects, verified on a corresponsence
 - [ ] Messages
   - Make sure that there are no startup warnings or issues
 - [ ] Export to everything
