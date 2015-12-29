@@ -6,3 +6,5 @@ export CCRYPT="/usr/local/Cellar/ccrypt/1.10/share/emacs/site-lisp"
 export EELIB="/Users/$(whoami)/EELIB"
 export MACTEX_BIN="/usr/local/texlive/2015/bin/x86_64-darwin"
 export PATH=/usr/local/bin:$MACTEX_BIN:$JAVA_HOME/bin:$PATH
+alias e='open /Applications/Emacs.app --args --debug-init'
+alias ec='/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw --debug-init'
