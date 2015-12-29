@@ -1092,7 +1092,7 @@ After Git it set up, test it there ,too.
 #+BEGIN_SRC sh
 export PS1='\u@\h:\w> '
 export HOMEBREW_NO_EMOJI=1
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66-b17.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home"
 #+END_SRC
 
 #+NAME: ppathpre
