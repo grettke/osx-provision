@@ -1405,7 +1405,16 @@ export MACTEX_BIN="/usr/local/texlive/2015/bin/x86_64-darwin"
 export PATH=<<ppathpre>>:$MACTEX_BIN:<<ppathpost>>
 #+END_SRC
 
-Source it or start a new shell.
+Source it or start a new shell or run this; it is idempotent.
+
+#+NAME: 4E3EF76D-AD57-40C5-B9D6-CC9080576293
+#+BEGIN_SRC shell :tangle ./new-profile.sh :comments no
+set -x
+rm ~/.profile
+cp /Volumes/VMware\ Shared\ Folders/Storage/wip/profile-final ~/.profile
+. ~/.profile
+cat ~/.profile
+#+END_SRC
 
 **** MacTex & GnuPlot
     :PROPERTIES:
