@@ -61,6 +61,7 @@
 - Get the fastest Internet sold before starting
 - Remember that Control-Command-F pressed inside of a host works against VMWare
   to go to and from full-screen.
+- Snapshot frequently; you never know how things will go.  
 
 * Preparation
 :PROPERTIES:
