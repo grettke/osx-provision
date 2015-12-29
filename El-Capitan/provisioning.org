@@ -70,6 +70,9 @@
     - Happens often
   - Is happy with Finder and unhappy with Eshell, so don't use Eshell in shared
     directories. They just stop working.
+- Java
+  - Sometimes the installation directory includes the build number. Sometimes
+    it does not.    
 
 * Preparation
 :PROPERTIES:
