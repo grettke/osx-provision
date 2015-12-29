@@ -1275,3 +1275,30 @@ Set the font to DJSM 17.
 - enable run on login
 - top left corn
 - crystal
+**** Emacs and supporting apps
+:PROPERTIES:
+:ID:       F4DF417B-AB87-49B5-B26D-B202C1F98640
+:END:
+
+Run the script or paste it in.
+
+#+NAME: 34E00A11-AB89-4C94-B52E-7B4C94401252
+#+BEGIN_SRC sh :tangle ./install-emacs-and-stuff.sh
+brew cask install xquartz
+read -p "Review the installation. Press return to continue."
+brew cask install growlnotify
+read -p "Review the installation. Press return to continue."
+brew install ccrypt
+read -p "Review the installation. Press return to continue."
+brew install aspell -all
+read -p "Review the installation. Press return to continue."
+brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
+read -p "Review the installation. Press return to continue."
+brew install emacs --cocoa --with-gnutls --with-imagemagick
+read -p "Review the installation. Press return to continue."
+brew install graphviz
+read -p "Review the installation. Press return to continue."
+brew install pandoc
+read -p "Review the installation. Press return to continue."
+brew linkapps
+#+END_SRC
