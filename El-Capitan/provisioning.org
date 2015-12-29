@@ -1405,6 +1405,8 @@ export MACTEX_BIN="/usr/local/texlive/2015/bin/x86_64-darwin"
 export PATH=<<ppathpre>>:$MACTEX_BIN:<<ppathpost>>
 #+END_SRC
 
+Source it or start a new shell.
+
 **** MacTex & GnuPlot
     :PROPERTIES:
     :ID:       4769C0C6-AA8F-4073-B233-253691004873
