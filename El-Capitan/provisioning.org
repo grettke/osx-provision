@@ -1561,3 +1561,5 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 - [ ] ccrypt
 - [ ] ispell
 - [ ] langtool
+  - Verify installation, can have the wrong dir and the tool just says that
+    there are no issues
