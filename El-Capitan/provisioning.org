@@ -62,6 +62,9 @@
 - Remember that Control-Command-F pressed inside of a host works against VMWare
   to go to and from full-screen.
 - Snapshot frequently; you never know how things will go.
+- VMWare's folder sharing is happy with Finder and unhappy with
+  Eshell, so don't use Eshell in shared directories. They just
+  stop working.  
 
 * Preparation
 :PROPERTIES:
