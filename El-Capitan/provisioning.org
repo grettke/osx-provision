@@ -1560,7 +1560,7 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
     there are no issues
   - Run =langtool-check-buffer=
   - qkc does the scan, qkC suggests corrects, verified on a corresponsence
-- [ ] Correspondence
+- [X] Correspondence
   - Pick a letter
   - Address and signature and everything looks right
 - [ ] Messages
