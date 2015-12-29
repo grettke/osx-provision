@@ -60,7 +60,7 @@
 - Don't go to sleep in the middle of configuration sections
 - Get the fastest Internet sold before starting
 - Remember that Control-Command-F pressed inside of a host works against VMWare
-  to go to and from full-screen.  
+  to go to and from full-screen.
 
 * Preparation
 :PROPERTIES:
@@ -1254,7 +1254,7 @@ preferences, choose it, and set it as the default.
 
 Set the font to DJSM 17.
 
-****** Writing (8ef276)
+*** Writing (8ef276)
 :PROPERTIES:
 :ID:       EFF4453A-BB19-4841-9472-D8A89700CE06
 :END:
@@ -1262,7 +1262,16 @@ Set the font to DJSM 17.
 :PROPERTIES:
 :ID:       2FE33595-5B40-44C1-BD73-CE07C7211561
 :END:
-******** Emacs
+**** Install via the app store
 :PROPERTIES:
-:ID:       FD0FE04A-1AA4-4557-AA40-D77EBB82B147
+:ID:       35649D7F-575E-40CB-9BD5-0E19F1E72947
 :END:
+***** Growl
+:PROPERTIES:
+:ID:       5CE4AAF3-E82F-47E0-9F49-F65CECE1C838
+:END:
+
+- Start it
+- enable run on login
+- top left corn
+- crystal
