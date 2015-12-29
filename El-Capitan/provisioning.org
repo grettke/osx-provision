@@ -1549,9 +1549,6 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 - [X] eshell
   - Run it
   - Emacs uses correct HELP directory
-- [ ] Correspondence
-  - Pick a letter
-  - Address and signature and everything looks right
 - [X] ccrypt
 - [X] ispell
 - [X] weasel words
@@ -1560,6 +1557,9 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
     there are no issues
   - Run =langtool-check-buffer=
   - qkc does the scan, qkC suggests corrects, verified on a corresponsence
+- [ ] Correspondence
+  - Pick a letter
+  - Address and signature and everything looks right
 - [ ] Messages
   - Make sure that there are no startup warnings or issues
 - [ ] Export to everything
