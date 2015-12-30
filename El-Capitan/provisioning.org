@@ -262,14 +262,11 @@ strategy to name machines now:
     - For virtual machines :: vm
     - For everything else :: org
   - SLD
-    - For virtual machines :: UUID for the node
-    - For everything else :: Logical name for the node
+    - Logical name and UUID separated by a dash
 - LocalHostName
-  - For virtual machines :: UUID for the node
-  - For everything else :: Logical name for the node
+  - Logical name and UUID separated by a dash
 - ComputerName
-  - Single string composed of the logical name followed by a space and then
-    the UUID for the node in round parentheses
+  - Logical name and UUID separated by a dash
 
 #+NAME: 291FDE06-DF44-4156-A013-B763A8727B00
 #+BEGIN_SRC shell
