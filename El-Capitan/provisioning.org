@@ -258,22 +258,25 @@ warnings but it did result in an incorrect "Computer Name" and
 strategy to name machines now:
 
 - HostName
-  - TLD
-    - For virtual machines :: vm
-    - For everything else :: org
-  - SLD
-    - Logical name and UUID separated by a dash, all lower case,
-- ComputerName
-  - Logical name, a space, and UUID surrounded by round parentheses;
-    all properly cased
+  - All lower case
+  - <Logical name>-<UUID>.<org|vm>
 - LocalHostName
-  - Created from the ComputerName so don't set it
+  - All lower case
+  - <Logical name>-<UUID>
+- ComputerName
+  - "<Logical name> (<UUID>)"
 
 #+NAME: 291FDE06-DF44-4156-A013-B763A8727B00
 #+BEGIN_SRC shell
+sudo scutil --set HostName ""
 echo "Enter HostName: "
 read vhn
 sudo scutil --set HostName $vhn
+sudo scutil --set LocalHostName ""
+echo "Enter LocalHostName: "
+read vlhn
+sudo scutil --set LocalHostName $vlhn
+sudo scutil --set ComputerName ""
 echo "Enter ComputerName: "
 read vcn
 sudo scutil --set ComputerName $cn

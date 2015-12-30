@@ -4,14 +4,17 @@ read -p "Press [Enter] key to continue..."
 # C3D25C79-DF2D-4A1D-AE4F-16F20395AA95 ends here
 
 # [[file:provisioning.org::*Per%20Machine][291FDE06-DF44-4156-A013-B763A8727B00]]
+sudo scutil --set HostName ""
 echo "Enter HostName: "
 read vhn
+sudo scutil --set HostName $vhn
+sudo scutil --set LocalHostName ""
 echo "Enter LocalHostName: "
 read vlhn
+sudo scutil --set LocalHostName $vlhn
+sudo scutil --set ComputerName ""
 echo "Enter ComputerName: "
 read vcn
-sudo scutil --set HostName $vhn
-sudo scutil --set LocalHostName $vlhn
 sudo scutil --set ComputerName $cn
 read -p "Press [Enter] key to continue..."
 # 291FDE06-DF44-4156-A013-B763A8727B00 ends here
