@@ -12,6 +12,8 @@ sudo scutil --set LocalHostName ""
 echo "Enter LocalHostName: "
 read vlhn
 sudo scutil --set LocalHostName $vlhn
+sudo defaults delete 'com.apple.smb.server' NetBIOSName
+sudo defaults write 'com.apple.smb.server' NetBIOSName -string $vlhn
 sudo scutil --set ComputerName ""
 echo "Enter ComputerName: "
 read vcn
