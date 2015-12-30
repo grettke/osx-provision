@@ -4,13 +4,15 @@ read -p "Press [Enter] key to continue..."
 # C3D25C79-DF2D-4A1D-AE4F-16F20395AA95 ends here
 
 # [[file:provisioning.org::*Per%20Machine][291FDE06-DF44-4156-A013-B763A8727B00]]
-echo "Enter machine name: "
-read ivar
-echo "You entered: $ivar"
-sudo scutil --set ComputerName $ivar
-sudo scutil --set HostName $ivar
-sudo scutil --set LocalHostName $ivar
-sudo defaults write 'com.apple.smb.server' NetBIOSName -string $ivar
+echo "Enter HostName: "
+read vhn
+echo "Enter LocalHostName: "
+read vlhn
+echo "Enter ComputerName: "
+read vcn
+sudo scutil --set HostName $vhn
+sudo scutil --set LocalHostName $vlhn
+sudo scutil --set ComputerName $cn
 read -p "Press [Enter] key to continue..."
 # 291FDE06-DF44-4156-A013-B763A8727B00 ends here
 
