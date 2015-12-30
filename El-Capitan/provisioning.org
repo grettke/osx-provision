@@ -884,7 +884,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 - Installed, created user, shutdown
 - This was the first run
 
-** gcr (3a546a)
+** Personal (3a546a)
 :PROPERTIES:
 :ID:       E6395620-7A49-4FEC-9E06-15B27C1FC21C
 :END:
