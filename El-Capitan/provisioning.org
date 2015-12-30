@@ -73,6 +73,20 @@
 - Java
   - Sometimes the installation directory includes the build number. Sometimes
     it does not.
+- Writing 100% automated idempotent scripts is worth the effort
+  - It is not worth the effort for theoretical reasons because it is usually
+    faster to do it by hand. The first 2 or 3 times you perform a task, it is
+    slow, and then you figure it how to do it all correctly and then you can
+    perform it quickly. You might ask yourself "If I can do it this quickly then
+    why bother automated it?" because of the extra effort. That is a good
+    question. When you are doing it, it is faster to do it by hand. Here is the
+    problem that I ran into: you make mistakes that you find long after the
+    set up. The /right/ thing to do is to correct the documentation/scripts and
+    then rebuild the image. If you left manual steps then you have to do that
+    work all over again. I know this seems obvious, but at the time, it didn't
+    seem worth the effort of automating everything. Now much later, I'm left
+    with a system imaged somewhat differently than the documentation. It is
+    worth the effort to automate everything.
 
 * Preparation
 :PROPERTIES:
@@ -235,17 +249,35 @@ Aggressively debug.
 set -x
 #+END_SRC
 
-Set the computer name.
+Set the computer names [[http://hack.org/mc/writings/mac-survival.html][via]]
+#+BEGIN_QUOTE
+On a fresh install a Mac sets your hostname to something boring like
+“Michaels-MacBookAir”. To change it, use:
+
+% sudo scutil --set HostName jsb.hack.org
+% sudo scutil --set LocalHostName jsb
+% sudo scutil --set ComputerName "Johann Sebastian Bach"
+“HostName” is the ordinary hostname. “LocalHostName” is the Bonjour host name.
+”ComputerName” is a user friendly version of the above.
+#+END_QUOTE
+
 #+NAME: 291FDE06-DF44-4156-A013-B763A8727B00
 #+BEGIN_SRC shell
-echo "Enter machine name: "
-read ivar
-echo "You entered: $ivar"
-sudo scutil --set ComputerName $ivar
-sudo scutil --set HostName $ivar
-sudo scutil --set LocalHostName $ivar
-sudo defaults write 'com.apple.smb.server' NetBIOSName -string $ivar
+echo "Enter technie hostname, needs at least two parts: "
+read vhn
+echo "Enter Bonjourie Bonjour name, needs only one part: "
+read vbn
+echo "Enter friendly computer name, full words: "
+read vfn
+sudo scutil --set HostName $vhn
+sudo scutil --set LocalHostName $vbn
+sudo scutil --set ComputerName $vfn
 #+END_SRC
+
+I used:
+- hostname :: box-uuid.vm
+- bonjour :: box-uuid
+- computer :: box-name (box-uuid)
 
 Display login window as name and password.
 #+NAME: 2F39C8B9-CA25-4C94-8E77-AD348D5235A9
