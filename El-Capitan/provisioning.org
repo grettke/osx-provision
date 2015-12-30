@@ -249,35 +249,38 @@ Aggressively debug.
 set -x
 #+END_SRC
 
-Set the computer names [[http://hack.org/mc/writings/mac-survival.html][via]]
-#+BEGIN_QUOTE
-On a fresh install a Mac sets your hostname to something boring like
-“Michaels-MacBookAir”. To change it, use:
+Set the computer's "names". There are 3 resources ([[http://ilostmynotes.blogspot.com/2012/03/computername-vs-localhostname-vs.html][1]], [[http://osxdaily.com/2012/10/24/set-the-hostname-computer-name-and-bonjour-name-separately-in-os-x/][2]], [[http://hack.org/mc/writings/mac-survival.html][3]]) that I used to make
+sense of the different names. It is simple, and new to me.
 
-% sudo scutil --set HostName jsb.hack.org
-% sudo scutil --set LocalHostName jsb
-% sudo scutil --set ComputerName "Johann Sebastian Bach"
-“HostName” is the ordinary hostname. “LocalHostName” is the Bonjour host name.
-”ComputerName” is a user friendly version of the above.
-#+END_QUOTE
+Originally I set every name to the same value. Doing so didn't result in
+warnings but it did result in an incorrect "Computer Name" and
+"Local Host Name". Based on that experience, I'm going to give names using this
+strategy to name machines now:
+
+- HostName
+  - TLD
+    - For virtual machines :: vm
+    - For everything else :: org
+  - SLD
+- LocalHostName
+  - For virtual machines :: UUID for the node
+  - For everything else :: Logical name for the node
+- ComputerName
+  - Single string composed of the logical name followed by a space and then
+    the UUID for the node
 
 #+NAME: 291FDE06-DF44-4156-A013-B763A8727B00
 #+BEGIN_SRC shell
-echo "Enter technie hostname, needs at least two parts: "
+echo "Enter HostName: "
 read vhn
-echo "Enter Bonjourie Bonjour name, needs only one part: "
-read vbn
-echo "Enter friendly computer name, full words: "
-read vfn
+echo "Enter LocalHostName: "
+read vlhn
+echo "Enter ComputerName: "
+read vcn
 sudo scutil --set HostName $vhn
-sudo scutil --set LocalHostName $vbn
-sudo scutil --set ComputerName $vfn
+sudo scutil --set LocalHostName $vlhn
+sudo scutil --set ComputerName $cn
 #+END_SRC
-
-I used:
-- hostname :: box-uuid.vm
-- bonjour :: box-uuid
-- computer :: box-name (box-uuid)
 
 Display login window as name and password.
 #+NAME: 2F39C8B9-CA25-4C94-8E77-AD348D5235A9
