@@ -263,22 +263,19 @@ strategy to name machines now:
     - For everything else :: org
   - SLD
     - Logical name and UUID separated by a dash, all lower case,
-- LocalHostName
-  - Logical name and UUID separated by a dash, all lower case
 - ComputerName
   - Logical name, a space, and UUID surrounded by round parentheses;
     all properly cased
+- LocalHostName
+  - Created from the ComputerName so don't set it
 
 #+NAME: 291FDE06-DF44-4156-A013-B763A8727B00
 #+BEGIN_SRC shell
 echo "Enter HostName: "
 read vhn
-echo "Enter LocalHostName: "
-read vlhn
+sudo scutil --set HostName $vhn
 echo "Enter ComputerName: "
 read vcn
-sudo scutil --set HostName $vhn
-sudo scutil --set LocalHostName $vlhn
 sudo scutil --set ComputerName $cn
 #+END_SRC
 
