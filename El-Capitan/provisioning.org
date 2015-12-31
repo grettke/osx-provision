@@ -219,7 +219,7 @@ Steps unique to the host are indicated.
   - Host :: On power, 15m, never auto sleep when display is off
   - Guest :: Computer sleep 15, Screen sleep 15
 - Volume
-  - Show volume in menubar       
+  - Show volume in menubar
 - Install Spectacle, allow, start at boot
 - Host :: Install VMWare Fusion Professional
 
@@ -266,24 +266,30 @@ strategy to name machines now:
   - All lower case
   - <Logical name>-<UUID>
 - NetBIOS
-  - Same as LocalHostName
+  - All lower case
+  - <Logical name>-<UUID>
 - ComputerName
   - "<Logical name> (<UUID>)"
+
+Defining this naming approach helped me learn more about the intent of the
+name and what I wanted from them.
 
 #+NAME: 291FDE06-DF44-4156-A013-B763A8727B00
 #+BEGIN_SRC shell
 sudo scutil --set HostName ""
-echo "Enter HostName: "
+echo "Enter HostName (plain old hostname): "
 read vhn
 sudo scutil --set HostName $vhn
 sudo scutil --set LocalHostName ""
-echo "Enter LocalHostName: "
+echo "Enter LocalHostName (name for Bonjour services): "
 read vlhn
 sudo scutil --set LocalHostName $vlhn
 sudo defaults delete 'com.apple.smb.server' NetBIOSName
-sudo defaults write 'com.apple.smb.server' NetBIOSName -string $vlhn
+read "Enter NetBIOSName (name that Windows boxes will see): "
+read vnbn
+sudo defaults write 'com.apple.smb.server' NetBIOSName -string $vnbn
 sudo scutil --set ComputerName ""
-echo "Enter ComputerName: "
+echo "Enter ComputerName (human friendly GUI name): "
 read vcn
 sudo scutil --set ComputerName $cn
 #+END_SRC

@@ -5,17 +5,19 @@ read -p "Press [Enter] key to continue..."
 
 # [[file:provisioning.org::*Per%20Machine][291FDE06-DF44-4156-A013-B763A8727B00]]
 sudo scutil --set HostName ""
-echo "Enter HostName: "
+echo "Enter HostName (plain old hostname): "
 read vhn
 sudo scutil --set HostName $vhn
 sudo scutil --set LocalHostName ""
-echo "Enter LocalHostName: "
+echo "Enter LocalHostName (name for Bonjour services): "
 read vlhn
 sudo scutil --set LocalHostName $vlhn
 sudo defaults delete 'com.apple.smb.server' NetBIOSName
-sudo defaults write 'com.apple.smb.server' NetBIOSName -string $vlhn
+read "Enter NetBIOSName (name that Windows boxes will see): "
+read vnbn
+sudo defaults write 'com.apple.smb.server' NetBIOSName -string $vnbn
 sudo scutil --set ComputerName ""
-echo "Enter ComputerName: "
+echo "Enter ComputerName (human friendly GUI name): "
 read vcn
 sudo scutil --set ComputerName $cn
 read -p "Press [Enter] key to continue..."
