@@ -218,6 +218,8 @@ Steps unique to the host are indicated.
 - Energy saver
   - Host :: On power, 15m, never auto sleep when display is off
   - Guest :: Computer sleep 15, Screen sleep 15
+- Volume
+  - Show volume in menubar       
 - Install Spectacle, allow, start at boot
 - Host :: Install VMWare Fusion Professional
 
