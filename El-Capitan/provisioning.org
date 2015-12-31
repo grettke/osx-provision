@@ -220,6 +220,12 @@ Steps unique to the host are indicated.
   - Guest :: Computer sleep 15, Screen sleep 15
 - Volume
   - Show volume in menubar
+- Finder
+  - Preferences
+    - Favorites
+      - <Home>
+    - Devices
+      - <Computer>
 - Install Spectacle, allow, start at boot
 - Host :: Install VMWare Fusion Professional
 
@@ -666,10 +672,17 @@ Sidebar icon size Small.
 defaults write 'NSGlobalDomain' NSTableViewDefaultSizeMode -bool true && killall Finder
 #+END_SRC
 
-View style.
+- Finder view styl settings [[icnv: Icon View
+Nlsv: List View
+clmv: Column View
+Flwv: Cover Flow View][Via]]
+  - icnv :: Icon View
+  - Nlsv :: List View
+  - clmv :: Column View
+  - Flwv :: Cover Flow View
 #+NAME: 17D25945-67E7-4F54-9DAA-C23FD89A2758
 #+BEGIN_SRC shell
-defaults write 'com.apple.Finder' FXPreferredViewStyle clmv && killall Finder
+defaults write 'com.apple.Finder' FXPreferredViewStyle icnv && killall Finder
 #+END_SRC
 
 Finder: disable window animations and Get Info animations.
