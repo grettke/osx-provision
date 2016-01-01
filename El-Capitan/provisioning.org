@@ -230,6 +230,9 @@ Steps unique to the host are indicated.
     - Devices
       - <Computer>
 - Install Spectacle, allow, start at boot
+- f.lux
+  - Enable at startup
+  - Displays, Disable automatic brightness setting
 - Host :: Install VMWare Fusion Professional
 
 ** Automated Steps
@@ -1317,7 +1320,7 @@ Check out projects to get basic stuff working.
 #+begin_src sh
 mkdir -p ~/git/bitbucket
 mkdir -p ~/git/github
-mkdir -p ~/git/github-anon
+mkdir -p ~/git/github-anonq
 mkdir -p ~/src
 cd ~/git/bitbucket
 git clone bitbucket-grettke:grettke/list.git
