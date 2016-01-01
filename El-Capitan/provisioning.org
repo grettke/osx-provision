@@ -693,6 +693,15 @@ remove them)
 defaults write com.apple.finder FXPreferredGroupBy -string "None"
 #+END_SRC
 
+Sort list view by kind in ascending order (Windows style).
+#+NAME: C3E4AFE6-5FB1-4432-B53C-933D83B3BA48
+#+BEGIN_SRC shell
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettings:sortColumn kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettings:columns:4:ascending true" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ListViewSettings:sortColumn kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ListViewSettings:columns:kind:ascending true" ~/Library/Preferences/com.apple.finder.plist
+#+END_SRC
+
 Finder: disable window animations and Get Info animations.
 #+NAME: AF8A02A4-CFFC-4740-A6E9-3341F912906A
 #+BEGIN_SRC shell

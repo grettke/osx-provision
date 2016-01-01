@@ -274,6 +274,14 @@ defaults write com.apple.finder FXPreferredGroupBy -string "None"
 read -p "Press [Enter] key to continue..."
 # 49C95048-C7D9-4E7C-BAAE-5D78181FF112 ends here
 
+# [[file:provisioning.org::*Finder][C3E4AFE6-5FB1-4432-B53C-933D83B3BA48]]
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettings:sortColumn kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettings:columns:4:ascending true" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ListViewSettings:sortColumn kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ListViewSettings:columns:kind:ascending true" ~/Library/Preferences/com.apple.finder.plist
+read -p "Press [Enter] key to continue..."
+# C3E4AFE6-5FB1-4432-B53C-933D83B3BA48 ends here
+
 # [[file:provisioning.org::*Finder][AF8A02A4-CFFC-4740-A6E9-3341F912906A]]
 defaults write com.apple.finder DisableAllAnimations -bool true
 read -p "Press [Enter] key to continue..."
