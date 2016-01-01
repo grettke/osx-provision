@@ -3,6 +3,8 @@ export EDITOR='$VISUAL'
 export PS1='\u@\h:\w> '
 export HOMEBREW_NO_EMOJI=1
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home"
+alias cg='find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' &&
+pwd && git st" \;'
 export INFOPATH='/usr/local/share/info:/usr/share/info'
 export CCRYPT="/usr/local/Cellar/ccrypt/1.10/share/emacs/site-lisp"
 export EELIB="/Users/$(whoami)/EELIB"
