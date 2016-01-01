@@ -1635,3 +1635,41 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
     - Images are links, not images
   - [X] pdf
   - [X] txt
+* Linux
+:PROPERTIES:
+:ID:       240D4805-50FC-4581-8812-F16EEF055F72
+:END:
+** OS Download
+:PROPERTIES:
+:ID:       2951B0E3-B389-43DE-BBFB-793BF158FF58
+:END:
+
+- Used torrent file ~ubuntu-15.10-desktop-amd64.iso.torrent~
+- To download ISO ~ubuntu-15.10-desktop-amd64.iso~
+- Found checksum [[http://releases.ubuntu.com/wily/SHA1SUMS][here]]
+  #+NAME: ubuntu-checksum-expected-pasted
+  #+BEGIN_SRC shell
+  7e5b393977d41b77c2208fbef7b3c23d2f134e9f *ubuntu-15.10-desktop-amd64.iso
+  #+END_SRC
+- Got actual checksum
+  #+NAME: ubuntu-checksum-actual
+  #+BEGIN_SRC shell :results value scalar
+  cd /Volumes/VMware\ Shared\ Folders/Storage/Pristine/
+  shasum ubuntu-15.10-desktop-amd64.iso
+  #+END_SRC
+
+  #+RESULTS: ubuntu-checksum-actual
+  #+BEGIN_EXAMPLE
+  7e5b393977d41b77c2208fbef7b3c23d2f134e9f  ubuntu-15.10-desktop-amd64.iso
+  #+END_EXAMPLE
+- Compared actual to expected
+  - Some work to do on my bable setup
+  #+NAME: 89464A0D-74D9-4A71-B589-03040BF2B2A7
+  #+BEGIN_SRC emacs-lisp
+  (string-equal "7e5b393977d41b77c2208fbef7b3c23d2f134e9f" "7e5b393977d41b77c2208fbef7b3c23d2f134e9f")
+  #+END_SRC
+
+  #+RESULTS: 89464A0D-74D9-4A71-B589-03040BF2B2A7
+  #+BEGIN_EXAMPLE
+  | t |
+  #+END_EXAMPLE
