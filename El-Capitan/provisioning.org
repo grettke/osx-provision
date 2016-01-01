@@ -1116,6 +1116,8 @@ brew cask install font-noto-sans-symbols
 brew cask install font-symbola
 #+END_SRC
 
+Basic test using =view-hello-file=.
+
 ***** Deltawalker
 :PROPERTIES:
 :ID:       D8E6483D-FF38-4A25-BA43-3CA7516B8789
