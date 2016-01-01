@@ -1113,17 +1113,8 @@ brew cask install font-dejavu-sans
 brew cask install font-quivira
 brew cask install font-noto-sans
 brew cask install font-noto-sans-symbols
+brew cask install font-symbola
 #+END_SRC
-
-Download and install
-- Symbola
-
-Steps to install them:
-- Extract them
-- Start Font Book
-- Drag the top-level directory into the collection "All Fonts"
-  - Font Book will search through it recursively for fonts and add them
-- Automatically correct any resolution issues, which happen every time so far
 
 ***** Deltawalker
 :PROPERTIES:
