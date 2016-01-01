@@ -1673,3 +1673,43 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
   #+BEGIN_EXAMPLE
   | t |
   #+END_EXAMPLE
+** Configure Host Machine
+
+- Start VMWare \rarr File \rarr New \rarr Drag ISO onto "Install from disk or image"
+- Use Easy Install
+- Customize
+  - Sharing
+    - Storage
+  - Processors & Memory
+    - Processors: 3
+    - Memory (MB): 7168
+    - [X] Enable hypervisor
+    - [X] Enable code profiling
+  - Hard Disk
+    - 250 GB
+** Boot Host Machine
+
+- 51 files downloaded
+  - Took time
+  - Skip button present
+    - Didn't try it
+    - Wonder what it skipes
+** Steps In Order
+
+- Installed software updates
+  - Notifier appeared in launcher
+- Launcher has: Terminal, Home Directory, Trash
+- Restarted
+- git
+  #+NAME: B898DABA-335E-4E16-9E84-E9A52ED71986
+#+BEGIN_SRC shell
+sudo apt-get install git
+#+END_SRC
+- aspell
+  #+NAME: CE1B21D8-5EA7-4345-B8D8-87FC52BF8C02
+#+BEGIN_SRC shell
+sudo apt-get install aspell
+#+END_SRC
+- Conclusion
+  - Ubuntu is fast
+  - I don't want to learn a new system right now
