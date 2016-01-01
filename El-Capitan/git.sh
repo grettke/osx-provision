@@ -1,6 +1,6 @@
 set -x
 
-brew install git
+brew install git bash-completion
 
 mkdir ~/.ssh
 cd ~/.ssh
