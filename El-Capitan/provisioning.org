@@ -1219,7 +1219,7 @@ Install git; don't use the built-in.
 
 #+NAME: 681F11A6-332E-424B-B878-CEF576BAAD1D
 #+BEGIN_SRC sh
-brew install git bash-completion
+brew install git bash-completion git-flow
 #+END_SRC
 
 Generate the key. There is no passphrase.
@@ -1486,7 +1486,8 @@ export MACTEX_BIN="/usr/local/texlive/2015/bin/x86_64-darwin"
 export PATH=<<ppathpre>>:$MACTEX_BIN:<<ppathpost>>
 alias e='open /Applications/Emacs.app --args --debug-init'
 alias ec='/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw --debug-init'
-. `brew --prefix`/etc/bash_completion.d/git-completion.bash
+source `brew --prefix`/etc/bash_completion.d/git-completion.bash
+source `brew --prefix`/etc/bash_completion.d/git-flow-completion.bash
 #+END_SRC
 
 Source it or start a new shell or run this; it should be idempotent.
