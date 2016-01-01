@@ -70,5 +70,6 @@ git clone github-grettke:grettke/osx-provision.git
 cd ~/git/github-anon
 git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
 git clone https://github.com/bkuhlmann/osx
+git clone https://github.com/monfresh/laptop
 cd ~/src
 git clone github-grettke:grettke/help.git
