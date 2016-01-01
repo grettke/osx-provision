@@ -682,7 +682,7 @@ Flwv: Cover Flow View][Via]]
   - Flwv :: Cover Flow View
 #+NAME: 17D25945-67E7-4F54-9DAA-C23FD89A2758
 #+BEGIN_SRC shell
-defaults write 'com.apple.Finder' FXPreferredViewStyle icnv && killall Finder
+defaults write 'com.apple.Finder' FXPreferredViewStyle Nlsv && killall Finder
 #+END_SRC
 
 Finder: disable window animations and Get Info animations.
@@ -1674,6 +1674,9 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
   | t |
   #+END_EXAMPLE
 ** Configure Host Machine
+:PROPERTIES:
+:ID:       F8E21B04-569F-41E2-8B85-612AEB28F671
+:END:
 
 - Start VMWare \rarr File \rarr New \rarr Drag ISO onto "Install from disk or image"
 - Use Easy Install
@@ -1688,6 +1691,9 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
   - Hard Disk
     - 250 GB
 ** Boot Host Machine
+:PROPERTIES:
+:ID:       4E6886B7-61F3-4931-93F9-B9A078ED142E
+:END:
 
 - 51 files downloaded
   - Took time
@@ -1695,6 +1701,9 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
     - Didn't try it
     - Wonder what it skipes
 ** Steps In Order
+:PROPERTIES:
+:ID:       815F9D59-96DF-450E-9B76-E37FD2DA1B38
+:END:
 
 - Installed software updates
   - Notifier appeared in launcher
@@ -1702,11 +1711,13 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 - Restarted
 - git
   #+NAME: B898DABA-335E-4E16-9E84-E9A52ED71986
+#+NAME: 55DF00DC-4866-4DEF-A80C-33DE5FBBC824
 #+BEGIN_SRC shell
 sudo apt-get install git
 #+END_SRC
 - aspell
   #+NAME: CE1B21D8-5EA7-4345-B8D8-87FC52BF8C02
+#+NAME: 584E19AA-C83F-435D-910A-254C7162E1EF
 #+BEGIN_SRC shell
 sudo apt-get install aspell
 #+END_SRC

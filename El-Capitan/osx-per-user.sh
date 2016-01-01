@@ -265,7 +265,7 @@ read -p "Press [Enter] key to continue..."
 # 38B74BA0-FFCD-4E46-A1F0-BA839DF631DB ends here
 
 # [[file:provisioning.org::*Finder][17D25945-67E7-4F54-9DAA-C23FD89A2758]]
-defaults write 'com.apple.Finder' FXPreferredViewStyle clmv && killall Finder
+defaults write 'com.apple.Finder' FXPreferredViewStyle Nlsv && killall Finder
 read -p "Press [Enter] key to continue..."
 # 17D25945-67E7-4F54-9DAA-C23FD89A2758 ends here
 
