@@ -672,7 +672,7 @@ Sidebar icon size Small.
 defaults write 'NSGlobalDomain' NSTableViewDefaultSizeMode -bool true && killall Finder
 #+END_SRC
 
-- Finder view styl settings [[icnv: Icon View
+- Finder view style settings [[icnv: Icon View
 Nlsv: List View
 clmv: Column View
 Flwv: Cover Flow View][Via]]
@@ -1376,7 +1376,7 @@ brew cask install growlnotify
 read -p "Review the installation. Press return to continue."
 brew install ccrypt
 read -p "Review the installation. Press return to continue."
-brew install aspell -all
+brew install  -all
 read -p "Review the installation. Press return to continue."
 brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
 read -p "Review the installation. Press return to continue."
