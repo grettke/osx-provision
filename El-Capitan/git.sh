@@ -37,7 +37,6 @@ read -p "Did it work? If not, fix it."
 
 git config --global user.name "Grant Rettke"
 git config --global user.email gcr@wisdomandwonder.com
-git config --global core.editor vi
 git config --global color.ui true
 git config --global core.autocrlf
 git config --global alias.st status
