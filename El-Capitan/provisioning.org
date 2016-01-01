@@ -948,6 +948,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 - Machine config
   - Processors
     - 3 cores
+      - [[https://pubs.vmware.com/fusion-7/index.jsp?topic=%252Fcom.vmware.fusion.help.doc%252FGUID-4EABCE73-69AB-4665-A5BB-B34C5B736CC7.html][Choosing]]
     - 6144 RAM
     - Enable hypervisor
     - Enable code profiling
