@@ -269,6 +269,11 @@ defaults write 'com.apple.Finder' FXPreferredViewStyle Nlsv && killall Finder
 read -p "Press [Enter] key to continue..."
 # 17D25945-67E7-4F54-9DAA-C23FD89A2758 ends here
 
+# [[file:provisioning.org::*Finder][49C95048-C7D9-4E7C-BAAE-5D78181FF112]]
+defaults write com.apple.finder FXPreferredGroupBy -string "None"
+read -p "Press [Enter] key to continue..."
+# 49C95048-C7D9-4E7C-BAAE-5D78181FF112 ends here
+
 # [[file:provisioning.org::*Finder][AF8A02A4-CFFC-4740-A6E9-3341F912906A]]
 defaults write com.apple.finder DisableAllAnimations -bool true
 read -p "Press [Enter] key to continue..."

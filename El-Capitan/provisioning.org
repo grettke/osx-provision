@@ -685,6 +685,14 @@ Flwv: Cover Flow View][Via]]
 defaults write 'com.apple.Finder' FXPreferredViewStyle Nlsv && killall Finder
 #+END_SRC
 
+[[https://gist.github.com/nickbudi/11277384][Via:]]
+Set item arrangement to none (enables folder dropdowns, 'Name' if you want to
+remove them)
+#+NAME: 49C95048-C7D9-4E7C-BAAE-5D78181FF112
+#+BEGIN_SRC shell
+defaults write com.apple.finder FXPreferredGroupBy -string "None"
+#+END_SRC
+
 Finder: disable window animations and Get Info animations.
 #+NAME: AF8A02A4-CFFC-4740-A6E9-3341F912906A
 #+BEGIN_SRC shell
