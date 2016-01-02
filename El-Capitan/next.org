@@ -752,6 +752,11 @@ Perform the common steps.
 :ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
 :END:
 
+#+NAME: 01A638F0-F853-45F4-A347-8DD897BA8288
+#+BEGIN_SRC sh
+<<sudo-and-set>>
+#+END_SRC
+
 Perform the common steps.
 #+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
 #+BEGIN_SRC org

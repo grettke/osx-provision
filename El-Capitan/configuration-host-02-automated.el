@@ -1,3 +1,10 @@
+# [[file:next.org::*Automated][01A638F0-F853-45F4-A347-8DD897BA8288]]
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Snippets][sudo-and-set]]
+sudo -v
+set -x
+# sudo-and-set ends here
+# 01A638F0-F853-45F4-A347-8DD897BA8288 ends here
+
 # [[file:next.org::*Automated][2C87821E-2E7E-42F2-8512-96AE52230752]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Software][41886902-0FB3-425B-B512-C1A160F8E3D6]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Bash][ADE3737D-A638-4BBD-9DD5-C42681EA1C0D]]
