@@ -205,7 +205,7 @@ brew cask install little-snitch
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vlc
 else
-    echo "Only install on hosts"
+    echo "vlc: Only install on hosts"
 fi
 #+end_src
 
@@ -226,7 +226,7 @@ Only install it on hosts.
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vmware-fusion
 else
-    echo "Only install on hosts"
+    echo "vmware-fusion: Only install on hosts"
 fi
 #+END_SRC
 
@@ -246,7 +246,7 @@ Only install it on hosts.
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install skype
 else
-    echo "Only install on hosts"
+    echo "skype: Only install on hosts"
 fi
 #+END_SRC
 
@@ -265,7 +265,7 @@ fi
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install dropbox
 else
-    echo "Only install on hosts"
+    echo "dropbox: Only install on hosts"
 fi
 #+END_SRC
 
@@ -393,7 +393,7 @@ Only install it on hosts.
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install carbon-copy-cloner
 else
-    echo "Only install on hosts"
+    echo "carbon-copy-cloner: Only install on hosts"
 fi
 #+END_SRC
 
@@ -414,7 +414,7 @@ Only install it on hosts.
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install flux
 else
-    echo "Only install on hosts"
+    echo "flux: Only install on hosts"
 fi
 #+END_SRC
 

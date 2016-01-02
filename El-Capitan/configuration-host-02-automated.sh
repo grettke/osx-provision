@@ -33,28 +33,28 @@ brew cask install little-snitch
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vlc
 else
-    echo "Only install on hosts"
+    echo "vlc: Only install on hosts"
 fi
 # 093814E5-DB0A-481C-9B39-ACF62216BB55 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*VMWare%20Fusion][A5358959-F496-4368-9141-318664D40C6C]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vmware-fusion
 else
-    echo "Only install on hosts"
+    echo "vmware-fusion: Only install on hosts"
 fi
 # A5358959-F496-4368-9141-318664D40C6C ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Skype][A5358959-F496-4368-9141-318664D40C6C]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install skype
 else
-    echo "Only install on hosts"
+    echo "skype: Only install on hosts"
 fi
 # A5358959-F496-4368-9141-318664D40C6C ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Dropbox][3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install dropbox
 else
-    echo "Only install on hosts"
+    echo "dropbox: Only install on hosts"
 fi
 # 3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Bartender][1483E8B6-098B-4793-91BD-F5081B2F76ED]]
@@ -73,14 +73,14 @@ brew cask install filezilla
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install carbon-copy-cloner
 else
-    echo "Only install on hosts"
+    echo "carbon-copy-cloner: Only install on hosts"
 fi
 # A5358959-F496-4368-9141-318664D40C6C ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*flux][A5358959-F496-4368-9141-318664D40C6C]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install flux
 else
-    echo "Only install on hosts"
+    echo "flux: Only install on hosts"
 fi
 # A5358959-F496-4368-9141-318664D40C6C ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Fonts][DD72394C-9D37-446C-A704-E88BE2B0CEED]]
