@@ -57,6 +57,88 @@
 - Host :: Install Karabiner, allow, Change Return Key, Return to Option_L + When you type Return only
 - Host :: Install VMWare Fusion Professional
 #+END_SRC
+*** Automated
+**** Software
+**** Machine Settings
+*** Per Machine
+:PROPERTIES:
+:tangle:   ./osx-per-machine.sh
+:tangle-mode: (identity #o755)
+:ID:       0B05FB9A-08DF-448C-AE2E-0715B0B217F8
+:END:
+
+This script should be idempotent.
+
+Aggressively debug.
+#+NAME: C3D25C79-DF2D-4A1D-AE4F-16F20395AA95
+#+BEGIN_SRC shell
+set -x
+#+END_SRC
+
+Set the computer's "names". There are 3 resources ([[http://ilostmynotes.blogspot.com/2012/03/computername-vs-localhostname-vs.html][1]], [[http://osxdaily.com/2012/10/24/set-the-hostname-computer-name-and-bonjour-name-separately-in-os-x/][2]], [[http://hack.org/mc/writings/mac-survival.html][3]]) that I used to make
+sense of the different names. It is simple, and new to me.
+
+Originally I set every name to the same value. Doing so didn't result in
+warnings but it did result in an incorrect "Computer Name" and
+"Local Host Name". Based on that experience, I'm going to give names using this
+strategy to name machines now:
+
+- HostName
+  - All lower case
+  - <Logical name>-<UUID>.<org|vm>
+- LocalHostName
+  - All lower case
+  - <Logical name>-<UUID>
+- NetBIOS
+  - All lower case
+  - <Logical name>-<UUID>
+- ComputerName
+  - "<Logical name> (<UUID>)"
+
+Defining this naming approach helped me learn more about the intent of the
+name and what I wanted from them.
+
+#+NAME: 291FDE06-DF44-4156-A013-B763A8727B00
+#+BEGIN_SRC shell
+sudo scutil --set HostName ""
+echo "Enter HostName (plain old hostname): "
+read vhn
+sudo scutil --set HostName $vhn
+sudo scutil --set LocalHostName ""
+echo "Enter LocalHostName (name for Bonjour services): "
+read vlhn
+sudo scutil --set LocalHostName $vlhn
+sudo defaults delete 'com.apple.smb.server' NetBIOSName
+read "Enter NetBIOSName (name that Windows boxes will see): "
+read vnbn
+sudo defaults write 'com.apple.smb.server' NetBIOSName -string $vnbn
+sudo scutil --set ComputerName ""
+echo "Enter ComputerName (human friendly GUI name): "
+read vcn
+sudo scutil --set ComputerName $cn
+#+END_SRC
+
+Display login window as name and password.
+#+NAME: 2F39C8B9-CA25-4C94-8E77-AD348D5235A9
+#+BEGIN_SRC shell
+sudo defaults write /Library/Preferences/com.apple.loginwindow.plist SHOWFULLNAME -bool true
+#+END_SRC
+
+Login message.
+#+NAME: 850816F3-B82E-4EE0-9895-6E99CB6A7593
+#+BEGIN_SRC shell
+sudo defaults write /Library/Preferences/com.apple.loginwindow.plist LoginwindowText -string "
+All creativity is an extended form of a joke.
+          — Alan Kay"
+#+END_SRC
+
+Disable Gatekeeper.
+#+NAME: DBE84671-1CC0-4DBA-AC7C-72F9EAC857A0
+#+BEGIN_SRC shell
+sudo spctl --master-disable
+#+END_SRC
+
+**** User Settings
 ** Host
 :PROPERTIES:
 :ID:       4176F379-79B3-466F-A689-11701A0432EF
@@ -72,3 +154,7 @@ Perform the common steps.
 #+BEGIN_SRC org
 <<configuration-common-manual>>
 #+END_SRC
+*** Automated
+**** Software
+**** Machine Settings
+**** User Settings
