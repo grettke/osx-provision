@@ -1004,6 +1004,11 @@ chsh -s /usr/local/bin/bash
 echo $BASH_VERSION
 #+END_SRC
 
+#+NAME: D2D2A924-C72F-48E5-B709-550D19B0C158
+#+BEGIN_SRC org :org-ref configuration-common-manual-followup.
+
+#+END_SRC
+
 ***** Brew and BrewCask
 :PROPERTIES:
 :ID:       571FE633-5DC4-411B-8B5C-62F572125326
