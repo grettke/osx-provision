@@ -103,6 +103,13 @@
   - VMWare does not pre-allocate disk space and doesn't give you the option
     to do so. This is different than VMWare Workstation and that might surprise
     you.
+- Spending most of my time on OSX
+  - Started out planning on using 100% OSX. That led me to realize that I
+    value OSS/Emacs the most. So I started to set up Linux. Through that effort
+    I realized how much I've invested on the OSX platform. I felt that not only
+    would it take too much additional effort to migrated to Linux; but more-so
+    that the investment would take away from future work I would be doing on
+    OSX. Both thing are surprising.
 
 * Preparation
 :PROPERTIES:
