@@ -915,18 +915,6 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
   - [X] pdf
   - [X] txt
 
-* Configurations
-** Host
-*** Software
-:PROPERTIES:
-:header-args: :tangle host-configuration-automated-software.sh :noweb yes
-:END:
-
-Use the common software configuration
-#+NAME: 14B6CAE7-C1DE-491C-9604-F4E51F746871
-#+BEGIN_SRC :noweb
-<<common-configuration-automated-software>>
-#+END_SRC
 * Preparation
 :PROPERTIES:
 :ID:       1BF6D42F-2F80-467E-B75C-DB2C88F0B4BE
