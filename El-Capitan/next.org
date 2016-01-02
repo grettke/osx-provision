@@ -572,7 +572,7 @@ echo "Enter LocalHostName (name for Bonjour services): "
 read vlhn
 sudo scutil --set LocalHostName $vlhn
 sudo defaults delete 'com.apple.smb.server' NetBIOSName
-read "Enter NetBIOSName (name that Windows boxes will see): "
+echo "Enter NetBIOSName (name that Windows boxes will see): "
 read vnbn
 sudo defaults write 'com.apple.smb.server' NetBIOSName -string $vnbn
 sudo scutil --set ComputerName ""
