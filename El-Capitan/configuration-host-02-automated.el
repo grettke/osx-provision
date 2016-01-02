@@ -1,10 +1,3 @@
-# [[file:next.org::*Automated:%20Install%20and%20automatically%20configure%20as%20much%20as%20possible][01A638F0-F853-45F4-A347-8DD897BA8288]]
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Snippets][sudo-and-set]]
-sudo -v
-set -x
-# sudo-and-set ends here
-# 01A638F0-F853-45F4-A347-8DD897BA8288 ends here
-
 # [[file:next.org::*Automated:%20Install%20and%20automatically%20configure%20as%20much%20as%20possible][2C87821E-2E7E-42F2-8512-96AE52230752]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Software][41886902-0FB3-425B-B512-C1A160F8E3D6]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Bash][ADE3737D-A638-4BBD-9DD5-C42681EA1C0D]]
@@ -24,16 +17,36 @@ brew tap caskroom/cask
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Spectacle][944FB8AE-DD79-49C6-8ABC-878A782234BE]]
 brew cask install spectacle
 # 944FB8AE-DD79-49C6-8ABC-878A782234BE ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Little%20Snitch][0A6CDD3C-BB1F-4AB1-8523-C4F5383A6856]]
+brew cask install little-snitch
+# 0A6CDD3C-BB1F-4AB1-8523-C4F5383A6856 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*VLC][093814E5-DB0A-481C-9B39-ACF62216BB55]]
+if [! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install vlc
+fi
+# 093814E5-DB0A-481C-9B39-ACF62216BB55 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*VMWare%20Fusion][A5358959-F496-4368-9141-318664D40C6C]]
-if [ -d "/Library/Application Support/VMware Tools" ]; then
+if [! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vmware-fusion
 fi
 # A5358959-F496-4368-9141-318664D40C6C ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Carbon%20Copy%20Cloner][A5358959-F496-4368-9141-318664D40C6C]]
-if [ -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install carbon-copy-cloner
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Skype][A5358959-F496-4368-9141-318664D40C6C]]
+if [! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install skype
 fi
 # A5358959-F496-4368-9141-318664D40C6C ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Dropbox][3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86]]
+brew cask install dropbox
+# 3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Bartender][1483E8B6-098B-4793-91BD-F5081B2F76ED]]
+brew cask install bartender
+# 1483E8B6-098B-4793-91BD-F5081B2F76ED ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Chrome][63C6CF90-7C76-4260-A7A5-7786561B2A70]]
+brew cask install google-chrome
+# 63C6CF90-7C76-4260-A7A5-7786561B2A70 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Firefox][32D109DB-1554-40D5-B591-FCC2F922F903]]
+brew cask install firefox
+# 32D109DB-1554-40D5-B591-FCC2F922F903 ends here
 # 41886902-0FB3-425B-B512-C1A160F8E3D6 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Machine][41886902-0FB3-425B-B512-C1A160F8E3D6]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Machine][291FDE06-DF44-4156-A013-B763A8727B00]]
@@ -312,3 +325,10 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # C2C6F54C-D4B7-4CBE-AF80-E45CE40C9A54 ends here
 # 6E5C94FD-6E6D-4EDE-ABD6-6397F31E8A5B ends here
 # 2C87821E-2E7E-42F2-8512-96AE52230752 ends here
+
+# [[file:next.org::*Automated:%20Install%20and%20automatically%20configure%20as%20much%20as%20possible][01A638F0-F853-45F4-A347-8DD897BA8288]]
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Snippets][sudo-and-set]]
+sudo -v
+set -x
+# sudo-and-set ends here
+# 01A638F0-F853-45F4-A347-8DD897BA8288 ends here

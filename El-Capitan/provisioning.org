@@ -165,8 +165,6 @@ refer to "provsioning" mean to do so using these scripts.
 brew cask install spectacle
 #+END_SRC
 
-  - Enable at startup
-  - Displays, Disable automatic brightness setting
 
 **** Spectacle
 

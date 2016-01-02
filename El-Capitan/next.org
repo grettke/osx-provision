@@ -100,6 +100,7 @@ echo $BASH_VERSION
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 - Run ~echo $BASH_VERSION~
 - Mak sure that it is >=4
+- Not using any bash completions
 #+END_SRC
 
 ****** Brew & Brew Cask
@@ -136,6 +137,36 @@ brew cask install spectacle
 - Enable integration
 - Start at boot
 #+END_SRC
+****** Little Snitch
+:PROPERTIES:
+:ID:       5D68F827-7AEA-4C40-A2FF-41ABDAAA53A9
+:END:
+#+NAME: 0A6CDD3C-BB1F-4AB1-8523-C4F5383A6856
+#+BEGIN_SRC sh
+brew cask install little-snitch
+#+END_SRC
+
+#+NAME: 5167B280-8058-4B60-92E9-2E481FD3A07F
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+- Start it
+- Enable integration
+- Start at boot
+#+END_SRC
+****** VLC
+:PROPERTIES:
+:ID:       C47DA927-A6B2-4751-98AC-D3200E6F4095
+:END:
+#+NAME: 093814E5-DB0A-481C-9B39-ACF62216BB55
+#+begin_src sh
+if [! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install vlc
+fi
+#+end_src
+
+#+NAME: 31B0BF19-6AE4-4AD3-B4BD-7287DADF25FD
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+Run it.
+#+end_src
 
 ****** VMWare Fusion
 :PROPERTIES:
@@ -146,7 +177,7 @@ Only install it on hosts.
 
 #+NAME: A5358959-F496-4368-9141-318664D40C6C
 #+BEGIN_SRC sh
-if [ -d "/Library/Application Support/VMware Tools" ]; then
+if [! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vmware-fusion
 fi
 #+END_SRC
@@ -155,6 +186,145 @@ fi
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 - On a host: License it
 #+END_SRC
+
+****** Skype
+:PROPERTIES:
+:ID:       6003585A-A3B2-453A-B3CF-33240C69BB0E
+:END:
+Only install it on hosts.
+
+#+NAME: A5358959-F496-4368-9141-318664D40C6C
+#+BEGIN_SRC sh
+if [! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install skype
+fi
+#+END_SRC
+
+#+NAME: 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+- Log in and disable notifications for log in and out
+#+END_SRC
+****** Dropbox
+:PROPERTIES:
+:ID:       97065F78-F2C3-4189-A24E-BAB474EC2D59
+:END:
+
+#+NAME: 3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86
+#+BEGIN_SRC sh
+brew cask install dropbox
+#+END_SRC
+
+#+NAME: 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+- Log in
+- Sync nothing right away
+- Choose what is critical here
+  - Screenshots
+  - Everything
+#+END_SRC
+****** Bartender
+:PROPERTIES:
+:ID:       119F1391-9A8A-49F6-810E-E2620F5AF15F
+:END:
+
+#+NAME: 1483E8B6-098B-4793-91BD-F5081B2F76ED
+#+begin_src sh
+brew cask install bartender
+#+end_src
+
+#+NAME: 8FF0E7F5-4CA1-4F1B-A787-5E523943C266
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+- GENERAL
+  - Launch Bartender at login: yes.
+  - At bartender launch: show bartender bar: NO.
+  - Bartender bar: autohides, YES.
+- Menu bar icon highlight
+  - Show when bartender bar is open: YES.
+  - Bartender menu baricon:
+- ADVANCED
+  - Bartender menu bar icon: visible YES.
+  - Clicking on bartender will: open bartender bar.
+  - For everything moved into the gutter
+  - I made it display in the main for 5m.
+
+- Ordered them (reorder by holding Pretzel and dragging them) (do this after installing everything)
+  - little snitch
+    - Can't move this one at all anyway
+  - Date/Time
+  - Volume
+  - Keychain Access
+  - Battery
+  - Bluetooth
+  - Wifi
+  - Vagrant Manager
+  - Dropbox
+  - Fast User Switching Menu
+  - Applications Menu Settings
+  - Notification center
+  - Spotlight
+  - Bartender
+
+  - Hide
+    - Growl
+    - Karabiner
+    - Spectacle
+    - Carbon Copy Cloner
+    - AirPort Display
+    - Time Machine (completely)
+    - Google Chrome (Hangouts)
+    - Microsoft Remote Desktop
+
+Arrangement-algorithm is most activity or cared about on the outside and less so
+in the middle.
+#+end_src
+
+****** Chrome
+:PROPERTIES:
+:ID:       27B3E977-821E-4966-B6CA-438212B4CA2A
+:END:
+
+#+NAME: 63C6CF90-7C76-4260-A7A5-7786561B2A70
+#+begin_src sh
+brew cask install google-chrome
+#+end_src
+
+#+NAME: F44BD494-95D4-4339-BFCC-C0A472D24576
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+Sign into Chrome. Let the settings sync. All the JS disabling stuff needs
+you to approve it. It is irritating. You always forget to approve it and make
+it worse. Disable ScriptSafe right away. Turn it on as needed.
+#+end_src
+****** Firefox
+:PROPERTIES:
+:ID:       2348C82F-F560-4C30-8B80-9D7EE4D4291F
+:END:
+#+NAME: 32D109DB-1554-40D5-B591-FCC2F922F903
+#+begin_src sh
+brew cask install firefox
+#+end_src
+
+Sometimes this install fails. I checked the file download. The file exists. The
+name hasn't changed. Did a manual install instead.
+
+#+NAME: C31B20CA-568B-4037-B094-A46AEE3C144B
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+Install the standard plugins: NoScript, Blur.
+#+end_src
+
+** Filezilla
+   :PROPERTIES:
+   :ID:       3F67D0FE-1FE7-4578-9C71-DE4DBD6F75C2
+   :END:
+
+#+NAME: E35E5182-A810-4547-B6E8-866CC13AA7FA
+#+begin_src sh :tangle
+brew cask install filezilla
+#+end_src
+
+#+NAME: 8474322D-6F50-4A7C-9C89-2A49C9ADB6B8
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+Set up Filezilla for WnW.
+#+end_src
 
 ****** Carbon Copy Cloner
 :PROPERTIES:
@@ -165,7 +335,7 @@ Only install it on hosts.
 
 #+NAME: A5358959-F496-4368-9141-318664D40C6C
 #+BEGIN_SRC sh
-if [ -d "/Library/Application Support/VMware Tools" ]; then
+if [! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install carbon-copy-cloner
 fi
 #+END_SRC
@@ -173,6 +343,129 @@ fi
 #+NAME: 63644864-1754-4912-B282-02EB12AE4C8C
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 - On a host: License it
+#+END_SRC
+
+****** flux
+:PROPERTIES:
+:ID:       F0BE2195-81FE-42F7-92F2-7AEB6A834041
+:END:
+
+Only install it on hosts.
+
+#+NAME: A5358959-F496-4368-9141-318664D40C6C
+#+BEGIN_SRC sh
+if [! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install flux
+fi
+#+END_SRC
+
+#+NAME: 63644864-1754-4912-B282-02EB12AE4C8C
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+- Enable at startup
+- Displays, Disable automatic brightness setting
+#+END_SRC
+****** Fonts
+:PROPERTIES:
+:ID:       03993E03-45DF-498A-B197-283C61313E39
+:END:
+
+#+NAME: DD72394C-9D37-446C-A704-E88BE2B0CEED
+#+BEGIN_SRC sh
+brew tap caskroom/fonts
+#+END_SRC
+
+Install them automatically.
+
+#+NAME: 74BEB31B-9499-4144-B997-9E16B3FA24D9
+#+BEGIN_SRC sh
+brew cask install font-dejavu-sans
+brew cask install font-quivira
+brew cask install font-noto-sans
+brew cask install font-noto-sans-symbols
+brew cask install font-symbola
+#+END_SRC
+
+#+NAME: 2EC7A9F7-9356-46E2-9A23-EA286378E24E
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+- Test in Emacs using ~view-hello-file~
+#+END_SRC
+****** git
+:PROPERTIES:
+:ID:       1F0C8A4B-097E-4090-93A7-8A2958331E4F
+:END:
+
+#+NAME: F5E5B964-50FA-49EF-BABF-EFE558057EC2
+#+BEGIN_SRC sh
+brew install git
+#+END_SRC
+
+#+NAME: 38DA76DA-A9B1-42FF-9280-E0DC556A9223
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+- Not suing any git completions
+#+END_SRC
+
+****** Terminal
+:PROPERTIES:
+:ID:       4A37A9A3-A9D6-4ECD-AB89-EB0FE9815091
+:END:
+
+#+NAME: 429CCB8C-CFCF-40C9-87B5-03384D5DFE14
+#+BEGIN_SRC sh
+mkdir -p ~/git/github-anonymous
+cd ~/git/github-anonymous
+git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
+#+END_SRC
+
+#+NAME: D880F24A-DE8D-4513-A354-45C9B57E0631
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+Select the Solarized dark theme. It is checked out in Github-Anon. Go into
+preferences, choose it, and set it as the default.
+
+Set the font to DJSM 17.
+#+END_SRC
+
+****** ccrypt
+:PROPERTIES:
+:ID:       F9E3F2A3-F16A-4EB8-8F4F-4FF47C7BBE06
+:END:
+
+#+NAME: 9FBFA1B1-9677-4366-BF34-9A5D33A5677C
+#+BEGIN_SRC sh
+brew install ccrypt
+#+END_SRC
+
+#+NAME: 257678B4-BD36-4073-AC10-0F616D817479
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+- Verify that you can create and re-open files
+#+END_SRC
+
+****** tree
+:PROPERTIES:
+:ID:       8A7F33C7-CF3D-4E64-A63E-2AECD13FFD5F
+:END:
+#+NAME: 91E886FD-0DFA-475D-B85C-B7DD07BDFB1B
+#+BEGIN_SRC sh
+brew install tree
+#+END_SRC
+
+****** archey
+:PROPERTIES:
+:ID:       AAF25357-3F8F-4A19-902D-D494D4D7FE38
+:END:
+
+#+NAME: 900B81AC-3E1F-411F-9B11-9D23B958296E
+#+BEGIN_SRC sh
+brew install archey
+#+END_SRC
+
+****** figlet
+:PROPERTIES:
+:ID:       ADF24324-CF88-44E0-BE77-DC65DF37502E
+:END:
+
+#+NAME: 5667DE11-E68E-4558-A765-256D23A65B14
+#+BEGIN_SRC sh
+brew install figlet
 #+END_SRC
 
 ***** Settings
