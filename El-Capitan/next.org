@@ -1245,13 +1245,13 @@ Perform the common steps.
 <<configuration-common-manual-followup>>
 #+END_SRC
 
-** EMACS
+** Writing
 :PROPERTIES:
 :ID:       4176F379-79B3-466F-A689-11701A0432EF
 :END:
 *** Manual: Turn the lights on
 :PROPERTIES:
-:header-args: :tangle emacs/configuration-emacs-01-manual.org
+:header-args: :tangle writing/configuration-writing-01-manual.org
 :ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
 :END:
 
@@ -1262,7 +1262,7 @@ Perform the common steps.
 #+END_SRC
 *** Automated: Install and automatically configure as much as possible
 :PROPERTIES:
-:header-args: :tangle emacs/configuration-emacs-02-automated.sh
+:header-args: :tangle writing/configuration-writing-02-automated.sh
 :tangle-mode: (identity #o755)
 :ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
 :END:
@@ -1312,7 +1312,7 @@ Perform the common steps.
 #+END_SRC
 *** Manual: Configure the automatically installed stuff
 :PROPERTIES:
-:header-args: :tangle emacs/configuration-emacs-03-manual.org
+:header-args: :tangle writing/configuration-writing-03-manual.org
 :ID:       32266D7A-F601-4E9E-81BB-F9569FEA0791
 :END:
 
