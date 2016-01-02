@@ -22,9 +22,11 @@
 :END:
 *** Manual
 :PROPERTIES:
-:ID:       B1FB625A-7F7F-41FB-81D0-61F40F0E13E9
+:ID:       BF5455FF-FABE-4A6D-B3B9-685DDDB83D09
+:HEADER-ARGS: :noweb-ref configuration-common-manual
 :END:
-#+NAME: configuration-common-manual
+
+#+NAME: 639707FE-FE60-439E-A8C8-9FBD9936D1C4
 #+BEGIN_SRC org
 - Re-image your box
   - Host :: ~PHOSDI~
@@ -167,7 +169,7 @@ sudo spctl --master-disable
 
 Perform the common steps.
 #+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
-#+BEGIN_SRC org
+#+BEGIN_SRC org :noweb yes
 <<configuration-common-manual>>
 #+END_SRC
 *** Automated
