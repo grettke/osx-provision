@@ -152,15 +152,15 @@ defaults write com.apple.dock launchanim -bool false && killall Dock
 read -p "Press [Enter] key to continue..."
 # 3A5370F0-1F37-47A9-8AD2-5A54F7BEBAF6 ends here
 
-# [[file:provisioning.org::*Dock][2E431E6C-083A-40C3-844A-187F6523CB77]]
+# [[file:provisioning.org::*Dock][2D1566D0-5912-4770-A53E-DAB815E886F1]]
 defaults write com.apple.dock mouse-over-hilte-stack -bool true && killall Dock
 read -p "Press [Enter] key to continue..."
-# 2E431E6C-083A-40C3-844A-187F6523CB77 ends here
+# 2D1566D0-5912-4770-A53E-DAB815E886F1 ends here
 
-# [[file:provisioning.org::*Dock][2E431E6C-083A-40C3-844A-187F6523CB77]]
+# [[file:provisioning.org::*Dock][95CAD941-7BDA-4D4E-BF2E-976D9D07DA37]]
 defaults write com.apple.dock showhidden -bool true && killall Dock
 read -p "Press [Enter] key to continue..."
-# 2E431E6C-083A-40C3-844A-187F6523CB77 ends here
+# 95CAD941-7BDA-4D4E-BF2E-976D9D07DA37 ends here
 
 # [[file:provisioning.org::*Dock][6AB142A8-9150-4B3B-8709-237D468212E0]]
 defaults write com.apple.dock minimize-to-application -bool true && killall Dock
@@ -187,15 +187,15 @@ defaults write com.apple.Dock tilesize -int 50 && killall Dock
 read -p "Press [Enter] key to continue..."
 # C92642D8-BA50-46E4-B9D0-A0A7DEEAF0B9 ends here
 
-# [[file:provisioning.org::*Dock][9402CBD6-530E-4832-8D6A-405EB9172F37]]
+# [[file:provisioning.org::*Dock][D643A6DB-461A-425D-9516-C841B0A4C9E0]]
 defaults write com.apple.Dock show-process-indicators -bool true && killall Dock
 read -p "Press [Enter] key to continue..."
-# 9402CBD6-530E-4832-8D6A-405EB9172F37 ends here
+# D643A6DB-461A-425D-9516-C841B0A4C9E0 ends here
 
-# [[file:provisioning.org::*Dock][9402CBD6-530E-4832-8D6A-405EB9172F37]]
+# [[file:provisioning.org::*Dock][88023507-0070-4713-9F0D-36344D3FDED0]]
 defaults write 'com.apple.dock' persistent-apps -array '' && killall Dock
 read -p "Press [Enter] key to continue..."
-# 9402CBD6-530E-4832-8D6A-405EB9172F37 ends here
+# 88023507-0070-4713-9F0D-36344D3FDED0 ends here
 
 # [[file:provisioning.org::*Dock][2AEA50FA-CA94-438A-B82E-3B465CAA2E12]]
 defaults write 'com.apple.dock' expose-animation-duration -float 0.1 && killall Dock

@@ -546,13 +546,13 @@ defaults write com.apple.dock launchanim -bool false && killall Dock
 #+END_SRC
 
 Enable highlight hover effect for the grid view of a stack.
-#+NAME: 2E431E6C-083A-40C3-844A-187F6523CB77
+#+NAME: 2D1566D0-5912-4770-A53E-DAB815E886F1
 #+BEGIN_SRC shell
 defaults write com.apple.dock mouse-over-hilte-stack -bool true && killall Dock
 #+END_SRC
 
 Make Dock icons of hidden applications translucent.
-#+NAME: 2E431E6C-083A-40C3-844A-187F6523CB77
+#+NAME: 95CAD941-7BDA-4D4E-BF2E-976D9D07DA37
 #+BEGIN_SRC shell
 defaults write com.apple.dock showhidden -bool true && killall Dock
 #+END_SRC
@@ -588,13 +588,13 @@ defaults write com.apple.Dock tilesize -int 50 && killall Dock
 #+END_SRC
 
 Show indicator lights for open applications in the Dock.
-#+NAME: 9402CBD6-530E-4832-8D6A-405EB9172F37
+#+NAME: D643A6DB-461A-425D-9516-C841B0A4C9E0
 #+BEGIN_SRC shell
 defaults write com.apple.Dock show-process-indicators -bool true && killall Dock
 #+END_SRC
 
 Wipe all (default) app icons from Dock.
-#+NAME: 9402CBD6-530E-4832-8D6A-405EB9172F37
+#+NAME: 88023507-0070-4713-9F0D-36344D3FDED0
 #+BEGIN_SRC shell
 defaults write 'com.apple.dock' persistent-apps -array '' && killall Dock
 #+END_SRC
@@ -815,8 +815,6 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 :PROPERTIES:
 :ID:       A76717BD-1BF0-48D3-8E69-3A03BFE2B4A2
 :END:
-
-[[Y][Via]]
 
 #+NAME: 77191228-16CC-4B95-A030-A5C2DF90CD50
 #+BEGIN_SRC shell
