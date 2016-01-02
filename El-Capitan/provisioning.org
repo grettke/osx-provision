@@ -99,10 +99,10 @@
     over with and start the automated part
 - Make VMWare Disk Drive capacity in multiples of 8
   - That way they can be easily shared and transferred on SD cards
-- VMWare Fusion does not pre-allocate disk space and doesn't give you the option
-  to do so
-  - This is an option on VMWare Workstation so you might be surprised or
-    confused when you look at file size on the host
+- VMWare Fusion hard disk size
+  - VMWare does not pre-allocate disk space and doesn't give you the option
+    to do so. This is different than VMWare Workstation and that might surprise
+    you.
 
 * Preparation
 :PROPERTIES:
