@@ -237,6 +237,7 @@ This section captures those steps. Unique steps are indicated
 
 ** Manual Steps
 :PROPERTIES:
+:NAME:     common-configuration-manual
 :ID:       6507AFFC-5F3D-40D7-AA9A-53384A03EA0B
 :END:
 
