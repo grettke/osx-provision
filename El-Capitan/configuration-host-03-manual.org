@@ -8,4 +8,10 @@
 - Enable integration
 - Start at boot
 # 1F463B19-B41B-44C8-BFBA-49DBD5301946 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*VMWare%20Fusion][3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9]]
+- On a host: License it
+# 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Carbon%20Copy%20Cloner][63644864-1754-4912-B282-02EB12AE4C8C]]
+- On a host: License it
+# 63644864-1754-4912-B282-02EB12AE4C8C ends here
 # 0E88E868-0174-40D6-B736-5BCC97A13B71 ends here

@@ -546,7 +546,7 @@ Read the [[https://github.com/kitchenplan/kitchenplan][directions]].
 sudo gem install kitchenplan
 #+end_src
 
-Start the setup.
+Start the setsvmwareup.
 
 #+NAME: E580427D-012D-45CD-83CF-6D4EBEFEBFA8
 #+begin_src sh

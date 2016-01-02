@@ -24,6 +24,16 @@ brew tap caskroom/cask
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Spectacle][944FB8AE-DD79-49C6-8ABC-878A782234BE]]
 brew cask install spectacle
 # 944FB8AE-DD79-49C6-8ABC-878A782234BE ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*VMWare%20Fusion][A5358959-F496-4368-9141-318664D40C6C]]
+if [ -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install vmware-fusion
+fi
+# A5358959-F496-4368-9141-318664D40C6C ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Carbon%20Copy%20Cloner][A5358959-F496-4368-9141-318664D40C6C]]
+if [ -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install carbon-copy-cloner
+fi
+# A5358959-F496-4368-9141-318664D40C6C ends here
 # 41886902-0FB3-425B-B512-C1A160F8E3D6 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Machine][41886902-0FB3-425B-B512-C1A160F8E3D6]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Machine][291FDE06-DF44-4156-A013-B763A8727B00]]

@@ -137,6 +137,44 @@ brew cask install spectacle
 - Start at boot
 #+END_SRC
 
+****** VMWare Fusion
+:PROPERTIES:
+:ID:       96ADB3AF-1BDB-4F31-BB31-D5E32221AC8D
+:END:
+
+Only install it on hosts.
+
+#+NAME: A5358959-F496-4368-9141-318664D40C6C
+#+BEGIN_SRC sh
+if [ -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install vmware-fusion
+fi
+#+END_SRC
+
+#+NAME: 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+- On a host: License it
+#+END_SRC
+
+****** Carbon Copy Cloner
+:PROPERTIES:
+:ID:       F0BE2195-81FE-42F7-92F2-7AEB6A834041
+:END:
+
+Only install it on hosts.
+
+#+NAME: A5358959-F496-4368-9141-318664D40C6C
+#+BEGIN_SRC sh
+if [ -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install carbon-copy-cloner
+fi
+#+END_SRC
+
+#+NAME: 63644864-1754-4912-B282-02EB12AE4C8C
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+- On a host: License it
+#+END_SRC
+
 ***** Settings
 :PROPERTIES:
 :ID:       7507CE02-9156-4748-A621-2CF51241B95E
