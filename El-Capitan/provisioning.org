@@ -919,7 +919,6 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 :PROPERTIES:
 :ID:       1BF6D42F-2F80-467E-B75C-DB2C88F0B4BE
 :END:
-
 ** External Drive
 :PROPERTIES:
 :ID:       9EC3FF1F-8416-449D-8860-3B4ABCEBB09B
