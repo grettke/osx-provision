@@ -15,12 +15,15 @@ chsh -s /usr/local/bin/bash
 bash
 echo $BASH_VERSION
 # ADE3737D-A638-4BBD-9DD5-C42681EA1C0D ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Brew%20and%20BrewCask][602F73BE-37FB-43BC-A2D7-307D0D1652CB]]
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Brew%20&%20Brew%20Cask][DB082535-A43F-46EA-9F1B-1BB6302CA396]]
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-# 602F73BE-37FB-43BC-A2D7-307D0D1652CB ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Brew%20and%20BrewCask][5C68042B-9C59-42C9-9A7F-D625C0475C3A]]
+# DB082535-A43F-46EA-9F1B-1BB6302CA396 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Brew%20&%20Brew%20Cask][5C68042B-9C59-42C9-9A7F-D625C0475C3A]]
 brew tap caskroom/cask
 # 5C68042B-9C59-42C9-9A7F-D625C0475C3A ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Spectacle][944FB8AE-DD79-49C6-8ABC-878A782234BE]]
+brew cask install spectacle
+# 944FB8AE-DD79-49C6-8ABC-878A782234BE ends here
 # 41886902-0FB3-425B-B512-C1A160F8E3D6 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Machine][41886902-0FB3-425B-B512-C1A160F8E3D6]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Machine][291FDE06-DF44-4156-A013-B763A8727B00]]

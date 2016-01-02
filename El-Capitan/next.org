@@ -102,24 +102,16 @@ echo $BASH_VERSION
 - Mak sure that it is >=4
 #+END_SRC
 
-****** Brew and BrewCask
+****** Brew & Brew Cask
 :PROPERTIES:
-:ID:       571FE633-5DC4-411B-8B5C-62F572125326
+:ID:       3CD7F53A-C7B3-4C54-9E43-7B43E1D2E54F
 :END:
 
-Install both.
+Brew is [[http://brew.sh/][here]].
 
-Brew is [[http://brew.sh][here]].
-
-#+NAME: 602F73BE-37FB-43BC-A2D7-307D0D1652CB
+#+NAME: DB082535-A43F-46EA-9F1B-1BB6302CA396
 #+BEGIN_SRC sh
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#+END_SRC
-
-#+NAME: 9F802F3A-EAEC-482C-B1B9-5FBFBFBD7BA8
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-- Run =brew doctor=
-- Mak sure that it is happy
 #+END_SRC
 
 BrewCask is [[http://caskroom.io][here]].
@@ -127,6 +119,22 @@ BrewCask is [[http://caskroom.io][here]].
 #+NAME: 5C68042B-9C59-42C9-9A7F-D625C0475C3A
 #+BEGIN_SRC sh
 brew tap caskroom/cask
+#+END_SRC
+****** Spectacle
+:PROPERTIES:
+:ID:       1553426A-6A83-4104-AAA8-6DEF05FBBBC4
+:END:
+
+#+NAME: 944FB8AE-DD79-49C6-8ABC-878A782234BE
+#+BEGIN_SRC sh
+brew cask install spectacle
+#+END_SRC
+
+#+NAME: 1F463B19-B41B-44C8-BFBA-49DBD5301946
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+- Start it
+- Enable integration
+- Start at boot
 #+END_SRC
 
 ***** Settings
