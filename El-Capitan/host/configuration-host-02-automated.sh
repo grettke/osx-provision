@@ -18,8 +18,12 @@ brew tap caskroom/cask
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Bash][ADE3737D-A638-4BBD-9DD5-C42681EA1C0D]]
 echo $BASH_VERSION
 brew install bash
-sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-chsh -s /usr/local/bin/bash
+if grep "/usr/local/bin/bash" /etc/shells > /dev/null; then
+    echo "brew bash already configured in shells; doing nothing"
+else
+    sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+    chsh -s /usr/local/bin/bash
+fi
 echo $BASH_VERSION
 # ADE3737D-A638-4BBD-9DD5-C42681EA1C0D ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Spectacle][944FB8AE-DD79-49C6-8ABC-878A782234BE]]
