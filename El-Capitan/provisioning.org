@@ -111,6 +111,18 @@
     that the investment would take away from future work I would be doing on
     OSX. Both thing are surprising.
 
+* Dictionary
+
+- Install OS X El Capitan Application (IOSXECA)
+  - Application used to
+    - Upgrade current installation to 10.11
+    - Create USB boot-disks to install 10.11
+    - Drag into VMWare Fusion to install guests
+- Pristine Host Operating System Image (PHOSI)
+  - A hard disk imaged from Apple
+- Pristine Host Operating System Disk Image (PHOSDI)
+  - A disk-image created from a ~PHOSI~
+
 * Preparation
 :PROPERTIES:
 :ID:       1BF6D42F-2F80-467E-B75C-DB2C88F0B4BE
@@ -209,38 +221,44 @@ the clone. Name it =EXT:Utility=. Reboot to it to test it.
       - Software
       - Scripts
 
-* Host Configuration
+* Common Configuration
 :PROPERTIES:
 :ID:       29CB47C1-03D5-4495-8182-486513A2079C
 :END:
 
-** Starting Point
+** About
 :PROPERTIES:
 :ID:       B4E2D4A0-1525-40D3-AB8D-345494B2403D
 :END:
 
-- Image your machine using =PHOSDI=
+There are common steps for setting up every OSX box; host or guest.
+
+This section captures those steps. Unique steps are indicated
 
 ** Manual Steps
 :PROPERTIES:
 :ID:       6507AFFC-5F3D-40D7-AA9A-53384A03EA0B
 :END:
 
-Steps unique to the host are indicated.
-
-- During configuration personalize/configure/install nothing but timezone
-- Make a user named =sysop=, System Operator
-- Host :: Bluetooth mouse
-- Slowish mouse
-- Host :: Swap control keys
-- Host :: Install Karabiner, allow, Change Return Key, Return to Option_L + When you type Return only
+- Re-image your box
+  - Host :: ~PHOSDI~
+  - Guest :: ~IOSXECA~
+- During configuration log into the App Store
+- Make a user named ~gcr~ and choose an avatar
+- Mouse
+  - Host :: Connect Bluetooth mouse
+  - Mke the mouse slow
+- Host :: Reconfigure control keys
 - Host :: Maximize resolution
-- Show Keychain Access in Menubar
+- Host :: Show Keychain Access in Menubar
 - Screensaver: Flurry, 10m
 - Host :: Add printer
 - Energy saver
-  - Host :: On power, 15m, never auto sleep when display is off
-  - Guest :: Computer sleep 15, Screen sleep 15
+  - Host :: do
+    - On power, Computer sleep never, Screen sleep 15m, never auto sleep
+      when display is off
+    - On battery, Screen sleep 5m
+  - Guest :: Computer sleep never, Screen sleep 15
 - Volume
   - Show volume in menubar
 - Finder
@@ -249,6 +267,7 @@ Steps unique to the host are indicated.
       - <Home>
     - Devices
       - <Computer>
+- Host :: Install Karabiner, allow, Change Return Key, Return to Option_L + When you type Return only
 - Install Spectacle, allow, start at boot
 - f.lux
   - Enable at startup
@@ -907,7 +926,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 :ID:       CC55FA18-ADF8-4FE2-AA8E-477A3449F86F
 :END:
 
-- Obtain the OS X Installer via the App Store
+- Obtain ~IOSEXECA~ via the App Store
   - Can do this on a Mac or in a VM of a prior version of OSX
   - Back it up to both =External:Storage= and =Host:Storage=
 - Start VMWare Fusion, click File \rarr New, the "Select the Installation Method"
