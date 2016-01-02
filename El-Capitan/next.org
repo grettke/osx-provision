@@ -693,7 +693,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 :END:
 *** Manual
 :PROPERTIES:
-:header-args: :tangle configuration-host-manual.org :noweb yes
+:header-args: :tangle configuration-host-01-manual.org :noweb yes
 :ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
 :END:
 
@@ -706,6 +706,10 @@ Perform the common steps.
 :PROPERTIES:
 :ID:       D1DA1C61-8183-4A22-8AE6-0F6BE016A787
 :END:
+:PROPERTIES:
+:header-args: :tangle configuration-host-02-automated-settings :tangle-mode: (identity #o755)
+:ID:       41EB1F53-CDA3-4132-AED2-0DB1A4B0AF0A
+:END:
 **** Software
 :PROPERTIES:
 :ID:       68C5F6B5-9D98-4562-92A2-BE3D5C52F76E
@@ -716,8 +720,7 @@ Perform the common steps.
 :END:
 ***** Machine
 :PROPERTIES:
-:header-args: :tangle configuration-host-automated-settings-machine.sh :tangle-mode: (identity #o755)
-:ID:       41EB1F53-CDA3-4132-AED2-0DB1A4B0AF0A
+:ID:       1C9FA62E-7FAC-4D24-943D-5CDC25EE967A
 :END:
 
 Perform the common steps.
@@ -727,8 +730,7 @@ Perform the common steps.
 #+END_SRC
 ***** User
 :PROPERTIES:
-:header-args: :tangle configuration-host-automated-settings-user.sh :tangle-mode: (identity #o755)
-:ID:       70456190-75C6-41F5-B715-F031279B5E9F
+:ID:       F1F504EE-6438-4C65-A2CF-0E1F04E3E538
 :END:
 
 Perform the common steps.

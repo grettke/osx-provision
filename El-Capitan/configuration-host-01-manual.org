@@ -1,0 +1,34 @@
+# [[file:next.org::*Manual][2C87821E-2E7E-42F2-8512-96AE52230752]]
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Manual][639707FE-FE60-439E-A8C8-9FBD9936D1C4]]
+- Re-image your box
+  - Host :: ~PHOSDI~
+  - Guest :: ~IOSXECA~
+- During configuration log into the App Store
+- Make a user named ~gcr~ and choose an avatar
+- Mouse
+  - Host :: Connect Bluetooth mouse
+  - Mke the mouse slow
+- Host :: Reconfigure control keys
+- Host :: Maximize resolution
+- Host :: Show Keychain Access in Menubar
+- Screensaver: Flurry, 10m
+- Host :: Add printer
+- Energy saver
+  - Host :: do
+    - On power, Computer sleep never, Screen sleep 15m, never auto sleep
+      when display is off
+    - On battery, Screen sleep 5m
+      - Don't slightly dim the display on battery power
+  - Guest :: Computer sleep never, Screen sleep 15
+- Volume
+  - Show volume in menubar
+- Finder
+  - Preferences
+    - Favorites
+      - <Home>
+    - Devices
+      - <Computer>
+- Host :: Install Karabiner, allow, Change Return Key, Return to Option_L + When you type Return only
+- Host :: Install VMWare Fusion Professional
+# 639707FE-FE60-439E-A8C8-9FBD9936D1C4 ends here
+# 2C87821E-2E7E-42F2-8512-96AE52230752 ends here
