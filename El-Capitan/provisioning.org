@@ -135,7 +135,10 @@
 
 There are common steps for setting up every OSX box; host or guest.
 
-This section captures those steps. Unique steps are indicated
+This section captures those steps.
+
+Unique manual steps are indicated; and automatic steps are seperated with
+nowef-refs.
 
 ** Manual Steps
 :PROPERTIES:
