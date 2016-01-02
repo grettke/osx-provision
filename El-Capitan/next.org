@@ -47,9 +47,9 @@
     - 4.5GB download
   - Install the CLT. Choose *Install*.
     ,#+NAME: E0FB4DC2-E07D-4462-A997-99E112066E37
-    ,#+BEGIN_SRC shell
+    ,#+BEGIN_SRC sh
     xcode-select --install
-    ,#+END_SRC    
+    ,#+END_SRC
 - Host :: Install Karabiner, allow, Change Return Key, Return to Option_L + When you type Return only
 - Host :: Install VMWare Fusion Professional
 #+END_SRC
@@ -63,8 +63,26 @@
 :END:
 ***** Software
 :PROPERTIES:
-:ID:       5DB05063-0CA4-457A-A860-948F8957DD67
+:ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
+:HEADER-ARGS: :noweb-ref configuration-common-automated-steps-software
 :END:
+****** Bash
+:PROPERTIES:
+:ID:       223C4BB3-2F4D-418C-93B4-8AFF0801BD43
+:END:
+
+[[http://clubmate.fi/upgrade-to-bash-4-in-mac-os-x/][Via]].
+
+#+NAME: ADE3737D-A638-4BBD-9DD5-C42681EA1C0D
+#+BEGIN_SRC sh
+echo $BASH_VERSION
+brew install bash
+sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+chsh -s /usr/local/bin/bash
+bash
+echo $BASH_VERSION
+#+END_SRC
+
 ***** Settings
 :PROPERTIES:
 :ID:       7507CE02-9156-4748-A621-2CF51241B95E
@@ -734,6 +752,11 @@ Perform the common steps.
 :PROPERTIES:
 :ID:       68C5F6B5-9D98-4562-92A2-BE3D5C52F76E
 :END:
+Perform the common steps.
+#+NAME: 41886902-0FB3-425B-B512-C1A160F8E3D6
+#+BEGIN_SRC org
+<<configuration-common-automated-steps-software>>
+#+END_SRC
 ***** Settings
 :PROPERTIES:
 :ID:       D19C1E4F-7195-44AE-A3D1-1D48AAC91BD1

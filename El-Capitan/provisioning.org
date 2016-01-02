@@ -181,7 +181,6 @@ brew cask install spectacle
 - Enable integration
 - Start at boot
 #+END_SRC
-
 *** Per Machine
 :PROPERTIES:
 :tangle:   ./osx-per-machine.sh
