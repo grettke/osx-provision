@@ -71,11 +71,11 @@
 :END:
 ***** Machine
 :PROPERTIES:
-:ID:       BAA0FF06-562A-47E5-8C34-298491EE7FDE
+:ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
 :END:
 :PROPERTIES:
+:ID:       BAA0FF06-562A-47E5-8C34-298491EE7FDE
 :header-args :noweb-ref configuration-common-automated-settings-machine
-:ID:       942DE3F8-2A75-4E97-A463-F3CCB901FFBF
 :END:
 
 This script should be idempotent.
@@ -184,7 +184,7 @@ Perform the common steps.
 :END:
 ***** Machine
 :PROPERTIES:
-:header-args: :tangle   configuration-host-automated-settings-machine.sh
+:header-args: :tangle configuration-host-automated-settings-machine.sh
 :ID:       41EB1F53-CDA3-4132-AED2-0DB1A4B0AF0A
 :END:
 
