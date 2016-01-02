@@ -8,6 +8,12 @@ chsh -s /usr/local/bin/bash
 bash
 echo $BASH_VERSION
 # ADE3737D-A638-4BBD-9DD5-C42681EA1C0D ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Brew%20and%20BrewCask][602F73BE-37FB-43BC-A2D7-307D0D1652CB]]
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# 602F73BE-37FB-43BC-A2D7-307D0D1652CB ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Brew%20and%20BrewCask][5C68042B-9C59-42C9-9A7F-D625C0475C3A]]
+brew tap caskroom/cask
+# 5C68042B-9C59-42C9-9A7F-D625C0475C3A ends here
 # 41886902-0FB3-425B-B512-C1A160F8E3D6 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Machine][41886902-0FB3-425B-B512-C1A160F8E3D6]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Machine][EB44FB31-2B26-436C-89F3-E58B59450F87]]

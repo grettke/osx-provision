@@ -83,6 +83,27 @@ bash
 echo $BASH_VERSION
 #+END_SRC
 
+****** Brew and BrewCask
+:PROPERTIES:
+:ID:       571FE633-5DC4-411B-8B5C-62F572125326
+:END:
+
+Install both.
+
+Brew is [[http://brew.sh][here]].
+
+#+NAME: 602F73BE-37FB-43BC-A2D7-307D0D1652CB
+#+BEGIN_SRC sh
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#+END_SRC
+
+BrewCask is [[http://caskroom.io][here]].
+
+#+NAME: 5C68042B-9C59-42C9-9A7F-D625C0475C3A
+#+BEGIN_SRC sh
+brew tap caskroom/cask
+#+END_SRC
+
 ***** Settings
 :PROPERTIES:
 :ID:       7507CE02-9156-4748-A621-2CF51241B95E
