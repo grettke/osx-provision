@@ -1,4 +1,7 @@
 # [[file:next.org::*Manual:%20Configure%20the%20automatically%20installed%20stuff][0E88E868-0174-40D6-B736-5BCC97A13B71]]
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*git][38DA76DA-A9B1-42FF-9280-E0DC556A9223]]
+- Not using any git completions
+# 38DA76DA-A9B1-42FF-9280-E0DC556A9223 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Bash][51B2B8EC-89C0-4B77-A09F-7C481B157E0D]]
 - Run ~echo $BASH_VERSION~
 - Mak sure that it is >=4
@@ -95,9 +98,6 @@ Set up Filezilla for WnW.
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Fonts][2EC7A9F7-9356-46E2-9A23-EA286378E24E]]
 - Test in Emacs using ~view-hello-file~
 # 2EC7A9F7-9356-46E2-9A23-EA286378E24E ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*git][38DA76DA-A9B1-42FF-9280-E0DC556A9223]]
-- Not suing any git completions
-# 38DA76DA-A9B1-42FF-9280-E0DC556A9223 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Terminal][D880F24A-DE8D-4513-A354-45C9B57E0631]]
 Select the Solarized dark theme. It is checked out in Github-Anon. Go into
 preferences, choose it, and set it as the default.

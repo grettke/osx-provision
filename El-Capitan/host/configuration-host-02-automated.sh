@@ -15,6 +15,15 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Brew%20&%20Brew%20Cask][5C68042B-9C59-42C9-9A7F-D625C0475C3A]]
 brew tap caskroom/cask
 # 5C68042B-9C59-42C9-9A7F-D625C0475C3A ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*git][F5E5B964-50FA-49EF-BABF-EFE558057EC2]]
+brew install git
+# F5E5B964-50FA-49EF-BABF-EFE558057EC2 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Python][4128F3DB-7E7C-4885-B54E-AA78423855C5]]
+brew install python
+# 4128F3DB-7E7C-4885-B54E-AA78423855C5 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Ruby][EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D]]
+brew install ruby
+# EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Bash][ADE3737D-A638-4BBD-9DD5-C42681EA1C0D]]
 echo $BASH_VERSION
 brew install bash
@@ -96,9 +105,6 @@ brew cask install font-noto-sans
 brew cask install font-noto-sans-symbols
 brew cask install font-symbola
 # 74BEB31B-9499-4144-B997-9E16B3FA24D9 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*git][F5E5B964-50FA-49EF-BABF-EFE558057EC2]]
-brew install git
-# F5E5B964-50FA-49EF-BABF-EFE558057EC2 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Terminal][429CCB8C-CFCF-40C9-87B5-03384D5DFE14]]
 mkdir -p ~/git/github-anonymous
 cd ~/git/github-anonymous

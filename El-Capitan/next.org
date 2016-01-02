@@ -142,6 +142,44 @@ BrewCask is [[http://caskroom.io][here]].
 #+BEGIN_SRC sh
 brew tap caskroom/cask
 #+END_SRC
+****** git
+:PROPERTIES:
+:ID:       1F0C8A4B-097E-4090-93A7-8A2958331E4F
+:END:
+
+Important because Brew and everything uses this everywhere.
+
+#+NAME: F5E5B964-50FA-49EF-BABF-EFE558057EC2
+#+BEGIN_SRC sh
+brew install git
+#+END_SRC
+
+#+NAME: 38DA76DA-A9B1-42FF-9280-E0DC556A9223
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+- Not using any git completions
+#+END_SRC
+****** Python
+:PROPERTIES:
+:ID:       1BA55F5A-9902-4539-9494-0231C4DBD9B6
+:END:
+
+Important because it is such a versatile distribution.
+
+#+NAME: 4128F3DB-7E7C-4885-B54E-AA78423855C5
+#+BEGIN_SRC sh
+brew install python
+#+END_SRC
+****** Ruby
+:PROPERTIES:
+:ID:       B7D03962-A386-4E62-AA68-3A7F95AF2CA4
+:END:
+
+Important because Brew uses this.
+
+#+NAME: EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D
+#+BEGIN_SRC sh
+brew install ruby
+#+END_SRC
 ****** Bash
 :PROPERTIES:
 :ID:       223C4BB3-2F4D-418C-93B4-8AFF0801BD43
@@ -451,21 +489,6 @@ brew cask install font-symbola
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 - Test in Emacs using ~view-hello-file~
 #+END_SRC
-****** git
-:PROPERTIES:
-:ID:       1F0C8A4B-097E-4090-93A7-8A2958331E4F
-:END:
-
-#+NAME: F5E5B964-50FA-49EF-BABF-EFE558057EC2
-#+BEGIN_SRC sh
-brew install git
-#+END_SRC
-
-#+NAME: 38DA76DA-A9B1-42FF-9280-E0DC556A9223
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-- Not suing any git completions
-#+END_SRC
-
 ****** Terminal
 :PROPERTIES:
 :ID:       4A37A9A3-A9D6-4ECD-AB89-EB0FE9815091
