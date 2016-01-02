@@ -57,6 +57,7 @@
     developing the sections for the defition (and name)
 - Evidence based; no fantasy or delusion
   - Decide using experience; in absence make a best decision and move on
+  - It takes at least 3 iterations before things start making sense
 - "Thinking ahead" is crippling
 - Version after expensive operations
   - Can always delete them later
