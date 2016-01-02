@@ -58,13 +58,24 @@
 - Host :: Install VMWare Fusion Professional
 #+END_SRC
 *** Automated
-**** Software
-**** Machine Settings
-*** Per Machine
 :PROPERTIES:
-:tangle:   ./osx-per-machine.sh
-:tangle-mode: (identity #o755)
-:ID:       0B05FB9A-08DF-448C-AE2E-0715B0B217F8
+:ID:       8CFB1149-4FB5-49EA-8037-BD25E71BDB14
+:END:
+**** Software
+:PROPERTIES:
+:ID:       5DB05063-0CA4-457A-A860-948F8957DD67
+:END:
+**** Settings
+:PROPERTIES:
+:ID:       7507CE02-9156-4748-A621-2CF51241B95E
+:END:
+***** Machine
+:PROPERTIES:
+:ID:       BAA0FF06-562A-47E5-8C34-298491EE7FDE
+:END:
+:PROPERTIES:
+:header-args :noweb-ref configuration-common-automated-settings-machine
+:ID:       942DE3F8-2A75-4E97-A463-F3CCB901FFBF
 :END:
 
 This script should be idempotent.
@@ -73,6 +84,12 @@ Aggressively debug.
 #+NAME: C3D25C79-DF2D-4A1D-AE4F-16F20395AA95
 #+BEGIN_SRC shell
 set -x
+#+END_SRC
+
+Grant privileges.
+#+NAME: EB44FB31-2B26-436C-89F3-E58B59450F87
+#+BEGIN_SRC shell
+sudo -v
 #+END_SRC
 
 Set the computer's "names". There are 3 resources ([[http://ilostmynotes.blogspot.com/2012/03/computername-vs-localhostname-vs.html][1]], [[http://osxdaily.com/2012/10/24/set-the-hostname-computer-name-and-bonjour-name-separately-in-os-x/][2]], [[http://hack.org/mc/writings/mac-survival.html][3]]) that I used to make
@@ -138,7 +155,6 @@ Disable Gatekeeper.
 sudo spctl --master-disable
 #+END_SRC
 
-**** User Settings
 ** Host
 :PROPERTIES:
 :ID:       4176F379-79B3-466F-A689-11701A0432EF
@@ -150,11 +166,34 @@ sudo spctl --master-disable
 :END:
 
 Perform the common steps.
-#+NAME: EDF79321-96D6-4E8E-8ABC-711AE5F32FF7
+#+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
 #+BEGIN_SRC org
 <<configuration-common-manual>>
 #+END_SRC
 *** Automated
+:PROPERTIES:
+:ID:       D1DA1C61-8183-4A22-8AE6-0F6BE016A787
+:END:
 **** Software
-**** Machine Settings
-**** User Settings
+:PROPERTIES:
+:ID:       68C5F6B5-9D98-4562-92A2-BE3D5C52F76E
+:END:
+**** Settings
+:PROPERTIES:
+:ID:       D19C1E4F-7195-44AE-A3D1-1D48AAC91BD1
+:END:
+***** Machine
+:PROPERTIES:
+:header-args: :tangle   configuration-host-automated-settings-machine.sh
+:ID:       41EB1F53-CDA3-4132-AED2-0DB1A4B0AF0A
+:END:
+
+Perform the common steps.
+#+NAME: 18A5D7F2-74AA-48C4-89F8-C2C567FBE78A
+#+BEGIN_SRC org
+<<configuration-common-automated-settings-machine>>
+#+END_SRC
+***** User
+:PROPERTIES:
+:ID:       F8CA72C3-AB98-4998-B19B-10F617620792
+:END:

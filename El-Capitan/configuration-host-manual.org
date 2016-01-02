@@ -1,4 +1,4 @@
-# [[file:next.org::*Manual][EDF79321-96D6-4E8E-8ABC-711AE5F32FF7]]
+# [[file:next.org::*Manual][2C87821E-2E7E-42F2-8512-96AE52230752]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Manual][configuration-common-manual]]
 - Re-image your box
   - Host :: ~PHOSDI~
@@ -31,4 +31,4 @@
 - Host :: Install Karabiner, allow, Change Return Key, Return to Option_L + When you type Return only
 - Host :: Install VMWare Fusion Professional
 # configuration-common-manual ends here
-# EDF79321-96D6-4E8E-8ABC-711AE5F32FF7 ends here
+# 2C87821E-2E7E-42F2-8512-96AE52230752 ends here
