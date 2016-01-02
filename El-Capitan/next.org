@@ -168,6 +168,7 @@ Important because it is such a versatile distribution.
 #+NAME: 4128F3DB-7E7C-4885-B54E-AA78423855C5
 #+BEGIN_SRC sh
 brew install python
+brew linkapps python
 #+END_SRC
 ****** Ruby
 :PROPERTIES:

@@ -20,6 +20,7 @@ brew install git
 # F5E5B964-50FA-49EF-BABF-EFE558057EC2 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Python][4128F3DB-7E7C-4885-B54E-AA78423855C5]]
 brew install python
+brew linkapps python
 # 4128F3DB-7E7C-4885-B54E-AA78423855C5 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Ruby][EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D]]
 brew install ruby
