@@ -140,43 +140,6 @@ This section captures those steps.
 Unique manual steps are indicated; and automatic steps are seperated with
 nowef-refs.
 
-** Manual Steps
-:PROPERTIES:
-:NAME:     common-configuration-manual
-:ID:       6507AFFC-5F3D-40D7-AA9A-53384A03EA0B
-:END:
-
-- Re-image your box
-  - Host :: ~PHOSDI~
-  - Guest :: ~IOSXECA~
-- During configuration log into the App Store
-- Make a user named ~gcr~ and choose an avatar
-- Mouse
-  - Host :: Connect Bluetooth mouse
-  - Mke the mouse slow
-- Host :: Reconfigure control keys
-- Host :: Maximize resolution
-- Host :: Show Keychain Access in Menubar
-- Screensaver: Flurry, 10m
-- Host :: Add printer
-- Energy saver
-  - Host :: do
-    - On power, Computer sleep never, Screen sleep 15m, never auto sleep
-      when display is off
-    - On battery, Screen sleep 5m
-      - Don't slightly dim the display on battery power
-  - Guest :: Computer sleep never, Screen sleep 15
-- Volume
-  - Show volume in menubar
-- Finder
-  - Preferences
-    - Favorites
-      - <Home>
-    - Devices
-      - <Computer>
-- Host :: Install Karabiner, allow, Change Return Key, Return to Option_L + When you type Return only
-- Host :: Install VMWare Fusion Professional
-
 ** Automated Steps
 :PROPERTIES:
 :ID:       E72C95F4-9D62-4864-9BD5-441C7635BAA4
