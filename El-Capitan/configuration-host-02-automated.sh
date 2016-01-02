@@ -4,6 +4,12 @@
 set -x
 sudo -v
 # 4EE99FBE-E06D-4D65-9B29-F3C9D2704C4B ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Brew%20&%20Brew%20Cask][DB082535-A43F-46EA-9F1B-1BB6302CA396]]
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# DB082535-A43F-46EA-9F1B-1BB6302CA396 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Brew%20&%20Brew%20Cask][5C68042B-9C59-42C9-9A7F-D625C0475C3A]]
+brew tap caskroom/cask
+# 5C68042B-9C59-42C9-9A7F-D625C0475C3A ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Bash][ADE3737D-A638-4BBD-9DD5-C42681EA1C0D]]
 echo $BASH_VERSION
 brew install bash
@@ -12,12 +18,6 @@ chsh -s /usr/local/bin/bash
 bash
 echo $BASH_VERSION
 # ADE3737D-A638-4BBD-9DD5-C42681EA1C0D ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Brew%20&%20Brew%20Cask][DB082535-A43F-46EA-9F1B-1BB6302CA396]]
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-# DB082535-A43F-46EA-9F1B-1BB6302CA396 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Brew%20&%20Brew%20Cask][5C68042B-9C59-42C9-9A7F-D625C0475C3A]]
-brew tap caskroom/cask
-# 5C68042B-9C59-42C9-9A7F-D625C0475C3A ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Spectacle][944FB8AE-DD79-49C6-8ABC-878A782234BE]]
 brew cask install spectacle
 # 944FB8AE-DD79-49C6-8ABC-878A782234BE ends here

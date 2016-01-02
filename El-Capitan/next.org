@@ -76,6 +76,25 @@
 set -x
 sudo -v
 #+END_SRC
+
+****** Brew & Brew Cask
+:PROPERTIES:
+:ID:       3CD7F53A-C7B3-4C54-9E43-7B43E1D2E54F
+:END:
+
+Brew is [[http://brew.sh/][here]].
+
+#+NAME: DB082535-A43F-46EA-9F1B-1BB6302CA396
+#+BEGIN_SRC sh
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#+END_SRC
+
+BrewCask is [[http://caskroom.io][here]].
+
+#+NAME: 5C68042B-9C59-42C9-9A7F-D625C0475C3A
+#+BEGIN_SRC sh
+brew tap caskroom/cask
+#+END_SRC
 ****** Bash
 :PROPERTIES:
 :ID:       223C4BB3-2F4D-418C-93B4-8AFF0801BD43
@@ -98,25 +117,6 @@ echo $BASH_VERSION
 - Run ~echo $BASH_VERSION~
 - Mak sure that it is >=4
 - Not using any bash completions
-#+END_SRC
-
-****** Brew & Brew Cask
-:PROPERTIES:
-:ID:       3CD7F53A-C7B3-4C54-9E43-7B43E1D2E54F
-:END:
-
-Brew is [[http://brew.sh/][here]].
-
-#+NAME: DB082535-A43F-46EA-9F1B-1BB6302CA396
-#+BEGIN_SRC sh
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#+END_SRC
-
-BrewCask is [[http://caskroom.io][here]].
-
-#+NAME: 5C68042B-9C59-42C9-9A7F-D625C0475C3A
-#+BEGIN_SRC sh
-brew tap caskroom/cask
 #+END_SRC
 ****** Spectacle
 :PROPERTIES:
