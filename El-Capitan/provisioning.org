@@ -164,6 +164,7 @@ nowef-refs.
     - On power, Computer sleep never, Screen sleep 15m, never auto sleep
       when display is off
     - On battery, Screen sleep 5m
+      - Don't slightly dim the display on battery power
   - Guest :: Computer sleep never, Screen sleep 15
 - Volume
   - Show volume in menubar
@@ -174,10 +175,6 @@ nowef-refs.
     - Devices
       - <Computer>
 - Host :: Install Karabiner, allow, Change Return Key, Return to Option_L + When you type Return only
-- Install Spectacle, allow, start at boot
-- f.lux
-  - Enable at startup
-  - Displays, Disable automatic brightness setting
 - Host :: Install VMWare Fusion Professional
 
 ** Automated Steps
@@ -192,6 +189,35 @@ This file creates two script files:
 
 They are generalized and re-usable scripts. The points in this document that
 refer to "provsioning" mean to do so using these scripts.
+
+*** Software
+:PROPERTIES:
+:NAME:     common-configuration-automated-software
+:END:
+
+**** Flux
+
+#+NAME: 4C58E8F3-EABC-4F11-9235-2C9AA0A26F7A
+#+BEGIN_SRC shell
+brew cask install spectacle
+#+END_SRC
+
+  - Enable at startup
+  - Displays, Disable automatic brightness setting
+
+**** Spectacle
+
+#+NAME: 944FB8AE-DD79-49C6-8ABC-878A782234BE
+#+BEGIN_SRC shell
+brew cask install spectacle
+#+END_SRC
+
+#+NAME: 1F463B19-B41B-44C8-BFBA-49DBD5301946
+#+BEGIN_SRC org :noweb-ref common-configuration-automated-software-steps
+- Start it
+- Enable integration
+- Start at boot
+#+END_SRC
 
 *** Per Machine
 :PROPERTIES:
@@ -1600,6 +1626,18 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
   - [X] pdf
   - [X] txt
 
+* Configurations
+** Host
+*** Software
+:PROPERTIES:
+:header-args: :tangle host-configuration-automated-software.sh :noweb yes
+:END:
+
+Use the common software configuration
+#+NAME: 14B6CAE7-C1DE-491C-9604-F4E51F746871
+#+BEGIN_SRC :noweb
+<<common-configuration-automated-software>>
+#+END_SRC
 * Preparation
 :PROPERTIES:
 :ID:       1BF6D42F-2F80-467E-B75C-DB2C88F0B4BE

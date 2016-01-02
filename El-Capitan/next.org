@@ -1,0 +1,74 @@
+* Configuration
+:PROPERTIES:
+:ID:       2C0462E0-0E79-436E-9CBF-58C8DAF40CB1
+:END:
+** Common
+:PROPERTIES:
+:ID:       597AA955-95B9-4B69-9FB3-A2DFA768CACF
+:END:
+*** Manual
+:PROPERTIES:
+:header-args: :noweb-ref configuration-common-manual
+:ID:       6507AFFC-5F3D-40D7-AA9A-53384A03EA0B
+:END:
+
+* Configuration
+:PROPERTIES:
+:ID:       262EEA68-1753-489D-A3BE-672C162CD356
+:END:
+** Common
+:PROPERTIES:
+:ID:       372CA3F6-90BB-48B0-A181-7866D1846F92
+:END:
+*** Manual
+:PROPERTIES:
+:ID:       B1FB625A-7F7F-41FB-81D0-61F40F0E13E9
+:END:
+#+NAME: configuration-common-manual
+#+BEGIN_SRC org
+- Re-image your box
+  - Host :: ~PHOSDI~
+  - Guest :: ~IOSXECA~
+- During configuration log into the App Store
+- Make a user named ~gcr~ and choose an avatar
+- Mouse
+  - Host :: Connect Bluetooth mouse
+  - Mke the mouse slow
+- Host :: Reconfigure control keys
+- Host :: Maximize resolution
+- Host :: Show Keychain Access in Menubar
+- Screensaver: Flurry, 10m
+- Host :: Add printer
+- Energy saver
+  - Host :: do
+    - On power, Computer sleep never, Screen sleep 15m, never auto sleep
+      when display is off
+    - On battery, Screen sleep 5m
+      - Don't slightly dim the display on battery power
+  - Guest :: Computer sleep never, Screen sleep 15
+- Volume
+  - Show volume in menubar
+- Finder
+  - Preferences
+    - Favorites
+      - <Home>
+    - Devices
+      - <Computer>
+- Host :: Install Karabiner, allow, Change Return Key, Return to Option_L + When you type Return only
+- Host :: Install VMWare Fusion Professional
+#+END_SRC
+** Host
+:PROPERTIES:
+:ID:       4176F379-79B3-466F-A689-11701A0432EF
+:END:
+*** Manual
+:PROPERTIES:
+:header-args: :tangle configuration-host-manual.org :noweb yes
+:ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
+:END:
+
+Perform the common steps.
+#+NAME: EDF79321-96D6-4E8E-8ABC-711AE5F32FF7
+#+BEGIN_SRC org
+<<configuration-common-manual>>
+#+END_SRC
