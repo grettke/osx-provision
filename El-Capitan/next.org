@@ -2,19 +2,6 @@
 :PROPERTIES:
 :ID:       262EEA68-1753-489D-A3BE-672C162CD356
 :END:
-** Snippets
-:PROPERTIES:
-:ID:       8C5E7B07-7F76-4189-B663-49694A9F690D
-:END:
-
-- Grant privileges
-- Aggressively debug.
-#+NAME: sudo-and-set
-#+BEGIN_SRC sh
-sudo -v
-set -x
-#+END_SRC
-
 ** Common
 :PROPERTIES:
 :ID:       372CA3F6-90BB-48B0-A181-7866D1846F92
@@ -79,6 +66,16 @@ set -x
 :ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
 :HEADER-ARGS: :noweb-ref configuration-common-automated-steps-software
 :END:
+****** Debug
+:PROPERTIES:
+:ID:       6BA13619-7F02-4489-B734-E5D12DCFDAAD
+:END:
+
+#+NAME: 4EE99FBE-E06D-4D65-9B29-F3C9D2704C4B
+#+BEGIN_SRC sh
+set -x
+sudo -v
+#+END_SRC
 ****** Bash
 :PROPERTIES:
 :ID:       223C4BB3-2F4D-418C-93B4-8AFF0801BD43
@@ -1161,14 +1158,10 @@ Perform the common steps.
 #+END_SRC
 *** Automated: Install and automatically configure as much as possible
 :PROPERTIES:
-:header-args: :tangle configuration-host-02-automated.el
+:header-args: :tangle configuration-host-02-automated.sh
+:tangle-mode: (identity #o755)
 :ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
 :END:
-
-#+NAME: 01A638F0-F853-45F4-A347-8DD897BA8288
-#+BEGIN_SRC sh
-<<sudo-and-set>>
-#+END_SRC
 
 Perform the common steps.
 #+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
