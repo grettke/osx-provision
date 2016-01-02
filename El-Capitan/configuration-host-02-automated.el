@@ -21,18 +21,24 @@ brew cask install spectacle
 brew cask install little-snitch
 # 0A6CDD3C-BB1F-4AB1-8523-C4F5383A6856 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*VLC][093814E5-DB0A-481C-9B39-ACF62216BB55]]
-if [! -d "/Library/Application Support/VMware Tools" ]; then
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vlc
+else
+    echo "Only install on hosts"
 fi
 # 093814E5-DB0A-481C-9B39-ACF62216BB55 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*VMWare%20Fusion][A5358959-F496-4368-9141-318664D40C6C]]
-if [! -d "/Library/Application Support/VMware Tools" ]; then
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vmware-fusion
+else
+    echo "Only install on hosts"
 fi
 # A5358959-F496-4368-9141-318664D40C6C ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Skype][A5358959-F496-4368-9141-318664D40C6C]]
-if [! -d "/Library/Application Support/VMware Tools" ]; then
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install skype
+else
+    echo "Only install on hosts"
 fi
 # A5358959-F496-4368-9141-318664D40C6C ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Assembly][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
@@ -41,8 +47,10 @@ cp profile-host ~/.profile
 source ~/.profile
 # 92F77AD1-E9DC-4740-B3A3-C6A3A4034068 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Dropbox][3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86]]
-if [! -d "/Library/Application Support/VMware Tools" ]; then
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install dropbox
+else
+    echo "Only install on hosts"
 fi
 # 3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Bartender][1483E8B6-098B-4793-91BD-F5081B2F76ED]]
@@ -58,13 +66,17 @@ brew cask install firefox
 brew cask install filezilla
 # E35E5182-A810-4547-B6E8-866CC13AA7FA ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Carbon%20Copy%20Cloner][A5358959-F496-4368-9141-318664D40C6C]]
-if [! -d "/Library/Application Support/VMware Tools" ]; then
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install carbon-copy-cloner
+else
+    echo "Only install on hosts"
 fi
 # A5358959-F496-4368-9141-318664D40C6C ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*flux][A5358959-F496-4368-9141-318664D40C6C]]
-if [! -d "/Library/Application Support/VMware Tools" ]; then
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install flux
+else
+    echo "Only install on hosts"
 fi
 # A5358959-F496-4368-9141-318664D40C6C ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Fonts][DD72394C-9D37-446C-A704-E88BE2B0CEED]]

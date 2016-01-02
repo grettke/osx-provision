@@ -158,8 +158,10 @@ brew cask install little-snitch
 :END:
 #+NAME: 093814E5-DB0A-481C-9B39-ACF62216BB55
 #+begin_src sh
-if [! -d "/Library/Application Support/VMware Tools" ]; then
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vlc
+else
+    echo "Only install on hosts"
 fi
 #+end_src
 
@@ -177,8 +179,10 @@ Only install it on hosts.
 
 #+NAME: A5358959-F496-4368-9141-318664D40C6C
 #+BEGIN_SRC sh
-if [! -d "/Library/Application Support/VMware Tools" ]; then
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vmware-fusion
+else
+    echo "Only install on hosts"
 fi
 #+END_SRC
 
@@ -195,8 +199,10 @@ Only install it on hosts.
 
 #+NAME: A5358959-F496-4368-9141-318664D40C6C
 #+BEGIN_SRC sh
-if [! -d "/Library/Application Support/VMware Tools" ]; then
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install skype
+else
+    echo "Only install on hosts"
 fi
 #+END_SRC
 
@@ -259,8 +265,10 @@ source ~/.profile
 
 #+NAME: 3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86
 #+BEGIN_SRC sh
-if [! -d "/Library/Application Support/VMware Tools" ]; then
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install dropbox
+else
+    echo "Only install on hosts"
 fi
 #+END_SRC
 
@@ -385,8 +393,10 @@ Only install it on hosts.
 
 #+NAME: A5358959-F496-4368-9141-318664D40C6C
 #+BEGIN_SRC sh
-if [! -d "/Library/Application Support/VMware Tools" ]; then
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install carbon-copy-cloner
+else
+    echo "Only install on hosts"
 fi
 #+END_SRC
 
@@ -404,8 +414,10 @@ Only install it on hosts.
 
 #+NAME: A5358959-F496-4368-9141-318664D40C6C
 #+BEGIN_SRC sh
-if [! -d "/Library/Application Support/VMware Tools" ]; then
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install flux
+else
+    echo "Only install on hosts"
 fi
 #+END_SRC
 
