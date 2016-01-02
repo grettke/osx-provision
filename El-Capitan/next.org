@@ -155,7 +155,6 @@ echo $BASH_VERSION
 brew install bash
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 chsh -s /usr/local/bin/bash
-bash
 echo $BASH_VERSION
 #+END_SRC
 
