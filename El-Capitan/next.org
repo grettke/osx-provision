@@ -53,6 +53,39 @@
 - Host :: Install Karabiner, allow, Change Return Key, Return to Option_L + When you type Return only
 - Host :: Install VMWare Fusion Professional
 #+END_SRC
+*** Profile
+:PROPERTIES:
+:ID:       5790D2CA-8436-4F44-829B-32F2986E8A68
+:END:
+
+#+NAME: common-profile-body
+#+BEGIN_SRC sh
+export VISUAL=vim
+export EDITOR='$VISUAL'
+export PS1='\u@\h:\w> '
+export HOMEBREW_NO_EMOJI=1
+#+END_SRC
+
+#+NAME: common-profile-path-pre
+#+BEGIN_SRC sh
+/usr/local/bin
+#+END_SRC
+
+#+NAME: common-profile-path-post
+#+BEGIN_SRC sh
+$PATH
+#+END_SRC
+
+=:comments no= must be set otherwise the profile gets mangled
+
+#+NAME: 25086576-D16D-45F4-9141-1A45E2C8F8FD
+#+BEGIN_SRC sh :tangle profile-common :comments no
+<<common-profile-body>>
+export PATH=<<common-profile-path-pre>>:<<common-profile-path-post>>
+#+END_SRC
+
+This profile approach will evolve.
+
 *** Automated
 :PROPERTIES:
 :ID:       FC8DB1F5-25FA-4DD2-A6C8-3F434F6FCCF9
@@ -66,6 +99,20 @@
 :ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
 :HEADER-ARGS: :noweb-ref configuration-common-automated-steps-software
 :END:
+****** Profile
+:PROPERTIES:
+:ID:       56989957-A8F5-4C47-9B27-31A3AC4ED8DD
+:END:
+
+Set up the new profile.
+
+#+NAME: 92F77AD1-E9DC-4740-B3A3-C6A3A4034068
+#+BEGIN_SRC sh :noweb-ref configuration-common-automated-steps-software
+rm ~/.profile
+cp profile-common ~/.profile
+source ~/.profile
+#+END_SRC
+
 ****** Debug
 :PROPERTIES:
 :ID:       6BA13619-7F02-4489-B734-E5D12DCFDAAD
@@ -207,53 +254,6 @@ fi
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 - Log in and disable notifications for log in and out
 #+END_SRC
-
-****** Profile
-:PROPERTIES:
-:ID:       56989957-A8F5-4C47-9B27-31A3AC4ED8DD
-:END:
-
-******* Assembly
-:PROPERTIES:
-:HEADER-ARGS: :noweb-ref exclude-from-parent
-:ID:       1E088119-2A7A-4417-B6B5-2142695D7051
-:END:
-
-#+NAME: hpbod1
-#+BEGIN_SRC sh
-export VISUAL=vim
-export EDITOR='$VISUAL'
-export PS1='\u@\h:\w> '
-export HOMEBREW_NO_EMOJI=1
-#+END_SRC
-
-#+NAME: hppathpre
-#+BEGIN_SRC sh
-/usr/local/bin
-#+END_SRC
-
-#+NAME: hppathpost
-#+BEGIN_SRC sh
-$PATH
-#+END_SRC
-
-#+NAME: 25086576-D16D-45F4-9141-1A45E2C8F8FD
-#+BEGIN_SRC sh :tangle profile-host
-<<hpbod1>>
-export PATH=<<hppathpre>>:<<hppathpost>>
-#+END_SRC
-
-#+NAME: 92F77AD1-E9DC-4740-B3A3-C6A3A4034068
-#+BEGIN_SRC sh :noweb-ref configuration-common-automated-steps-software
-rm ~/.profile
-cp profile-host ~/.profile
-source ~/.profile
-#+END_SRC
-
-******* Deploy
-:PROPERTIES:
-:ID:       9B42F404-E521-47F6-8E0D-CD7EA2DDD4B4
-:END:
 
 ****** Dropbox
 :PROPERTIES:

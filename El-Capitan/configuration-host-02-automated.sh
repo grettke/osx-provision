@@ -1,5 +1,10 @@
 # [[file:next.org::*Automated:%20Install%20and%20automatically%20configure%20as%20much%20as%20possible][2C87821E-2E7E-42F2-8512-96AE52230752]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Software][41886902-0FB3-425B-B512-C1A160F8E3D6]]
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Profile][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
+rm ~/.profile
+cp profile-common ~/.profile
+source ~/.profile
+# 92F77AD1-E9DC-4740-B3A3-C6A3A4034068 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Debug][4EE99FBE-E06D-4D65-9B29-F3C9D2704C4B]]
 set -x
 sudo -v
@@ -45,11 +50,6 @@ else
     echo "Only install on hosts"
 fi
 # A5358959-F496-4368-9141-318664D40C6C ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Assembly][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
-rm ~/.profile
-cp profile-host ~/.profile
-source ~/.profile
-# 92F77AD1-E9DC-4740-B3A3-C6A3A4034068 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Dropbox][3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install dropbox
