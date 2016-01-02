@@ -2,6 +2,19 @@
 :PROPERTIES:
 :ID:       262EEA68-1753-489D-A3BE-672C162CD356
 :END:
+** Snippets
+:PROPERTIES:
+:ID:       8C5E7B07-7F76-4189-B663-49694A9F690D
+:END:
+
+- Grant privileges
+- Aggressively debug.
+#+NAME: sudo-and-set
+#+BEGIN_SRC sh
+sudo -v
+set -x
+#+END_SRC
+
 ** Common
 :PROPERTIES:
 :ID:       372CA3F6-90BB-48B0-A181-7866D1846F92
@@ -115,19 +128,6 @@ brew tap caskroom/cask
 :END:
 
 This script should be idempotent.
-
-Grant privileges.
-#+NAME: EB44FB31-2B26-436C-89F3-E58B59450F87
-#+BEGIN_SRC sh
-sudo -v
-#+END_SRC
-
-Aggressively debug.
-#+NAME: C3D25C79-DF2D-4A1D-AE4F-16F20395AA95
-#+BEGIN_SRC sh
-set -x
-#+END_SRC
-
 Set the computer's "names". There are 3 resources ([[http://ilostmynotes.blogspot.com/2012/03/computername-vs-localhostname-vs.html][1]], [[http://osxdaily.com/2012/10/24/set-the-hostname-computer-name-and-bonjour-name-separately-in-os-x/][2]], [[http://hack.org/mc/writings/mac-survival.html][3]]) that I used to make
 sense of the different names. It is simple, and new to me.
 
@@ -199,16 +199,9 @@ sudo spctl --master-disable
 
 This script should be idempotent.
 
-Grant privileges.
-#+NAME: EB44FB31-2B26-436C-89F3-E58B59450F87
+#+NAME: 2E9BB301-11E8-4A9A-979D-C7F04FAF6F78
 #+BEGIN_SRC sh
-sudo -v
-#+END_SRC
-
-Aggressively debug.
-#+NAME: A275F237-6C96-481A-AFD5-413933B3036E
-#+BEGIN_SRC sh
-set -x
+<<sudo-and-set>>
 #+END_SRC
 
 - These commands are all [[https://github.com/kitchenplan/chef-osxdefaults/tree/master/recipes][copied]]
@@ -755,7 +748,7 @@ Perform the common steps.
 #+END_SRC
 *** Automated
 :PROPERTIES:
-:header-args: :tangle configuration-host-02-automated.org
+:header-args: :tangle configuration-host-02-automated.el
 :ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
 :END:
 
