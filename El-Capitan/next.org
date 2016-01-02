@@ -1147,7 +1147,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 :END:
 *** Manual: Turn the lights on
 :PROPERTIES:
-:header-args: :tangle configuration-host-01-manual.org
+:header-args: :tangle host/configuration-host-01-manual.org
 :ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
 :END:
 
@@ -1158,7 +1158,7 @@ Perform the common steps.
 #+END_SRC
 *** Automated: Install and automatically configure as much as possible
 :PROPERTIES:
-:header-args: :tangle configuration-host-02-automated.sh
+:header-args: :tangle host/configuration-host-02-automated.sh
 :tangle-mode: (identity #o755)
 :ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
 :END:
@@ -1208,7 +1208,7 @@ Perform the common steps.
 #+END_SRC
 *** Manual: Configure the automatically installed stuff
 :PROPERTIES:
-:header-args: :tangle configuration-host-03-manual.org
+:header-args: :tangle host/configuration-host-03-manual.org
 :ID:       32266D7A-F601-4E9E-81BB-F9569FEA0791
 :END:
 
