@@ -59,16 +59,17 @@
   - Decide using experience; in absence make a best decision and move on
   - It takes at least 3 iterations before things start making sense
 - "Thinking ahead" is crippling
-- Version after expensive operations
-  - Can always delete them later
-  - Easy to for get how to do
+- Snapshot
+  - After expensive operations
+    - Can always delete them later
+    - Easy to for get how to do
+  - Snapshot frequently; you never know how things will go
+    - You will forget to do this
+    - You will only care after something got wrecked
 - Don't go to sleep in the middle of configuration sections
 - Get the fastest Internet sold before starting
 - Remember that Control-Command-F pressed inside of a host tells VMWare
   to go to and from full-screen.
-- Snapshot frequently; you never know how things will go
-  - You will forget to do this
-  - You will only care after something got wrecked
 - VMWare's folder sharing
   - Works perfectly for sharing between two guests a lot of the time. When it
     quits working I log in and out of one of the guests and it works again
