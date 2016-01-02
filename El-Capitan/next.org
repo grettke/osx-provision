@@ -259,7 +259,9 @@ source ~/.profile
 
 #+NAME: 3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86
 #+BEGIN_SRC sh
-brew cask install dropbox
+if [! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install dropbox
+fi
 #+END_SRC
 
 #+NAME: 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9
@@ -359,7 +361,7 @@ name hasn't changed. Did a manual install instead.
 Install the standard plugins: NoScript, Blur.
 #+end_src
 
-** Filezilla
+****** Filezilla
    :PROPERTIES:
    :ID:       3F67D0FE-1FE7-4578-9C71-DE4DBD6F75C2
    :END:

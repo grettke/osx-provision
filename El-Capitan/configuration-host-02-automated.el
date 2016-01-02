@@ -41,7 +41,9 @@ cp profile-host ~/.profile
 source ~/.profile
 # 92F77AD1-E9DC-4740-B3A3-C6A3A4034068 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Dropbox][3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86]]
-brew cask install dropbox
+if [! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install dropbox
+fi
 # 3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Bartender][1483E8B6-098B-4793-91BD-F5081B2F76ED]]
 brew cask install bartender
@@ -52,6 +54,49 @@ brew cask install google-chrome
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Firefox][32D109DB-1554-40D5-B591-FCC2F922F903]]
 brew cask install firefox
 # 32D109DB-1554-40D5-B591-FCC2F922F903 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Filezilla][E35E5182-A810-4547-B6E8-866CC13AA7FA]]
+brew cask install filezilla
+# E35E5182-A810-4547-B6E8-866CC13AA7FA ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Carbon%20Copy%20Cloner][A5358959-F496-4368-9141-318664D40C6C]]
+if [! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install carbon-copy-cloner
+fi
+# A5358959-F496-4368-9141-318664D40C6C ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*flux][A5358959-F496-4368-9141-318664D40C6C]]
+if [! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install flux
+fi
+# A5358959-F496-4368-9141-318664D40C6C ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Fonts][DD72394C-9D37-446C-A704-E88BE2B0CEED]]
+brew tap caskroom/fonts
+# DD72394C-9D37-446C-A704-E88BE2B0CEED ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Fonts][74BEB31B-9499-4144-B997-9E16B3FA24D9]]
+brew cask install font-dejavu-sans
+brew cask install font-quivira
+brew cask install font-noto-sans
+brew cask install font-noto-sans-symbols
+brew cask install font-symbola
+# 74BEB31B-9499-4144-B997-9E16B3FA24D9 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*git][F5E5B964-50FA-49EF-BABF-EFE558057EC2]]
+brew install git
+# F5E5B964-50FA-49EF-BABF-EFE558057EC2 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Terminal][429CCB8C-CFCF-40C9-87B5-03384D5DFE14]]
+mkdir -p ~/git/github-anonymous
+cd ~/git/github-anonymous
+git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
+# 429CCB8C-CFCF-40C9-87B5-03384D5DFE14 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*ccrypt][9FBFA1B1-9677-4366-BF34-9A5D33A5677C]]
+brew install ccrypt
+# 9FBFA1B1-9677-4366-BF34-9A5D33A5677C ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*tree][91E886FD-0DFA-475D-B85C-B7DD07BDFB1B]]
+brew install tree
+# 91E886FD-0DFA-475D-B85C-B7DD07BDFB1B ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*archey][900B81AC-3E1F-411F-9B11-9D23B958296E]]
+brew install archey
+# 900B81AC-3E1F-411F-9B11-9D23B958296E ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*figlet][5667DE11-E68E-4558-A765-256D23A65B14]]
+brew install figlet
+# 5667DE11-E68E-4558-A765-256D23A65B14 ends here
 # 41886902-0FB3-425B-B512-C1A160F8E3D6 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Machine][41886902-0FB3-425B-B512-C1A160F8E3D6]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Machine][291FDE06-DF44-4156-A013-B763A8727B00]]
