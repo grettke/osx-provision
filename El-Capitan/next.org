@@ -74,23 +74,20 @@
 ***** Machine
 :PROPERTIES:
 :ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
-:END:
-:PROPERTIES:
-:ID:       BAA0FF06-562A-47E5-8C34-298491EE7FDE
-:header-args :noweb-ref configuration-common-automated-settings-machine
+:HEADER-ARGS: :noweb-ref configuration-common-automated-settings-machine
 :END:
 
 This script should be idempotent.
 
 Aggressively debug.
 #+NAME: C3D25C79-DF2D-4A1D-AE4F-16F20395AA95
-#+BEGIN_SRC shell
+#+BEGIN_SRC sh
 set -x
 #+END_SRC
 
 Grant privileges.
 #+NAME: EB44FB31-2B26-436C-89F3-E58B59450F87
-#+BEGIN_SRC shell
+#+BEGIN_SRC sh
 sudo -v
 #+END_SRC
 
@@ -118,7 +115,7 @@ Defining this naming approach helped me learn more about the intent of the
 name and what I wanted from them.
 
 #+NAME: 291FDE06-DF44-4156-A013-B763A8727B00
-#+BEGIN_SRC shell
+#+BEGIN_SRC sh
 sudo scutil --set HostName ""
 echo "Enter HostName (plain old hostname): "
 read vhn
@@ -139,13 +136,13 @@ sudo scutil --set ComputerName $cn
 
 Display login window as name and password.
 #+NAME: 2F39C8B9-CA25-4C94-8E77-AD348D5235A9
-#+BEGIN_SRC shell
+#+BEGIN_SRC sh
 sudo defaults write /Library/Preferences/com.apple.loginwindow.plist SHOWFULLNAME -bool true
 #+END_SRC
 
 Login message.
 #+NAME: 850816F3-B82E-4EE0-9895-6E99CB6A7593
-#+BEGIN_SRC shell
+#+BEGIN_SRC sh
 sudo defaults write /Library/Preferences/com.apple.loginwindow.plist LoginwindowText -string "
 All creativity is an extended form of a joke.
           — Alan Kay"
@@ -153,7 +150,7 @@ All creativity is an extended form of a joke.
 
 Disable Gatekeeper.
 #+NAME: DBE84671-1CC0-4DBA-AC7C-72F9EAC857A0
-#+BEGIN_SRC shell
+#+BEGIN_SRC sh
 sudo spctl --master-disable
 #+END_SRC
 
@@ -186,7 +183,7 @@ Perform the common steps.
 :END:
 ***** Machine
 :PROPERTIES:
-:header-args: :tangle configuration-host-automated-settings-machine.sh
+:header-args: :tangle configuration-common-automated-settings-machine.sh :tangle-mode: (identity #o755)
 :ID:       41EB1F53-CDA3-4132-AED2-0DB1A4B0AF0A
 :END:
 
