@@ -64,7 +64,7 @@
   - Easy to for get how to do
 - Don't go to sleep in the middle of configuration sections
 - Get the fastest Internet sold before starting
-- Remember that Control-Command-F pressed inside of a host works against VMWare
+- Remember that Control-Command-F pressed inside of a host tells VMWare
   to go to and from full-screen.
 - Snapshot frequently; you never know how things will go
   - You will forget to do this
