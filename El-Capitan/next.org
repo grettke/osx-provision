@@ -1244,3 +1244,80 @@ Perform the common steps.
 #+BEGIN_SRC org
 <<configuration-common-manual-followup>>
 #+END_SRC
+
+** EMACS
+:PROPERTIES:
+:ID:       4176F379-79B3-466F-A689-11701A0432EF
+:END:
+*** Manual: Turn the lights on
+:PROPERTIES:
+:header-args: :tangle emacs/configuration-emacs-01-manual.org
+:ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
+:END:
+
+Perform the common steps.
+#+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
+#+BEGIN_SRC org
+<<configuration-common-manual>>
+#+END_SRC
+*** Automated: Install and automatically configure as much as possible
+:PROPERTIES:
+:header-args: :tangle emacs/configuration-emacs-02-automated.sh
+:tangle-mode: (identity #o755)
+:ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
+:END:
+
+Perform the common steps.
+#+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
+#+BEGIN_SRC org
+<<configuration-common-automated>>
+#+END_SRC
+**** Steps
+:PROPERTIES:
+:HEADER-ARGS: :noweb-ref configuration-common-automated
+:ID:       995CBCB2-07FC-4933-8084-9DB97B11CF92
+:END:
+***** Software
+:PROPERTIES:
+:ID:       68C5F6B5-9D98-4562-92A2-BE3D5C52F76E
+:END:
+Perform the common steps.
+#+NAME: 41886902-0FB3-425B-B512-C1A160F8E3D6
+#+BEGIN_SRC org
+<<configuration-common-automated-steps-software>>
+#+END_SRC
+***** Settings
+:PROPERTIES:
+:ID:       D19C1E4F-7195-44AE-A3D1-1D48AAC91BD1
+:END:
+****** Machine
+:PROPERTIES:
+:ID:       A959032E-88AA-4643-8AE0-80DE02EDE3AD
+:END:
+
+Perform the common steps.
+#+NAME: 41886902-0FB3-425B-B512-C1A160F8E3D6
+#+BEGIN_SRC org
+<<configuration-common-automated-steps-settings-machine>>
+#+END_SRC
+****** User
+:PROPERTIES:
+:ID:       F1F504EE-6438-4C65-A2CF-0E1F04E3E538
+:END:
+
+Perform the common steps.
+#+NAME: 6E5C94FD-6E6D-4EDE-ABD6-6397F31E8A5B
+#+BEGIN_SRC org
+<<configuration-common-automated-steps-settings-user>>
+#+END_SRC
+*** Manual: Configure the automatically installed stuff
+:PROPERTIES:
+:header-args: :tangle emacs/configuration-emacs-03-manual.org
+:ID:       32266D7A-F601-4E9E-81BB-F9569FEA0791
+:END:
+
+Perform the common steps.
+#+NAME: 0E88E868-0174-40D6-B736-5BCC97A13B71
+#+BEGIN_SRC org
+<<configuration-common-manual-followup>>
+#+END_SRC
