@@ -35,6 +35,11 @@ if [! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install skype
 fi
 # A5358959-F496-4368-9141-318664D40C6C ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Assembly][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
+rm ~/.profile
+cp profile-host ~/.profile
+source ~/.profile
+# 92F77AD1-E9DC-4740-B3A3-C6A3A4034068 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Dropbox][3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86]]
 brew cask install dropbox
 # 3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86 ends here

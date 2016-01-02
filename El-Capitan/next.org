@@ -204,6 +204,54 @@ fi
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 - Log in and disable notifications for log in and out
 #+END_SRC
+
+****** Profile
+:PROPERTIES:
+:ID:       56989957-A8F5-4C47-9B27-31A3AC4ED8DD
+:END:
+
+******* Assembly
+:PROPERTIES:
+:HEADER-ARGS: :noweb-ref exclude-from-parent
+:ID:       1E088119-2A7A-4417-B6B5-2142695D7051
+:END:
+
+#+NAME: hpbod1
+#+BEGIN_SRC sh
+export VISUAL=vim
+export EDITOR='$VISUAL'
+export PS1='\u@\h:\w> '
+export HOMEBREW_NO_EMOJI=1
+#+END_SRC
+
+#+NAME: hppathpre
+#+BEGIN_SRC sh
+/usr/local/bin
+#+END_SRC
+
+#+NAME: hppathpost
+#+BEGIN_SRC sh
+$PATH
+#+END_SRC
+
+#+NAME: 25086576-D16D-45F4-9141-1A45E2C8F8FD
+#+BEGIN_SRC sh :tangle profile-host
+<<hpbod1>>
+export PATH=<<hppathpre>>:<<hppathpost>>
+#+END_SRC
+
+#+NAME: 92F77AD1-E9DC-4740-B3A3-C6A3A4034068
+#+BEGIN_SRC sh :noweb-ref configuration-common-automated-steps-software
+rm ~/.profile
+cp profile-host ~/.profile
+source ~/.profile
+#+END_SRC
+
+******* Deploy
+:PROPERTIES:
+:ID:       9B42F404-E521-47F6-8E0D-CD7EA2DDD4B4
+:END:
+
 ****** Dropbox
 :PROPERTIES:
 :ID:       97065F78-F2C3-4189-A24E-BAB474EC2D59
