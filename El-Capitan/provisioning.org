@@ -61,6 +61,7 @@
 - "Thinking ahead" is crippling
 - Version after expensive operations
   - Can always delete them later
+  - Easy to for get how to do
 - Don't go to sleep in the middle of configuration sections
 - Get the fastest Internet sold before starting
 - Remember that Control-Command-F pressed inside of a host works against VMWare
