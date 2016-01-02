@@ -774,7 +774,7 @@ Only use UTF-8 in Terminal.app.
 defaults write com.apple.terminal StringEncodings -array 4
 #+END_SRC
 
-***** Activity Monitor                                                            #
+***** Activity Monitor
 :PROPERTIES:
 :ID:       D36D6B69-54DC-4666-AB48-731A2FA7130F
 :END:
