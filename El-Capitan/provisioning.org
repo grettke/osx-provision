@@ -52,6 +52,9 @@
   - Installation scripts often reveal new information
 - Either name things with a meaningful name or a 6 digit UUID from
   [[https://www.uuidgenerator.net/][Online UUID Generator]]
+  - In the beginning this helped me keep track of disks, VMs, and software;
+    by working through it I found that names were more meaningful, only after
+    developing the sections for the defition (and name)
 - Evidence based; no fantasy or delusion
   - Decide using experience; in absence make a best decision and move on
 - "Thinking ahead" is crippling
