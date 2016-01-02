@@ -1074,7 +1074,7 @@ installing and configuring EMACS.
 
 #+NAME: ADE3737D-A638-4BBD-9DD5-C42681EA1C0D
 #+BEGIN_SRC shell
-brew install bash bash-completion
+brew install bash
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 chsh -s /usr/local/bin/bash
 echo $BASH_VERSION
@@ -1231,7 +1231,7 @@ Install git; don't use the built-in.
 
 #+NAME: 681F11A6-332E-424B-B878-CEF576BAAD1D
 #+BEGIN_SRC sh
-brew install git git-flow
+brew install git
 #+END_SRC
 
 Generate the key. There is no passphrase.
