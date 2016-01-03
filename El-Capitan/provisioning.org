@@ -110,6 +110,15 @@
     would it take too much additional effort to migrated to Linux; but more-so
     that the investment would take away from future work I would be doing on
     OSX. Both thing are surprising.
+- A new to me option is to download everything and don't configure it until you
+  need it
+  - Pros
+    - Faster setup
+    - Only use what you need
+    - Nothing stopping you from configuring anything; key is to know what you
+      want immediately available when you restore a snapshot or image, assuming
+      that it is not automatically configurable or you don't want to
+      automatically configure it (which is rare)
 
 * Dictionary
 
