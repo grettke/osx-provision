@@ -94,6 +94,8 @@
     with a system imaged somewhat differently than the documentation. It is
     worth the effort to automate everything. The item on snapshotting makes this
     eaiser.
+  - After using them only 2 times you will feel how flexible and fun it makes
+    the whole development process
 - Never allow manual steps
   - If they are unavoidable then move them all to the same place to get them
     over with and start the automated part
@@ -108,7 +110,7 @@
     value OSS/Emacs the most. So I started to set up Linux. Through that effort
     I realized how much I've invested on the OSX platform. I felt that not only
     would it take too much additional effort to migrated to Linux; but more-so
-    that the investment would take away from future work I would be doing on
+    that the invest [[      - Skype is easi]] ment would take away from future work I would be doing on
     OSX. Both thing are surprising.
 - A new to me option is to download everything and don't configure it until you
   need it
