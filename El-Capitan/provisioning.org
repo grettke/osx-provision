@@ -110,7 +110,7 @@
     value OSS/Emacs the most. So I started to set up Linux. Through that effort
     I realized how much I've invested on the OSX platform. I felt that not only
     would it take too much additional effort to migrated to Linux; but more-so
-    that the invest [[      - Skype is easi]] ment would take away from future work I would be doing on
+    that the investment would take away from future work I would be doing on
     OSX. Both thing are surprising.
 - A new to me option is to download everything and don't configure it until you
   need it
@@ -121,9 +121,16 @@
       want immediately available when you restore a snapshot or image, assuming
       that it is not automatically configurable or you don't want to
       automatically configure it (which is rare)
+- Deleting the RP
+  - DU does not list the RP. CCC does. You work a lot with DU and a little with
+    CCC. When you modify the disk partitions, you have to rebuild the RP with
+    CCC. It is easy to forget to do this. I am not sure now how to restore th
+    RP without a working RP.
 
 * Dictionary
 
+- Carbon Copy Cloner (CCC)
+- Disk Utility (DU)
 - Install OS X El Capitan Application (IOSXECA)
   - Application used to
     - Upgrade current installation to 10.11
@@ -133,6 +140,7 @@
   - A hard disk imaged from Apple
 - Pristine Host Operating System Disk Image (PHOSDI)
   - A disk-image created from a ~PHOSI~
+- Recovery Partition (RP)
 
 * Guest Configuration
 :PROPERTIES:
@@ -225,17 +233,17 @@
 - Start the VM
 - Resize the disk
   - Note that on a real Mac you can't resize a partition that OS X has
-    booted from so you might boot from the Recovery Parittion to perform
+    booted from so you might boot from the RP to perform
     the resize instead. This doesn't work on the VMWare drive. If you try it,
     it will fail for a couple of reasons like "The partition is not journaled"
     or "The operation filed". Instead, boot into the OS and resize the partition
     there.
-  - Start Disk Utility
+  - Start DU
   - Choose VMWare Virtual SATA Hard Drive Media
   - Click "Partition"
   - Look at it to get a sense of the space for the main partition and what is
     actually available
-  - Close Disk Utility
+  - Close DU
   - Read [[https://themacwrangler.wordpress.com/2015/10/21/resizing-el-capitan-mac-volumes-under-vmware-fusion/][this]] for a reference
   - Open Terminal
   - Execute:
@@ -244,7 +252,7 @@
     sudo diskutil resizeVolume / R
     #+END_SRC
   - View the results, they should be what you expect
-  - Verify in Disk Utility
+  - Verify in DU
 - Change =sysop= password
 - Install VMWare Tools
   - In El Capitan, the display driver works correctly so you can set any
@@ -990,9 +998,9 @@ the clone. Name it =EXT:Utility=. Reboot to it to test it.
 - Collect the Pristine Host Operating System Image (PHOSI)
   - Pristine means that it has never been logged into or configured
   - Has the latest OS X on it with at least the second fix pack or later
-  - Verify that it contains Recovery Partition for that OS X on the disk
+  - Verify that it contains the RP for that OS X on the disk
     - If the imaging takes less than 10 minutes then they didn't include the
-      Recovery Partition
+      RP
   - You can easily get this from an appointment at the Genius Bar
 - Create the Pristine Host Operating System Disk Image (PHOSDI)
   - Take your Mac home
