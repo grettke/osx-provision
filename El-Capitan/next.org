@@ -1527,7 +1527,7 @@ Perform the common steps.
 <<configuration-common-manual-followup>>
 <<configuration-writing-manual-followup>>
 #+END_SRC
-*** Manual: Personal Git and TeX Configuration
+*** Automated: Personal Git and TeX Configuration
 :PROPERTIES:
 :header-args: :tangle writing/configuration-writing-04-automated-personal.sh
 :tangle-mode: (identity #o755)
