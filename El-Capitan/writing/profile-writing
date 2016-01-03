@@ -1,0 +1,11 @@
+export VISUAL=vim
+export EDITOR='$VISUAL'
+export PS1='\u@\h:\w> '
+export HOMEBREW_NO_EMOJI=1
+export INFOPATH='/usr/local/share/info:/usr/share/info'
+export CCRYPT="/usr/local/Cellar/ccrypt/1.10/share/emacs/site-lisp"
+export EELIB="/Users/$(whoami)/EELIB"
+export MACTEX_BIN="/usr/local/texlive/2015/bin/x86_64-darwin"
+export PATH=/usr/local/bin:$MACTEX_BIN:$PATH
+alias e='open /Applications/Emacs.app --args --debug-init'
+alias ec='/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw --debug-init'

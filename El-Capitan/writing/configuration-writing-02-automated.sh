@@ -1,3 +1,7 @@
+# [[file:next.org::*Automated:%20Install%20and%20automatically%20configure%20as%20much%20as%20possible][BDA085BB-877C-4F75-8614-1C8CC62E5992]]
+*DO INSTALL Xcode BEFORE ThE CLT*
+# BDA085BB-877C-4F75-8614-1C8CC62E5992 ends here
+
 # [[file:next.org::*Automated:%20Install%20and%20automatically%20configure%20as%20much%20as%20possible][2C87821E-2E7E-42F2-8512-96AE52230752]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Software][41886902-0FB3-425B-B512-C1A160F8E3D6]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Profile][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
@@ -528,6 +532,54 @@ brew install archey
 brew install figlet
 # 5667DE11-E68E-4558-A765-256D23A65B14 ends here
 # 41886902-0FB3-425B-B512-C1A160F8E3D6 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Bunch%20of%20Stuff][CCF91EC0-F689-4279-972C-9F1D32C4C64B]]
+brew cask install xquartz
+brew cask install growlnotify
+brew install aspell -all
+brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
+brew install graphviz
+brew install pandoc
+brew install emacs --with-cocoa --with-gnutls --with-imagemagick
+brew linkapps
+# CCF91EC0-F689-4279-972C-9F1D32C4C64B ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Java][274A6FA4-B619-422A-8546-C1DCE6C47B63]]
+brew cask install java
+# 274A6FA4-B619-422A-8546-C1DCE6C47B63 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Deltawalker][82653612-8AFE-4FF7-86D8-921DDA662EB9]]
+brew cask install deltawalker
+# 82653612-8AFE-4FF7-86D8-921DDA662EB9 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*MacTeX][C4F43DC6-97F3-4237-9746-B40243C20950]]
+brew cask install mactex
+# C4F43DC6-97F3-4237-9746-B40243C20950 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*GnuPlot][A6FDD2B6-412D-41A5-B58A-942C6540BB57]]
+brew install gnuplot --with-latex --with-pdflib-lite --with-test --with-x11
+# A6FDD2B6-412D-41A5-B58A-942C6540BB57 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Download%20Org%20Mode][916D6512-03E7-4971-8BAC-53D6FA258BBD]]
+set -x
+rm -rf ~/src
+cd ~/src
+git clone git://orgmode.org/org-mode.git
+cd org-mode
+emacs -batch -Q -L lisp -l ../mk/org-fixup -f org-make-autoloads
+cd ~/src
+git clone git@github.com:punchagan/org2blog.git
+git clone https://github.com/jwiegley/use-package.git
+git clone https://github.com/grettke/help.git
+# 916D6512-03E7-4971-8BAC-53D6FA258BBD ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Link%20Files%20and%20Folders][567603FF-8A5F-4E06-939C-8D21D60AD4ED]]
+rm ~/.emacs.el
+ln -s ~/src/help/.emacs.el ~/.emacs.el
+rm -rf ~/.emacs.d
+mkdir ~/.emacs.d
+ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
+# 567603FF-8A5F-4E06-939C-8D21D60AD4ED ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Set%20up%20the%20new%20profile][B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770]]
+set -x
+rm ~/.profile
+cp profile-writing ~/.profile
+. ~/.profile
+cat ~/.profile
+# B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Machine][41886902-0FB3-425B-B512-C1A160F8E3D6]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Machine][291FDE06-DF44-4156-A013-B763A8727B00]]
 sudo scutil --set HostName ""
