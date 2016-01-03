@@ -107,7 +107,7 @@ Set up the new profile.
 #+NAME: 92F77AD1-E9DC-4740-B3A3-C6A3A4034068
 #+BEGIN_SRC sh :noweb-ref configuration-common-automated-steps-software
 rm ~/.profile
-cp profile-common ~/.profile
+cp ./profile-common ~/.profile
 source ~/.profile
 #+END_SRC
 

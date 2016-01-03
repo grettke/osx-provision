@@ -2,7 +2,7 @@
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Software][41886902-0FB3-425B-B512-C1A160F8E3D6]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Profile][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
 rm ~/.profile
-cp profile-common ~/.profile
+cp ./profile-common ~/.profile
 source ~/.profile
 # 92F77AD1-E9DC-4740-B3A3-C6A3A4034068 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Debug][4EE99FBE-E06D-4D65-9B29-F3C9D2704C4B]]
@@ -403,7 +403,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Software][41886902-0FB3-425B-B512-C1A160F8E3D6]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Profile][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
 rm ~/.profile
-cp profile-common ~/.profile
+cp ./profile-common ~/.profile
 source ~/.profile
 # 92F77AD1-E9DC-4740-B3A3-C6A3A4034068 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Debug][4EE99FBE-E06D-4D65-9B29-F3C9D2704C4B]]
