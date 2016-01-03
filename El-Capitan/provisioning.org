@@ -129,6 +129,16 @@
 - Utilize compressed disk images
   - Save space
   - On the SSD they are fast
+- How to utilize hosts and guests
+  - I had the idea that I would work 100% in the guest because that is simple
+    and familiar. It didn't work out well because audio in Skype was horrible.
+    So I installed Skype in the host and use it there. Now I use both host and
+    guest.
+    - Is it a waste of space to use the same provisioner for both host and
+      guest? No. It is important to have one script that does the right thing
+      instead of having to worry about two boxes. It also fails the goal of
+      having a single transportable and re-usable guest that can easily and
+      completely move between hosts.
 
 * Dictionary
 
