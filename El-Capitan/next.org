@@ -50,8 +50,6 @@
     ,#+BEGIN_SRC sh
     xcode-select --install
     ,#+END_SRC
-- Host :: Install Karabiner, allow, Change Return Key, Return to Option_L + When you type Return only
-- Host :: Install VMWare Fusion Professional
 #+END_SRC
 *** Profile
 :PROPERTIES:
@@ -142,6 +140,22 @@ BrewCask is [[http://caskroom.io][here]].
 #+BEGIN_SRC sh
 brew tap caskroom/cask
 #+END_SRC
+****** karabiner
+:PROPERTIES:
+:ID:       EE4E6BA8-4BB5-4ACD-9657-36C776448CE4
+:END:
+#+NAME: E81A12BB-2B0F-468D-8090-4B525168B86A
+#+BEGIN_SRC sh
+brew cask install karabiner
+#+END_SRC
+
+#+NAME: C13ADBE3-27E1-4E34-AAED-503ACE4E7922
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+- Allow it
+- Change Return Key
+  - Return to Option_L + When you type Return only
+#+END_SRC
+
 ****** git
 :PROPERTIES:
 :ID:       1F0C8A4B-097E-4090-93A7-8A2958331E4F

@@ -36,7 +36,5 @@
     #+BEGIN_SRC sh
     xcode-select --install
     #+END_SRC
-- Host :: Install Karabiner, allow, Change Return Key, Return to Option_L + When you type Return only
-- Host :: Install VMWare Fusion Professional
 # 639707FE-FE60-439E-A8C8-9FBD9936D1C4 ends here
 # 2C87821E-2E7E-42F2-8512-96AE52230752 ends here
