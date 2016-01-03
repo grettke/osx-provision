@@ -1,0 +1,5 @@
+export VISUAL=vim
+export EDITOR='$VISUAL'
+export PS1='\u@\h:\w> '
+export HOMEBREW_NO_EMOJI=1
+export PATH=/usr/local/bin:$PATH
