@@ -34,7 +34,7 @@
     - On battery, Screen sleep 5m
       - Don't slightly dim the display on battery power
   - Guest :: Computer sleep never, Screen sleep 15
-- Volume
+- Sound
   - Show volume in menubar
 - Finder
   - Preferences
