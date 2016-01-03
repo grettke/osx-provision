@@ -1,5 +1,5 @@
 # [[file:next.org::*Manual:%20Turn%20the%20lights%20on][2C87821E-2E7E-42F2-8512-96AE52230752]]
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Manual][639707FE-FE60-439E-A8C8-9FBD9936D1C4]]
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Common%20Manual][639707FE-FE60-439E-A8C8-9FBD9936D1C4]]
 - Re-image your box
   - Host :: ~PHOSDI~
   - Guest :: ~IOSXECA~
@@ -15,12 +15,11 @@
 - Host :: Add printer
 - Energy saver
   - Host :: do
-    - On power, Computer sleep never, Screen sleep 15m, never auto sleep
-      when display is off
+    - On power, Computer sleep never,never auto sleep when display is off
     - On battery, Screen sleep 5m
       - Don't slightly dim the display on battery power
   - Guest :: Computer sleep never, Screen sleep 15
-- Volume
+- Sound
   - Show volume in menubar
 - Finder
   - Preferences
