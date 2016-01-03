@@ -126,6 +126,9 @@
     CCC. When you modify the disk partitions, you have to rebuild the RP with
     CCC. It is easy to forget to do this. I am not sure now how to restore th
     RP without a working RP.
+- Utilize compressed disk images
+  - Save space
+  - On the SSD they are fast
 
 * Dictionary
 
