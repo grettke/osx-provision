@@ -1,6 +1,7 @@
 * Configuration
 :PROPERTIES:
 :ID:       262EEA68-1753-489D-A3BE-672C162CD356
+:Effort:   energy
 :END:
 ** Common
 :PROPERTIES:
@@ -29,8 +30,7 @@
 - Host :: Add printer
 - Energy saver
   - Host :: do
-    - On power, Computer sleep never, Screen sleep 15m, never auto sleep
-      when display is off
+    - On power, Computer sleep never,never auto sleep when display is off
     - On battery, Screen sleep 5m
       - Don't slightly dim the display on battery power
   - Guest :: Computer sleep never, Screen sleep 15
