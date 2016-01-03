@@ -7,7 +7,7 @@
 :PROPERTIES:
 :ID:       372CA3F6-90BB-48B0-A181-7866D1846F92
 :END:
-*** Manual
+*** Common Manual
 :PROPERTIES:
 :ID:       BF5455FF-FABE-4A6D-B3B9-685DDDB83D09
 :HEADER-ARGS: :noweb-ref configuration-common-manual
@@ -51,7 +51,7 @@
     xcode-select --install
     ,#+END_SRC
 #+END_SRC
-*** Profile
+*** Common Profile
 :PROPERTIES:
 :ID:       5790D2CA-8436-4F44-829B-32F2986E8A68
 :END:
