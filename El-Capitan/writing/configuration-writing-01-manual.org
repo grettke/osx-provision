@@ -1,9 +1,9 @@
-# [[file:next.org::*Manual:%20Turn%20the%20lights%20on][BDA085BB-877C-4F75-8614-1C8CC62E5992]]
+# [[file:provisioning.org::*Manual:%20Turn%20the%20lights%20on][BDA085BB-877C-4F75-8614-1C8CC62E5992]]
 *DO INSTALL Xcode BEFORE THE CLT*
 # BDA085BB-877C-4F75-8614-1C8CC62E5992 ends here
 
-# [[file:next.org::*Manual:%20Turn%20the%20lights%20on][2C87821E-2E7E-42F2-8512-96AE52230752]]
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Common%20Manual][639707FE-FE60-439E-A8C8-9FBD9936D1C4]]
+# [[file:provisioning.org::*Manual:%20Turn%20the%20lights%20on][2C87821E-2E7E-42F2-8512-96AE52230752]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Common%20Manual][639707FE-FE60-439E-A8C8-9FBD9936D1C4]]
 - Re-image your box
   - Host :: ~PHOSDI~
   - Guest :: ~IOSXECA~

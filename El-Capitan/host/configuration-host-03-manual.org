@@ -1,31 +1,31 @@
-# [[file:next.org::*Manual:%20Configure%20the%20automatically%20installed%20stuff][0E88E868-0174-40D6-B736-5BCC97A13B71]]
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*karabiner][C13ADBE3-27E1-4E34-AAED-503ACE4E7922]]
+# [[file:provisioning.org::*Manual:%20Configure%20the%20automatically%20installed%20stuff][0E88E868-0174-40D6-B736-5BCC97A13B71]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*karabiner][C13ADBE3-27E1-4E34-AAED-503ACE4E7922]]
 * Karabiner
 
 - Allow it
 - Change Return Key
   - Return to Option_L + When you type Return only
 # C13ADBE3-27E1-4E34-AAED-503ACE4E7922 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*git][38DA76DA-A9B1-42FF-9280-E0DC556A9223]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*git][38DA76DA-A9B1-42FF-9280-E0DC556A9223]]
 * Git
 
 - Not using any git completions
 # 38DA76DA-A9B1-42FF-9280-E0DC556A9223 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Bash][51B2B8EC-89C0-4B77-A09F-7C481B157E0D]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash][51B2B8EC-89C0-4B77-A09F-7C481B157E0D]]
 * Bash
 
 - Run ~echo $BASH_VERSION~
 - Mak sure that it is >=4
 - Not using any bash completions
 # 51B2B8EC-89C0-4B77-A09F-7C481B157E0D ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Spectacle][1F463B19-B41B-44C8-BFBA-49DBD5301946]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Spectacle][1F463B19-B41B-44C8-BFBA-49DBD5301946]]
 * Spectacle
 
 - Start it
 - Enable integration
 - Start at boot
 # 1F463B19-B41B-44C8-BFBA-49DBD5301946 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Little%20Snitch][5167B280-8058-4B60-92E9-2E481FD3A07F]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Little%20Snitch][5167B280-8058-4B60-92E9-2E481FD3A07F]]
 * Little Snitch
 
 - Start it
@@ -33,22 +33,22 @@
 - Start at boot
 - License it
 # 5167B280-8058-4B60-92E9-2E481FD3A07F ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*VLC][31B0BF19-6AE4-4AD3-B4BD-7287DADF25FD]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*VLC][31B0BF19-6AE4-4AD3-B4BD-7287DADF25FD]]
 * VLC
 
 - Run it
 # 31B0BF19-6AE4-4AD3-B4BD-7287DADF25FD ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*VMWare%20Fusion][3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*VMWare%20Fusion][3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9]]
 * VMWare
 
 - On a host: License it
 # 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Skype][3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Skype][3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9]]
 * Skype
 
 - Log in and disable notifications for log in and out
 # 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Dropbox][3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Dropbox][3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9]]
 * Dropbox
 
 - Log in
@@ -58,7 +58,7 @@
   - Everything
 - Pause it and copy everything over on a wired network
 # 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Bartender][8FF0E7F5-4CA1-4F1B-A787-5E523943C266]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bartender][8FF0E7F5-4CA1-4F1B-A787-5E523943C266]]
 * Bartender
 
 - License it
@@ -105,7 +105,7 @@
 Arrangement-algorithm is most activity or cared about on the outside and less so
 in the middle.
 # 8FF0E7F5-4CA1-4F1B-A787-5E523943C266 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Chrome][F44BD494-95D4-4339-BFCC-C0A472D24576]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Chrome][F44BD494-95D4-4339-BFCC-C0A472D24576]]
 * Chrome
 
 - Sign into Chrome
@@ -114,34 +114,34 @@ in the middle.
   You always forget to approve it and make worse.
   - Disable ScriptSafe right away. Turn it on as needed.
 # F44BD494-95D4-4339-BFCC-C0A472D24576 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Firefox][C31B20CA-568B-4037-B094-A46AEE3C144B]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Firefox][C31B20CA-568B-4037-B094-A46AEE3C144B]]
 * Firefox
 
 - Install the standard plugins
   - NoScript
   - Blur
 # C31B20CA-568B-4037-B094-A46AEE3C144B ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Filezilla][8474322D-6F50-4A7C-9C89-2A49C9ADB6B8]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Filezilla][8474322D-6F50-4A7C-9C89-2A49C9ADB6B8]]
 * FileZilla
 
 - Set up Filezilla for WnW
 # 8474322D-6F50-4A7C-9C89-2A49C9ADB6B8 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Carbon%20Copy%20Cloner][63644864-1754-4912-B282-02EB12AE4C8C]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Carbon%20Copy%20Cloner][63644864-1754-4912-B282-02EB12AE4C8C]]
 * Carbon Copy Cloner
 
 - On a host: License it
 # 63644864-1754-4912-B282-02EB12AE4C8C ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*flux][63644864-1754-4912-B282-02EB12AE4C8C]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*flux][63644864-1754-4912-B282-02EB12AE4C8C]]
 * flux
 
 - Enable at startup
 # 63644864-1754-4912-B282-02EB12AE4C8C ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Fonts][2EC7A9F7-9356-46E2-9A23-EA286378E24E]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Fonts][2EC7A9F7-9356-46E2-9A23-EA286378E24E]]
 * Fonts
 
 - Test in Emacs using ~view-hello-file~
 # 2EC7A9F7-9356-46E2-9A23-EA286378E24E ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Terminal][D880F24A-DE8D-4513-A354-45C9B57E0631]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Terminal][D880F24A-DE8D-4513-A354-45C9B57E0631]]
 * Terminal
 
 - Load the solarized theme
@@ -149,7 +149,7 @@ in the middle.
 - Set the font to DJSM 17
 - Set it to the default theme
 # D880F24A-DE8D-4513-A354-45C9B57E0631 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*ccrypt][257678B4-BD36-4073-AC10-0F616D817479]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*ccrypt][257678B4-BD36-4073-AC10-0F616D817479]]
  * ccrype
 
 - Verify that you can create and re-open files

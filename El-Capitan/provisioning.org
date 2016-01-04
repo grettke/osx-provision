@@ -145,6 +145,9 @@
       completely move between hosts.
 
 * Dictionary
+:PROPERTIES:
+:ID:       BF6FF97E-5530-4EBA-97C3-02A2EF259137
+:END:
 
 - Carbon Copy Cloner (CCC)
 - Disk Utility (DU)
@@ -405,6 +408,9 @@ Originally this was part of the =Writing= setup. I moved all of those steps into
 script
 
 *** Git
+:PROPERTIES:
+:ID:       E2BCA2F2-6647-424D-B496-4623E800FD4A
+:END:
 
 This script is set up to me. To customize it just search and replace on:
 - gcr@wisdomandwonder.com :: your email address for your SSH key
