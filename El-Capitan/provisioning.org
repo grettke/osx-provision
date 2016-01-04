@@ -2148,7 +2148,7 @@ The documents say to maybe do the following. I did it.
 sudo mktexlsr
 #+end_src
 
-** Manual: Personal Git and TeX Configuration Testing
+*** Manual: Personal Git and TeX Configuration Testing
 :PROPERTIES:
 :header-args: :tangle writing/configuration-writing-05-automated-personal.org
 :ID:       44798E7B-AC1F-4FD8-AB5E-3A3563B79C4B
