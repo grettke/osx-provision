@@ -127,6 +127,13 @@ brew install archey
 brew install figlet
 # 5667DE11-E68E-4558-A765-256D23A65B14 ends here
 # 41886902-0FB3-425B-B512-C1A160F8E3D6 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Set%20up%20the%20new%20profile][B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770]]
+set -x
+rm ~/.profile
+cp profile-writing ~/.profile
+. ~/.profile
+cat ~/.profile
+# B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Bunch%20of%20Stuff][CCF91EC0-F689-4279-972C-9F1D32C4C64B]]
 brew cask install xquartz
 brew cask install growlnotify
@@ -149,13 +156,6 @@ brew cask install mactex
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*GnuPlot][A6FDD2B6-412D-41A5-B58A-942C6540BB57]]
 brew install gnuplot --with-latex --with-pdflib-lite --with-test --with-x11
 # A6FDD2B6-412D-41A5-B58A-942C6540BB57 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Set%20up%20the%20new%20profile][B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770]]
-set -x
-rm ~/.profile
-cp profile-writing ~/.profile
-. ~/.profile
-cat ~/.profile
-# B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Machine][41886902-0FB3-425B-B512-C1A160F8E3D6]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Machine][291FDE06-DF44-4156-A013-B763A8727B00]]
 sudo scutil --set HostName ""

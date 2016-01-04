@@ -1323,6 +1323,40 @@ Perform the common steps.
 #+BEGIN_SRC org
 <<configuration-common-automated-steps-software>>
 #+END_SRC
+****** Set up the new profile
+:PROPERTIES:
+:ID:       B0B40263-EBC0-410C-B069-89766CBC47B9
+:END:
+
+#+NAME: B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770
+#+BEGIN_SRC sh
+set -x
+rm ~/.profile
+cp profile-writing ~/.profile
+. ~/.profile
+cat ~/.profile
+#+END_SRC
+******* EELIB
+:PROPERTIES:
+:ID:       23DCDAAE-9D70-4168-9300-AC15E3F32474
+:END:
+
+#+NAME: 4DC7B7AD-6E88-4DFF-9E27-E610E6022065
+#+BEGIN_SRC org :noweb-ref configuration-writing-manual-followup
+- Make a directory =~/EELIB=
+  ,#+BEGIN_SRC sh
+  mkdir ~/EELIB
+  ,#+END_SRC
+- Download the following JAR files to that folder
+- [[http://plantuml.com/][PlantUML]] to it, either downloading the unversioned JAR or
+   renaming it to "plantuml.jar"
+- [[http://ditaa.sourceforge.net/][ditaa]] to it, extract the versioned JAR, and rename it to "ditaa.jar"
+- [[https://www.languagetool.org/][LanguageTool]]
+  - Use the "daily build" if the download is too slow
+  - Extract it here
+  - Rename the directory to "LanguageTool"
+  - Took 8 tries to download it; kept stalling at 80%
+#+END_SRC
 ****** Growl
 :PROPERTIES:
 :ID:       48048FB4-E77B-4226-82EF-BA8AA30E2D37
@@ -1453,41 +1487,6 @@ ln -s ~/src/help/.emacs.el ~/.emacs.el
 rm -rf ~/.emacs.d
 mkdir ~/.emacs.d
 ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
-#+END_SRC
-
-******* Set up the new profile
-:PROPERTIES:
-:ID:       B0B40263-EBC0-410C-B069-89766CBC47B9
-:END:
-
-#+NAME: B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770
-#+BEGIN_SRC sh
-set -x
-rm ~/.profile
-cp profile-writing ~/.profile
-. ~/.profile
-cat ~/.profile
-#+END_SRC
-******* EELIB
-:PROPERTIES:
-:ID:       23DCDAAE-9D70-4168-9300-AC15E3F32474
-:END:
-
-#+NAME: 4DC7B7AD-6E88-4DFF-9E27-E610E6022065
-#+BEGIN_SRC org :noweb-ref configuration-writing-manual-followup
-- Make a directory =~/EELIB=
-  ,#+BEGIN_SRC sh
-  mkdir ~/EELIB
-  ,#+END_SRC
-- Download the following JAR files to that folder
-- [[http://plantuml.com/][PlantUML]] to it, either downloading the unversioned JAR or
-   renaming it to "plantuml.jar"
-- [[http://ditaa.sourceforge.net/][ditaa]] to it, extract the versioned JAR, and rename it to "ditaa.jar"
-- [[https://www.languagetool.org/][LanguageTool]]
-  - Use the "daily build" if the download is too slow
-  - Extract it here
-  - Rename the directory to "LanguageTool"
-  - Took 8 tries to download it; kept stalling at 80%
 #+END_SRC
 ***** Settings
 :PROPERTIES:
