@@ -152,6 +152,8 @@ brew cask install karabiner
 
 #+NAME: C13ADBE3-27E1-4E34-AAED-503ACE4E7922
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Karabiner
+
 - Allow it
 - Change Return Key
   - Return to Option_L + When you type Return only
@@ -171,6 +173,8 @@ brew install git
 
 #+NAME: 38DA76DA-A9B1-42FF-9280-E0DC556A9223
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Git
+
 - Not using any git completions
 #+END_SRC
 ****** Python
@@ -218,6 +222,8 @@ echo $BASH_VERSION
 
 #+NAME: 51B2B8EC-89C0-4B77-A09F-7C481B157E0D
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Bash
+
 - Run ~echo $BASH_VERSION~
 - Mak sure that it is >=4
 - Not using any bash completions
@@ -234,6 +240,8 @@ brew cask install spectacle
 
 #+NAME: 1F463B19-B41B-44C8-BFBA-49DBD5301946
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Spectacle
+
 - Start it
 - Enable integration
 - Start at boot
@@ -249,9 +257,12 @@ brew cask install little-snitch
 
 #+NAME: 5167B280-8058-4B60-92E9-2E481FD3A07F
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Little Snitch
+
 - Start it
 - Enable integration
 - Start at boot
+- License it
 #+END_SRC
 ****** VLC
 :PROPERTIES:
@@ -268,7 +279,9 @@ fi
 
 #+NAME: 31B0BF19-6AE4-4AD3-B4BD-7287DADF25FD
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-Run it.
+,* VLC
+
+- Run it
 #+end_src
 
 ****** VMWare Fusion
@@ -289,6 +302,8 @@ fi
 
 #+NAME: 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* VMWare
+
 - On a host: License it
 #+END_SRC
 
@@ -309,6 +324,8 @@ fi
 
 #+NAME: 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Skype
+
 - Log in and disable notifications for log in and out
 #+END_SRC
 
@@ -328,11 +345,14 @@ fi
 
 #+NAME: 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Dropbox
+
 - Log in
 - Sync nothing right away
 - Choose what is critical here
   - Screenshots
   - Everything
+- Pause it and copy everything over on a wired network
 #+END_SRC
 ****** Bartender
 :PROPERTIES:
@@ -346,6 +366,9 @@ brew cask install bartender
 
 #+NAME: 8FF0E7F5-4CA1-4F1B-A787-5E523943C266
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Bartender
+
+- License it
 - GENERAL
   - Launch Bartender at login: yes.
   - At bartender launch: show bartender bar: NO.
@@ -402,9 +425,13 @@ brew cask install google-chrome
 
 #+NAME: F44BD494-95D4-4339-BFCC-C0A472D24576
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-Sign into Chrome. Let the settings sync. All the JS disabling stuff needs
-you to approve it. It is irritating. You always forget to approve it and make
-it worse. Disable ScriptSafe right away. Turn it on as needed.
+,* Chrome
+
+- Sign into Chrome
+- Let the settings sync
+- All the JS disabling stuff needs you to approve it. It is irritating.
+  You always forget to approve it and make worse.
+  - Disable ScriptSafe right away. Turn it on as needed.
 #+end_src
 ****** Firefox
 :PROPERTIES:
@@ -420,7 +447,11 @@ name hasn't changed. Did a manual install instead.
 
 #+NAME: C31B20CA-568B-4037-B094-A46AEE3C144B
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-Install the standard plugins: NoScript, Blur.
+,* Firefox
+
+- Install the standard plugins
+  - NoScript
+  - Blur
 #+end_src
 
 ****** Filezilla
@@ -435,7 +466,9 @@ brew cask install filezilla
 
 #+NAME: 8474322D-6F50-4A7C-9C89-2A49C9ADB6B8
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-Set up Filezilla for WnW.
+,* FileZilla
+
+- Set up Filezilla for WnW
 #+end_src
 
 ****** Carbon Copy Cloner
@@ -456,6 +489,8 @@ fi
 
 #+NAME: 63644864-1754-4912-B282-02EB12AE4C8C
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Carbon Copy Cloner
+
 - On a host: License it
 #+END_SRC
 
@@ -477,8 +512,9 @@ fi
 
 #+NAME: 63644864-1754-4912-B282-02EB12AE4C8C
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* flux
+
 - Enable at startup
-- Displays, Disable automatic brightness setting
 #+END_SRC
 ****** Fonts
 :PROPERTIES:
@@ -503,6 +539,8 @@ brew cask install font-symbola
 
 #+NAME: 2EC7A9F7-9356-46E2-9A23-EA286378E24E
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Fonts
+
 - Test in Emacs using ~view-hello-file~
 #+END_SRC
 ****** Terminal
@@ -519,10 +557,12 @@ git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
 
 #+NAME: D880F24A-DE8D-4513-A354-45C9B57E0631
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-Select the Solarized dark theme. It is checked out in Github-Anon. Go into
-preferences, choose it, and set it as the default.
+,* Terminal
 
-Set the font to DJSM 17.
+- Load the solarized theme
+- Select the Solarized dark theme
+- Set the font to DJSM 17
+- Set it to the default theme
 #+END_SRC
 
 ****** ccrypt
@@ -537,6 +577,8 @@ brew install ccrypt
 
 #+NAME: 257678B4-BD36-4073-AC10-0F616D817479
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+ ,* ccrype
+
 - Verify that you can create and re-open files
 #+END_SRC
 
@@ -1343,6 +1385,8 @@ cat ~/.profile
 
 #+NAME: 4DC7B7AD-6E88-4DFF-9E27-E610E6022065
 #+BEGIN_SRC org :noweb-ref configuration-writing-manual-followup
+,* EELIB
+
 - Make a directory =~/EELIB=
   ,#+BEGIN_SRC sh
   mkdir ~/EELIB
@@ -1364,6 +1408,8 @@ cat ~/.profile
 
 #+NAME: 292B3960-AD89-413E-8E67-2BDBBAC7ACBE
 #+BEGIN_SRC org :noweb-ref configuration-writing-manual-followup
+,* Growl
+
 - Install via the app store
 - Start it
 - enable run on login
@@ -1405,6 +1451,8 @@ brew cask install deltawalker
 
 #+NAME: 25ED30C2-0916-49E2-9F9F-DC96D6B7DDE6
 #+BEGIN_SRC org :noweb-ref configuration-writing-manual-followup
+,* DeltaWalker
+
 Got to it's Cellar location and drag it into Applications.
 
 License it.
