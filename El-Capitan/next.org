@@ -109,6 +109,7 @@ Set up the new profile.
 rm ~/.profile
 cp ./profile-common ~/.profile
 source ~/.profile
+cat ~/.profile
 #+END_SRC
 
 ****** Debug
@@ -1330,10 +1331,9 @@ Perform the common steps.
 
 #+NAME: B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770
 #+BEGIN_SRC sh
-set -x
 rm ~/.profile
-cp profile-writing ~/.profile
-. ~/.profile
+cp ./profile-writing ~/.profile
+source ~/.profile
 cat ~/.profile
 #+END_SRC
 ******* EELIB

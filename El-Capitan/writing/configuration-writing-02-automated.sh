@@ -4,6 +4,7 @@
 rm ~/.profile
 cp ./profile-common ~/.profile
 source ~/.profile
+cat ~/.profile
 # 92F77AD1-E9DC-4740-B3A3-C6A3A4034068 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Debug][4EE99FBE-E06D-4D65-9B29-F3C9D2704C4B]]
 set -x
@@ -128,10 +129,9 @@ brew install figlet
 # 5667DE11-E68E-4558-A765-256D23A65B14 ends here
 # 41886902-0FB3-425B-B512-C1A160F8E3D6 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Set%20up%20the%20new%20profile][B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770]]
-set -x
 rm ~/.profile
-cp profile-writing ~/.profile
-. ~/.profile
+cp ./profile-writing ~/.profile
+source ~/.profile
 cat ~/.profile
 # B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Bunch%20of%20Stuff][CCF91EC0-F689-4279-972C-9F1D32C4C64B]]

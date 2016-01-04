@@ -4,6 +4,7 @@
 rm ~/.profile
 cp ./profile-common ~/.profile
 source ~/.profile
+cat ~/.profile
 # 92F77AD1-E9DC-4740-B3A3-C6A3A4034068 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Debug][4EE99FBE-E06D-4D65-9B29-F3C9D2704C4B]]
 set -x
