@@ -412,3 +412,1791 @@ This script is set up to me. To customize it just search and replace on:
 
 #  LocalWords:  IOSXECA PHOSI PHOSDI IOSEXECA gcr Xcode VC orion orgion rsa
 #  LocalWords:  github
+* Provisioning
+:PROPERTIES:
+:ID:       262EEA68-1753-489D-A3BE-672C162CD356
+:Effort:   energy
+:END:
+** Common
+:PROPERTIES:
+:ID:       372CA3F6-90BB-48B0-A181-7866D1846F92
+:END:
+*** Common Manual
+:PROPERTIES:
+:ID:       BF5455FF-FABE-4A6D-B3B9-685DDDB83D09
+:HEADER-ARGS: :noweb-ref configuration-common-manual
+:END:
+
+#+NAME: 639707FE-FE60-439E-A8C8-9FBD9936D1C4
+#+BEGIN_SRC org
+- Re-image your box
+  - Host :: ~PHOSDI~
+  - Guest :: ~IOSXECA~
+- During configuration log into the App Store
+- Make a user named ~gcr~ and choose an avatar
+- Mouse
+  - Host :: Connect Bluetooth mouse
+  - Mke the mouse slow
+- Host :: Reconfigure control keys
+- Host :: Maximize resolution
+- Host :: Show Keychain Access in Menubar
+- Screensaver: Flurry, 10m
+- Host :: Add printer
+- Energy saver
+  - Host :: do
+    - On power, Computer sleep never,never auto sleep when display is off
+    - On battery, Screen sleep 5m
+      - Don't slightly dim the display on battery power
+  - Guest :: Computer sleep never, Screen sleep 15
+- Sound
+  - Show volume in menubar
+- Finder
+  - Preferences
+    - Favorites
+      - <Home>
+    - Devices
+      - <Computer>
+- Development Tools
+  - If you want to use XCode :: Go to the App Store and Install it
+    - 4.5GB download
+  - Install the CLT. Choose *Install*.
+    ,#+NAME: E0FB4DC2-E07D-4462-A997-99E112066E37
+    ,#+BEGIN_SRC sh
+    xcode-select --install
+    ,#+END_SRC
+#+END_SRC
+*** Common Profile
+:PROPERTIES:
+:ID:       5790D2CA-8436-4F44-829B-32F2986E8A68
+:END:
+
+#+NAME: common-profile-body
+#+BEGIN_SRC sh
+export VISUAL=vim
+export EDITOR='$VISUAL'
+export PS1='\u@\h:\w> '
+export HOMEBREW_NO_EMOJI=1
+#+END_SRC
+
+#+NAME: common-profile-path-pre
+#+BEGIN_SRC sh
+/usr/local/bin
+#+END_SRC
+
+#+NAME: common-profile-path-post
+#+BEGIN_SRC sh
+$PATH
+#+END_SRC
+
+You must us =:comments no= otherwise the profile gets mangled.
+
+#+NAME: 25086576-D16D-45F4-9141-1A45E2C8F8FD
+#+BEGIN_SRC sh :tangle common/profile-common :comments no
+<<common-profile-body>>
+export PATH=<<common-profile-path-pre>>:<<common-profile-path-post>>
+#+END_SRC
+
+This profile approach will evolve.
+
+*** Automated
+:PROPERTIES:
+:ID:       FC8DB1F5-25FA-4DD2-A6C8-3F434F6FCCF9
+:END:
+**** Steps
+:PROPERTIES:
+:ID:       0A71A737-A201-43A5-A5DD-E62E78EE9C2E
+:END:
+***** Software
+:PROPERTIES:
+:ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
+:HEADER-ARGS: :noweb-ref configuration-common-automated-steps-software
+:END:
+****** Profile
+:PROPERTIES:
+:ID:       56989957-A8F5-4C47-9B27-31A3AC4ED8DD
+:END:
+
+Set up the new profile.
+
+#+NAME: 92F77AD1-E9DC-4740-B3A3-C6A3A4034068
+#+BEGIN_SRC sh
+rm ~/.profile
+cp ./profile-common ~/.profile
+source ~/.profile
+cat ~/.profile
+#+END_SRC
+
+****** Debug
+:PROPERTIES:
+:ID:       6BA13619-7F02-4489-B734-E5D12DCFDAAD
+:END:
+
+#+NAME: 4EE99FBE-E06D-4D65-9B29-F3C9D2704C4B
+#+BEGIN_SRC sh
+set -x
+sudo -v
+#+END_SRC
+
+****** Brew & Brew Cask
+:PROPERTIES:
+:ID:       3CD7F53A-C7B3-4C54-9E43-7B43E1D2E54F
+:END:
+
+Brew is [[http://brew.sh/][here]].
+
+#+NAME: DB082535-A43F-46EA-9F1B-1BB6302CA396
+#+BEGIN_SRC sh
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#+END_SRC
+
+BrewCask is [[http://caskroom.io][here]].
+
+#+NAME: 5C68042B-9C59-42C9-9A7F-D625C0475C3A
+#+BEGIN_SRC sh
+brew tap caskroom/cask
+#+END_SRC
+****** karabiner
+:PROPERTIES:
+:ID:       EE4E6BA8-4BB5-4ACD-9657-36C776448CE4
+:END:
+#+NAME: E81A12BB-2B0F-468D-8090-4B525168B86A
+#+BEGIN_SRC sh
+brew cask install karabiner
+#+END_SRC
+
+#+NAME: C13ADBE3-27E1-4E34-AAED-503ACE4E7922
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Karabiner
+
+- Allow it
+- Change Return Key
+  - Return to Option_L + When you type Return only
+#+END_SRC
+
+****** git
+:PROPERTIES:
+:ID:       1F0C8A4B-097E-4090-93A7-8A2958331E4F
+:END:
+
+Important because Brew and everything uses this everywhere.
+
+#+NAME: F5E5B964-50FA-49EF-BABF-EFE558057EC2
+#+BEGIN_SRC sh
+brew install git
+#+END_SRC
+
+#+NAME: 38DA76DA-A9B1-42FF-9280-E0DC556A9223
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Git
+
+- Not using any git completions
+#+END_SRC
+****** Python
+:PROPERTIES:
+:ID:       1BA55F5A-9902-4539-9494-0231C4DBD9B6
+:END:
+
+Important because it is such a versatile distribution.
+
+#+NAME: 4128F3DB-7E7C-4885-B54E-AA78423855C5
+#+BEGIN_SRC sh
+brew install python
+brew linkapps python
+#+END_SRC
+****** Ruby
+:PROPERTIES:
+:ID:       B7D03962-A386-4E62-AA68-3A7F95AF2CA4
+:END:
+
+Important because Brew uses this.
+
+#+NAME: EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D
+#+BEGIN_SRC sh
+brew install ruby
+#+END_SRC
+****** Bash
+:PROPERTIES:
+:ID:       223C4BB3-2F4D-418C-93B4-8AFF0801BD43
+:END:
+
+[[http://clubmate.fi/upgrade-to-bash-4-in-mac-os-x/][Via]].
+
+#+NAME: ADE3737D-A638-4BBD-9DD5-C42681EA1C0D
+#+BEGIN_SRC sh
+echo $BASH_VERSION
+brew install bash
+if grep "/usr/local/bin/bash" /etc/shells > /dev/null; then
+    echo "brew bash already configured in shells; doing nothing"
+else
+    sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+    chsh -s /usr/local/bin/bash
+fi
+echo $BASH_VERSION
+#+END_SRC
+
+#+NAME: 51B2B8EC-89C0-4B77-A09F-7C481B157E0D
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Bash
+
+- Run ~echo $BASH_VERSION~
+- Mak sure that it is >=4
+- Not using any bash completions
+#+END_SRC
+****** Spectacle
+:PROPERTIES:
+:ID:       1553426A-6A83-4104-AAA8-6DEF05FBBBC4
+:END:
+
+#+NAME: 944FB8AE-DD79-49C6-8ABC-878A782234BE
+#+BEGIN_SRC sh
+brew cask install spectacle
+#+END_SRC
+
+#+NAME: 1F463B19-B41B-44C8-BFBA-49DBD5301946
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Spectacle
+
+- Start it
+- Enable integration
+- Start at boot
+#+END_SRC
+****** Little Snitch
+:PROPERTIES:
+:ID:       5D68F827-7AEA-4C40-A2FF-41ABDAAA53A9
+:END:
+#+NAME: 0A6CDD3C-BB1F-4AB1-8523-C4F5383A6856
+#+BEGIN_SRC sh
+brew cask install little-snitch
+#+END_SRC
+
+#+NAME: 5167B280-8058-4B60-92E9-2E481FD3A07F
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Little Snitch
+
+- Start it
+- Enable integration
+- Start at boot
+- License it
+#+END_SRC
+****** VLC
+:PROPERTIES:
+:ID:       C47DA927-A6B2-4751-98AC-D3200E6F4095
+:END:
+#+NAME: 093814E5-DB0A-481C-9B39-ACF62216BB55
+#+begin_src sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install vlc
+else
+    echo "vlc: Only install on hosts"
+fi
+#+end_src
+
+#+NAME: 31B0BF19-6AE4-4AD3-B4BD-7287DADF25FD
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* VLC
+
+- Run it
+#+end_src
+
+****** VMWare Fusion
+:PROPERTIES:
+:ID:       96ADB3AF-1BDB-4F31-BB31-D5E32221AC8D
+:END:
+
+Only install it on hosts.
+
+#+NAME: A5358959-F496-4368-9141-318664D40C6C
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install vmware-fusion
+else
+    echo "vmware-fusion: Only install on hosts"
+fi
+#+END_SRC
+
+#+NAME: 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* VMWare
+
+- On a host: License it
+#+END_SRC
+
+****** Skype
+:PROPERTIES:
+:ID:       6003585A-A3B2-453A-B3CF-33240C69BB0E
+:END:
+Only install it on hosts.
+
+#+NAME: A5358959-F496-4368-9141-318664D40C6C
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install skype
+else
+    echo "skype: Only install on hosts"
+fi
+#+END_SRC
+
+#+NAME: 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Skype
+
+- Log in and disable notifications for log in and out
+#+END_SRC
+
+****** Dropbox
+:PROPERTIES:
+:ID:       97065F78-F2C3-4189-A24E-BAB474EC2D59
+:END:
+
+#+NAME: 3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install dropbox
+else
+    echo "dropbox: Only install on hosts"
+fi
+#+END_SRC
+
+#+NAME: 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Dropbox
+
+- Log in
+- Sync nothing right away
+- Choose what is critical here
+  - Screenshots
+  - Everything
+- Pause it and copy everything over on a wired network
+#+END_SRC
+****** Bartender
+:PROPERTIES:
+:ID:       119F1391-9A8A-49F6-810E-E2620F5AF15F
+:END:
+
+#+NAME: 1483E8B6-098B-4793-91BD-F5081B2F76ED
+#+begin_src sh
+brew cask install bartender
+#+end_src
+
+#+NAME: 8FF0E7F5-4CA1-4F1B-A787-5E523943C266
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Bartender
+
+- License it
+- GENERAL
+  - Launch Bartender at login: yes.
+  - At bartender launch: show bartender bar: NO.
+  - Bartender bar: autohides, YES.
+- Menu bar icon highlight
+  - Show when bartender bar is open: YES.
+  - Bartender menu baricon:
+- ADVANCED
+  - Bartender menu bar icon: visible YES.
+  - Clicking on bartender will: open bartender bar.
+  - For everything moved into the gutter
+  - I made it display in the main for 5m.
+
+- Ordered them (reorder by holding Pretzel and dragging them) (do this after installing everything)
+  - little snitch
+    - Can't move this one at all anyway
+  - Date/Time
+  - Volume
+  - Keychain Access
+  - Battery
+  - Bluetooth
+  - Wifi
+  - Vagrant Manager
+  - Dropbox
+  - Fast User Switching Menu
+  - Applications Menu Settings
+  - Notification center
+  - Spotlight
+  - Bartender
+
+  - Hide
+    - Growl
+    - Karabiner
+    - Spectacle
+    - Carbon Copy Cloner
+    - AirPort Display
+    - Time Machine (completely)
+    - Google Chrome (Hangouts)
+    - Microsoft Remote Desktop
+
+Arrangement-algorithm is most activity or cared about on the outside and less so
+in the middle.
+#+end_src
+
+****** Chrome
+:PROPERTIES:
+:ID:       27B3E977-821E-4966-B6CA-438212B4CA2A
+:END:
+
+#+NAME: 63C6CF90-7C76-4260-A7A5-7786561B2A70
+#+begin_src sh
+brew cask install google-chrome
+#+end_src
+
+#+NAME: F44BD494-95D4-4339-BFCC-C0A472D24576
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Chrome
+
+- Sign into Chrome
+- Let the settings sync
+- All the JS disabling stuff needs you to approve it. It is irritating.
+  You always forget to approve it and make worse.
+  - Disable ScriptSafe right away. Turn it on as needed.
+#+end_src
+****** Firefox
+:PROPERTIES:
+:ID:       2348C82F-F560-4C30-8B80-9D7EE4D4291F
+:END:
+#+NAME: 32D109DB-1554-40D5-B591-FCC2F922F903
+#+begin_src sh
+brew cask install firefox
+#+end_src
+
+Sometimes this install fails. I checked the file download. The file exists. The
+name hasn't changed. Did a manual install instead.
+
+#+NAME: C31B20CA-568B-4037-B094-A46AEE3C144B
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Firefox
+
+- Install the standard plugins
+  - NoScript
+  - Blur
+#+end_src
+
+****** Filezilla
+   :PROPERTIES:
+   :ID:       3F67D0FE-1FE7-4578-9C71-DE4DBD6F75C2
+   :END:
+
+#+NAME: E35E5182-A810-4547-B6E8-866CC13AA7FA
+#+begin_src sh :tangle
+brew cask install filezilla
+#+end_src
+
+#+NAME: 8474322D-6F50-4A7C-9C89-2A49C9ADB6B8
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* FileZilla
+
+- Set up Filezilla for WnW
+#+end_src
+
+****** Carbon Copy Cloner
+:PROPERTIES:
+:ID:       F0BE2195-81FE-42F7-92F2-7AEB6A834041
+:END:
+
+Only install it on hosts.
+
+#+NAME: A5358959-F496-4368-9141-318664D40C6C
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install carbon-copy-cloner
+else
+    echo "carbon-copy-cloner: Only install on hosts"
+fi
+#+END_SRC
+
+#+NAME: 63644864-1754-4912-B282-02EB12AE4C8C
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Carbon Copy Cloner
+
+- On a host: License it
+#+END_SRC
+
+****** flux
+:PROPERTIES:
+:ID:       F0BE2195-81FE-42F7-92F2-7AEB6A834041
+:END:
+
+Only install it on hosts.
+
+#+NAME: A5358959-F496-4368-9141-318664D40C6C
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install flux
+else
+    echo "flux: Only install on hosts"
+fi
+#+END_SRC
+
+#+NAME: 63644864-1754-4912-B282-02EB12AE4C8C
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* flux
+
+- Enable at startup
+#+END_SRC
+****** Fonts
+:PROPERTIES:
+:ID:       03993E03-45DF-498A-B197-283C61313E39
+:END:
+
+#+NAME: DD72394C-9D37-446C-A704-E88BE2B0CEED
+#+BEGIN_SRC sh
+brew tap caskroom/fonts
+#+END_SRC
+
+Install them automatically.
+
+#+NAME: 74BEB31B-9499-4144-B997-9E16B3FA24D9
+#+BEGIN_SRC sh
+brew cask install font-dejavu-sans
+brew cask install font-quivira
+brew cask install font-noto-sans
+brew cask install font-noto-sans-symbols
+brew cask install font-symbola
+#+END_SRC
+
+#+NAME: 2EC7A9F7-9356-46E2-9A23-EA286378E24E
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Fonts
+
+- Test in Emacs using ~view-hello-file~
+#+END_SRC
+****** Terminal
+:PROPERTIES:
+:ID:       4A37A9A3-A9D6-4ECD-AB89-EB0FE9815091
+:END:
+
+#+NAME: 429CCB8C-CFCF-40C9-87B5-03384D5DFE14
+#+BEGIN_SRC sh
+mkdir -p ~/git/github-anonymous
+cd ~/git/github-anonymous
+git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
+#+END_SRC
+
+#+NAME: D880F24A-DE8D-4513-A354-45C9B57E0631
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Terminal
+
+- Load the solarized theme
+- Select the Solarized dark theme
+- Set the font to DJSM 17
+- Set it to the default theme
+#+END_SRC
+
+****** ccrypt
+:PROPERTIES:
+:ID:       F9E3F2A3-F16A-4EB8-8F4F-4FF47C7BBE06
+:END:
+
+#+NAME: 9FBFA1B1-9677-4366-BF34-9A5D33A5677C
+#+BEGIN_SRC sh
+brew install ccrypt
+#+END_SRC
+
+#+NAME: 257678B4-BD36-4073-AC10-0F616D817479
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+ ,* ccrype
+
+- Verify that you can create and re-open files
+#+END_SRC
+
+****** tree
+:PROPERTIES:
+:ID:       8A7F33C7-CF3D-4E64-A63E-2AECD13FFD5F
+:END:
+#+NAME: 91E886FD-0DFA-475D-B85C-B7DD07BDFB1B
+#+BEGIN_SRC sh
+brew install tree
+#+END_SRC
+
+****** archey
+:PROPERTIES:
+:ID:       AAF25357-3F8F-4A19-902D-D494D4D7FE38
+:END:
+
+#+NAME: 900B81AC-3E1F-411F-9B11-9D23B958296E
+#+BEGIN_SRC sh
+brew install archey
+#+END_SRC
+
+****** figlet
+:PROPERTIES:
+:ID:       ADF24324-CF88-44E0-BE77-DC65DF37502E
+:END:
+
+#+NAME: 5667DE11-E68E-4558-A765-256D23A65B14
+#+BEGIN_SRC sh
+brew install figlet
+#+END_SRC
+
+***** Settings
+:PROPERTIES:
+:ID:       7507CE02-9156-4748-A621-2CF51241B95E
+:END:
+****** Machine
+:PROPERTIES:
+:ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
+:HEADER-ARGS: :noweb-ref configuration-common-automated-steps-settings-machine
+:END:
+
+This script should be idempotent.
+Set the computer's "names". There are 3 resources ([[http://ilostmynotes.blogspot.com/2012/03/computername-vs-localhostname-vs.html][1]], [[http://osxdaily.com/2012/10/24/set-the-hostname-computer-name-and-bonjour-name-separately-in-os-x/][2]], [[http://hack.org/mc/writings/mac-survival.html][3]]) that I used to make
+sense of the different names. It is simple, and new to me.
+
+Originally I set every name to the same value. Doing so didn't result in
+warnings but it did result in an incorrect "Computer Name" and
+"Local Host Name". Based on that experience, I'm going to give names using this
+strategy to name machines now:
+
+- HostName
+  - All lower case
+  - <Logical name>-<UUID>.<org|vm>
+- LocalHostName
+  - All lower case
+  - <Logical name>-<UUID>
+- NetBIOS
+  - All lower case
+  - <Logical name>-<UUID>
+- ComputerName
+  - "<Logical name> (<UUID>)"
+
+Defining this naming approach helped me learn more about the intent of the
+name and what I wanted from them.
+
+#+NAME: 291FDE06-DF44-4156-A013-B763A8727B00
+#+BEGIN_SRC sh
+sudo scutil --set HostName ""
+echo "Enter HostName (plain old hostname): "
+read vhn
+sudo scutil --set HostName $vhn
+sudo scutil --set LocalHostName ""
+echo "Enter LocalHostName (name for Bonjour services): "
+read vlhn
+sudo scutil --set LocalHostName $vlhn
+sudo defaults delete 'com.apple.smb.server' NetBIOSName
+echo "Enter NetBIOSName (name that Windows boxes will see): "
+read vnbn
+sudo defaults write 'com.apple.smb.server' NetBIOSName -string $vnbn
+sudo scutil --set ComputerName ""
+echo "Enter ComputerName (human friendly GUI name): "
+read vcn
+sudo scutil --set ComputerName $cn
+#+END_SRC
+
+Display login window as name and password.
+#+NAME: 2F39C8B9-CA25-4C94-8E77-AD348D5235A9
+#+BEGIN_SRC sh
+sudo defaults write /Library/Preferences/com.apple.loginwindow.plist SHOWFULLNAME -bool true
+#+END_SRC
+
+Login message.
+#+NAME: 850816F3-B82E-4EE0-9895-6E99CB6A7593
+#+BEGIN_SRC sh
+sudo defaults write /Library/Preferences/com.apple.loginwindow.plist LoginwindowText -string "
+All creativity is an extended form of a joke.
+          — Alan Kay"
+#+END_SRC
+
+Disable Gatekeeper.
+#+NAME: DBE84671-1CC0-4DBA-AC7C-72F9EAC857A0
+#+BEGIN_SRC sh
+sudo spctl --master-disable
+#+END_SRC
+
+****** User
+:PROPERTIES:
+:HEADER-ARGS: :noweb-ref configuration-common-automated-steps-settings-user
+:ID:       B0472249-DD96-45C4-A558-088A56501C3D
+:END:
+
+This script should be idempotent.
+
+#+NAME: 2E9BB301-11E8-4A9A-979D-C7F04FAF6F78
+#+BEGIN_SRC sh
+<<sudo-and-set>>
+#+END_SRC
+
+- These commands are all [[https://github.com/kitchenplan/chef-osxdefaults/tree/master/recipes][copied]]
+  - Including the documentation
+  - Some of them have corrections and changes
+******* Globals, Logical or Literal
+:PROPERTIES:
+:ID:       EC01CF33-40EE-4F63-8A27-A88DE32FC557
+:END:
+
+Set background.
+#+NAME: 6755B45A-4331-4CA4-89D5-7A5906C3966A
+#+BEGIN_SRC sh
+cd ~/Pictures/
+curl -O http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2015/02/M101-ORG.jpg
+sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '~/Pictures/M101-ORG.jpg'";
+#+END_SRC
+
+Set default volume.
+#+NAME: 57F27EEA-630B-4CB4-9A04-27091C4AD4CB
+#+BEGIN_SRC sh
+osascript -e 'set volume output volume 50'
+#+END_SRC
+
+Disable auto-correct.
+#+NAME: 02346DB0-0D1F-4A80-89ED-C8B723C05BB6
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' NSAutomaticSpellingCorrectionEnabled -bool false
+#+END_SRC
+
+Expand print panel by default.
+#+NAME: 207B6C0E-E636-4FAB-A859-6E3CA370C40E
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' PMPrintingExpandedStateForPrint -bool true
+defaults write 'NSGlobalDomain' PMPrintingExpandedStateForPrint2 -bool true
+#+END_SRC
+
+Expand save panel by default.
+#+NAME: FBAD5CA1-F984-46AE-940D-90B1FC6C8454
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' NSNavPanelExpandedStateForSaveMode -bool true
+defaults write 'NSGlobalDomain' NSNavPanelExpandedStateForSaveMode2 -bool true
+#+END_SRC
+
+Automatically quit printer app once the print jobs complete.
+#+NAME: F6899984-2233-4027-BBEF-1005657C7B5E
+#+BEGIN_SRC sh
+defaults write 'com.apple.print.PrintingPrefs' 'Quit When Finished' -bool true
+#+END_SRC
+
+Add battery percentage in menubar.
+#+NAME: 8351B207-A376-4149-A876-4E3E8CE06732
+#+BEGIN_SRC sh
+defaults write 'com.apple.menuextra.battery' ShowPercent -bool true
+#+END_SRC
+
+Add date in menubar clock.
+#+NAME: 3525C306-F373-4146-8579-60E38D765425
+#+BEGIN_SRC sh
+defaults write 'com.apple.menuextra.clock' DateFormat -string "EEE MMM d  HH:mm"
+#+END_SRC
+
+Prevent Time Machine from prompting to use new hard drives as backup volume.
+#+NAME: B7665462-71BC-4929-86C9-4766C3BAA9DB
+#+BEGIN_SRC sh
+defaults write 'com.apple.TimeMachine' DoNotOfferNewDisksForBackup -bool true
+#+END_SRC
+
+Avoid creating .DS_Store files on network volumes.
+#+NAME: EE3BD935-46A0-425C-9DAB-0CB341D5E501
+#+BEGIN_SRC sh
+defaults write 'com.apple.desktopservices' DSDontWriteNetworkStores -bool true
+#+END_SRC
+
+Save to disk (not to iCloud) by default.
+#+NAME: 526B969F-94AD-441B-8F5D-52141EDA0507
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' NSDocumentSaveNewDocumentsToCloud -bool false
+#+END_SRC
+
+Increase window resize speed for Cocoa applications.
+#+NAME: 16416BAF-CFEE-43E2-9B6B-C2B85C73D627
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' NSWindowResizeTime -float 0.001
+#+END_SRC
+
+Use the Graphite theme.
+#+NAME: 8D12169D-8717-46D4-920E-D4C322C4458E
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' AppleAquaColorVariant -int 6
+#+END_SRC
+
+Use dark menu bar and Dock
+#+NAME: 337E87AE-39CC-41F5-B115-11B994E125B5
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' AppleInterfaceStyle -string Dark
+#+END_SRC
+
+Disable the “Are you sure you want to open this application?” dialog.
+#+NAME: F89AEE9E-D5D6-4EF9-9914-CE2C3AE53B9B
+#+BEGIN_SRC sh
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+#+END_SRC
+
+Display ASCII control characters using caret notation in standard text views.
+Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`.
+#+NAME: A2CDF5C4-9239-47AD-9978-09582362316C
+#+BEGIN_SRC sh
+defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
+#+END_SRC
+
+Disable automatic termination of inactive apps.
+#+NAME: 4FDA48E0-AC9B-48B9-A09D-E54F72787F64
+#+BEGIN_SRC sh
+defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+#+END_SRC
+
+Disable the crash reporter.
+#+NAME: E102244A-C691-4E62-BE68-3BF1EB8D340F
+#+BEGIN_SRC sh
+defaults write com.apple.CrashReporter DialogType -string "none"
+#+END_SRC
+
+Set Help Viewer windows to non-floating mode.
+#+NAME: FC22C88E-44B4-4C50-B00A-82DB0DCDB519
+#+BEGIN_SRC sh
+defaults write com.apple.helpviewer DevMode -bool true
+#+END_SRC
+
+Restart automatically if the computer freezes.
+#+NAME: F3347821-BEB6-4D91-8ADC-D968F825D491
+#+BEGIN_SRC sh
+sudo systemsetup -setrestartfreeze on
+#+END_SRC
+
+Check for software updates daily, not just once per week.
+#+NAME: B0166A42-EB93-444D-ACDA-A0E2AED02543
+#+BEGIN_SRC sh
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+#+END_SRC
+
+Disable Notification Center and remove the menu bar icon.
+#+NAME: 493ABAF1-8385-4ADF-90C3-B61699A5603B
+#+BEGIN_SRC sh
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+#+END_SRC
+
+Disable smart quotes as they’re annoying when typing code.
+#+NAME: 1450BB2D-B822-48D3-ADC8-46FFF00B730C
+#+BEGIN_SRC sh
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+#+END_SRC
+
+Disable smart dashes as they’re annoying when typing code.
+#+NAME: B829AB6A-309B-406F-A51F-2CF38C183210
+#+BEGIN_SRC sh
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+#+END_SRC
+
+******* Hardware
+:PROPERTIES:
+:ID:       F6533ADA-A21F-49E7-8DD7-4447CF69A528
+:END:
+
+Disable press-and-hold for keys in favor of key repeat.
+#+NAME: 9078E7EB-65AE-4B8E-978A-E6687DB2C4EA
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' ApplePressAndHoldEnabled -bool false
+#+END_SRC
+
+Use all F1, F2, etc. keys as standard function keys.
+#+NAME: 662F5288-F102-4FCA-B052-31933DFEFC0B
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' com.apple.keyboard.fnState -bool true
+#+END_SRC
+
+Increase sound quality for Bluetooth headphones/headsets.
+#+NAME: 03E4D631-C6E3-4E4E-BCE9-BDB87D8549FD
+#+BEGIN_SRC sh
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+#+END_SRC
+
+******* Dock
+:PROPERTIES:
+:ID:       B3122846-4906-4F7C-AD02-63A84B47A92D
+:END:
+
+Automatically hide and show the dock.
+#+NAME: 44629106-AB81-4099-AAAE-2A1692110652
+#+BEGIN_SRC sh
+defaults write com.apple.dock autohide -bool true && killall Dock
+#+END_SRC
+
+Do not animate opening applications from the Dock.
+#+NAME: 3A5370F0-1F37-47A9-8AD2-5A54F7BEBAF6
+#+BEGIN_SRC sh
+defaults write com.apple.dock launchanim -bool false && killall Dock
+#+END_SRC
+
+Enable highlight hover effect for the grid view of a stack.
+#+NAME: 2D1566D0-5912-4770-A53E-DAB815E886F1
+#+BEGIN_SRC sh
+defaults write com.apple.dock mouse-over-hilte-stack -bool true && killall Dock
+#+END_SRC
+
+Make Dock icons of hidden applications translucent.
+#+NAME: 95CAD941-7BDA-4D4E-BF2E-976D9D07DA37
+#+BEGIN_SRC sh
+defaults write com.apple.dock showhidden -bool true && killall Dock
+#+END_SRC
+
+Minimize to application.
+#+NAME: 6AB142A8-9150-4B3B-8709-237D468212E0
+#+BEGIN_SRC sh
+defaults write com.apple.dock minimize-to-application -bool true && killall Dock
+#+END_SRC
+
+Move the Dock to the left side of the screen.
+#+NAME: 7CF0E408-7318-4921-B8BE-F834C8A63BC7
+#+BEGIN_SRC sh
+defaults write com.apple.dock orientation -string left && killall Dock
+#+END_SRC
+
+Remove the animation when hiding/showing the dock.
+#+NAME: 2250EED5-046B-4F55-B64E-04787C078F5B
+#+BEGIN_SRC sh
+defaults write com.apple.Dock autohide-time-modifier -float 0 && killall Dock
+#+END_SRC
+
+Remove the auto-hiding Dock delay".
+#+NAME: CA55EDF7-AB57-450A-A80A-D9BCE9219951
+#+BEGIN_SRC sh
+defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
+#+END_SRC
+
+Set the icon size of Dock items to 50 pixels.
+#+NAME: C92642D8-BA50-46E4-B9D0-A0A7DEEAF0B9
+#+BEGIN_SRC sh
+defaults write com.apple.Dock tilesize -int 50 && killall Dock
+#+END_SRC
+
+Show indicator lights for open applications in the Dock.
+#+NAME: D643A6DB-461A-425D-9516-C841B0A4C9E0
+#+BEGIN_SRC sh
+defaults write com.apple.Dock show-process-indicators -bool true && killall Dock
+#+END_SRC
+
+Wipe all (default) app icons from Dock.
+#+NAME: 88023507-0070-4713-9F0D-36344D3FDED0
+#+BEGIN_SRC sh
+defaults write 'com.apple.dock' persistent-apps -array '' && killall Dock
+#+END_SRC
+
+Speed up Mission Control animations.
+#+NAME: 2AEA50FA-CA94-438A-B82E-3B465CAA2E12
+#+BEGIN_SRC sh
+defaults write 'com.apple.dock' expose-animation-duration -float 0.1 && killall Dock
+#+END_SRC
+
+******* Finder
+:PROPERTIES:
+:ID:       E7984F15-4360-4F00-B754-CC00FC4D4124
+:END:
+
+Allow text selection in Quick Look.
+#+NAME: A6759B25-1B21-40C2-A75C-B2DF18A3CAC1
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' QLEnableTextSelection -bool true && killall Finder
+#+END_SRC
+
+Automatically open a new Finder window when a volume is mounted.
+#+NAME: DCDE10BB-3848-4C70-9B7A-8F5641950CCB
+#+BEGIN_SRC sh
+defaults write 'com.apple.frameworks.diskimages' auto-open-ro-root -bool true && killall Finder
+defaults write 'com.apple.frameworks.diskimages' auto-open-rw-root -bool true && killall Finder
+defaults write 'com.apple.finder' OpenWindowForNewRemovableDisk -bool true && killall Finder
+#+END_SRC
+
+Disable the warning before emptying the Trash.
+#+NAME: 4647036E-8DB1-4119-B6D1-2028941B9A91
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' WarnOnEmptyTrash -bool false && killall Finder
+#+END_SRC
+
+Disable the warning when changing a file extension.
+#+NAME: 00CEF20F-FDD2-464F-B8E4-968682A62B26
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' FXEnableExtensionChangeWarning -bool false && killall Finder
+#+END_SRC
+
+Set finder to display full path in title bar.
+#+NAME: 1C946EE8-4D17-4D03-BF58-F2C5C1280739
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' _FXShowPosixPathInTitle -bool true && killall Finder
+#+END_SRC
+
+New Finder window shows the homefolder.
+#+NAME: 85E615B8-24C6-4819-B437-BB1ED2384E82
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' NewWindowTarget -string PfHm && killall Finder
+#+END_SRC
+
+When performing a search, search the current folder by default.
+#+NAME: FB3EFB97-6BEC-4BE4-B8D5-8EACD289CE66
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' FXDefaultSearchScope -string SCcf && killall Finder
+#+END_SRC
+
+Show all files in Finder.
+#+NAME: 5F5E19CE-ECA4-4633-8C67-299C2237C7E2
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' AppleShowAllFiles -bool true && killall Finder
+#+END_SRC
+
+Show file extensions in Finder.
+#+NAME: 7C10B346-5B87-456F-B424-1ED79C2ADE2B
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' AppleShowAllExtensions -bool true && killall Finder
+#+END_SRC
+
+Show path bar in Finder.
+#+NAME: 69400DBC-BA03-4CB4-B724-BA22C070CB2B
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' ShowPathbar -bool true && killall Finder
+#+END_SRC
+
+Show status bar in Finder.
+#+NAME: 6D032485-D6D0-47A4-9B14-06FE6FC0CB80
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' ShowStatusBar -bool true && killall Finder
+#+END_SRC
+
+Sidebar icon size Small.
+#+NAME: 38B74BA0-FFCD-4E46-A1F0-BA839DF631DB
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' NSTableViewDefaultSizeMode -bool true && killall Finder
+#+END_SRC
+
+- Finder view style settings [[icnv: Icon View
+Nlsv: List View
+clmv: Column View
+Flwv: Cover Flow View][Via]]
+  - icnv :: Icon View
+  - Nlsv :: List View
+  - clmv :: Column View
+  - Flwv :: Cover Flow View
+#+NAME: 17D25945-67E7-4F54-9DAA-C23FD89A2758
+#+BEGIN_SRC sh
+defaults write 'com.apple.Finder' FXPreferredViewStyle Nlsv && killall Finder
+#+END_SRC
+
+[[https://gist.github.com/nickbudi/11277384][Via:]]
+Set item arrangement to none (enables folder dropdowns, 'Name' if you want to
+remove them)
+#+NAME: 49C95048-C7D9-4E7C-BAAE-5D78181FF112
+#+BEGIN_SRC sh
+defaults write com.apple.finder FXPreferredGroupBy -string "None"
+#+END_SRC
+
+Sort list view by kind in ascending order (Windows style).
+#+NAME: C3E4AFE6-5FB1-4432-B53C-933D83B3BA48
+#+BEGIN_SRC sh
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettings:sortColumn kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettings:columns:4:ascending true" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ListViewSettings:sortColumn kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ListViewSettings:columns:kind:ascending true" ~/Library/Preferences/com.apple.finder.plist
+#+END_SRC
+
+Finder: disable window animations and Get Info animations.
+#+NAME: AF8A02A4-CFFC-4740-A6E9-3341F912906A
+#+BEGIN_SRC sh
+defaults write com.apple.finder DisableAllAnimations -bool true
+#+END_SRC
+
+Show icons for hard drives, servers, and removable media on the desktop.
+#+NAME: 5F9ED39D-B319-46AE-B64F-F8CCE66C14CB
+#+BEGIN_SRC sh
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+#+END_SRC
+
+******* Screen
+:PROPERTIES:
+:ID:       76D10582-3909-4CBB-9770-DF3D4F7C9DB0
+:END:
+
+Require password immediately after sleep or screen saver begins.
+#+NAME: A73210E6-B619-4523-BD19-A5F8951E8495
+#+BEGIN_SRC sh
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+#+END_SRC
+
+Disable shadow in screenshots.
+#+NAME: E99413DF-0D11-4824-873D-3514F9333D6E
+#+BEGIN_SRC sh
+defaults write com.apple.screencapture disable-shadow -bool true
+#+END_SRC
+
+Save screenshots in PNG format.
+#+NAME: EE876749-BDB9-466F-A0FC-567EBBF9C5C2
+#+BEGIN_SRC sh
+defaults write 'com.apple.screencapture' type -string png && killall SystemUIServer
+#+END_SRC
+
+Enable subpixel font rendering on non-Apple LCDs.
+#+NAME: 66472988-E3AE-44D0-9423-17E9FEA0F5F1
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' AppleFontSmoothing -int 2
+#+END_SRC
+
+[[https://github.com/robb/.dotfiles/blob/master/osx/defaults.install][Via]]
+#+NAME: 598BE517-CC5C-4D99-AD0B-41D2D906E376
+#+BEGIN_SRC sh
+mkdir -p ~/Screen\ Shots
+defaults write com.apple.screencapture location ~/Screen\ Shots
+#+END_SRC
+
+******* Hotcorners
+:PROPERTIES:
+:ID:       14E7437D-7BE9-4149-818B-ADC7B145A822
+:END:
+
+- Possible values:
+  - 0 :: no-op
+  - 2 :: Mission Control
+  - 3 :: Show application windows
+  - 4 :: Desktop
+  - 5 :: Start screen saver
+  - 6 :: Disable screen saver
+  - 7 :: Dashboard
+  - 10 :: Put display to sleep
+  - 11 :: Launchpad
+  - 12 :: Notification Center
+
+Top left screen corner → Mission Control.
+#+NAME: 446CE2EF-BCBE-4D83-9ACC-2A1E2F91C64B
+#+BEGIN_SRC sh
+defaults write com.apple.dock wvous-tl-corner -int 2
+defaults write com.apple.dock wvous-tl-modifier -int 0
+#+END_SRC
+
+Top right screen corner → Desktop.
+#+NAME: FF4E8A69-A137-4E50-A4E4-59DA58A082B5
+#+BEGIN_SRC sh
+defaults write com.apple.dock wvous-tr-corner -int 4
+defaults write com.apple.dock wvous-tr-modifier -int 0
+#+END_SRC
+
+Bottom left screen corner → Start screen saver.
+#+NAME: 6A561511-8354-408E-8805-201BAAE80A04
+#+BEGIN_SRC sh
+defaults write com.apple.dock wvous-bl-corner -int 5
+defaults write com.apple.dock wvous-bl-modifier -int 0
+#+END_SRC
+
+Bottom right screen corner → Application window.
+#+NAME: 7C9DE1C5-BBF8-4D40-8FAC-E78D5B85231E
+#+BEGIN_SRC sh
+defaults write com.apple.dock wvous-bl-corner -int 3
+defaults write com.apple.dock wvous-bl-modifier -int 0
+#+END_SRC
+
+******* Spaces
+:PROPERTIES:
+:ID:       A76717BD-1BF0-48D3-8E69-3A03BFE2B4A2
+:END:
+
+#+NAME: 77191228-16CC-4B95-A030-A5C2DF90CD50
+#+BEGIN_SRC sh
+# Don’t automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
+# Set edge-dragging delay to 0.7
+defaults write com.apple.dock workspaces-edge-delay -float 1.0
+#+END_SRC
+
+******* Mouse
+:PROPERTIES:
+:ID:       319EDC92-B863-4D2E-A951-8479F9171FFF
+:END:
+
+Reasonably fast.
+#+NAME: 9B804905-E9D0-43BE-8106-DC53009C58C4
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' com.apple.mouse.scaling -float 2
+#+END_SRC
+
+******* Terminal
+:PROPERTIES:
+:ID:       20C7C795-5C0A-442A-9D0F-669D1637A1D2
+:END:
+
+Only use UTF-8 in Terminal.app.
+#+NAME: 9AF4BB62-76D4-4943-88FC-704A7BA492AC
+#+BEGIN_SRC sh
+defaults write com.apple.terminal StringEncodings -array 4
+#+END_SRC
+
+******* Activity Monitor
+:PROPERTIES:
+:ID:       D36D6B69-54DC-4666-AB48-731A2FA7130F
+:END:
+
+Show the main window when launching Activity Monitor.
+#+NAME: BC6F1328-5EA2-4B1D-AC72-654D829BDB31
+#+BEGIN_SRC sh :results output silent
+defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
+#+END_SRC
+
+Visualize CPU usage in the Activity Monitor Dock icon.
+#+NAME: 81FD865B-E76D-4873-8C12-42C6194AB300
+#+BEGIN_SRC sh :results output silent
+defaults write com.apple.ActivityMonitor IconType -int 5
+#+END_SRC
+
+Show all processes in Activity Monitor.
+#+NAME: F02FC4BB-0B04-4B8A-965C-71B181139FC8
+#+BEGIN_SRC sh :results output silent
+defaults write com.apple.ActivityMonitor ShowCategory -int 0
+#+END_SRC
+
+Sort Activity Monitor results by CPU usageefaults write com.apple.ActivityMonitor Sort.Column -string "CPUUsage".
+#+NAME: C2C6F54C-D4B7-4CBE-AF80-E45CE40C9A54
+#+BEGIN_SRC sh :results output silent
+defaults write com.apple.ActivityMonitor SortDirection -int 0
+#+END_SRC
+
+** Host
+:PROPERTIES:
+:ID:       4176F379-79B3-466F-A689-11701A0432EF
+:END:
+*** Manual: Turn the lights on
+:PROPERTIES:
+:header-args: :tangle host/configuration-host-01-manual.org
+:ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
+:END:
+
+Perform the common steps.
+#+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
+#+BEGIN_SRC org
+<<configuration-common-manual>>
+#+END_SRC
+*** Automated: Install and automatically configure as much as possible
+:PROPERTIES:
+:header-args: :tangle host/configuration-host-02-automated.sh
+:tangle-mode: (identity #o755)
+:ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
+:END:
+
+Perform the common steps.
+#+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
+#+BEGIN_SRC org
+<<configuration-common-automated>>
+#+END_SRC
+**** Steps
+:PROPERTIES:
+:HEADER-ARGS: :noweb-ref configuration-common-automated
+:ID:       995CBCB2-07FC-4933-8084-9DB97B11CF92
+:END:
+***** Software
+:PROPERTIES:
+:ID:       68C5F6B5-9D98-4562-92A2-BE3D5C52F76E
+:END:
+Perform the common steps.
+#+NAME: 41886902-0FB3-425B-B512-C1A160F8E3D6
+#+BEGIN_SRC org
+<<configuration-common-automated-steps-software>>
+#+END_SRC
+***** Settings
+:PROPERTIES:
+:ID:       D19C1E4F-7195-44AE-A3D1-1D48AAC91BD1
+:END:
+****** Machine
+:PROPERTIES:
+:ID:       A959032E-88AA-4643-8AE0-80DE02EDE3AD
+:END:
+
+Perform the common steps.
+#+NAME: 41886902-0FB3-425B-B512-C1A160F8E3D6
+#+BEGIN_SRC org
+<<configuration-common-automated-steps-settings-machine>>
+#+END_SRC
+****** User
+:PROPERTIES:
+:ID:       F1F504EE-6438-4C65-A2CF-0E1F04E3E538
+:END:
+
+Perform the common steps.
+#+NAME: 6E5C94FD-6E6D-4EDE-ABD6-6397F31E8A5B
+#+BEGIN_SRC org
+<<configuration-common-automated-steps-settings-user>>
+#+END_SRC
+*** Manual: Configure the automatically installed stuff
+:PROPERTIES:
+:header-args: :tangle host/configuration-host-03-manual.org
+:ID:       32266D7A-F601-4E9E-81BB-F9569FEA0791
+:END:
+
+Perform the common steps.
+#+NAME: 0E88E868-0174-40D6-B736-5BCC97A13B71
+#+BEGIN_SRC org
+<<configuration-common-manual-followup>>
+#+END_SRC
+
+** Writing
+:PROPERTIES:
+:ID:       4176F379-79B3-466F-A689-11701A0432EF
+:END:
+*** Profile
+:PROPERTIES:
+:ID:       D0B61BD6-13D8-4569-8696-30256456A05C
+:END:
+
+#+NAME: 348DFC23-D545-4BBA-8CC4-85431991B232
+#+BEGIN_SRC sh :tangle writing/profile-writing :comments no
+<<common-profile-body>>
+export INFOPATH='/usr/local/share/info:/usr/share/info'
+export CCRYPT="/usr/local/Cellar/ccrypt/1.10/share/emacs/site-lisp"
+export EELIB="/Users/$(whoami)/EELIB"
+export MACTEX_BIN="/usr/local/texlive/2015/bin/x86_64-darwin"
+export PATH=<<common-profile-path-pre>>:$MACTEX_BIN:<<common-profile-path-post>>
+alias e='open /Applications/Emacs.app --args --debug-init'
+alias ec='/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw --debug-init'
+#+END_SRC
+
+*** Manual: Turn the lights on
+:PROPERTIES:
+:header-args: :tangle writing/configuration-writing-01-manual.org
+:ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
+:END:
+
+Reminder:
+#+NAME: BDA085BB-877C-4F75-8614-1C8CC62E5992
+#+BEGIN_SRC org
+*DO INSTALL Xcode BEFORE THE CLT*
+#+END_SRC
+
+Perform the common steps.
+#+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
+#+BEGIN_SRC org
+<<configuration-common-manual>>
+#+END_SRC
+*** Automated: Install and automatically configure as much as possible
+:PROPERTIES:
+:header-args: :tangle writing/configuration-writing-02-automated.sh
+:tangle-mode: (identity #o755)
+:ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
+:END:
+
+Perform the common steps.
+#+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
+#+BEGIN_SRC org
+<<configuration-writing-automated>>
+#+END_SRC
+**** Steps
+:PROPERTIES:
+:HEADER-ARGS: :noweb-ref configuration-writing-automated
+:ID:       995CBCB2-07FC-4933-8084-9DB97B11CF92
+:END:
+***** Software
+:PROPERTIES:
+:ID:       68C5F6B5-9D98-4562-92A2-BE3D5C52F76E
+:END:
+Perform the common steps.
+#+NAME: 41886902-0FB3-425B-B512-C1A160F8E3D6
+#+BEGIN_SRC org
+<<configuration-common-automated-steps-software>>
+#+END_SRC
+****** Set up the new profile
+:PROPERTIES:
+:ID:       B0B40263-EBC0-410C-B069-89766CBC47B9
+:END:
+
+#+NAME: B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770
+#+BEGIN_SRC sh
+rm ~/.profile
+cp ./profile-writing ~/.profile
+source ~/.profile
+cat ~/.profile
+#+END_SRC
+******* EELIB
+:PROPERTIES:
+:ID:       23DCDAAE-9D70-4168-9300-AC15E3F32474
+:END:
+
+#+NAME: 4DC7B7AD-6E88-4DFF-9E27-E610E6022065
+#+BEGIN_SRC org :noweb-ref configuration-writing-manual-followup
+,* EELIB
+
+- Make a directory =~/EELIB=
+  ,#+BEGIN_SRC sh
+  mkdir ~/EELIB
+  ,#+END_SRC
+- Download the following JAR files to that folder
+- [[http://plantuml.com/][PlantUML]] to it, either downloading the unversioned JAR or
+   renaming it to "plantuml.jar"
+- [[http://ditaa.sourceforge.net/][ditaa]] to it, extract the versioned JAR, and rename it to "ditaa.jar"
+- [[https://www.languagetool.org/][LanguageTool]]
+  - Use the "daily build" if the download is too slow
+  - Extract it here
+  - Rename the directory to "LanguageTool"
+  - Took 8 tries to download it; kept stalling at 80%
+#+END_SRC
+****** Growl
+:PROPERTIES:
+:ID:       48048FB4-E77B-4226-82EF-BA8AA30E2D37
+:END:
+
+#+NAME: 292B3960-AD89-413E-8E67-2BDBBAC7ACBE
+#+BEGIN_SRC org :noweb-ref configuration-writing-manual-followup
+,* Growl
+
+- Install via the app store
+- Start it
+- enable run on login
+- top left corner
+- crystal
+#+END_SRC
+****** Bunch of Stuff
+:PROPERTIES:
+:ID:       50500125-8B10-4E18-9DB3-45B2CAC29B27
+:END:
+#+NAME: CCF91EC0-F689-4279-972C-9F1D32C4C64B
+#+BEGIN_SRC sh
+brew cask install xquartz
+brew cask install growlnotify
+brew install aspell -all
+brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
+brew install graphviz
+brew install pandoc
+brew install emacs --with-cocoa --with-gnutls --with-imagemagick
+brew linkapps
+#+END_SRC
+****** Java
+:PROPERTIES:
+:ID:       7E76DE2C-7836-44B0-8636-90BB876A5E33
+:END:
+#+NAME: 274A6FA4-B619-422A-8546-C1DCE6C47B63
+#+BEGIN_SRC sh
+brew cask install java
+#+END_SRC
+****** Deltawalker
+:PROPERTIES:
+:ID:       D8E6483D-FF38-4A25-BA43-3CA7516B8789
+:END:
+
+#+NAME: 82653612-8AFE-4FF7-86D8-921DDA662EB9
+#+BEGIN_SRC sh
+brew cask install deltawalker
+#+END_SRC
+
+#+NAME: 25ED30C2-0916-49E2-9F9F-DC96D6B7DDE6
+#+BEGIN_SRC org :noweb-ref configuration-writing-manual-followup
+,* DeltaWalker
+
+Got to it's Cellar location and drag it into Applications.
+
+License it.
+
+Set up the "Compare with DeltaWalker.workflow" by following the directions
+- Copying it to the user library
+- Opening it in Automator by double clicking it in Finder
+
+- Set preferences for new comparisons (be sure of this, easy not to)
+  - General
+    - Date formatting: English (United States)
+    - Max available memory: 1024
+    - [X] Automatically find new updates and notify me
+    - Colors and Fonts
+      - Basic::Text Font and Text Editor Block Selection Font: DJSM 14
+      - Differences::Font: DJSM 14
+  - All Comparisons
+    - [ ] Use text differencing optimized for speed
+    - [X] Use text differencing optimized for accuracy
+    - [X] Follow symbolic links
+    - [ ] Ignore differences in whitespace
+      - Want to know about tabs versus spaces
+    - [ ] Ignore differences in character case
+      - Interesting but default do care
+    - [X] Ignore differences in line endings (CF and LF)
+      - Most systems don't care
+
+There are files to test with [[/opt/homebrew-cask/Caskroom/deltawalker/2.1.2/Extras/samples%0A][here]]. Test them using the Finder integration.
+
+After Git it set up, test it there ,too.
+#+END_SRC
+
+****** MacTeX
+:PROPERTIES:
+:ID:       17B20C34-B6E5-478E-BDF5-F7E56588AE7E
+:END:
+#+NAME: C4F43DC6-97F3-4237-9746-B40243C20950
+#+BEGIN_SRC sh
+brew cask install mactex
+#+END_SRC
+****** GnuPlot
+:PROPERTIES:
+:ID:       CD0644AD-7F3D-4FE7-A3B4-32000755E7B1
+:END:
+#+NAME: A6FDD2B6-412D-41A5-B58A-942C6540BB57
+#+BEGIN_SRC sh
+brew install gnuplot --with-latex --with-pdflib-lite --with-test --with-x11
+#+END_SRC
+****** Org-Mode
+:PROPERTIES:
+:ID:       F23E86FA-0EE3-4028-89F2-09B5B9DFEC75
+:END:
+******* Download Org Mode
+:PROPERTIES:
+:ID:       63AFF6C1-2214-44F2-9069-BA156C1D322E
+:END:
+
+This script should be idempotent.
+
+#+NAME: 916D6512-03E7-4971-8BAC-53D6FA258BBD
+set -x
+rm -rf ~/src
+cd ~/src
+git clone git://orgmode.org/org-mode.git
+cd org-mode
+emacs -batch -Q -L lisp -l ../mk/org-fixup -f org-make-autoloads
+cd ~/src
+git clone git@github.com:punchagan/org2blog.git
+git clone https://github.com/jwiegley/use-package.git
+git clone https://github.com/grettke/help.git
+#+END_SRC
+
+******* Link Files and Folders
+:PROPERTIES:
+:ID:       0ECC4895-8B6B-4079-A581-90B0B2AC7355
+:END:
+#+NAME: 567603FF-8A5F-4E06-939C-8D21D60AD4ED
+rm ~/.emacs.el
+ln -s ~/src/help/.emacs.el ~/.emacs.el
+rm -rf ~/.emacs.d
+mkdir ~/.emacs.d
+ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
+#+END_SRC
+***** Settings
+:PROPERTIES:
+:ID:       D19C1E4F-7195-44AE-A3D1-1D48AAC91BD1
+:END:
+****** Machine
+:PROPERTIES:
+:ID:       A959032E-88AA-4643-8AE0-80DE02EDE3AD
+:END:
+
+Perform the common steps.
+#+NAME: 41886902-0FB3-425B-B512-C1A160F8E3D6
+#+BEGIN_SRC org
+<<configuration-common-automated-steps-settings-machine>>
+#+END_SRC
+****** User
+:PROPERTIES:
+:ID:       F1F504EE-6438-4C65-A2CF-0E1F04E3E538
+:END:
+
+Perform the common steps.
+#+NAME: 6E5C94FD-6E6D-4EDE-ABD6-6397F31E8A5B
+#+BEGIN_SRC org
+<<configuration-common-automated-steps-settings-user>>
+#+END_SRC
+*** Manual: Configure the automatically installed stuff
+:PROPERTIES:
+:header-args: :tangle writing/configuration-writing-03-manual.org
+:ID:       32266D7A-F601-4E9E-81BB-F9569FEA0791
+:END:
+
+Perform the common steps.
+#+NAME: 0E88E868-0174-40D6-B736-5BCC97A13B71
+#+BEGIN_SRC org
+<<configuration-common-manual-followup>>
+<<configuration-writing-manual-followup>>
+#+END_SRC
+*** Automated: Personal Git and TeX Configuration
+:PROPERTIES:
+:header-args: :tangle writing/configuration-writing-04-automated-personal.sh
+:tangle-mode: (identity #o755)
+:ID:       F008829D-FCC5-426E-8CB6-3E3DED5EE2AF
+:END:
+**** Git Setup
+:PROPERTIES:
+:ID:       637C8E64-3756-4B50-9E89-B3444AEF29B0
+:END:
+
+Aggressively debug.
+
+#+NAME: B807D882-CDAB-4029-9FFE-FB967D0DB38F
+#+BEGIN_SRC sh
+set -x
+#+END_SRC
+
+Generate the key. There is no passphrase.
+#+NAME: 41FF7AA3-8273-4281-A7E8-C60B048723D4
+#+begin_src sh
+rm -rf ~/.ssh
+mkdir ~/.ssh
+cd ~/.ssh
+ssh-keygen -N '' -t rsa -C "gcr@wisdomandwonder.com" -f orion_gcr_rsa
+#+end_src
+
+Set permissions so that =ssh= will run.
+
+#+NAME: 298B36CF-28A0-45CC-BACF-787EAB06F348
+#+begin_src sh
+chmod 600 ~/.ssh/orion_gcr_rsa
+chmod 600 ~/.ssh/orion_gcr_rsa.pub
+ssh-add -K ~/.ssh/orion_gcr_rsa
+#+end_src
+
+OSX creates this directory everywhere and it must be ignored.
+
+#+NAME: 53F16E84-34DC-48D1-998C-B9214B32AD1E
+#+begin_src sh
+echo .DS_Store > ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+#+end_src
+
+Add they key to Bitbucket and Github.
+
+#+NAME: 3934CA71-20AE-4136-AB57-1DEF8EBC0ADB
+#+begin_src sh
+cat ~/.ssh/orion_gcr_rsa.pub | pbcopy
+read -p "The new key is in your clipboard. Go and add this key to BitBucket and GitHub. When you are finished, hit [enter] to continue."
+#+end_src
+
+Set up ~/.ssh/config.
+
+#+NAME: 70D5D9F2-6CFC-4FB5-BC45-416B4ABA029F
+#+begin_src sh
+cat > ~/.ssh/config << EOF
+Host github-grettke
+     HostName github.com
+     User git
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/orion_gcr_rsa.pub
+Host bitbucket-grettke
+     HostName bitbucket.org
+     User git
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/orion_gcr_rsa.pub
+EOF
+#+end_src
+
+Test each one out.
+
+#+NAME: 07933181-5F02-43CB-9DF8-232DA213E4BB
+#+begin_src sh
+ssh -T github-grettke
+read -p "Did it work? If not, fix it."
+#+end_src
+
+Separate them to allow for easier copy-pasting.
+
+#+NAME: 66DAC891-FB97-48A8-9C8B-0292095F13A6
+#+begin_src sh
+ssh -T bitbucket-grettke
+read -p "Did it work? If not, fix it."
+#+end_src
+
+Set up my preferences.
+
+#+NAME: C85D0036-9DDA-4786-9621-470FB418BBD6
+#+begin_src sh
+git config --global user.name "Grant Rettke"
+git config --global user.email gcr@wisdomandwonder.com
+git config --global color.ui true
+git config --global core.autocrlf
+git config --global alias.st status
+git config --global alias.ci commit
+git config --global alias.dt difftool
+git config --global alias.mt mergetool
+git config --global diff.tool deltawalker
+git config --global difftool.deltawalker.cmd '/Applications/DeltaWalker.app/Contents/MacOS/git-diff $LOCAL $REMOTE'
+git config --global difftool.prompt false
+git config --global merge.tool deltawalker
+git config --global mergetool.deltawalker.cmd '/Applications/DeltaWalker.app/Contents/MacOS/git-merge $LOCAL $REMOTE $BASE $MERGED'
+git config --global mergetool.keepBackup false
+#+end_src
+
+Check out projects to get basic stuff working.
+
+#+NAME: 5BD1669B-8E2A-46B5-AB80-88DA5764DEEB
+#+begin_src sh
+rm -rf ~/git/bitbucket
+rm -rf ~/git/github
+rm -rf ~/src/help
+mkdir -p ~/git/bitbucket
+mkdir -p ~/git/github
+cd ~/git/bitbucket
+git clone bitbucket-grettke:grettke/list.git
+git clone bitbucket-grettke:grettke/resume.git
+git clone bitbucket-grettke:grettke/notes.git
+git clone bitbucket-grettke:grettke/signature.git
+git clone bitbucket-grettke:grettke/grant-personal.git
+git clone bitbucket-grettke:grettke/correspondence.git
+git clone bitbucket-grettke:grettke/texmf.git
+cd ~/git/github
+git clone github-grettke:grettke/osx-provision.git
+cd ~/git/github-anonq
+git clone https://github.com/bkuhlmann/osx
+git clone https://github.com/monfresh/laptop
+cd ~/src
+git clone github-grettke:grettke/help.git
+#+end_src
+
+**** TeX
+:PROPERTIES:
+:ID:       5E11928D-2734-4413-AE52-17BBEA095A73
+:END:
+
+Set up my TeX stuff for KOMA-script. Backup the default configuration first.
+
+#+NAME: 4053A83F-EA3D-4431-AA4A-62336DF2F95E
+#+begin_src sh
+set -x
+ls /usr/local/texlive/2015
+sudo cp /usr/local/texlive/2015/texmf.cnf /usr/local/texlive/2015/texmf.cnf-`date '+%Y_%m_%d__%H_%M_%S'`
+ls /usr/local/texlive/2015
+sudo tlmgr conf texmf TEXMFHOME ~/git/bitbucket/texmf/
+#+end_src
+
+Check that the path is really updated.
+
+#+NAME: 34890901-8E9D-46E5-9738-2718CD26908E
+#+begin_src sh
+kpsewhich KomaDefault.lco
+#+end_src
+
+The documents say to maybe do the following. I did it.
+
+#+NAME: 008DCE01-EE0D-4A96-93A5-7B6E91D7C951
+#+begin_src sh
+sudo mktexlsr
+#+end_src
+
+** Manual: Personal Git and TeX Configuration Testing
+:PROPERTIES:
+:header-args: :tangle writing/configuration-writing-05-automated-personal.org
+:ID:       44798E7B-AC1F-4FD8-AB5E-3A3563B79C4B
+:END:
+
+- [ ] Get Emacs running
+  - Usually problems with package loads
+    - EG dimnish, =list-package= and install it and restart
+    - =lexbind-mode= refuses to install
+      - "Symbol's function definition is void: lexbind-mode"
+      - Start with =--no-init= and comment out =lexbind-mode= just to get Emacs
+        set up, then install =lexbind= via the package manager, then add it
+        back in
+    - Broken Org-Mode
+      - This checks out Org-Mode from the trunk. Sometimes stuff get's
+        broken. My config debugs on error. The goal is to always have
+        a working system. Sometimes, I copy over a working copy of Org
+        or any of the libraries onto the host if there are issues.
+- [ ] tangle
+  - Tangle the document successfully
+- [ ] execution
+  - Delete every result block: just do it manually search for =#+RESULT=
+  - Delete all image output
+  - Execute entire document successfully
+  - Images re-appear
+- [ ] eshell
+  - Run it
+  - Emacs uses correct HELP directory
+- [ ] ccrypt
+- [ ] ispell
+- [ ] weasel words
+- [ ] langtool
+  - Verify installation, can have the wrong dir and the tool just says that
+    there are no issues
+  - Run =langtool-check-buffer=
+  - qkc does the scan, qkC suggests corrects, verified on a corresponsence
+- [ ] Correspondence
+  - Pick a letter
+  - Address and signature and everything looks right
+- [ ] Messages
+  - Make sure that there are no startup warnings or issues
+- [ ] Export to everything
+  - Longest test
+  - This is used for publishing
+  - First delete everything
+  - [ ] html
+    - Images are links, not images
+  - [ ] md
+    - Images are links, not images
+  - [ ] pdf
+  - [ ] txt
