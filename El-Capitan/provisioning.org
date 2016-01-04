@@ -1,3 +1,5 @@
+#  LocalWords:  IOSXECA PHOSI PHOSDI IOSEXECA gcr Xcode VC orion orgion rsa github
+
 #+STARTUP: showeverything
 
 * Goal
@@ -412,8 +414,6 @@ This script is set up to me. To customize it just search and replace on:
 - github-grettke :: your SSH alias for Github
 - bitbucket-grettke :: your SSH alias for Bitbucket
 
-#  LocalWords:  IOSXECA PHOSI PHOSDI IOSEXECA gcr Xcode VC orion orgion rsa
-#  LocalWords:  github
 * Provisioning
 :PROPERTIES:
 :ID:       262EEA68-1753-489D-A3BE-672C162CD356
