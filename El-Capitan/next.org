@@ -105,7 +105,7 @@ This profile approach will evolve.
 Set up the new profile.
 
 #+NAME: 92F77AD1-E9DC-4740-B3A3-C6A3A4034068
-#+BEGIN_SRC sh :noweb-ref configuration-common-automated-steps-software
+#+BEGIN_SRC sh
 rm ~/.profile
 cp ./profile-common ~/.profile
 source ~/.profile
@@ -1307,7 +1307,6 @@ Perform the common steps.
 Perform the common steps.
 #+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
 #+BEGIN_SRC org
-<<configuration-common-automated>>
 <<configuration-writing-automated>>
 #+END_SRC
 **** Steps
