@@ -1,3 +1,5 @@
+#+STARTUP: showeverything
+
 * Goal
 :PROPERTIES:
 :ID:       572893EF-E80B-411B-9355-8CAB3DB23C27
