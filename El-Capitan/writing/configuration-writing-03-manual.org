@@ -150,7 +150,7 @@ in the middle.
 - Set it to the default theme
 # D880F24A-DE8D-4513-A354-45C9B57E0631 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*ccrypt][257678B4-BD36-4073-AC10-0F616D817479]]
- * ccrype
+* ccrypt
 
 - Verify that you can create and re-open files
 # 257678B4-BD36-4073-AC10-0F616D817479 ends here

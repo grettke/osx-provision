@@ -999,7 +999,7 @@ brew install ccrypt
 
 #+NAME: 257678B4-BD36-4073-AC10-0F616D817479
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
- ,* ccrype
+,* ccrypt
 
 - Verify that you can create and re-open files
 #+END_SRC
