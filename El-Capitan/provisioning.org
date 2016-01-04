@@ -155,6 +155,107 @@
   - A disk-image created from a ~PHOSI~
 - Recovery Partition (RP)
 
+* Preparation
+:PROPERTIES:
+:ID:       1BF6D42F-2F80-467E-B75C-DB2C88F0B4BE
+:END:
+
+** External Drive
+:PROPERTIES:
+:ID:       9EC3FF1F-8416-449D-8860-3B4ABCEBB09B
+:END:
+
+Get a 7200RPM 1TB external disk drive with USB3 or Lightning.
+
+Create a partition named =Storage= that is at least 100GB. The =EXT:= naming
+convention is to indicate that it lives on an external device. This is helpful
+to make sense of partitions there versus on the Macintosh HD. That is not part
+of the name of the partition itself. I'll use that naming also to indicate
+computers that contain a single disk drive.
+
+** Software
+:PROPERTIES:
+:ID:       3BC9B846-919F-4395-8926-8C2AABB0FF6A
+:END:
+
+- Before provisioning software installs, I downloaded these manually and stored
+  them because they are critical to the setup process
+
+*** Carbon Copy Cloner (CCC)
+:PROPERTIES:
+:ID:       93F797EC-1166-4667-A2ED-C8251CB9998A
+:END:
+
+[[https://bombich.com/][Purchase]] the latest version that supports El Capitan. Download it along with the
+license to =EXT:Storage=. Install it on the =Support Computer=.
+*** VMWare Fusion
+:PROPERTIES:
+:ID:       B846A16A-4E1C-4968-B303-301923989BD8
+:END:
+
+[[https://www.vmware.com/products/fusion][Purchase]] a copy and download it to =EXT:Storage=. Download your license key.
+
+** Support Computer
+:PROPERTIES:
+:ID:       74903C97-520F-4FE1-B2AA-09F1DAB976D7
+:END:
+
+Keep a working Mac nearby. You will use it to work with the contents of
+your Git repositories, research configuration steps, and rest easy knowing that
+you've always got a working machine.
+
+Make sure that it has Internet access and download all of your Git repositories
+required for configuring these machines.
+
+Don't try use your host computer for this role by booting it to an external
+drive; it is too easy to confuse partitions and what you are doing.
+
+Use CCC to clone this Mac's partition, =Support:Macintosh HD=, to a partition on
+=EXT=. The easiest thing to do is to connect =EXT=
+to =Support Computer=. Create a new partition big enough to hold it and perform
+the clone. Name it =EXT:Utility=. Reboot to it to test it.
+
+** Host Computer: 44fad7
+:PROPERTIES:
+:ID:       EE23E7E0-4BAC-4B57-96EA-764F84A2F054
+:END:
+
+- Collect the Pristine Host Operating System Image (PHOSI)
+  - Pristine means that it has never been logged into or configured
+  - Has the latest OS X on it with at least the second fix pack or later
+  - Verify that it contains the RP for that OS X on the disk
+    - If the imaging takes less than 10 minutes then they didn't include the
+      RP
+  - You can easily get this from an appointment at the Genius Bar
+- Create the Pristine Host Operating System Disk Image (PHOSDI)
+  - Take your Mac home
+  - Boot from =EXT:Utility=
+  - Use CCC
+    - From the host computer's =PHOSI=, =Host:Macintosh HD=
+    - To
+      - A new =PHOSDI=; *read-only* and *compressed* disk image
+      - Located on =EXT:Storage=
+    - Execute the imaging task
+- Test =PHOSDI=
+  - Boot into =Host:Macintosh HD=, configure it
+  - Boot into =EXT:Support= and re-image =Host:Macintosh HD= from =PHOSDI=
+  - Boot into =Host:Macintosh HD=
+    - It should appear pristine, you need to enter all of the installation
+      information again. This will be re-imaged again soon so don't worry
+      about this.
+  - Copy =EXT:Storage PHOSDI= to =Host:Storage=
+- Create the =Host:Utility= partition using =PHOSDI=
+  - Boot into =EXT:Support=
+  - Create 1 new partition on =Host=, named =Utility=: 16GB
+    - Now there are 3: =Macintosh HD=, =Support=, and =Utility=
+  - Verify that you can
+    - Boot into =Host:Support=
+    - Install CCC
+    - Access the =Storage= partition
+      - CCC images
+      - Disk images
+      - Software
+      - Scripts
 * Notes on Machine Configurations & Snaphots
 :PROPERTIES:
 :ID:       2A536BBD-5CF0-43B8-A87C-9E2260ADE2F5
@@ -308,105 +409,3 @@ This script is set up to me. To customize it just search and replace on:
 - =orgion_gcr_rsa= :: the name of your key used for Git
 - github-grettke :: your SSH alias for Github
 - bitbucket-grettke :: your SSH alias for Bitbucket
-
-* Preparation
-:PROPERTIES:
-:ID:       1BF6D42F-2F80-467E-B75C-DB2C88F0B4BE
-:END:
-
-** External Drive
-:PROPERTIES:
-:ID:       9EC3FF1F-8416-449D-8860-3B4ABCEBB09B
-:END:
-
-Get a 7200RPM 1TB external disk drive with USB3 or Lightning.
-
-Create a partition named =Storage= that is at least 100GB. The =EXT:= naming
-convention is to indicate that it lives on an external device. This is helpful
-to make sense of partitions there versus on the Macintosh HD. That is not part
-of the name of the partition itself. I'll use that naming also to indicate
-computers that contain a single disk drive.
-
-** Software
-:PROPERTIES:
-:ID:       3BC9B846-919F-4395-8926-8C2AABB0FF6A
-:END:
-
-- Before provisioning software installs, I downloaded these manually and stored
-  them because they are critical to the setup process
-
-*** Carbon Copy Cloner (CCC)
-:PROPERTIES:
-:ID:       93F797EC-1166-4667-A2ED-C8251CB9998A
-:END:
-
-[[https://bombich.com/][Purchase]] the latest version that supports El Capitan. Download it along with the
-license to =EXT:Storage=. Install it on the =Support Computer=.
-*** VMWare Fusion
-:PROPERTIES:
-:ID:       B846A16A-4E1C-4968-B303-301923989BD8
-:END:
-
-[[https://www.vmware.com/products/fusion][Purchase]] a copy and download it to =EXT:Storage=. Download your license key.
-
-** Support Computer
-:PROPERTIES:
-:ID:       74903C97-520F-4FE1-B2AA-09F1DAB976D7
-:END:
-
-Keep a working Mac nearby. You will use it to work with the contents of
-your Git repositories, research configuration steps, and rest easy knowing that
-you've always got a working machine.
-
-Make sure that it has Internet access and download all of your Git repositories
-required for configuring these machines.
-
-Don't try use your host computer for this role by booting it to an external
-drive; it is too easy to confuse partitions and what you are doing.
-
-Use CCC to clone this Mac's partition, =Support:Macintosh HD=, to a partition on
-=EXT=. The easiest thing to do is to connect =EXT=
-to =Support Computer=. Create a new partition big enough to hold it and perform
-the clone. Name it =EXT:Utility=. Reboot to it to test it.
-
-** Host Computer: 44fad7
-:PROPERTIES:
-:ID:       EE23E7E0-4BAC-4B57-96EA-764F84A2F054
-:END:
-
-- Collect the Pristine Host Operating System Image (PHOSI)
-  - Pristine means that it has never been logged into or configured
-  - Has the latest OS X on it with at least the second fix pack or later
-  - Verify that it contains the RP for that OS X on the disk
-    - If the imaging takes less than 10 minutes then they didn't include the
-      RP
-  - You can easily get this from an appointment at the Genius Bar
-- Create the Pristine Host Operating System Disk Image (PHOSDI)
-  - Take your Mac home
-  - Boot from =EXT:Utility=
-  - Use CCC
-    - From the host computer's =PHOSI=, =Host:Macintosh HD=
-    - To
-      - A new =PHOSDI=; *read-only* and *compressed* disk image
-      - Located on =EXT:Storage=
-    - Execute the imaging task
-- Test =PHOSDI=
-  - Boot into =Host:Macintosh HD=, configure it
-  - Boot into =EXT:Support= and re-image =Host:Macintosh HD= from =PHOSDI=
-  - Boot into =Host:Macintosh HD=
-    - It should appear pristine, you need to enter all of the installation
-      information again. This will be re-imaged again soon so don't worry
-      about this.
-  - Copy =EXT:Storage PHOSDI= to =Host:Storage=
-- Create the =Host:Utility= partition using =PHOSDI=
-  - Boot into =EXT:Support=
-  - Create 1 new partition on =Host=, named =Utility=: 16GB
-    - Now there are 3: =Macintosh HD=, =Support=, and =Utility=
-  - Verify that you can
-    - Boot into =Host:Support=
-    - Install CCC
-    - Access the =Storage= partition
-      - CCC images
-      - Disk images
-      - Software
-      - Scripts
