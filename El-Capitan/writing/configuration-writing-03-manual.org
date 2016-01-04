@@ -1,4 +1,4 @@
-# [[file:provisioning.org::*Manual:%20Configure%20the%20automatically%20installed%20stuff][0E88E868-0174-40D6-B736-5BCC97A13B71]]
+# [[file:provisioning.org::*Manual:%20Configure%20the%20automatically%20installed%20stuff][76285671-7199-4C00-8326-D2D8FDEFA2F7]]
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*karabiner][C13ADBE3-27E1-4E34-AAED-503ACE4E7922]]
 * Karabiner
 
@@ -38,17 +38,17 @@
 
 - Run it
 # 31B0BF19-6AE4-4AD3-B4BD-7287DADF25FD ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*VMWare%20Fusion][3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*VMWare%20Fusion][D9DF34EB-3AAF-4B6D-BF55-F3BCE9BE9FF2]]
 * VMWare
 
 - On a host: License it
-# 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Skype][3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9]]
+# D9DF34EB-3AAF-4B6D-BF55-F3BCE9BE9FF2 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Skype][ADFFF652-847E-4486-ABCF-D9FFC9F23E94]]
 * Skype
 
 - Log in and disable notifications for log in and out
-# 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Dropbox][3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9]]
+# ADFFF652-847E-4486-ABCF-D9FFC9F23E94 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Dropbox][0537F140-23D8-48D9-BB75-D1959D44432A]]
 * Dropbox
 
 - Log in
@@ -57,7 +57,7 @@
   - Screenshots
   - Everything
 - Pause it and copy everything over on a wired network
-# 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9 ends here
+# 0537F140-23D8-48D9-BB75-D1959D44432A ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bartender][8FF0E7F5-4CA1-4F1B-A787-5E523943C266]]
 * Bartender
 
@@ -126,16 +126,16 @@ in the middle.
 
 - Set up Filezilla for WnW
 # 8474322D-6F50-4A7C-9C89-2A49C9ADB6B8 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Carbon%20Copy%20Cloner][63644864-1754-4912-B282-02EB12AE4C8C]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Carbon%20Copy%20Cloner][C10D4E23-4322-4885-B9CA-02A72CF5D204]]
 * Carbon Copy Cloner
 
 - On a host: License it
-# 63644864-1754-4912-B282-02EB12AE4C8C ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*flux][63644864-1754-4912-B282-02EB12AE4C8C]]
+# C10D4E23-4322-4885-B9CA-02A72CF5D204 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*flux][32A52187-8E13-4FA2-B445-65A3A0F6F226]]
 * flux
 
 - Enable at startup
-# 63644864-1754-4912-B282-02EB12AE4C8C ends here
+# 32A52187-8E13-4FA2-B445-65A3A0F6F226 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Fonts][2EC7A9F7-9356-46E2-9A23-EA286378E24E]]
 * Fonts
 
@@ -214,4 +214,4 @@ There are files to test with [[/opt/homebrew-cask/Caskroom/deltawalker/2.1.2/Ext
 
 After Git it set up, test it there ,too.
 # 25ED30C2-0916-49E2-9F9F-DC96D6B7DDE6 ends here
-# 0E88E868-0174-40D6-B736-5BCC97A13B71 ends here
+# 76285671-7199-4C00-8326-D2D8FDEFA2F7 ends here

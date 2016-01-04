@@ -1,4 +1,4 @@
-# [[file:provisioning.org::*Manual:%20Turn%20the%20lights%20on][2C87821E-2E7E-42F2-8512-96AE52230752]]
+# [[file:provisioning.org::*Manual:%20Turn%20the%20lights%20on][83BAB1D5-EC1D-404C-A592-20520FF7CFCC]]
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Common%20Manual][639707FE-FE60-439E-A8C8-9FBD9936D1C4]]
 - Re-image your box
   - Host :: ~PHOSDI~
@@ -36,4 +36,4 @@
     xcode-select --install
     #+END_SRC
 # 639707FE-FE60-439E-A8C8-9FBD9936D1C4 ends here
-# 2C87821E-2E7E-42F2-8512-96AE52230752 ends here
+# 83BAB1D5-EC1D-404C-A592-20520FF7CFCC ends here

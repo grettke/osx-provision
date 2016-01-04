@@ -1,5 +1,5 @@
-# [[file:provisioning.org::*Automated:%20Install%20and%20automatically%20configure%20as%20much%20as%20possible][2C87821E-2E7E-42F2-8512-96AE52230752]]
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Software][41886902-0FB3-425B-B512-C1A160F8E3D6]]
+# [[file:provisioning.org::*Automated:%20Install%20and%20automatically%20configure%20as%20much%20as%20possible][16925E43-FD2E-4CB7-957F-DCE747A4FC8C]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Software][F1A77C76-9D56-45CE-8C27-9A4DD9D50B1F]]
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Profile][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
 rm ~/.profile
 cp ./profile-common ~/.profile
@@ -53,20 +53,20 @@ else
     echo "vlc: Only install on hosts"
 fi
 # 093814E5-DB0A-481C-9B39-ACF62216BB55 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*VMWare%20Fusion][A5358959-F496-4368-9141-318664D40C6C]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*VMWare%20Fusion][2B059288-F12E-48E1-939F-1138117FDE4B]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vmware-fusion
 else
     echo "vmware-fusion: Only install on hosts"
 fi
-# A5358959-F496-4368-9141-318664D40C6C ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Skype][A5358959-F496-4368-9141-318664D40C6C]]
+# 2B059288-F12E-48E1-939F-1138117FDE4B ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Skype][D3411D0C-F38A-409F-8D6C-5A03AFEE9CCF]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install skype
 else
     echo "skype: Only install on hosts"
 fi
-# A5358959-F496-4368-9141-318664D40C6C ends here
+# D3411D0C-F38A-409F-8D6C-5A03AFEE9CCF ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Dropbox][3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install dropbox
@@ -86,20 +86,20 @@ brew cask install firefox
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Filezilla][E35E5182-A810-4547-B6E8-866CC13AA7FA]]
 brew cask install filezilla
 # E35E5182-A810-4547-B6E8-866CC13AA7FA ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Carbon%20Copy%20Cloner][A5358959-F496-4368-9141-318664D40C6C]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Carbon%20Copy%20Cloner][27354A58-46C4-426B-8483-A96F7B63342D]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install carbon-copy-cloner
 else
     echo "carbon-copy-cloner: Only install on hosts"
 fi
-# A5358959-F496-4368-9141-318664D40C6C ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*flux][A5358959-F496-4368-9141-318664D40C6C]]
+# 27354A58-46C4-426B-8483-A96F7B63342D ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*flux][17B2744A-477B-4E79-A152-D1D43E8FB030]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install flux
 else
     echo "flux: Only install on hosts"
 fi
-# A5358959-F496-4368-9141-318664D40C6C ends here
+# 17B2744A-477B-4E79-A152-D1D43E8FB030 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Fonts][DD72394C-9D37-446C-A704-E88BE2B0CEED]]
 brew tap caskroom/fonts
 # DD72394C-9D37-446C-A704-E88BE2B0CEED ends here
@@ -127,7 +127,7 @@ brew install archey
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*figlet][5667DE11-E68E-4558-A765-256D23A65B14]]
 brew install figlet
 # 5667DE11-E68E-4558-A765-256D23A65B14 ends here
-# 41886902-0FB3-425B-B512-C1A160F8E3D6 ends here
+# F1A77C76-9D56-45CE-8C27-9A4DD9D50B1F ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Set%20up%20the%20new%20profile][B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770]]
 rm ~/.profile
 cp ./profile-writing ~/.profile
@@ -175,7 +175,7 @@ rm -rf ~/.emacs.d
 mkdir ~/.emacs.d
 ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 # 567603FF-8A5F-4E06-939C-8D21D60AD4ED ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Machine][41886902-0FB3-425B-B512-C1A160F8E3D6]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Machine][6B36623E-8E41-45E6-9B7F-86AD9C4DED9F]]
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Machine][291FDE06-DF44-4156-A013-B763A8727B00]]
 sudo scutil --set HostName ""
 echo "Enter HostName (plain old hostname): "
@@ -205,8 +205,8 @@ All creativity is an extended form of a joke.
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Machine][DBE84671-1CC0-4DBA-AC7C-72F9EAC857A0]]
 sudo spctl --master-disable
 # DBE84671-1CC0-4DBA-AC7C-72F9EAC857A0 ends here
-# 41886902-0FB3-425B-B512-C1A160F8E3D6 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*User][6E5C94FD-6E6D-4EDE-ABD6-6397F31E8A5B]]
+# 6B36623E-8E41-45E6-9B7F-86AD9C4DED9F ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*User][F8B79F85-E593-4B4A-94E8-E7F5DE2D0A0B]]
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*User][2E9BB301-11E8-4A9A-979D-C7F04FAF6F78]]
 
 # 2E9BB301-11E8-4A9A-979D-C7F04FAF6F78 ends here
@@ -447,5 +447,5 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Activity%20Monitor][C2C6F54C-D4B7-4CBE-AF80-E45CE40C9A54]]
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 # C2C6F54C-D4B7-4CBE-AF80-E45CE40C9A54 ends here
-# 6E5C94FD-6E6D-4EDE-ABD6-6397F31E8A5B ends here
-# 2C87821E-2E7E-42F2-8512-96AE52230752 ends here
+# F8B79F85-E593-4B4A-94E8-E7F5DE2D0A0B ends here
+# 16925E43-FD2E-4CB7-957F-DCE747A4FC8C ends here

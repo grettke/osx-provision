@@ -713,7 +713,7 @@ fi
 
 Only install it on hosts.
 
-#+NAME: A5358959-F496-4368-9141-318664D40C6C
+#+NAME: 2B059288-F12E-48E1-939F-1138117FDE4B
 #+BEGIN_SRC sh
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vmware-fusion
@@ -722,7 +722,7 @@ else
 fi
 #+END_SRC
 
-#+NAME: 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9
+#+NAME: D9DF34EB-3AAF-4B6D-BF55-F3BCE9BE9FF2
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 ,* VMWare
 
@@ -735,7 +735,7 @@ fi
 :END:
 Only install it on hosts.
 
-#+NAME: A5358959-F496-4368-9141-318664D40C6C
+#+NAME: D3411D0C-F38A-409F-8D6C-5A03AFEE9CCF
 #+BEGIN_SRC sh
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install skype
@@ -744,7 +744,7 @@ else
 fi
 #+END_SRC
 
-#+NAME: 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9
+#+NAME: ADFFF652-847E-4486-ABCF-D9FFC9F23E94
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 ,* Skype
 
@@ -765,7 +765,7 @@ else
 fi
 #+END_SRC
 
-#+NAME: 3D2F663D-FBA1-4C5E-B19C-EB193C1AE1C9
+#+NAME: 0537F140-23D8-48D9-BB75-D1959D44432A
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 ,* Dropbox
 
@@ -900,7 +900,7 @@ brew cask install filezilla
 
 Only install it on hosts.
 
-#+NAME: A5358959-F496-4368-9141-318664D40C6C
+#+NAME: 27354A58-46C4-426B-8483-A96F7B63342D
 #+BEGIN_SRC sh
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install carbon-copy-cloner
@@ -909,7 +909,7 @@ else
 fi
 #+END_SRC
 
-#+NAME: 63644864-1754-4912-B282-02EB12AE4C8C
+#+NAME: C10D4E23-4322-4885-B9CA-02A72CF5D204
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 ,* Carbon Copy Cloner
 
@@ -923,7 +923,7 @@ fi
 
 Only install it on hosts.
 
-#+NAME: A5358959-F496-4368-9141-318664D40C6C
+#+NAME: 17B2744A-477B-4E79-A152-D1D43E8FB030
 #+BEGIN_SRC sh
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install flux
@@ -932,7 +932,7 @@ else
 fi
 #+END_SRC
 
-#+NAME: 63644864-1754-4912-B282-02EB12AE4C8C
+#+NAME: 32A52187-8E13-4FA2-B445-65A3A0F6F226
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 ,* flux
 
@@ -1658,7 +1658,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 :END:
 
 Perform the common steps.
-#+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
+#+NAME: 83BAB1D5-EC1D-404C-A592-20520FF7CFCC
 #+BEGIN_SRC org
 <<configuration-common-manual>>
 #+END_SRC
@@ -1669,7 +1669,7 @@ Perform the common steps.
 :END:
 
 Perform the common steps.
-#+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
+#+NAME: BA50AAAF-AA8C-4E84-8DF4-189BE1BC5413
 #+BEGIN_SRC org
 <<configuration-common-automated>>
 #+END_SRC
@@ -1683,7 +1683,7 @@ Perform the common steps.
 :ID:       68C5F6B5-9D98-4562-92A2-BE3D5C52F76E
 :END:
 Perform the common steps.
-#+NAME: 41886902-0FB3-425B-B512-C1A160F8E3D6
+#+NAME: E56B1BEA-11C7-42D4-B999-5B9872701B59
 #+BEGIN_SRC org
 <<configuration-common-automated-steps-software>>
 #+END_SRC
@@ -1697,7 +1697,7 @@ Perform the common steps.
 :END:
 
 Perform the common steps.
-#+NAME: 41886902-0FB3-425B-B512-C1A160F8E3D6
+#+NAME: 0BDCC974-D5FF-4411-B18B-C2D91245D5F8
 #+BEGIN_SRC org
 <<configuration-common-automated-steps-settings-machine>>
 #+END_SRC
@@ -1707,7 +1707,7 @@ Perform the common steps.
 :END:
 
 Perform the common steps.
-#+NAME: 6E5C94FD-6E6D-4EDE-ABD6-6397F31E8A5B
+#+NAME: 478AF318-D98C-4593-B7BB-1A24A60B8770
 #+BEGIN_SRC org
 <<configuration-common-automated-steps-settings-user>>
 #+END_SRC
@@ -1757,7 +1757,7 @@ Reminder:
 #+END_SRC
 
 Perform the common steps.
-#+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
+#+NAME: D0708FC2-2130-4975-B951-D5B30D692C1A
 #+BEGIN_SRC org
 <<configuration-common-manual>>
 #+END_SRC
@@ -1768,7 +1768,7 @@ Perform the common steps.
 :END:
 
 Perform the common steps.
-#+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
+#+NAME: 16925E43-FD2E-4CB7-957F-DCE747A4FC8C
 #+BEGIN_SRC org
 <<configuration-writing-automated>>
 #+END_SRC
@@ -1782,7 +1782,7 @@ Perform the common steps.
 :ID:       68C5F6B5-9D98-4562-92A2-BE3D5C52F76E
 :END:
 Perform the common steps.
-#+NAME: 41886902-0FB3-425B-B512-C1A160F8E3D6
+#+NAME: F1A77C76-9D56-45CE-8C27-9A4DD9D50B1F
 #+BEGIN_SRC org
 <<configuration-common-automated-steps-software>>
 #+END_SRC
@@ -1968,7 +1968,7 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 :END:
 
 Perform the common steps.
-#+NAME: 41886902-0FB3-425B-B512-C1A160F8E3D6
+#+NAME: 6B36623E-8E41-45E6-9B7F-86AD9C4DED9F
 #+BEGIN_SRC org
 <<configuration-common-automated-steps-settings-machine>>
 #+END_SRC
@@ -1978,7 +1978,7 @@ Perform the common steps.
 :END:
 
 Perform the common steps.
-#+NAME: 6E5C94FD-6E6D-4EDE-ABD6-6397F31E8A5B
+#+NAME: F8B79F85-E593-4B4A-94E8-E7F5DE2D0A0B
 #+BEGIN_SRC org
 <<configuration-common-automated-steps-settings-user>>
 #+END_SRC
@@ -1989,7 +1989,7 @@ Perform the common steps.
 :END:
 
 Perform the common steps.
-#+NAME: 0E88E868-0174-40D6-B736-5BCC97A13B71
+#+NAME: 76285671-7199-4C00-8326-D2D8FDEFA2F7
 #+BEGIN_SRC org
 <<configuration-common-manual-followup>>
 <<configuration-writing-manual-followup>>
