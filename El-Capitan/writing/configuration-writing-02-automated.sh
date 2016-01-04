@@ -550,25 +550,6 @@ brew cask install mactex
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*GnuPlot][A6FDD2B6-412D-41A5-B58A-942C6540BB57]]
 brew install gnuplot --with-latex --with-pdflib-lite --with-test --with-x11
 # A6FDD2B6-412D-41A5-B58A-942C6540BB57 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Download%20Org%20Mode][916D6512-03E7-4971-8BAC-53D6FA258BBD]]
-set -x
-rm -rf ~/src
-cd ~/src
-git clone git://orgmode.org/org-mode.git
-cd org-mode
-emacs -batch -Q -L lisp -l ../mk/org-fixup -f org-make-autoloads
-cd ~/src
-git clone git@github.com:punchagan/org2blog.git
-git clone https://github.com/jwiegley/use-package.git
-git clone https://github.com/grettke/help.git
-# 916D6512-03E7-4971-8BAC-53D6FA258BBD ends here
-# [[file:~/git/github/osx-provision/El-Capitan/next.org::*Link%20Files%20and%20Folders][567603FF-8A5F-4E06-939C-8D21D60AD4ED]]
-rm ~/.emacs.el
-ln -s ~/src/help/.emacs.el ~/.emacs.el
-rm -rf ~/.emacs.d
-mkdir ~/.emacs.d
-ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
-# 567603FF-8A5F-4E06-939C-8D21D60AD4ED ends here
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Set%20up%20the%20new%20profile][B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770]]
 set -x
 rm ~/.profile

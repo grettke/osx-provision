@@ -1432,7 +1432,6 @@ brew install gnuplot --with-latex --with-pdflib-lite --with-test --with-x11
 This script should be idempotent.
 
 #+NAME: 916D6512-03E7-4971-8BAC-53D6FA258BBD
-#+BEGIN_SRC sh :tangle ./org-and-stuff.sh
 set -x
 rm -rf ~/src
 cd ~/src
@@ -1450,7 +1449,6 @@ git clone https://github.com/grettke/help.git
 :ID:       0ECC4895-8B6B-4079-A581-90B0B2AC7355
 :END:
 #+NAME: 567603FF-8A5F-4E06-939C-8D21D60AD4ED
-#+BEGIN_SRC sh :tangle ./link-emacs-dotfiles.sh
 rm ~/.emacs.el
 ln -s ~/src/help/.emacs.el ~/.emacs.el
 rm -rf ~/.emacs.d
