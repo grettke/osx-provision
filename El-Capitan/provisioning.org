@@ -54,7 +54,7 @@
   [[https://www.uuidgenerator.net/][Online UUID Generator]]
   - In the beginning this helped me keep track of disks, VMs, and software;
     by working through it I found that names were more meaningful, only after
-    developing the sections for the defition (and name)
+    developing the sections for the definition (and name)
 - Evidence based; no fantasy or delusion
   - Decide using experience; in absence make a best decision and move on
   - It takes at least 3 iterations before things start making sense
@@ -92,8 +92,8 @@
     work all over again. I know this seems obvious, but at the time, it didn't
     seem worth the effort of automating everything. Now much later, I'm left
     with a system imaged somewhat differently than the documentation. It is
-    worth the effort to automate everything. The item on snapshotting makes this
-    eaiser.
+    worth the effort to automate everything. The item on snap-shotting makes this
+    easier.
   - After using them only 2 times you will feel how flexible and fun it makes
     the whole development process
 - Never allow manual steps
@@ -124,7 +124,7 @@
 - Deleting the RP
   - DU does not list the RP. CCC does. You work a lot with DU and a little with
     CCC. When you modify the disk partitions, you have to rebuild the RP with
-    CCC. It is easy to forget to do this. I am not sure now how to restore th
+    CCC. It is easy to forget to do this. I am not sure now how to restore the
     RP without a working RP.
 - Utilize compressed disk images
   - Save space
@@ -333,7 +333,7 @@ the clone. Name it =EXT:Utility=. Reboot to it to test it.
 - *Full-Clone of 09d89d*
   - Right Click d0a475 \rarr Create Full Clone\ldots
   - Named "El Capitan - gcr (3a546a)"
-- Machine config
+- Machine configuration
   - Processors
     - 3 cores
       - [[https://pubs.vmware.com/fusion-7/index.jsp?topic=%252Fcom.vmware.fusion.help.doc%252FGUID-4EABCE73-69AB-4665-A5BB-B34C5B736CC7.html][Choosing]]
@@ -380,7 +380,7 @@ the clone. Name it =EXT:Utility=. Reboot to it to test it.
   host
   - The host =sysop= instruction note things unique to the host and guest
 - Provision =sysop=
-- Create, login as, perform the "Manual Stes", and provision =gcr=,
+- Create, login as, perform the "Manual Steps", and provision =gcr=,
   log out and in again
 - Install software updates via App Store
 - Shutdown
@@ -409,3 +409,6 @@ This script is set up to me. To customize it just search and replace on:
 - =orgion_gcr_rsa= :: the name of your key used for Git
 - github-grettke :: your SSH alias for Github
 - bitbucket-grettke :: your SSH alias for Bitbucket
+
+#  LocalWords:  IOSXECA PHOSI PHOSDI IOSEXECA gcr Xcode VC orion orgion rsa
+#  LocalWords:  github
