@@ -1664,8 +1664,7 @@ Perform the common steps.
 #+END_SRC
 *** Automated: Install and automatically configure as much as possible
 :PROPERTIES:
-:header-args: :tangle host/configuration-host-02-automated.sh
-:tangle-mode: (identity #o755)
+:header-args: :tangle host/configuration-host-02-automated.sh :tangle-mode (identity #o755)
 :ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
 :END:
 
@@ -1764,8 +1763,7 @@ Perform the common steps.
 #+END_SRC
 *** Automated: Install and automatically configure as much as possible
 :PROPERTIES:
-:header-args: :tangle writing/configuration-writing-02-automated.sh
-:tangle-mode: (identity #o755)
+:header-args: :tangle writing/configuration-writing-02-automated.sh :tangle-mode (identity #o755)
 :ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
 :END:
 
@@ -1998,8 +1996,7 @@ Perform the common steps.
 #+END_SRC
 *** Automated: Personal Git and TeX Configuration
 :PROPERTIES:
-:header-args: :tangle writing/configuration-writing-04-automated-personal.sh
-:tangle-mode: (identity #o755)
+:header-args: :tangle writing/configuration-writing-04-automated-personal.sh :tangle-mode (identity #o755)
 :ID:       F008829D-FCC5-426E-8CB6-3E3DED5EE2AF
 :END:
 **** Git Setup
