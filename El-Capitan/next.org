@@ -1,4 +1,4 @@
-* Configuration
+* Provisioning
 :PROPERTIES:
 :ID:       262EEA68-1753-489D-A3BE-672C162CD356
 :Effort:   energy
