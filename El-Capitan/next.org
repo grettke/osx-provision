@@ -1286,6 +1286,12 @@ alias ec='/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw --debu
 :ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
 :END:
 
+Reminder:
+#+NAME: BDA085BB-877C-4F75-8614-1C8CC62E5992
+#+BEGIN_SRC org
+*DO INSTALL Xcode BEFORE THE CLT*
+#+END_SRC
+
 Perform the common steps.
 #+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
 #+BEGIN_SRC org
@@ -1298,20 +1304,15 @@ Perform the common steps.
 :ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
 :END:
 
-Note
-#+NAME: BDA085BB-877C-4F75-8614-1C8CC62E5992
-#+BEGIN_SRC org
-*DO INSTALL Xcode BEFORE ThE CLT*
-#+END_SRC
-
 Perform the common steps.
 #+NAME: 2C87821E-2E7E-42F2-8512-96AE52230752
 #+BEGIN_SRC org
 <<configuration-common-automated>>
+<<configuration-writing-automated>>
 #+END_SRC
 **** Steps
 :PROPERTIES:
-:HEADER-ARGS: :noweb-ref configuration-common-automated
+:HEADER-ARGS: :noweb-ref configuration-writing-automated
 :ID:       995CBCB2-07FC-4933-8084-9DB97B11CF92
 :END:
 ***** Software

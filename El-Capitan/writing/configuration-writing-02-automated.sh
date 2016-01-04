@@ -1,7 +1,3 @@
-# [[file:next.org::*Automated:%20Install%20and%20automatically%20configure%20as%20much%20as%20possible][BDA085BB-877C-4F75-8614-1C8CC62E5992]]
-*DO INSTALL Xcode BEFORE ThE CLT*
-# BDA085BB-877C-4F75-8614-1C8CC62E5992 ends here
-
 # [[file:next.org::*Automated:%20Install%20and%20automatically%20configure%20as%20much%20as%20possible][2C87821E-2E7E-42F2-8512-96AE52230752]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Software][41886902-0FB3-425B-B512-C1A160F8E3D6]]
 # [[file:~/git/github/osx-provision/El-Capitan/next.org::*Profile][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
