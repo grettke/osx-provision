@@ -47,12 +47,11 @@ brew cask install spectacle
 brew cask install little-snitch
 # 0A6CDD3C-BB1F-4AB1-8523-C4F5383A6856 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*VLC][093814E5-DB0A-481C-9B39-ACF62216BB55]]
-if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install vlc
-else
-    echo "vlc: Only install on hosts"
-fi
+brew cask install vlc
 # 093814E5-DB0A-481C-9B39-ACF62216BB55 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Adobe%20Flash%20Player][20537EB1-65C8-4CD4-B637-0DCE0F10558E]]
+brew cask install flash-player
+# 20537EB1-65C8-4CD4-B637-0DCE0F10558E ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*VMWare%20Fusion][2B059288-F12E-48E1-939F-1138117FDE4B]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vmware-fusion

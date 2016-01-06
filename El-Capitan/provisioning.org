@@ -692,11 +692,7 @@ brew cask install little-snitch
 :END:
 #+NAME: 093814E5-DB0A-481C-9B39-ACF62216BB55
 #+begin_src sh
-if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install vlc
-else
-    echo "vlc: Only install on hosts"
-fi
+brew cask install vlc
 #+end_src
 
 #+NAME: 31B0BF19-6AE4-4AD3-B4BD-7287DADF25FD
@@ -705,6 +701,16 @@ fi
 
 - Run it
 #+end_src
+
+****** Adobe Flash Player
+:PROPERTIES:
+:ID:       395720BE-487A-42F1-AD8A-2B68852C2001
+:END:
+
+#+NAME: 20537EB1-65C8-4CD4-B637-0DCE0F10558E
+#+BEGIN_SRC sh
+brew cask install flash-player
+#+END_SRC
 
 ****** VMWare Fusion
 :PROPERTIES:
