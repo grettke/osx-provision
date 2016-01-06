@@ -2226,3 +2226,7 @@ As I add things to the image, I'l add them there.
 #+BEGIN_SRC sh
 brew cask install slack
 #+END_SRC
+
+# Local Variables:
+# eval: (defun el-cap-prov-post-tangle-hook ()  (interactive)  (f-delete "../El-Capitan/host/profile-common")  (f-delete "../El-Capitan/writing/profile-common")  (f-copy "../El-Capitan/host/profile-common" "./host")  (f-copy "../El-Capitan/host/profile-common" "./writing"))(add-hook 'org-babel-post-tangle-hook 'el-cap-prov-post-tangle-hook)
+# End:
