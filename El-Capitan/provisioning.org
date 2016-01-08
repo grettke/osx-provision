@@ -420,6 +420,69 @@ This script is set up to me. To customize it just search and replace on:
 - github-grettke :: your SSH alias for Github
 - bitbucket-grettke :: your SSH alias for Bitbucket
 
+*** gcr
+
+**** Snapshots
+
+***** 00000
+
+- Created a new machine using
+  - IOSXECA
+  - Settings
+    - Sharing
+      - Shelf
+      - Mirror
+    - Processors & Memory
+      - Processors: 3
+      - Memory: 6144MB
+        - Tried 7GB for each of the two boxes and 2GB for the host and both
+          boxes were slow
+      - Advanced options
+        - [X] Enable hypervisor
+        - [X] Enable code profiling
+    - Display
+      - [X] Use full resolution for Retina display
+      - Scaled resolution :: All View Modes
+      - Virtual Machine Resolution
+        - Single Window :: Resize the virtual machine and the window
+        - Full Screen :: Resize the virtual machine to fit the screen
+    - Hard Disk (SATA)
+      - 250GB
+      - Click "Apply"
+- Booted the box
+- <2016-01-07 Thu 19:16>
+- Progress indicator remained on left end for a while
+- <2016-01-07 Thu 19:18>
+- Menu appears, chose English
+- Chose "Install OS X"
+- Continue
+- Agree
+- Agree
+- Macintosh HD (42GB)
+- Install
+- Install sequence begins
+- <2016-01-07 Thu 19:19>
+  - Sometimes it says 0m remaining for the entire duration then completes.
+    Other times it shows a countdown to 0 and then says "About a second
+    remaining" for a long time and then says "About 0 seconds remainng" for
+    a while and then completes.
+- <2016-01-07 Thu 19:24>
+- Reboots into another install sequence
+- Progress bar again sits on the left side
+- No Message for a while
+- Says "Installing: About 20 minutes remainng"
+- <2016-01-07 Thu 19:29>
+- Fan turned on, keyboard and palm-rest warm
+- 17 remaining
+- <2016-01-07 Thu 19:38>
+- Took the snapshot
+
+***** will do
+
+- Install VMWare Tools
+- Test it
+- Shutdown
+
 * Provisioning
 :PROPERTIES:
 :ID:       262EEA68-1753-489D-A3BE-672C162CD356
