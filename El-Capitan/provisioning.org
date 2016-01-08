@@ -480,8 +480,10 @@ This script is set up to me. To customize it just search and replace on:
 
 ***** 00001
 
-- Perform the standard initial setup for =gcr= and don't go any further than that
-  configuring things or provisioning anything (don't do the common setup)
+- Perform common setup for =gcr=
+  - Don't do it all though, just create the user, don't configure anything
+    else
+  - Because this is getting snapshotted the directions don't have to be the same
 - Get updates from AppStore
   - When prompted: Turn on Auto Updates
 - Restart and check for more updates
@@ -494,6 +496,14 @@ This script is set up to me. To customize it just search and replace on:
 - Test it
   - Shared Folders
   - Windows versus Full-Screen
+    - Check resolution in full, and windowed-half-screen
+- Check for updates
+- Shutdown
+- Take a snapshot (while box is off)
+
+***** 00003
+
+- Follow common directions for installing Xcode
 - Check for updates
 - Shutdown
 - Take a snapshot (while box is off)
@@ -545,6 +555,7 @@ This script is set up to me. To customize it just search and replace on:
 - Development Tools
   - If you want to use XCode :: Go to the App Store and Install it
     - 4.5GB download
+    - *Run it once*
   - Install the CLT. Choose *Install*.
     ,#+NAME: E0FB4DC2-E07D-4462-A997-99E112066E37
     ,#+BEGIN_SRC sh
@@ -1837,7 +1848,7 @@ alias ec='/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw --debu
 Reminder:
 #+NAME: BDA085BB-877C-4F75-8614-1C8CC62E5992
 #+BEGIN_SRC org
-*DO INSTALL Xcode BEFORE THE CLT*
+*DO INSTALL Xcode FOLLOW THE COMMON DIRECTIONS*
 #+END_SRC
 
 Perform the common steps.
