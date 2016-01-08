@@ -501,7 +501,13 @@ This script is set up to me. To customize it just search and replace on:
 - Shutdown
 - Take a snapshot (while box is off)
 
-***** 00003
+***** TODO
+
+- Note: Still need to tell OS X that it can use more hard drive space. It has a
+  40GB partition and 256 is available. It takes a command to make that happen.
+  That reminds me: make this 256 up in the settings.
+
+***** TODO
 
 - Follow common directions for installing Xcode
 - Check for updates
@@ -602,8 +608,8 @@ This profile approach will evolve.
 **** Steps
 :PROPERTIES:
 :ID:       0A71A737-A201-43A5-A5DD-E62E78EE9C2E
-:END:
-***** Software
+:END:*
+**** Software
 :PROPERTIES:
 :ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
 :HEADER-ARGS: :noweb-ref configuration-common-automated-steps-software
