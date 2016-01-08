@@ -486,15 +486,17 @@ This script is set up to me. To customize it just search and replace on:
   - When prompted: Turn on Auto Updates
 - Restart and check for more updates
 - Shutdown
-- Took the snapshot (whle box is off)
+- Take a snapshot (while box is off)
 
-***** will do
+***** 00002
 
 - Install VMWare Tools
 - Test it
   - Shared Folders
   - Windows versus Full-Screen
+- Check for updates
 - Shutdown
+- Take a snapshot (while box is off)
 
 * Provisioning
 :PROPERTIES:
