@@ -143,6 +143,7 @@
       instead of having to worry about two boxes. It also fails the goal of
       having a single transportable and re-usable guest that can easily and
       completely move between hosts.
+- Always use the present tense
 
 * Dictionary
 :PROPERTIES:
@@ -475,12 +476,24 @@ This script is set up to me. To customize it just search and replace on:
 - Fan turned on, keyboard and palm-rest warm
 - 17 remaining
 - <2016-01-07 Thu 19:38>
-- Took the snapshot
+- Took the snapshot (while box is running)
+
+***** 00001
+
+- Perform the standard initial setup for =gcr= and don't go any further than that
+  configuring things or provisioning anything
+- Get updates from AppStore
+  - When prompted: Turn on Auto Updates
+- Restart and check for more updates
+- Shutdown
+- Took the snapshot (whle box is off)
 
 ***** will do
 
 - Install VMWare Tools
 - Test it
+  - Shared Folders
+  - Windows versus Full-Screen
 - Shutdown
 
 * Provisioning
