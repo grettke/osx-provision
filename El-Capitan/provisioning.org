@@ -481,7 +481,7 @@ This script is set up to me. To customize it just search and replace on:
 ***** 00001
 
 - Perform the standard initial setup for =gcr= and don't go any further than that
-  configuring things or provisioning anything
+  configuring things or provisioning anything (don't do the common setup)
 - Get updates from AppStore
   - When prompted: Turn on Auto Updates
 - Restart and check for more updates
