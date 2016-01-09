@@ -548,8 +548,9 @@ provisioning scripts for the "writing" scenario.
 
 - Follow the directions to run the automated provisioning =02=
   - Downloads failed 2 times; re-ran the script
-  - Bug when copying over the new profile; re-wrote that part
+  - Bug when copying over the new profile; re-wrote that part 5 times
   - =xquartz= installer is slow
+  - =org-mode= checkout is slow
 
 * Provisioning
 :PROPERTIES:
@@ -1821,7 +1822,7 @@ Perform the common steps.
 :END:
 
 - Steps
-  - Copy the provisioning scripts to the home directory
+  - Copy the provisioning scripts host to the home directory
   - Enter the directory
   - Run the script
   - Otherwise the copy commands fail
@@ -1926,7 +1927,7 @@ Perform the common steps.
 :END:
 
 - Steps
-  - Copy the provisioning scripts to the home directory
+  - Copy the provisioning scripts writing directory to the home directory
   - Enter the directory
   - Run the script
   - Otherwise the copy commands fail
