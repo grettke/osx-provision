@@ -554,6 +554,7 @@ provisioning scripts for the "writing" scenario.
   - Noticed bugs with how the final Emacs linking goes
   - Forgot that all of this was untested
   - Script is happy now
+  - Downloads are slow
 
 * Provisioning
 :PROPERTIES:
@@ -2303,6 +2304,7 @@ git clone https://github.com/monfresh/laptop
 cd ~/src
 git clone github-grettke:grettke/help.git
 <<link-emacs-init-and-dot-d>>
+
 #+end_src
 
 **** TeX
