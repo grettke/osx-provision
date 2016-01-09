@@ -573,7 +573,7 @@ This script is set up to me. To customize it just search and replace on:
     ,#+END_SRC
 - Mouse
   - Host :: Connect Bluetooth mouse
-  - Mke the mouse slow
+  - Make the mouse slow
 - Host :: Reconfigure control keys
 - Host :: Maximize resolution
 - Host :: Show Keychain Access in Menubar
@@ -589,10 +589,11 @@ This script is set up to me. To customize it just search and replace on:
   - Show volume in menubar
 - Finder
   - Preferences
-    - Favorites
-      - <Home>
-    - Devices
-      - <Computer>
+    - Sidebar
+      - Favorites
+        - <Home>
+      - Devices
+        - <Computer>
 #+END_SRC
 *** Common Profile
 :PROPERTIES:
