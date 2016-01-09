@@ -561,6 +561,16 @@ This script is set up to me. To customize it just search and replace on:
   - Guest :: ~IOSXECA~
 - During configuration log into the App Store
 - Make a user named ~gcr~ and choose an avatar
+- Development Tools
+  - If you want to use XCode :: Go to the App Store and Install it
+    - 4.5GB download
+    - *Run it once*
+    - During the download you can perform the other configuration steps
+  - Install the CLT. Choose *Install*.
+    ,#+NAME: E0FB4DC2-E07D-4462-A997-99E112066E37
+    ,#+BEGIN_SRC sh
+    xcode-select --install
+    ,#+END_SRC
 - Mouse
   - Host :: Connect Bluetooth mouse
   - Mke the mouse slow
@@ -583,15 +593,6 @@ This script is set up to me. To customize it just search and replace on:
       - <Home>
     - Devices
       - <Computer>
-- Development Tools
-  - If you want to use XCode :: Go to the App Store and Install it
-    - 4.5GB download
-    - *Run it once*
-  - Install the CLT. Choose *Install*.
-    ,#+NAME: E0FB4DC2-E07D-4462-A997-99E112066E37
-    ,#+BEGIN_SRC sh
-    xcode-select --install
-    ,#+END_SRC
 #+END_SRC
 *** Common Profile
 :PROPERTIES:
