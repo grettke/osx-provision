@@ -538,7 +538,7 @@ provisioning scripts for the "writing" scenario.
 - Check for updates again
 - Shutdown
 - Take a snapshot (while box is off)
-- From here snapshots should occur at script divisons  
+- From here snapshots should occur at script divisions
 
 * Provisioning
 :PROPERTIES:
