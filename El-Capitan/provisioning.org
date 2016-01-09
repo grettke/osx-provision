@@ -614,7 +614,7 @@ export HOMEBREW_NO_EMOJI=1
 $PATH
 #+END_SRC
 
-You must us =:comments no= otherwise the profile gets mangled.
+You must use =:comments no= otherwise the profile gets mangled.
 
 #+NAME: 25086576-D16D-45F4-9141-1A45E2C8F8FD
 #+BEGIN_SRC sh :tangle common/profile-common :comments no
