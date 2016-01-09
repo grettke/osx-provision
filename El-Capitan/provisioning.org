@@ -143,8 +143,8 @@
       instead of having to worry about two boxes. It also fails the goal of
       having a single transportable and re-usable guest that can easily and
       completely move between hosts.
-- Always use the present tense
-- Software downloads during provisioning often fail  
+- Always use the present tense for directions and the past tense for notes
+- Software downloads during provisioning often fail
 
 * Dictionary
 :PROPERTIES:
