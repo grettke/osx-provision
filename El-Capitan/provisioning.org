@@ -144,6 +144,7 @@
       having a single transportable and re-usable guest that can easily and
       completely move between hosts.
 - Always use the present tense
+- Software downloads during provisioning often fail  
 
 * Dictionary
 :PROPERTIES:
