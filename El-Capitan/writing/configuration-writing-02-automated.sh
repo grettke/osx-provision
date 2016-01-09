@@ -128,10 +128,12 @@ brew install figlet
 # 5667DE11-E68E-4558-A765-256D23A65B14 ends here
 # F1A77C76-9D56-45CE-8C27-9A4DD9D50B1F ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Set%20up%20the%20new%20profile][B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770]]
-rm ~/.profile
-cp ./profile-writing ~/.profile
-source ~/.profile
-cat ~/.profile
+cd ~/
+rm .profile
+cp ./writing/profile-writing .profile
+source .profile
+cat .profile
+cd writing
 # B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bunch%20of%20Stuff][CCF91EC0-F689-4279-972C-9F1D32C4C64B]]
 brew cask install xquartz

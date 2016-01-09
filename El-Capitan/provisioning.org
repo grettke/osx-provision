@@ -542,8 +542,14 @@ provisioning scripts for the "writing" scenario.
 - From here snapshots should occur at script divisions
 
 ***** 03 (D9D1B231-DAC8-4EC3-A140-7EC60D4914AF)
+:PROPERTIES:
+:ID:       162811B7-0370-405A-AF12-353E1BC7E4C2
+:END:
 
 - Follow the directions to run the automated provisioning =02=
+  - Downloads failed 2 times; re-ran the script
+  - Bug when copying over the new profile; re-wrote that part
+  - =xquartz= installer is slow
 
 * Provisioning
 :PROPERTIES:
@@ -1951,10 +1957,12 @@ Perform the common steps.
 
 #+NAME: B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770
 #+BEGIN_SRC sh
-rm ~/.profile
-cp ./profile-writing ~/.profile
-source ~/.profile
-cat ~/.profile
+cd ~/
+rm .profile
+cp ./writing/profile-writing .profile
+source .profile
+cat .profile
+cd writing
 #+END_SRC
 ******* EELIB
 :PROPERTIES:
