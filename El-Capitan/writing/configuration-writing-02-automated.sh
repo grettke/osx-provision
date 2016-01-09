@@ -160,6 +160,7 @@ brew install gnuplot --with-latex --with-pdflib-lite --with-test --with-x11
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Download%20Org%20Mode][916D6512-03E7-4971-8BAC-53D6FA258BBD]]
 set -x
 rm -rf ~/src
+mkdir ~/src
 cd ~/src
 git clone git://orgmode.org/org-mode.git
 cd org-mode

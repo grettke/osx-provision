@@ -2102,6 +2102,7 @@ This script should be idempotent.
 #+BEGIN_SRC sh
 set -x
 rm -rf ~/src
+mkdir ~/src
 cd ~/src
 git clone git://orgmode.org/org-mode.git
 cd org-mode
