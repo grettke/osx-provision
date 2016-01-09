@@ -491,51 +491,48 @@ This script is set up to me. To customize it just search and replace on:
 - Installer completed and "first-boot" screen appeared <2016-01-08 Fri 20:07>
 - Took a snapshot of this running box
 
-***** 00001
+***** 001 (47FEE341-D051-4CC0-8C59-324CA57E4CBB)
 :PROPERTIES:
 :ID:       B43DDE6F-65B3-45AF-AAA7-0348FD7974B4
 :END:
 
-- Perform common setup for =gcr=
-  - Don't do it all though, just create the user, don't configure anything
-    else
-  - Because this is getting snapshotted the directions don't have to be the same
-- Get updates from AppStore
-  - When prompted: Turn on Auto Updates
-- Restart and check for more updates
-- Shutdown
-- Take a snapshot (while box is off)
-
-***** 00002
-:PROPERTIES:
-:ID:       63C05192-849B-4870-B460-A3D25C0330FB
-:END:
-
+- Perform only account creation steps for creation of =gcr= following the
+  "Common Manual" flow
+  - Because this is getting snapshotted it only needs to go this far. The goal
+    is to set up the base machine correctly now.
+- Read [[https://themacwrangler.wordpress.com/2015/10/21/resizing-el-capitan-mac-volumes-under-vmware-fusion/][this]] for a reference
+- Open Terminal
+- Execute:
+  #+NAME: 3EE90C6E-8C89-4845-98DF-DE7D603D3274
+  #+BEGIN_SRC sh
+  sudo diskutil resizeVolume / R
+  #+END_SRC
+- View the results, they should be what you expect
+- Verify in DU
 - Install VMWare Tools
 - Test it
   - Shared Folders
   - Windows versus Full-Screen
     - Check resolution in full, and windowed-half-screen
-- Check for updates
+    - Check it by choosing "Scaled" and after checking it choose
+      "Default for display"
+- Get updates from AppStore
+  - When prompted: Turn on Auto Updates
+- Check for updates again
 - Shutdown
 - Take a snapshot (while box is off)
 
-***** TODO
+***** 002 (309AC7C5-FE7F-42F8-8680-BA78B6D7C239)
 :PROPERTIES:
-:ID:       6D776CFF-E129-4F71-8068-7CC8CEE0E621
+:ID:       A1D507D9-2A74-4660-931D-604442308CF9
 :END:
 
-- Note: Still need to tell OS X that it can use more hard drive space. It has a
-  40GB partition and 256 is available. It takes a command to make that happen.
-  That reminds me: make this 256 up in the settings.
-
-***** TODO
-:PROPERTIES:
-:ID:       2E3AFD1E-4D18-4E96-BE58-DE514CC31B4A
-:END:
-
-- Follow common directions for installing Xcode
-- Check for updates
+- Perform the remaining account configuration and Xcode/CLT setup in the
+  "Common Manual", choosing to install Xcode
+  - Don't set up the profile or provision or do anything beyond there
+  - Goal is to snapshot more frequently than just at the divisions between
+    runnning the provisioner scripts (both manual and automated)
+- Check for updates again
 - Shutdown
 - Take a snapshot (while box is off)
 
@@ -564,10 +561,9 @@ This script is set up to me. To customize it just search and replace on:
 - Development Tools
   - If you want to use XCode :: Go to the App Store and Install it
     - 4.5GB download
-    - *Run it once*
     - During the download you can perform the other configuration steps
+    - *Run it once*
   - Install the CLT. Choose *Install*.
-    ,#+NAME: E0FB4DC2-E07D-4462-A997-99E112066E37
     ,#+BEGIN_SRC sh
     xcode-select --install
     ,#+END_SRC

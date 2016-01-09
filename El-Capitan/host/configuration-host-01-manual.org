@@ -8,10 +8,9 @@
 - Development Tools
   - If you want to use XCode :: Go to the App Store and Install it
     - 4.5GB download
-    - *Run it once*
     - During the download you can perform the other configuration steps
+    - *Run it once*
   - Install the CLT. Choose *Install*.
-    #+NAME: E0FB4DC2-E07D-4462-A997-99E112066E37
     #+BEGIN_SRC sh
     xcode-select --install
     #+END_SRC
