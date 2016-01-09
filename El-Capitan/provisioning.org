@@ -551,6 +551,7 @@ provisioning scripts for the "writing" scenario.
   - Bug when copying over the new profile; re-wrote that part 5 times
   - =xquartz= installer is slow
   - =org-mode= checkout is slow
+  - Noticed bugs with how the final Emacs linking goes
 
 * Provisioning
 :PROPERTIES:
