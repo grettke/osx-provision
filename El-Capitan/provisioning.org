@@ -853,6 +853,8 @@ fi
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 ,* VMWare
 
+,*Only install on hosts*
+
 - On a host: License it
 #+END_SRC
 
@@ -875,6 +877,8 @@ fi
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 ,* Skype
 
+,*Only install on hosts*
+
 - Log in and disable notifications for log in and out
 #+END_SRC
 
@@ -895,6 +899,8 @@ fi
 #+NAME: 0537F140-23D8-48D9-BB75-D1959D44432A
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 ,* Dropbox
+
+*Only install on hosts*
 
 - Log in
 - Sync nothing right away
@@ -1040,6 +1046,8 @@ fi
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 ,* Carbon Copy Cloner
 
+*Only install on hosts*
+
 - On a host: License it
 #+END_SRC
 
@@ -1062,6 +1070,8 @@ fi
 #+NAME: 32A52187-8E13-4FA2-B445-65A3A0F6F226
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 ,* flux
+
+*Only install on hosts*
 
 - Enable at startup
 #+END_SRC

@@ -41,15 +41,21 @@
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*VMWare%20Fusion][D9DF34EB-3AAF-4B6D-BF55-F3BCE9BE9FF2]]
 * VMWare
 
+*Only install on hosts*
+
 - On a host: License it
 # D9DF34EB-3AAF-4B6D-BF55-F3BCE9BE9FF2 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Skype][ADFFF652-847E-4486-ABCF-D9FFC9F23E94]]
 * Skype
 
+*Only install on hosts*
+
 - Log in and disable notifications for log in and out
 # ADFFF652-847E-4486-ABCF-D9FFC9F23E94 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Dropbox][0537F140-23D8-48D9-BB75-D1959D44432A]]
 * Dropbox
+
+*Only install on hosts*
 
 - Log in
 - Sync nothing right away
@@ -129,10 +135,14 @@ in the middle.
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Carbon%20Copy%20Cloner][C10D4E23-4322-4885-B9CA-02A72CF5D204]]
 * Carbon Copy Cloner
 
+*Only install on hosts*
+
 - On a host: License it
 # C10D4E23-4322-4885-B9CA-02A72CF5D204 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*flux][32A52187-8E13-4FA2-B445-65A3A0F6F226]]
 * flux
+
+*Only install on hosts*
 
 - Enable at startup
 # 32A52187-8E13-4FA2-B445-65A3A0F6F226 ends here
