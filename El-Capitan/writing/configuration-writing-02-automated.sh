@@ -170,6 +170,7 @@ git clone git@github.com:punchagan/org2blog.git
 git clone https://github.com/jwiegley/use-package.git
 git clone https://github.com/grettke/help.git
 # 916D6512-03E7-4971-8BAC-53D6FA258BBD ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Link%20Files%20and%20Folders][FE599B18-6194-4B9C-8997-338B927D8D64]]
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Link%20Files%20and%20Folders][567603FF-8A5F-4E06-939C-8D21D60AD4ED]]
 rm ~/.emacs.el
 ln -s ~/src/help/.emacs.el ~/.emacs.el
@@ -177,6 +178,7 @@ rm -rf ~/.emacs.d
 mkdir ~/.emacs.d
 ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 # 567603FF-8A5F-4E06-939C-8D21D60AD4ED ends here
+# FE599B18-6194-4B9C-8997-338B927D8D64 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Machine][6B36623E-8E41-45E6-9B7F-86AD9C4DED9F]]
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Machine][291FDE06-DF44-4156-A013-B763A8727B00]]
 sudo scutil --set HostName ""

@@ -84,11 +84,18 @@ git clone bitbucket-grettke:grettke/wnw.git
 git clone bitbucket-grettke:grettke/texmf.git
 cd ~/git/github
 git clone github-grettke:grettke/osx-provision.git
-cd ~/git/github-anonq
+cd ~/git/github-anonymous
 git clone https://github.com/bkuhlmann/osx
 git clone https://github.com/monfresh/laptop
 cd ~/src
 git clone github-grettke:grettke/help.git
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Link%20Files%20and%20Folders][567603FF-8A5F-4E06-939C-8D21D60AD4ED]]
+rm ~/.emacs.el
+ln -s ~/src/help/.emacs.el ~/.emacs.el
+rm -rf ~/.emacs.d
+mkdir ~/.emacs.d
+ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
+# 567603FF-8A5F-4E06-939C-8D21D60AD4ED ends here
 # 5BD1669B-8E2A-46B5-AB80-88DA5764DEEB ends here
 
 # [[file:provisioning.org::*TeX][4053A83F-EA3D-4431-AA4A-62336DF2F95E]]

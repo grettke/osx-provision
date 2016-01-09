@@ -2121,14 +2121,21 @@ git clone https://github.com/grettke/help.git
 :PROPERTIES:
 :ID:       0ECC4895-8B6B-4079-A581-90B0B2AC7355
 :END:
+
 #+NAME: 567603FF-8A5F-4E06-939C-8D21D60AD4ED
-#+BEGIN_SRC sh
+#+BEGIN_SRC sh :noweb-ref link-emacs-init-and-dot-d
 rm ~/.emacs.el
 ln -s ~/src/help/.emacs.el ~/.emacs.el
 rm -rf ~/.emacs.d
 mkdir ~/.emacs.d
 ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 #+END_SRC
+
+#+NAME: FE599B18-6194-4B9C-8997-338B927D8D64
+#+BEGIN_SRC sh
+<<link-emacs-init-and-dot-d>>
+#+END_SRC
+
 ***** Settings
 :PROPERTIES:
 :ID:       D19C1E4F-7195-44AE-A3D1-1D48AAC91BD1
@@ -2290,11 +2297,12 @@ git clone bitbucket-grettke:grettke/wnw.git
 git clone bitbucket-grettke:grettke/texmf.git
 cd ~/git/github
 git clone github-grettke:grettke/osx-provision.git
-cd ~/git/github-anonq
+cd ~/git/github-anonymous
 git clone https://github.com/bkuhlmann/osx
 git clone https://github.com/monfresh/laptop
 cd ~/src
 git clone github-grettke:grettke/help.git
+<<link-emacs-init-and-dot-d>>
 #+end_src
 
 **** TeX
