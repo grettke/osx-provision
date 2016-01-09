@@ -553,6 +553,7 @@ provisioning scripts for the "writing" scenario.
   - =org-mode= checkout is slow
   - Noticed bugs with how the final Emacs linking goes
   - Forgot that all of this was untested
+  - Script is happy now
 
 * Provisioning
 :PROPERTIES:
