@@ -422,10 +422,19 @@ This script is set up to me. To customize it just search and replace on:
 - bitbucket-grettke :: your SSH alias for Bitbucket
 
 *** gcr
+:PROPERTIES:
+:ID:       302F5DF8-89F3-409F-8F2F-07B9DD424D85
+:END:
 
 **** Snapshots
+:PROPERTIES:
+:ID:       147ACE5F-775B-4D36-9EC6-740D05AA4157
+:END:
 
-***** 00000 C487C7B2
+***** 000 (65289699-3B29-48A0-9135-A0BD467CC47E)
+:PROPERTIES:
+:ID:       3209C6EA-4408-478F-B854-287CBB126591
+:END:
 
 - Create a new machine using
   - IOSXECA
@@ -434,11 +443,14 @@ This script is set up to me. To customize it just search and replace on:
       - Shelf
       - Mirror
     - Processors & Memory
-      - Processors: 3
-      - Memory: 6144MB
+      - Processors: 2
+      - Memory: 5120MB
         - 7GB for each of the two boxes and 2GB for the host makes the guests
           too slow
+        - 6GB and 2 boxes made the host run out of memory in a "freak event"
+          that happened on two host systems
       - Advanced options
+        - Starting to wonder how expensive it is to check these
         - [X] Enable hypervisor
         - [X] Enable code profiling
     - Display
@@ -448,15 +460,15 @@ This script is set up to me. To customize it just search and replace on:
         - Single Window :: Resize the virtual machine and the window
         - Full Screen :: Resize the virtual machine to fit the screen
     - Hard Disk (SATA)
-      - 250GB
+      - 256GB
       - Click "Apply"
 - Close the Settings
-- Boot the box <2016-01-08 Fri 18:58>
-- Progress indicator appears <2016-01-08 Fri 18:58>
+- Boot the box <2016-01-08 Fri 19:45>
+- Progress indicator appears <2016-01-08 Fri 19:45>
 - Progress indicator remained on left end for a while
   - It jumps around between far left and middle
-- Progress indicator closes <2016-01-08 Fri 19:00>
-- Menu appears, chose English
+- Progress indicator closes <2016-01-08 Fri 19:47>
+- Menu appears, chose English <2016-01-08 Fri 19:48>
 - Chose "Install OS X"
 - Continue
 - Continue
@@ -464,21 +476,25 @@ This script is set up to me. To customize it just search and replace on:
 - Agree
 - Macintosh HD (42GB)
 - Install
-- Install sequence begins <2016-01-08 Fri 19:01>
+- Install sequence begins <2016-01-08 Fri 19:49>
   - Sometimes it says "About a second remaining" for the entire duration then
     completes. Other times it shows a countdown to 0 and then says "About a
     second remaining" for a long time and then says "About 0 seconds remainng"
     for a while and then completes.
-- Reboots into another install sequence <2016-01-08 Fri 19:06>
+- Reboots into another install sequence <2016-01-08 Fri 19:54>
 - Progress bar again sits on the left side
 - No message for a while
-- Says "Installing: About 20 minutes remaining" <2016-01-08 Fri 19:08>
-- Fan turned on, keyboard and palm-rest warm <2016-01-08 Fri 19:10>
-- Another progress indicator appears<2016-01-08 Fri 19:18>
-- Installer completed and "first-boot" screen appeared <2016-01-08 Fri 19:19>
+- Says "Installing: About 20 minutes remaining" <2016-01-08 Fri 19:55>
+- Keyboard and palm-rest warm <2016-01-08 Fri 19:59>
+- Fan turned on <2016-01-08 Fri 20:00>
+- Another progress indicator appears <2016-01-08 Fri 20:07>
+- Installer completed and "first-boot" screen appeared <2016-01-08 Fri 20:07>
 - Took a snapshot of this running box
 
 ***** 00001
+:PROPERTIES:
+:ID:       B43DDE6F-65B3-45AF-AAA7-0348FD7974B4
+:END:
 
 - Perform common setup for =gcr=
   - Don't do it all though, just create the user, don't configure anything
@@ -491,6 +507,9 @@ This script is set up to me. To customize it just search and replace on:
 - Take a snapshot (while box is off)
 
 ***** 00002
+:PROPERTIES:
+:ID:       63C05192-849B-4870-B460-A3D25C0330FB
+:END:
 
 - Install VMWare Tools
 - Test it
@@ -502,12 +521,18 @@ This script is set up to me. To customize it just search and replace on:
 - Take a snapshot (while box is off)
 
 ***** TODO
+:PROPERTIES:
+:ID:       6D776CFF-E129-4F71-8068-7CC8CEE0E621
+:END:
 
 - Note: Still need to tell OS X that it can use more hard drive space. It has a
   40GB partition and 256 is available. It takes a command to make that happen.
   That reminds me: make this 256 up in the settings.
 
 ***** TODO
+:PROPERTIES:
+:ID:       2E3AFD1E-4D18-4E96-BE58-DE514CC31B4A
+:END:
 
 - Follow common directions for installing Xcode
 - Check for updates
@@ -606,6 +631,9 @@ This profile approach will evolve.
 :ID:       FC8DB1F5-25FA-4DD2-A6C8-3F434F6FCCF9
 :END:
 **** Steps
+:PROPERTIES:
+:ID:       A614FF96-F976-45FF-A7E9-FDB50907F9FD
+:END:
 :PROPERTIES:
 :ID:       0A71A737-A201-43A5-A5DD-E62E78EE9C2E
 :END:*
