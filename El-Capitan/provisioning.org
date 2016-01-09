@@ -426,6 +426,9 @@ This script is set up to me. To customize it just search and replace on:
 :ID:       302F5DF8-89F3-409F-8F2F-07B9DD424D85
 :END:
 
+This box configuration will follow and utilize the manual and automated
+provisioning scripts for the "writing" scenario.
+
 **** Snapshots
 :PROPERTIES:
 :ID:       147ACE5F-775B-4D36-9EC6-740D05AA4157
