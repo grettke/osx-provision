@@ -556,6 +556,11 @@ provisioning scripts for the "writing" scenario.
   - Script is happy now
   - Downloads are slow
   - Restarting brew sometimes restarts downloads at their original progress
+  - How to drop MacTeX.pkg into the brew cache in case the download never
+    completes?
+    - Read [[http://mygeekdaddy.net/2014/12/05/how-to-install-a-local-file-in-homebrew/][this]]
+    - Tried renaming the pkg to "mactex-latest.pkg, didn't work
+    - Tried renaming it to "mactex-latest.pkg.incomplete", didn't work
 
 * Provisioning
 :PROPERTIES:
