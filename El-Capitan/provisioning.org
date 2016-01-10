@@ -1207,6 +1207,7 @@ brew cask install font-symbola
 
 #+NAME: 429CCB8C-CFCF-40C9-87B5-03384D5DFE14
 #+BEGIN_SRC sh
+rm -rf ~/git/github-anonymous
 mkdir -p ~/git/github-anonymous
 cd ~/git/github-anonymous
 git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
@@ -2133,11 +2134,18 @@ brew cask install deltawalker
 
 License it.
 
-Set up the "Compare with DeltaWalker.workflow" by following the directions
-- Copying it to the user library
-- Opening it in Automator by double clicking it in Finder
-- Immediately saving it and closing it
-- Sometimes this breaks without explanation
+- Do not set up the "Compare with DeltaWalker.workflow"
+  - It *was* done by following the directions
+    - Copying it to the user library
+    - Opening it in Automator by double clicking it in Finder
+    - Immediately saving it and closing it
+    - Sometimes this breaks without explanation
+  - No longer do that because I have not figured out why it broke, and it brewaks
+    for Git, and Git is more important 99% of the time usage vs direct file
+    comparisons
+
+- Manually compare two of the test files to see that it runs and font's look
+  right
 
 - Set preferences for new comparisons (be sure of this, easy not to)
   - General
@@ -2158,9 +2166,7 @@ Set up the "Compare with DeltaWalker.workflow" by following the directions
     - [ ] Ignore differences in line endings (CF and LF)
       - Most systems don't care, but I do and should fix it
 
-There are files to test with [[/opt/homebrew-cask/Caskroom/deltawalker/2.1.2/Extras/samples%0A][here]]. Test them using the Finder integration.
-
-After Git it set up, test it there, too.
+After Git is set up, test everything.
 #+END_SRC
 
 ****** MacTeX
