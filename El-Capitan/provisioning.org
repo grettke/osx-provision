@@ -583,8 +583,8 @@ provisioning scripts for the "writing" scenario.
 :ID:       B05C0718-0C5D-43A2-9F17-7753666F38D0
 :END:
 
-- Manually set the background to the galaxy
-- Stuff that can't get tested until Emacs is set up
+- TODO: Manually set the background to the galaxy
+- TODO: Stuff that can't get tested until Emacs is set up
   -
 
 * Provisioning
