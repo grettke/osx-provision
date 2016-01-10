@@ -664,12 +664,17 @@ This profile approach will evolve.
 :END:
 :PROPERTIES:
 :ID:       0A71A737-A201-43A5-A5DD-E62E78EE9C2E
-:END:*
+:END:
+
+Any steps without notes that get tangled into the follow file are so simple that
+they don't need to be documented.
+
 **** Software
 :PROPERTIES:
 :ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
 :HEADER-ARGS: :noweb-ref configuration-common-automated-steps-software
 :END:
+
 ****** Profile
 :PROPERTIES:
 :ID:       56989957-A8F5-4C47-9B27-31A3AC4ED8DD
