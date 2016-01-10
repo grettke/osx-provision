@@ -573,12 +573,15 @@ provisioning scripts for the "writing" scenario.
     never completes. It sits at 98% forever. Control-Z and re-ran
 - Named box "osiris"
 - That is it; didn't even click around or inspect anything.
+- Kept forgetting to copy the new version of the script onto the box; should
+  automate that  
 - Shutdown
 - Take a snapshot (while box is off)
 
 ***** 04 (59F8EDFF-5C26-48B2-9CEF-28BDD316B629)
 
-- Manually set the background to the
+- Manually set the background to the galaxy
+-
 
 * Provisioning
 :PROPERTIES:
