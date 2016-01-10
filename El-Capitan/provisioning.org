@@ -569,6 +569,9 @@ provisioning scripts for the "writing" scenario.
     things and move on. I didn't, and that is probably good. In the end, the
     automatic provisioner did it's job and I didn't do anything manually. That
     is a hard habit to break.
+  - There is a different issue on every run. Sometimes the org-mode git checkout
+    never completes. It sits at 98% forever. Control-Z and re-ran the script.
+- Take a snapshot (while box is off)
 
 * Provisioning
 :PROPERTIES:
