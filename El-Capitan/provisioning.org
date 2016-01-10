@@ -2136,6 +2136,8 @@ License it.
 Set up the "Compare with DeltaWalker.workflow" by following the directions
 - Copying it to the user library
 - Opening it in Automator by double clicking it in Finder
+- Immediately saving it and closing it
+- Sometimes this breaks without explanation
 
 - Set preferences for new comparisons (be sure of this, easy not to)
   - General
