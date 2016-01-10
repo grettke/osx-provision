@@ -162,7 +162,9 @@ set -x
 rm -rf ~/src
 mkdir ~/src
 cd ~/src
+date +%Y-%m-%dT%H:%M:%S%z
 git clone git://orgmode.org/org-mode.git
+date +%Y-%m-%dT%H:%M:%S%z
 cd org-mode
 emacs -batch -Q -L lisp -l ../mk/org-fixup -f org-make-autoloads
 cd ~/src

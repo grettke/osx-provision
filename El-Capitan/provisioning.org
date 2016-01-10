@@ -570,7 +570,7 @@ provisioning scripts for the "writing" scenario.
     automatic provisioner did it's job and I didn't do anything manually. That
     is a hard habit to break.
   - There is a different issue on every run. Sometimes the org-mode git checkout
-    never completes. It sits at 98% forever. Control-Z and re-ran the script.
+    never completes. It sits at 98% forever. Control-Z and re-ran
 - Take a snapshot (while box is off)
 
 * Provisioning
@@ -2132,7 +2132,9 @@ set -x
 rm -rf ~/src
 mkdir ~/src
 cd ~/src
+date +%Y-%m-%dT%H:%M:%S%z
 git clone git://orgmode.org/org-mode.git
+date +%Y-%m-%dT%H:%M:%S%z
 cd org-mode
 emacs -batch -Q -L lisp -l ../mk/org-fixup -f org-make-autoloads
 cd ~/src
