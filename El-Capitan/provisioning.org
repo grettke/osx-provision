@@ -584,10 +584,13 @@ provisioning scripts for the "writing" scenario.
 :END:
 
 - Manually set the background to the galaxy
-- Bug fix in provisioner, don't install karabiner on a guest, so, fixed script
-  and manually removed from the box
+- Bug fix in provisioner
+  - Don't install karabiner on a guest, so, fixed scriptand manually removed
+    from the boxes
+  - VLC doesn't work, replaced it with MPlayer OSX Extended
 - Stuff that can't get tested until Emacs is set up
-  -
+  - Git key stuff
+  - Fonts for Emacs, can see in profile though
 
 * Provisioning
 :PROPERTIES:
@@ -909,22 +912,22 @@ Granting:
 - Update
   - Automatically check for updates daily
 #+END_SRC
-****** VLC
+****** MPlayer OSX Extended
 :PROPERTIES:
 :ID:       C47DA927-A6B2-4751-98AC-D3200E6F4095
 :END:
 #+NAME: 093814E5-DB0A-481C-9B39-ACF62216BB55
 #+begin_src sh
-brew cask install vlc
+brew cask install mplayer-osx-extended
 #+end_src
 
 #+NAME: 31B0BF19-6AE4-4AD3-B4BD-7287DADF25FD
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-,* VLC
+,* MPlayer OSX Extended
 
 - Run it
 - [[http://www.sample-videos.com/][Test it]]
-- Do not check for album art and metadata
+- Volume works?
 #+end_src
 
 ****** Adobe Flash Player
@@ -1032,44 +1035,17 @@ brew cask install bartender
   - Launch Bartender at login: yes.
   - At bartender launch: show bartender bar: NO.
   - Bartender bar: autohides, YES.
-- Menu bar icon highlight
+- Appearance
+  - Menu bar icon: "..."
   - Show when bartender bar is open: YES.
-  - Bartender menu baricon:
-- ADVANCED
-  - Bartender menu bar icon: visible YES.
-  - Clicking on bartender will: open bartender bar.
-  - For everything moved into the gutter
-  - I made it display in the main for 5m.
 
-- Ordered them (reorder by holding Pretzel and dragging them) (do this after installing everything)
-  - little snitch
-    - Can't move this one at all anyway
-  - Date/Time
+- Never hide
   - Volume
-  - Keychain Access
-  - Battery
+  - Clock
+  - Little Snitch
   - Bluetooth
   - Wifi
-  - Vagrant Manager
-  - Dropbox
-  - Fast User Switching Menu
-  - Applications Menu Settings
-  - Notification center
-  - Spotlight
-  - Bartender
-
-  - Hide
-    - Growl
-    - Karabiner
-    - Spectacle
-    - Carbon Copy Cloner
-    - AirPort Display
-    - Time Machine (completely)
-    - Google Chrome (Hangouts)
-    - Microsoft Remote Desktop
-
-Arrangement-algorithm is most activity or cared about on the outside and less so
-in the middle.
+- Hide everything else
 #+end_src
 
 ****** Chrome
@@ -1091,6 +1067,7 @@ brew cask install google-chrome
 - All the JS disabling stuff needs you to approve it. It is irritating.
   You always forget to approve it and make worse.
   - Disable ScriptSafe right away. Turn it on as needed.
+- Log into gmail
 #+end_src
 ****** Firefox
 :PROPERTIES:
@@ -1110,7 +1087,24 @@ name hasn't changed. Did a manual install instead.
 
 - Install the standard plugins
   - NoScript
-  - Blur
+- Log into gmail
+#+end_src
+
+****** Opera
+:PROPERTIES:
+:ID:       2348C82F-F560-4C30-8B80-9D7EE4D4291F
+:END:
+#+NAME: D852AD6F-DF45-4FF9-A391-954323438F96
+#+begin_src sh
+brew cask install opera
+#+end_src
+
+#+NAME: 170C8F78-1807-4A64-AE9F-9D2985A405F7
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Opera
+
+- Run it
+- Log into gmail
 #+end_src
 
 ****** Filezilla
@@ -1222,17 +1216,19 @@ git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 ,* Terminal
 
-- Load the solarized theme
-- Select the Solarized dark theme
-- Set the font to DJSM 17
+- Import the Solarized dark theme
 - Set it to the default theme
+- Set the font to DJSM 17
 #+END_SRC
 ****** Recipes
+:PROPERTIES:
+:ID:       54BA64D3-899B-4AA4-A68F-237F68B0CF2F
+:END:
 
 #+NAME: A61A74A8-B361-4395-B9DE-E6F843166511
 #+BEGIN_SRC sh
 cd ~/git/github-anonymous
-git clone git@github.com:caskroom/homebrew-cask.git
+git clone https://github.com/caskroom/homebrew-cask.git
 #+END_SRC
 ****** ccrypt
 :PROPERTIES:
@@ -1248,7 +1244,8 @@ brew install ccrypt
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 ,* ccrypt
 
-- Verify that you can create and re-open files
+- Run it in the terminal
+- Verify that you can create and re-open files with Emacs
 #+END_SRC
 
 ****** tree
@@ -2095,7 +2092,7 @@ cd writing
 - Start it
 - enable run on login
 - top left corner
-- crystal
+- smoke
 #+END_SRC
 ****** Bunch of Stuff
 :PROPERTIES:
@@ -2134,8 +2131,6 @@ brew cask install deltawalker
 #+BEGIN_SRC org :noweb-ref configuration-writing-manual-followup
 ,* DeltaWalker
 
-Got to it's Cellar location and drag it into Applications.
-
 License it.
 
 Set up the "Compare with DeltaWalker.workflow" by following the directions
@@ -2158,12 +2153,12 @@ Set up the "Compare with DeltaWalker.workflow" by following the directions
       - Want to know about tabs versus spaces
     - [ ] Ignore differences in character case
       - Interesting but default do care
-    - [X] Ignore differences in line endings (CF and LF)
-      - Most systems don't care
+    - [ ] Ignore differences in line endings (CF and LF)
+      - Most systems don't care, but I do and should fix it
 
 There are files to test with [[/opt/homebrew-cask/Caskroom/deltawalker/2.1.2/Extras/samples%0A][here]]. Test them using the Finder integration.
 
-After Git it set up, test it there ,too.
+After Git it set up, test it there, too.
 #+END_SRC
 
 ****** MacTeX

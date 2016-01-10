@@ -31,14 +31,52 @@
 * Little Snitch
 
 - Start it
+- Register it
+- Configure per below
 - Enable integration
 - Start at boot
-- License it
+
+Granting:
+
+- *Always grant minimum required*
+- For known good TLD's, grant it forever
+  - Lots of connections to *.apple.com
+  - For apps that want to call homen do forever
+
+- Gen
+  - Show inactive warning
+  - Silent mode: no
+  - Show status in menu bar.
+- Alert:
+  - Detail level: Show full details
+  - No: Confirm automatically
+  - NO: Confirm with return and escape.
+    - Can use control-return and command-return intead
+- Monitor:
+  - Keyboard shortcut: Off
+  - Show network activity in menu bar.
+    - Show data rates numerically. Monochrome.
+  - Show auto when mouse enters. Hide in 2s.
+- APS
+  - Yes: Enable automatic profile switching
+    - When joining: Ask
+  - Yes: Save geolocation of networks.
+- Security
+  - Allow rules and profile edit.
+  - Allow profile switch.
+  - Allow preference editing
+  - Respect privacy.
+- Advanced
+  - Approve rules automatically.
+- Update
+  - Automatically check for updates daily
 # 5167B280-8058-4B60-92E9-2E481FD3A07F ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*VLC][31B0BF19-6AE4-4AD3-B4BD-7287DADF25FD]]
-* VLC
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*MPlayer%20OSX%20Extended][31B0BF19-6AE4-4AD3-B4BD-7287DADF25FD]]
+* MPlayer OSX Extended
 
 - Run it
+- [[http://www.sample-videos.com/][Test it]]
+- Volume works?
 # 31B0BF19-6AE4-4AD3-B4BD-7287DADF25FD ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*VMWare%20Fusion][D9DF34EB-3AAF-4B6D-BF55-F3BCE9BE9FF2]]
 * VMWare
@@ -74,44 +112,17 @@
   - Launch Bartender at login: yes.
   - At bartender launch: show bartender bar: NO.
   - Bartender bar: autohides, YES.
-- Menu bar icon highlight
+- Appearance
+  - Menu bar icon: "..."
   - Show when bartender bar is open: YES.
-  - Bartender menu baricon:
-- ADVANCED
-  - Bartender menu bar icon: visible YES.
-  - Clicking on bartender will: open bartender bar.
-  - For everything moved into the gutter
-  - I made it display in the main for 5m.
 
-- Ordered them (reorder by holding Pretzel and dragging them) (do this after installing everything)
-  - little snitch
-    - Can't move this one at all anyway
-  - Date/Time
+- Never hide
   - Volume
-  - Keychain Access
-  - Battery
+  - Clock
+  - Little Snitch
   - Bluetooth
   - Wifi
-  - Vagrant Manager
-  - Dropbox
-  - Fast User Switching Menu
-  - Applications Menu Settings
-  - Notification center
-  - Spotlight
-  - Bartender
-
-  - Hide
-    - Growl
-    - Karabiner
-    - Spectacle
-    - Carbon Copy Cloner
-    - AirPort Display
-    - Time Machine (completely)
-    - Google Chrome (Hangouts)
-    - Microsoft Remote Desktop
-
-Arrangement-algorithm is most activity or cared about on the outside and less so
-in the middle.
+- Hide everything else
 # 8FF0E7F5-4CA1-4F1B-A787-5E523943C266 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Chrome][F44BD494-95D4-4339-BFCC-C0A472D24576]]
 * Chrome
@@ -121,14 +132,21 @@ in the middle.
 - All the JS disabling stuff needs you to approve it. It is irritating.
   You always forget to approve it and make worse.
   - Disable ScriptSafe right away. Turn it on as needed.
+- Log into gmail
 # F44BD494-95D4-4339-BFCC-C0A472D24576 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Firefox][C31B20CA-568B-4037-B094-A46AEE3C144B]]
 * Firefox
 
 - Install the standard plugins
   - NoScript
-  - Blur
+- Log into gmail
 # C31B20CA-568B-4037-B094-A46AEE3C144B ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Opera][170C8F78-1807-4A64-AE9F-9D2985A405F7]]
+* Opera
+
+- Run it
+- Log into gmail
+# 170C8F78-1807-4A64-AE9F-9D2985A405F7 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Filezilla][8474322D-6F50-4A7C-9C89-2A49C9ADB6B8]]
 * FileZilla
 
@@ -156,14 +174,14 @@ in the middle.
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Terminal][D880F24A-DE8D-4513-A354-45C9B57E0631]]
 * Terminal
 
-- Load the solarized theme
-- Select the Solarized dark theme
-- Set the font to DJSM 17
+- Import the Solarized dark theme
 - Set it to the default theme
+- Set the font to DJSM 17
 # D880F24A-DE8D-4513-A354-45C9B57E0631 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*ccrypt][257678B4-BD36-4073-AC10-0F616D817479]]
 * ccrypt
 
-- Verify that you can create and re-open files
+- Run it in the terminal
+- Verify that you can create and re-open files with Emacs
 # 257678B4-BD36-4073-AC10-0F616D817479 ends here
 # 0E88E868-0174-40D6-B736-5BCC97A13B71 ends here

@@ -50,8 +50,8 @@ brew cask install spectacle
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Little%20Snitch][0A6CDD3C-BB1F-4AB1-8523-C4F5383A6856]]
 brew cask install little-snitch
 # 0A6CDD3C-BB1F-4AB1-8523-C4F5383A6856 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*VLC][093814E5-DB0A-481C-9B39-ACF62216BB55]]
-brew cask install vlc
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*MPlayer%20OSX%20Extended][093814E5-DB0A-481C-9B39-ACF62216BB55]]
+brew cask install mplayer-osx-extended
 # 093814E5-DB0A-481C-9B39-ACF62216BB55 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Adobe%20Flash%20Player][20537EB1-65C8-4CD4-B637-0DCE0F10558E]]
 brew cask install flash-player
@@ -86,6 +86,9 @@ brew cask install google-chrome
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Firefox][32D109DB-1554-40D5-B591-FCC2F922F903]]
 brew cask install firefox
 # 32D109DB-1554-40D5-B591-FCC2F922F903 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Opera][D852AD6F-DF45-4FF9-A391-954323438F96]]
+brew cask install opera
+# D852AD6F-DF45-4FF9-A391-954323438F96 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Filezilla][E35E5182-A810-4547-B6E8-866CC13AA7FA]]
 brew cask install filezilla
 # E35E5182-A810-4547-B6E8-866CC13AA7FA ends here
@@ -118,6 +121,10 @@ mkdir -p ~/git/github-anonymous
 cd ~/git/github-anonymous
 git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
 # 429CCB8C-CFCF-40C9-87B5-03384D5DFE14 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Recipes][A61A74A8-B361-4395-B9DE-E6F843166511]]
+cd ~/git/github-anonymous
+git clone https://github.com/caskroom/homebrew-cask.git
+# A61A74A8-B361-4395-B9DE-E6F843166511 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*ccrypt][9FBFA1B1-9677-4366-BF34-9A5D33A5677C]]
 brew install ccrypt
 # 9FBFA1B1-9677-4366-BF34-9A5D33A5677C ends here
