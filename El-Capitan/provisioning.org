@@ -564,6 +564,7 @@ provisioning scripts for the "writing" scenario.
     - Tried renaming it to "mactex-latest.pkg.incomplete", didn't work
     - Quit trying and kept re-running the download until it completed and
       installed
+    - Downloading mactex via direct-download is slow
 
 * Provisioning
 :PROPERTIES:
