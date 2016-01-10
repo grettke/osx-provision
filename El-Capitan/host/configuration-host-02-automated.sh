@@ -16,9 +16,13 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Brew%20&%20Brew%20Cask][5C68042B-9C59-42C9-9A7F-D625C0475C3A]]
 brew tap caskroom/cask
 # 5C68042B-9C59-42C9-9A7F-D625C0475C3A ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*karabiner][E81A12BB-2B0F-468D-8090-4B525168B86A]]
-brew cask install karabiner
-# E81A12BB-2B0F-468D-8090-4B525168B86A ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*karabiner][F1B1D8B4-662F-4DD2-8C02-CE51CFF862E0]]
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install karabiner
+else
+    echo "karabiner: Only install on hosts"
+fi
+# F1B1D8B4-662F-4DD2-8C02-CE51CFF862E0 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*git][F5E5B964-50FA-49EF-BABF-EFE558057EC2]]
 brew install git
 # F5E5B964-50FA-49EF-BABF-EFE558057EC2 ends here
