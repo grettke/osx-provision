@@ -561,6 +561,8 @@ provisioning scripts for the "writing" scenario.
     - Read [[http://mygeekdaddy.net/2014/12/05/how-to-install-a-local-file-in-homebrew/][this]]
     - Tried renaming the pkg to "mactex-latest.pkg, didn't work
     - Tried renaming it to "mactex-latest.pkg.incomplete", didn't work
+    - Quit trying and kept re-running the download until it completed and
+      installed
 
 * Provisioning
 :PROPERTIES:
