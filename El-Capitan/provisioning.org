@@ -565,6 +565,10 @@ provisioning scripts for the "writing" scenario.
     - Quit trying and kept re-running the download until it completed and
       installed
     - Downloading mactex via direct-download is too slow
+  - Out of the 10 tries to finish mactex and fix bugs, I wanted to manually fix
+    things and move on. I didn't, and that is probably good. In the end, the
+    automatic provisioner did it's job and I didn't do anything manually. That
+    is a hard habit to break.
 
 * Provisioning
 :PROPERTIES:
