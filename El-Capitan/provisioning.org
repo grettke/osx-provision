@@ -667,7 +667,8 @@ This profile approach will evolve.
 :END:
 
 Any steps without notes that get tangled into the follow file are so simple that
-they don't need to be documented.
+they don't need to be documented and don't need to be completed during the
+followup process.
 
 **** Software
 :PROPERTIES:
