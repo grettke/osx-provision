@@ -547,6 +547,7 @@ provisioning scripts for the "writing" scenario.
 :END:
 
 - Follow the directions to run the automated provisioning =02=
+  - Remember: nothing is configured now
   - Downloads failed 2 times; re-ran the script
   - Bug when copying over the new profile; re-wrote that part 5 times
   - =xquartz= installer is slow
