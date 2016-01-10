@@ -583,8 +583,10 @@ provisioning scripts for the "writing" scenario.
 :ID:       B05C0718-0C5D-43A2-9F17-7753666F38D0
 :END:
 
-- TODO: Manually set the background to the galaxy
-- TODO: Stuff that can't get tested until Emacs is set up
+- Manually set the background to the galaxy
+- Bug fix in provisioner, don't install karabiner on a guest, so, fixed script
+  and manually removed from the box
+- Stuff that can't get tested until Emacs is set up
   -
 
 * Provisioning
@@ -867,9 +869,45 @@ brew cask install little-snitch
 ,* Little Snitch
 
 - Start it
+- Register it
+- Configure per below
 - Enable integration
 - Start at boot
-- License it
+
+Granting:
+
+- *Always grant minimum required*
+- For known good TLD's, grant it forever
+  - Lots of connections to *.apple.com
+  - For apps that want to call homen do forever
+
+- Gen
+  - Show inactive warning
+  - Silent mode: no
+  - Show status in menu bar.
+- Alert:
+  - Detail level: Show full details
+  - No: Confirm automatically
+  - NO: Confirm with return and escape.
+    - Can use control-return and command-return intead
+- Monitor:
+  - Keyboard shortcut: Off
+  - Show network activity in menu bar.
+    - Show data rates numerically. Monochrome.
+  - Show auto when mouse enters. Hide in 2s.
+- APS
+  - Yes: Enable automatic profile switching
+    - When joining: Ask
+  - Yes: Save geolocation of networks.
+- Security
+  - Allow rules and profile edit.
+  - Allow profile switch.
+  - Allow preference editing
+  - Respect privacy.
+- Advanced
+  - Approve rules automatically.
+- Update
+  - Automatically check for updates daily
 #+END_SRC
 ****** VLC
 :PROPERTIES:
@@ -885,6 +923,8 @@ brew cask install vlc
 ,* VLC
 
 - Run it
+- [[http://www.sample-videos.com/][Test it]]
+- Do not check for album art and metadata
 #+end_src
 
 ****** Adobe Flash Player
@@ -1187,7 +1227,13 @@ git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
 - Set the font to DJSM 17
 - Set it to the default theme
 #+END_SRC
+****** Recipes
 
+#+NAME: A61A74A8-B361-4395-B9DE-E6F843166511
+#+BEGIN_SRC sh
+cd ~/git/github-anonymous
+git clone git@github.com:caskroom/homebrew-cask.git
+#+END_SRC
 ****** ccrypt
 :PROPERTIES:
 :ID:       F9E3F2A3-F16A-4EB8-8F4F-4FF47C7BBE06
