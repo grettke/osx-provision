@@ -571,7 +571,8 @@ provisioning scripts for the "writing" scenario.
     is a hard habit to break.
   - There is a different issue on every run. Sometimes the org-mode git checkout
     never completes. It sits at 98% forever. Control-Z and re-ran
-- That is it; didn't even click around or inspect anything.    
+- That is it; didn't even click around or inspect anything.
+- Shutdown  
 - Take a snapshot (while box is off)
 
 * Provisioning
