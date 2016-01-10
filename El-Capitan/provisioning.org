@@ -555,6 +555,7 @@ provisioning scripts for the "writing" scenario.
   - Forgot that all of this was untested
   - Script is happy now
   - Downloads are slow
+  - Restarting brew sometimes restarts downloads at their original progress
 
 * Provisioning
 :PROPERTIES:
