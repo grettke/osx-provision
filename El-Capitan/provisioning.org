@@ -2275,7 +2275,7 @@ Perform the common steps.
 #+END_SRC
 *** Automated: Generic Git
 :PROPERTIES:
-:header-args: :tangle writing/configuration-writing-04-automated-personal.sh :tangle-mode (identity #o755)
+:header-args: :tangle writing/configuration-writing-04-automated-generic.sh :tangle-mode (identity #o755)
 :ID:       F008829D-FCC5-426E-8CB6-3E3DED5EE2AF
 :END:
 
