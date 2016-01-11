@@ -419,14 +419,6 @@ script
 :ID:       E2BCA2F2-6647-424D-B496-4623E800FD4A
 :END:
 
-This script is set up to me. To customize it just search and replace on:
-- gcr@wisdomandwonder.com :: your email address for your SSH key
-- orion :: the host name where this key lives
-- gcr :: your username using this key
-- =orgion_gcr_rsa= :: the name of your key used for Git
-- github-grettke :: your SSH alias for Github
-- bitbucket-grettke :: your SSH alias for Bitbucket
-
 *** gcr
 :PROPERTIES:
 :ID:       302F5DF8-89F3-409F-8F2F-07B9DD424D85
