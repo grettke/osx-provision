@@ -588,6 +588,12 @@ provisioning scripts for the "writing" scenario.
   - Don't install karabiner on a guest, so, fixed scriptand manually removed
     from the boxes
   - VLC doesn't work, replaced it with MPlayer OSX Extended
+  - Added Opera
+  - Added cask project checkout to easily browse Casks
+- Every time I restore the image now I have to make all of the corrections just
+  because I don't want to have to install MacTeX again
+  - Note: All expensive operations should isolated via snapshots in addition to
+    just using them.    
 - Stuff that can't get tested until Emacs is set up
   - Git key stuff
   - Fonts for Emacs, can see in profile though
