@@ -213,14 +213,8 @@ Granting:
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Deltawalker][25ED30C2-0916-49E2-9F9F-DC96D6B7DDE6]]
 * DeltaWalker
 
-License it.
-
-Set up the "Compare with DeltaWalker.workflow" by following the directions
-- Copying it to the user library
-- Opening it in Automator by double clicking it in Finder
-- Immediately saving it and closing it
-- Sometimes this breaks without explanation
-
+- Drag the bundle into Applications
+- License it.
 - Set preferences for new comparisons (be sure of this, easy not to)
   - General
     - Date formatting: English (United States)
@@ -239,9 +233,14 @@ Set up the "Compare with DeltaWalker.workflow" by following the directions
       - Interesting but default do care
     - [ ] Ignore differences in line endings (CF and LF)
       - Most systems don't care, but I do and should fix it
-
-There are files to test with [[/opt/homebrew-cask/Caskroom/deltawalker/2.1.2/Extras/samples%0A][here]]. Test them using the Finder integration.
-
-After Git it set up, test it there, too.
+- Set up the "Compare with DeltaWalker.workflow"
+  - Go to its Cask location
+  - Copy it to ~/Library/Services
+  - Opening it in Automator by double clicking it in Finder
+  - Immediately saving it and closing it
+- Save the new configuration and guit DW, and then start it again and verify
+  that the settings are saved. Once they were not.
+- Test the sample files for a two-file diff.
+- After Git is set up, test everything.
 # 25ED30C2-0916-49E2-9F9F-DC96D6B7DDE6 ends here
 # 76285671-7199-4C00-8326-D2D8FDEFA2F7 ends here

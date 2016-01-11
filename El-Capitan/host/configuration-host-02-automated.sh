@@ -117,6 +117,7 @@ brew cask install font-noto-sans-symbols
 brew cask install font-symbola
 # 74BEB31B-9499-4144-B997-9E16B3FA24D9 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Terminal][429CCB8C-CFCF-40C9-87B5-03384D5DFE14]]
+rm -rf ~/git/github-anonymous
 mkdir -p ~/git/github-anonymous
 cd ~/git/github-anonymous
 git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git

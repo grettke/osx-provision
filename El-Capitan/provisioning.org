@@ -602,6 +602,11 @@ provisioning scripts for the "writing" scenario.
 - Stuff that can't get tested until Emacs is set up
   - Git key stuff
   - Fonts for Emacs, can see in profile though
+  - Deltawalker
+- Rebooted and reviewed the steps again
+  - Tried DW again just to be sure
+- Shutdown
+- Take a snapshot (while box is off)
 
 * Provisioning
 :PROPERTIES:
@@ -2164,10 +2169,12 @@ brew cask install deltawalker
     - [ ] Ignore differences in line endings (CF and LF)
       - Most systems don't care, but I do and should fix it
 - Set up the "Compare with DeltaWalker.workflow"
-  - Copying it to the user library
+  - Go to its Cask location
+  - Copy it to ~/Library/Services
   - Opening it in Automator by double clicking it in Finder
   - Immediately saving it and closing it
-  - Sometimes this breaks without explanation
+- Save the new configuration and guit DW, and then start it again and verify
+  that the settings are saved. Once they were not.
 - Test the sample files for a two-file diff.
 - After Git is set up, test everything.
 #+END_SRC
