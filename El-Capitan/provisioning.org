@@ -145,6 +145,11 @@
       completely move between hosts.
 - Always use the present tense for directions and the past tense for notes
 - Software downloads during provisioning often fail
+- =brew= is explicit
+  - You need to pay attention to the command at least once. Some applications
+    will auto-install them self when you try to run them, and that is great.
+    Others don't and run from the Caskroom. Sometimes the latter is fine, other
+    times it is not.
 
 * Dictionary
 :PROPERTIES:
@@ -593,7 +598,7 @@ provisioning scripts for the "writing" scenario.
 - Every time I restore the image now I have to make all of the corrections just
   because I don't want to have to install MacTeX again
   - Note: All expensive operations should isolated via snapshots in addition to
-    just using them.    
+    just using them.
 - Stuff that can't get tested until Emacs is set up
   - Git key stuff
   - Fonts for Emacs, can see in profile though
@@ -2138,21 +2143,8 @@ brew cask install deltawalker
 #+BEGIN_SRC org :noweb-ref configuration-writing-manual-followup
 ,* DeltaWalker
 
-License it.
-
-- Do not set up the "Compare with DeltaWalker.workflow"
-  - It *was* done by following the directions
-    - Copying it to the user library
-    - Opening it in Automator by double clicking it in Finder
-    - Immediately saving it and closing it
-    - Sometimes this breaks without explanation
-  - No longer do that because I have not figured out why it broke, and it brewaks
-    for Git, and Git is more important 99% of the time usage vs direct file
-    comparisons
-
-- Manually compare two of the test files to see that it runs and font's look
-  right
-
+- Drag the bundle into Applications
+- License it.
 - Set preferences for new comparisons (be sure of this, easy not to)
   - General
     - Date formatting: English (United States)
@@ -2171,8 +2163,13 @@ License it.
       - Interesting but default do care
     - [ ] Ignore differences in line endings (CF and LF)
       - Most systems don't care, but I do and should fix it
-
-After Git is set up, test everything.
+- Set up the "Compare with DeltaWalker.workflow"
+  - Copying it to the user library
+  - Opening it in Automator by double clicking it in Finder
+  - Immediately saving it and closing it
+  - Sometimes this breaks without explanation
+- Test the sample files for a two-file diff.
+- After Git is set up, test everything.
 #+END_SRC
 
 ****** MacTeX
