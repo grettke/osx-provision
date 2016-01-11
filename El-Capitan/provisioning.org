@@ -528,6 +528,7 @@ provisioning scripts for the "writing" scenario.
 :ID:       A1D507D9-2A74-4660-931D-604442308CF9
 :END:
 
+- Steps are: configuration-writing-01-manual.org
 - Perform the remaining account configuration and Xcode/CLT setup in the
   "Common Manual", choosing to install Xcode
   - Don't set up the profile or provision or do anything beyond there
@@ -543,6 +544,7 @@ provisioning scripts for the "writing" scenario.
 :ID:       162811B7-0370-405A-AF12-353E1BC7E4C2
 :END:
 
+Steps are: configuration-writing-02-automated.sh
 - Follow the directions to run the automated provisioning =02=
   - Remember: nothing is configured now
   - Downloads failed 2 times; re-ran the script
@@ -580,6 +582,7 @@ provisioning scripts for the "writing" scenario.
 :ID:       B05C0718-0C5D-43A2-9F17-7753666F38D0
 :END:
 
+- Steps are: configuration-writing-03-manual.org
 - Manually set the background to the galaxy
 - Bug fix in provisioner
   - Don't install karabiner on a guest, so, fixed scriptand manually removed
