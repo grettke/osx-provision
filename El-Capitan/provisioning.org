@@ -2487,13 +2487,9 @@ sudo mktexlsr
   - [ ] pdf
   - [ ] txt
 
-*** Automated: Unsorted New Things
-:PROPERTIES:
-:header-args: :tangle writing/configuration-writing-05-automated-personal.sh :tangle-mode (identity #o755)
-:ID:       F008829D-FCC5-426E-8CB6-3E3DED5EE2AF
-:END:
+*** New Unconfigured Things
 
-As I add things to the image, I'l add them there.
+Things that don't have a place yet.
 
 #+NAME: 75569C81-CF17-482A-8EF3-53457897457C
 #+BEGIN_SRC sh
