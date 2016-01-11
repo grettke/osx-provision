@@ -2270,11 +2270,12 @@ Perform the common steps.
 <<configuration-common-manual-followup>>
 <<configuration-writing-manual-followup>>
 #+END_SRC
-*** Automated: Personal Git and TeX Configuration
+*** Automated: Generic Git
 :PROPERTIES:
 :header-args: :tangle writing/configuration-writing-04-automated-personal.sh :tangle-mode (identity #o755)
 :ID:       F008829D-FCC5-426E-8CB6-3E3DED5EE2AF
 :END:
+
 **** Git Setup
 :PROPERTIES:
 :ID:       637C8E64-3756-4B50-9E89-B3444AEF29B0
@@ -2293,16 +2294,21 @@ Generate the key. There is no passphrase.
 rm -rf ~/.ssh
 mkdir ~/.ssh
 cd ~/.ssh
-ssh-keygen -N '' -t rsa -C "gcr@wisdomandwonder.com" -f orion_gcr_rsa
+echo "What email address would you like to use for this SSH key?"
+read SSHEMAIL
+SSHID=`whoami`-`hostname`
+SSHUID=$SSHID-`date '+%Y_%m_%d_%H_%M_%S'`
+SSHFILE=$SSHUID-rsa
+ssh-keygen -N '' -t rsa -C $SSHEMAIL -f $SSHFILE
 #+end_src
 
 Set permissions so that =ssh= will run.
 
 #+NAME: 298B36CF-28A0-45CC-BACF-787EAB06F348
 #+begin_src sh
-chmod 600 ~/.ssh/orion_gcr_rsa
-chmod 600 ~/.ssh/orion_gcr_rsa.pub
-ssh-add -K ~/.ssh/orion_gcr_rsa
+chmod 600 ~/.ssh/$SSHFILE
+chmod 600 ~/.ssh/$SSHFILE.pub
+ssh-add -K ~/.ssh/$SSHFILE
 #+end_src
 
 OSX creates this directory everywhere and it must be ignored.
@@ -2317,7 +2323,8 @@ Add they key to Bitbucket and Github.
 
 #+NAME: 3934CA71-20AE-4136-AB57-1DEF8EBC0ADB
 #+begin_src sh
-cat ~/.ssh/orion_gcr_rsa.pub | pbcopy
+echo "Name your Git site key: $SSHFILE"
+cat ~/.ssh/$SSHFILE.pub | pbcopy
 read -p "The new key is in your clipboard. Go and add this key to BitBucket and GitHub. When you are finished, hit [enter] to continue."
 #+end_src
 
@@ -2326,16 +2333,16 @@ Set up ~/.ssh/config.
 #+NAME: 70D5D9F2-6CFC-4FB5-BC45-416B4ABA029F
 #+begin_src sh
 cat > ~/.ssh/config << EOF
-Host github-grettke
+Host github-`whoami`
      HostName github.com
      User git
      PreferredAuthentications publickey
-     IdentityFile ~/.ssh/orion_gcr_rsa.pub
-Host bitbucket-grettke
+     IdentityFile ~/.ssh/$SSHFILE.pub
+Host bitbucket-`whoami`
      HostName bitbucket.org
      User git
      PreferredAuthentications publickey
-     IdentityFile ~/.ssh/orion_gcr_rsa.pub
+     IdentityFile ~/.ssh/$SSHFILE.pub
 EOF
 #+end_src
 
@@ -2343,7 +2350,7 @@ Test each one out.
 
 #+NAME: 07933181-5F02-43CB-9DF8-232DA213E4BB
 #+begin_src sh
-ssh -T github-grettke
+ssh -T github-`whoami`
 read -p "Did it work? If not, fix it."
 #+end_src
 
@@ -2351,9 +2358,19 @@ Separate them to allow for easier copy-pasting.
 
 #+NAME: 66DAC891-FB97-48A8-9C8B-0292095F13A6
 #+begin_src sh
-ssh -T bitbucket-grettke
+ssh -T bitbucket-`whoami`
 read -p "Did it work? If not, fix it."
 #+end_src
+
+*** Automated: Personal Git and TeX Configuration
+:PROPERTIES:
+:header-args: :tangle writing/configuration-writing-05-automated-personal.sh :tangle-mode (identity #o755)
+:ID:       F008829D-FCC5-426E-8CB6-3E3DED5EE2AF
+:END:
+**** Git Setup
+:PROPERTIES:
+:ID:       65A4DD8F-92FD-4C60-9157-B5AE951AFF2C
+:END:
 
 Set up my preferences.
 
@@ -2385,23 +2402,22 @@ rm -rf ~/src/help
 mkdir -p ~/git/bitbucket
 mkdir -p ~/git/github
 cd ~/git/bitbucket
-git clone bitbucket-grettke:grettke/list.git
-git clone bitbucket-grettke:grettke/resume.git
-git clone bitbucket-grettke:grettke/notes.git
-git clone bitbucket-grettke:grettke/signature.git
-git clone bitbucket-grettke:grettke/grant-personal.git
-git clone bitbucket-grettke:grettke/correspondence.git
-git clone bitbucket-grettke:grettke/wnw.git
-git clone bitbucket-grettke:grettke/texmf.git
+git clone bitbucket-`whoami`:grettke/list.git
+git clone bitbucket-`whoami`:grettke/resume.git
+git clone bitbucket-`whoami`:grettke/notes.git
+git clone bitbucket-`whoami`:grettke/signature.git
+git clone bitbucket-`whoami`:grettke/grant-personal.git
+git clone bitbucket-`whoami`:grettke/correspondence.git
+git clone bitbucket-`whoami`:grettke/wnw.git
+git clone bitbucket-`whoami`:grettke/texmf.git
 cd ~/git/github
-git clone github-grettke:grettke/osx-provision.git
+git clone github-`whoami`:grettke/osx-provision.git
 cd ~/git/github-anonymous
 git clone https://github.com/bkuhlmann/osx
 git clone https://github.com/monfresh/laptop
 cd ~/src
-git clone github-grettke:grettke/help.git
+git clone github-`whoami`:grettke/help.git
 <<link-emacs-init-and-dot-d>>
-
 #+end_src
 
 **** TeX
@@ -2436,7 +2452,7 @@ sudo mktexlsr
 
 *** Manual: Personal Git and TeX Configuration Testing
 :PROPERTIES:
-:header-args: :tangle writing/configuration-writing-05-automated-personal.org
+:header-args: :tangle writing/configuration-writing-06-automated-personal.org
 :ID:       44798E7B-AC1F-4FD8-AB5E-3A3563B79C4B
 :END:
 
@@ -2488,6 +2504,9 @@ sudo mktexlsr
   - [ ] txt
 
 *** New Unconfigured Things
+:PROPERTIES:
+:ID:       04AB7D1A-536F-4497-A697-8974FD401F76
+:END:
 
 Things that don't have a place yet.
 
