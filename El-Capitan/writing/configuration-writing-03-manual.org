@@ -1,4 +1,4 @@
-# [[file:provisioning.org::*Manual:%20Configure%20the%20automatically%20installed%20stuff][76285671-7199-4C00-8326-D2D8FDEFA2F7]]
+# [[file:../provisioning.org::*Manual:%20Configure%20the%20automatically%20installed%20stuff][76285671-7199-4C00-8326-D2D8FDEFA2F7]]
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*karabiner][C13ADBE3-27E1-4E34-AAED-503ACE4E7922]]
 * Karabiner
 

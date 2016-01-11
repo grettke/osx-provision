@@ -1,4 +1,4 @@
-# [[file:provisioning.org::*Automated:%20Install%20and%20automatically%20configure%20as%20much%20as%20possible][16925E43-FD2E-4CB7-957F-DCE747A4FC8C]]
+# [[file:../provisioning.org::*Automated:%20Install%20and%20automatically%20configure%20as%20much%20as%20possible][16925E43-FD2E-4CB7-957F-DCE747A4FC8C]]
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Software][F1A77C76-9D56-45CE-8C27-9A4DD9D50B1F]]
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Profile][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
 rm ~/.profile

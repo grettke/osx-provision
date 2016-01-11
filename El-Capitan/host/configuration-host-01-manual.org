@@ -1,4 +1,4 @@
-# [[file:provisioning.org::*Manual:%20Turn%20the%20lights%20on][83BAB1D5-EC1D-404C-A592-20520FF7CFCC]]
+# [[file:../provisioning.org::*Manual:%20Turn%20the%20lights%20on][83BAB1D5-EC1D-404C-A592-20520FF7CFCC]]
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Common%20Manual][639707FE-FE60-439E-A8C8-9FBD9936D1C4]]
 - Re-image your box
   - Host :: ~PHOSDI~
