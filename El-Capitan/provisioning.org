@@ -613,7 +613,23 @@ Steps are: configuration-writing-02-automated.sh
 - Ran configuration-writing-04-automated-generic.sh
 - Ran personal git setup
 - Run configuration-writing-05-automated-personal.sh
--
+- Worked through configuration-writing-06-manual-personal.org, working with
+  help.org
+  - Emacs runs fine
+  - Tangling works fine
+  - Image generation works
+  - eshell works
+  - ccrypt works
+  - ispell works
+  - weasel words works
+  - langtool
+    - Initially didn't work: "langtool--check-command: java command is not found"
+    - java is in the path
+    -
+
+the the foundation works
+
+
 - org2blog is missing
  #+BEGIN_SRC sh
  cd ~/src
@@ -686,11 +702,12 @@ export VISUAL=vim
 export EDITOR='$VISUAL'
 export PS1='\u@\h:\w> '
 export HOMEBREW_NO_EMOJI=1
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home"
 #+END_SRC
 
 #+NAME: common-profile-path-pre
 #+BEGIN_SRC sh
-/usr/local/bin
+/usr/local/bin:$JAVA_HOME/bin
 #+END_SRC
 
 #+NAME: common-profile-path-post
