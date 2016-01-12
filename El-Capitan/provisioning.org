@@ -634,10 +634,25 @@ Steps are: configuration-writing-02-automated.sh
   #+BEGIN_SRC sh
   cd ~/src
   git clone https://github.com/punchagan/org2blog.git
-  #+END_SRC sh
+  ,#+END_SRC sh
   - Manually fixed it
-- TODO: Test DeltaWalker Git diff
-      
+- Rebooted
+- Test DeltaWalker
+  - In Finder, Compare two files with DW works
+  - The value of difftool.deltawalker.cmd
+    - Looks fine in the script, looks weird when I list it and that is OK
+    - In the terminal, calling that path makes DW run as expected
+  - This works fine
+    ,#+NAME: 2EF21564-820C-40B6-A995-BC74941CB71D
+    ,#+BEGIN_SRC sh
+/Applications/DeltaWalker.app/Contents/MacOS/git-diff /opt/homebrew-cask/Caskroom/deltawalker/2.1.2/Extras/samples/q0.txt /opt/homebrew-cask/Caskroom/deltawalker/2.1.2/Extras/samples/q1.txt
+    #+END_SRC
+  - Just tested a 3 way merge and that worked totally fine. Need to get plain
+    diffs working
+  - Right now, not sure what changed, and Git diff with DW is working. Suspect
+    that up above, I re-wran the command to set the external diff tool for Git,
+    not touching merge at all, well maybe that had something to do with it?
+
 * Provisioning
 :PROPERTIES:
 :ID:       262EEA68-1753-489D-A3BE-672C162CD356
