@@ -2601,13 +2601,63 @@ Things that don't have a place yet.
 
 **** Slack
 
-- livecodepublic
-- milwaukee
+- Open-at-Login
+- Join
+  - livecodepublic
+  - milwaukee
 
 #+NAME: 75569C81-CF17-482A-8EF3-53457897457C
 #+BEGIN_SRC sh
 brew cask install slack
 #+END_SRC
+
+**** Textual IRC Client
+
+- AppStore.
+- Open-at-Login
+
+Only note changes from the current default
+
+Set up preferences:
+
+- Preferences.
+- General.
+  - YES: Save the state of queries
+- Highlights.
+- Notifications.
+- Controls.
+- Interface.
+- Style.
+  - General.
+    - Style: Equinox
+    - Font: DJSM 17
+  - Inline Media.
+    - YES: Show images inline
+- Addons.
+- Advanced.
+  - Default Identity.
+    - grettke
+    - grettke💤
+    - grettke
+    - Grant Rettke
+
+Server preferences:
+
+- Basic Settings.
+  - General
+    - YES
+      - Connect when Textual opens
+      - Perform reconnect on disconnect
+      - Perform reconnent on waking from sleep
+- Identity
+  - Wait for ID before joining
+  - Enter personal password; everything else got set from main screen
+  - Do wait for identification before joining channels
+
+- Join on Freenode
+  - #org-mode
+  - #emacs
+  - #scheme
 
 # Local Variables:
 # eval: (progn (defun el-cap-prov-post-tangle-hook () (interactive) (message "El-Cap Prov Post Tangle") (when (f-exists? "~/git/github/osx-provision/El-Capitan/host/profile-common") (f-delete "~/git/github/osx-provision/El-Capitan/host/profile-common")) (when (f-exists? "~/git/github/osx-provision/El-Capitan/writing/profile-common") (f-delete "~/git/github/osx-provision/El-Capitan/writing/profile-common")) (f-copy "~/git/github/osx-provision/El-Capitan/common/profile-common" "~/git/github/osx-provision/El-Capitan/host") (f-copy "~/git/github/osx-provision/El-Capitan/common/profile-common" "~/git/github/osx-provision/El-Capitan/writing")) (add-hook 'org-babel-post-tangle-hook 'el-cap-prov-post-tangle-hook) )
