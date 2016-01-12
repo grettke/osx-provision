@@ -625,17 +625,17 @@ Steps are: configuration-writing-02-automated.sh
   - langtool
     - Initially didn't work: "langtool--check-command: java command is not found"
     - java is in the path
-    -
-
-the the foundation works
-
-
+    - java_home was not set
+    - works
+  - Koma letter works
+  - No startup messages
+  - Weaving everything works
 - org2blog is missing
- #+BEGIN_SRC sh
- cd ~/src
- git clone https://github.com/punchagan/org2blog.git
- #+END_SRC sh
-
+  #+BEGIN_SRC sh
+  cd ~/src
+  git clone https://github.com/punchagan/org2blog.git
+  #+END_SRC sh
+  - Manually fixed it
 * Provisioning
 :PROPERTIES:
 :ID:       262EEA68-1753-489D-A3BE-672C162CD356
