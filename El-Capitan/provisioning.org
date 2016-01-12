@@ -652,6 +652,14 @@ Steps are: configuration-writing-02-automated.sh
   - Right now, not sure what changed, and Git diff with DW is working. Suspect
     that up above, I re-wran the command to set the external diff tool for Git,
     not touching merge at all, well maybe that had something to do with it?
+- Noting that I want a command for checking for Git working copy bad states
+- Checked for updates
+- Shutdown
+- Take a snapshot (while box is off)
+
+***** 006 (61B52468-9004-4B8C-9C9B-32D05F3F16AC)
+
+- Forgot to empty the trash
 
 * Provisioning
 :PROPERTIES:
