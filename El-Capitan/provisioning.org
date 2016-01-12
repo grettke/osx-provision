@@ -2599,6 +2599,11 @@ sudo mktexlsr
 
 Things that don't have a place yet.
 
+**** Slack
+
+- livecodepublic
+- milwaukee
+
 #+NAME: 75569C81-CF17-482A-8EF3-53457897457C
 #+BEGIN_SRC sh
 brew cask install slack
