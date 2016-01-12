@@ -150,6 +150,12 @@
     will auto-install them self when you try to run them, and that is great.
     Others don't and run from the Caskroom. Sometimes the latter is fine, other
     times it is not.
+- Working on identically provisioned boxes where one will replace the other
+  - Easy to confuse them and muck things up on the "good one"
+  - Easy to test valuable changes in the "new one" and blow them away before
+    pushing them to a remote git repo or migrating them back into the "good one"
+    to do so
+  - Forget about what you did where, and blow it away while reverting snapshots
 
 * Dictionary
 :PROPERTIES:
