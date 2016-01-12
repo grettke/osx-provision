@@ -636,6 +636,8 @@ Steps are: configuration-writing-02-automated.sh
   git clone https://github.com/punchagan/org2blog.git
   #+END_SRC sh
   - Manually fixed it
+- TODO: Test DeltaWalker Git diff
+      
 * Provisioning
 :PROPERTIES:
 :ID:       262EEA68-1753-489D-A3BE-672C162CD356
