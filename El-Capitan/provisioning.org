@@ -613,6 +613,7 @@ Steps are: configuration-writing-02-automated.sh
 - Ran configuration-writing-04-automated-generic.sh
 - Ran personal git setup
 - Run configuration-writing-05-automated-personal.sh
+-
 - org2blog is missing
  #+BEGIN_SRC sh
  cd ~/src
@@ -2471,7 +2472,7 @@ sudo mktexlsr
 
 *** Manual: Personal Git and TeX Configuration Testing
 :PROPERTIES:
-:header-args: :tangle writing/configuration-writing-06-automated-personal.org
+:header-args: :tangle writing/configuration-writing-06-manual-personal.org
 :ID:       44798E7B-AC1F-4FD8-AB5E-3A3563B79C4B
 :END:
 
