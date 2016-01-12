@@ -148,6 +148,7 @@ cat .profile
 cd writing
 # B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bunch%20of%20Stuff][CCF91EC0-F689-4279-972C-9F1D32C4C64B]]
+brew cask install racket
 brew cask install xquartz
 brew cask install growlnotify
 brew install aspell -all

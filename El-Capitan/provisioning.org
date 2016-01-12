@@ -637,6 +637,7 @@ Steps are: configuration-writing-02-automated.sh
   - No startup messages
   - Weaving everything works
 - org2blog is missing
+  #+NAME: F045C7B2-1766-42ED-B904-5A1A0892618D
   #+BEGIN_SRC sh
   cd ~/src
   git clone https://github.com/punchagan/org2blog.git
@@ -664,8 +665,16 @@ Steps are: configuration-writing-02-automated.sh
 - Take a snapshot (while box is off)
 
 ***** 006 (61B52468-9004-4B8C-9C9B-32D05F3F16AC)
+:PROPERTIES:
+:ID:       A660C72A-6756-4524-AF2F-57D1E9BD5EF0
+:END:
 
 - Forgot to empty the trash
+- Forgot racket for resume
+  - Installed it manually
+  - Built and tested it
+  - Updated provisoner to install
+  - Updated doc for testing out the installation to include testing this
 
 * Provisioning
 :PROPERTIES:
@@ -2177,6 +2186,7 @@ cd writing
 :END:
 #+NAME: CCF91EC0-F689-4279-972C-9F1D32C4C64B
 #+BEGIN_SRC sh
+brew cask install racket
 brew cask install xquartz
 brew cask install growlnotify
 brew install aspell -all
@@ -2563,8 +2573,15 @@ sudo mktexlsr
   - Address and signature and everything looks right
 - [ ] Messages
   - Make sure that there are no startup warnings or issues
+- [ ] Build resume
+  - Blow away out-files and make
+  - [ ] MD
+  - [ ] TXT
+  - [ ] PDF FULL
+  - [ ] PDF ONE PAGE
+  - [ ] DOCX
 - [ ] Export to everything
-  - Longest test
+  - Longest test, takes 35m on a VM
   - This is used for publishing
   - First delete everything
   - [ ] html

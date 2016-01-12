@@ -36,8 +36,15 @@
   - Address and signature and everything looks right
 - [ ] Messages
   - Make sure that there are no startup warnings or issues
+- [ ] Build resume
+  - Blow away out-files and make
+  - [ ] MD
+  - [ ] TXT
+  - [ ] PDF FULL
+  - [ ] PDF ONE PAGE
+  - [ ] DOCX
 - [ ] Export to everything
-  - Longest test
+  - Longest test, takes 35m on a VM
   - This is used for publishing
   - First delete everything
   - [ ] html
