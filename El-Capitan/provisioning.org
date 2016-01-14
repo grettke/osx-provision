@@ -675,6 +675,9 @@ Steps are: configuration-writing-02-automated.sh
   - Built and tested it
   - Updated provisoner to install
   - Updated doc for testing out the installation to include testing this
+- Flash Player
+  - Cask installed software does not work
+  - Manually installed software does not work
 
 * Provisioning
 :PROPERTIES:
