@@ -2602,7 +2602,8 @@ sudo mktexlsr
 
 Things that don't have a place yet.
 
-**** Slack
+**** Automatic
+***** Slack
 
 - Open-at-Login
 - Join
@@ -2613,8 +2614,13 @@ Things that don't have a place yet.
 #+BEGIN_SRC sh
 brew cask install slack
 #+END_SRC
-
-**** Textual IRC Client
+***** Kindle
+#+NAME: B4E47A43-27D2-4478-821A-0E6C6138FB40
+#+BEGIN_SRC sh
+brew cask install kindle
+#+END_SRC
+**** Manual
+***** Textual IRC Client
 
 - AppStore.
 - Open-at-Login
