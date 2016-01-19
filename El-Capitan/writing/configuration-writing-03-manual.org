@@ -1,3 +1,5 @@
+# [[file:../provisioning.org::*Manual:%20Configure%20the%20automatically%20installed%20stuff][76285671-7199-4C00-8326-D2D8FDEFA2F7]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*karabiner][C13ADBE3-27E1-4E34-AAED-503ACE4E7922]]
 * Karabiner
 
 *Only install on hosts*
@@ -5,19 +7,27 @@
 - Allow it
 - Change Return Key
   - Return to Option_L + When you type Return only
+# C13ADBE3-27E1-4E34-AAED-503ACE4E7922 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*git][38DA76DA-A9B1-42FF-9280-E0DC556A9223]]
 * Git
 
 - Not using any git completions
+# 38DA76DA-A9B1-42FF-9280-E0DC556A9223 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash][51B2B8EC-89C0-4B77-A09F-7C481B157E0D]]
 * Bash
 
 - Run ~echo $BASH_VERSION~
 - Mak sure that it is >=4
 - Not using any bash completions
+# 51B2B8EC-89C0-4B77-A09F-7C481B157E0D ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Spectacle][1F463B19-B41B-44C8-BFBA-49DBD5301946]]
 * Spectacle
 
 - Start it
 - Enable integration
 - Start at boot
+# 1F463B19-B41B-44C8-BFBA-49DBD5301946 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Little%20Snitch][5167B280-8058-4B60-92E9-2E481FD3A07F]]
 * Little Snitch
 
 - Start it
@@ -60,25 +70,35 @@ Granting:
   - Approve rules automatically.
 - Update
   - Automatically check for updates daily
+# 5167B280-8058-4B60-92E9-2E481FD3A07F ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*MPlayer%20OSX%20Extended][31B0BF19-6AE4-4AD3-B4BD-7287DADF25FD]]
 * MPlayer OSX Extended
 
 - Run it
 - [[http://www.sample-videos.com/][Test it]]
 - Volume works?
+# 31B0BF19-6AE4-4AD3-B4BD-7287DADF25FD ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Adobe%20Flash%20Player][E623D599-C12F-4F75-9EF7-096A4FEFF259]]
 * Adobe Flash Player
 
 - Install manually
 - Verify
+# E623D599-C12F-4F75-9EF7-096A4FEFF259 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*VMWare%20Fusion][D9DF34EB-3AAF-4B6D-BF55-F3BCE9BE9FF2]]
 * VMWare
 
 *Only install on hosts*
 
 - On a host: License it
+# D9DF34EB-3AAF-4B6D-BF55-F3BCE9BE9FF2 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Skype][ADFFF652-847E-4486-ABCF-D9FFC9F23E94]]
 * Skype
 
 *Only install on hosts*
 
 - Log in and disable notifications for log in and out
+# ADFFF652-847E-4486-ABCF-D9FFC9F23E94 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Dropbox][0537F140-23D8-48D9-BB75-D1959D44432A]]
 * Dropbox
 
 *Only install on hosts*
@@ -89,6 +109,8 @@ Granting:
   - Screenshots
   - Everything
 - Pause it and copy everything over on a wired network
+# 0537F140-23D8-48D9-BB75-D1959D44432A ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bartender][8FF0E7F5-4CA1-4F1B-A787-5E523943C266]]
 * Bartender
 
 - License it
@@ -107,6 +129,8 @@ Granting:
   - Bluetooth
   - Wifi
 - Hide everything else
+# 8FF0E7F5-4CA1-4F1B-A787-5E523943C266 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Chrome][F44BD494-95D4-4339-BFCC-C0A472D24576]]
 * Chrome
 
 - Sign into Chrome
@@ -115,40 +139,58 @@ Granting:
   You always forget to approve it and make worse.
   - Disable ScriptSafe right away. Turn it on as needed.
 - Log into gmail
+# F44BD494-95D4-4339-BFCC-C0A472D24576 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Firefox][C31B20CA-568B-4037-B094-A46AEE3C144B]]
 * Firefox
 
 - Install the standard plugins
   - NoScript
 - Log into gmail
+# C31B20CA-568B-4037-B094-A46AEE3C144B ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Opera][170C8F78-1807-4A64-AE9F-9D2985A405F7]]
 * Opera
 
 - Run it
 - Log into gmail
+# 170C8F78-1807-4A64-AE9F-9D2985A405F7 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Filezilla][8474322D-6F50-4A7C-9C89-2A49C9ADB6B8]]
 * FileZilla
 
 - Set up Filezilla for WnW
+# 8474322D-6F50-4A7C-9C89-2A49C9ADB6B8 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Carbon%20Copy%20Cloner][C10D4E23-4322-4885-B9CA-02A72CF5D204]]
 * Carbon Copy Cloner
 
 *Only install on hosts*
 
 - On a host: License it
+# C10D4E23-4322-4885-B9CA-02A72CF5D204 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*flux][32A52187-8E13-4FA2-B445-65A3A0F6F226]]
 * flux
 
 *Only install on hosts*
 
 - Enable at startup
+# 32A52187-8E13-4FA2-B445-65A3A0F6F226 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Fonts][2EC7A9F7-9356-46E2-9A23-EA286378E24E]]
 * Fonts
 
 - Test in Emacs using ~view-hello-file~
+# 2EC7A9F7-9356-46E2-9A23-EA286378E24E ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Terminal][D880F24A-DE8D-4513-A354-45C9B57E0631]]
 * Terminal
 
 - Import the Solarized dark theme
 - Set it to the default theme
 - Set the font to DJSM 17
+# D880F24A-DE8D-4513-A354-45C9B57E0631 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*ccrypt][257678B4-BD36-4073-AC10-0F616D817479]]
 * ccrypt
 
 - Run it in the terminal
 - Verify that you can create and re-open files with Emacs
+# 257678B4-BD36-4073-AC10-0F616D817479 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*EELIB][4DC7B7AD-6E88-4DFF-9E27-E610E6022065]]
 * EELIB
 
 - Make a directory =~/EELIB=
@@ -164,6 +206,8 @@ Granting:
   - Extract it here
   - Rename the directory to "LanguageTool"
   - Took 8 tries to download it; kept stalling at 80%
+# 4DC7B7AD-6E88-4DFF-9E27-E610E6022065 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Growl][292B3960-AD89-413E-8E67-2BDBBAC7ACBE]]
 * Growl
 
 - Install via the app store
@@ -171,6 +215,8 @@ Granting:
 - enable run on login
 - top left corner
 - smoke
+# 292B3960-AD89-413E-8E67-2BDBBAC7ACBE ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Deltawalker][25ED30C2-0916-49E2-9F9F-DC96D6B7DDE6]]
 * DeltaWalker
 
 - Drag the bundle into Applications
@@ -202,3 +248,5 @@ Granting:
   that the settings are saved. Once they were not.
 - Test the sample files for a two-file diff.
 - After Git is set up, test everything.
+# 25ED30C2-0916-49E2-9F9F-DC96D6B7DDE6 ends here
+# 76285671-7199-4C00-8326-D2D8FDEFA2F7 ends here
