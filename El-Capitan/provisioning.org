@@ -1023,9 +1023,12 @@ brew cask install mplayer-osx-extended
 :ID:       395720BE-487A-42F1-AD8A-2B68852C2001
 :END:
 
-#+NAME: 20537EB1-65C8-4CD4-B637-0DCE0F10558E
-#+BEGIN_SRC sh
-brew cask install flash-player
+#+NAME: E623D599-C12F-4F75-9EF7-096A4FEFF259
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Adobe Flash Player
+
+- Install manually
+- Verify  
 #+END_SRC
 
 ****** VMWare Fusion
