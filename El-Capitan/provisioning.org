@@ -1028,7 +1028,7 @@ brew cask install mplayer-osx-extended
 ,* Adobe Flash Player
 
 - Install manually
-- Verify  
+- Verify
 #+END_SRC
 
 ****** VMWare Fusion
@@ -2606,7 +2606,13 @@ sudo mktexlsr
 Things that don't have a place yet.
 
 **** Automatic
+:PROPERTIES:
+:ID:       F1F23568-046E-417C-A7CD-2D86E21B1FFD
+:END:
 ***** Slack
+:PROPERTIES:
+:ID:       6B546C16-0EBC-4304-82F0-D0ED2D7F0AF9
+:END:
 
 - Open-at-Login
 - Join
@@ -2618,12 +2624,21 @@ Things that don't have a place yet.
 brew cask install slack
 #+END_SRC
 ***** Kindle
+:PROPERTIES:
+:ID:       75FEF4AC-89B2-4934-8D71-ECE0420A2189
+:END:
 #+NAME: B4E47A43-27D2-4478-821A-0E6C6138FB40
 #+BEGIN_SRC sh
 brew cask install kindle
 #+END_SRC
 **** Manual
+:PROPERTIES:
+:ID:       40269657-3E99-4D5C-AE24-FF50D54B8A1D
+:END:
 ***** Textual IRC Client
+:PROPERTIES:
+:ID:       B817D3AE-D105-4957-B229-8DF479E9E5F4
+:END:
 
 - AppStore.
 - Open-at-Login

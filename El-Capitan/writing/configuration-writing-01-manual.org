@@ -1,9 +1,4 @@
-# [[file:../provisioning.org::*Manual:%20Turn%20the%20lights%20on][BDA085BB-877C-4F75-8614-1C8CC62E5992]]
 *DO INSTALL Xcode FOLLOW THE COMMON DIRECTIONS*
-# BDA085BB-877C-4F75-8614-1C8CC62E5992 ends here
-
-# [[file:../provisioning.org::*Manual:%20Turn%20the%20lights%20on][D0708FC2-2130-4975-B951-D5B30D692C1A]]
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Common%20Manual][639707FE-FE60-439E-A8C8-9FBD9936D1C4]]
 - Re-image your box
   - Host :: ~PHOSDI~
   - Guest :: ~IOSXECA~
@@ -41,5 +36,3 @@
         - <Home>
       - Devices
         - <Computer>
-# 639707FE-FE60-439E-A8C8-9FBD9936D1C4 ends here
-# D0708FC2-2130-4975-B951-D5B30D692C1A ends here

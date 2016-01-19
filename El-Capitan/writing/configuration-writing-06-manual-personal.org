@@ -1,4 +1,3 @@
-# [[file:../provisioning.org::*Manual:%20Personal%20Git%20and%20TeX%20Configuration%20Testing][0E466E47-8ED3-4462-8939-2318ED91AD64]]
 - [ ] Get Emacs running
   - Usually problems with package loads
   - Start emacs with --no-init-file and install
@@ -53,4 +52,3 @@
     - Images are links, not images
   - [ ] pdf
   - [ ] txt
-# 0E466E47-8ED3-4462-8939-2318ED91AD64 ends here
