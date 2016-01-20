@@ -156,10 +156,10 @@
     pushing them to a remote git repo or migrating them back into the "good one"
     to do so
   - Forget about what you did where, and blow it away while reverting snapshots
-- Ignore the urge to provision on-the-metal until you've provsioned a box 5-10
+- Ignore the urge to provision on-the-metal until you've provisioned a box 5-10
   times and have used it for a month or two without major changes
   - Every other time will be to soon
-    
+
 * Dictionary
 :PROPERTIES:
 :ID:       BF6FF97E-5530-4EBA-97C3-02A2EF259137
