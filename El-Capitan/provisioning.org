@@ -2500,6 +2500,7 @@ git clone bitbucket-`whoami`:grettke/wnw.git
 git clone bitbucket-`whoami`:grettke/texmf.git
 cd ~/git/github
 git clone github-`whoami`:grettke/osx-provision.git
+git clone github-`whoami`:grettke/bash.git
 cd ~/git/github-anonymous
 git clone https://github.com/bkuhlmann/osx
 git clone https://github.com/monfresh/laptop
