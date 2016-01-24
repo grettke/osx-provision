@@ -932,6 +932,11 @@ echo $BASH_VERSION
 - Mak sure that it is >=4
 - Not using any bash completions
 #+END_SRC
+****** Fortune
+#+NAME: 716756F8-6497-4367-9330-9A578AC31AA6
+#+BEGIN_SRC sh
+brew install fortune
+#+END_SRC
 ****** Spectacle
 :PROPERTIES:
 :ID:       1553426A-6A83-4104-AAA8-6DEF05FBBBC4
