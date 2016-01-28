@@ -839,6 +839,9 @@ BrewCask is [[http://caskroom.io][here]].
 brew tap caskroom/cask
 #+END_SRC
 ****** GNU Coreutils & More
+:PROPERTIES:
+:ID:       0DBAF96F-6B96-4E8D-B4A1-23D0B4B816A6
+:END:
 
 - Use expected functionality
   - ISO-8601 timestamps primary motivation
@@ -854,8 +857,6 @@ brew install gnu-sed --with-default-names
 brew install gnu-tar --with-default-names
 brew install gnu-which --with-default-names
 brew install grep --with-default-names
-brew install gzip
-brew install wget
 #+END_SRC
 
 ****** Bash
@@ -953,6 +954,9 @@ Important because Brew uses this.
 brew install ruby
 #+END_SRC
 ****** Fortune
+:PROPERTIES:
+:ID:       CFE4D4B5-0B4E-434A-83DA-7AF5CBBDD5BD
+:END:
 #+NAME: 716756F8-6497-4367-9330-9A578AC31AA6
 #+BEGIN_SRC sh
 brew install fortune
