@@ -838,6 +838,34 @@ BrewCask is [[http://caskroom.io][here]].
 #+BEGIN_SRC sh
 brew tap caskroom/cask
 #+END_SRC
+****** Bash
+:PROPERTIES:
+:ID:       223C4BB3-2F4D-418C-93B4-8AFF0801BD43
+:END:
+
+[[http://clubmate.fi/upgrade-to-bash-4-in-mac-os-x/][Via]].
+
+#+NAME: ADE3737D-A638-4BBD-9DD5-C42681EA1C0D
+#+BEGIN_SRC sh
+echo $BASH_VERSION
+brew install bash
+if grep "/usr/local/bin/bash" /etc/shells > /dev/null; then
+    echo "brew bash already configured in shells; doing nothing"
+else
+    sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+    chsh -s /usr/local/bin/bash
+fi
+echo $BASH_VERSION
+#+END_SRC
+
+#+NAME: 51B2B8EC-89C0-4B77-A09F-7C481B157E0D
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Bash
+
+- Run ~echo $BASH_VERSION~
+- Mak sure that it is >=4
+- Not using any bash completions
+#+END_SRC
 ****** karabiner
 :PROPERTIES:
 :ID:       EE4E6BA8-4BB5-4ACD-9657-36C776448CE4
@@ -903,34 +931,6 @@ Important because Brew uses this.
 #+NAME: EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D
 #+BEGIN_SRC sh
 brew install ruby
-#+END_SRC
-****** Bash
-:PROPERTIES:
-:ID:       223C4BB3-2F4D-418C-93B4-8AFF0801BD43
-:END:
-
-[[http://clubmate.fi/upgrade-to-bash-4-in-mac-os-x/][Via]].
-
-#+NAME: ADE3737D-A638-4BBD-9DD5-C42681EA1C0D
-#+BEGIN_SRC sh
-echo $BASH_VERSION
-brew install bash
-if grep "/usr/local/bin/bash" /etc/shells > /dev/null; then
-    echo "brew bash already configured in shells; doing nothing"
-else
-    sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-    chsh -s /usr/local/bin/bash
-fi
-echo $BASH_VERSION
-#+END_SRC
-
-#+NAME: 51B2B8EC-89C0-4B77-A09F-7C481B157E0D
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-,* Bash
-
-- Run ~echo $BASH_VERSION~
-- Mak sure that it is >=4
-- Not using any bash completions
 #+END_SRC
 ****** Fortune
 #+NAME: 716756F8-6497-4367-9330-9A578AC31AA6
