@@ -841,6 +841,7 @@ brew tap caskroom/cask
 ****** GNU Coreutils & More
 
 - Use expected functionality
+  - ISO-8601 timestamps primary motivation
 - Avoid anything more than the absolute basics because I'm unsure how it could
   affect the OS X build chain
 
