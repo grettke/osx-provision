@@ -890,6 +890,12 @@ echo $BASH_VERSION
 - Mak sure that it is >=4
 - Not using any bash completions
 #+END_SRC
+****** xmllint
+
+#+NAME: C8F78DA0-A4AF-4F54-AF2F-B739C06F7F31
+#+BEGIN_SRC sh
+brew install libxml2
+#+END_SRC
 ****** karabiner
 :PROPERTIES:
 :ID:       EE4E6BA8-4BB5-4ACD-9657-36C776448CE4
@@ -1350,7 +1356,7 @@ git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
   - Set the font to DJSM 17
 - Profiles \rarr Advanced
   - [ ] Set locale environment variables on startup
-    - Set them in your =bashrc=, not here    
+    - Set them in your =bashrc=, not here
 #+END_SRC
 ****** Recipes
 :PROPERTIES:
