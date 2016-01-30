@@ -1344,9 +1344,10 @@ git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
 #+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
 ,* Terminal
 
-- Import the Solarized dark theme
-- Set it to the default theme
-- Set the font to DJSM 17
+- Profiles
+  - Import the Solarized dark theme
+  - Set it to the default theme
+  - Set the font to DJSM 17
 #+END_SRC
 ****** Recipes
 :PROPERTIES:
