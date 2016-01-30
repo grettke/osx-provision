@@ -896,6 +896,12 @@ echo $BASH_VERSION
 #+BEGIN_SRC sh
 brew install libxml2
 #+END_SRC
+****** dos2unix
+
+#+NAME: 950BBA8F-2D33-445E-AE8B-E0067859B675
+#+BEGIN_SRC sh
+brew install dos2unix
+#+END_SRC
 ****** karabiner
 :PROPERTIES:
 :ID:       EE4E6BA8-4BB5-4ACD-9657-36C776448CE4
