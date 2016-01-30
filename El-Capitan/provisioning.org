@@ -847,16 +847,19 @@ brew tap caskroom/cask
   - ISO-8601 timestamps primary motivation
 - Avoid anything more than the absolute basics because I'm unsure how it could
   affect the OS X build chain
+- *Don't use these*
+  - They break the OS X Terminal integration
+    - Not researching now <2016-01-29 Fri>
 
 #+NAME: 6D1BE63D-F3D1-4259-A0BA-A0656B82F81A
 #+BEGIN_SRC sh
-brew install coreutils
-brew install findutils --with-default-names
-brew install gnu-indent --with-default-names
-brew install gnu-sed --with-default-names
-brew install gnu-tar --with-default-names
-brew install gnu-which --with-default-names
-brew install grep --with-default-names
+# brew install coreutils
+# brew install findutils --with-default-names
+# brew install gnu-indent --with-default-names
+# brew install gnu-sed --with-default-names
+# brew install gnu-tar --with-default-names
+# brew install gnu-which --with-default-names
+# brew install grep --with-default-names
 #+END_SRC
 
 ****** Bash
