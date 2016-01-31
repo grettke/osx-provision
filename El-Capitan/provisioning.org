@@ -2119,20 +2119,6 @@ Perform the common steps.
 #+BEGIN_SRC org
 <<configuration-common-automated-steps-software>>
 #+END_SRC
-****** Set up the new profile
-:PROPERTIES:
-:ID:       B0B40263-EBC0-410C-B069-89766CBC47B9
-:END:
-
-#+NAME: B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770
-#+BEGIN_SRC sh
-cd ~/
-rm .profile
-cp ./writing/profile-writing .profile
-source .profile
-cat .profile
-cd writing
-#+END_SRC
 ****** EELIB
 :PROPERTIES:
 :ID:       23DCDAAE-9D70-4168-9300-AC15E3F32474
