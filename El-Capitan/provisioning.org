@@ -790,7 +790,6 @@ mkdir -p ~/git/github-anonymous
 cd ~/git/github-anonymous
 #+END_SRC
 
-
 ****** Bash Configuration
 :PROPERTIES:
 :ID:       56989957-A8F5-4C47-9B27-31A3AC4ED8DD
