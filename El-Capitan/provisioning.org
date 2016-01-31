@@ -1621,6 +1621,15 @@ Granting:
 - Enable at startup
 #+END_SRC
 
+*** Template
+**** Install
+:PROPERTIES:
+:header-args: :tangle ./template.sh :tangle-mode (identity #o755)
+:END:
+**** Configure
+:PROPERTIES:
+:header-args: :tangle ./template.org
+:END:
 ** Common
 :PROPERTIES:
 :ID:       372CA3F6-90BB-48B0-A181-7866D1846F92
