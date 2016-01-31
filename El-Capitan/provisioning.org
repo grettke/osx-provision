@@ -2008,6 +2008,58 @@ brew install git
 #+BEGIN_SRC org
 
 #+END_SRC
+*** Manual
+**** Textual IRC Client
+:PROPERTIES:
+:ID:       B817D3AE-D105-4957-B229-8DF479E9E5F4
+:END:
+
+- AppStore.
+- Open-at-Login
+
+Only note changes from the current default
+
+Set up preferences:
+
+- Preferences.
+- General.
+  - YES: Save the state of queries
+- Highlights.
+- Notifications.
+- Controls.
+- Interface.
+- Style.
+  - General.
+    - Style: Equinox
+    - Font: DJSM 17
+  - Inline Media.
+    - YES: Show images inline
+- Addons.
+- Advanced.
+  - Default Identity.
+    - grettke
+    - grettke💤
+    - grettke
+    - Grant Rettke
+
+Server preferences:
+
+- Basic Settings.
+  - General
+    - YES
+      - Connect when Textual opens
+      - Perform reconnect on disconnect
+      - Perform reconnent on waking from sleep
+- Identity
+  - Wait for ID before joining
+  - Enter personal password; everything else got set from main screen
+  - Do wait for identification before joining channels
+
+- Join on Freenode
+  - #org-mode
+  - #emacs
+  - #scheme
+  - #bash
 *** Template
 :PROPERTIES:
 :ID:       C1DA9537-9D9B-493B-9318-4ABEEAFEA86B
@@ -2539,61 +2591,6 @@ brew cask install slack
 #+BEGIN_SRC sh
 brew cask install kindle
 #+END_SRC
-**** Manual
-:PROPERTIES:
-:ID:       40269657-3E99-4D5C-AE24-FF50D54B8A1D
-:END:
-***** Textual IRC Client
-:PROPERTIES:
-:ID:       B817D3AE-D105-4957-B229-8DF479E9E5F4
-:END:
-
-- AppStore.
-- Open-at-Login
-
-Only note changes from the current default
-
-Set up preferences:
-
-- Preferences.
-- General.
-  - YES: Save the state of queries
-- Highlights.
-- Notifications.
-- Controls.
-- Interface.
-- Style.
-  - General.
-    - Style: Equinox
-    - Font: DJSM 17
-  - Inline Media.
-    - YES: Show images inline
-- Addons.
-- Advanced.
-  - Default Identity.
-    - grettke
-    - grettke💤
-    - grettke
-    - Grant Rettke
-
-Server preferences:
-
-- Basic Settings.
-  - General
-    - YES
-      - Connect when Textual opens
-      - Perform reconnect on disconnect
-      - Perform reconnent on waking from sleep
-- Identity
-  - Wait for ID before joining
-  - Enter personal password; everything else got set from main screen
-  - Do wait for identification before joining channels
-
-- Join on Freenode
-  - #org-mode
-  - #emacs
-  - #scheme
-  - #bash
 
 # Local Variables:
 # eval: (progn (defun el-cap-prov-post-tangle-hook () (interactive) (message "El-Cap Prov Post Tangle") (when (f-exists? "~/git/github/osx-provision/El-Capitan/host/profile-common") (f-delete "~/git/github/osx-provision/El-Capitan/host/profile-common")) (when (f-exists? "~/git/github/osx-provision/El-Capitan/writing/profile-common") (f-delete "~/git/github/osx-provision/El-Capitan/writing/profile-common")) (f-copy "~/git/github/osx-provision/El-Capitan/common/profile-common" "~/git/github/osx-provision/El-Capitan/host") (f-copy "~/git/github/osx-provision/El-Capitan/common/profile-common" "~/git/github/osx-provision/El-Capitan/writing")) (add-hook 'org-babel-post-tangle-hook 'el-cap-prov-post-tangle-hook) )
