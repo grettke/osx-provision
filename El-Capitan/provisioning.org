@@ -688,14 +688,13 @@ Steps are: configuration-writing-02-automated.sh
 :Effort:   energy
 :END:
 ** Steps
-** Common
 :PROPERTIES:
-:ID:       372CA3F6-90BB-48B0-A181-7866D1846F92
+:ID:       6ACCC2CE-5EB4-42D6-AD12-0DC836C2A3FD
 :END:
-*** Common Manual
+*** OS X Installation
 :PROPERTIES:
-:ID:       BF5455FF-FABE-4A6D-B3B9-685DDDB83D09
-:HEADER-ARGS: :noweb-ref configuration-common-manual
+:header-args: :tangle ./init-osx-installation.org
+:ID:       46781470-E45C-4E6E-98E9-CD41507FF6FE
 :END:
 
 #+NAME: 639707FE-FE60-439E-A8C8-9FBD9936D1C4
@@ -739,6 +738,11 @@ Steps are: configuration-writing-02-automated.sh
       - Devices
         - <Computer>
 #+END_SRC
+
+** Common
+:PROPERTIES:
+:ID:       372CA3F6-90BB-48B0-A181-7866D1846F92
+:END:
 *** Automated
 :PROPERTIES:
 :ID:       FC8DB1F5-25FA-4DD2-A6C8-3F434F6FCCF9
@@ -2073,23 +2077,6 @@ Perform the common steps.
 :PROPERTIES:
 :ID:       4176F379-79B3-466F-A689-11701A0432EF
 :END:
-*** Manual: Turn the lights on
-:PROPERTIES:
-:header-args: :tangle writing/configuration-writing-01-manual.org
-:ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
-:END:
-
-Reminder:
-#+NAME: BDA085BB-877C-4F75-8614-1C8CC62E5992
-#+BEGIN_SRC org
-*DO INSTALL Xcode FOLLOW THE COMMON DIRECTIONS*
-#+END_SRC
-
-Perform the common steps.
-#+NAME: D0708FC2-2130-4975-B951-D5B30D692C1A
-#+BEGIN_SRC org
-<<configuration-common-manual>>
-#+END_SRC
 *** Automated: Install and automatically configure as much as possible
 :PROPERTIES:
 :header-args: :tangle writing/configuration-writing-02-automated.sh :tangle-mode (identity #o755)
