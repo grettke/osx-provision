@@ -760,7 +760,7 @@ followup process.
 :HEADER-ARGS: :noweb-ref configuration-common-automated-steps-software
 :END:
 
-****** Brew & Brew Cask
+***** Brew & Brew Cask
 :PROPERTIES:
 :ID:       3CD7F53A-C7B3-4C54-9E43-7B43E1D2E54F
 :END:
@@ -779,7 +779,7 @@ BrewCask is [[http://caskroom.io][here]].
 brew tap caskroom/cask
 #+END_SRC
 
-****** Git Checkout Directory
+***** Git Checkout Directory
 
 Prepare the anonymous GitHub directory.
 
@@ -790,7 +790,7 @@ mkdir -p ~/git/github-anonymous
 cd ~/git/github-anonymous
 #+END_SRC
 
-****** Bash Configuration
+***** Bash Configuration
 :PROPERTIES:
 :ID:       56989957-A8F5-4C47-9B27-31A3AC4ED8DD
 :END:
@@ -806,7 +806,7 @@ bash --login
 cd
 #+END_SRC
 
-****** Bash Software
+***** Bash Software
 :PROPERTIES:
 :ID:       223C4BB3-2F4D-418C-93B4-8AFF0801BD43
 :END:
@@ -834,7 +834,7 @@ echo $BASH_VERSION
 - Mak sure that it is >=4
 - Not using any bash completions
 #+END_SRC
-****** xmllint
+***** xmllint
 :PROPERTIES:
 :ID:       55AFF634-C899-4667-BC25-47F9099DFF9A
 :END:
@@ -843,7 +843,7 @@ echo $BASH_VERSION
 #+BEGIN_SRC sh
 brew install libxml2
 #+END_SRC
-****** dos2unix
+***** dos2unix
 :PROPERTIES:
 :ID:       59D47685-D541-4D78-88BF-F3313FE7DF10
 :END:
@@ -852,7 +852,7 @@ brew install libxml2
 #+BEGIN_SRC sh
 brew install dos2unix
 #+END_SRC
-****** karabiner
+***** karabiner
 :PROPERTIES:
 :ID:       EE4E6BA8-4BB5-4ACD-9657-36C776448CE4
 :END:
@@ -877,7 +877,7 @@ fi
   - Return to Option_L + When you type Return only
 #+END_SRC
 
-****** git
+***** git
 :PROPERTIES:
 :ID:       1F0C8A4B-097E-4090-93A7-8A2958331E4F
 :END:
@@ -895,7 +895,7 @@ brew install git
 
 - Not using any git completions
 #+END_SRC
-****** Python
+***** Python
 :PROPERTIES:
 :ID:       1BA55F5A-9902-4539-9494-0231C4DBD9B6
 :END:
@@ -907,7 +907,7 @@ Important because it is such a versatile distribution.
 brew install python
 brew linkapps python
 #+END_SRC
-****** Ruby
+***** Ruby
 :PROPERTIES:
 :ID:       B7D03962-A386-4E62-AA68-3A7F95AF2CA4
 :END:
@@ -918,7 +918,7 @@ Important because Brew uses this.
 #+BEGIN_SRC sh
 brew install ruby
 #+END_SRC
-****** Fortune
+***** Fortune
 :PROPERTIES:
 :ID:       CFE4D4B5-0B4E-434A-83DA-7AF5CBBDD5BD
 :END:
@@ -926,7 +926,7 @@ brew install ruby
 #+BEGIN_SRC sh
 brew install fortune
 #+END_SRC
-****** Spectacle
+***** Spectacle
 :PROPERTIES:
 :ID:       1553426A-6A83-4104-AAA8-6DEF05FBBBC4
 :END:
@@ -944,7 +944,7 @@ brew cask install spectacle
 - Enable integration
 - Start at boot
 #+END_SRC
-****** Little Snitch
+***** Little Snitch
 :PROPERTIES:
 :ID:       5D68F827-7AEA-4C40-A2FF-41ABDAAA53A9
 :END:
@@ -998,7 +998,7 @@ Granting:
 - Update
   - Automatically check for updates daily
 #+END_SRC
-****** MPlayer OSX Extended
+***** MPlayer OSX Extended
 :PROPERTIES:
 :ID:       C47DA927-A6B2-4751-98AC-D3200E6F4095
 :END:
@@ -1016,7 +1016,7 @@ brew cask install mplayer-osx-extended
 - Volume works?
 #+end_src
 
-****** Adobe Flash Player
+***** Adobe Flash Player
 :PROPERTIES:
 :ID:       395720BE-487A-42F1-AD8A-2B68852C2001
 :END:
@@ -1029,7 +1029,7 @@ brew cask install mplayer-osx-extended
 - Verify
 #+END_SRC
 
-****** VMWare Fusion
+***** VMWare Fusion
 :PROPERTIES:
 :ID:       96ADB3AF-1BDB-4F31-BB31-D5E32221AC8D
 :END:
@@ -1054,7 +1054,7 @@ fi
 - On a host: License it
 #+END_SRC
 
-****** Skype
+***** Skype
 :PROPERTIES:
 :ID:       6003585A-A3B2-453A-B3CF-33240C69BB0E
 :END:
@@ -1078,7 +1078,7 @@ fi
 - Log in and disable notifications for log in and out
 #+END_SRC
 
-****** Dropbox
+***** Dropbox
 :PROPERTIES:
 :ID:       97065F78-F2C3-4189-A24E-BAB474EC2D59
 :END:
@@ -1105,7 +1105,7 @@ fi
   - Everything
 - Pause it and copy everything over on a wired network
 #+END_SRC
-****** Bartender
+***** Bartender
 :PROPERTIES:
 :ID:       119F1391-9A8A-49F6-810E-E2620F5AF15F
 :END:
@@ -1137,7 +1137,7 @@ brew cask install bartender
 - Hide everything else
 #+end_src
 
-****** Chrome
+***** Chrome
 :PROPERTIES:
 :ID:       27B3E977-821E-4966-B6CA-438212B4CA2A
 :END:
@@ -1158,7 +1158,7 @@ brew cask install google-chrome
   - Disable ScriptSafe right away. Turn it on as needed.
 - Log into gmail
 #+end_src
-****** Firefox
+***** Firefox
 :PROPERTIES:
 :ID:       2348C82F-F560-4C30-8B80-9D7EE4D4291F
 :END:
@@ -1179,7 +1179,7 @@ name hasn't changed. Did a manual install instead.
 - Log into gmail
 #+end_src
 
-****** Opera
+***** Opera
 :PROPERTIES:
 :ID:       2348C82F-F560-4C30-8B80-9D7EE4D4291F
 :END:
@@ -1196,7 +1196,7 @@ brew cask install opera
 - Log into gmail
 #+end_src
 
-****** Filezilla
+***** Filezilla
    :PROPERTIES:
    :ID:       3F67D0FE-1FE7-4578-9C71-DE4DBD6F75C2
    :END:
@@ -1213,7 +1213,7 @@ brew cask install filezilla
 - Set up Filezilla for WnW
 #+end_src
 
-****** Carbon Copy Cloner
+***** Carbon Copy Cloner
 :PROPERTIES:
 :ID:       F0BE2195-81FE-42F7-92F2-7AEB6A834041
 :END:
@@ -1238,7 +1238,7 @@ fi
 - On a host: License it
 #+END_SRC
 
-****** flux
+***** flux
 :PROPERTIES:
 :ID:       F0BE2195-81FE-42F7-92F2-7AEB6A834041
 :END:
@@ -1262,7 +1262,7 @@ fi
 
 - Enable at startup
 #+END_SRC
-****** Fonts
+***** Fonts
 :PROPERTIES:
 :ID:       03993E03-45DF-498A-B197-283C61313E39
 :END:
@@ -1289,7 +1289,7 @@ brew cask install font-symbola
 
 - Test in Emacs using ~view-hello-file~
 #+END_SRC
-****** Terminal
+***** Terminal
 :PROPERTIES:
 :ID:       4A37A9A3-A9D6-4ECD-AB89-EB0FE9815091
 :END:
@@ -1313,7 +1313,7 @@ git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
   - [ ] Set locale environment variables on startup
     - Set them in your =bashrc=, not here
 #+END_SRC
-****** Recipes
+***** Recipes
 :PROPERTIES:
 :ID:       54BA64D3-899B-4AA4-A68F-237F68B0CF2F
 :END:
@@ -1323,7 +1323,7 @@ git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
 cd ~/git/github-anonymous
 git clone https://github.com/caskroom/homebrew-cask.git
 #+END_SRC
-****** ccrypt
+***** ccrypt
 :PROPERTIES:
 :ID:       F9E3F2A3-F16A-4EB8-8F4F-4FF47C7BBE06
 :END:
@@ -1341,7 +1341,7 @@ brew install ccrypt
 - Verify that you can create and re-open files with Emacs
 #+END_SRC
 
-****** tree
+***** tree
 :PROPERTIES:
 :ID:       8A7F33C7-CF3D-4E64-A63E-2AECD13FFD5F
 :END:
@@ -1350,7 +1350,7 @@ brew install ccrypt
 brew install tree
 #+END_SRC
 
-****** archey
+***** archey
 :PROPERTIES:
 :ID:       AAF25357-3F8F-4A19-902D-D494D4D7FE38
 :END:
@@ -1360,7 +1360,7 @@ brew install tree
 brew install archey
 #+END_SRC
 
-****** figlet
+***** figlet
 :PROPERTIES:
 :ID:       ADF24324-CF88-44E0-BE77-DC65DF37502E
 :END:
@@ -1370,11 +1370,11 @@ brew install archey
 brew install figlet
 #+END_SRC
 
-***** Settings
+**** Settings
 :PROPERTIES:
 :ID:       7507CE02-9156-4748-A621-2CF51241B95E
 :END:
-****** Machine
+***** Machine
 :PROPERTIES:
 :ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
 :HEADER-ARGS: :noweb-ref configuration-common-automated-steps-settings-machine
@@ -1444,7 +1444,7 @@ Disable Gatekeeper.
 sudo spctl --master-disable
 #+END_SRC
 
-****** User
+***** User
 :PROPERTIES:
 :HEADER-ARGS: :noweb-ref configuration-common-automated-steps-settings-user
 :ID:       B0472249-DD96-45C4-A558-088A56501C3D
@@ -1460,7 +1460,7 @@ This script should be idempotent.
 - These commands are all [[https://github.com/kitchenplan/chef-osxdefaults/tree/master/recipes][copied]]
   - Including the documentation
   - Some of them have corrections and changes
-******* Globals, Logical or Literal
+****** Globals, Logical or Literal
 :PROPERTIES:
 :ID:       EC01CF33-40EE-4F63-8A27-A88DE32FC557
 :END:
@@ -1614,7 +1614,7 @@ Disable smart dashes as they’re annoying when typing code.
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 #+END_SRC
 
-******* Hardware
+****** Hardware
 :PROPERTIES:
 :ID:       F6533ADA-A21F-49E7-8DD7-4447CF69A528
 :END:
@@ -1637,7 +1637,7 @@ Increase sound quality for Bluetooth headphones/headsets.
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 #+END_SRC
 
-******* Dock
+****** Dock
 :PROPERTIES:
 :ID:       B3122846-4906-4F7C-AD02-63A84B47A92D
 :END:
@@ -1714,7 +1714,7 @@ Speed up Mission Control animations.
 defaults write 'com.apple.dock' expose-animation-duration -float 0.1 && killall Dock
 #+END_SRC
 
-******* Finder
+****** Finder
 :PROPERTIES:
 :ID:       E7984F15-4360-4F00-B754-CC00FC4D4124
 :END:
@@ -1838,7 +1838,7 @@ defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 #+END_SRC
 
-******* Screen
+****** Screen
 :PROPERTIES:
 :ID:       76D10582-3909-4CBB-9770-DF3D4F7C9DB0
 :END:
@@ -1875,7 +1875,7 @@ mkdir -p ~/Screen\ Shots
 defaults write com.apple.screencapture location ~/Screen\ Shots
 #+END_SRC
 
-******* Hotcorners
+****** Hotcorners
 :PROPERTIES:
 :ID:       14E7437D-7BE9-4149-818B-ADC7B145A822
 :END:
@@ -1920,7 +1920,7 @@ defaults write com.apple.dock wvous-bl-corner -int 3
 defaults write com.apple.dock wvous-bl-modifier -int 0
 #+END_SRC
 
-******* Spaces
+****** Spaces
 :PROPERTIES:
 :ID:       A76717BD-1BF0-48D3-8E69-3A03BFE2B4A2
 :END:
@@ -1933,7 +1933,7 @@ defaults write com.apple.dock mru-spaces -bool false
 defaults write com.apple.dock workspaces-edge-delay -float 1.0
 #+END_SRC
 
-******* Mouse
+****** Mouse
 :PROPERTIES:
 :ID:       319EDC92-B863-4D2E-A951-8479F9171FFF
 :END:
@@ -1944,7 +1944,7 @@ Reasonably fast.
 defaults write 'NSGlobalDomain' com.apple.mouse.scaling -float 2
 #+END_SRC
 
-******* Terminal
+****** Terminal
 :PROPERTIES:
 :ID:       20C7C795-5C0A-442A-9D0F-669D1637A1D2
 :END:
@@ -1955,7 +1955,7 @@ Only use UTF-8 in Terminal.app.
 defaults write com.apple.terminal StringEncodings -array 4
 #+END_SRC
 
-******* Activity Monitor
+****** Activity Monitor
 :PROPERTIES:
 :ID:       D36D6B69-54DC-4666-AB48-731A2FA7130F
 :END:
