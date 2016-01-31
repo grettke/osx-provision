@@ -1665,6 +1665,23 @@ Granting:
 :header-args: :tangle ./utility.sh :tangle-mode (identity #o755)
 :ID:       F2B0FCF0-1F56-4D3B-AC9F-10F4E430BBE2
 :END:
+***** ditaa
+
+#+BEGIN_SRC sh
+brew install ditaa
+#+END_SRC
+
+***** plantuml
+
+#+BEGIN_SRC sh
+brew install plantuml
+#+END_SRC
+
+***** languagetool
+
+#+BEGIN_SRC sh
+brew install languagetool
+#+END_SRC
 ***** aspell
 #+BEGIN_SRC sh
 brew install aspell -all
