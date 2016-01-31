@@ -1665,6 +1665,14 @@ Granting:
 :header-args: :tangle ./utility.sh :tangle-mode (identity #o755)
 :ID:       F2B0FCF0-1F56-4D3B-AC9F-10F4E430BBE2
 :END:
+***** Java
+:PROPERTIES:
+:ID:       7E76DE2C-7836-44B0-8636-90BB876A5E33
+:END:
+#+NAME: 274A6FA4-B619-422A-8546-C1DCE6C47B63
+#+BEGIN_SRC sh
+brew cask install java
+#+END_SRC
 ***** ditaa
 
 #+BEGIN_SRC sh
@@ -2056,14 +2064,6 @@ For everything beyond the built in.
 #+NAME: EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D
 #+BEGIN_SRC sh
 brew install ruby
-#+END_SRC
-***** Java
-:PROPERTIES:
-:ID:       7E76DE2C-7836-44B0-8636-90BB876A5E33
-:END:
-#+NAME: 274A6FA4-B619-422A-8546-C1DCE6C47B63
-#+BEGIN_SRC sh
-brew cask install java
 #+END_SRC
 ***** Racket
 #+BEGIN_SRC sh
