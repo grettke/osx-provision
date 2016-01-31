@@ -747,18 +747,6 @@ Steps are: configuration-writing-02-automated.sh
 :PROPERTIES:
 :ID:       FC8DB1F5-25FA-4DD2-A6C8-3F434F6FCCF9
 :END:
-**** Steps
-:PROPERTIES:
-:ID:       A614FF96-F976-45FF-A7E9-FDB50907F9FD
-:END:
-:PROPERTIES:
-:ID:       0A71A737-A201-43A5-A5DD-E62E78EE9C2E
-:END:
-
-Any steps without notes that get tangled into the follow file are so simple that
-they don't need to be documented and don't need to be completed during the
-followup process.
-
 **** Software
 :PROPERTIES:
 :ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
