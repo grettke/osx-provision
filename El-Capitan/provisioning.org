@@ -692,6 +692,9 @@ Steps are: configuration-writing-02-automated.sh
 :ID:       6ACCC2CE-5EB4-42D6-AD12-0DC836C2A3FD
 :END:
 *** OS X
+:PROPERTIES:
+:ID:       EAD703CC-3234-4438-930D-C1BB2F50DF6B
+:END:
 **** Installation
 :PROPERTIES:
 :header-args: :tangle ./os-x-installation.org
@@ -1351,9 +1354,13 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 #+END_SRC
 
 *** Administration
+:PROPERTIES:
+:ID:       539CAD89-6A07-404F-8AE6-D69B99C055FF
+:END:
 **** Install
 :PROPERTIES:
 :header-args: :tangle ./administration.sh :tangle-mode (identity #o755)
+:ID:       E0655C3B-2CEB-446E-BB5E-9A85CA4F8FF2
 :END:
 ****** Brew & Brew Cask
 :PROPERTIES:
@@ -1467,6 +1474,7 @@ brew install fortune
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./administration.org
+:ID:       B7B4F0A4-C676-4B79-828F-837B3DAE851E
 :END:
 ***** Terminal
 :PROPERTIES:
@@ -1487,9 +1495,13 @@ brew install fortune
 #+END_SRC
 
 *** Usability
+:PROPERTIES:
+:ID:       83A1561E-B613-4ED3-96AD-93B47F001C26
+:END:
 **** Install
 :PROPERTIES:
 :header-args: :tangle ./usability.sh :tangle-mode (identity #o755)
+:ID:       66C750A9-6702-43CA-86A2-A033B47B0138
 :END:
 ***** karabiner
 :PROPERTIES:
@@ -1551,6 +1563,7 @@ fi
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./usability.org
+:ID:       37C51946-B8BE-41B4-BEA6-7DBA95E1955F
 :END:
 
 #+NAME: 3A1E7B61-A44D-4C11-9338-979D7BB7B05B
@@ -1630,9 +1643,13 @@ Granting:
 #+END_SRC
 
 *** Internet
+:PROPERTIES:
+:ID:       1EBB115D-FF82-4A21-8EFC-8D8634C0CDEB
+:END:
 **** Install
 :PROPERTIES:
 :header-args: :tangle ./internet.sh :tangle-mode (identity #o755)
+:ID:       138B24D9-2E1B-4D95-B068-BFBE2275755D
 :END:
 ***** MPlayer OSX Extended
 :PROPERTIES:
@@ -1725,8 +1742,10 @@ brew cask install filezilla
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./internet.org
+:ID:       A8BA5927-38E4-4B49-8DDC-92FDD05F468B
 :END:
 
+#+NAME: A26787A7-8AB7-4737-AECA-822CE9E99C23
 #+BEGIN_SRC org
 ,* MPlayer OSX Extended
 
@@ -1781,14 +1800,80 @@ brew cask install filezilla
 - Set up Filezilla for WnW
 #+END_SRC
 
+*** DevOps
+:PROPERTIES:
+:ID:       203E96B0-926B-4A81-8793-A7B73792E303
+:END:
+**** Install
+:PROPERTIES:
+:header-args: :tangle ./dev-ops.sh :tangle-mode (identity #o755)
+:ID:       0B9DFAC8-45F5-4358-9A7D-C4DAAA3A7A69
+:END:
+***** Carbon Copy Cloner
+:PROPERTIES:
+:ID:       F0BE2195-81FE-42F7-92F2-7AEB6A834041
+:END:
+
+Only install it on hosts.
+
+#+NAME: 27354A58-46C4-426B-8483-A96F7B63342D
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install carbon-copy-cloner
+else
+    echo "carbon-copy-cloner: Only install on hosts"
+fi
+#+END_SRC
+
+***** VMWare Fusion
+:PROPERTIES:
+:ID:       96ADB3AF-1BDB-4F31-BB31-D5E32221AC8D
+:END:
+
+Only install it on hosts.
+
+#+NAME: 2B059288-F12E-48E1-939F-1138117FDE4B
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install vmware-fusion
+else
+    echo "vmware-fusion: Only install on hosts"
+fi
+#+END_SRC
+
+**** Configure
+:PROPERTIES:
+:header-args: :tangle ./dev-ops.org
+:ID:       AAF4A8BD-5344-4F36-A3F2-2DA6227BD5F4
+:END:
+
+#+NAME: FBF76363-813C-4A86-9B04-220C6C584F39
+#+BEGIN_SRC org
+,* Carbon Copy Cloner
+
+,*Only install on hosts*
+
+- On a host: License it
+
+,* VMWare
+
+,*Only install on hosts*
+
+- On a host: License it
+#+END_SRC
 *** Template
+:PROPERTIES:
+:ID:       C1DA9537-9D9B-493B-9318-4ABEEAFEA86B
+:END:
 **** Install
 :PROPERTIES:
 :header-args: :tangle ./template.sh :tangle-mode (identity #o755)
+:ID:       F2B0FCF0-1F56-4D3B-AC9F-10F4E430BBE2
 :END:
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./template.org
+:ID:       FA5E0D88-1455-4DD5-9362-D8268BBFF3BF
 :END:
 ** Common
 :PROPERTIES:
@@ -1822,24 +1907,6 @@ brew install libxml2
 #+BEGIN_SRC sh
 brew install dos2unix
 #+END_SRC
-***** git
-:PROPERTIES:
-:ID:       1F0C8A4B-097E-4090-93A7-8A2958331E4F
-:END:
-
-Important because Brew and everything uses this everywhere.
-
-#+NAME: F5E5B964-50FA-49EF-BABF-EFE558057EC2
-#+BEGIN_SRC sh
-brew install git
-#+END_SRC
-
-#+NAME: 38DA76DA-A9B1-42FF-9280-E0DC556A9223
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-,* Git
-
-- Not using any git completions
-#+END_SRC
 ***** Python
 :PROPERTIES:
 :ID:       1BA55F5A-9902-4539-9494-0231C4DBD9B6
@@ -1863,56 +1930,6 @@ Important because Brew uses this.
 #+BEGIN_SRC sh
 brew install ruby
 #+END_SRC
-***** VMWare Fusion
-:PROPERTIES:
-:ID:       96ADB3AF-1BDB-4F31-BB31-D5E32221AC8D
-:END:
-
-Only install it on hosts.
-
-#+NAME: 2B059288-F12E-48E1-939F-1138117FDE4B
-#+BEGIN_SRC sh
-if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install vmware-fusion
-else
-    echo "vmware-fusion: Only install on hosts"
-fi
-#+END_SRC
-
-#+NAME: D9DF34EB-3AAF-4B6D-BF55-F3BCE9BE9FF2
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-,* VMWare
-
-,*Only install on hosts*
-
-- On a host: License it
-#+END_SRC
-
-***** Carbon Copy Cloner
-:PROPERTIES:
-:ID:       F0BE2195-81FE-42F7-92F2-7AEB6A834041
-:END:
-
-Only install it on hosts.
-
-#+NAME: 27354A58-46C4-426B-8483-A96F7B63342D
-#+BEGIN_SRC sh
-if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install carbon-copy-cloner
-else
-    echo "carbon-copy-cloner: Only install on hosts"
-fi
-#+END_SRC
-
-#+NAME: C10D4E23-4322-4885-B9CA-02A72CF5D204
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-,* Carbon Copy Cloner
-
-*Only install on hosts*
-
-- On a host: License it
-#+END_SRC
-
 ***** Recipes
 :PROPERTIES:
 :ID:       54BA64D3-899B-4AA4-A68F-237F68B0CF2F
@@ -1968,6 +1985,16 @@ brew install archey
 #+NAME: 5667DE11-E68E-4558-A765-256D23A65B14
 #+BEGIN_SRC sh
 brew install figlet
+#+END_SRC
+
+***** git
+:PROPERTIES:
+:ID:       1F0C8A4B-097E-4090-93A7-8A2958331E4F
+:END:
+
+#+NAME: F5E5B964-50FA-49EF-BABF-EFE558057EC2
+#+BEGIN_SRC sh
+brew install git
 #+END_SRC
 
 ** Writing
