@@ -33,6 +33,9 @@ git clone bitbucket-`whoami`:grettke/texmf.git
 cd ~/git/github
 git clone github-`whoami`:grettke/osx-provision.git
 git clone github-`whoami`:grettke/bash.git
+# 5BD1669B-8E2A-46B5-AB80-88DA5764DEEB ends here
+
+# [[file:../provisioning.org::*Git%20Setup][F407E69A-6C92-4254-A0E3-A442166AD57B]]
 cd ~/git/github-anonymous
 git clone https://github.com/bkuhlmann/osx
 git clone https://github.com/monfresh/laptop
@@ -45,7 +48,7 @@ rm -rf ~/.emacs.d
 mkdir ~/.emacs.d
 ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 # 567603FF-8A5F-4E06-939C-8D21D60AD4ED ends here
-# 5BD1669B-8E2A-46B5-AB80-88DA5764DEEB ends here
+# F407E69A-6C92-4254-A0E3-A442166AD57B ends here
 
 # [[file:../provisioning.org::*TeX][4053A83F-EA3D-4431-AA4A-62336DF2F95E]]
 set -x

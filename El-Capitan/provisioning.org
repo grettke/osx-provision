@@ -738,40 +738,6 @@ Steps are: configuration-writing-02-automated.sh
       - Devices
         - <Computer>
 #+END_SRC
-*** Common Profile
-:PROPERTIES:
-:ID:       5790D2CA-8436-4F44-829B-32F2986E8A68
-:END:
-
-#+NAME: common-profile-body
-#+BEGIN_SRC sh
-export VISUAL=vim
-export EDITOR='$VISUAL'
-export PS1='\u@\h:\w> '
-export HOMEBREW_NO_EMOJI=1
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home"
-#+END_SRC
-
-#+NAME: common-profile-path-pre
-#+BEGIN_SRC sh
-/usr/local/bin:$JAVA_HOME/bin
-#+END_SRC
-
-#+NAME: common-profile-path-post
-#+BEGIN_SRC sh
-$PATH
-#+END_SRC
-
-You must use =:comments no= otherwise the profile gets mangled.
-
-#+NAME: 25086576-D16D-45F4-9141-1A45E2C8F8FD
-#+BEGIN_SRC sh :tangle common/profile-common :comments no
-<<common-profile-body>>
-export PATH=<<common-profile-path-pre>>:<<common-profile-path-post>>
-#+END_SRC
-
-This profile approach will evolve.
-
 *** Automated
 :PROPERTIES:
 :ID:       FC8DB1F5-25FA-4DD2-A6C8-3F434F6FCCF9
@@ -794,32 +760,6 @@ followup process.
 :HEADER-ARGS: :noweb-ref configuration-common-automated-steps-software
 :END:
 
-****** Profile
-:PROPERTIES:
-:ID:       56989957-A8F5-4C47-9B27-31A3AC4ED8DD
-:END:
-
-Set up the new profile.
-
-#+NAME: 92F77AD1-E9DC-4740-B3A3-C6A3A4034068
-#+BEGIN_SRC sh
-rm ~/.profile
-cp ./profile-common ~/.profile
-source ~/.profile
-cat ~/.profile
-#+END_SRC
-
-****** Debug
-:PROPERTIES:
-:ID:       6BA13619-7F02-4489-B734-E5D12DCFDAAD
-:END:
-
-#+NAME: 4EE99FBE-E06D-4D65-9B29-F3C9D2704C4B
-#+BEGIN_SRC sh
-set -x
-sudo -v
-#+END_SRC
-
 ****** Brew & Brew Cask
 :PROPERTIES:
 :ID:       3CD7F53A-C7B3-4C54-9E43-7B43E1D2E54F
@@ -838,6 +778,31 @@ BrewCask is [[http://caskroom.io][here]].
 #+BEGIN_SRC sh
 brew tap caskroom/cask
 #+END_SRC
+****** Bash
+:PROPERTIES:
+:ID:       56989957-A8F5-4C47-9B27-31A3AC4ED8DD
+:END:
+
+Prepare the anonymous GitHub directory.
+
+#+NAME: 92F77AD1-E9DC-4740-B3A3-C6A3A4034068
+#+BEGIN_SRC sh
+rm -rf ~/git/github-anonymous
+mkdir -p ~/git/github-anonymous
+cd ~/git/github-anonymous
+#+END_SRC
+
+Set up Bash. Make everything expected available.
+
+#+NAME: D94BB210-9FCF-4A63-825A-9353E2709654
+#+BEGIN_SRC sh
+git clone https://github.com/grettke/bash.git
+cd bash
+./deploy
+bash --login
+cd
+#+END_SRC
+
 ****** GNU Coreutils & More
 :PROPERTIES:
 :ID:       0DBAF96F-6B96-4E8D-B4A1-23D0B4B816A6
@@ -1352,8 +1317,7 @@ brew cask install font-symbola
 
 #+NAME: 429CCB8C-CFCF-40C9-87B5-03384D5DFE14
 #+BEGIN_SRC sh
-rm -rf ~/git/github-anonymous
-mkdir -p ~/git/github-anonymous
+rm -rf ~/git/github-anonymous/osx-terminal.app-colors-solarized
 cd ~/git/github-anonymous
 git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
 #+END_SRC
@@ -2127,23 +2091,6 @@ Perform the common steps.
 :PROPERTIES:
 :ID:       4176F379-79B3-466F-A689-11701A0432EF
 :END:
-*** Profile
-:PROPERTIES:
-:ID:       D0B61BD6-13D8-4569-8696-30256456A05C
-:END:
-
-#+NAME: 348DFC23-D545-4BBA-8CC4-85431991B232
-#+BEGIN_SRC sh :tangle writing/profile-writing :comments no
-<<common-profile-body>>
-export INFOPATH='/usr/local/share/info:/usr/share/info'
-export CCRYPT="/usr/local/Cellar/ccrypt/1.10/share/emacs/site-lisp"
-export EELIB="/Users/$(whoami)/EELIB"
-export MACTEX_BIN="/usr/local/texlive/2015/bin/x86_64-darwin"
-export PATH=<<common-profile-path-pre>>:$MACTEX_BIN:<<common-profile-path-post>>
-alias e='open /Applications/Emacs.app --args --debug-init'
-alias ec='/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw --debug-init'
-#+END_SRC
-
 *** Manual: Turn the lights on
 :PROPERTIES:
 :header-args: :tangle writing/configuration-writing-01-manual.org
@@ -2555,6 +2502,14 @@ git clone bitbucket-`whoami`:grettke/texmf.git
 cd ~/git/github
 git clone github-`whoami`:grettke/osx-provision.git
 git clone github-`whoami`:grettke/bash.git
+#+end_src
+
+At this point, the Bash initialization files point at the directory with my
+SSH key. Log out and in again and delete the anonymous pull. Not sure how to
+automate this part yet.
+
+#+NAME: F407E69A-6C92-4254-A0E3-A442166AD57B
+#+begin_src sh
 cd ~/git/github-anonymous
 git clone https://github.com/bkuhlmann/osx
 git clone https://github.com/monfresh/laptop

@@ -1,21 +1,23 @@
 # [[file:../provisioning.org::*Automated:%20Install%20and%20automatically%20configure%20as%20much%20as%20possible][BA50AAAF-AA8C-4E84-8DF4-189BE1BC5413]]
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Software][E56B1BEA-11C7-42D4-B999-5B9872701B59]]
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Profile][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
-rm ~/.profile
-cp ./profile-common ~/.profile
-source ~/.profile
-cat ~/.profile
-# 92F77AD1-E9DC-4740-B3A3-C6A3A4034068 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Debug][4EE99FBE-E06D-4D65-9B29-F3C9D2704C4B]]
-set -x
-sudo -v
-# 4EE99FBE-E06D-4D65-9B29-F3C9D2704C4B ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Brew%20&%20Brew%20Cask][DB082535-A43F-46EA-9F1B-1BB6302CA396]]
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 # DB082535-A43F-46EA-9F1B-1BB6302CA396 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Brew%20&%20Brew%20Cask][5C68042B-9C59-42C9-9A7F-D625C0475C3A]]
 brew tap caskroom/cask
 # 5C68042B-9C59-42C9-9A7F-D625C0475C3A ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
+rm -rf ~/git/github-anonymous
+mkdir -p ~/git/github-anonymous
+cd ~/git/github-anonymous
+# 92F77AD1-E9DC-4740-B3A3-C6A3A4034068 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash][D94BB210-9FCF-4A63-825A-9353E2709654]]
+git clone https://github.com/grettke/bash.git
+cd bash
+./deploy
+bash --login
+cd
+# D94BB210-9FCF-4A63-825A-9353E2709654 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*GNU%20Coreutils%20&%20More][6D1BE63D-F3D1-4259-A0BA-A0656B82F81A]]
 # brew install coreutils
 # brew install findutils --with-default-names
@@ -132,8 +134,7 @@ brew cask install font-noto-sans-symbols
 brew cask install font-symbola
 # 74BEB31B-9499-4144-B997-9E16B3FA24D9 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Terminal][429CCB8C-CFCF-40C9-87B5-03384D5DFE14]]
-rm -rf ~/git/github-anonymous
-mkdir -p ~/git/github-anonymous
+rm -rf ~/git/github-anonymous/osx-terminal.app-colors-solarized
 cd ~/git/github-anonymous
 git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
 # 429CCB8C-CFCF-40C9-87B5-03384D5DFE14 ends here
