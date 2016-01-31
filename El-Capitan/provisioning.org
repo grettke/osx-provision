@@ -2079,7 +2079,6 @@ brew install git
   that the settings are saved. Once they were not.
 - Test the sample files for a two-file diff.
 - After Git is set up, test everything.
-
 #+END_SRC
 *** Manual
 :PROPERTIES:
