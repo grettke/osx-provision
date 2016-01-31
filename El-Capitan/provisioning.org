@@ -2237,8 +2237,16 @@ brew cask install deltawalker
     - Max available memory: 1024
     - [X] Automatically find new updates and notify me
     - Colors and Fonts
-      - Basic::Text Font and Text Editor Block Selection Font: DJSM 14
-      - Differences::Font: DJSM 14
+      - Basic: DJSM 14
+        - Text Font
+        - Text Editor Block Selection Font
+      - Differences
+        - Font: DJSM 14
+        - Colors:
+          - Addition: Green
+          - Change: Yellow
+          - Conflict: Red
+          - Deletion: Purple
   - All Comparisons
     - [ ] Use text differencing optimized for speed
     - [X] Use text differencing optimized for accuracy
