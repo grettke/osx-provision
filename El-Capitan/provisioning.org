@@ -1447,11 +1447,6 @@ sudo spctl --master-disable
 
 This script should be idempotent.
 
-#+NAME: 2E9BB301-11E8-4A9A-979D-C7F04FAF6F78
-#+BEGIN_SRC sh
-<<sudo-and-set>>
-#+END_SRC
-
 - These commands are all [[https://github.com/kitchenplan/chef-osxdefaults/tree/master/recipes][copied]]
   - Including the documentation
   - Some of them have corrections and changes
