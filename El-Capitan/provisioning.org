@@ -2242,6 +2242,26 @@ Server preferences:
 - top left corner
 - smoke
 #+END_SRC
+**** Microsoft Office
+    :PROPERTIES:
+    :ID:       568C1BC2-1569-4E3A-8246-594E0C889244
+    :END:
+
+This is in BrewCask, but the download is waste of time. I have it locally.
+
+I keep going back and forth on this one. Is it worth saving 15 minutes having to
+install it myself?
+
+Start it. It asks for your name. It asks about updates and stuff. Get them all.
+Start Outlook. Enter in new license for that.
+
+When activation occurs, the app always locks up then I quit it and it restarts
+after sending an error report.
+
+Don't let it access Contacts.
+
+When it checks for updates, tell it to check daily.
+
 *** Template
 :PROPERTIES:
 :ID:       C1DA9537-9D9B-493B-9318-4ABEEAFEA86B
