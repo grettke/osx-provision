@@ -741,7 +741,7 @@ Steps are: configuration-writing-02-automated.sh
 
 *** Configure OS X
 :PROPERTIES:
-:header-args: :tangle ./configure-os-x.org
+:header-args: :tangle ./configure-os-x.org :tangle-mode (identity #o755)
 :ID:       46781470-E45C-4E6E-98E9-CD41507FF6FE
 :END:
 **** Machine
