@@ -687,6 +687,7 @@ Steps are: configuration-writing-02-automated.sh
 :ID:       262EEA68-1753-489D-A3BE-672C162CD356
 :Effort:   energy
 :END:
+** Steps
 ** Common
 :PROPERTIES:
 :ID:       372CA3F6-90BB-48B0-A181-7866D1846F92
