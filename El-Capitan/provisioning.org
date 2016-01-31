@@ -2101,20 +2101,6 @@ Server preferences:
 :header-args: :tangle ./template.org
 :ID:       FA5E0D88-1455-4DD5-9362-D8268BBFF3BF
 :END:
-** Common
-:PROPERTIES:
-:ID:       372CA3F6-90BB-48B0-A181-7866D1846F92
-:END:
-*** Automated
-:PROPERTIES:
-:ID:       FC8DB1F5-25FA-4DD2-A6C8-3F434F6FCCF9
-:END:
-**** Software
-:PROPERTIES:
-:ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
-:HEADER-ARGS: :noweb-ref configuration-common-automated-steps-software
-:END:
-
 ** Writing
 :PROPERTIES:
 :ID:       4176F379-79B3-466F-A689-11701A0432EF
