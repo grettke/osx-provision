@@ -2150,6 +2150,8 @@ brew linkapps
 
 Configuration comes at the end after my Git stuff is set up.
 
+Download speed varies wildly.
+
 #+NAME: C4F43DC6-97F3-4237-9746-B40243C20950
 #+BEGIN_SRC sh
 brew cask install mactex
