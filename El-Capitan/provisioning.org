@@ -803,30 +803,6 @@ bash --login
 cd
 #+END_SRC
 
-****** GNU Coreutils & More
-:PROPERTIES:
-:ID:       0DBAF96F-6B96-4E8D-B4A1-23D0B4B816A6
-:END:
-
-- Use expected functionality
-  - ISO-8601 timestamps primary motivation
-- Avoid anything more than the absolute basics because I'm unsure how it could
-  affect the OS X build chain
-- *Don't use these*
-  - They break the OS X Terminal integration
-    - Not researching now <2016-01-29 Fri>
-
-#+NAME: 6D1BE63D-F3D1-4259-A0BA-A0656B82F81A
-#+BEGIN_SRC sh
-# brew install coreutils
-# brew install findutils --with-default-names
-# brew install gnu-indent --with-default-names
-# brew install gnu-sed --with-default-names
-# brew install gnu-tar --with-default-names
-# brew install gnu-which --with-default-names
-# brew install grep --with-default-names
-#+END_SRC
-
 ****** Bash
 :PROPERTIES:
 :ID:       223C4BB3-2F4D-418C-93B4-8AFF0801BD43
