@@ -2087,6 +2087,21 @@ Server preferences:
   - #emacs
   - #scheme
   - #bash
+**** Growl
+:PROPERTIES:
+:ID:       48048FB4-E77B-4226-82EF-BA8AA30E2D37
+:END:
+
+#+NAME: 292B3960-AD89-413E-8E67-2BDBBAC7ACBE
+#+BEGIN_SRC org
+,* Growl
+
+- Install via the app store
+- Start it
+- enable run on login
+- top left corner
+- smoke
+#+END_SRC
 *** Template
 :PROPERTIES:
 :ID:       C1DA9537-9D9B-493B-9318-4ABEEAFEA86B
@@ -2158,21 +2173,6 @@ Perform the common steps.
   - Extract it here
   - Rename the directory to "LanguageTool"
   - Took 8 tries to download it; kept stalling at 80%
-#+END_SRC
-****** Growl
-:PROPERTIES:
-:ID:       48048FB4-E77B-4226-82EF-BA8AA30E2D37
-:END:
-
-#+NAME: 292B3960-AD89-413E-8E67-2BDBBAC7ACBE
-#+BEGIN_SRC org :noweb-ref configuration-writing-manual-followup
-,* Growl
-
-- Install via the app store
-- Start it
-- enable run on login
-- top left corner
-- smoke
 #+END_SRC
 ****** Bunch of Stuff
 :PROPERTIES:
