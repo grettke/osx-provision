@@ -691,9 +691,10 @@ Steps are: configuration-writing-02-automated.sh
 :PROPERTIES:
 :ID:       6ACCC2CE-5EB4-42D6-AD12-0DC836C2A3FD
 :END:
-*** Install OS X
+*** OS X
+**** Installation
 :PROPERTIES:
-:header-args: :tangle ./install-os-x.org
+:header-args: :tangle ./os-x-installation.org
 :ID:       46781470-E45C-4E6E-98E9-CD41507FF6FE
 :END:
 
@@ -739,12 +740,12 @@ Steps are: configuration-writing-02-automated.sh
         - <Computer>
 #+END_SRC
 
-*** Configure OS X
+**** Configuration
 :PROPERTIES:
-:header-args: :tangle ./configure-os-x.sh :tangle-mode (identity #o755)
+:header-args: :tangle ./os-x-configuration.sh :tangle-mode (identity #o755)
 :ID:       46781470-E45C-4E6E-98E9-CD41507FF6FE
 :END:
-**** Machine
+***** Machine
 :PROPERTIES:
 :ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
 :HEADER-ARGS: :noweb-ref configuration-common-automated-steps-settings-machine
@@ -814,7 +815,7 @@ Disable Gatekeeper.
 sudo spctl --master-disable
 #+END_SRC
 
-**** User
+***** User
 :PROPERTIES:
 :HEADER-ARGS: :noweb-ref configuration-common-automated-steps-settings-user
 :ID:       B0472249-DD96-45C4-A558-088A56501C3D
@@ -825,7 +826,7 @@ This script should be idempotent.
 - These commands are all [[https://github.com/kitchenplan/chef-osxdefaults/tree/master/recipes][copied]]
   - Including the documentation
   - Some of them have corrections and changes
-***** Globals, Logical or Literal
+****** Globals, Logical or Literal
 :PROPERTIES:
 :ID:       EC01CF33-40EE-4F63-8A27-A88DE32FC557
 :END:
@@ -979,7 +980,7 @@ Disable smart dashes as they’re annoying when typing code.
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 #+END_SRC
 
-***** Hardware
+****** Hardware
 :PROPERTIES:
 :ID:       F6533ADA-A21F-49E7-8DD7-4447CF69A528
 :END:
@@ -1002,7 +1003,7 @@ Increase sound quality for Bluetooth headphones/headsets.
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 #+END_SRC
 
-***** Dock
+****** Dock
 :PROPERTIES:
 :ID:       B3122846-4906-4F7C-AD02-63A84B47A92D
 :END:
@@ -1079,7 +1080,7 @@ Speed up Mission Control animations.
 defaults write 'com.apple.dock' expose-animation-duration -float 0.1 && killall Dock
 #+END_SRC
 
-***** Finder
+****** Finder
 :PROPERTIES:
 :ID:       E7984F15-4360-4F00-B754-CC00FC4D4124
 :END:
@@ -1203,7 +1204,7 @@ defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 #+END_SRC
 
-***** Screen
+****** Screen
 :PROPERTIES:
 :ID:       76D10582-3909-4CBB-9770-DF3D4F7C9DB0
 :END:
@@ -1240,7 +1241,7 @@ mkdir -p ~/Screen\ Shots
 defaults write com.apple.screencapture location ~/Screen\ Shots
 #+END_SRC
 
-***** Hotcorners
+****** Hotcorners
 :PROPERTIES:
 :ID:       14E7437D-7BE9-4149-818B-ADC7B145A822
 :END:
@@ -1285,7 +1286,7 @@ defaults write com.apple.dock wvous-bl-corner -int 3
 defaults write com.apple.dock wvous-bl-modifier -int 0
 #+END_SRC
 
-***** Spaces
+****** Spaces
 :PROPERTIES:
 :ID:       A76717BD-1BF0-48D3-8E69-3A03BFE2B4A2
 :END:
@@ -1298,7 +1299,7 @@ defaults write com.apple.dock mru-spaces -bool false
 defaults write com.apple.dock workspaces-edge-delay -float 1.0
 #+END_SRC
 
-***** Mouse
+****** Mouse
 :PROPERTIES:
 :ID:       319EDC92-B863-4D2E-A951-8479F9171FFF
 :END:
@@ -1309,7 +1310,7 @@ Reasonably fast.
 defaults write 'NSGlobalDomain' com.apple.mouse.scaling -float 2
 #+END_SRC
 
-***** Terminal
+****** Terminal
 :PROPERTIES:
 :ID:       20C7C795-5C0A-442A-9D0F-669D1637A1D2
 :END:
@@ -1320,7 +1321,7 @@ Only use UTF-8 in Terminal.app.
 defaults write com.apple.terminal StringEncodings -array 4
 #+END_SRC
 
-***** Activity Monitor
+****** Activity Monitor
 :PROPERTIES:
 :ID:       D36D6B69-54DC-4666-AB48-731A2FA7130F
 :END:
@@ -1349,11 +1350,12 @@ Sort Activity Monitor results by CPU usageefaults write com.apple.ActivityMonito
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 #+END_SRC
 
-*** Install Core Operation
+*** Administration
+**** Install
 :PROPERTIES:
-:header-args: :tangle ./install-core-operation.sh :tangle-mode (identity #o755)
+:header-args: :tangle ./administration.sh :tangle-mode (identity #o755)
 :END:
-***** Brew & Brew Cask
+****** Brew & Brew Cask
 :PROPERTIES:
 :ID:       3CD7F53A-C7B3-4C54-9E43-7B43E1D2E54F
 :END:
@@ -1372,7 +1374,7 @@ BrewCask is [[http://caskroom.io][here]].
 brew tap caskroom/cask
 #+END_SRC
 
-***** Git Checkout Directory
+****** Git Checkout Directory
 :PROPERTIES:
 :ID:       1BCF52F0-EA8B-4A56-9246-8DFF5131A5ED
 :END:
@@ -1386,7 +1388,7 @@ mkdir -p ~/git/github-anonymous
 cd ~/git/github-anonymous
 #+END_SRC
 
-***** Bash Configuration
+****** Bash Configuration
 :PROPERTIES:
 :ID:       56989957-A8F5-4C47-9B27-31A3AC4ED8DD
 :END:
@@ -1401,7 +1403,7 @@ cd bash
 cd
 #+END_SRC
 
-***** Bash Software
+****** Bash Software
 :PROPERTIES:
 :ID:       223C4BB3-2F4D-418C-93B4-8AFF0801BD43
 :END:
@@ -1421,7 +1423,7 @@ fi
 echo $BASH_VERSION
 #+END_SRC
 
-***** Fonts
+****** Fonts
 :PROPERTIES:
 :ID:       03993E03-45DF-498A-B197-283C61313E39
 :END:
@@ -1442,7 +1444,7 @@ brew cask install font-noto-sans-symbols
 brew cask install font-symbola
 #+END_SRC
 
-***** Terminal
+****** Terminal
 :PROPERTIES:
 :ID:       4A37A9A3-A9D6-4ECD-AB89-EB0FE9815091
 :END:
@@ -1454,11 +1456,10 @@ cd ~/git/github-anonymous
 git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
 #+END_SRC
 
-*** Configure Core Operation
+**** Configure
 :PROPERTIES:
-:header-args: :tangle ./configure-core-operation.org
+:header-args: :tangle ./administration.org
 :END:
-
 ***** Terminal
 :PROPERTIES:
 :ID:       4A37A9A3-A9D6-4ECD-AB89-EB0FE9815091
