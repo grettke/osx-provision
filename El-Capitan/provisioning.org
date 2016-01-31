@@ -1478,6 +1478,149 @@ git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
     - Set them in your =bashrc=, not here
 #+END_SRC
 
+*** Usability
+**** Install
+:PROPERTIES:
+:header-args: :tangle ./usability.sh :tangle-mode (identity #o755)
+:END:
+***** karabiner
+:PROPERTIES:
+:ID:       EE4E6BA8-4BB5-4ACD-9657-36C776448CE4
+:END:
+
+#+NAME: F1B1D8B4-662F-4DD2-8C02-CE51CFF862E0
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install karabiner
+else
+    echo "karabiner: Only install on hosts"
+fi
+#+END_SRC
+
+***** Spectacle
+:PROPERTIES:
+:ID:       1553426A-6A83-4104-AAA8-6DEF05FBBBC4
+:END:
+
+#+NAME: 944FB8AE-DD79-49C6-8ABC-878A782234BE
+#+BEGIN_SRC sh
+brew cask install spectacle
+#+END_SRC
+
+***** Little Snitch
+:PROPERTIES:
+:ID:       5D68F827-7AEA-4C40-A2FF-41ABDAAA53A9
+:END:
+#+NAME: 0A6CDD3C-BB1F-4AB1-8523-C4F5383A6856
+#+BEGIN_SRC sh
+brew cask install little-snitch
+#+END_SRC
+
+***** Bartender
+:PROPERTIES:
+:ID:       119F1391-9A8A-49F6-810E-E2620F5AF15F
+:END:
+
+#+NAME: 1483E8B6-098B-4793-91BD-F5081B2F76ED
+#+begin_src sh
+brew cask install bartender
+#+end_src
+
+***** flux
+:PROPERTIES:
+:ID:       F0BE2195-81FE-42F7-92F2-7AEB6A834041
+:END:
+
+#+NAME: 17B2744A-477B-4E79-A152-D1D43E8FB030
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install flux
+else
+    echo "flux: Only install on hosts"
+fi
+#+END_SRC
+
+**** Configure
+:PROPERTIES:
+:header-args: :tangle ./usability.org
+:END:
+
+#+NAME: 3A1E7B61-A44D-4C11-9338-979D7BB7B05B
+#+BEGIN_SRC org
+,* Spectacle
+
+- Start it
+- Enable integration
+- Start at boot
+
+,* Little Snitch
+
+- Start it
+- Register it
+- Configure per below
+- Enable integration
+- Start at boot
+
+Granting:
+
+- *Always grant minimum required*
+- For known good TLD's, grant it forever
+  - Lots of connections to *.apple.com
+  - For apps that want to call homen do forever
+
+- Gen
+  - Show inactive warning
+  - Silent mode: no
+  - Show status in menu bar.
+- Alert:
+  - Detail level: Show full details
+  - No: Confirm automatically
+  - NO: Confirm with return and escape.
+    - Can use control-return and command-return intead
+- Monitor:
+  - Keyboard shortcut: Off
+  - Show network activity in menu bar.
+    - Show data rates numerically. Monochrome.
+  - Show auto when mouse enters. Hide in 2s.
+- APS
+  - Yes: Enable automatic profile switching
+    - When joining: Ask
+  - Yes: Save geolocation of networks.
+- Security
+  - Allow rules and profile edit.
+  - Allow profile switch.
+  - Allow preference editing
+  - Respect privacy.
+- Advanced
+  - Approve rules automatically.
+- Update
+  - Automatically check for updates daily
+
+,* Bartender
+
+- License it
+- GENERAL
+  - Launch Bartender at login: yes.
+  - At bartender launch: show bartender bar: NO.
+  - Bartender bar: autohides, YES.
+- Appearance
+  - Menu bar icon: "..."
+  - Show when bartender bar is open: YES.
+
+- Never hide
+  - Volume
+  - Clock
+  - Little Snitch
+  - Bluetooth
+  - Wifi
+- Hide everything else
+,* flux
+
+,*Only install on hosts*
+
+- Enable at startup
+#+END_SRC
+
 ** Common
 :PROPERTIES:
 :ID:       372CA3F6-90BB-48B0-A181-7866D1846F92
@@ -1510,31 +1653,6 @@ brew install libxml2
 #+BEGIN_SRC sh
 brew install dos2unix
 #+END_SRC
-***** karabiner
-:PROPERTIES:
-:ID:       EE4E6BA8-4BB5-4ACD-9657-36C776448CE4
-:END:
-
-#+NAME: F1B1D8B4-662F-4DD2-8C02-CE51CFF862E0
-#+BEGIN_SRC sh
-if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install karabiner
-else
-    echo "karabiner: Only install on hosts"
-fi
-#+END_SRC
-
-#+NAME: C13ADBE3-27E1-4E34-AAED-503ACE4E7922
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-,* Karabiner
-
-,*Only install on hosts*
-
-- Allow it
-- Change Return Key
-  - Return to Option_L + When you type Return only
-#+END_SRC
-
 ***** git
 :PROPERTIES:
 :ID:       1F0C8A4B-097E-4090-93A7-8A2958331E4F
@@ -1583,78 +1701,6 @@ brew install ruby
 #+NAME: 716756F8-6497-4367-9330-9A578AC31AA6
 #+BEGIN_SRC sh
 brew install fortune
-#+END_SRC
-***** Spectacle
-:PROPERTIES:
-:ID:       1553426A-6A83-4104-AAA8-6DEF05FBBBC4
-:END:
-
-#+NAME: 944FB8AE-DD79-49C6-8ABC-878A782234BE
-#+BEGIN_SRC sh
-brew cask install spectacle
-#+END_SRC
-
-#+NAME: 1F463B19-B41B-44C8-BFBA-49DBD5301946
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-,* Spectacle
-
-- Start it
-- Enable integration
-- Start at boot
-#+END_SRC
-***** Little Snitch
-:PROPERTIES:
-:ID:       5D68F827-7AEA-4C40-A2FF-41ABDAAA53A9
-:END:
-#+NAME: 0A6CDD3C-BB1F-4AB1-8523-C4F5383A6856
-#+BEGIN_SRC sh
-brew cask install little-snitch
-#+END_SRC
-
-#+NAME: 5167B280-8058-4B60-92E9-2E481FD3A07F
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-,* Little Snitch
-
-- Start it
-- Register it
-- Configure per below
-- Enable integration
-- Start at boot
-
-Granting:
-
-- *Always grant minimum required*
-- For known good TLD's, grant it forever
-  - Lots of connections to *.apple.com
-  - For apps that want to call homen do forever
-
-- Gen
-  - Show inactive warning
-  - Silent mode: no
-  - Show status in menu bar.
-- Alert:
-  - Detail level: Show full details
-  - No: Confirm automatically
-  - NO: Confirm with return and escape.
-    - Can use control-return and command-return intead
-- Monitor:
-  - Keyboard shortcut: Off
-  - Show network activity in menu bar.
-    - Show data rates numerically. Monochrome.
-  - Show auto when mouse enters. Hide in 2s.
-- APS
-  - Yes: Enable automatic profile switching
-    - When joining: Ask
-  - Yes: Save geolocation of networks.
-- Security
-  - Allow rules and profile edit.
-  - Allow profile switch.
-  - Allow preference editing
-  - Respect privacy.
-- Advanced
-  - Approve rules automatically.
-- Update
-  - Automatically check for updates daily
 #+END_SRC
 ***** MPlayer OSX Extended
 :PROPERTIES:
@@ -1763,38 +1809,6 @@ fi
   - Everything
 - Pause it and copy everything over on a wired network
 #+END_SRC
-***** Bartender
-:PROPERTIES:
-:ID:       119F1391-9A8A-49F6-810E-E2620F5AF15F
-:END:
-
-#+NAME: 1483E8B6-098B-4793-91BD-F5081B2F76ED
-#+begin_src sh
-brew cask install bartender
-#+end_src
-
-#+NAME: 8FF0E7F5-4CA1-4F1B-A787-5E523943C266
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-,* Bartender
-
-- License it
-- GENERAL
-  - Launch Bartender at login: yes.
-  - At bartender launch: show bartender bar: NO.
-  - Bartender bar: autohides, YES.
-- Appearance
-  - Menu bar icon: "..."
-  - Show when bartender bar is open: YES.
-
-- Never hide
-  - Volume
-  - Clock
-  - Little Snitch
-  - Bluetooth
-  - Wifi
-- Hide everything else
-#+end_src
-
 ***** Chrome
 :PROPERTIES:
 :ID:       27B3E977-821E-4966-B6CA-438212B4CA2A
@@ -1896,30 +1910,6 @@ fi
 - On a host: License it
 #+END_SRC
 
-***** flux
-:PROPERTIES:
-:ID:       F0BE2195-81FE-42F7-92F2-7AEB6A834041
-:END:
-
-Only install it on hosts.
-
-#+NAME: 17B2744A-477B-4E79-A152-D1D43E8FB030
-#+BEGIN_SRC sh
-if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install flux
-else
-    echo "flux: Only install on hosts"
-fi
-#+END_SRC
-
-#+NAME: 32A52187-8E13-4FA2-B445-65A3A0F6F226
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-,* flux
-
-*Only install on hosts*
-
-- Enable at startup
-#+END_SRC
 ***** Recipes
 :PROPERTIES:
 :ID:       54BA64D3-899B-4AA4-A68F-237F68B0CF2F
