@@ -2306,18 +2306,6 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 <<link-emacs-init-and-dot-d>>
 #+END_SRC
 
-*** Manual: Configure the automatically installed stuff
-:PROPERTIES:
-:header-args: :tangle writing/configuration-writing-03-manual.org
-:ID:       32266D7A-F601-4E9E-81BB-F9569FEA0791
-:END:
-
-Perform the common steps.
-#+NAME: 76285671-7199-4C00-8326-D2D8FDEFA2F7
-#+BEGIN_SRC org
-<<configuration-common-manual-followup>>
-<<configuration-writing-manual-followup>>
-#+END_SRC
 *** Automated: Generic Git
 :PROPERTIES:
 :header-args: :tangle writing/configuration-writing-04-automated-generic.sh :tangle-mode (identity #o755)
