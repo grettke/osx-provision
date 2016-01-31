@@ -1679,13 +1679,55 @@ brew install libxml2
 #+BEGIN_SRC sh
 brew install dos2unix
 #+END_SRC
+***** ccrypt
+:PROPERTIES:
+:ID:       F9E3F2A3-F16A-4EB8-8F4F-4FF47C7BBE06
+:END:
+
+#+NAME: 9FBFA1B1-9677-4366-BF34-9A5D33A5677C
+#+BEGIN_SRC sh
+brew install ccrypt
+#+END_SRC
+
+***** tree
+:PROPERTIES:
+:ID:       8A7F33C7-CF3D-4E64-A63E-2AECD13FFD5F
+:END:
+#+NAME: 91E886FD-0DFA-475D-B85C-B7DD07BDFB1B
+#+BEGIN_SRC sh
+brew install tree
+#+END_SRC
+
+***** archey
+:PROPERTIES:
+:ID:       AAF25357-3F8F-4A19-902D-D494D4D7FE38
+:END:
+
+#+NAME: 900B81AC-3E1F-411F-9B11-9D23B958296E
+#+BEGIN_SRC sh
+brew install archey
+#+END_SRC
+
+***** figlet
+:PROPERTIES:
+:ID:       ADF24324-CF88-44E0-BE77-DC65DF37502E
+:END:
+
+#+NAME: 5667DE11-E68E-4558-A765-256D23A65B14
+#+BEGIN_SRC sh
+brew install figlet
+#+END_SRC
+
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./utility.org
 :ID:       FA5E0D88-1455-4DD5-9362-D8268BBFF3BF
 :END:
 #+BEGIN_SRC org
+,* ccrypt
 
+- Run it in the terminal
+- Verify that you can create and re-open files with Emacs
 #+END_SRC
 *** Internet
 :PROPERTIES:
@@ -1993,53 +2035,6 @@ brew install git
 :ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
 :HEADER-ARGS: :noweb-ref configuration-common-automated-steps-software
 :END:
-
-***** ccrypt
-:PROPERTIES:
-:ID:       F9E3F2A3-F16A-4EB8-8F4F-4FF47C7BBE06
-:END:
-
-#+NAME: 9FBFA1B1-9677-4366-BF34-9A5D33A5677C
-#+BEGIN_SRC sh
-brew install ccrypt
-#+END_SRC
-
-#+NAME: 257678B4-BD36-4073-AC10-0F616D817479
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-,* ccrypt
-
-- Run it in the terminal
-- Verify that you can create and re-open files with Emacs
-#+END_SRC
-
-***** tree
-:PROPERTIES:
-:ID:       8A7F33C7-CF3D-4E64-A63E-2AECD13FFD5F
-:END:
-#+NAME: 91E886FD-0DFA-475D-B85C-B7DD07BDFB1B
-#+BEGIN_SRC sh
-brew install tree
-#+END_SRC
-
-***** archey
-:PROPERTIES:
-:ID:       AAF25357-3F8F-4A19-902D-D494D4D7FE38
-:END:
-
-#+NAME: 900B81AC-3E1F-411F-9B11-9D23B958296E
-#+BEGIN_SRC sh
-brew install archey
-#+END_SRC
-
-***** figlet
-:PROPERTIES:
-:ID:       ADF24324-CF88-44E0-BE77-DC65DF37502E
-:END:
-
-#+NAME: 5667DE11-E68E-4558-A765-256D23A65B14
-#+BEGIN_SRC sh
-brew install figlet
-#+END_SRC
 
 ** Writing
 :PROPERTIES:
