@@ -6,28 +6,18 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Brew%20&%20Brew%20Cask][5C68042B-9C59-42C9-9A7F-D625C0475C3A]]
 brew tap caskroom/cask
 # 5C68042B-9C59-42C9-9A7F-D625C0475C3A ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Git%20Checkout%20Directory][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
 rm -rf ~/git/github-anonymous
 mkdir -p ~/git/github-anonymous
 cd ~/git/github-anonymous
 # 92F77AD1-E9DC-4740-B3A3-C6A3A4034068 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash][D94BB210-9FCF-4A63-825A-9353E2709654]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash%20Configuration][D94BB210-9FCF-4A63-825A-9353E2709654]]
 git clone https://github.com/grettke/bash.git
 cd bash
 ./deploy
-bash --login
 cd
 # D94BB210-9FCF-4A63-825A-9353E2709654 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*GNU%20Coreutils%20&%20More][6D1BE63D-F3D1-4259-A0BA-A0656B82F81A]]
-# brew install coreutils
-# brew install findutils --with-default-names
-# brew install gnu-indent --with-default-names
-# brew install gnu-sed --with-default-names
-# brew install gnu-tar --with-default-names
-# brew install gnu-which --with-default-names
-# brew install grep --with-default-names
-# 6D1BE63D-F3D1-4259-A0BA-A0656B82F81A ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash][ADE3737D-A638-4BBD-9DD5-C42681EA1C0D]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash%20Software][ADE3737D-A638-4BBD-9DD5-C42681EA1C0D]]
 echo $BASH_VERSION
 brew install bash
 if grep "/usr/local/bin/bash" /etc/shells > /dev/null; then
@@ -155,14 +145,6 @@ brew install archey
 brew install figlet
 # 5667DE11-E68E-4558-A765-256D23A65B14 ends here
 # F1A77C76-9D56-45CE-8C27-9A4DD9D50B1F ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Set%20up%20the%20new%20profile][B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770]]
-cd ~/
-rm .profile
-cp ./writing/profile-writing .profile
-source .profile
-cat .profile
-cd writing
-# B4E9BFE0-DE8F-428D-ADC5-A7B03D55C770 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bunch%20of%20Stuff][CCF91EC0-F689-4279-972C-9F1D32C4C64B]]
 brew cask install racket
 brew cask install xquartz

@@ -1,5 +1,5 @@
 # [[file:../provisioning.org::*Manual:%20Configure%20the%20automatically%20installed%20stuff][76285671-7199-4C00-8326-D2D8FDEFA2F7]]
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash][51B2B8EC-89C0-4B77-A09F-7C481B157E0D]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash%20Software][51B2B8EC-89C0-4B77-A09F-7C481B157E0D]]
 * Bash
 
 - Run ~echo $BASH_VERSION~

@@ -6,28 +6,18 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Brew%20&%20Brew%20Cask][5C68042B-9C59-42C9-9A7F-D625C0475C3A]]
 brew tap caskroom/cask
 # 5C68042B-9C59-42C9-9A7F-D625C0475C3A ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Git%20Checkout%20Directory][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
 rm -rf ~/git/github-anonymous
 mkdir -p ~/git/github-anonymous
 cd ~/git/github-anonymous
 # 92F77AD1-E9DC-4740-B3A3-C6A3A4034068 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash][D94BB210-9FCF-4A63-825A-9353E2709654]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash%20Configuration][D94BB210-9FCF-4A63-825A-9353E2709654]]
 git clone https://github.com/grettke/bash.git
 cd bash
 ./deploy
-bash --login
 cd
 # D94BB210-9FCF-4A63-825A-9353E2709654 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*GNU%20Coreutils%20&%20More][6D1BE63D-F3D1-4259-A0BA-A0656B82F81A]]
-# brew install coreutils
-# brew install findutils --with-default-names
-# brew install gnu-indent --with-default-names
-# brew install gnu-sed --with-default-names
-# brew install gnu-tar --with-default-names
-# brew install gnu-which --with-default-names
-# brew install grep --with-default-names
-# 6D1BE63D-F3D1-4259-A0BA-A0656B82F81A ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash][ADE3737D-A638-4BBD-9DD5-C42681EA1C0D]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash%20Software][ADE3737D-A638-4BBD-9DD5-C42681EA1C0D]]
 echo $BASH_VERSION
 brew install bash
 if grep "/usr/local/bin/bash" /etc/shells > /dev/null; then

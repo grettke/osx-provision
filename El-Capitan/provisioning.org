@@ -780,6 +780,9 @@ brew tap caskroom/cask
 #+END_SRC
 
 ***** Git Checkout Directory
+:PROPERTIES:
+:ID:       1BCF52F0-EA8B-4A56-9246-8DFF5131A5ED
+:END:
 
 Prepare the anonymous GitHub directory.
 
@@ -802,7 +805,6 @@ Set up Bash. Make everything expected available.
 git clone https://github.com/grettke/bash.git
 cd bash
 ./deploy
-bash --login
 cd
 #+END_SRC
 
