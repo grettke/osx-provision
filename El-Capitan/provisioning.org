@@ -1621,96 +1621,11 @@ Granting:
 - Enable at startup
 #+END_SRC
 
-*** Template
+*** Internet
 **** Install
 :PROPERTIES:
-:header-args: :tangle ./template.sh :tangle-mode (identity #o755)
+:header-args: :tangle ./internet.sh :tangle-mode (identity #o755)
 :END:
-**** Configure
-:PROPERTIES:
-:header-args: :tangle ./template.org
-:END:
-** Common
-:PROPERTIES:
-:ID:       372CA3F6-90BB-48B0-A181-7866D1846F92
-:END:
-*** Automated
-:PROPERTIES:
-:ID:       FC8DB1F5-25FA-4DD2-A6C8-3F434F6FCCF9
-:END:
-**** Software
-:PROPERTIES:
-:ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
-:HEADER-ARGS: :noweb-ref configuration-common-automated-steps-software
-:END:
-
-***** xmllint
-:PROPERTIES:
-:ID:       55AFF634-C899-4667-BC25-47F9099DFF9A
-:END:
-
-#+NAME: C8F78DA0-A4AF-4F54-AF2F-B739C06F7F31
-#+BEGIN_SRC sh
-brew install libxml2
-#+END_SRC
-***** dos2unix
-:PROPERTIES:
-:ID:       59D47685-D541-4D78-88BF-F3313FE7DF10
-:END:
-
-#+NAME: 950BBA8F-2D33-445E-AE8B-E0067859B675
-#+BEGIN_SRC sh
-brew install dos2unix
-#+END_SRC
-***** git
-:PROPERTIES:
-:ID:       1F0C8A4B-097E-4090-93A7-8A2958331E4F
-:END:
-
-Important because Brew and everything uses this everywhere.
-
-#+NAME: F5E5B964-50FA-49EF-BABF-EFE558057EC2
-#+BEGIN_SRC sh
-brew install git
-#+END_SRC
-
-#+NAME: 38DA76DA-A9B1-42FF-9280-E0DC556A9223
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-,* Git
-
-- Not using any git completions
-#+END_SRC
-***** Python
-:PROPERTIES:
-:ID:       1BA55F5A-9902-4539-9494-0231C4DBD9B6
-:END:
-
-Important because it is such a versatile distribution.
-
-#+NAME: 4128F3DB-7E7C-4885-B54E-AA78423855C5
-#+BEGIN_SRC sh
-brew install python
-brew linkapps python
-#+END_SRC
-***** Ruby
-:PROPERTIES:
-:ID:       B7D03962-A386-4E62-AA68-3A7F95AF2CA4
-:END:
-
-Important because Brew uses this.
-
-#+NAME: EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D
-#+BEGIN_SRC sh
-brew install ruby
-#+END_SRC
-***** Fortune
-:PROPERTIES:
-:ID:       CFE4D4B5-0B4E-434A-83DA-7AF5CBBDD5BD
-:END:
-#+NAME: 716756F8-6497-4367-9330-9A578AC31AA6
-#+BEGIN_SRC sh
-brew install fortune
-#+END_SRC
 ***** MPlayer OSX Extended
 :PROPERTIES:
 :ID:       C47DA927-A6B2-4751-98AC-D3200E6F4095
@@ -1740,31 +1655,6 @@ brew cask install mplayer-osx-extended
 
 - Install manually
 - Verify
-#+END_SRC
-
-***** VMWare Fusion
-:PROPERTIES:
-:ID:       96ADB3AF-1BDB-4F31-BB31-D5E32221AC8D
-:END:
-
-Only install it on hosts.
-
-#+NAME: 2B059288-F12E-48E1-939F-1138117FDE4B
-#+BEGIN_SRC sh
-if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install vmware-fusion
-else
-    echo "vmware-fusion: Only install on hosts"
-fi
-#+END_SRC
-
-#+NAME: D9DF34EB-3AAF-4B6D-BF55-F3BCE9BE9FF2
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-,* VMWare
-
-,*Only install on hosts*
-
-- On a host: License it
 #+END_SRC
 
 ***** Skype
@@ -1893,6 +1783,125 @@ brew cask install filezilla
 
 - Set up Filezilla for WnW
 #+end_src
+
+**** Configure
+:PROPERTIES:
+:header-args: :tangle ./internet.org
+:END:
+*** Template
+**** Install
+:PROPERTIES:
+:header-args: :tangle ./template.sh :tangle-mode (identity #o755)
+:END:
+**** Configure
+:PROPERTIES:
+:header-args: :tangle ./template.org
+:END:
+** Common
+:PROPERTIES:
+:ID:       372CA3F6-90BB-48B0-A181-7866D1846F92
+:END:
+*** Automated
+:PROPERTIES:
+:ID:       FC8DB1F5-25FA-4DD2-A6C8-3F434F6FCCF9
+:END:
+**** Software
+:PROPERTIES:
+:ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
+:HEADER-ARGS: :noweb-ref configuration-common-automated-steps-software
+:END:
+
+***** xmllint
+:PROPERTIES:
+:ID:       55AFF634-C899-4667-BC25-47F9099DFF9A
+:END:
+
+#+NAME: C8F78DA0-A4AF-4F54-AF2F-B739C06F7F31
+#+BEGIN_SRC sh
+brew install libxml2
+#+END_SRC
+***** dos2unix
+:PROPERTIES:
+:ID:       59D47685-D541-4D78-88BF-F3313FE7DF10
+:END:
+
+#+NAME: 950BBA8F-2D33-445E-AE8B-E0067859B675
+#+BEGIN_SRC sh
+brew install dos2unix
+#+END_SRC
+***** git
+:PROPERTIES:
+:ID:       1F0C8A4B-097E-4090-93A7-8A2958331E4F
+:END:
+
+Important because Brew and everything uses this everywhere.
+
+#+NAME: F5E5B964-50FA-49EF-BABF-EFE558057EC2
+#+BEGIN_SRC sh
+brew install git
+#+END_SRC
+
+#+NAME: 38DA76DA-A9B1-42FF-9280-E0DC556A9223
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Git
+
+- Not using any git completions
+#+END_SRC
+***** Python
+:PROPERTIES:
+:ID:       1BA55F5A-9902-4539-9494-0231C4DBD9B6
+:END:
+
+Important because it is such a versatile distribution.
+
+#+NAME: 4128F3DB-7E7C-4885-B54E-AA78423855C5
+#+BEGIN_SRC sh
+brew install python
+brew linkapps python
+#+END_SRC
+***** Ruby
+:PROPERTIES:
+:ID:       B7D03962-A386-4E62-AA68-3A7F95AF2CA4
+:END:
+
+Important because Brew uses this.
+
+#+NAME: EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D
+#+BEGIN_SRC sh
+brew install ruby
+#+END_SRC
+***** Fortune
+:PROPERTIES:
+:ID:       CFE4D4B5-0B4E-434A-83DA-7AF5CBBDD5BD
+:END:
+#+NAME: 716756F8-6497-4367-9330-9A578AC31AA6
+#+BEGIN_SRC sh
+brew install fortune
+#+END_SRC
+***** VMWare Fusion
+:PROPERTIES:
+:ID:       96ADB3AF-1BDB-4F31-BB31-D5E32221AC8D
+:END:
+
+Only install it on hosts.
+
+#+NAME: 2B059288-F12E-48E1-939F-1138117FDE4B
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install vmware-fusion
+else
+    echo "vmware-fusion: Only install on hosts"
+fi
+#+END_SRC
+
+#+NAME: D9DF34EB-3AAF-4B6D-BF55-F3BCE9BE9FF2
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* VMWare
+
+,*Only install on hosts*
+
+- On a host: License it
+#+END_SRC
 
 ***** Carbon Copy Cloner
 :PROPERTIES:
