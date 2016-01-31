@@ -741,7 +741,7 @@ Steps are: configuration-writing-02-automated.sh
 
 *** Configure OS X
 :PROPERTIES:
-:header-args: :tangle ./configure-os-x.org :tangle-mode (identity #o755)
+:header-args: :tangle ./configure-os-x.sh :tangle-mode (identity #o755)
 :ID:       46781470-E45C-4E6E-98E9-CD41507FF6FE
 :END:
 **** Machine
@@ -1349,20 +1349,10 @@ Sort Activity Monitor results by CPU usageefaults write com.apple.ActivityMonito
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 #+END_SRC
 
-** Common
+*** Install Core Operation
 :PROPERTIES:
-:ID:       372CA3F6-90BB-48B0-A181-7866D1846F92
+:header-args: :tangle ./install-core-operation.sh :tangle-mode (identity #o755)
 :END:
-*** Automated
-:PROPERTIES:
-:ID:       FC8DB1F5-25FA-4DD2-A6C8-3F434F6FCCF9
-:END:
-**** Software
-:PROPERTIES:
-:ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
-:HEADER-ARGS: :noweb-ref configuration-common-automated-steps-software
-:END:
-
 ***** Brew & Brew Cask
 :PROPERTIES:
 :ID:       3CD7F53A-C7B3-4C54-9E43-7B43E1D2E54F
@@ -1431,14 +1421,76 @@ fi
 echo $BASH_VERSION
 #+END_SRC
 
-#+NAME: 51B2B8EC-89C0-4B77-A09F-7C481B157E0D
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-,* Bash
+***** Fonts
+:PROPERTIES:
+:ID:       03993E03-45DF-498A-B197-283C61313E39
+:END:
 
-- Run ~echo $BASH_VERSION~
-- Mak sure that it is >=4
-- Not using any bash completions
+#+NAME: DD72394C-9D37-446C-A704-E88BE2B0CEED
+#+BEGIN_SRC sh
+brew tap caskroom/fonts
 #+END_SRC
+
+Install them automatically.
+
+#+NAME: 74BEB31B-9499-4144-B997-9E16B3FA24D9
+#+BEGIN_SRC sh
+brew cask install font-dejavu-sans
+brew cask install font-quivira
+brew cask install font-noto-sans
+brew cask install font-noto-sans-symbols
+brew cask install font-symbola
+#+END_SRC
+
+***** Terminal
+:PROPERTIES:
+:ID:       4A37A9A3-A9D6-4ECD-AB89-EB0FE9815091
+:END:
+
+#+NAME: 429CCB8C-CFCF-40C9-87B5-03384D5DFE14
+#+BEGIN_SRC sh
+rm -rf ~/git/github-anonymous/osx-terminal.app-colors-solarized
+cd ~/git/github-anonymous
+git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
+#+END_SRC
+
+*** Configure Core Operation
+:PROPERTIES:
+:header-args: :tangle ./configure-core-operation.org
+:END:
+
+***** Terminal
+:PROPERTIES:
+:ID:       4A37A9A3-A9D6-4ECD-AB89-EB0FE9815091
+:END:
+
+#+NAME: D880F24A-DE8D-4513-A354-45C9B57E0631
+#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
+,* Terminal
+
+- Profiles
+  - Import the Solarized dark theme
+  - Set it to the default theme
+  - Set the font to DJSM 17
+- Profiles \rarr Advanced
+  - [ ] Set locale environment variables on startup
+    - Set them in your =bashrc=, not here
+#+END_SRC
+
+** Common
+:PROPERTIES:
+:ID:       372CA3F6-90BB-48B0-A181-7866D1846F92
+:END:
+*** Automated
+:PROPERTIES:
+:ID:       FC8DB1F5-25FA-4DD2-A6C8-3F434F6FCCF9
+:END:
+**** Software
+:PROPERTIES:
+:ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
+:HEADER-ARGS: :noweb-ref configuration-common-automated-steps-software
+:END:
+
 ***** xmllint
 :PROPERTIES:
 :ID:       55AFF634-C899-4667-BC25-47F9099DFF9A
@@ -1867,57 +1919,6 @@ fi
 
 - Enable at startup
 #+END_SRC
-***** Fonts
-:PROPERTIES:
-:ID:       03993E03-45DF-498A-B197-283C61313E39
-:END:
-
-#+NAME: DD72394C-9D37-446C-A704-E88BE2B0CEED
-#+BEGIN_SRC sh
-brew tap caskroom/fonts
-#+END_SRC
-
-Install them automatically.
-
-#+NAME: 74BEB31B-9499-4144-B997-9E16B3FA24D9
-#+BEGIN_SRC sh
-brew cask install font-dejavu-sans
-brew cask install font-quivira
-brew cask install font-noto-sans
-brew cask install font-noto-sans-symbols
-brew cask install font-symbola
-#+END_SRC
-
-#+NAME: 2EC7A9F7-9356-46E2-9A23-EA286378E24E
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-,* Fonts
-
-- Test in Emacs using ~view-hello-file~
-#+END_SRC
-***** Terminal
-:PROPERTIES:
-:ID:       4A37A9A3-A9D6-4ECD-AB89-EB0FE9815091
-:END:
-
-#+NAME: 429CCB8C-CFCF-40C9-87B5-03384D5DFE14
-#+BEGIN_SRC sh
-rm -rf ~/git/github-anonymous/osx-terminal.app-colors-solarized
-cd ~/git/github-anonymous
-git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
-#+END_SRC
-
-#+NAME: D880F24A-DE8D-4513-A354-45C9B57E0631
-#+BEGIN_SRC org :noweb-ref configuration-common-manual-followup
-,* Terminal
-
-- Profiles
-  - Import the Solarized dark theme
-  - Set it to the default theme
-  - Set the font to DJSM 17
-- Profiles \rarr Advanced
-  - [ ] Set locale environment variables on startup
-    - Set them in your =bashrc=, not here
-#+END_SRC
 ***** Recipes
 :PROPERTIES:
 :ID:       54BA64D3-899B-4AA4-A68F-237F68B0CF2F
@@ -2188,30 +2189,6 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 <<link-emacs-init-and-dot-d>>
 #+END_SRC
 
-***** Settings
-:PROPERTIES:
-:ID:       D19C1E4F-7195-44AE-A3D1-1D48AAC91BD1
-:END:
-****** Machine
-:PROPERTIES:
-:ID:       A959032E-88AA-4643-8AE0-80DE02EDE3AD
-:END:
-
-Perform the common steps.
-#+NAME: 6B36623E-8E41-45E6-9B7F-86AD9C4DED9F
-#+BEGIN_SRC org
-<<configuration-common-automated-steps-settings-machine>>
-#+END_SRC
-****** User
-:PROPERTIES:
-:ID:       F1F504EE-6438-4C65-A2CF-0E1F04E3E538
-:END:
-
-Perform the common steps.
-#+NAME: F8B79F85-E593-4B4A-94E8-E7F5DE2D0A0B
-#+BEGIN_SRC org
-<<configuration-common-automated-steps-settings-user>>
-#+END_SRC
 *** Manual: Configure the automatically installed stuff
 :PROPERTIES:
 :header-args: :tangle writing/configuration-writing-03-manual.org
