@@ -24,6 +24,7 @@
 - Host :: Reconfigure control keys
 - Host :: Maximize resolution
 - Host :: Show Keychain Access in Menubar
+- Users & Groups: Enable Guest User
 - Screensaver: Flurry, 10m
 - Host :: Add printer
 - Energy saver

@@ -1,4 +1,11 @@
 # [[file:../provisioning.org::*Manual:%20Configure%20the%20automatically%20installed%20stuff][76285671-7199-4C00-8326-D2D8FDEFA2F7]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash][51B2B8EC-89C0-4B77-A09F-7C481B157E0D]]
+* Bash
+
+- Run ~echo $BASH_VERSION~
+- Mak sure that it is >=4
+- Not using any bash completions
+# 51B2B8EC-89C0-4B77-A09F-7C481B157E0D ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*karabiner][C13ADBE3-27E1-4E34-AAED-503ACE4E7922]]
 * Karabiner
 
@@ -13,13 +20,6 @@
 
 - Not using any git completions
 # 38DA76DA-A9B1-42FF-9280-E0DC556A9223 ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash][51B2B8EC-89C0-4B77-A09F-7C481B157E0D]]
-* Bash
-
-- Run ~echo $BASH_VERSION~
-- Mak sure that it is >=4
-- Not using any bash completions
-# 51B2B8EC-89C0-4B77-A09F-7C481B157E0D ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Spectacle][1F463B19-B41B-44C8-BFBA-49DBD5301946]]
 * Spectacle
 
@@ -180,9 +180,13 @@ Granting:
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Terminal][D880F24A-DE8D-4513-A354-45C9B57E0631]]
 * Terminal
 
-- Import the Solarized dark theme
-- Set it to the default theme
-- Set the font to DJSM 17
+- Profiles
+  - Import the Solarized dark theme
+  - Set it to the default theme
+  - Set the font to DJSM 17
+- Profiles \rarr Advanced
+  - [ ] Set locale environment variables on startup
+    - Set them in your =bashrc=, not here
 # D880F24A-DE8D-4513-A354-45C9B57E0631 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*ccrypt][257678B4-BD36-4073-AC10-0F616D817479]]
 * ccrypt

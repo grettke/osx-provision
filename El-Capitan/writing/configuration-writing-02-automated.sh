@@ -16,6 +16,32 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Brew%20&%20Brew%20Cask][5C68042B-9C59-42C9-9A7F-D625C0475C3A]]
 brew tap caskroom/cask
 # 5C68042B-9C59-42C9-9A7F-D625C0475C3A ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*GNU%20Coreutils%20&%20More][6D1BE63D-F3D1-4259-A0BA-A0656B82F81A]]
+# brew install coreutils
+# brew install findutils --with-default-names
+# brew install gnu-indent --with-default-names
+# brew install gnu-sed --with-default-names
+# brew install gnu-tar --with-default-names
+# brew install gnu-which --with-default-names
+# brew install grep --with-default-names
+# 6D1BE63D-F3D1-4259-A0BA-A0656B82F81A ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash][ADE3737D-A638-4BBD-9DD5-C42681EA1C0D]]
+echo $BASH_VERSION
+brew install bash
+if grep "/usr/local/bin/bash" /etc/shells > /dev/null; then
+    echo "brew bash already configured in shells; doing nothing"
+else
+    sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+    chsh -s /usr/local/bin/bash
+fi
+echo $BASH_VERSION
+# ADE3737D-A638-4BBD-9DD5-C42681EA1C0D ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*xmllint][C8F78DA0-A4AF-4F54-AF2F-B739C06F7F31]]
+brew install libxml2
+# C8F78DA0-A4AF-4F54-AF2F-B739C06F7F31 ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*dos2unix][950BBA8F-2D33-445E-AE8B-E0067859B675]]
+brew install dos2unix
+# 950BBA8F-2D33-445E-AE8B-E0067859B675 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*karabiner][F1B1D8B4-662F-4DD2-8C02-CE51CFF862E0]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install karabiner
@@ -33,17 +59,9 @@ brew linkapps python
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Ruby][EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D]]
 brew install ruby
 # EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D ends here
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Bash][ADE3737D-A638-4BBD-9DD5-C42681EA1C0D]]
-echo $BASH_VERSION
-brew install bash
-if grep "/usr/local/bin/bash" /etc/shells > /dev/null; then
-    echo "brew bash already configured in shells; doing nothing"
-else
-    sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-    chsh -s /usr/local/bin/bash
-fi
-echo $BASH_VERSION
-# ADE3737D-A638-4BBD-9DD5-C42681EA1C0D ends here
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Fortune][716756F8-6497-4367-9330-9A578AC31AA6]]
+brew install fortune
+# 716756F8-6497-4367-9330-9A578AC31AA6 ends here
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Spectacle][944FB8AE-DD79-49C6-8ABC-878A782234BE]]
 brew cask install spectacle
 # 944FB8AE-DD79-49C6-8ABC-878A782234BE ends here
