@@ -691,9 +691,9 @@ Steps are: configuration-writing-02-automated.sh
 :PROPERTIES:
 :ID:       6ACCC2CE-5EB4-42D6-AD12-0DC836C2A3FD
 :END:
-*** OS X Installation
+*** Install OS X
 :PROPERTIES:
-:header-args: :tangle ./init-osx-installation.org
+:header-args: :tangle ./install-os-x.org
 :ID:       46781470-E45C-4E6E-98E9-CD41507FF6FE
 :END:
 
