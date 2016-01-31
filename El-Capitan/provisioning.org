@@ -1826,6 +1826,23 @@ brew cask install opera
 brew cask install filezilla
 #+end_src
 
+***** Slack
+:PROPERTIES:
+:ID:       6B546C16-0EBC-4304-82F0-D0ED2D7F0AF9
+:END:
+
+#+NAME: 75569C81-CF17-482A-8EF3-53457897457C
+#+BEGIN_SRC sh
+brew cask install slack
+#+END_SRC
+***** Kindle
+:PROPERTIES:
+:ID:       75FEF4AC-89B2-4934-8D71-ECE0420A2189
+:END:
+#+NAME: B4E47A43-27D2-4478-821A-0E6C6138FB40
+#+BEGIN_SRC sh
+brew cask install kindle
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./internet.org
@@ -1885,6 +1902,13 @@ brew cask install filezilla
 ,* FileZilla
 
 - Set up Filezilla for WnW
+
+,* Slack
+
+- Open-at-Login
+- Join
+  - livecodepublic
+  - milwaukee
 #+END_SRC
 
 *** DevOps
@@ -2561,39 +2585,6 @@ sudo mktexlsr
   - [ ] txt
 #+END_SRC
 
-*** New Unconfigured Things
-:PROPERTIES:
-:ID:       04AB7D1A-536F-4497-A697-8974FD401F76
-:END:
-
-Things that don't have a place yet.
-
-**** Automatic
-:PROPERTIES:
-:ID:       F1F23568-046E-417C-A7CD-2D86E21B1FFD
-:END:
-***** Slack
-:PROPERTIES:
-:ID:       6B546C16-0EBC-4304-82F0-D0ED2D7F0AF9
-:END:
-
-- Open-at-Login
-- Join
-  - livecodepublic
-  - milwaukee
-
-#+NAME: 75569C81-CF17-482A-8EF3-53457897457C
-#+BEGIN_SRC sh
-brew cask install slack
-#+END_SRC
-***** Kindle
-:PROPERTIES:
-:ID:       75FEF4AC-89B2-4934-8D71-ECE0420A2189
-:END:
-#+NAME: B4E47A43-27D2-4478-821A-0E6C6138FB40
-#+BEGIN_SRC sh
-brew cask install kindle
-#+END_SRC
 
 # Local Variables:
 # eval: (progn (defun el-cap-prov-post-tangle-hook () (interactive) (message "El-Cap Prov Post Tangle") (when (f-exists? "~/git/github/osx-provision/El-Capitan/host/profile-common") (f-delete "~/git/github/osx-provision/El-Capitan/host/profile-common")) (when (f-exists? "~/git/github/osx-provision/El-Capitan/writing/profile-common") (f-delete "~/git/github/osx-provision/El-Capitan/writing/profile-common")) (f-copy "~/git/github/osx-provision/El-Capitan/common/profile-common" "~/git/github/osx-provision/El-Capitan/host") (f-copy "~/git/github/osx-provision/El-Capitan/common/profile-common" "~/git/github/osx-provision/El-Capitan/writing")) (add-hook 'org-babel-post-tangle-hook 'el-cap-prov-post-tangle-hook) )
