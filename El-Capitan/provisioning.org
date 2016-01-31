@@ -2081,6 +2081,13 @@ For everything beyond the built in.
 brew install git
 #+END_SRC
 
+***** EMACS
+#+NAME: CCF91EC0-F689-4279-972C-9F1D32C4C64B
+#+BEGIN_SRC sh
+brew install emacs --with-cocoa --with-gnutls --with-imagemagick
+brew linkapps
+#+END_SRC
+
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./development.org
@@ -2127,6 +2134,42 @@ brew install git
 - Test the sample files for a two-file diff.
 - After Git is set up, test everything.
 #+END_SRC
+*** TeX
+:PROPERTIES:
+:ID:       C1DA9537-9D9B-493B-9318-4ABEEAFEA86B
+:END:
+**** Install
+:PROPERTIES:
+:header-args: :tangle ./tex.sh :tangle-mode (identity #o755)
+:ID:       F2B0FCF0-1F56-4D3B-AC9F-10F4E430BBE2
+:END:
+***** MacTeX
+:PROPERTIES:
+:ID:       17B20C34-B6E5-478E-BDF5-F7E56588AE7E
+:END:
+
+Configuration comes at the end after my Git stuff is set up.
+
+#+NAME: C4F43DC6-97F3-4237-9746-B40243C20950
+#+BEGIN_SRC sh
+brew cask install mactex
+#+END_SRC
+***** GnuPlot
+:PROPERTIES:
+:ID:       CD0644AD-7F3D-4FE7-A3B4-32000755E7B1
+:END:
+
+Must install TeX before GNUPlot.
+
+#+NAME: A6FDD2B6-412D-41A5-B58A-942C6540BB57
+#+BEGIN_SRC sh
+brew install gnuplot --with-latex --with-pdflib-lite --with-test --with-x11
+#+END_SRC
+**** Configure
+:PROPERTIES:
+:header-args: :tangle ./tex.org
+:ID:       FA5E0D88-1455-4DD5-9362-D8268BBFF3BF
+:END:
 *** Manual
 :PROPERTIES:
 :header-args: :tangle ./manual.org
@@ -2245,54 +2288,6 @@ Perform the common steps.
 #+NAME: F1A77C76-9D56-45CE-8C27-9A4DD9D50B1F
 #+BEGIN_SRC org
 <<configuration-common-automated-steps-software>>
-#+END_SRC
-****** EELIB
-:PROPERTIES:
-:ID:       23DCDAAE-9D70-4168-9300-AC15E3F32474
-:END:
-
-#+NAME: 4DC7B7AD-6E88-4DFF-9E27-E610E6022065
-#+BEGIN_SRC org :noweb-ref configuration-writing-manual-followup
-,* EELIB
-
-- Make a directory =~/EELIB=
-  ,#+BEGIN_SRC sh
-  mkdir ~/EELIB
-  ,#+END_SRC
-- Download the following JAR files to that folder
-- [[http://plantuml.com/][PlantUML]] to it, either downloading the unversioned JAR or
-   renaming it to "plantuml.jar"
-- [[http://ditaa.sourceforge.net/][ditaa]] to it, extract the versioned JAR, and rename it to "ditaa.jar"
-- [[https://www.languagetool.org/][LanguageTool]]
-  - Use the "daily build" if the download is too slow
-  - Extract it here
-  - Rename the directory to "LanguageTool"
-  - Took 8 tries to download it; kept stalling at 80%
-#+END_SRC
-****** Bunch of Stuff
-:PROPERTIES:
-:ID:       50500125-8B10-4E18-9DB3-45B2CAC29B27
-:END:
-#+NAME: CCF91EC0-F689-4279-972C-9F1D32C4C64B
-#+BEGIN_SRC sh
-brew install emacs --with-cocoa --with-gnutls --with-imagemagick
-brew linkapps
-#+END_SRC
-****** MacTeX
-:PROPERTIES:
-:ID:       17B20C34-B6E5-478E-BDF5-F7E56588AE7E
-:END:
-#+NAME: C4F43DC6-97F3-4237-9746-B40243C20950
-#+BEGIN_SRC sh
-brew cask install mactex
-#+END_SRC
-****** GnuPlot
-:PROPERTIES:
-:ID:       CD0644AD-7F3D-4FE7-A3B4-32000755E7B1
-:END:
-#+NAME: A6FDD2B6-412D-41A5-B58A-942C6540BB57
-#+BEGIN_SRC sh
-brew install gnuplot --with-latex --with-pdflib-lite --with-test --with-x11
 #+END_SRC
 ****** Org-Mode
 :PROPERTIES:
