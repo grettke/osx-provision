@@ -1570,6 +1570,10 @@ else
 fi
 #+END_SRC
 
+***** xquartz
+#+BEGIN_SRC sh
+brew cask install xquartz
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./usability.org
@@ -1661,6 +1665,28 @@ Granting:
 :header-args: :tangle ./utility.sh :tangle-mode (identity #o755)
 :ID:       F2B0FCF0-1F56-4D3B-AC9F-10F4E430BBE2
 :END:
+***** aspell
+#+BEGIN_SRC sh
+brew install aspell -all
+#+END_SRC
+***** graphviz
+#+BEGIN_SRC sh
+brew install graphviz
+#+END_SRC
+***** pandoc
+#+BEGIN_SRC sh
+brew install pandoc
+#+END_SRC
+***** ImageMagic
+#+BEGIN_SRC sh
+brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
+#+END_SRC
+***** growlnotify
+
+#+BEGIN_SRC sh
+brew cask install growlnotify
+#+END_SRC
+
 ***** xmllint
 :PROPERTIES:
 :ID:       55AFF634-C899-4667-BC25-47F9099DFF9A
@@ -2022,6 +2048,10 @@ brew install ruby
 #+BEGIN_SRC sh
 brew cask install java
 #+END_SRC
+***** Racket
+#+BEGIN_SRC sh
+brew cask install racket
+#+END_SRC
 ***** git
 :PROPERTIES:
 :ID:       1F0C8A4B-097E-4090-93A7-8A2958331E4F
@@ -2228,13 +2258,6 @@ Perform the common steps.
 :END:
 #+NAME: CCF91EC0-F689-4279-972C-9F1D32C4C64B
 #+BEGIN_SRC sh
-brew cask install racket
-brew cask install xquartz
-brew cask install growlnotify
-brew install aspell -all
-brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
-brew install graphviz
-brew install pandoc
 brew install emacs --with-cocoa --with-gnutls --with-imagemagick
 brew linkapps
 #+END_SRC
