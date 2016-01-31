@@ -2009,6 +2009,9 @@ brew install git
 
 #+END_SRC
 *** Manual
+:PROPERTIES:
+:header-args: :tangle ./manual.org
+:END:
 **** Textual IRC Client
 :PROPERTIES:
 :ID:       B817D3AE-D105-4957-B229-8DF479E9E5F4
