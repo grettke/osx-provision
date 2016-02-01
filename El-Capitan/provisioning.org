@@ -2304,7 +2304,7 @@ brew install hg
 :END:
 
 #+NAME: 610E12B1-3C58-4326-BE81-18EF1F40D544
-#+BEGIN_SRC
+#+BEGIN_SRC sh
 brew cask install pycharm
 #+END_SRC
 ***** WebStorm
