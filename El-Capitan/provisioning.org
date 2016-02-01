@@ -2052,6 +2052,21 @@ else
 fi
 #+END_SRC
 
+***** VirtualBox
+:PROPERTIES:
+:ID:       04B646A2-EFDE-4179-BDA1-A9857F421B0F
+:END:
+
+#+NAME: 0B6E9298-89D3-40D5-83F1-9F2DC21590E8
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install virtualbox
+    brew cask install virtualbox-extension-pack
+
+else
+    echo "virtualbox: Only install on hosts"
+fi
+#+END_SRC
 ***** Vagrant
     :PROPERTIES:
     :ID:       7B45D9BF-6FD5-4624-9F06-671D33D76A78

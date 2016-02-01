@@ -14,6 +14,16 @@ else
 fi
 # 2B059288-F12E-48E1-939F-1138117FDE4B ends here
 
+# [[file:provisioning.org::*VirtualBox][0B6E9298-89D3-40D5-83F1-9F2DC21590E8]]
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install virtualbox
+    brew cask install virtualbox-extension-pack
+
+else
+    echo "virtualbox: Only install on hosts"
+fi
+# 0B6E9298-89D3-40D5-83F1-9F2DC21590E8 ends here
+
 # [[file:provisioning.org::*Vagrant][165A046E-FFC9-4431-8150-CF9F4890EA24]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vagrant
