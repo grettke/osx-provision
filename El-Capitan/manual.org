@@ -1,7 +1,3 @@
-# [[file:provisioning.org::*R%20Studio][0C6AF024-314E-441F-9211-88AB14D02FBA]]
-brew cask install rstudio
-# 0C6AF024-314E-441F-9211-88AB14D02FBA ends here
-
 # [[file:provisioning.org::*Textual%20IRC%20Client][BBAFAEFB-E9B6-443C-8DAC-424483885BF2]]
 * Textual
 
@@ -80,33 +76,6 @@ Don't let it access Contacts.
 
 When it checks for updates, tell it to check daily.
 # C38471A4-27EF-4543-9076-299EC7FE2086 ends here
-
-# [[file:provisioning.org::*Core][203A9B18-3AC1-4A06-A5D3-5B35F56FBB6C]]
-I haven't used R in a long time but I want to get it set up right again.
-Link my configs from ~/ into where they live now.
-This installer asks for my password, which halts the install. How will I deal
-with this?
-There is a =.Rinstall= file in my setup to get all of the packages installed. Be s
-sure to run that, too. All of my notes live in R.org already.
-
-Install the software manually.
-
-Migrate and link the configuration files
-
-#+NAME: 0D50EA49-2A0B-40C9-865D-964FC75B7AC3
-#+begin_src sh
-ln -s ~/git/bitbucket/alec/.Renviron ~/.Renviron
-ln -s ~/git/bitbucket/alec/.Rprofile ~/.Rprofile
-ln -s ~/git/bitbucket/alec/.Rinstall ~/.Rinstall
-rm -rf ~/.Rpackages
-mkdir ~/.Rpackages
-#+end_src
-# 203A9B18-3AC1-4A06-A5D3-5B35F56FBB6C ends here
-
-# [[file:provisioning.org::*R%20Studio][A64B8C68-9FA9-44FC-BF68-7B76716E4EC1]]
-This doesn't need any config I think.
-Run it.
-# A64B8C68-9FA9-44FC-BF68-7B76716E4EC1 ends here
 
 # [[file:provisioning.org::*SAS%20University%20Edition][E963365D-C3A8-46C1-89A9-7EA158482C6D]]
 * SAS University Edition

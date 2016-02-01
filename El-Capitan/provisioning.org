@@ -2295,6 +2295,22 @@ brew cask install pycharm
 #+BEGIN_SRC sh
 brew cask install webstorm
 #+END_SRC
+***** r
+:PROPERTIES:
+:ID:       4E086037-0105-41AE-83F6-C8D909FBAACB
+:END:
+#+NAME: DE3758D9-6E6D-45EC-A208-8C9F65701DC6
+#+BEGIN_SRC sh
+brew cask install r
+#+END_SRC
+***** R Studio
+:PROPERTIES:
+:ID:       19930D0D-7A42-468E-B60E-134F1BEAA30E
+:END:
+#+NAME: 8D154800-90B1-4D63-9B75-D6C3F61FED9E
+#+BEGIN_SRC sh
+brew cask install rstudio
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./development.org
@@ -2389,6 +2405,28 @@ brew cask install webstorm
       - Right margin column: 80
 ,* WebStorm
 - Same configuration as PyCharm
+
+,* R
+
+I haven't used R in a long time but I want to get it set up right again.
+Link my configs from ~/ into where they live now.
+This installer asks for my password, which halts the install. How will I deal
+with this?
+There is a =.Rinstall= file in my setup to get all of the packages installed. Be s
+sure to run that, too. All of my notes live in R.org already.
+
+Install the software manually.
+
+Migrate and link the configuration files
+
+,#+NAME: 0D50EA49-2A0B-40C9-865D-964FC75B7AC3
+,#+begin_src sh
+ln -s ~/git/bitbucket/alec/.Renviron ~/.Renviron
+ln -s ~/git/bitbucket/alec/.Rprofile ~/.Rprofile
+ln -s ~/git/bitbucket/alec/.Rinstall ~/.Rinstall
+rm -rf ~/.Rpackages
+mkdir ~/.Rpackages
+,#+end_src
 #+END_SRC
 *** Manual
 :PROPERTIES:
@@ -2490,54 +2528,6 @@ Don't let it access Contacts.
 
 When it checks for updates, tell it to check daily.
 #+END_SRC
-**** TODO R
-:PROPERTIES:
-:ID:       C5ECE409-62A5-4DAB-899B-A3AD74C73154
-:END:
-***** TODO Core
-:PROPERTIES:
-:ID:       10C3F27E-F7C1-4DD9-8C3F-A9C8C9EA3813
-:END:
-
-
-#+NAME: 203A9B18-3AC1-4A06-A5D3-5B35F56FBB6C
-#+BEGIN_SRC org
-I haven't used R in a long time but I want to get it set up right again.
-Link my configs from ~/ into where they live now.
-This installer asks for my password, which halts the install. How will I deal
-with this?
-There is a =.Rinstall= file in my setup to get all of the packages installed. Be s
-sure to run that, too. All of my notes live in R.org already.
-
-Install the software manually.
-
-Migrate and link the configuration files
-
-,#+NAME: 0D50EA49-2A0B-40C9-865D-964FC75B7AC3
-,#+begin_src sh
-ln -s ~/git/bitbucket/alec/.Renviron ~/.Renviron
-ln -s ~/git/bitbucket/alec/.Rprofile ~/.Rprofile
-ln -s ~/git/bitbucket/alec/.Rinstall ~/.Rinstall
-rm -rf ~/.Rpackages
-mkdir ~/.Rpackages
-,#+end_src
-#+END_SRC
-***** TODO R Studio
-     :PROPERTIES:
-     :ID:       BEA57758-A9E8-415C-9D89-A0C5722A6383
-     :END:
-
-#+NAME: 0C6AF024-314E-441F-9211-88AB14D02FBA
-#+begin_src sh
-brew cask install rstudio
-#+end_src
-
-#+NAME: A64B8C68-9FA9-44FC-BF68-7B76716E4EC1
-#+begin_src org
-This doesn't need any config I think.
-Run it.
-#+end_src
-
 **** SAS University Edition
     :PROPERTIES:
     :ID:       3BE67982-9DDC-4FAC-BC9D-FB4F87DE58E3

@@ -59,3 +59,11 @@ brew cask install pycharm
 # [[file:provisioning.org::*WebStorm][479B7BC3-9F35-4422-82C9-DE3722E4A4B6]]
 brew cask install webstorm
 # 479B7BC3-9F35-4422-82C9-DE3722E4A4B6 ends here
+
+# [[file:provisioning.org::*r][DE3758D9-6E6D-45EC-A208-8C9F65701DC6]]
+brew cask install r
+# DE3758D9-6E6D-45EC-A208-8C9F65701DC6 ends here
+
+# [[file:provisioning.org::*R%20Studio][8D154800-90B1-4D63-9B75-D6C3F61FED9E]]
+brew cask install rstudio
+# 8D154800-90B1-4D63-9B75-D6C3F61FED9E ends here
