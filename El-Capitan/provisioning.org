@@ -751,7 +751,6 @@ Steps are: configuration-writing-02-automated.sh
 ***** Machine
 :PROPERTIES:
 :ID:       44A4C35C-E27A-462F-BBB2-A178F70194D8
-:HEADER-ARGS: :noweb-ref configuration-common-automated-steps-settings-machine
 :END:
 
 This script should be idempotent.
@@ -820,7 +819,6 @@ sudo spctl --master-disable
 
 ***** User
 :PROPERTIES:
-:HEADER-ARGS: :noweb-ref configuration-common-automated-steps-settings-user
 :ID:       B0472249-DD96-45C4-A558-088A56501C3D
 :END:
 
