@@ -2223,6 +2223,11 @@ brew install bzr
 #+BEGIN_SRC sh
 brew install hg
 #+END_SRC
+***** PyCharm
+
+#+BEGIN_SRC
+brew cask install pycharm
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./development.org
@@ -2278,6 +2283,38 @@ brew install hg
 - Manually
   - Go through the licensing process
   - Old app just let you type it into the GUI, not seeing it here now
+,* PyCharm
+- "use your JetBrains Account credentials in PyCharm to use this license"
+- Import settings: I do not have any
+- Allow it to accept incoming network connections
+- PyCharm initial configuration
+  - Keymap: Emacs
+  - Theme: Default
+  - Editor colors and fonts: Default
+  - Enable opening files CMD: Yes =/usr/local/bin/charm=
+- Preferences
+  - Appearance & Behavior
+    - System Settings
+      - Usage Statistics
+        - Do send anonymous statistics: weekly
+    - Appearance
+      - Show tool window bars
+  - Editor
+    - General
+      - Use soft wraps
+      - Use soft wraps in console
+      - Appearance
+        - Show line numbers
+        - Use block caret
+        - nil Caret blinking
+    - Colors & Fonts
+      - [[https://github.com/jkaving/intellij-colors-solarized][Solarized Theme]]: Dark
+      - General
+        - Caret: #839496
+      - Font
+        - DJSM 17
+    - Code Style
+      - Right margin column: 80
 #+END_SRC
 *** TeX
 :PROPERTIES:
