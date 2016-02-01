@@ -1714,6 +1714,10 @@ brew install pandoc
 #+BEGIN_SRC sh
 brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
 #+END_SRC
+***** povray
+#+BEGIN_SRC sh
+brew install povray --with-openexr
+#+END_SRC
 ***** growlnotify
 
 #+BEGIN_SRC sh
