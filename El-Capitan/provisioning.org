@@ -2433,89 +2433,6 @@ mkdir ~/.Rpackages
 :header-args: :tangle ./manual.org
 :ID:       CFDA666A-254C-4DE4-825E-872A878A47F6
 :END:
-**** Debtinator
-:PROPERTIES:
-:ID:       1E321453-054F-4040-A2C4-77D4895AB34B
-:END:
-
-#+NAME: C621D8B5-B34E-48D7-BF7A-C8E316BA10FB
-#+BEGIN_SRC org
-,* Debtinator
-
-- Nothing exactly right now
-#+END_SRC
-**** Textual IRC Client
-:PROPERTIES:
-:ID:       B817D3AE-D105-4957-B229-8DF479E9E5F4
-:END:
-
-#+NAME: BBAFAEFB-E9B6-443C-8DAC-424483885BF2
-#+BEGIN_SRC org
-,* Textual
-
-- AppStore.
-- Open-at-Login
-
-Only note changes from the current default
-
-Set up preferences:
-
-- Preferences.
-- General.
-  - YES: Save the state of queries
-- Highlights.
-- Notifications.
-- Controls.
-- Interface.
-- Style.
-  - General.
-    - Style: Equinox
-    - Font: DJSM 17
-  - Inline Media.
-    - YES: Show images inline
-- Addons.
-- Advanced.
-  - Default Identity.
-    - grettke
-    - grettke💤
-    - grettke
-    - Grant Rettke
-
-Server preferences:
-
-- Basic Settings.
-  - General
-    - YES
-      - Connect when Textual opens
-      - Perform reconnect on disconnect
-      - Perform reconnent on waking from sleep
-- Identity
-  - Wait for ID before joining
-  - Enter personal password; everything else got set from main screen
-  - Do wait for identification before joining channels
-
-- Join on Freenode
-  - #org-mode
-  - #emacs
-  - #scheme
-  - #bash
-
-#+END_SRC
-**** Growl
-:PROPERTIES:
-:ID:       48048FB4-E77B-4226-82EF-BA8AA30E2D37
-:END:
-
-#+NAME: 292B3960-AD89-413E-8E67-2BDBBAC7ACBE
-#+BEGIN_SRC org
-,* Growl
-
-- Install via the app store
-- Start it
-- enable run on login
-- top left corner
-- smoke
-#+END_SRC
 **** Microsoft Office
     :PROPERTIES:
     :ID:       568C1BC2-1569-4E3A-8246-594E0C889244
@@ -2647,6 +2564,89 @@ Set Dictation & Text to Speech to: Callie
    :ID:       798AD4C6-AFB7-4AB6-B794-16E1E83CDF5C
    :END:
 
+***** Debtinator
+:PROPERTIES:
+:ID:       1E321453-054F-4040-A2C4-77D4895AB34B
+:END:
+
+#+NAME: C621D8B5-B34E-48D7-BF7A-C8E316BA10FB
+#+BEGIN_SRC org
+,* Debtinator
+
+- Nothing exactly right now
+#+END_SRC
+***** Textual IRC Client
+:PROPERTIES:
+:ID:       B817D3AE-D105-4957-B229-8DF479E9E5F4
+:END:
+
+#+NAME: BBAFAEFB-E9B6-443C-8DAC-424483885BF2
+#+BEGIN_SRC org
+,* Textual
+
+- AppStore.
+- Open-at-Login
+
+Only note changes from the current default
+
+Set up preferences:
+
+- Preferences.
+- General.
+  - YES: Save the state of queries
+- Highlights.
+- Notifications.
+- Controls.
+- Interface.
+- Style.
+  - General.
+    - Style: Equinox
+    - Font: DJSM 17
+  - Inline Media.
+    - YES: Show images inline
+- Addons.
+- Advanced.
+  - Default Identity.
+    - grettke
+    - grettke💤
+    - grettke
+    - Grant Rettke
+
+Server preferences:
+
+- Basic Settings.
+  - General
+    - YES
+      - Connect when Textual opens
+      - Perform reconnect on disconnect
+      - Perform reconnent on waking from sleep
+- Identity
+  - Wait for ID before joining
+  - Enter personal password; everything else got set from main screen
+  - Do wait for identification before joining channels
+
+- Join on Freenode
+  - #org-mode
+  - #emacs
+  - #scheme
+  - #bash
+
+#+END_SRC
+***** Growl
+:PROPERTIES:
+:ID:       48048FB4-E77B-4226-82EF-BA8AA30E2D37
+:END:
+
+#+NAME: 292B3960-AD89-413E-8E67-2BDBBAC7ACBE
+#+BEGIN_SRC org
+,* Growl
+
+- Install via the app store
+- Start it
+- enable run on login
+- top left corner
+- smoke
+#+END_SRC
 ***** Microsoft Remote Desktop
     :PROPERTIES:
     :ID:       BF68C6A0-9F79-4372-8503-CD8B0BE3331A
