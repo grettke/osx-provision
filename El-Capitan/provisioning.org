@@ -2714,6 +2714,8 @@ automate this part yet.
 cd ~/git/github-anonymous
 git clone https://github.com/bkuhlmann/osx
 git clone https://github.com/monfresh/laptop
+rm -rf ~/src
+mkdir ~/src
 cd ~/src
 git clone github-`whoami`:grettke/help.git
 rm ~/.emacs.el
@@ -2722,6 +2724,32 @@ rm -rf ~/.emacs.d
 mkdir ~/.emacs.d
 ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 #+end_src
+
+*** Org-Mode
+:PROPERTIES:
+:ID:       C1DA9537-9D9B-493B-9318-4ABEEAFEA86B
+:END:
+**** Install
+:PROPERTIES:
+:header-args: :tangle ./org-mode.sh :tangle-mode (identity #o755)
+:ID:       F2B0FCF0-1F56-4D3B-AC9F-10F4E430BBE2
+:END:
+
+#+NAME: 916D6512-03E7-4971-8BAC-53D6FA258BBD
+#+BEGIN_SRC sh
+rm -rf ~/src/org-mode
+rm -rf ~/src/org2blog
+rm -rf ~/src/use-package
+cd ~/src
+echo `date +%Y-%m-%dT%H:%M:%S%z`
+git clone git://orgmode.org/org-mode.git
+echo `date +%Y-%m-%dT%H:%M:%S%z`
+cd org-mode
+emacs -batch -Q -L lisp -l ../mk/org-fixup -f org-make-autoloads
+cd ~/src
+git clone git@github.com:punchagan/org2blog.git
+git clone https://github.com/jwiegley/use-package.git
+#+END_SRC
 
 *** Template
 :PROPERTIES:
@@ -2741,78 +2769,6 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 :PROPERTIES:
 :ID:       4176F379-79B3-466F-A689-11701A0432EF
 :END:
-*** Automated: Install and automatically configure as much as possible
-:PROPERTIES:
-:header-args: :tangle writing/configuration-writing-02-automated.sh :tangle-mode (identity #o755)
-:ID:       AD976F50-9B8A-4B07-ABA6-B00FE0081E90
-:END:
-
-- Steps
-  - Copy the provisioning scripts writing directory to the home directory
-  - Enter the directory
-  - Run the script
-  - Otherwise the copy commands fail
-
-Perform the common steps.
-#+NAME: 16925E43-FD2E-4CB7-957F-DCE747A4FC8C
-#+BEGIN_SRC org
-<<configuration-writing-automated>>
-#+END_SRC
-**** Steps
-:PROPERTIES:
-:HEADER-ARGS: :noweb-ref configuration-writing-automated
-:ID:       995CBCB2-07FC-4933-8084-9DB97B11CF92
-:END:
-***** Software
-:PROPERTIES:
-:ID:       68C5F6B5-9D98-4562-92A2-BE3D5C52F76E
-:END:
-Perform the common steps.
-#+NAME: F1A77C76-9D56-45CE-8C27-9A4DD9D50B1F
-#+BEGIN_SRC org
-<<configuration-common-automated-steps-software>>
-#+END_SRC
-****** Org-Mode
-:PROPERTIES:
-:ID:       F23E86FA-0EE3-4028-89F2-09B5B9DFEC75
-:END:
-******* Download Org Mode
-:PROPERTIES:
-:ID:       63AFF6C1-2214-44F2-9069-BA156C1D322E
-:END:
-
-This script should be idempotent.
-
-#+NAME: 916D6512-03E7-4971-8BAC-53D6FA258BBD
-#+BEGIN_SRC sh
-rm -rf ~/src
-mkdir ~/src
-cd ~/src
-echo `date +%Y-%m-%dT%H:%M:%S%z`
-git clone git://orgmode.org/org-mode.git
-echo `date +%Y-%m-%dT%H:%M:%S%z`
-cd org-mode
-emacs -batch -Q -L lisp -l ../mk/org-fixup -f org-make-autoloads
-cd ~/src
-git clone git@github.com:punchagan/org2blog.git
-git clone https://github.com/jwiegley/use-package.git
-git clone https://github.com/grettke/help.git
-#+END_SRC
-
-******* Link Files and Folders
-:PROPERTIES:
-:ID:       0ECC4895-8B6B-4079-A581-90B0B2AC7355
-:END:
-
-#+NAME: 567603FF-8A5F-4E06-939C-8D21D60AD4ED
-#+BEGIN_SRC sh :noweb-ref link-emacs-init-and-dot-d
-rm ~/.emacs.el
-ln -s ~/src/help/.emacs.el ~/.emacs.el
-rm -rf ~/.emacs.d
-mkdir ~/.emacs.d
-ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
-#+END_SRC
-
 *** Automated: Personal Git and TeX Configuration
 :PROPERTIES:
 :header-args: :tangle writing/configuration-writing-05-automated-personal.sh :tangle-mode (identity #o755)
