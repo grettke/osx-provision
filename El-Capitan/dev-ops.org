@@ -1,4 +1,4 @@
-# [[file:provisioning.org::*Configure][FBF76363-813C-4A86-9B04-220C6C584F39]]
+# [[file:provisioning.org::*Configure][089A38CA-43AD-4BE4-8EF4-C77E57CF25F3]]
 * Carbon Copy Cloner
 
 *Only install on hosts*
@@ -10,9 +10,7 @@
 *Only install on hosts*
 
 - On a host: License it
-# FBF76363-813C-4A86-9B04-220C6C584F39 ends here
 
-# [[file:provisioning.org::*Configure][089A38CA-43AD-4BE4-8EF4-C77E57CF25F3]]
 * Vagrant
 
 Install the VMWare provider for Vagrant and then license it.
