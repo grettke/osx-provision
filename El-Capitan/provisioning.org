@@ -2059,7 +2059,12 @@ fi
 
 #+NAME: 165A046E-FFC9-4431-8150-CF9F4890EA24
 #+begin_src sh
-brew cask install vagrant
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install vagrant
+else
+    echo "vagrant: Only install on hosts"
+fi
+
 #+end_src
 
 **** Configure

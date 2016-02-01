@@ -15,5 +15,9 @@ fi
 # 2B059288-F12E-48E1-939F-1138117FDE4B ends here
 
 # [[file:provisioning.org::*Vagrant][165A046E-FFC9-4431-8150-CF9F4890EA24]]
-brew cask install vagrant
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install vagrant
+else
+    echo "vagrant: Only install on hosts"
+fi
 # 165A046E-FFC9-4431-8150-CF9F4890EA24 ends here
