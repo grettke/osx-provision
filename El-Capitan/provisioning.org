@@ -2108,6 +2108,10 @@ brew linkapps
 brew cask install sourcetree
 #+end_src
 
+***** sml
+#+BEGIN_SRC sh
+brew install smlnj
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./development.org
