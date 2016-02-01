@@ -1582,6 +1582,15 @@ brew cask install xquartz
 
 #+NAME: 3A1E7B61-A44D-4C11-9338-979D7BB7B05B
 #+BEGIN_SRC org
+,* Karabiner
+
+- Run it. Approve it. Configure it with the following. Look for the
+  heading with the name below following "Modify".
+- Check:
+  - Return to Option_L
+    (+ When you type Return only, send Return)
+
+
 ,* Spectacle
 
 - Start it
