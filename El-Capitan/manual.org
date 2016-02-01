@@ -1,14 +1,57 @@
-# [[file:provisioning.org::*Core][0D50EA49-2A0B-40C9-865D-964FC75B7AC3]]
-ln -s ~/git/bitbucket/alec/.Renviron ~/.Renviron
-ln -s ~/git/bitbucket/alec/.Rprofile ~/.Rprofile
-ln -s ~/git/bitbucket/alec/.Rinstall ~/.Rinstall
-rm -rf ~/.Rpackages
-mkdir ~/.Rpackages
-# 0D50EA49-2A0B-40C9-865D-964FC75B7AC3 ends here
-
 # [[file:provisioning.org::*R%20Studio][0C6AF024-314E-441F-9211-88AB14D02FBA]]
 brew cask install rstudio
 # 0C6AF024-314E-441F-9211-88AB14D02FBA ends here
+
+# [[file:provisioning.org::*Textual%20IRC%20Client][BBAFAEFB-E9B6-443C-8DAC-424483885BF2]]
+* Textual
+
+- AppStore.
+- Open-at-Login
+
+Only note changes from the current default
+
+Set up preferences:
+
+- Preferences.
+- General.
+  - YES: Save the state of queries
+- Highlights.
+- Notifications.
+- Controls.
+- Interface.
+- Style.
+  - General.
+    - Style: Equinox
+    - Font: DJSM 17
+  - Inline Media.
+    - YES: Show images inline
+- Addons.
+- Advanced.
+  - Default Identity.
+    - grettke
+    - grettke💤
+    - grettke
+    - Grant Rettke
+
+Server preferences:
+
+- Basic Settings.
+  - General
+    - YES
+      - Connect when Textual opens
+      - Perform reconnect on disconnect
+      - Perform reconnent on waking from sleep
+- Identity
+  - Wait for ID before joining
+  - Enter personal password; everything else got set from main screen
+  - Do wait for identification before joining channels
+
+- Join on Freenode
+  - #org-mode
+  - #emacs
+  - #scheme
+  - #bash
+# BBAFAEFB-E9B6-443C-8DAC-424483885BF2 ends here
 
 # [[file:provisioning.org::*Growl][292B3960-AD89-413E-8E67-2BDBBAC7ACBE]]
 * Growl
@@ -20,7 +63,124 @@ brew cask install rstudio
 - smoke
 # 292B3960-AD89-413E-8E67-2BDBBAC7ACBE ends here
 
+# [[file:provisioning.org::*Microsoft%20Office][C38471A4-27EF-4543-9076-299EC7FE2086]]
+This is in BrewCask, but the download is waste of time. I have it locally. Use
+the version I bought; not the latest which is in brew.
+
+I keep going back and forth on this one. Is it worth saving 15 minutes having to
+install it myself?
+
+Start it. It asks for your name. It asks about updates and stuff. Get them all.
+Start Outlook. Enter in new license for that.
+
+When activation occurs, the app always locks up then I quit it and it restarts
+after sending an error report.
+
+Don't let it access Contacts.
+
+When it checks for updates, tell it to check daily.
+# C38471A4-27EF-4543-9076-299EC7FE2086 ends here
+
+# [[file:provisioning.org::*Core][203A9B18-3AC1-4A06-A5D3-5B35F56FBB6C]]
+I haven't used R in a long time but I want to get it set up right again.
+Link my configs from ~/ into where they live now.
+This installer asks for my password, which halts the install. How will I deal
+with this?
+There is a =.Rinstall= file in my setup to get all of the packages installed. Be s
+sure to run that, too. All of my notes live in R.org already.
+
+Install the software manually.
+
+Migrate and link the configuration files
+
+#+NAME: 0D50EA49-2A0B-40C9-865D-964FC75B7AC3
+#+begin_src sh
+ln -s ~/git/bitbucket/alec/.Renviron ~/.Renviron
+ln -s ~/git/bitbucket/alec/.Rprofile ~/.Rprofile
+ln -s ~/git/bitbucket/alec/.Rinstall ~/.Rinstall
+rm -rf ~/.Rpackages
+mkdir ~/.Rpackages
+#+end_src
+# 203A9B18-3AC1-4A06-A5D3-5B35F56FBB6C ends here
+
 # [[file:provisioning.org::*R%20Studio][A64B8C68-9FA9-44FC-BF68-7B76716E4EC1]]
 This doesn't need any config I think.
 Run it.
 # A64B8C68-9FA9-44FC-BF68-7B76716E4EC1 ends here
+
+# [[file:provisioning.org::*SAS%20University%20Edition][E963365D-C3A8-46C1-89A9-7EA158482C6D]]
+* SAS University Edition
+
+- 4096 MB RAM
+# E963365D-C3A8-46C1-89A9-7EA158482C6D ends here
+
+# [[file:provisioning.org::*OSX%20Enhanced%20Voice%20Dictation][D7DCD73D-1ABA-4C47-B6C8-4E47C86EB13B]]
+* OSX Enhanced Voice Dictation
+
+Somehow I activated the installer for "OSX Enhanced Voice Dictation". I said "Yes".
+Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the steps:
+
+- Apple
+- System Preferences
+- Dictation & Speech
+- Dictation
+- Enable
+- Yes: Use Enhanced Dictation
+# D7DCD73D-1ABA-4C47-B6C8-4E47C86EB13B ends here
+
+# [[file:provisioning.org::*Visible%20Body][D569323D-3922-4D3A-814D-B6413DBBE3F2]]
+* Visible Body
+
+- Human Anatomy Atlas
+- Muscle Premium
+- Skeleton Premium
+# D569323D-3922-4D3A-814D-B6413DBBE3F2 ends here
+
+# [[file:provisioning.org::*Entropy][CBFB0524-49A3-475E-BE72-F72F878355D7]]
+* Entropy
+
+- This is a [[http://www.eigenlogik.com/entropy/][download]] and manual install.
+# CBFB0524-49A3-475E-BE72-F72F878355D7 ends here
+
+# [[file:provisioning.org::*Guitar%20Pro][8D86833F-9C6A-430B-A238-D1537470EC46]]
+* Guitar Pro
+
+- [[http://www.guitar-pro.com/en/index.php][Here]]. Sign into MySongBook.
+# 8D86833F-9C6A-430B-A238-D1537470EC46 ends here
+
+# [[file:provisioning.org::*GotoMeeting%20&%20Fuse][7188E973-1AAA-4111-B23F-7437E49C9CB5]]
+* GotoMeeting & Fuse
+
+- WebMeeting software.
+# 7188E973-1AAA-4111-B23F-7437E49C9CB5 ends here
+
+# [[file:provisioning.org::*Cepestral%20Callie%20&%20David][350809D4-E824-4F60-B121-CD6E34B62075]]
+* Cepestral Callie & David
+
+[[http://www.cepstral.com/][Here]].
+
+You might need to log out and in again to make the "Cepstral Voices" appear in
+System Preferences.
+
+License them. Test them.
+
+Set Dictation & Text to Speech to: Callie
+# 350809D4-E824-4F60-B121-CD6E34B62075 ends here
+
+# [[file:provisioning.org::*Microsoft%20Remote%20Desktop][D86C6A4D-08CB-4674-81CA-4777E3AAAF8B]]
+* Microsoft Remote Desktop
+
+- Don't open the session full-screen.
+# D86C6A4D-08CB-4674-81CA-4777E3AAAF8B ends here
+
+# [[file:provisioning.org::*Text2Speech%20PRO][725DFF13-3E51-4B7E-90B3-19F07375B26E]]
+* Text2Speech PRO
+
+- Set default voice to Callie
+# 725DFF13-3E51-4B7E-90B3-19F07375B26E ends here
+
+# [[file:provisioning.org::*PixelMator][05AD3C3A-761E-4CD5-8D45-FCF487A0DAEE]]
+* PixelMator
+
+- Nothing special
+# 05AD3C3A-761E-4CD5-8D45-FCF487A0DAEE ends here
