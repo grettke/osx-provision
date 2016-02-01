@@ -1571,6 +1571,10 @@ fi
 #+END_SRC
 
 ***** xquartz
+:PROPERTIES:
+:ID:       51C9B39A-45E3-4BD6-ADD1-C0A2B5B3A8C1
+:END:
+#+NAME: 442A6B4B-C210-4436-B0AE-F571D3F75B01
 #+BEGIN_SRC sh
 brew cask install xquartz
 #+END_SRC
@@ -1682,44 +1686,80 @@ Granting:
 brew cask install java
 #+END_SRC
 ***** ditaa
+:PROPERTIES:
+:ID:       9854EF35-CB8E-4DBA-99E9-E41B9E5947C9
+:END:
 
+#+NAME: D45705FA-D7E0-4048-BD96-50F108F22B89
 #+BEGIN_SRC sh
 brew install ditaa
 #+END_SRC
 
 ***** plantuml
+:PROPERTIES:
+:ID:       0EB0DB85-1BCF-46AB-AF56-0653A41ABF82
+:END:
 
+#+NAME: 35B5E4A8-9DB8-4D43-B959-4C3CB117E77E
 #+BEGIN_SRC sh
 brew install plantuml
 #+END_SRC
 
 ***** languagetool
+:PROPERTIES:
+:ID:       860B895C-E8C7-436E-BE3A-23F6B4605211
+:END:
 
+#+NAME: 18A8DAE7-ED24-42EA-B123-7313C85CB632
 #+BEGIN_SRC sh
 brew install languagetool
 #+END_SRC
 ***** aspell
+:PROPERTIES:
+:ID:       EA68D5E2-13DC-4B3D-B01C-DB023A989199
+:END:
+#+NAME: 2A0B2675-CF9D-4C1C-9A68-1AB58777BFED
 #+BEGIN_SRC sh
 brew install aspell -all
 #+END_SRC
 ***** graphviz
+:PROPERTIES:
+:ID:       1CB4FAE9-39E8-4818-90D5-3AE372CD3BB8
+:END:
+#+NAME: E7F21135-BF9B-4645-9EF8-7F1F4A1C240A
 #+BEGIN_SRC sh
 brew install graphviz
 #+END_SRC
 ***** pandoc
+:PROPERTIES:
+:ID:       48D995F7-2EAC-49AC-ABC1-18A18A237901
+:END:
+#+NAME: CA898FBA-220E-4B52-8E1E-8857131AA6D8
 #+BEGIN_SRC sh
 brew install pandoc
 #+END_SRC
 ***** ImageMagic
+:PROPERTIES:
+:ID:       CBBBABD0-B049-4669-B113-4417A04DD613
+:END:
+#+NAME: 11D7F839-3D03-4622-832E-5AE11874BFD6
 #+BEGIN_SRC sh
 brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
 #+END_SRC
 ***** povray
+:PROPERTIES:
+:ID:       196A365A-802C-48F4-B35D-02958CF95E78
+:END:
+#+NAME: F62C5E92-3FCE-4CC4-A24A-4BA3275549A1
 #+BEGIN_SRC sh
 brew install povray --with-openexr
 #+END_SRC
 ***** growlnotify
+:PROPERTIES:
+:ID:       9367E78C-5F6F-44A2-A370-CD0AF9D41F40
+:END:
 
+#+NAME: 9CEA3938-9181-4F29-95F0-6AA764D159CB
 #+BEGIN_SRC sh
 brew cask install growlnotify
 #+END_SRC
@@ -1782,7 +1822,11 @@ brew install figlet
 #+END_SRC
 
 ***** Freemind
+:PROPERTIES:
+:ID:       A867B6FD-CD3A-4D5F-9EAF-26E96D31D760
+:END:
 
+#+NAME: C03CD9F2-0630-4E70-A20D-3D43931CE8FA
 #+BEGIN_SRC sh
 brew cask install freemind
 #+END_SRC
@@ -1791,6 +1835,7 @@ brew cask install freemind
 :header-args: :tangle ./utility.org
 :ID:       FA5E0D88-1455-4DD5-9362-D8268BBFF3BF
 :END:
+#+NAME: 66086FCA-D10E-4FA2-9756-697AE22AECBE
 #+BEGIN_SRC org
 ,* ccrypt
 
@@ -2083,8 +2128,10 @@ opened a ticket. I added to [[https://github.com/lanayotech/vagrant-manager/issu
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./dev-ops.org
+:ID:       3A6DCCFC-D601-4FA1-9013-82BDC97DF8D8
 :END:
 
+#+NAME: 089A38CA-43AD-4BE4-8EF4-C77E57CF25F3
 #+BEGIN_SRC org
 ,* Vagrant
 
@@ -2174,10 +2221,18 @@ For everything beyond the built in.
 brew install ruby
 #+END_SRC
 ***** Racket
+:PROPERTIES:
+:ID:       6D423497-C4D9-41BF-831C-1A6E665908A5
+:END:
+#+NAME: 519EF47C-E443-4445-B762-C8FC781566F0
 #+BEGIN_SRC sh
 brew cask install racket
 #+END_SRC
 ***** forth
+:PROPERTIES:
+:ID:       29FAB329-3F6B-4618-9B9C-1A297F3B994F
+:END:
+#+NAME: 1CE4F12C-241C-4B77-8262-D08472B78B4B
 #+BEGIN_SRC sh
 brew install gforth
 #+END_SRC
@@ -2194,6 +2249,9 @@ brew install git
 #+END_SRC
 
 ***** EMACS
+:PROPERTIES:
+:ID:       11284C48-AF3A-437F-B779-15C46B08B322
+:END:
 #+NAME: CCF91EC0-F689-4279-972C-9F1D32C4C64B
 #+BEGIN_SRC sh
 brew install emacs --with-cocoa --with-gnutls --with-imagemagick
@@ -2201,6 +2259,9 @@ brew linkapps
 #+END_SRC
 
 ***** Sourcetree
+:PROPERTIES:
+:ID:       11602B65-2D6C-4A6D-805C-8ED0B5509B09
+:END:
 
 #+NAME: 7143E58E-A1B9-4A5A-B189-6E88AB0612D7
 #+begin_src sh :tangle productivity-run.sh :comments no
@@ -2208,27 +2269,51 @@ brew cask install sourcetree
 #+end_src
 
 ***** sml
+:PROPERTIES:
+:ID:       223E3DE6-7CA4-4831-9071-A7884C941A48
+:END:
+#+NAME: CC15039B-B03A-4B3B-AFF4-AF483DDFE3A6
 #+BEGIN_SRC sh
 brew install smlnj
 #+END_SRC
 ***** cvs
+:PROPERTIES:
+:ID:       868C1487-47DD-40E9-832D-CBFCA6A74661
+:END:
+#+NAME: 50A94F7F-487B-485E-BEAE-6184D93C2933
 #+BEGIN_SRC sh
 brew install cvs
 #+END_SRC
 ***** bzr
+:PROPERTIES:
+:ID:       000C4D3B-68E0-4356-8F1B-B9AA57F8468A
+:END:
+#+NAME: 0D6175B9-3005-4AB5-AA71-F34C875D2FE1
 #+BEGIN_SRC sh
 brew install bzr
 #+END_SRC
 ***** mercurial
+:PROPERTIES:
+:ID:       4D35743F-DBC4-4A42-9104-8B4E6DB2CD5E
+:END:
+#+NAME: 6C03B646-2683-4BB5-88F7-D8EB337B3596
 #+BEGIN_SRC sh
 brew install hg
 #+END_SRC
 ***** PyCharm
+:PROPERTIES:
+:ID:       18D4526F-B616-497D-A2A6-D39A6C541147
+:END:
 
+#+NAME: 610E12B1-3C58-4326-BE81-18EF1F40D544
 #+BEGIN_SRC
 brew cask install pycharm
 #+END_SRC
 ***** WebStorm
+:PROPERTIES:
+:ID:       14FBE5CB-8068-4795-A549-FFD16649E46D
+:END:
+#+NAME: 479B7BC3-9F35-4422-82C9-DE3722E4A4B6
 #+BEGIN_SRC sh
 brew cask install webstorm
 #+END_SRC
@@ -2237,6 +2322,7 @@ brew cask install webstorm
 :header-args: :tangle ./development.org
 :ID:       FA5E0D88-1455-4DD5-9362-D8268BBFF3BF
 :END:
+#+NAME: 64C2907C-7D2E-4EEA-A9EC-9AE77C823D1C
 #+BEGIN_SRC org
 ,* DeltaWalker
 
@@ -2325,6 +2411,7 @@ brew cask install webstorm
 *** Manual
 :PROPERTIES:
 :header-args: :tangle ./manual.org
+:ID:       CFDA666A-254C-4DE4-825E-872A878A47F6
 :END:
 **** Textual IRC Client
 :PROPERTIES:
@@ -2412,7 +2499,13 @@ Don't let it access Contacts.
 
 When it checks for updates, tell it to check daily.
 **** TODO R
+:PROPERTIES:
+:ID:       C5ECE409-62A5-4DAB-899B-A3AD74C73154
+:END:
 ***** TODO Core
+:PROPERTIES:
+:ID:       10C3F27E-F7C1-4DD9-8C3F-A9C8C9EA3813
+:END:
 
 I haven't used R in a long time but I want to get it set up right again.
 Link my configs from ~/ into where they live now.
@@ -2540,6 +2633,9 @@ Set Dictation & Text to Speech to: Callie
     :END:
 
 *** Git
+:PROPERTIES:
+:ID:       A700593A-3D0C-49F0-AE05-2FAA5DFC95EF
+:END:
 **** Generic
 :PROPERTIES:
 :header-args: :tangle ./git-generic.sh :tangle-mode (identity #o755)
@@ -2622,6 +2718,7 @@ read -p "Did it work? If not, fix it."
 **** Personal
 :PROPERTIES:
 :header-args: :tangle ./git-personal.sh :tangle-mode (identity #o755)
+:ID:       83EF8B0F-8415-4870-98A7-B9B9F8A8481C
 :END:
 
 Set up my preferences.
@@ -2752,6 +2849,7 @@ brew install gnuplot --with-latex --with-pdflib-lite --with-test --with-x11
 :ID:       FA5E0D88-1455-4DD5-9362-D8268BBFF3BF
 :END:
 
+#+NAME: ED1E3F61-2842-4EA3-A5BF-22B76B0DEBEA
 #+BEGIN_SRC org
 - I value seeing these commands succeed so pasting them is OK
 - MacTeX installation is typically so painful that I want this part to be easy
@@ -2857,3 +2955,96 @@ sudo mktexlsr
   - [ ] pdf
   - [ ] txt
 #+END_SRC
+* Full System Backups
+  :PROPERTIES:
+  :ID:       01B5C019-E0D3-45A1-9C36-A6B493C03DE8
+  :END:
+** On the Metal
+Doing provisioning using Kitchenplan and Brew and BrewCask still takes at least
+6 hours. You still need to perform manual steps. For me, it is unavoidable. This
+is painful. This is a waste of 6 hours. It is the waste of your evening. It is a
+waste of your weekend.
+
+My new plan is to get the box provisioned and image it there. I want to minimize
+provisioning ever again. The opportunity here is that you learn new things each
+time. That is cool. The problem is that your goal is not to learn new things
+every time. It is a decision, and it needs to be thoughtfully made. This
+evidence is valuable. It has helped me understand my decision to work in
+virtuals here forward.
+
+To image a full system:
+
+- Note the base configuration, =01=
+- Get system and application updates
+- Trim contents of included-folders
+  - Most of my stuff will never be in them anyway
+  - More like DropBox and Git
+    - Keep Git checkouts. Simpler. Update will get new stuff.
+  - =/Users/gcr/Documents=
+  - Empty the trash
+  - Vagrant box definitions will exist under source control, but the individual
+    boxes will only ever live in the storage locations configured for the
+    provider
+  - Double-check that all of your Git working-copies are pushed home.
+- Disk utility
+  - Verify disk permissions
+    - Logs a lot of info
+    - Unsure if any of it is useful
+  - Repair disk permissions if necessary
+    - At the very bottom will log "Permissions repair complete"
+  - Verify disk
+  - Repair disk if necessary
+- For the clone exclude
+  - =/Users/gcr/Downloads=
+  - =/Users/gcr/Dropbox=
+  - =/Users/gcr/tmp=
+  - =/Users/gcr/.vagrant.d/boxes=
+    - [[http://docs-v1.vagrantup.com/v1/docs/boxes.html][Reference]]
+    - How this works is that when CCC cloned that disk image back to the machine,
+      this directory was present, and it was empty. I was curious about whether
+      the directory would be present or not and happy to see it was.
+    - After upping a box successfully, I verified that the base box was
+      installed here as expected
+  - =/VirtualBox VMs=
+    - VirtualBox stores its VMS here by default
+    - When you start making changes to a Vagrant box, they are saved [[https://stackoverflow.com/questions/8225820/where-is-vagrant-saving-changes-to-the-vm][here]]
+    - For example I booted up the Vagrant box from "Getting started", created a
+      hello world file, logged out and halted it, and this directory was
+      =tmp_default_1426807980079_94539= was created in there and it contained all
+      of the .vbox stuff for that machine.
+      - Verified that =vagrant destroy= deletes that directory
+  - =/Users/gcr/Documents/Virtual Machines=
+    - http://kb.vmware.com/selfservice/search.do?cmd=displayKC&docType=kc&docTypeID=DT_KB_1_1&externalId=2056798
+    - This seems to be the directory where VMWare creates machines when you do
+      so through the GUI
+  - When Vagrant VMWare Fusion creates machines it creates them inside of a
+    =.vagrant= directory where the Vagrantfile lives.
+      - The path is =<directory where the Vagrant file lives>/.vagrant/machines/default/vmware_fusion=
+      - Found this info [[https://blog.safaribooksonline.com/2014/01/16/building-vagrant-vms-with-the-vmware-fusion-provider/][here]] and verified it on my machine
+      - Verified that =vagrant destroy= deletes that directory
+- Make sure that this configuration, including Kitchenplan, is tagged
+- Note that tag here:
+  - Machine name
+  - Built from image
+  - Provisioning Tag
+  - Timestamp
+  - c02M-01-v1.7-2015-03-17T18:58:40-0500
+- On successful creation of the new image
+  - Erase the machine and clone the new image to it
+    - Address any image restoration issues now
+  - Backup this new image to Stargate
+  - Copy the Dropbox folder
+
+#  LocalWords:  doesn AppStore kitchenplan railwaycat's paralellize dev GitHub
+#  LocalWords:  BitBucket repo smartphone OSX EF FS CCC Journaled MOSEJ XCode
+#  LocalWords:  journaled Xcode CLT IDE KitchenPlan BrewCask PyCharm JetBrains
+#  LocalWords:  Keymap CMD Solarized DJSM WebStorm DeltaWalker DiffMerge vc el
+#  LocalWords:  Magit passphrase Bitbucket Github GitPython Stathon Config VLC
+#  LocalWords:  LaTeX emacs login XQuartz Karabiner Growlnotify CCrypt Langtool
+#  LocalWords:  Ditaa startup reprovisionined ImageMagic eshell config Dropbox
+#  LocalWords:  reproducibility Filezilla SourceTree Pandoc MacTeX Freemind MiB
+#  LocalWords:  mindmaps MacVIM Enscript Virtualbox VMWare VirtualBox Libre IRC
+#  LocalWords:  MOTD nox Addons grettke Rettke Recomment MySongBook GotoMeeting
+#  LocalWords:  WebMeeting Cepestral Cepstral MacTex GnuPlot GiB gnuplot KOMA
+#  LocalWords:  PixelMator Keychain keychain rarr VoiceOver virtuals DropBox bc
+#  LocalWords:  gc VMs tmp vbox Timestamp Stargate README DevOps Cloner
