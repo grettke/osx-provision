@@ -48,6 +48,10 @@ brew install bzr
 brew install hg
 # 6C03B646-2683-4BB5-88F7-D8EB337B3596 ends here
 
+# [[file:provisioning.org::*IntelliJ%20Idea][0E3B9A2C-7E91-4D21-A9F0-A94C483B7992]]
+brew cask install intellij-idea
+# 0E3B9A2C-7E91-4D21-A9F0-A94C483B7992 ends here
+
 # [[file:provisioning.org::*PyCharm][610E12B1-3C58-4326-BE81-18EF1F40D544]]
 brew cask install pycharm
 # 610E12B1-3C58-4326-BE81-18EF1F40D544 ends here

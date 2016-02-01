@@ -2269,6 +2269,15 @@ brew install bzr
 #+BEGIN_SRC sh
 brew install hg
 #+END_SRC
+***** IntelliJ Idea
+:PROPERTIES:
+:ID:       313F1B11-75E2-438A-9D48-16C233F1C2DB
+:END:
+
+#+NAME: 0E3B9A2C-7E91-4D21-A9F0-A94C483B7992
+#+BEGIN_SRC sh
+brew cask install intellij-idea
+#+END_SRC
 ***** PyCharm
 :PROPERTIES:
 :ID:       18D4526F-B616-497D-A2A6-D39A6C541147
@@ -2342,6 +2351,10 @@ brew cask install webstorm
 - Manually
   - Go through the licensing process
   - Old app just let you type it into the GUI, not seeing it here now
+,* IntelliJ Idea
+
+- Pretty sure that I've got a config somewhere for this
+
 ,* PyCharm
 - "use your JetBrains Account credentials in PyCharm to use this license"
 - Import settings: I do not have any

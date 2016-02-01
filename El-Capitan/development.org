@@ -48,6 +48,10 @@
 - Manually
   - Go through the licensing process
   - Old app just let you type it into the GUI, not seeing it here now
+* IntelliJ Idea
+
+- Pretty sure that I've got a config somewhere for this
+
 * PyCharm
 - "use your JetBrains Account credentials in PyCharm to use this license"
 - Import settings: I do not have any
