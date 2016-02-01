@@ -2020,7 +2020,47 @@ else
 fi
 #+END_SRC
 
-**** Configure
+***** Vagrant
+    :PROPERTIES:
+    :ID:       7B45D9BF-6FD5-4624-9F06-671D33D76A78
+    :END:
+
+#+NAME: 165A046E-FFC9-4431-8150-CF9F4890EA24
+#+begin_src sh
+brew cask install vagrant
+#+end_src
+
+****** Vagrant Manager
+     :PROPERTIES:
+     :ID:       2384B1E5-6EBB-4C43-80CE-FDD2476E40D3
+     :END:
+
+#+NAME: 4E8A34AA-C8AB-43E8-B189-B4116F9A5706
+#+begin_src sh :tangle productivity-run.sh :comments no
+brew cask install vagrant-manager
+#+end_src
+
+Tonight I had a surprise. Vagrant reported a failure. It was trying to copy a
+machine into a non-existent directory ~/.vagrant. That is where I keep the
+VMWare Vagrant license. That was surprising. Support has see this before when
+Vagrant Manager is running. I closed it and tried again and it worked fine. The
+value of Vagrant Manager is that it makes visible machines that you have
+running. Support explained that Vagrant Manager might be doing it. It was. He
+opened a ticket. I added to [[https://github.com/lanayotech/vagrant-manager/issues/78][it]].
+
+#+NAME: 81E23844-38DF-49C8-888B-4FE4084061B7
+#+begin_src org :tangle productivity-read.org
+- Terminal Preference: Terminal
+- Status Bar Icon Theme: Clean
+- Launch at login: Yes
+- Following settings: No
+- Refresh every: 5 seconds
+- Following settings: No
+- Allowed Updates: stable
+- Send anonymous profile data: Yes
+#+end_src
+
+****** Configure
 :PROPERTIES:
 :header-args: :tangle ./dev-ops.org
 :ID:       AAF4A8BD-5344-4F36-A3F2-2DA6227BD5F4
@@ -2039,6 +2079,57 @@ fi
 ,*Only install on hosts*
 
 - On a host: License it
+#+END_SRC
+**** Configure
+:PROPERTIES:
+:header-args: :tangle ./dev-ops.org
+:END:
+
+#+BEGIN_SRC org
+,* Vagrant
+
+Install the VMWare provider for Vagrant and then license it.
+
+Remember to [[http://docs.vagrantup.com/v2/other/debugging.html][log]] appropriately.
+
+It goes something like this:
+
+,#+begin_src sh
+vagrant plugin install vagrant-vmware-fusion
+mkdir ~/.vagrant
+cd ~/.vagrant
+# copy that license file in there
+vagrant plugin license vagrant-vmware-fusion license.lic
+cd
+rm -rf ~/.vagrant
+,#+end_src
+
+Verify the plugin is licensed and happy:
+
+,#+NAME: CCCFA8CD-1754-4BD6-A355-7907E885B6C4
+,#+BEGIN_SRC sh
+vagrant plugin list
+,#+END_SRC
+
+Test out VirtualBox box:
+
+,#+begin_src sh
+cd ~/tmp
+mkdir vgtest
+cd vgtest
+vagrant init hashicorp/precise64
+vagrant up --provider virtualbox
+,#+end_src
+
+The first time I tried this, it failed. I restarted OSX. Then it worked.
+
+Test out VMWare. The default provider is vmware, so don't have to specify
+provider.
+
+,#+begin_src sh
+cd ~/tmp/vgtest
+vagrant up
+,#+end_src
 #+END_SRC
 *** Development
 :PROPERTIES:
@@ -2352,6 +2443,37 @@ brew cask install rstudio
 This doesn't need any config I think.
 Run it.
 #+end_src
+
+**** SAS University Edition
+    :PROPERTIES:
+    :ID:       3BE67982-9DDC-4FAC-BC9D-FB4F87DE58E3
+    :END:
+
+- 4096 MB RAM
+
+**** OSX Enhanced Voice Dictation
+    :PROPERTIES:
+    :ID:       C8E3A6E9-16E6-4ABD-A667-0E952D38D3E4
+    :END:
+
+Somehow I activated the installer for "OSX Enhanced Voice Dictation". I said "Yes".
+Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the steps:
+
+- Apple
+- System Preferences
+- Dictation & Speech
+- Dictation
+- Enable
+- Yes: Use Enhanced Dictation
+
+**** Visible Body
+    :PROPERTIES:
+    :ID:       07ADFC51-E81C-46C1-8D1F-40FB11A93BEC
+    :END:
+
+- Human Anatomy Atlas
+- Muscle Premium
+- Skeleton Premium
 
 *** Template
 :PROPERTIES:
