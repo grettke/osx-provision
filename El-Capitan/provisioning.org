@@ -1777,6 +1777,11 @@ brew install archey
 brew install figlet
 #+END_SRC
 
+***** Freemind
+
+#+BEGIN_SRC sh
+brew cask install freemind
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./utility.org
