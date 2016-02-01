@@ -2400,6 +2400,10 @@ brew cask install webstorm
 :ID:       B817D3AE-D105-4957-B229-8DF479E9E5F4
 :END:
 
+#+NAME: BBAFAEFB-E9B6-443C-8DAC-424483885BF2
+#+BEGIN_SRC org
+,* Textual
+
 - AppStore.
 - Open-at-Login
 
@@ -2446,6 +2450,8 @@ Server preferences:
   - #emacs
   - #scheme
   - #bash
+
+#+END_SRC
 **** Growl
 :PROPERTIES:
 :ID:       48048FB4-E77B-4226-82EF-BA8AA30E2D37
@@ -2466,7 +2472,10 @@ Server preferences:
     :ID:       568C1BC2-1569-4E3A-8246-594E0C889244
     :END:
 
-This is in BrewCask, but the download is waste of time. I have it locally.
+#+NAME: C38471A4-27EF-4543-9076-299EC7FE2086
+#+BEGIN_SRC org
+This is in BrewCask, but the download is waste of time. I have it locally. Use
+the version I bought; not the latest which is in brew.
 
 I keep going back and forth on this one. Is it worth saving 15 minutes having to
 install it myself?
@@ -2480,6 +2489,7 @@ after sending an error report.
 Don't let it access Contacts.
 
 When it checks for updates, tell it to check daily.
+#+END_SRC
 **** TODO R
 :PROPERTIES:
 :ID:       C5ECE409-62A5-4DAB-899B-A3AD74C73154
@@ -2489,6 +2499,9 @@ When it checks for updates, tell it to check daily.
 :ID:       10C3F27E-F7C1-4DD9-8C3F-A9C8C9EA3813
 :END:
 
+
+#+NAME: 203A9B18-3AC1-4A06-A5D3-5B35F56FBB6C
+#+BEGIN_SRC org
 I haven't used R in a long time but I want to get it set up right again.
 Link my configs from ~/ into where they live now.
 This installer asks for my password, which halts the install. How will I deal
@@ -2500,14 +2513,15 @@ Install the software manually.
 
 Migrate and link the configuration files
 
-#+NAME: 0D50EA49-2A0B-40C9-865D-964FC75B7AC3
-#+begin_src sh
+,#+NAME: 0D50EA49-2A0B-40C9-865D-964FC75B7AC3
+,#+begin_src sh
 ln -s ~/git/bitbucket/alec/.Renviron ~/.Renviron
 ln -s ~/git/bitbucket/alec/.Rprofile ~/.Rprofile
 ln -s ~/git/bitbucket/alec/.Rinstall ~/.Rinstall
 rm -rf ~/.Rpackages
 mkdir ~/.Rpackages
-#+end_src
+,#+end_src
+#+END_SRC
 ***** TODO R Studio
      :PROPERTIES:
      :ID:       BEA57758-A9E8-415C-9D89-A0C5722A6383
@@ -2529,12 +2543,21 @@ Run it.
     :ID:       3BE67982-9DDC-4FAC-BC9D-FB4F87DE58E3
     :END:
 
+#+NAME: E963365D-C3A8-46C1-89A9-7EA158482C6D
+#+BEGIN_SRC org
+,* SAS University Edition
+
 - 4096 MB RAM
+#+END_SRC
 
 **** OSX Enhanced Voice Dictation
     :PROPERTIES:
     :ID:       C8E3A6E9-16E6-4ABD-A667-0E952D38D3E4
     :END:
+
+#+NAME: D7DCD73D-1ABA-4C47-B6C8-4E47C86EB13B
+#+BEGIN_SRC org
+,* OSX Enhanced Voice Dictation
 
 Somehow I activated the installer for "OSX Enhanced Voice Dictation". I said "Yes".
 Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the steps:
@@ -2546,40 +2569,67 @@ Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the 
 - Enable
 - Yes: Use Enhanced Dictation
 
+#+END_SRC
 **** Visible Body
     :PROPERTIES:
     :ID:       07ADFC51-E81C-46C1-8D1F-40FB11A93BEC
     :END:
 
+#+NAME: D569323D-3922-4D3A-814D-B6413DBBE3F2
+#+BEGIN_SRC org
+,* Visible Body
+
 - Human Anatomy Atlas
 - Muscle Premium
 - Skeleton Premium
+
+#+END_SRC
 
 **** Entropy
     :PROPERTIES:
     :ID:       9EDE18B7-DDA1-4FC1-8866-256596BA54D0
     :END:
 
-    This is a [[http://www.eigenlogik.com/entropy/][download]] and manual install.
+#+NAME: CBFB0524-49A3-475E-BE72-F72F878355D7
+#+BEGIN_SRC org
+,* Entropy
+
+- This is a [[http://www.eigenlogik.com/entropy/][download]] and manual install.
+#+END_SRC
 
 **** Guitar Pro
     :PROPERTIES:
     :ID:       36F3F9F6-31D1-4517-94F3-B7A787F2C166
     :END:
 
-[[http://www.guitar-pro.com/en/index.php][Here]]. Sign into MySongBook.
+#+NAME: 8D86833F-9C6A-430B-A238-D1537470EC46
+#+BEGIN_SRC org
+,* Guitar Pro
+
+- [[http://www.guitar-pro.com/en/index.php][Here]]. Sign into MySongBook.
+
+#+END_SRC
 
 **** GotoMeeting & Fuse
     :PROPERTIES:
     :ID:       A3271ECD-A07A-45E2-A0DE-A82EE8FA6833
     :END:
 
-WebMeeting software.
+#+NAME: 7188E973-1AAA-4111-B23F-7437E49C9CB5
+#+BEGIN_SRC org
+,* GotoMeeting & Fuse
+
+- WebMeeting software.
+#+END_SRC
 
 **** Cepestral Callie & David
     :PROPERTIES:
     :ID:       FB2138CF-B62C-4BCB-A892-AB855A61535A
     :END:
+
+#+NAME: 350809D4-E824-4F60-B121-CD6E34B62075
+#+BEGIN_SRC org
+,* Cepestral Callie & David
 
 [[http://www.cepstral.com/][Here]].
 
@@ -2589,6 +2639,7 @@ System Preferences.
 License them. Test them.
 
 Set Dictation & Text to Speech to: Callie
+#+END_SRC
 
 **** App Store Installs
    :PROPERTIES:
@@ -2600,19 +2651,36 @@ Set Dictation & Text to Speech to: Callie
     :ID:       BF68C6A0-9F79-4372-8503-CD8B0BE3331A
     :END:
 
+#+NAME: D86C6A4D-08CB-4674-81CA-4777E3AAAF8B
+#+BEGIN_SRC org
+,* Microsoft Remote Desktop
+
 - Don't open the session full-screen.
+#+END_SRC
 
 ***** Text2Speech PRO
     :PROPERTIES:
     :ID:       40206D84-014A-43FC-8299-D4C8594FE691
     :END:
 
+#+NAME: 725DFF13-3E51-4B7E-90B3-19F07375B26E
+#+BEGIN_SRC org
+,* Text2Speech PRO
+
 - Set default voice to Callie
+#+END_SRC
 
 ***** PixelMator
     :PROPERTIES:
     :ID:       76178B97-5BEE-4341-86C7-757138319E18
     :END:
+
+#+NAME: 05AD3C3A-761E-4CD5-8D45-FCF487A0DAEE
+#+BEGIN_SRC org
+,* PixelMator
+
+- Nothing special
+#+END_SRC
 
 *** Git
 :PROPERTIES:
