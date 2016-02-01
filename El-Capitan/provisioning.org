@@ -1600,6 +1600,7 @@ brew cask install xquartz
 
 ,* Little Snitch
 
+- Run the installer
 - Start it
 - Register it
 - Configure per below
