@@ -2112,6 +2112,10 @@ brew cask install sourcetree
 #+BEGIN_SRC sh
 brew install smlnj
 #+END_SRC
+***** cvs
+#+BEGIN_SRC sh
+brew install cvs
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./development.org
