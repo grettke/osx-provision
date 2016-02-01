@@ -1829,18 +1829,6 @@ brew install figlet
 #+BEGIN_SRC sh
 brew cask install freemind
 #+END_SRC
-**** Configure
-:PROPERTIES:
-:header-args: :tangle ./utility.org
-:ID:       FA5E0D88-1455-4DD5-9362-D8268BBFF3BF
-:END:
-#+NAME: 66086FCA-D10E-4FA2-9756-697AE22AECBE
-#+BEGIN_SRC org
-,* ccrypt
-
-- Run it in the terminal
-- Verify that you can create and re-open files with Emacs
-#+END_SRC
 *** Internet
 :PROPERTIES:
 :ID:       1EBB115D-FF82-4A21-8EFC-8D8634C0CDEB
