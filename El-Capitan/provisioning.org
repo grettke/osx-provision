@@ -2082,6 +2082,10 @@ brew install ruby
 #+BEGIN_SRC sh
 brew cask install racket
 #+END_SRC
+***** forth
+#+BEGIN_SRC sh
+brew install gforth
+#+END_SRC
 ***** git
 :PROPERTIES:
 :ID:       1F0C8A4B-097E-4090-93A7-8A2958331E4F
