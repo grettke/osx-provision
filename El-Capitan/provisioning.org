@@ -2960,6 +2960,9 @@ sudo mktexlsr
   :ID:       01B5C019-E0D3-45A1-9C36-A6B493C03DE8
   :END:
 ** On the Host
+:PROPERTIES:
+:ID:       5DA1CA11-12E2-418E-9CAC-8667594DECF5
+:END:
 Doing provisioning using Kitchenplan and Brew and BrewCask still takes at least
 6 hours. You still need to perform manual steps. For me, it is unavoidable. This
 is painful. This is a waste of 6 hours. It is the waste of your evening. It is a
@@ -3049,5 +3052,8 @@ To image a full system:
 #  LocalWords:  PixelMator Keychain keychain rarr VoiceOver virtuals DropBox bc
 #  LocalWords:  gc VMs tmp vbox Timestamp Stargate README DevOps Cloner
 ** On the Guest
+:PROPERTIES:
+:ID:       4D6CFC4A-A907-466F-80A4-E9C4C66C59D7
+:END:
 
 - Make a copy of the entire folder

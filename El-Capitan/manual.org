@@ -1,0 +1,26 @@
+# [[file:provisioning.org::*Core][0D50EA49-2A0B-40C9-865D-964FC75B7AC3]]
+ln -s ~/git/bitbucket/alec/.Renviron ~/.Renviron
+ln -s ~/git/bitbucket/alec/.Rprofile ~/.Rprofile
+ln -s ~/git/bitbucket/alec/.Rinstall ~/.Rinstall
+rm -rf ~/.Rpackages
+mkdir ~/.Rpackages
+# 0D50EA49-2A0B-40C9-865D-964FC75B7AC3 ends here
+
+# [[file:provisioning.org::*R%20Studio][0C6AF024-314E-441F-9211-88AB14D02FBA]]
+brew cask install rstudio
+# 0C6AF024-314E-441F-9211-88AB14D02FBA ends here
+
+# [[file:provisioning.org::*Growl][292B3960-AD89-413E-8E67-2BDBBAC7ACBE]]
+* Growl
+
+- Install via the app store
+- Start it
+- enable run on login
+- top left corner
+- smoke
+# 292B3960-AD89-413E-8E67-2BDBBAC7ACBE ends here
+
+# [[file:provisioning.org::*R%20Studio][A64B8C68-9FA9-44FC-BF68-7B76716E4EC1]]
+This doesn't need any config I think.
+Run it.
+# A64B8C68-9FA9-44FC-BF68-7B76716E4EC1 ends here

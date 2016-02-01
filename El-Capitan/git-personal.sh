@@ -1,4 +1,4 @@
-# [[file:../provisioning.org::*Git%20Setup][C85D0036-9DDA-4786-9621-470FB418BBD6]]
+# [[file:provisioning.org::*Personal][C85D0036-9DDA-4786-9621-470FB418BBD6]]
 git config --global user.name "Grant Rettke"
 git config --global user.email gcr@wisdomandwonder.com
 git config --global color.ui true
@@ -15,7 +15,7 @@ git config --global mergetool.deltawalker.cmd '/Applications/DeltaWalker.app/Con
 git config --global mergetool.keepBackup false
 # C85D0036-9DDA-4786-9621-470FB418BBD6 ends here
 
-# [[file:../provisioning.org::*Git%20Setup][5BD1669B-8E2A-46B5-AB80-88DA5764DEEB]]
+# [[file:provisioning.org::*Personal][5BD1669B-8E2A-46B5-AB80-88DA5764DEEB]]
 rm -rf ~/git/bitbucket
 rm -rf ~/git/github
 rm -rf ~/src/help
@@ -35,33 +35,17 @@ git clone github-`whoami`:grettke/osx-provision.git
 git clone github-`whoami`:grettke/bash.git
 # 5BD1669B-8E2A-46B5-AB80-88DA5764DEEB ends here
 
-# [[file:../provisioning.org::*Git%20Setup][F407E69A-6C92-4254-A0E3-A442166AD57B]]
+# [[file:provisioning.org::*Personal][F407E69A-6C92-4254-A0E3-A442166AD57B]]
 cd ~/git/github-anonymous
 git clone https://github.com/bkuhlmann/osx
 git clone https://github.com/monfresh/laptop
+rm -rf ~/src
+mkdir ~/src
 cd ~/src
 git clone github-`whoami`:grettke/help.git
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::*Link%20Files%20and%20Folders][567603FF-8A5F-4E06-939C-8D21D60AD4ED]]
 rm ~/.emacs.el
 ln -s ~/src/help/.emacs.el ~/.emacs.el
 rm -rf ~/.emacs.d
 mkdir ~/.emacs.d
 ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
-# 567603FF-8A5F-4E06-939C-8D21D60AD4ED ends here
 # F407E69A-6C92-4254-A0E3-A442166AD57B ends here
-
-# [[file:../provisioning.org::*TeX][4053A83F-EA3D-4431-AA4A-62336DF2F95E]]
-set -x
-ls /usr/local/texlive/2015
-sudo cp /usr/local/texlive/2015/texmf.cnf /usr/local/texlive/2015/texmf.cnf-`date '+%Y_%m_%d__%H_%M_%S'`
-ls /usr/local/texlive/2015
-sudo tlmgr conf texmf TEXMFHOME ~/git/bitbucket/texmf/
-# 4053A83F-EA3D-4431-AA4A-62336DF2F95E ends here
-
-# [[file:../provisioning.org::*TeX][34890901-8E9D-46E5-9738-2718CD26908E]]
-kpsewhich KomaDefault.lco
-# 34890901-8E9D-46E5-9738-2718CD26908E ends here
-
-# [[file:../provisioning.org::*TeX][008DCE01-EE0D-4A96-93A5-7B6E91D7C951]]
-sudo mktexlsr
-# 008DCE01-EE0D-4A96-93A5-7B6E91D7C951 ends here

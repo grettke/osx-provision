@@ -1,6 +1,0 @@
-export VISUAL=vim
-export EDITOR='$VISUAL'
-export PS1='\u@\h:\w> '
-export HOMEBREW_NO_EMOJI=1
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home"
-export PATH=/usr/local/bin:$JAVA_HOME/bin:$PATH

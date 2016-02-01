@@ -1,0 +1,28 @@
+# [[file:provisioning.org::*Configure][ED1E3F61-2842-4EA3-A5BF-22B76B0DEBEA]]
+- I value seeing these commands succeed so pasting them is OK
+- MacTeX installation is typically so painful that I want this part to be easy
+
+Set up my TeX stuff for KOMA-script. Backup the default configuration first.
+
+#+NAME: 4053A83F-EA3D-4431-AA4A-62336DF2F95E
+#+begin_src sh
+ls /usr/local/texlive/2015
+sudo cp /usr/local/texlive/2015/texmf.cnf /usr/local/texlive/2015/texmf.cnf-`date '+%Y_%m_%d__%H_%M_%S'`
+ls /usr/local/texlive/2015
+sudo tlmgr conf texmf TEXMFHOME ~/git/bitbucket/texmf/
+#+end_src
+
+Check that the path is really updated.
+
+#+NAME: 34890901-8E9D-46E5-9738-2718CD26908E
+#+begin_src sh
+kpsewhich KomaDefault.lco
+#+end_src
+
+The documents say to maybe do the following. I did it.
+
+#+NAME: 008DCE01-EE0D-4A96-93A5-7B6E91D7C951
+#+begin_src sh
+sudo mktexlsr
+#+end_src
+# ED1E3F61-2842-4EA3-A5BF-22B76B0DEBEA ends here

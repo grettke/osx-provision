@@ -1,0 +1,60 @@
+# [[file:provisioning.org::*Configure][FBF76363-813C-4A86-9B04-220C6C584F39]]
+* Carbon Copy Cloner
+
+*Only install on hosts*
+
+- On a host: License it
+
+* VMWare
+
+*Only install on hosts*
+
+- On a host: License it
+# FBF76363-813C-4A86-9B04-220C6C584F39 ends here
+
+# [[file:provisioning.org::*Configure][089A38CA-43AD-4BE4-8EF4-C77E57CF25F3]]
+* Vagrant
+
+Install the VMWare provider for Vagrant and then license it.
+
+Remember to [[http://docs.vagrantup.com/v2/other/debugging.html][log]] appropriately.
+
+It goes something like this:
+
+#+begin_src sh
+vagrant plugin install vagrant-vmware-fusion
+mkdir ~/.vagrant
+cd ~/.vagrant
+# copy that license file in there
+vagrant plugin license vagrant-vmware-fusion license.lic
+cd
+rm -rf ~/.vagrant
+#+end_src
+
+Verify the plugin is licensed and happy:
+
+#+NAME: CCCFA8CD-1754-4BD6-A355-7907E885B6C4
+#+BEGIN_SRC sh
+vagrant plugin list
+#+END_SRC
+
+Test out VirtualBox box:
+
+#+begin_src sh
+cd ~/tmp
+mkdir vgtest
+cd vgtest
+vagrant init hashicorp/precise64
+vagrant up --provider virtualbox
+#+end_src
+
+The first time I tried this, it failed. I restarted OSX. Then it worked.
+
+Test out VMWare. The default provider is vmware, so don't have to specify
+provider.
+
+#+begin_src sh
+cd ~/tmp/vgtest
+vagrant up
+#+end_src
+# 089A38CA-43AD-4BE4-8EF4-C77E57CF25F3 ends here

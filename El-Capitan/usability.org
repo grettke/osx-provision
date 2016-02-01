@@ -1,0 +1,82 @@
+# [[file:provisioning.org::*Configure][3A1E7B61-A44D-4C11-9338-979D7BB7B05B]]
+* Karabiner
+
+- Run it. Approve it. Configure it with the following. Look for the
+  heading with the name below following "Modify".
+- Check:
+  - Return to Option_L
+    (+ When you type Return only, send Return)
+
+* Spectacle
+
+- Start it
+- Enable integration
+- Start at boot
+
+* Little Snitch
+
+- Start it
+- Register it
+- Configure per below
+- Enable integration
+- Start at boot
+
+Granting:
+
+- *Always grant minimum required*
+- For known good TLD's, grant it forever
+  - Lots of connections to *.apple.com
+  - For apps that want to call homen do forever
+
+- Gen
+  - Show inactive warning
+  - Silent mode: no
+  - Show status in menu bar.
+- Alert:
+  - Detail level: Show full details
+  - No: Confirm automatically
+  - NO: Confirm with return and escape.
+    - Can use control-return and command-return intead
+- Monitor:
+  - Keyboard shortcut: Off
+  - Show network activity in menu bar.
+    - Show data rates numerically. Monochrome.
+  - Show auto when mouse enters. Hide in 2s.
+- APS
+  - Yes: Enable automatic profile switching
+    - When joining: Ask
+  - Yes: Save geolocation of networks.
+- Security
+  - Allow rules and profile edit.
+  - Allow profile switch.
+  - Allow preference editing
+  - Respect privacy.
+- Advanced
+  - Approve rules automatically.
+- Update
+  - Automatically check for updates daily
+
+* Bartender
+
+- License it
+- GENERAL
+  - Launch Bartender at login: yes.
+  - At bartender launch: show bartender bar: NO.
+  - Bartender bar: autohides, YES.
+- Appearance
+  - Menu bar icon: "..."
+  - Show when bartender bar is open: YES.
+
+- Never hide
+  - Volume
+  - Clock
+  - Little Snitch
+  - Bluetooth
+  - Wifi
+- Hide everything else
+* flux
+
+*Only install on hosts*
+
+- Enable at startup
+# 3A1E7B61-A44D-4C11-9338-979D7BB7B05B ends here

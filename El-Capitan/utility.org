@@ -1,0 +1,6 @@
+# [[file:provisioning.org::*Configure][66086FCA-D10E-4FA2-9756-697AE22AECBE]]
+* ccrypt
+
+- Run it in the terminal
+- Verify that you can create and re-open files with Emacs
+# 66086FCA-D10E-4FA2-9756-697AE22AECBE ends here

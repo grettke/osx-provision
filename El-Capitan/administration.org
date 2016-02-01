@@ -1,0 +1,11 @@
+# [[file:provisioning.org::*Terminal][D880F24A-DE8D-4513-A354-45C9B57E0631]]
+* Terminal
+
+- Profiles
+  - Import the Solarized dark theme
+  - Set it to the default theme
+  - Set the font to DJSM 17
+- Profiles \rarr Advanced
+  - [ ] Set locale environment variables on startup
+    - Set them in your =bashrc=, not here
+# D880F24A-DE8D-4513-A354-45C9B57E0631 ends here
