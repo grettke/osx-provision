@@ -1,3 +1,9 @@
+# [[file:provisioning.org::*Debtinator][C621D8B5-B34E-48D7-BF7A-C8E316BA10FB]]
+* Debtinator
+
+- Nothing exactly right now
+# C621D8B5-B34E-48D7-BF7A-C8E316BA10FB ends here
+
 # [[file:provisioning.org::*Textual%20IRC%20Client][BBAFAEFB-E9B6-443C-8DAC-424483885BF2]]
 * Textual
 

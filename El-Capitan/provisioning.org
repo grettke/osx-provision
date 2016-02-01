@@ -2433,6 +2433,17 @@ mkdir ~/.Rpackages
 :header-args: :tangle ./manual.org
 :ID:       CFDA666A-254C-4DE4-825E-872A878A47F6
 :END:
+**** Debtinator
+:PROPERTIES:
+:ID:       1E321453-054F-4040-A2C4-77D4895AB34B
+:END:
+
+#+NAME: C621D8B5-B34E-48D7-BF7A-C8E316BA10FB
+#+BEGIN_SRC org
+,* Debtinator
+
+- Nothing exactly right now
+#+END_SRC
 **** Textual IRC Client
 :PROPERTIES:
 :ID:       B817D3AE-D105-4957-B229-8DF479E9E5F4
