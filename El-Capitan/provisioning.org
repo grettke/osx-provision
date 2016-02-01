@@ -2073,43 +2073,13 @@ fi
 brew cask install vagrant
 #+end_src
 
-****** Vagrant Manager
-     :PROPERTIES:
-     :ID:       2384B1E5-6EBB-4C43-80CE-FDD2476E40D3
-     :END:
-
-#+NAME: 4E8A34AA-C8AB-43E8-B189-B4116F9A5706
-#+begin_src sh :tangle productivity-run.sh :comments no
-brew cask install vagrant-manager
-#+end_src
-
-Tonight I had a surprise. Vagrant reported a failure. It was trying to copy a
-machine into a non-existent directory ~/.vagrant. That is where I keep the
-VMWare Vagrant license. That was surprising. Support has see this before when
-Vagrant Manager is running. I closed it and tried again and it worked fine. The
-value of Vagrant Manager is that it makes visible machines that you have
-running. Support explained that Vagrant Manager might be doing it. It was. He
-opened a ticket. I added to [[https://github.com/lanayotech/vagrant-manager/issues/78][it]].
-
-#+NAME: 81E23844-38DF-49C8-888B-4FE4084061B7
-#+begin_src org :tangle productivity-read.org
-- Terminal Preference: Terminal
-- Status Bar Icon Theme: Clean
-- Launch at login: Yes
-- Following settings: No
-- Refresh every: 5 seconds
-- Following settings: No
-- Allowed Updates: stable
-- Send anonymous profile data: Yes
-#+end_src
-
-****** Configure
+**** Configure
 :PROPERTIES:
 :header-args: :tangle ./dev-ops.org
-:ID:       AAF4A8BD-5344-4F36-A3F2-2DA6227BD5F4
+:ID:       3A6DCCFC-D601-4FA1-9013-82BDC97DF8D8
 :END:
 
-#+NAME: FBF76363-813C-4A86-9B04-220C6C584F39
+#+NAME: 089A38CA-43AD-4BE4-8EF4-C77E57CF25F3
 #+BEGIN_SRC org
 ,* Carbon Copy Cloner
 
@@ -2122,15 +2092,7 @@ opened a ticket. I added to [[https://github.com/lanayotech/vagrant-manager/issu
 ,*Only install on hosts*
 
 - On a host: License it
-#+END_SRC
-**** Configure
-:PROPERTIES:
-:header-args: :tangle ./dev-ops.org
-:ID:       3A6DCCFC-D601-4FA1-9013-82BDC97DF8D8
-:END:
 
-#+NAME: 089A38CA-43AD-4BE4-8EF4-C77E57CF25F3
-#+BEGIN_SRC org
 ,* Vagrant
 
 Install the VMWare provider for Vagrant and then license it.
@@ -2262,7 +2224,7 @@ brew linkapps
 :END:
 
 #+NAME: 7143E58E-A1B9-4A5A-B189-6E88AB0612D7
-#+begin_src sh :tangle productivity-run.sh :comments no
+#+begin_src sh
 brew cask install sourcetree
 #+end_src
 
