@@ -2577,6 +2577,87 @@ Set Dictation & Text to Speech to: Callie
     :ID:       76178B97-5BEE-4341-86C7-757138319E18
     :END:
 
+*** Git
+**** Generic
+:PROPERTIES:
+:header-args: :tangle ./git-generic.sh :tangle-mode (identity #o755)
+:ID:       F008829D-FCC5-426E-8CB6-3E3DED5EE2AF
+:END:
+
+Generate the key. There is no passphrase.
+#+NAME: 41FF7AA3-8273-4281-A7E8-C60B048723D4
+#+begin_src sh
+rm -rf ~/.ssh
+mkdir ~/.ssh
+cd ~/.ssh
+echo "What email address would you like to use for this SSH key?"
+read SSHEMAIL
+SSHID=`whoami`-`hostname`
+SSHUID=$SSHID-`date '+%Y_%m_%d_%H_%M_%S'`
+SSHFILE=$SSHUID-rsa
+ssh-keygen -N '' -t rsa -C $SSHEMAIL -f $SSHFILE
+#+end_src
+
+Set permissions so that =ssh= will run.
+
+#+NAME: 298B36CF-28A0-45CC-BACF-787EAB06F348
+#+begin_src sh
+chmod 600 ~/.ssh/$SSHFILE
+chmod 600 ~/.ssh/$SSHFILE.pub
+ssh-add -K ~/.ssh/$SSHFILE
+#+end_src
+
+OSX creates this directory everywhere and it must be ignored.
+
+#+NAME: 53F16E84-34DC-48D1-998C-B9214B32AD1E
+#+begin_src sh
+echo .DS_Store > ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+#+end_src
+
+Add they key to Bitbucket and Github.
+
+#+NAME: 3934CA71-20AE-4136-AB57-1DEF8EBC0ADB
+#+begin_src sh
+echo "Name your Git site key: $SSHFILE"
+cat ~/.ssh/$SSHFILE.pub | pbcopy
+read -p "The new key is in your clipboard. Go and add this key to BitBucket and GitHub. When you are finished, hit [enter] to continue."
+#+end_src
+
+Set up ~/.ssh/config.
+
+#+NAME: 70D5D9F2-6CFC-4FB5-BC45-416B4ABA029F
+#+begin_src sh
+cat > ~/.ssh/config << EOF
+Host github-`whoami`
+     HostName github.com
+     User git
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/$SSHFILE.pub
+Host bitbucket-`whoami`
+     HostName bitbucket.org
+     User git
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/$SSHFILE.pub
+EOF
+#+end_src
+
+Test each one out.
+
+#+NAME: 07933181-5F02-43CB-9DF8-232DA213E4BB
+#+begin_src sh
+ssh -T github-`whoami`
+read -p "Did it work? If not, fix it."
+#+end_src
+
+Separate them to allow for easier copy-pasting.
+
+#+NAME: 66DAC891-FB97-48A8-9C8B-0292095F13A6
+#+begin_src sh
+ssh -T bitbucket-`whoami`
+read -p "Did it work? If not, fix it."
+#+end_src
+
 *** Template
 :PROPERTIES:
 :ID:       C1DA9537-9D9B-493B-9318-4ABEEAFEA86B
@@ -2672,98 +2753,6 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 #+BEGIN_SRC sh
 <<link-emacs-init-and-dot-d>>
 #+END_SRC
-
-*** Automated: Generic Git
-:PROPERTIES:
-:header-args: :tangle writing/configuration-writing-04-automated-generic.sh :tangle-mode (identity #o755)
-:ID:       F008829D-FCC5-426E-8CB6-3E3DED5EE2AF
-:END:
-
-**** Git Setup
-:PROPERTIES:
-:ID:       637C8E64-3756-4B50-9E89-B3444AEF29B0
-:END:
-
-Aggressively debug.
-
-#+NAME: B807D882-CDAB-4029-9FFE-FB967D0DB38F
-#+BEGIN_SRC sh
-set -x
-#+END_SRC
-
-Generate the key. There is no passphrase.
-#+NAME: 41FF7AA3-8273-4281-A7E8-C60B048723D4
-#+begin_src sh
-rm -rf ~/.ssh
-mkdir ~/.ssh
-cd ~/.ssh
-echo "What email address would you like to use for this SSH key?"
-read SSHEMAIL
-SSHID=`whoami`-`hostname`
-SSHUID=$SSHID-`date '+%Y_%m_%d_%H_%M_%S'`
-SSHFILE=$SSHUID-rsa
-ssh-keygen -N '' -t rsa -C $SSHEMAIL -f $SSHFILE
-#+end_src
-
-Set permissions so that =ssh= will run.
-
-#+NAME: 298B36CF-28A0-45CC-BACF-787EAB06F348
-#+begin_src sh
-chmod 600 ~/.ssh/$SSHFILE
-chmod 600 ~/.ssh/$SSHFILE.pub
-ssh-add -K ~/.ssh/$SSHFILE
-#+end_src
-
-OSX creates this directory everywhere and it must be ignored.
-
-#+NAME: 53F16E84-34DC-48D1-998C-B9214B32AD1E
-#+begin_src sh
-echo .DS_Store > ~/.gitignore_global
-git config --global core.excludesfile ~/.gitignore_global
-#+end_src
-
-Add they key to Bitbucket and Github.
-
-#+NAME: 3934CA71-20AE-4136-AB57-1DEF8EBC0ADB
-#+begin_src sh
-echo "Name your Git site key: $SSHFILE"
-cat ~/.ssh/$SSHFILE.pub | pbcopy
-read -p "The new key is in your clipboard. Go and add this key to BitBucket and GitHub. When you are finished, hit [enter] to continue."
-#+end_src
-
-Set up ~/.ssh/config.
-
-#+NAME: 70D5D9F2-6CFC-4FB5-BC45-416B4ABA029F
-#+begin_src sh
-cat > ~/.ssh/config << EOF
-Host github-`whoami`
-     HostName github.com
-     User git
-     PreferredAuthentications publickey
-     IdentityFile ~/.ssh/$SSHFILE.pub
-Host bitbucket-`whoami`
-     HostName bitbucket.org
-     User git
-     PreferredAuthentications publickey
-     IdentityFile ~/.ssh/$SSHFILE.pub
-EOF
-#+end_src
-
-Test each one out.
-
-#+NAME: 07933181-5F02-43CB-9DF8-232DA213E4BB
-#+begin_src sh
-ssh -T github-`whoami`
-read -p "Did it work? If not, fix it."
-#+end_src
-
-Separate them to allow for easier copy-pasting.
-
-#+NAME: 66DAC891-FB97-48A8-9C8B-0292095F13A6
-#+begin_src sh
-ssh -T bitbucket-`whoami`
-read -p "Did it work? If not, fix it."
-#+end_src
 
 *** Automated: Personal Git and TeX Configuration
 :PROPERTIES:
