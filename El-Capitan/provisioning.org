@@ -2315,6 +2315,43 @@ after sending an error report.
 Don't let it access Contacts.
 
 When it checks for updates, tell it to check daily.
+**** TODO R
+***** TODO Core
+
+I haven't used R in a long time but I want to get it set up right again.
+Link my configs from ~/ into where they live now.
+This installer asks for my password, which halts the install. How will I deal
+with this?
+There is a =.Rinstall= file in my setup to get all of the packages installed. Be s
+sure to run that, too. All of my notes live in R.org already.
+
+Install the software manually.
+
+Migrate and link the configuration files
+
+#+NAME: 0D50EA49-2A0B-40C9-865D-964FC75B7AC3
+#+begin_src sh
+ln -s ~/git/bitbucket/alec/.Renviron ~/.Renviron
+ln -s ~/git/bitbucket/alec/.Rprofile ~/.Rprofile
+ln -s ~/git/bitbucket/alec/.Rinstall ~/.Rinstall
+rm -rf ~/.Rpackages
+mkdir ~/.Rpackages
+#+end_src
+***** TODO R Studio
+     :PROPERTIES:
+     :ID:       BEA57758-A9E8-415C-9D89-A0C5722A6383
+     :END:
+
+#+NAME: 0C6AF024-314E-441F-9211-88AB14D02FBA
+#+begin_src sh
+brew cask install rstudio
+#+end_src
+
+#+NAME: A64B8C68-9FA9-44FC-BF68-7B76716E4EC1
+#+begin_src org
+This doesn't need any config I think.
+Run it.
+#+end_src
 
 *** Template
 :PROPERTIES:
