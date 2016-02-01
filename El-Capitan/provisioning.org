@@ -2116,6 +2116,10 @@ brew install smlnj
 #+BEGIN_SRC sh
 brew install cvs
 #+END_SRC
+***** bzr
+#+BEGIN_SRC sh
+brew install bzr
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./development.org
