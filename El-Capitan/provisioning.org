@@ -2088,6 +2088,13 @@ brew install emacs --with-cocoa --with-gnutls --with-imagemagick
 brew linkapps
 #+END_SRC
 
+***** Sourcetree
+
+#+NAME: 7143E58E-A1B9-4A5A-B189-6E88AB0612D7
+#+begin_src sh :tangle productivity-run.sh :comments no
+brew cask install sourcetree
+#+end_src
+
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./development.org
@@ -2133,6 +2140,16 @@ brew linkapps
   that the settings are saved. Once they were not.
 - Test the sample files for a two-file diff.
 - After Git is set up, test everything.
+,* Sourcetree
+
+- Log into SourceTree
+- Let it scan the BitBucket folder to add those projects to SourceTree
+- Preferences
+  - General: Disallow SourceTree from modifying yoru global Git config file
+  - Diff: Set font to DJSM 14
+- Manually
+  - Go through the licensing process
+  - Old app just let you type it into the GUI, not seeing it here now
 #+END_SRC
 *** TeX
 :PROPERTIES:
