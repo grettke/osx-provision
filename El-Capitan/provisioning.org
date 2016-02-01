@@ -2657,6 +2657,71 @@ Separate them to allow for easier copy-pasting.
 ssh -T bitbucket-`whoami`
 read -p "Did it work? If not, fix it."
 #+end_src
+**** Personal
+:PROPERTIES:
+:header-args: :tangle ./git-personal.sh :tangle-mode (identity #o755)
+:END:
+
+Set up my preferences.
+
+#+NAME: C85D0036-9DDA-4786-9621-470FB418BBD6
+#+begin_src sh
+git config --global user.name "Grant Rettke"
+git config --global user.email gcr@wisdomandwonder.com
+git config --global color.ui true
+git config --global core.autocrlf
+git config --global alias.st status
+git config --global alias.ci commit
+git config --global alias.dt difftool
+git config --global alias.mt mergetool
+git config --global diff.tool deltawalker
+git config --global difftool.deltawalker.cmd '/Applications/DeltaWalker.app/Contents/MacOS/git-diff $LOCAL $REMOTE'
+git config --global difftool.prompt false
+git config --global merge.tool deltawalker
+git config --global mergetool.deltawalker.cmd '/Applications/DeltaWalker.app/Contents/MacOS/git-merge $LOCAL $REMOTE $BASE $MERGED'
+git config --global mergetool.keepBackup false
+#+end_src
+
+Check out projects to get basic stuff working.
+
+#+NAME: 5BD1669B-8E2A-46B5-AB80-88DA5764DEEB
+#+begin_src sh
+rm -rf ~/git/bitbucket
+rm -rf ~/git/github
+rm -rf ~/src/help
+mkdir -p ~/git/bitbucket
+mkdir -p ~/git/github
+cd ~/git/bitbucket
+git clone bitbucket-`whoami`:grettke/list.git
+git clone bitbucket-`whoami`:grettke/resume.git
+git clone bitbucket-`whoami`:grettke/notes.git
+git clone bitbucket-`whoami`:grettke/signature.git
+git clone bitbucket-`whoami`:grettke/grant-personal.git
+git clone bitbucket-`whoami`:grettke/correspondence.git
+git clone bitbucket-`whoami`:grettke/wnw.git
+git clone bitbucket-`whoami`:grettke/texmf.git
+cd ~/git/github
+git clone github-`whoami`:grettke/osx-provision.git
+git clone github-`whoami`:grettke/bash.git
+#+end_src
+
+At this point, the Bash initialization files point at the directory with my
+SSH key. Log out and in again and delete the anonymous pull. Not sure how to
+automate this part yet.
+
+#+NAME: F407E69A-6C92-4254-A0E3-A442166AD57B
+#+begin_src sh
+cd ~/git/github-anonymous
+git clone https://github.com/bkuhlmann/osx
+git clone https://github.com/monfresh/laptop
+cd ~/src
+git clone github-`whoami`:grettke/help.git
+rm ~/.emacs.el
+ln -s ~/src/help/.emacs.el ~/.emacs.el
+rm -rf ~/.emacs.d
+mkdir ~/.emacs.d
+ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
+#+end_src
 
 *** Template
 :PROPERTIES:
@@ -2749,78 +2814,11 @@ mkdir ~/.emacs.d
 ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 #+END_SRC
 
-#+NAME: FE599B18-6194-4B9C-8997-338B927D8D64
-#+BEGIN_SRC sh
-<<link-emacs-init-and-dot-d>>
-#+END_SRC
-
 *** Automated: Personal Git and TeX Configuration
 :PROPERTIES:
 :header-args: :tangle writing/configuration-writing-05-automated-personal.sh :tangle-mode (identity #o755)
 :ID:       F008829D-FCC5-426E-8CB6-3E3DED5EE2AF
 :END:
-**** Git Setup
-:PROPERTIES:
-:ID:       65A4DD8F-92FD-4C60-9157-B5AE951AFF2C
-:END:
-
-Set up my preferences.
-
-#+NAME: C85D0036-9DDA-4786-9621-470FB418BBD6
-#+begin_src sh
-git config --global user.name "Grant Rettke"
-git config --global user.email gcr@wisdomandwonder.com
-git config --global color.ui true
-git config --global core.autocrlf
-git config --global alias.st status
-git config --global alias.ci commit
-git config --global alias.dt difftool
-git config --global alias.mt mergetool
-git config --global diff.tool deltawalker
-git config --global difftool.deltawalker.cmd '/Applications/DeltaWalker.app/Contents/MacOS/git-diff $LOCAL $REMOTE'
-git config --global difftool.prompt false
-git config --global merge.tool deltawalker
-git config --global mergetool.deltawalker.cmd '/Applications/DeltaWalker.app/Contents/MacOS/git-merge $LOCAL $REMOTE $BASE $MERGED'
-git config --global mergetool.keepBackup false
-#+end_src
-
-Check out projects to get basic stuff working.
-
-#+NAME: 5BD1669B-8E2A-46B5-AB80-88DA5764DEEB
-#+begin_src sh
-rm -rf ~/git/bitbucket
-rm -rf ~/git/github
-rm -rf ~/src/help
-mkdir -p ~/git/bitbucket
-mkdir -p ~/git/github
-cd ~/git/bitbucket
-git clone bitbucket-`whoami`:grettke/list.git
-git clone bitbucket-`whoami`:grettke/resume.git
-git clone bitbucket-`whoami`:grettke/notes.git
-git clone bitbucket-`whoami`:grettke/signature.git
-git clone bitbucket-`whoami`:grettke/grant-personal.git
-git clone bitbucket-`whoami`:grettke/correspondence.git
-git clone bitbucket-`whoami`:grettke/wnw.git
-git clone bitbucket-`whoami`:grettke/texmf.git
-cd ~/git/github
-git clone github-`whoami`:grettke/osx-provision.git
-git clone github-`whoami`:grettke/bash.git
-#+end_src
-
-At this point, the Bash initialization files point at the directory with my
-SSH key. Log out and in again and delete the anonymous pull. Not sure how to
-automate this part yet.
-
-#+NAME: F407E69A-6C92-4254-A0E3-A442166AD57B
-#+begin_src sh
-cd ~/git/github-anonymous
-git clone https://github.com/bkuhlmann/osx
-git clone https://github.com/monfresh/laptop
-cd ~/src
-git clone github-`whoami`:grettke/help.git
-<<link-emacs-init-and-dot-d>>
-#+end_src
-
 **** TeX
 :PROPERTIES:
 :ID:       5E11928D-2734-4413-AE52-17BBEA095A73
