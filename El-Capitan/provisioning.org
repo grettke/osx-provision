@@ -2120,6 +2120,10 @@ brew install cvs
 #+BEGIN_SRC sh
 brew install bzr
 #+END_SRC
+***** mercurial
+#+BEGIN_SRC sh
+brew install hg
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./development.org
