@@ -1590,7 +1590,6 @@ brew cask install xquartz
   - Return to Option_L
     (+ When you type Return only, send Return)
 
-
 ,* Spectacle
 
 - Start it
