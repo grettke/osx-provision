@@ -2228,6 +2228,10 @@ brew install hg
 #+BEGIN_SRC
 brew cask install pycharm
 #+END_SRC
+***** WebStorm
+#+BEGIN_SRC sh
+brew cask install webstorm
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./development.org
@@ -2315,6 +2319,8 @@ brew cask install pycharm
         - DJSM 17
     - Code Style
       - Right margin column: 80
+,* WebStorm
+- Same configuration as PyCharm
 #+END_SRC
 *** TeX
 :PROPERTIES:
@@ -2511,6 +2517,65 @@ Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the 
 - Human Anatomy Atlas
 - Muscle Premium
 - Skeleton Premium
+
+**** Entropy
+    :PROPERTIES:
+    :ID:       9EDE18B7-DDA1-4FC1-8866-256596BA54D0
+    :END:
+
+    This is a [[http://www.eigenlogik.com/entropy/][download]] and manual install.
+
+**** Guitar Pro
+    :PROPERTIES:
+    :ID:       36F3F9F6-31D1-4517-94F3-B7A787F2C166
+    :END:
+
+[[http://www.guitar-pro.com/en/index.php][Here]]. Sign into MySongBook.
+
+**** GotoMeeting & Fuse
+    :PROPERTIES:
+    :ID:       A3271ECD-A07A-45E2-A0DE-A82EE8FA6833
+    :END:
+
+WebMeeting software.
+
+**** Cepestral Callie & David
+    :PROPERTIES:
+    :ID:       FB2138CF-B62C-4BCB-A892-AB855A61535A
+    :END:
+
+[[http://www.cepstral.com/][Here]].
+
+You might need to log out and in again to make the "Cepstral Voices" appear in
+System Preferences.
+
+License them. Test them.
+
+Set Dictation & Text to Speech to: Callie
+
+**** App Store Installs
+   :PROPERTIES:
+   :ID:       798AD4C6-AFB7-4AB6-B794-16E1E83CDF5C
+   :END:
+
+***** Microsoft Remote Desktop
+    :PROPERTIES:
+    :ID:       BF68C6A0-9F79-4372-8503-CD8B0BE3331A
+    :END:
+
+- Don't open the session full-screen.
+
+***** Text2Speech PRO
+    :PROPERTIES:
+    :ID:       40206D84-014A-43FC-8299-D4C8594FE691
+    :END:
+
+- Set default voice to Callie
+
+***** PixelMator
+    :PROPERTIES:
+    :ID:       76178B97-5BEE-4341-86C7-757138319E18
+    :END:
 
 *** Template
 :PROPERTIES:
