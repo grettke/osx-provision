@@ -2794,13 +2794,9 @@ sudo mktexlsr
 :header-args: :tangle ./template.org
 :ID:       FA5E0D88-1455-4DD5-9362-D8268BBFF3BF
 :END:
-** Writing
+** Testing
 :PROPERTIES:
-:ID:       4176F379-79B3-466F-A689-11701A0432EF
-:END:
-*** Manual: Personal Git and TeX Configuration Testing
-:PROPERTIES:
-:header-args: :tangle writing/configuration-writing-06-manual-personal.org
+:header-args: :tangle testing.org
 :ID:       44798E7B-AC1F-4FD8-AB5E-3A3563B79C4B
 :END:
 
@@ -2861,7 +2857,6 @@ sudo mktexlsr
   - [ ] pdf
   - [ ] txt
 #+END_SRC
-
 
 # Local Variables:
 # eval: (progn (defun el-cap-prov-post-tangle-hook () (interactive) (message "El-Cap Prov Post Tangle") (when (f-exists? "~/git/github/osx-provision/El-Capitan/host/profile-common") (f-delete "~/git/github/osx-provision/El-Capitan/host/profile-common")) (when (f-exists? "~/git/github/osx-provision/El-Capitan/writing/profile-common") (f-delete "~/git/github/osx-provision/El-Capitan/writing/profile-common")) (f-copy "~/git/github/osx-provision/El-Capitan/common/profile-common" "~/git/github/osx-provision/El-Capitan/host") (f-copy "~/git/github/osx-provision/El-Capitan/common/profile-common" "~/git/github/osx-provision/El-Capitan/writing")) (add-hook 'org-babel-post-tangle-hook 'el-cap-prov-post-tangle-hook) )
