@@ -1,70 +1,3 @@
-# [[file:provisioning.org::*Debtinator][C621D8B5-B34E-48D7-BF7A-C8E316BA10FB]]
-* Debtinator
-
-- Nothing exactly right now
-# C621D8B5-B34E-48D7-BF7A-C8E316BA10FB ends here
-
-# [[file:provisioning.org::*Textual%20IRC%20Client][BBAFAEFB-E9B6-443C-8DAC-424483885BF2]]
-* Textual
-
-- AppStore.
-- Open-at-Login
-
-Only note changes from the current default
-
-Set up preferences:
-
-- Preferences.
-- General.
-  - YES: Save the state of queries
-- Highlights.
-- Notifications.
-- Controls.
-- Interface.
-- Style.
-  - General.
-    - Style: Equinox
-    - Font: DJSM 17
-  - Inline Media.
-    - YES: Show images inline
-- Addons.
-- Advanced.
-  - Default Identity.
-    - grettke
-    - grettke💤
-    - grettke
-    - Grant Rettke
-
-Server preferences:
-
-- Basic Settings.
-  - General
-    - YES
-      - Connect when Textual opens
-      - Perform reconnect on disconnect
-      - Perform reconnent on waking from sleep
-- Identity
-  - Wait for ID before joining
-  - Enter personal password; everything else got set from main screen
-  - Do wait for identification before joining channels
-
-- Join on Freenode
-  - #org-mode
-  - #emacs
-  - #scheme
-  - #bash
-# BBAFAEFB-E9B6-443C-8DAC-424483885BF2 ends here
-
-# [[file:provisioning.org::*Growl][292B3960-AD89-413E-8E67-2BDBBAC7ACBE]]
-* Growl
-
-- Install via the app store
-- Start it
-- enable run on login
-- top left corner
-- smoke
-# 292B3960-AD89-413E-8E67-2BDBBAC7ACBE ends here
-
 # [[file:provisioning.org::*Microsoft%20Office][C38471A4-27EF-4543-9076-299EC7FE2086]]
 This is in BrewCask, but the download is waste of time. I have it locally. Use
 the version I bought; not the latest which is in brew.
@@ -141,6 +74,73 @@ License them. Test them.
 
 Set Dictation & Text to Speech to: Callie
 # 350809D4-E824-4F60-B121-CD6E34B62075 ends here
+
+# [[file:provisioning.org::*Debtinator][C621D8B5-B34E-48D7-BF7A-C8E316BA10FB]]
+* Debtinator
+
+- Nothing exactly right now
+# C621D8B5-B34E-48D7-BF7A-C8E316BA10FB ends here
+
+# [[file:provisioning.org::*Textual%20IRC%20Client][BBAFAEFB-E9B6-443C-8DAC-424483885BF2]]
+* Textual
+
+- AppStore.
+- Open-at-Login
+
+Only note changes from the current default
+
+Set up preferences:
+
+- Preferences.
+- General.
+  - YES: Save the state of queries
+- Highlights.
+- Notifications.
+- Controls.
+- Interface.
+- Style.
+  - General.
+    - Style: Equinox
+    - Font: DJSM 17
+  - Inline Media.
+    - YES: Show images inline
+- Addons.
+- Advanced.
+  - Default Identity.
+    - grettke
+    - grettke💤
+    - grettke
+    - Grant Rettke
+
+Server preferences:
+
+- Basic Settings.
+  - General
+    - YES
+      - Connect when Textual opens
+      - Perform reconnect on disconnect
+      - Perform reconnent on waking from sleep
+- Identity
+  - Wait for ID before joining
+  - Enter personal password; everything else got set from main screen
+  - Do wait for identification before joining channels
+
+- Join on Freenode
+  - #org-mode
+  - #emacs
+  - #scheme
+  - #bash
+# BBAFAEFB-E9B6-443C-8DAC-424483885BF2 ends here
+
+# [[file:provisioning.org::*Growl][292B3960-AD89-413E-8E67-2BDBBAC7ACBE]]
+* Growl
+
+- Install via the app store
+- Start it
+- enable run on login
+- top left corner
+- smoke
+# 292B3960-AD89-413E-8E67-2BDBBAC7ACBE ends here
 
 # [[file:provisioning.org::*Microsoft%20Remote%20Desktop][D86C6A4D-08CB-4674-81CA-4777E3AAAF8B]]
 * Microsoft Remote Desktop

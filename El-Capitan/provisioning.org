@@ -2929,21 +2929,7 @@ The documents say to maybe do the following. I did it.
 sudo mktexlsr
 ,#+end_src
 #+END_SRC
-*** Template
-:PROPERTIES:
-:ID:       C1DA9537-9D9B-493B-9318-4ABEEAFEA86B
-:END:
-**** Install
-:PROPERTIES:
-:header-args: :tangle ./template.sh :tangle-mode (identity #o755)
-:ID:       F2B0FCF0-1F56-4D3B-AC9F-10F4E430BBE2
-:END:
-**** Configure
-:PROPERTIES:
-:header-args: :tangle ./template.org
-:ID:       FA5E0D88-1455-4DD5-9362-D8268BBFF3BF
-:END:
-** Testing
+man** Testing
 :PROPERTIES:
 :header-args: :tangle testing.org
 :ID:       44798E7B-AC1F-4FD8-AB5E-3A3563B79C4B
