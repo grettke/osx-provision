@@ -27,6 +27,10 @@ All creativity is an extended form of a joke.
           — Alan Kay"
 # 850816F3-B82E-4EE0-9895-6E99CB6A7593 ends here
 
+# [[file:provisioning.org::*Machine][91AA8678-421C-4F05-8ECA-1D1219582C7E]]
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+# 91AA8678-421C-4F05-8ECA-1D1219582C7E ends here
+
 # [[file:provisioning.org::*Machine][DBE84671-1CC0-4DBA-AC7C-72F9EAC857A0]]
 sudo spctl --master-disable
 # DBE84671-1CC0-4DBA-AC7C-72F9EAC857A0 ends here

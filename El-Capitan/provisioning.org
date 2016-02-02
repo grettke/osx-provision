@@ -811,6 +811,14 @@ All creativity is an extended form of a joke.
           — Alan Kay"
 #+END_SRC
 
+Cycle through system information by clicking on the clock at the login
+screen[fn:1f8bbd98e464862a:https://apple.stackexchange.com/questions/155429/view-machine-name-on-login-screen].
+
+#+NAME: 91AA8678-421C-4F05-8ECA-1D1219582C7E
+#+BEGIN_SRC sh
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+#+END_SRC
+
 Disable Gatekeeper.
 #+NAME: DBE84671-1CC0-4DBA-AC7C-72F9EAC857A0
 #+BEGIN_SRC sh
@@ -2929,7 +2937,7 @@ The documents say to maybe do the following. I did it.
 sudo mktexlsr
 ,#+end_src
 #+END_SRC
-man** Testing
+** Testing
 :PROPERTIES:
 :header-args: :tangle testing.org
 :ID:       44798E7B-AC1F-4FD8-AB5E-3A3563B79C4B
