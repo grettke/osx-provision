@@ -167,7 +167,7 @@
 - Download speed is the weakest link
   - Separate work into separate steps to get downloads finished and configure
     later
-    
+
 * Dictionary
 :PROPERTIES:
 :ID:       BF6FF97E-5530-4EBA-97C3-02A2EF259137
@@ -732,6 +732,20 @@ First thing is to get these scripts from GitHub either:
     xcode-select --install
     ,#+END_SRC
     - Command is idempotent
+- Utility Scripts
+  - Mount only required volumes
+    - For =host1= that means =host1= and =Storage=
+    - Write a shell script and run it at logon
+      ,#+BEGIN_SRC sh
+#!/usr/bin/env bash
+# -*- mode: sh; -*-
+
+diskutil unmount /dev/disk0s3
+diskutil unmount /dev/disk0s4
+diskutil unmount /dev/disk0s6
+diskutil unmount /dev/disk0s7
+diskutil unmount /dev/disk0s8
+      ,#+END_SRC
 - Mouse
   - Host :: Connect Bluetooth mouse
   - Make the mouse slow
