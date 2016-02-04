@@ -4,6 +4,7 @@
   - Guest :: ~IOSXECA~
 - During configuration log into the App Store
 - Make a user named ~gcr~ and choose an avatar
+- Install software updates
 - Development Tools
   - If you want to use XCode :: Go to the App Store and Install it
     - 4.5GB download
