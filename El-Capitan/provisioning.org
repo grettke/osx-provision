@@ -164,7 +164,10 @@
     - On another computer
       - Local or remote
   - Minimize stress during non-trivial provisioning efforts
-
+- Download speed is the weakest link
+  - Separate work into separate steps to get downloads finished and configure
+    later
+    
 * Dictionary
 :PROPERTIES:
 :ID:       BF6FF97E-5530-4EBA-97C3-02A2EF259137
