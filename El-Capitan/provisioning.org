@@ -2034,6 +2034,10 @@ brew cask install kindle
 - Join
   - livecodepublic
   - milwaukee
+
+,* Kindle
+
+- Login
 #+END_SRC
 
 *** DevOps
