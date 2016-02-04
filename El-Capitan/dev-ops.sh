@@ -31,3 +31,7 @@ else
     echo "vagrant: Only install on hosts"
 fi
 # 165A046E-FFC9-4431-8150-CF9F4890EA24 ends here
+
+# [[file:provisioning.org::*iPartition][D7F9F051-BE46-4E38-BE35-6E8CE4B5D727]]
+brew cask install ipartition
+# D7F9F051-BE46-4E38-BE35-6E8CE4B5D727 ends here

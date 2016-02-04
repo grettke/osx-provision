@@ -2104,6 +2104,15 @@ else
 fi
 
 #+end_src
+***** iPartition
+:PROPERTIES:
+:ID:       C311D47F-1D57-47EC-A8AE-36973EB8F33E
+:END:
+
+#+NAME: D7F9F051-BE46-4E38-BE35-6E8CE4B5D727
+#+BEGIN_SRC sh
+brew cask install ipartition
+#+END_SRC
 
 **** Configure
 :PROPERTIES:
@@ -2169,6 +2178,10 @@ provider.
 cd ~/tmp/vgtest
 vagrant up
 ,#+end_src
+
+,* iPartition
+
+- License it
 #+END_SRC
 *** Development
 :PROPERTIES:
