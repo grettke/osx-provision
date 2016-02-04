@@ -30,6 +30,8 @@
   - Guest :: Computer sleep never, Screen sleep 15
 - Sound
   - Show volume in menubar
+- Bluetooth
+  - Show in menu bar
 - Finder
   - Preferences
     - Sidebar
