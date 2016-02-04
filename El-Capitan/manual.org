@@ -58,12 +58,6 @@ Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the 
 - [[http://www.guitar-pro.com/en/index.php][Here]]. Sign into MySongBook.
 # 8D86833F-9C6A-430B-A238-D1537470EC46 ends here
 
-# [[file:provisioning.org::*GotoMeeting%20&%20Fuse][7188E973-1AAA-4111-B23F-7437E49C9CB5]]
-* GotoMeeting & Fuse
-
-- WebMeeting software.
-# 7188E973-1AAA-4111-B23F-7437E49C9CB5 ends here
-
 # [[file:provisioning.org::*Cepestral%20Callie%20&%20David][350809D4-E824-4F60-B121-CD6E34B62075]]
 * Cepestral Callie & David
 

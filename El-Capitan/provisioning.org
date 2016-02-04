@@ -2572,18 +2572,6 @@ Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the 
 
 #+END_SRC
 
-**** GotoMeeting & Fuse
-    :PROPERTIES:
-    :ID:       A3271ECD-A07A-45E2-A0DE-A82EE8FA6833
-    :END:
-
-#+NAME: 7188E973-1AAA-4111-B23F-7437E49C9CB5
-#+BEGIN_SRC org
-,* GotoMeeting & Fuse
-
-- WebMeeting software.
-#+END_SRC
-
 **** Cepestral Callie & David
     :PROPERTIES:
     :ID:       FB2138CF-B62C-4BCB-A892-AB855A61535A
