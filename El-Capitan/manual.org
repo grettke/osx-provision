@@ -44,6 +44,11 @@ Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the 
 - Human Anatomy Atlas
 - Muscle Premium
 - Skeleton Premium
+- License key
+  - Copy directory from the email
+  - Tried printing to pdf or saving to a file and copying from that and neither
+    work
+  - Need to copy from their into an Org document and try that
 # D569323D-3922-4D3A-814D-B6413DBBE3F2 ends here
 
 # [[file:provisioning.org::*Entropy][CBFB0524-49A3-475E-BE72-F72F878355D7]]
