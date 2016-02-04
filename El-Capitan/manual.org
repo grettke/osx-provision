@@ -113,7 +113,7 @@ Set up preferences:
     - grettke
     - Grant Rettke
 
-Server preferences:
+Server properties:
 
 - Basic Settings.
   - General
