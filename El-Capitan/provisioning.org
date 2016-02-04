@@ -159,6 +159,11 @@
 - Ignore the urge to provision on-the-metal until you've provisioned a box 5-10
   times and have used it for a month or two without major changes
   - Every other time will be to soon
+- Backups
+  - Keep everything you value
+    - On another computer
+      - Local or remote
+  - Minimize stress during non-trivial provisioning efforts
 
 * Dictionary
 :PROPERTIES:
