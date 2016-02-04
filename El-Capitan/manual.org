@@ -19,6 +19,8 @@ When it checks for updates, tell it to check daily.
 # [[file:provisioning.org::*SAS%20University%20Edition][E963365D-C3A8-46C1-89A9-7EA158482C6D]]
 * SAS University Edition
 
+- Download with FireFox
+  - Fails with Chrome
 - 4096 MB RAM
 # E963365D-C3A8-46C1-89A9-7EA158482C6D ends here
 

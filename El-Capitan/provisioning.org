@@ -2503,6 +2503,8 @@ When it checks for updates, tell it to check daily.
 #+BEGIN_SRC org
 ,* SAS University Edition
 
+- Download with FireFox
+  - Fails with Chrome
 - 4096 MB RAM
 #+END_SRC
 
