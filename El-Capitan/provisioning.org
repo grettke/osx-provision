@@ -691,6 +691,11 @@ Steps are: configuration-writing-02-automated.sh
 :PROPERTIES:
 :ID:       6ACCC2CE-5EB4-42D6-AD12-0DC836C2A3FD
 :END:
+
+First thing is to get these scripts from GitHub either:
+- As a ZIP
+- A git working copy
+
 *** OS X
 :PROPERTIES:
 :ID:       EAD703CC-3234-4438-930D-C1BB2F50DF6B
