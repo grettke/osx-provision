@@ -728,6 +728,7 @@ First thing is to get these scripts from GitHub either:
     ,#+BEGIN_SRC sh
     xcode-select --install
     ,#+END_SRC
+    - Command is idempotent
 - Mouse
   - Host :: Connect Bluetooth mouse
   - Make the mouse slow
