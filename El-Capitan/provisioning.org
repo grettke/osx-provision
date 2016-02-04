@@ -2682,8 +2682,8 @@ Server preferences:
 - Install via the app store
 - Start it
 - enable run on login
-- top left corner
-- smoke
+- Theme: Music Video
+  - Easy to notice
 #+END_SRC
 ***** Microsoft Remote Desktop
     :PROPERTIES:

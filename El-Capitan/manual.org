@@ -138,8 +138,8 @@ Server preferences:
 - Install via the app store
 - Start it
 - enable run on login
-- top left corner
-- smoke
+- Theme: Music Video
+  - Easy to notice
 # 292B3960-AD89-413E-8E67-2BDBBAC7ACBE ends here
 
 # [[file:provisioning.org::*Microsoft%20Remote%20Desktop][D86C6A4D-08CB-4674-81CA-4777E3AAAF8B]]
