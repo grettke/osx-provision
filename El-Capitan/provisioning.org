@@ -1499,6 +1499,7 @@ brew install fortune
 #+NAME: A61A74A8-B361-4395-B9DE-E6F843166511
 #+BEGIN_SRC sh
 cd ~/git/github-anonymous
+git clone https://github.com/Homebrew/homebrew.git
 git clone https://github.com/caskroom/homebrew-cask.git
 #+END_SRC
 **** Configure

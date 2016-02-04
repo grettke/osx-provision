@@ -55,5 +55,6 @@ brew install fortune
 
 # [[file:provisioning.org::*Recipes][A61A74A8-B361-4395-B9DE-E6F843166511]]
 cd ~/git/github-anonymous
+git clone https://github.com/Homebrew/homebrew.git
 git clone https://github.com/caskroom/homebrew-cask.git
 # A61A74A8-B361-4395-B9DE-E6F843166511 ends here
