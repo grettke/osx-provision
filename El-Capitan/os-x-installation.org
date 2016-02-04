@@ -24,7 +24,9 @@
 - Host :: Add printer
 - Energy saver
   - Host :: do
-    - On power, Computer sleep never,never auto sleep when display is off
+    - On power
+      - Display off at 15m
+      - Prevent computer from sleeping automatically when display is offp when display is off
     - On battery, Screen sleep 5m
       - Don't slightly dim the display on battery power
   - Guest :: Computer sleep never, Screen sleep 15
