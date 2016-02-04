@@ -35,7 +35,7 @@ Granting:
   - Show status in menu bar.
 - Alert:
   - Detail level: Show full details
-  - No: Confirm automatically
+  - Yes: Confirm automatically
   - NO: Confirm with return and escape.
     - Can use control-return and command-return intead
 - Monitor:
