@@ -82,5 +82,7 @@ Granting:
 - Enable at startup
 * Tuxera NTFS
 
+- Install it
+  - brew only downloads the installer
 - License it
 # 3A1E7B61-A44D-4C11-9338-979D7BB7B05B ends here

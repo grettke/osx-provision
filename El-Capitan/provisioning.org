@@ -1722,6 +1722,8 @@ Granting:
 - Enable at startup
 ,* Tuxera NTFS
 
+- Install it
+  - brew only downloads the installer
 - License it
 #+END_SRC
 
