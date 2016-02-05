@@ -1621,6 +1621,16 @@ fi
 #+BEGIN_SRC sh
 brew cask install xquartz
 #+END_SRC
+***** Tuxera NTFS
+:PROPERTIES:
+:ID:       18B65FB4-8884-4920-9A54-4A4CECBFED3F
+:END:
+
+#+NAME: F09F391E-0A25-4B8D-B70F-6FD35A103D95
+#+BEGIN_SRC sh
+brew cask install tuxera-ntfs
+#+END_SRC
+
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./usability.org
@@ -1710,6 +1720,9 @@ Granting:
 ,*Only install on hosts*
 
 - Enable at startup
+,* Tuxera NTFS
+
+- License it
 #+END_SRC
 
 *** Utility

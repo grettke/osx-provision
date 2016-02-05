@@ -29,3 +29,7 @@ fi
 # [[file:provisioning.org::*xquartz][442A6B4B-C210-4436-B0AE-F571D3F75B01]]
 brew cask install xquartz
 # 442A6B4B-C210-4436-B0AE-F571D3F75B01 ends here
+
+# [[file:provisioning.org::*Tuxera%20NTFS][F09F391E-0A25-4B8D-B70F-6FD35A103D95]]
+brew cask install tuxera-ntfs
+# F09F391E-0A25-4B8D-B70F-6FD35A103D95 ends here
