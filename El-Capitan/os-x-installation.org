@@ -18,6 +18,9 @@
 - Utility Scripts
   - Mount only required volumes
     - For =host1= that means =host1= and =Storage=
+    - Spotlight suggests applications and files on those volumes and you usually
+      don't want that
+    - Applications get locks on files on non host volumes
     - Write a shell script and run it at logon
       #+BEGIN_SRC sh
 #!/usr/bin/env bash
