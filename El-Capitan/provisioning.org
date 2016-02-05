@@ -167,6 +167,14 @@
 - Download speed is the weakest link
   - Separate work into separate steps to get downloads finished and configure
     later
+- Every single provisioning run is different because
+  - You learn new things: want to fix stuff, want to make it better
+  - Things change: new versions, stuff not available
+  - Everything you script ends up being designed around being able to make
+    mistakes
+    - Easily resize partitions
+    - Easily reprovision (idempotent)
+    - Easily recover from unknowns and errors and learning
 
 * Dictionary
 :PROPERTIES:
