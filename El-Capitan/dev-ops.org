@@ -3,7 +3,8 @@
 
 *Only install on hosts*
 
-- On a host: License it
+- Install version 4
+- License it
 
 * VMWare
 

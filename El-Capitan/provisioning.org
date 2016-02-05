@@ -2071,16 +2071,7 @@ brew cask install kindle
 :ID:       F0BE2195-81FE-42F7-92F2-7AEB6A834041
 :END:
 
-Only install it on hosts.
-
-#+NAME: 27354A58-46C4-426B-8483-A96F7B63342D
-#+BEGIN_SRC sh
-if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install carbon-copy-cloner
-else
-    echo "carbon-copy-cloner: Only install on hosts"
-fi
-#+END_SRC
+Only install it on hosts. The brew version is 3 so install this manually.
 
 ***** VMWare Fusion
 :PROPERTIES:
@@ -2149,7 +2140,8 @@ brew cask install ipartition
 
 ,*Only install on hosts*
 
-- On a host: License it
+- Install version 4
+- License it
 
 ,* VMWare
 
