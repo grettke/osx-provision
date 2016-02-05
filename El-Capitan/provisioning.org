@@ -2121,6 +2121,21 @@ else
 fi
 
 #+end_src
+***** Packer
+:PROPERTIES:
+:ID:       7C812779-2F0F-4F0A-959E-BF8EEE44C1B3
+:END:
+
+#+NAME: 5C1B39F1-FC9C-4992-B891-D6208168D5F1
+#+begin_src sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install packer
+else
+    echo "packer: Only install on hosts"
+fi
+
+#+end_src
+
 ***** iPartition
 :PROPERTIES:
 :ID:       C311D47F-1D57-47EC-A8AE-36973EB8F33E
@@ -2196,6 +2211,10 @@ provider.
 cd ~/tmp/vgtest
 vagrant up
 ,#+end_src
+
+,* Packer
+
+- Nothing at this time
 
 ,* iPartition
 
