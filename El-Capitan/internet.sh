@@ -37,3 +37,7 @@ brew cask install slack
 # [[file:provisioning.org::*Kindle][B4E47A43-27D2-4478-821A-0E6C6138FB40]]
 brew cask install kindle
 # B4E47A43-27D2-4478-821A-0E6C6138FB40 ends here
+
+# [[file:provisioning.org::*wget][59E4E9CA-178C-4901-9E02-F5D1CDE00BB4]]
+brew install wget
+# 59E4E9CA-178C-4901-9E02-F5D1CDE00BB4 ends here

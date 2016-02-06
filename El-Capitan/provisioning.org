@@ -2011,6 +2011,15 @@ brew cask install slack
 #+BEGIN_SRC sh
 brew cask install kindle
 #+END_SRC
+***** wget
+:PROPERTIES:
+:ID:       C55C637C-818F-40C4-B55A-39641BB1FAD2
+:END:
+
+#+NAME: 59E4E9CA-178C-4901-9E02-F5D1CDE00BB4
+#+BEGIN_SRC sh
+brew install wget
+#+END_SRC [[brew install wget]] 
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./internet.org
