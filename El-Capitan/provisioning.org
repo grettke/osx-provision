@@ -2019,7 +2019,7 @@ brew cask install kindle
 #+NAME: 59E4E9CA-178C-4901-9E02-F5D1CDE00BB4
 #+BEGIN_SRC sh
 brew install wget
-#+END_SRC [[brew install wget]] 
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./internet.org
