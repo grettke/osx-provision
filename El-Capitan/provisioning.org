@@ -2768,7 +2768,12 @@ Server properties:
 #+BEGIN_SRC org
 ,* Text2Speech PRO
 
-- Set default voice to Callie
+- General
+  - Preferences
+    - Voice :: Cepstral Callie
+    - Speaking Rate :: 175 w/m
+    - App check text encoding failover :: UTF-8
+    - [ ] Send file to iTunes
 #+END_SRC
 
 ***** PixelMator
