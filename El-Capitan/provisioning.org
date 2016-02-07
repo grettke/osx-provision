@@ -2148,6 +2148,7 @@ fi
 #+begin_src sh
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vagrant
+    vagrant plugin install vagrant-digitalocean
 else
     echo "vagrant: Only install on hosts"
 fi
