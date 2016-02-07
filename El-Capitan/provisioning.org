@@ -1849,6 +1849,22 @@ brew install libxml2
 #+BEGIN_SRC sh
 brew install dos2unix
 #+END_SRC
+
+Sometimes installation [[https://github.com/Homebrew/homebrew/issues/33622][fails]] with the error.
+
+#+BEGIN_EXAMPLE
+gcr@vela:.../man/de/man1⮞ brew link dos2unix
+Linking /usr/local/Cellar/dos2unix/7.3.2...
+Error: Could not symlink share/man/de/man1/dos2unix.1
+/usr/local/share/man/de/man1 is not writable.
+#+END_EXAMPLE
+
+The solution is.
+
+#+BEGIN_EXAMPLE
+chown -R `whoami` /usr/local/share/man/de/man1
+#+END_EXAMPLE
+
 ***** ccrypt
 :PROPERTIES:
 :ID:       F9E3F2A3-F16A-4EB8-8F4F-4FF47C7BBE06
