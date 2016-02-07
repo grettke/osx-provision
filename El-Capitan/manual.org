@@ -36,6 +36,8 @@ Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the 
 - Dictation
 - Enable
 - Yes: Use Enhanced Dictation
+- [X] Speak selected text when the key is pressed:
+  - Command+Control+Esc
 # D7DCD73D-1ABA-4C47-B6C8-4E47C86EB13B ends here
 
 # [[file:provisioning.org::*Visible%20Body][D569323D-3922-4D3A-814D-B6413DBBE3F2]]
