@@ -2611,7 +2611,7 @@ Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the 
 - Enable
 - Yes: Use Enhanced Dictation
 - [X] Speak selected text when the key is pressed:
-  - Command+Control+Esc
+  - Option+Esc
 #+END_SRC
 **** Visible Body
     :PROPERTIES:
