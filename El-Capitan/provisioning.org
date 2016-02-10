@@ -2932,9 +2932,12 @@ git clone bitbucket-`whoami`:grettke/grant-personal.git
 git clone bitbucket-`whoami`:grettke/correspondence.git
 git clone bitbucket-`whoami`:grettke/wnw.git
 git clone bitbucket-`whoami`:grettke/texmf.git
+git clone bitbucket-`whoami`:grettke/hardware
 cd ~/git/github
 git clone github-`whoami`:grettke/osx-provision.git
 git clone github-`whoami`:grettke/bash.git
+git clone github-`whoami`:grettke/wisdomandwonder.git
+git clone github-`whoami`:grettke/Linux-Nginx-MariaDB-PHP-WordPress.git
 #+end_src
 
 At this point, the Bash initialization files point at the directory with my
