@@ -1526,6 +1526,13 @@ brew install fortune
 :ID:       54BA64D3-899B-4AA4-A68F-237F68B0CF2F
 :END:
 
+You will want to know details about the software you are installing. Details
+include version number, dependencies, and post-installation requirements.
+Sometimes the recipes install old versions of the software and need to be
+updated. Sometimes recipes don't link the software and you need to do it
+manually. When you want details, you will have easy access to them that neither
+the Github GUI or the Brew Cask GUI easily provide.
+
 #+NAME: A61A74A8-B361-4395-B9DE-E6F843166511
 #+BEGIN_SRC sh
 cd ~/git/github-anonymous
