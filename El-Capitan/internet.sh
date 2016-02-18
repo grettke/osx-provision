@@ -41,3 +41,7 @@ brew cask install kindle
 # [[file:provisioning.org::*wget][59E4E9CA-178C-4901-9E02-F5D1CDE00BB4]]
 brew install wget
 # 59E4E9CA-178C-4901-9E02-F5D1CDE00BB4 ends here
+
+# [[file:provisioning.org::*Screenflow][536ADA22-0876-44F9-A76D-57B961A7A8A0]]
+brew cask install screenflow
+# 536ADA22-0876-44F9-A76D-57B961A7A8A0 ends here
