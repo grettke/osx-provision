@@ -2054,16 +2054,6 @@ brew install wget
 brew cask install screenflow
 #+END_SRC
 
-***** Inkscape
-:PROPERTIES:
-:ID:       72EDA305-E7BF-4DFD-AE0C-B51327B4D906
-:END:
-
-#+NAME: 145A61CB-36CB-4408-A094-7779E4983C85
-#+BEGIN_SRC sh
-brew cask install inkscape
-#+END_SRC
-
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./internet.org

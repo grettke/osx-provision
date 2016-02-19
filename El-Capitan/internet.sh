@@ -45,7 +45,3 @@ brew install wget
 # [[file:provisioning.org::*Screenflow][536ADA22-0876-44F9-A76D-57B961A7A8A0]]
 brew cask install screenflow
 # 536ADA22-0876-44F9-A76D-57B961A7A8A0 ends here
-
-# [[file:provisioning.org::*Inkscape][145A61CB-36CB-4408-A094-7779E4983C85]]
-brew cask install inkscape
-# 145A61CB-36CB-4408-A094-7779E4983C85 ends here
