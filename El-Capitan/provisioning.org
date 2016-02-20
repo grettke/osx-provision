@@ -2056,6 +2056,9 @@ brew cask install screenflow
 
 ***** inkscape
 
+- When I installed it via Brew-Cask the app would not run
+  - No errors were reported
+- Switched to brew
 - Installation notes
   - Lot of C++ stuff
   - Freetype
@@ -2069,10 +2072,7 @@ brew cask install screenflow
   - Avoid the builtin
     - get-text
     - icu4c
-
-- When I installed it via Brew-Cask the app would not run
-  - No errors were reported
-- When I installed via brew
+- Tried to run it
   - Fontconfig error: Cannot load default config file
   - Segmentation fault: 11
 
