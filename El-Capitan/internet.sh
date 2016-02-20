@@ -45,3 +45,7 @@ brew install wget
 # [[file:provisioning.org::*Screenflow][536ADA22-0876-44F9-A76D-57B961A7A8A0]]
 brew cask install screenflow
 # 536ADA22-0876-44F9-A76D-57B961A7A8A0 ends here
+
+# [[file:provisioning.org::*inkscape][97116D0B-68F4-4E15-B06C-CD9EF99A084A]]
+brew install homebrew/gui/inkscape
+# 97116D0B-68F4-4E15-B06C-CD9EF99A084A ends here

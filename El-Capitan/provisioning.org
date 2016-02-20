@@ -2055,6 +2055,9 @@ brew cask install screenflow
 #+END_SRC
 
 ***** inkscape
+:PROPERTIES:
+:ID:       6919160F-2681-4547-AB71-0D8CB19AD43C
+:END:
 
 - When I installed it via Brew-Cask the app would not run
   - No errors were reported
@@ -2075,6 +2078,8 @@ brew cask install screenflow
 - Tried to run it
   - Fontconfig error: Cannot load default config file
   - Segmentation fault: 11
+  - Set FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
+  - Tried running inkscape: it ran
 
 #+NAME: 97116D0B-68F4-4E15-B06C-CD9EF99A084A
 #+BEGIN_SRC sh
