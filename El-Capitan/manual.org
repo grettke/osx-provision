@@ -167,3 +167,24 @@ Server properties:
 
 - Nothing special
 # 05AD3C3A-761E-4CD5-8D45-FCF487A0DAEE ends here
+
+# [[file:provisioning.org::*Mousepose][BA8A896A-29EE-43F5-AF6C-B9DB80E18115]]
+* Mousepose
+
+- Grant "accessibility" permission
+- Settings
+  - Mousepose
+    - Toggle Hotkey: Control-Escape
+    - Advanced
+      - Increase hotkey: C-2
+      - Decrease hotkey: C-1
+      - Window focus toggle: C-3
+  - Mouse Clicks
+  - Keystrokes
+    - Default is standalone
+    - Hotkey: C-4
+  - Miscellaneous
+    - When logging in: Start Mousepose
+    - Show icon in: Menu bar
+- Bartend it
+# BA8A896A-29EE-43F5-AF6C-B9DB80E18115 ends here

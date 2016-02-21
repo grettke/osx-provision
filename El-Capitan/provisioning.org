@@ -2869,6 +2869,33 @@ Server properties:
 - Nothing special
 #+END_SRC
 
+***** Mousepose
+:PROPERTIES:
+:ID:       BBCE99EB-E786-4D38-B7B0-C46BEE2B1B43
+:END:
+
+#+NAME: BA8A896A-29EE-43F5-AF6C-B9DB80E18115
+#+BEGIN_SRC org
+,* Mousepose
+
+- Grant "accessibility" permission
+- Settings
+  - Mousepose
+    - Toggle Hotkey: Control-Escape
+    - Advanced
+      - Increase hotkey: C-2
+      - Decrease hotkey: C-1
+      - Window focus toggle: C-3
+  - Mouse Clicks
+  - Keystrokes
+    - Default is standalone
+    - Hotkey: C-4
+  - Miscellaneous
+    - When logging in: Start Mousepose
+    - Show icon in: Menu bar
+- Bartend it
+#+END_SRC
+
 *** Git
 :PROPERTIES:
 :ID:       A700593A-3D0C-49F0-AE05-2FAA5DFC95EF
