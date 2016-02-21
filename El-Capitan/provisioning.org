@@ -2086,6 +2086,16 @@ brew cask install screenflow
 brew install homebrew/gui/inkscape
 #+END_SRC
 
+***** gimp
+:PROPERTIES:
+:ID:       6C070BEE-9228-45F8-8440-F0198D6D6742
+:END:
+
+#+NAME: B9005B12-56A9-4AAF-ACF3-725C464B2D96
+#+BEGIN_SRC sh
+brew cask install gimp
+#+END_SRC
+
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./internet.org

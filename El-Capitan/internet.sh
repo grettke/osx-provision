@@ -49,3 +49,7 @@ brew cask install screenflow
 # [[file:provisioning.org::*inkscape][97116D0B-68F4-4E15-B06C-CD9EF99A084A]]
 brew install homebrew/gui/inkscape
 # 97116D0B-68F4-4E15-B06C-CD9EF99A084A ends here
+
+# [[file:provisioning.org::*gimp][B9005B12-56A9-4AAF-ACF3-725C464B2D96]]
+brew cask install gimp
+# B9005B12-56A9-4AAF-ACF3-725C464B2D96 ends here
