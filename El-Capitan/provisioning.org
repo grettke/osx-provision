@@ -1661,6 +1661,12 @@ brew cask install tuxera-ntfs
 - Check:
   - Return to Option_L
     (+ When you type Return only, send Return)
+- Under MenuBar
+  - [X] Show icon in menubar
+    - [X] Show settings name in menu bar
+  - SettingsList
+    - Create a new one named "Nothing"
+      - This is for "turning Karabiner off"      
 
 ,* Spectacle
 
