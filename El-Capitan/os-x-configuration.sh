@@ -265,10 +265,11 @@ defaults write com.apple.finder DisableAllAnimations -bool true
 # AF8A02A4-CFFC-4740-A6E9-3341F912906A ends here
 
 # [[file:provisioning.org::*Finder][5F9ED39D-B319-46AE-B64F-F8CCE66C14CB]]
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+defaults write com.apple.finder CreateDesktop -bool false
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 # 5F9ED39D-B319-46AE-B64F-F8CCE66C14CB ends here
 
 # [[file:provisioning.org::*Screen][A73210E6-B619-4523-BD19-A5F8951E8495]]

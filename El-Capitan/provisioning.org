@@ -1248,13 +1248,14 @@ Finder: disable window animations and Get Info animations.
 defaults write com.apple.finder DisableAllAnimations -bool true
 #+END_SRC
 
-Show icons for hard drives, servers, and removable media on the desktop.
+Show nothing on the desktop.
 #+NAME: 5F9ED39D-B319-46AE-B64F-F8CCE66C14CB
 #+BEGIN_SRC sh
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+defaults write com.apple.finder CreateDesktop -bool false
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 #+END_SRC
 
 ****** Screen
@@ -1666,7 +1667,7 @@ brew cask install tuxera-ntfs
     - [X] Show settings name in menu bar
   - SettingsList
     - Create a new one named "Nothing"
-      - This is for "turning Karabiner off"      
+      - This is for "turning Karabiner off"
 
 ,* Spectacle
 
