@@ -924,6 +924,12 @@ Automatically quit printer app once the print jobs complete.
 defaults write 'com.apple.print.PrintingPrefs' 'Quit When Finished' -bool true
 #+END_SRC
 
+Hide the menubar.
+#+NAME: 29013D61-3A46-42CB-80CF-7C896C69D56E
+#+BEGIN_SRC sh
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+#+END_SRC
+
 Add battery percentage in menubar.
 #+NAME: 8351B207-A376-4149-A876-4E3E8CE06732
 #+BEGIN_SRC sh

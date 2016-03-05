@@ -63,6 +63,10 @@ defaults write 'NSGlobalDomain' NSNavPanelExpandedStateForSaveMode2 -bool true
 defaults write 'com.apple.print.PrintingPrefs' 'Quit When Finished' -bool true
 # F6899984-2233-4027-BBEF-1005657C7B5E ends here
 
+# [[file:provisioning.org::*Globals,%20Logical%20or%20Literal][29013D61-3A46-42CB-80CF-7C896C69D56E]]
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+# 29013D61-3A46-42CB-80CF-7C896C69D56E ends here
+
 # [[file:provisioning.org::*Globals,%20Logical%20or%20Literal][8351B207-A376-4149-A876-4E3E8CE06732]]
 defaults write 'com.apple.menuextra.battery' ShowPercent -bool true
 # 8351B207-A376-4149-A876-4E3E8CE06732 ends here
