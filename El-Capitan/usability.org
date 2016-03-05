@@ -11,7 +11,7 @@
     - [X] Show settings name in menu bar
   - SettingsList
     - Create a new one named "Nothing"
-      - This is for "turning Karabiner off"      
+      - This is for "turning Karabiner off"
 
 * Spectacle
 
