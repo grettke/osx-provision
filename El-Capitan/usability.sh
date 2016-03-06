@@ -33,3 +33,7 @@ brew cask install xquartz
 # [[file:provisioning.org::*Tuxera%20NTFS][F09F391E-0A25-4B8D-B70F-6FD35A103D95]]
 brew cask install tuxera-ntfs
 # F09F391E-0A25-4B8D-B70F-6FD35A103D95 ends here
+
+# [[file:provisioning.org::*SwitchResX][A503FA0B-E147-40BC-BD01-E2EF3E09E259]]
+brew cask install switchresx
+# A503FA0B-E147-40BC-BD01-E2EF3E09E259 ends here

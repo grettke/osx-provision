@@ -1653,6 +1653,16 @@ brew cask install xquartz
 brew cask install tuxera-ntfs
 #+END_SRC
 
+***** SwitchResX
+:PROPERTIES:
+:ID:       12A91877-4049-4C92-8430-71DEA1B5B66F
+:END:
+
+#+NAME: A503FA0B-E147-40BC-BD01-E2EF3E09E259
+#+BEGIN_SRC sh
+brew cask install switchresx
+#+END_SRC
+
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./usability.org
@@ -1743,16 +1753,24 @@ Granting:
   - Bluetooth
   - Wifi
 - Hide everything else
+
 ,* flux
 
 ,*Only install on hosts*
 
 - Enable at startup
+
 ,* Tuxera NTFS
 
 - Install it
   - brew only downloads the installer
 - License it
+
+,* SwitchResX
+
+- General Settings
+  - Startup Settings
+    - [X] Launch SwitchResX Daemon automatically after login
 #+END_SRC
 
 *** Utility
