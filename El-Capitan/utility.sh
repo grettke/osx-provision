@@ -26,6 +26,10 @@ brew install graphviz
 brew install pandoc
 # CA898FBA-220E-4B52-8E1E-8857131AA6D8 ends here
 
+# [[file:provisioning.org::*Marked%202][8BDE1375-27EE-4D93-BE7A-EC3CB66A7A96]]
+brew cask install marked
+# 8BDE1375-27EE-4D93-BE7A-EC3CB66A7A96 ends here
+
 # [[file:provisioning.org::*ImageMagic][11D7F839-3D03-4622-832E-5AE11874BFD6]]
 brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
 # 11D7F839-3D03-4622-832E-5AE11874BFD6 ends here

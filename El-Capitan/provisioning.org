@@ -1843,6 +1843,15 @@ brew install graphviz
 #+BEGIN_SRC sh
 brew install pandoc
 #+END_SRC
+***** Marked 2
+:PROPERTIES:
+:ID:       844E1D37-0246-4C05-A52F-DE69DBB9B8BD
+:END:
+
+#+NAME: 8BDE1375-27EE-4D93-BE7A-EC3CB66A7A96
+#+BEGIN_SRC sh
+brew cask install marked
+#+END_SRC
 ***** ImageMagic
 :PROPERTIES:
 :ID:       CBBBABD0-B049-4669-B113-4417A04DD613
@@ -1950,6 +1959,18 @@ brew install figlet
 #+NAME: C03CD9F2-0630-4E70-A20D-3D43931CE8FA
 #+BEGIN_SRC sh
 brew cask install freemind
+#+END_SRC
+**** Configure
+:PROPERTIES:
+:header-args: :tangle ./utility.org
+:ID:       D49412F1-54B0-4551-A449-6D353D1F973D
+:END:
+
+#+NAME: 465FEE16-2EC6-475F-B2C4-C68E9E10E45F
+#+BEGIN_SRC org
+,* Marked 2
+
+- License it
 #+END_SRC
 *** Internet
 :PROPERTIES:
