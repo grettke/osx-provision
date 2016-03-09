@@ -1768,6 +1768,7 @@ Granting:
 
 ,* SwitchResX
 
+- License it
 - General Settings
   - Startup Settings
     - [X] Launch SwitchResX Daemon automatically after login

@@ -159,6 +159,14 @@
 -   Download speed is the weakest link
     -   Separate work into separate steps to get downloads finished and configure
         later
+-   Every single provisioning run is different because
+    -   You learn new things: want to fix stuff, want to make it better
+    -   Things change: new versions, stuff not available
+    -   Everything you script ends up being designed around being able to make
+        mistakes
+        -   Easily resize partitions
+        -   Easily reprovision (idempotent)
+        -   Easily recover from unknowns and errors and learning
 
 # Dictionary
 
@@ -886,6 +894,12 @@ First thing is to get these scripts from GitHub either:
             defaults write 'com.apple.print.PrintingPrefs' 'Quit When Finished' -bool true
             ```
 
+            Hide the menubar.
+
+            ```sh
+            defaults write NSGlobalDomain _HIHideMenuBar -bool true
+            ```
+
             Add battery percentage in menubar.
 
             ```sh
@@ -1209,13 +1223,14 @@ First thing is to get these scripts from GitHub either:
             defaults write com.apple.finder DisableAllAnimations -bool true
             ```
 
-            Show icons for hard drives, servers, and removable media on the desktop.
+            Show nothing on the desktop.
 
             ```sh
-            defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-            defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
-            defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
-            defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+            defaults write com.apple.finder CreateDesktop -bool false
+            defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+            defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+            defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+            defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
             ```
 
         5.  Screen
@@ -1466,6 +1481,13 @@ First thing is to get these scripts from GitHub either:
 
             ID: 54BA64D3-899B-4AA4-A68F-237F68B0CF2F
 
+        You will want to know details about the software you are installing. Details
+        include version number, dependencies, and post-installation requirements.
+        Sometimes the recipes install old versions of the software and need to be
+        updated. Sometimes recipes don&rsquo;t link the software and you need to do it
+        manually. When you want details, you will have easy access to them that neither
+        the Github GUI or the Brew Cask GUI easily provide.
+
         ```sh
         cd ~/git/github-anonymous
         git clone https://github.com/Homebrew/homebrew.git
@@ -1560,6 +1582,22 @@ First thing is to get these scripts from GitHub either:
         brew cask install xquartz
         ```
 
+    7.  Tuxera NTFS
+
+            ID: 18B65FB4-8884-4920-9A54-4A4CECBFED3F
+
+        ```sh
+        brew cask install tuxera-ntfs
+        ```
+
+    8.  SwitchResX
+
+            ID: 12A91877-4049-4C92-8430-71DEA1B5B66F
+
+        ```sh
+        brew cask install switchresx
+        ```
+
 2.  Configure
 
         header-args: :tangle ./usability.org
@@ -1574,6 +1612,12 @@ First thing is to get these scripts from GitHub either:
     - Check:
       - Return to Option_L
         (+ When you type Return only, send Return)
+    - Under MenuBar
+      - [X] Show icon in menubar
+        - [X] Show settings name in menu bar
+      - SettingsList
+        - Create a new one named "Nothing"
+          - This is for "turning Karabiner off"
 
     * Spectacle
 
@@ -1643,11 +1687,24 @@ First thing is to get these scripts from GitHub either:
       - Bluetooth
       - Wifi
     - Hide everything else
+
     * flux
 
     *Only install on hosts*
 
     - Enable at startup
+
+    * Tuxera NTFS
+
+    - Install it
+      - brew only downloads the installer
+    - License it
+
+    * SwitchResX
+
+    - General Settings
+      - Startup Settings
+        - [X] Launch SwitchResX Daemon automatically after login
     ```
 
 ### Utility
@@ -1716,7 +1773,15 @@ First thing is to get these scripts from GitHub either:
         brew install pandoc
         ```
 
-    8.  ImageMagic
+    8.  Marked 2
+
+            ID: 844E1D37-0246-4C05-A52F-DE69DBB9B8BD
+
+        ```sh
+        brew cask install marked
+        ```
+
+    9.  ImageMagic
 
             ID: CBBBABD0-B049-4669-B113-4417A04DD613
 
@@ -1724,7 +1789,7 @@ First thing is to get these scripts from GitHub either:
         brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
         ```
 
-    9.  povray
+    10. povray
 
             ID: 196A365A-802C-48F4-B35D-02958CF95E78
 
@@ -1732,7 +1797,7 @@ First thing is to get these scripts from GitHub either:
         brew install povray --with-openexr
         ```
 
-    10. growlnotify
+    11. growlnotify
 
             ID: 9367E78C-5F6F-44A2-A370-CD0AF9D41F40
 
@@ -1740,7 +1805,7 @@ First thing is to get these scripts from GitHub either:
         brew cask install growlnotify
         ```
 
-    11. xmllint
+    12. xmllint
 
             ID: 55AFF634-C899-4667-BC25-47F9099DFF9A
 
@@ -1748,7 +1813,7 @@ First thing is to get these scripts from GitHub either:
         brew install libxml2
         ```
 
-    12. dos2unix
+    13. dos2unix
 
             ID: 59D47685-D541-4D78-88BF-F3313FE7DF10
 
@@ -1756,7 +1821,18 @@ First thing is to get these scripts from GitHub either:
         brew install dos2unix
         ```
 
-    13. ccrypt
+        Sometimes installation [fails](https://github.com/Homebrew/homebrew/issues/33622) with the error.
+
+            gcr@vela:.../man/de/man1⮞ brew link dos2unix
+            Linking /usr/local/Cellar/dos2unix/7.3.2...
+            Error: Could not symlink share/man/de/man1/dos2unix.1
+            /usr/local/share/man/de/man1 is not writable.
+
+        The solution is.
+
+            chown -R `whoami` /usr/local/share/man/de/man1
+
+    14. ccrypt
 
             ID: F9E3F2A3-F16A-4EB8-8F4F-4FF47C7BBE06
 
@@ -1764,7 +1840,7 @@ First thing is to get these scripts from GitHub either:
         brew install ccrypt
         ```
 
-    14. tree
+    15. tree
 
             ID: 8A7F33C7-CF3D-4E64-A63E-2AECD13FFD5F
 
@@ -1772,7 +1848,7 @@ First thing is to get these scripts from GitHub either:
         brew install tree
         ```
 
-    15. archey
+    16. archey
 
             ID: AAF25357-3F8F-4A19-902D-D494D4D7FE38
 
@@ -1780,7 +1856,7 @@ First thing is to get these scripts from GitHub either:
         brew install archey
         ```
 
-    16. figlet
+    17. figlet
 
             ID: ADF24324-CF88-44E0-BE77-DC65DF37502E
 
@@ -1788,13 +1864,45 @@ First thing is to get these scripts from GitHub either:
         brew install figlet
         ```
 
-    17. Freemind
+    18. Freemind
 
             ID: A867B6FD-CD3A-4D5F-9EAF-26E96D31D760
 
         ```sh
         brew cask install freemind
         ```
+
+2.  Configure
+
+        header-args: :tangle ./utility.org
+
+        ID: D49412F1-54B0-4551-A449-6D353D1F973D
+
+    ```org
+    * Marked 2
+
+    - License it
+    - Chose "Code" profile which chooses
+      - Default style: Github
+      - Processor: Discount (GFM)
+      - Syntax Highlight Style: Github
+      - Enabled
+        - Syntax Highlighting
+        - GitHub Checkboxes
+        - MathJaxq
+    - Preferences
+      - General
+        - [ ] Show Style Picker
+        - [ ] Show word count
+      - Preview
+        - [X] Enable Mini Map navigation
+        - [X] Show scroll progress indicator
+        - [X] Automatically validate URLs on update
+      - Style
+        - Default style: GitHub
+      - Proofing
+        - [X] Highlight Markdown syntax errors
+    ```
 
 ### Internet
 
@@ -1899,6 +2007,60 @@ First thing is to get these scripts from GitHub either:
         brew cask install kindle
         ```
 
+    11. wget
+
+            ID: C55C637C-818F-40C4-B55A-39641BB1FAD2
+
+        ```sh
+        brew install wget
+        ```
+
+    12. Screenflow
+
+            ID: 3D67DF5D-CB4A-4C75-B587-1A5724259216
+
+        ```sh
+        brew cask install screenflow
+        ```
+
+    13. inkscape
+
+            ID: 6919160F-2681-4547-AB71-0D8CB19AD43C
+
+        -   When I installed it via Brew-Cask the app would not run
+            -   No errors were reported
+        -   Switched to brew
+        -   Installation notes
+            -   Lot of C++ stuff
+            -   Freetype
+            -   Fontconfig
+            -   cairo
+            -   gsl
+            -   gobject-introspection
+            -   gtk
+            -   pango
+            -   harfbuzz
+            -   Avoid the builtin
+                -   get-text
+                -   icu4c
+        -   Tried to run it
+            -   Fontconfig error: Cannot load default config file
+            -   Segmentation fault: 11
+            -   Set FONTCONFIG<sub>PATH</sub>=/opt/X11/lib/X11/fontconfig
+            -   Tried running inkscape: it ran
+
+        ```sh
+        brew install homebrew/gui/inkscape
+        ```
+
+    14. gimp
+
+            ID: 6C070BEE-9228-45F8-8440-F0198D6D6742
+
+        ```sh
+        brew cask install gimp
+        ```
+
 2.  Configure
 
         header-args: :tangle ./internet.org
@@ -1968,6 +2130,10 @@ First thing is to get these scripts from GitHub either:
     * Kindle
 
     - Login
+
+    * Screenflow
+
+    - Register
     ```
 
 ### DevOps
@@ -2021,6 +2187,7 @@ First thing is to get these scripts from GitHub either:
         ```sh
         if [ ! -d "/Library/Application Support/VMware Tools" ]; then
             brew cask install vagrant
+            vagrant plugin install vagrant-digitalocean
         else
             echo "vagrant: Only install on hosts"
         fi
@@ -2448,6 +2615,8 @@ First thing is to get these scripts from GitHub either:
     - Dictation
     - Enable
     - Yes: Use Enhanced Dictation
+    - [X] Speak selected text when the key is pressed:
+      - Option+Esc
     ```
 
 4.  Visible Body
@@ -2504,7 +2673,18 @@ First thing is to get these scripts from GitHub either:
     Set Dictation & Text to Speech to: Callie
     ```
 
-8.  App Store Installs
+8.  Pushbullet
+
+        ID: 3CF13F86-EFBB-4CCD-A169-FC803EE5E2E7
+
+    -   Sign in, it is web app
+    -   Allow contact access
+    -   Install into Chrome, choose it
+    -   [X] Text from phone
+    -   [X] See notifications
+    -   Configure nothing else
+
+9.  App Store Installs
 
         ID: 798AD4C6-AFB7-4AB6-B794-16E1E83CDF5C
 
@@ -2604,7 +2784,12 @@ First thing is to get these scripts from GitHub either:
         ```org
         * Text2Speech PRO
 
-        - Set default voice to Callie
+        - General
+          - Preferences
+            - Voice :: Cepstral Callie
+            - Speaking Rate :: 175 w/m
+            - App check text encoding failover :: UTF-8
+            - [ ] Send file to iTunes
         ```
 
     6.  PixelMator
@@ -2615,6 +2800,31 @@ First thing is to get these scripts from GitHub either:
         * PixelMator
 
         - Nothing special
+        ```
+
+    7.  Mousepose
+
+            ID: BBCE99EB-E786-4D38-B7B0-C46BEE2B1B43
+
+        ```org
+        * Mousepose
+
+        - Grant "accessibility" permission
+        - Settings
+          - Mousepose
+            - Toggle Hotkey: Control-Escape
+            - Advanced
+              - Increase hotkey: C-2
+              - Decrease hotkey: C-1
+              - Window focus toggle: C-3
+          - Mouse Clicks
+          - Keystrokes
+            - Default is standalone
+            - Hotkey: C-4
+          - Miscellaneous
+            - When logging in: Start Mousepose
+            - Show icon in: Menu bar
+        - Bartend it
         ```
 
 ### Git
@@ -2737,9 +2947,12 @@ First thing is to get these scripts from GitHub either:
     git clone bitbucket-`whoami`:grettke/correspondence.git
     git clone bitbucket-`whoami`:grettke/wnw.git
     git clone bitbucket-`whoami`:grettke/texmf.git
+    git clone bitbucket-`whoami`:grettke/hardware
     cd ~/git/github
     git clone github-`whoami`:grettke/osx-provision.git
     git clone github-`whoami`:grettke/bash.git
+    git clone github-`whoami`:grettke/wisdomandwonder.git
+    git clone github-`whoami`:grettke/Linux-Nginx-MariaDB-PHP-WordPress.git
     ```
 
     At this point, the Bash initialization files point at the directory with my
