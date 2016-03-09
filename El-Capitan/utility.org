@@ -2,4 +2,24 @@
 * Marked 2
 
 - License it
+- Chose "Code" profile which chooses
+  - Default style: Github
+  - Processor: Discount (GFM)
+  - Syntax Highlight Style: Github
+  - Enabled
+    - Syntax Highlighting
+    - GitHub Checkboxes
+    - MathJaxq
+- Preferences
+  - General
+    - [ ] Show Style Picker
+    - [ ] Show word count
+  - Preview
+    - [X] Enable Mini Map navigation
+    - [X] Show scroll progress indicator
+    - [X] Automatically validate URLs on update
+  - Style
+    - Default style: GitHub
+  - Proofing
+    - [X] Highlight Markdown syntax errors
 # 465FEE16-2EC6-475F-B2C4-C68E9E10E45F ends here
