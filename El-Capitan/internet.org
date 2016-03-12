@@ -8,7 +8,12 @@
 * Adobe Flash Player
 
 - Install manually
+  - Chrome
+    - Adobe reports Chrome as already having it
+  - Firefox
+    - Adobe has you install something
 - Verify
+  - http://www.adobe.com/software/flash/about/
 
 * Skype
 
