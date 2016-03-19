@@ -2830,6 +2830,28 @@ Set Dictation & Text to Speech to: Callie
 - [X] See notifications
 - Configure nothing else
 
+**** Ink2Go
+:PROPERTIES:
+:ID:       03A7A747-85CA-4414-A41D-7B9A2CC2B1A5
+:END:
+
+#+NAME: 2534FD8E-2749-4EE5-87C3-B813B25AF4BB
+#+BEGIN_SRC org
+,* Ink2Go
+
+- [[http://ink2go.org/][Here]]
+- License it
+- Preferences
+  - Keyboard Shortcuts
+    - Option-F12: Activate
+    - Option-F11: Activate+Pen
+  - Toolbar
+    - Everything enabled but
+      - Crop / Pause
+      - Record / Stop
+      - Webcam
+#+END_SRC
+
 **** App Store Installs
    :PROPERTIES:
    :ID:       798AD4C6-AFB7-4AB6-B794-16E1E83CDF5C

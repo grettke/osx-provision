@@ -78,6 +78,22 @@ License them. Test them.
 Set Dictation & Text to Speech to: Callie
 # 350809D4-E824-4F60-B121-CD6E34B62075 ends here
 
+# [[file:provisioning.org::*Ink2Go][2534FD8E-2749-4EE5-87C3-B813B25AF4BB]]
+* Ink2Go
+
+- [[http://ink2go.org/][Here]]
+- License it
+- Preferences
+  - Keyboard Shortcuts
+    - Option-F12: Activate
+    - Option-F11: Activate+Pen
+  - Toolbar
+    - Everything enabled but
+      - Crop / Pause
+      - Record / Stop
+      - Webcam
+# 2534FD8E-2749-4EE5-87C3-B813B25AF4BB ends here
+
 # [[file:provisioning.org::*Debtinator][C621D8B5-B34E-48D7-BF7A-C8E316BA10FB]]
 * Debtinator
 
