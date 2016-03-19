@@ -78,6 +78,17 @@ License them. Test them.
 Set Dictation & Text to Speech to: Callie
 # 350809D4-E824-4F60-B121-CD6E34B62075 ends here
 
+# [[file:provisioning.org::*Pushbullet][D47EAF07-91D0-4916-B6CD-AD0D126C05A9]]
+* Pushbullet
+
+- Sign in, it is web app
+- Allow contact access
+- Install into Chrome, choose it
+- [X] Text from phone
+- [X] See notifications
+- Configure nothing else
+# D47EAF07-91D0-4916-B6CD-AD0D126C05A9 ends here
+
 # [[file:provisioning.org::*Ink2Go][2534FD8E-2749-4EE5-87C3-B813B25AF4BB]]
 * Ink2Go
 

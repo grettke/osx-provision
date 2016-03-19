@@ -2823,6 +2823,10 @@ Set Dictation & Text to Speech to: Callie
 :ID:       3CF13F86-EFBB-4CCD-A169-FC803EE5E2E7
 :END:
 
+#+NAME: D47EAF07-91D0-4916-B6CD-AD0D126C05A9
+#+BEGIN_SRC org
+,* Pushbullet
+
 - Sign in, it is web app
 - Allow contact access
 - Install into Chrome, choose it
@@ -2830,6 +2834,7 @@ Set Dictation & Text to Speech to: Callie
 - [X] See notifications
 - Configure nothing else
 
+#+END_SRC
 **** Ink2Go
 :PROPERTIES:
 :ID:       03A7A747-85CA-4414-A41D-7B9A2CC2B1A5
