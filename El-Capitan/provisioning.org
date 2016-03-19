@@ -1770,6 +1770,8 @@ Granting:
 
 - License it
 - General Settings
+  - Key shortcut
+    - Open: Command-F10
   - Startup Settings
     - [X] Launch SwitchResX Daemon automatically after login
 #+END_SRC
@@ -2848,8 +2850,8 @@ Set Dictation & Text to Speech to: Callie
 - License it
 - Preferences
   - Keyboard Shortcuts
-    - Option-F12: Activate
-    - Option-F11: Activate+Pen
+    - Command-F12: Activate
+    - Command-F11: Activate+Pen
   - Toolbar
     - Everything enabled but
       - Crop / Pause
