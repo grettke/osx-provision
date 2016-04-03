@@ -3015,6 +3015,16 @@ Server properties:
 - Bartend it
 #+END_SRC
 
+***** Webcam Settings By Mactaris
+:PROPERTIES:
+:ID:       AB612B97-BDFA-4322-AF4A-C4F9CDFE392B
+:END:
+#+NAME: 142DA74D-407B-4F49-B833-093BB5EB83B6
+#+BEGIN_SRC org
+,* Webcam Settings By Mactaris
+
+- Be sure to set the white balance
+#+END_SRC
 *** Git
 :PROPERTIES:
 :ID:       A700593A-3D0C-49F0-AE05-2FAA5DFC95EF

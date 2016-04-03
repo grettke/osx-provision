@@ -215,3 +215,9 @@ Server properties:
     - Show icon in: Menu bar
 - Bartend it
 # BA8A896A-29EE-43F5-AF6C-B9DB80E18115 ends here
+
+# [[file:provisioning.org::*Webcam%20Settings%20By%20Mactaris][142DA74D-407B-4F49-B833-093BB5EB83B6]]
+* Webcam Settings By Mactaris
+
+- Be sure to set the white balance
+# 142DA74D-407B-4F49-B833-093BB5EB83B6 ends here
