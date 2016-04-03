@@ -1663,6 +1663,14 @@ brew cask install tuxera-ntfs
 brew cask install switchresx
 #+END_SRC
 
+***** OpenSCAD
+:PROPERTIES:
+:ID:       865B8B77-061A-4C5C-AB0D-B15F2261B5F5
+:END:
+#+NAME: A8071E74-A1A0-4AB8-A72C-8E1DF0B2F2B6
+#+BEGIN_SRC sh
+brew cask install openscad
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./usability.org
