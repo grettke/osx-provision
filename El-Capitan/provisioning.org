@@ -1782,6 +1782,11 @@ Granting:
     - Open: Command-F10
   - Startup Settings
     - [X] Launch SwitchResX Daemon automatically after login
+
+,* OpenSCAD
+
+- View
+  - Hide editor
 #+END_SRC
 
 *** Utility
