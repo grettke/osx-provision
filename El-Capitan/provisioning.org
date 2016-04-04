@@ -2793,6 +2793,15 @@ mkdir ~/.Rpackages
   - Integration
   - Snippets
   - Updates: Automatically, Saily
+
+,* XCode
+
+- Preferences
+  - Downloads
+    - Components (Document things that I installed)
+    - Documentation (Document things that I installed)
+    - Stand alone checkbox
+      - No: Check for and install updates automatically
 #+END_SRC
 *** Manual
 :PROPERTIES:
