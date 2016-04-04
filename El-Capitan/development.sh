@@ -67,3 +67,7 @@ brew cask install r
 # [[file:provisioning.org::*R%20Studio][8D154800-90B1-4D63-9B75-D6C3F61FED9E]]
 brew cask install rstudio
 # 8D154800-90B1-4D63-9B75-D6C3F61FED9E ends here
+
+# [[file:provisioning.org::*Dash][23B49731-0AA0-4FD9-AA2F-EEBBCF21C3F9]]
+brew cask install dash
+# 23B49731-0AA0-4FD9-AA2F-EEBBCF21C3F9 ends here
