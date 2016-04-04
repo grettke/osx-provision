@@ -2800,6 +2800,9 @@ mkdir ~/.Rpackages
   - Downloads
     - Components (Document things that I installed)
     - Documentation (Document things that I installed)
+      - iOS 9.2 Documentation
+      - OS X 10.11.2 Documentation
+      - XCode 7.2 Documentation
     - Stand alone checkbox
       - No: Check for and install updates automatically
 #+END_SRC

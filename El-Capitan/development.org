@@ -187,4 +187,16 @@ mkdir ~/.Rpackages
   - Integration
   - Snippets
   - Updates: Automatically, Saily
+
+* XCode
+
+- Preferences
+  - Downloads
+    - Components (Document things that I installed)
+    - Documentation (Document things that I installed)
+      - iOS 9.2 Documentation
+      - OS X 10.11.2 Documentation
+      - XCode 7.2 Documentation
+    - Stand alone checkbox
+      - No: Check for and install updates automatically
 # 64C2907C-7D2E-4EEA-A9EC-9AE77C823D1C ends here
