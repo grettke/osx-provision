@@ -1760,6 +1760,9 @@ Granting:
   - Little Snitch
   - Bluetooth
   - Wifi
+  - SwitchResX
+  - Webcam Settings
+  - Screenflow
 - Hide everything else
 
 ,* flux
