@@ -199,4 +199,8 @@ mkdir ~/.Rpackages
       - XCode 7.2 Documentation
     - Stand alone checkbox
       - No: Check for and install updates automatically
+
+* The Silver Searcher
+
+- NA
 # 64C2907C-7D2E-4EEA-A9EC-9AE77C823D1C ends here

@@ -1663,14 +1663,6 @@ brew cask install tuxera-ntfs
 brew cask install switchresx
 #+END_SRC
 
-***** OpenSCAD
-:PROPERTIES:
-:ID:       865B8B77-061A-4C5C-AB0D-B15F2261B5F5
-:END:
-#+NAME: A8071E74-A1A0-4AB8-A72C-8E1DF0B2F2B6
-#+BEGIN_SRC sh
-brew cask install openscad
-#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./usability.org
@@ -1785,11 +1777,6 @@ Granting:
     - Open: Command-F10
   - Startup Settings
     - [X] Launch SwitchResX Daemon automatically after login
-
-,* OpenSCAD
-
-- View
-  - Hide editor
 #+END_SRC
 
 *** Utility
@@ -1801,6 +1788,14 @@ Granting:
 :header-args: :tangle ./utility.sh :tangle-mode (identity #o755)
 :ID:       F2B0FCF0-1F56-4D3B-AC9F-10F4E430BBE2
 :END:
+***** OpenSCAD
+:PROPERTIES:
+:ID:       865B8B77-061A-4C5C-AB0D-B15F2261B5F5
+:END:
+#+NAME: A8071E74-A1A0-4AB8-A72C-8E1DF0B2F2B6
+#+BEGIN_SRC sh
+brew cask install openscad
+#+END_SRC
 ***** Java
 :PROPERTIES:
 :ID:       7E76DE2C-7836-44B0-8636-90BB876A5E33
@@ -1987,6 +1982,11 @@ brew cask install freemind
 
 #+NAME: 465FEE16-2EC6-475F-B2C4-C68E9E10E45F
 #+BEGIN_SRC org
+,* OpenSCAD
+
+- View
+  - Hide editor
+
 ,* Marked 2
 
 - License it
@@ -2601,6 +2601,14 @@ brew cask install rstudio
 #+BEGIN_SRC sh
 brew cask install dash
 #+END_SRC
+*** The Silver Searcher
+:PROPERTIES:
+:ID:       AD5FD9EA-E427-458A-9B25-244177D08640
+:END:
+#+NAME: 4B420426-4B25-4E40-AB5C-F7EDDDB4C0AA
+#+BEGIN_SRC sh
+brew install the_silver_searcher
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./development.org
@@ -2808,6 +2816,10 @@ mkdir ~/.Rpackages
       - XCode 7.2 Documentation
     - Stand alone checkbox
       - No: Check for and install updates automatically
+
+,* The Silver Searcher
+
+- NA
 #+END_SRC
 *** Manual
 :PROPERTIES:

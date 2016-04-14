@@ -37,7 +37,3 @@ brew cask install tuxera-ntfs
 # [[file:provisioning.org::*SwitchResX][A503FA0B-E147-40BC-BD01-E2EF3E09E259]]
 brew cask install switchresx
 # A503FA0B-E147-40BC-BD01-E2EF3E09E259 ends here
-
-# [[file:provisioning.org::*OpenSCAD][A8071E74-A1A0-4AB8-A72C-8E1DF0B2F2B6]]
-brew cask install openscad
-# A8071E74-A1A0-4AB8-A72C-8E1DF0B2F2B6 ends here
