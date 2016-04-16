@@ -3152,6 +3152,19 @@ Server properties:
 
 - Be sure to set the white balance
 #+END_SRC
+
+***** Key Codes
+:PROPERTIES:
+:ID:       DE26900A-EB07-4BC9-9301-C642A7B8BE81
+:END:
+
+#+NAME: 9AB3A903-24AA-430D-9B74-D0B9D787C2DD
+#+BEGIN_SRC org
+,* Key Codes
+
+- Nothing special
+#+END_SRC
+
 *** Git
 :PROPERTIES:
 :ID:       A700593A-3D0C-49F0-AE05-2FAA5DFC95EF

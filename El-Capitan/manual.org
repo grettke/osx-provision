@@ -221,3 +221,9 @@ Server properties:
 
 - Be sure to set the white balance
 # 142DA74D-407B-4F49-B833-093BB5EB83B6 ends here
+
+# [[file:provisioning.org::*Key%20Codes][9AB3A903-24AA-430D-9B74-D0B9D787C2DD]]
+* Key Codes
+
+- Nothing special
+# 9AB3A903-24AA-430D-9B74-D0B9D787C2DD ends here
