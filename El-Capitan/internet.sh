@@ -53,3 +53,7 @@ brew install homebrew/gui/inkscape
 # [[file:provisioning.org::*gimp][B9005B12-56A9-4AAF-ACF3-725C464B2D96]]
 brew cask install gimp
 # B9005B12-56A9-4AAF-ACF3-725C464B2D96 ends here
+
+# [[file:provisioning.org::*FreeCAD][10A88007-A1AC-4866-A500-C3589478E2E8]]
+brew cask install freecad
+# 10A88007-A1AC-4866-A500-C3589478E2E8 ends here
