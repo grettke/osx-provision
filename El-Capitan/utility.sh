@@ -2,6 +2,10 @@
 brew cask install openscad
 # A8071E74-A1A0-4AB8-A72C-8E1DF0B2F2B6 ends here
 
+# [[file:provisioning.org::*FreeCAD][10A88007-A1AC-4866-A500-C3589478E2E8]]
+brew cask install freecad
+# 10A88007-A1AC-4866-A500-C3589478E2E8 ends here
+
 # [[file:provisioning.org::*Java][274A6FA4-B619-422A-8546-C1DCE6C47B63]]
 brew cask install java
 # 274A6FA4-B619-422A-8546-C1DCE6C47B63 ends here

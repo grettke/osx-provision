@@ -1796,6 +1796,16 @@ Granting:
 #+BEGIN_SRC sh
 brew cask install openscad
 #+END_SRC
+***** FreeCAD
+:PROPERTIES:
+:ID:       3B4888B4-87C5-4108-A4C8-E2E5D835FFC3
+:END:
+
+#+NAME: 10A88007-A1AC-4866-A500-C3589478E2E8
+#+BEGIN_SRC sh
+brew cask install freecad
+#+END_SRC
+
 ***** Java
 :PROPERTIES:
 :ID:       7E76DE2C-7836-44B0-8636-90BB876A5E33
@@ -2185,16 +2195,6 @@ brew install homebrew/gui/inkscape
 #+NAME: B9005B12-56A9-4AAF-ACF3-725C464B2D96
 #+BEGIN_SRC sh
 brew cask install gimp
-#+END_SRC
-
-***** FreeCAD
-:PROPERTIES:
-:ID:       3B4888B4-87C5-4108-A4C8-E2E5D835FFC3
-:END:
-
-#+NAME: 10A88007-A1AC-4866-A500-C3589478E2E8
-#+BEGIN_SRC sh
-brew cask install freecad
 #+END_SRC
 
 **** Configure
