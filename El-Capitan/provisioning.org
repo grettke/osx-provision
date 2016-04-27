@@ -2706,9 +2706,10 @@ brew install the_silver_searcher
       - Right margin column: 80
       - Wrap on typing: YES
     - Colors & Fonts
+      - [[https://github.com/jkaving/intellij-colors-solarized][Solarized Theme]]: Dark
+        - Do this first
       - Font
         - DJSM 17
-      - [[https://github.com/jkaving/intellij-colors-solarized][Solarized Theme]]: Dark
       - General
         - Caret: #839496
 ,* WebStorm
