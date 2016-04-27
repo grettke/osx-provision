@@ -2702,14 +2702,15 @@ brew install the_silver_searcher
         - Show line numbers
         - Use block caret
         - nil Caret blinking
+    - Code Style
+      - Right margin column: 80
+      - Wrap on typing: YES
     - Colors & Fonts
       - Font
         - DJSM 17
       - [[https://github.com/jkaving/intellij-colors-solarized][Solarized Theme]]: Dark
       - General
         - Caret: #839496
-    - Code Style
-      - Right margin column: 80
 ,* WebStorm
 - Same configuration as PyCharm
 
