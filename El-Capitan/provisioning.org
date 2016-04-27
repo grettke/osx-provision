@@ -2710,8 +2710,8 @@ brew install the_silver_searcher
         - Do this first
       - Font
         - DJSM 17
-      - General
-        - Caret: #839496
+      - General 
+        - Editor -> Caret: #839496
 ,* WebStorm
 - Same configuration as PyCharm
 
