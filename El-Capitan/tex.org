@@ -1,4 +1,4 @@
-# [[file:provisioning.org::*Configure][ED1E3F61-2842-4EA3-A5BF-22B76B0DEBEA]]
+# [[file:provisioning.org::ED1E3F61-2842-4EA3-A5BF-22B76B0DEBEA][ED1E3F61-2842-4EA3-A5BF-22B76B0DEBEA]]
 - I value seeing these commands succeed so pasting them is OK
 - MacTeX installation is typically so painful that I want this part to be easy
 

@@ -1,4 +1,4 @@
-# [[file:provisioning.org::*Installation][639707FE-FE60-439E-A8C8-9FBD9936D1C4]]
+# [[file:provisioning.org::639707FE-FE60-439E-A8C8-9FBD9936D1C4][639707FE-FE60-439E-A8C8-9FBD9936D1C4]]
 - Re-image your box
   - Host :: ~PHOSDI~
   - Guest :: ~IOSXECA~

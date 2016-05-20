@@ -1,4 +1,4 @@
-# [[file:provisioning.org::*Configure][64C2907C-7D2E-4EEA-A9EC-9AE77C823D1C]]
+# [[file:provisioning.org::64C2907C-7D2E-4EEA-A9EC-9AE77C823D1C][64C2907C-7D2E-4EEA-A9EC-9AE77C823D1C]]
 * DeltaWalker
 
 - Drag the bundle into Applications
@@ -71,19 +71,20 @@
   - Editor
     - General
       - Use soft wraps
-      - Use soft wraps in console
       - Appearance
         - Show line numbers
         - Use block caret
         - nil Caret blinking
-    - Colors & Fonts
-      - [[https://github.com/jkaving/intellij-colors-solarized][Solarized Theme]]: Dark
-      - General
-        - Caret: #839496
-      - Font
-        - DJSM 17
     - Code Style
       - Right margin column: 80
+      - Wrap on typing: YES
+    - Colors & Fonts
+      - [[https://github.com/jkaving/intellij-colors-solarized][Solarized Theme]]: Dark
+        - Do this first
+      - Font
+        - DJSM 17
+      - General
+        - Editor -> Caret: #839496
 * WebStorm
 - Same configuration as PyCharm
 

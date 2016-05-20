@@ -1,4 +1,4 @@
-# [[file:provisioning.org::*Install][916D6512-03E7-4971-8BAC-53D6FA258BBD]]
+# [[file:provisioning.org::916D6512-03E7-4971-8BAC-53D6FA258BBD][916D6512-03E7-4971-8BAC-53D6FA258BBD]]
 rm -rf ~/src/org-mode
 rm -rf ~/src/org2blog
 rm -rf ~/src/use-package
