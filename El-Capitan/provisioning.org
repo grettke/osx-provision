@@ -3069,6 +3069,7 @@ Server properties:
   - #scheme
   - #bash
   - #apl
+  - #livecode
 #+END_SRC
 ***** Growl
 :PROPERTIES:
