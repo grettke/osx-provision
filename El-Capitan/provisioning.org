@@ -2997,6 +2997,18 @@ Set Dictation & Text to Speech to: Callie
       - Webcam
 #+END_SRC
 
+**** Dyalog APL
+:PROPERTIES:
+:ID:       F17C4B5B-1834-4266-9E51-A9A6F6D07260
+:END:
+
+#+NAME: C621D8B5-B34E-48D7-BF7A-C8E316BA10FB
+#+BEGIN_SRC org
+,* Dyalog APL
+
+- Nothing exactly right now
+#+END_SRC
+
 **** App Store Installs
    :PROPERTIES:
    :ID:       798AD4C6-AFB7-4AB6-B794-16E1E83CDF5C
@@ -3069,7 +3081,6 @@ Server properties:
   - #scheme
   - #bash
   - #apl
-  - #livecode
 #+END_SRC
 ***** Growl
 :PROPERTIES:

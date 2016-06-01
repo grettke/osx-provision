@@ -106,6 +106,12 @@ Set Dictation & Text to Speech to: Callie
 # 2534FD8E-2749-4EE5-87C3-B813B25AF4BB ends here
 
 # [[file:provisioning.org::C621D8B5-B34E-48D7-BF7A-C8E316BA10FB][C621D8B5-B34E-48D7-BF7A-C8E316BA10FB]]
+* Dyalog APL
+
+- Nothing exactly right now
+# C621D8B5-B34E-48D7-BF7A-C8E316BA10FB ends here
+
+# [[file:provisioning.org::C621D8B5-B34E-48D7-BF7A-C8E316BA10FB][C621D8B5-B34E-48D7-BF7A-C8E316BA10FB]]
 * Debtinator
 
 - Nothing exactly right now
