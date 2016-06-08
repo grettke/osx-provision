@@ -2497,6 +2497,14 @@ brew cask install racket
 #+BEGIN_SRC sh
 brew install gforth
 #+END_SRC
+***** GNU APL
+:PROPERTIES:
+:ID:       733B5BB9-A577-43D3-B837-624DAB3032AB
+:END:
+#+NAME: 89EB0121-7F14-4AFD-BB61-E46F675FE4A3
+#+BEGIN_SRC sh
+brew install gnu-apl
+#+END_SRC
 ***** git
 :PROPERTIES:
 :ID:       1F0C8A4B-097E-4090-93A7-8A2958331E4F

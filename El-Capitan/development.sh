@@ -19,6 +19,10 @@ brew cask install racket
 brew install gforth
 # 1CE4F12C-241C-4B77-8262-D08472B78B4B ends here
 
+# [[file:provisioning.org::89EB0121-7F14-4AFD-BB61-E46F675FE4A3][89EB0121-7F14-4AFD-BB61-E46F675FE4A3]]
+brew install gnu-apl
+# 89EB0121-7F14-4AFD-BB61-E46F675FE4A3 ends here
+
 # [[file:provisioning.org::F5E5B964-50FA-49EF-BABF-EFE558057EC2][F5E5B964-50FA-49EF-BABF-EFE558057EC2]]
 brew install git
 # F5E5B964-50FA-49EF-BABF-EFE558057EC2 ends here
