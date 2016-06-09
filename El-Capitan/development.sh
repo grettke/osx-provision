@@ -7,6 +7,16 @@ brew install python
 brew linkapps python
 # 4128F3DB-7E7C-4885-B54E-AA78423855C5 ends here
 
+# [[file:provisioning.org::2C2EE0BA-1EED-401F-83BB-31DA8485A4AC][2C2EE0BA-1EED-401F-83BB-31DA8485A4AC]]
+\curl -L https://install.perlbrew.pl | bash
+~/perl5/perlbrew/bin/perlbrew install perl-5.24.0
+perl -v
+~/perl5/perlbrew/bin/perlbrew switch perl-5.24.0
+perl -v
+perlbrew install-cpanm
+cpanm install Text::Unidecode
+# 2C2EE0BA-1EED-401F-83BB-31DA8485A4AC ends here
+
 # [[file:provisioning.org::EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D][EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D]]
 brew install ruby
 # EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D ends here

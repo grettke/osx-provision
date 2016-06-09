@@ -2470,6 +2470,27 @@ For everything beyond the built in.
 brew install python
 brew linkapps python
 #+END_SRC
+
+***** Perl
+:PROPERTIES:
+:ID:       A45C44A3-CDD2-4F37-81DF-93659D368EB7
+:END:
+
+- Get the [[https://www.perl.org/get.html][latest Perl]] via [[https://perlbrew.pl/][PerlBrew]]
+- Verify you are using the latest
+- Install CPANM because it works better with PerlBrewl
+- Install [[http://search.cpan.org/~sburke/Text-Unidecode-1.27/lib/Text/Unidecode.pm][Unidecode]] for ASCII'fication
+
+#+NAME: 2C2EE0BA-1EED-401F-83BB-31DA8485A4AC
+#+BEGIN_SRC sh
+\curl -L https://install.perlbrew.pl | bash
+~/perl5/perlbrew/bin/perlbrew install perl-5.24.0
+perl -v
+~/perl5/perlbrew/bin/perlbrew switch perl-5.24.0
+perl -v
+perlbrew install-cpanm
+cpanm install Text::Unidecode
+#+END_SRC
 ***** Ruby
 :PROPERTIES:
 :ID:       B7D03962-A386-4E62-AA68-3A7F95AF2CA4
