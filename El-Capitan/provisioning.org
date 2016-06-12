@@ -2039,15 +2039,6 @@ brew cask install freemind
 brew cask install mplayer-osx-extended
 #+end_src
 
-***** Adobe Flash Player
-:PROPERTIES:
-:ID:       395720BE-487A-42F1-AD8A-2B68852C2001
-:END:
-
-*Don't use =brew= to install this*.
-
-It always silently fails.
-
 ***** Skype
 :PROPERTIES:
 :ID:       6003585A-A3B2-453A-B3CF-33240C69BB0E
@@ -2210,16 +2201,6 @@ brew cask install gimp
 - Run it
 - [[http://www.sample-videos.com/][Test it]]
 - Volume works?
-
-,* Adobe Flash Player
-
-- Install manually
-  - Chrome
-    - Adobe reports Chrome as already having it
-  - Firefox
-    - Adobe has you install something
-- Verify
-  - http://www.adobe.com/software/flash/about/
 
 ,* Skype
 
