@@ -85,3 +85,8 @@ brew cask install rstudio
 # [[file:provisioning.org::23B49731-0AA0-4FD9-AA2F-EEBBCF21C3F9][23B49731-0AA0-4FD9-AA2F-EEBBCF21C3F9]]
 brew cask install dash
 # 23B49731-0AA0-4FD9-AA2F-EEBBCF21C3F9 ends here
+
+# [[file:provisioning.org::5E540A84-0B1E-4D24-9576-54B6993493BD][5E540A84-0B1E-4D24-9576-54B6993493BD]]
+brew tap homebrew/science
+brew install glpk
+# 5E540A84-0B1E-4D24-9576-54B6993493BD ends here

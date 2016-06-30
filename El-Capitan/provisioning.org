@@ -2621,6 +2621,16 @@ brew cask install rstudio
 #+BEGIN_SRC sh
 brew cask install dash
 #+END_SRC
+***** glpk
+:PROPERTIES:
+:ID:       EF0A6FF1-9E4E-4A30-B8A0-2EC9B6D3A295
+:END:
+
+#+NAME: 5E540A84-0B1E-4D24-9576-54B6993493BD
+#+BEGIN_SRC sh
+brew tap homebrew/science
+brew install glpk
+#+END_SRC
 *** The Silver Searcher
 :PROPERTIES:
 :ID:       AD5FD9EA-E427-458A-9B25-244177D08640
@@ -3019,6 +3029,7 @@ Set Dictation & Text to Speech to: Callie
 - Nothing exactly right now
 #+END_SRC
 
+****
 **** App Store Installs
    :PROPERTIES:
    :ID:       798AD4C6-AFB7-4AB6-B794-16E1E83CDF5C
