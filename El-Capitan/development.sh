@@ -90,3 +90,7 @@ brew cask install dash
 brew tap homebrew/science
 brew install glpk
 # 5E540A84-0B1E-4D24-9576-54B6993493BD ends here
+
+# [[file:provisioning.org::4B420426-4B25-4E40-AB5C-F7EDDDB4C0AA][4B420426-4B25-4E40-AB5C-F7EDDDB4C0AA]]
+brew install the_silver_searcher
+# 4B420426-4B25-4E40-AB5C-F7EDDDB4C0AA ends here

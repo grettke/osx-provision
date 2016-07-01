@@ -2631,7 +2631,7 @@ brew cask install dash
 brew tap homebrew/science
 brew install glpk
 #+END_SRC
-*** The Silver Searcher
+***** The Silver Searcher
 :PROPERTIES:
 :ID:       AD5FD9EA-E427-458A-9B25-244177D08640
 :END:
