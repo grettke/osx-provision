@@ -2851,6 +2851,21 @@ mkdir ~/.Rpackages
 ,* The Silver Searcher
 
 - NA
+
+,* RStudio
+
+- RSudio
+  - Preferences
+    - General
+      - Default working directory (when not in a project): ~
+      - Restore most recent project: Yes
+      - Restore previously open source documents: No
+      - Restore .RData: No
+      - Save worksapce to .RData: No
+    - Appearance
+      - Editor font: DejaVuSansMono
+      - Font size: 12
+      - Editor theme: Solarized Dark
 #+END_SRC
 *** Manual
 :PROPERTIES:
