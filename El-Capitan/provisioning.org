@@ -1788,14 +1788,23 @@ Granting:
 :header-args: :tangle ./utility.sh :tangle-mode (identity #o755)
 :ID:       F2B0FCF0-1F56-4D3B-AC9F-10F4E430BBE2
 :END:
-***** PDFpen
+***** PDFpen & PDF Expert
 :PROPERTIES:
 :ID:       4C5A6665-0927-4513-99AE-4ABD0CAAA75F
 :END:
 
+Close call between PDF Expert and PDFpen. For less-techncial who don't need
+OCR, the former; for everyone else, the latter.
+
+In either case:
+- Only modify PDFs using the same program
+  - Going between the two provides poor to horrible results
+- Flatted the PDF before sharing it
+
 #+NAME: 16FA1E22-64A5-4DCE-A0CB-3D27C7809243
 #+BEGIN_SRC sh
 brew cask install pdfpen
+brew cask install pdfexpert
 #+END_SRC
 
 ***** OpenSCAD
