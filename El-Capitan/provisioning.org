@@ -2657,6 +2657,16 @@ brew install glpk
 #+BEGIN_SRC sh
 brew install the_silver_searcher
 #+END_SRC
+***** shellcheck
+:PROPERTIES:
+:ID:       A32529E8-97E7-4347-848F-73C834447FEC
+:END:
+
+#+NAME: B4C9F9F6-E628-4771-82E5-083212B30942
+#+BEGIN_SRC sh
+brew install shellcheck
+#+END_SRC
+
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./development.org

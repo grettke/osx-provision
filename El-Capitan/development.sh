@@ -94,3 +94,7 @@ brew install glpk
 # [[file:provisioning.org::4B420426-4B25-4E40-AB5C-F7EDDDB4C0AA][4B420426-4B25-4E40-AB5C-F7EDDDB4C0AA]]
 brew install the_silver_searcher
 # 4B420426-4B25-4E40-AB5C-F7EDDDB4C0AA ends here
+
+# [[file:provisioning.org::B4C9F9F6-E628-4771-82E5-083212B30942][B4C9F9F6-E628-4771-82E5-083212B30942]]
+brew install shellcheck
+# B4C9F9F6-E628-4771-82E5-083212B30942 ends here
