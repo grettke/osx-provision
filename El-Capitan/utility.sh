@@ -1,5 +1,4 @@
 # [[file:provisioning.org::16FA1E22-64A5-4DCE-A0CB-3D27C7809243][16FA1E22-64A5-4DCE-A0CB-3D27C7809243]]
-brew cask install pdfpen
 brew cask install pdfexpert
 # 16FA1E22-64A5-4DCE-A0CB-3D27C7809243 ends here
 
