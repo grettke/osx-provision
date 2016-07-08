@@ -2615,14 +2615,6 @@ brew cask install pycharm
 #+BEGIN_SRC sh
 brew cask install webstorm
 #+END_SRC
-***** r
-:PROPERTIES:
-:ID:       4E086037-0105-41AE-83F6-C8D909FBAACB
-:END:
-#+NAME: DE3758D9-6E6D-45EC-A208-8C9F65701DC6
-#+BEGIN_SRC sh
-brew cask install r
-#+END_SRC
 ***** R Studio
 :PROPERTIES:
 :ID:       19930D0D-7A42-468E-B60E-134F1BEAA30E
@@ -2900,6 +2892,21 @@ mkdir ~/.Rpackages
 :header-args: :tangle ./manual.org
 :ID:       CFDA666A-254C-4DE4-825E-872A878A47F6
 :END:
+
+**** The R Project
+:PROPERTIES:
+:ID:       0850CC94-1829-427F-BF9A-9F5353902B54
+:END:
+
+- Context
+  - =brew install r= has runtime issues on /my/ machine
+  - =brew cask install r= has a bad download link
+  - Therefore install the package manually from a CRAN mirror
+- Downloaded the pkg
+- Ran the package
+- It finishes
+- Run the linking script for the R config files in R.org
+
 **** Microsoft Office
     :PROPERTIES:
     :ID:       568C1BC2-1569-4E3A-8246-594E0C889244
