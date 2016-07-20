@@ -1777,6 +1777,14 @@ Granting:
     - Open: Command-F10
   - Startup Settings
     - [X] Launch SwitchResX Daemon automatically after login
+
+,* XQuartz
+
+- Log out and back in again
+
+,* Inkscape
+
+- [[https://inkscape.org/en/download/mac-os/][Follow directions]]
 #+END_SRC
 
 *** Utility
