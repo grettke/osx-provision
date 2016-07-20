@@ -47,7 +47,7 @@ brew cask install screenflow
 # 536ADA22-0876-44F9-A76D-57B961A7A8A0 ends here
 
 # [[file:provisioning.org::97116D0B-68F4-4E15-B06C-CD9EF99A084A][97116D0B-68F4-4E15-B06C-CD9EF99A084A]]
-brew cask install inkscape
+brew install homebrew/gui/inkscape
 # 97116D0B-68F4-4E15-B06C-CD9EF99A084A ends here
 
 # [[file:provisioning.org::B9005B12-56A9-4AAF-ACF3-725C464B2D96][B9005B12-56A9-4AAF-ACF3-725C464B2D96]]

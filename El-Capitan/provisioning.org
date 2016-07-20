@@ -2202,10 +2202,11 @@ brew cask install screenflow
   - X version still doesn't work right
   - Switched to Brew Cask
   - Updated xquartz
+  - That didn't work, went back to plain brew
 
 #+NAME: 97116D0B-68F4-4E15-B06C-CD9EF99A084A
 #+BEGIN_SRC sh
-brew cask install inkscape
+brew install homebrew/gui/inkscape
 #+END_SRC
 
 ***** gimp
