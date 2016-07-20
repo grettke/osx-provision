@@ -28,6 +28,7 @@ fi
 
 # [[file:provisioning.org::442A6B4B-C210-4436-B0AE-F571D3F75B01][442A6B4B-C210-4436-B0AE-F571D3F75B01]]
 brew cask install xquartz
+defaults write org.macosforge.xquartz.X11 dpi -int 170
 # 442A6B4B-C210-4436-B0AE-F571D3F75B01 ends here
 
 # [[file:provisioning.org::F09F391E-0A25-4B8D-B70F-6FD35A103D95][F09F391E-0A25-4B8D-B70F-6FD35A103D95]]

@@ -1642,6 +1642,7 @@ fi
 #+NAME: 442A6B4B-C210-4436-B0AE-F571D3F75B01
 #+BEGIN_SRC sh
 brew cask install xquartz
+defaults write org.macosforge.xquartz.X11 dpi -int 170
 #+END_SRC
 ***** Tuxera NTFS
 :PROPERTIES:
