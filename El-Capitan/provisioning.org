@@ -2907,6 +2907,10 @@ mkdir ~/.Rpackages
 :ID:       CFDA666A-254C-4DE4-825E-872A878A47F6
 :END:
 
+**** NewGardiner TrueType Font
+
+[[https://mjn.host.cs.st-andrews.ac.uk/egyptian/fonts/newgardiner.html][See]].
+
 **** The R Project
 :PROPERTIES:
 :ID:       0850CC94-1829-427F-BF9A-9F5353902B54
