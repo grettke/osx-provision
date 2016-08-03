@@ -2909,7 +2909,8 @@ mkdir ~/.Rpackages
 
 **** NewGardiner TrueType Font
 
-[[https://mjn.host.cs.st-andrews.ac.uk/egyptian/fonts/newgardiner.html][See]].
+- [[https://mjn.host.cs.st-andrews.ac.uk/egyptian/fonts/newgardiner.html][See]]
+- Install =NewGardinerSMP.ttf=
 
 **** The R Project
 :PROPERTIES:
