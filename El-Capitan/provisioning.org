@@ -2906,6 +2906,9 @@ mkdir ~/.Rpackages
 :header-args: :tangle ./manual.org
 :ID:       CFDA666A-254C-4DE4-825E-872A878A47F6
 :END:
+**** SimPL Font
+
+- http://wiki.nars2000.org/index.php/APL_Font
 
 **** NewGardiner TrueType Font
 
