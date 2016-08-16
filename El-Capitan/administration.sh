@@ -43,6 +43,10 @@ brew cask install font-noto-sans-symbols
 brew cask install font-symbola
 # 74BEB31B-9499-4144-B997-9E16B3FA24D9 ends here
 
+# [[file:provisioning.org::A02C8B94-4717-42AA-8676-36D13B168BB6][A02C8B94-4717-42AA-8676-36D13B168BB6]]
+brew cask install popchar
+# A02C8B94-4717-42AA-8676-36D13B168BB6 ends here
+
 # [[file:provisioning.org::429CCB8C-CFCF-40C9-87B5-03384D5DFE14][429CCB8C-CFCF-40C9-87B5-03384D5DFE14]]
 rm -rf ~/git/github-anonymous/osx-terminal.app-colors-solarized
 cd ~/git/github-anonymous

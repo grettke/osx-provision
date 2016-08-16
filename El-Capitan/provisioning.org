@@ -1508,6 +1508,16 @@ brew cask install font-noto-sans-symbols
 brew cask install font-symbola
 #+END_SRC
 
+******* PopChar
+:PROPERTIES:
+:ID:       7EEB45C3-B585-421A-A710-43B85143BC75
+:END:
+
+#+NAME: A02C8B94-4717-42AA-8676-36D13B168BB6
+#+BEGIN_SRC sh
+brew cask install popchar
+#+END_SRC
+
 ****** Terminal
 :PROPERTIES:
 :ID:       4A37A9A3-A9D6-4ECD-AB89-EB0FE9815091
@@ -1551,10 +1561,6 @@ git clone https://github.com/caskroom/homebrew-cask.git
 :header-args: :tangle ./administration.org
 :ID:       B7B4F0A4-C676-4B79-828F-837B3DAE851E
 :END:
-***** Terminal
-:PROPERTIES:
-:ID:       4A37A9A3-A9D6-4ECD-AB89-EB0FE9815091
-:END:
 
 #+NAME: D880F24A-DE8D-4513-A354-45C9B57E0631
 #+BEGIN_SRC org
@@ -1567,6 +1573,17 @@ git clone https://github.com/caskroom/homebrew-cask.git
 - Profiles \rarr Advanced
   - [ ] Set locale environment variables on startup
     - Set them in your =bashrc=, not here
+
+,* PopChar
+
+- Register it
+- Preferences
+  - Activation
+    - Location: Status item
+    - Close window then
+      - After selecting a char: No
+      - When mouse leaves window: No
+      - When clicking outside window: Yes
 #+END_SRC
 
 *** Usability
@@ -2907,10 +2924,16 @@ mkdir ~/.Rpackages
 :ID:       CFDA666A-254C-4DE4-825E-872A878A47F6
 :END:
 **** SimPL Font
+:PROPERTIES:
+:ID:       FADD0245-BBCD-43BB-A103-DC994EBC449E
+:END:
 
 - http://wiki.nars2000.org/index.php/APL_Font
 
 **** NewGardiner TrueType Font
+:PROPERTIES:
+:ID:       E015C9C9-67ED-4FD8-8F81-256CDD705E40
+:END:
 
 - [[https://mjn.host.cs.st-andrews.ac.uk/egyptian/fonts/newgardiner.html][See]]
 - Install =NewGardinerSMP.ttf=
