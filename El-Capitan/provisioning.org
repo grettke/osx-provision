@@ -2501,6 +2501,7 @@ brew install python
 brew linkapps python
 pip install virtualenv
 pip install --upgrade pip setuptools virtualenv
+alias venv='source ./env/bin/activate'
 #+END_SRC
 
 ***** Perl

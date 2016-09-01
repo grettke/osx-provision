@@ -7,6 +7,7 @@ brew install python
 brew linkapps python
 pip install virtualenv
 pip install --upgrade pip setuptools virtualenv
+alias venv='source ./env/bin/activate'
 # 4128F3DB-7E7C-4885-B54E-AA78423855C5 ends here
 
 # [[file:provisioning.org::2C2EE0BA-1EED-401F-83BB-31DA8485A4AC][2C2EE0BA-1EED-401F-83BB-31DA8485A4AC]]
