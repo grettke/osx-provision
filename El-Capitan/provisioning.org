@@ -2499,6 +2499,8 @@ For everything beyond the built in.
 #+BEGIN_SRC sh
 brew install python
 brew linkapps python
+pip install virtualenv
+pip install --upgrade pip setuptools virtualenv
 #+END_SRC
 
 ***** Perl
