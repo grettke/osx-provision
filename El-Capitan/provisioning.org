@@ -2504,6 +2504,23 @@ pip install --upgrade pip setuptools virtualenv
 alias venv='source ./env/bin/activate'
 #+END_SRC
 
+****** Proselint
+:PROPERTIES:
+:ID:       orgmode:gcr:vela:8F8E8E86-F202-434A-BF25-A3160CB4A4CF
+:END:
+
+Install proselint.
+
+#+NAME: orgmode:gcr:vela:696D3C27-F72A-4D64-BB70-A14D42CCCD5A
+#+BEGIN_SRC sh
+rm -rf ~/util/proselint
+mkdir -p ~/util/proselint
+cd ~/util/proselint
+virtualenv env
+venv
+pip install proselint
+#+END_SRC
+
 ***** Perl
 :PROPERTIES:
 :ID:       A45C44A3-CDD2-4F37-81DF-93659D368EB7
@@ -3701,7 +3718,7 @@ To image a full system:
   - Erase the machine and clone the new image to it
     - Address any image restoration issues now
   - Backup this new image to Stargate
-  - Copy the Dropbox folder
+  - Copy thse Dropbox folder
 
 #  LocalWords:  doesn AppStore kitchenplan railwaycat's paralellize dev GitHub
 #  LocalWords:  BitBucket repo smartphone OSX EF FS CCC Journaled MOSEJ XCode
