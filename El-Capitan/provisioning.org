@@ -2493,7 +2493,7 @@ brew cask install deltawalker
 :ID:       1BA55F5A-9902-4539-9494-0231C4DBD9B6
 :END:
 
-For everything beyond the built in.
+Install Python 2 and virtualenv.
 
 #+NAME: 4128F3DB-7E7C-4885-B54E-AA78423855C5
 #+BEGIN_SRC sh
