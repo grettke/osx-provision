@@ -2549,6 +2549,15 @@ brew cask install racket
 #+BEGIN_SRC sh
 brew install gforth
 #+END_SRC
+***** nodejs
+:PROPERTIES:
+:ID:       orgmode:gcr:vela:EF414304-60AF-437D-AE4A-89532D3AEC3A
+:END:
+#+NAME: orgmode:gcr:vela:BA81BB77-0E23-4B3F-B4D7-0112502A464C
+#+BEGIN_SRC sh
+brew install node
+#+END_SRC
+
 ***** GNU APL
 :PROPERTIES:
 :ID:       733B5BB9-A577-43D3-B837-624DAB3032AB

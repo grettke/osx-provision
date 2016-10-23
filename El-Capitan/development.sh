@@ -40,6 +40,10 @@ brew cask install racket
 brew install gforth
 # 1CE4F12C-241C-4B77-8262-D08472B78B4B ends here
 
+# [[file:provisioning.org::orgmode:gcr:vela:BA81BB77-0E23-4B3F-B4D7-0112502A464C][orgmode:gcr:vela:BA81BB77-0E23-4B3F-B4D7-0112502A464C]]
+brew install node
+# orgmode:gcr:vela:BA81BB77-0E23-4B3F-B4D7-0112502A464C ends here
+
 # [[file:provisioning.org::89EB0121-7F14-4AFD-BB61-E46F675FE4A3][89EB0121-7F14-4AFD-BB61-E46F675FE4A3]]
 brew install gnu-apl
 # 89EB0121-7F14-4AFD-BB61-E46F675FE4A3 ends here
