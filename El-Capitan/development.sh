@@ -46,6 +46,8 @@ brew install node
 
 # [[file:provisioning.org::orgmode:gcr:vela:4EFB1142-C26F-4A2D-8A75-8A970646442D][orgmode:gcr:vela:4EFB1142-C26F-4A2D-8A75-8A970646442D]]
 npm install -g jshint
+rm ~/.jshintrc
+ln -s ~/src/help/.jshintrc ~/.jshintrc
 # orgmode:gcr:vela:4EFB1142-C26F-4A2D-8A75-8A970646442D ends here
 
 # [[file:provisioning.org::89EB0121-7F14-4AFD-BB61-E46F675FE4A3][89EB0121-7F14-4AFD-BB61-E46F675FE4A3]]

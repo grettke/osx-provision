@@ -2569,6 +2569,8 @@ brew install node
 #+NAME: orgmode:gcr:vela:4EFB1142-C26F-4A2D-8A75-8A970646442D
 #+BEGIN_SRC sh
 npm install -g jshint
+rm ~/.jshintrc
+ln -s ~/src/help/.jshintrc ~/.jshintrc
 #+END_SRC
 
 ***** GNU APL
