@@ -2549,10 +2549,13 @@ brew cask install racket
 #+BEGIN_SRC sh
 brew install gforth
 #+END_SRC
-***** nodejs
+***** node & npm
 :PROPERTIES:
 :ID:       orgmode:gcr:vela:EF414304-60AF-437D-AE4A-89532D3AEC3A
 :END:
+
+=Brew installs =NPM= by defailt with =Node=.
+
 #+NAME: orgmode:gcr:vela:BA81BB77-0E23-4B3F-B4D7-0112502A464C
 #+BEGIN_SRC sh
 brew install node
