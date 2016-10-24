@@ -2561,6 +2561,13 @@ brew install gforth
 brew install node
 #+END_SRC
 
+****** jshint
+
+#+NAME: orgmode:gcr:vela:4EFB1142-C26F-4A2D-8A75-8A970646442D
+#+BEGIN_SRC sh
+npm install -g jshint
+#+END_SRC
+
 ***** GNU APL
 :PROPERTIES:
 :ID:       733B5BB9-A577-43D3-B837-624DAB3032AB
