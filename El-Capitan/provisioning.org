@@ -2562,6 +2562,9 @@ brew install node
 #+END_SRC
 
 ****** jshint
+:PROPERTIES:
+:ID:       orgmode:gcr:vela:7C84C823-61B3-413B-9F23-91E87AD755A3
+:END:
 
 #+NAME: orgmode:gcr:vela:4EFB1142-C26F-4A2D-8A75-8A970646442D
 #+BEGIN_SRC sh

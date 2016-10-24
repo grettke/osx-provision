@@ -44,6 +44,10 @@ brew install gforth
 brew install node
 # orgmode:gcr:vela:BA81BB77-0E23-4B3F-B4D7-0112502A464C ends here
 
+# [[file:provisioning.org::orgmode:gcr:vela:4EFB1142-C26F-4A2D-8A75-8A970646442D][orgmode:gcr:vela:4EFB1142-C26F-4A2D-8A75-8A970646442D]]
+npm install -g jshint
+# orgmode:gcr:vela:4EFB1142-C26F-4A2D-8A75-8A970646442D ends here
+
 # [[file:provisioning.org::89EB0121-7F14-4AFD-BB61-E46F675FE4A3][89EB0121-7F14-4AFD-BB61-E46F675FE4A3]]
 brew install gnu-apl
 # 89EB0121-7F14-4AFD-BB61-E46F675FE4A3 ends here
