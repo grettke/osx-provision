@@ -1583,7 +1583,7 @@ git clone https://github.com/caskroom/homebrew-cask.git
     - Close window then
       - After selecting a char: No
       - When mouse leaves window: No
-      - When clicking outside window: Yes
+      - When clicking outside window: No
 #+END_SRC
 
 *** Usability
