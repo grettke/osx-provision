@@ -2080,6 +2080,20 @@ else
 fi
 #+END_SRC
 
+***** WhatsApp
+:PROPERTIES:
+:ID:       orgmode:gcr:vela:CEA0BEE8-E951-4304-BDDE-05DBFA39FBAD
+:END:
+
+#+NAME: orgmode:gcr:vela:02BF16B3-9FC1-4F9A-AB48-795FB9969E88
+#+BEGIN_SRC emacs-lisp
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install whatsapp
+else
+    echo "whatsapp: Only install on hosts"
+fi
+#+END_SRC
+
 ***** Dropbox
 :PROPERTIES:
 :ID:       97065F78-F2C3-4189-A24E-BAB474EC2D59

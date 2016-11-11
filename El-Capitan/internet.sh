@@ -1,3 +1,11 @@
+;; [[file:provisioning.org::orgmode:gcr:vela:02BF16B3-9FC1-4F9A-AB48-795FB9969E88][orgmode:gcr:vela:02BF16B3-9FC1-4F9A-AB48-795FB9969E88]]
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install whatsapp
+else
+    echo "whatsapp: Only install on hosts"
+fi
+;; orgmode:gcr:vela:02BF16B3-9FC1-4F9A-AB48-795FB9969E88 ends here
+
 # [[file:provisioning.org::093814E5-DB0A-481C-9B39-ACF62216BB55][093814E5-DB0A-481C-9B39-ACF62216BB55]]
 brew cask install mplayer-osx-extended
 # 093814E5-DB0A-481C-9B39-ACF62216BB55 ends here
