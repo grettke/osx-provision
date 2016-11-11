@@ -18,5 +18,5 @@
     - Close window then
       - After selecting a char: No
       - When mouse leaves window: No
-      - When clicking outside window: Yes
+      - When clicking outside window: No
 # D880F24A-DE8D-4513-A354-45C9B57E0631 ends here
