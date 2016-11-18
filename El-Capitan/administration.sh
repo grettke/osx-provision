@@ -42,6 +42,7 @@ brew cask install font-noto-sans
 brew cask install font-noto-sans-symbols
 brew cask install font-symbola
 brew cask install font-fontawesome
+brew cask install font-montserrat
 # 74BEB31B-9499-4144-B997-9E16B3FA24D9 ends here
 
 # [[file:provisioning.org::A02C8B94-4717-42AA-8676-36D13B168BB6][A02C8B94-4717-42AA-8676-36D13B168BB6]]
