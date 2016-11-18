@@ -1506,6 +1506,7 @@ brew cask install font-quivira
 brew cask install font-noto-sans
 brew cask install font-noto-sans-symbols
 brew cask install font-symbola
+brew cask install font-fontawesome
 #+END_SRC
 
 ******* PopChar
