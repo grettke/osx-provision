@@ -1,12 +1,17 @@
 # [[file:provisioning.org::639707FE-FE60-439E-A8C8-9FBD9936D1C4][639707FE-FE60-439E-A8C8-9FBD9936D1C4]]
 - Re-image your box
-  - Host :: ~PHOSDI~
-  - Guest :: ~IOSXECA~
+- Step Prefix
+  - There is a different manual set up for either a "on the metal" Host or a
+    "virtualized" guest
+  - These are the indicators
+    - Host :: ~PHOSDI~
+    - Guest :: ~IOSXECA~
 - During configuration log into the App Store
 - Make a user named ~gcr~ and choose an avatar
 - Install software updates
 - Development Tools
   - If you want to use XCode :: Go to the App Store and Install it
+    - This step is not necessary to use the Brew stuff
     - 4.5GB download
     - During the download you can perform the other configuration steps
     - *Run it once*
@@ -17,42 +22,55 @@
     - Command is idempotent
 - Utility Scripts
   - Mount only required volumes
+    - Clarify
+      - Spotlight suggests applications and files on those volumes and
+        you usually don't want that
+      - Applications get locks on files on non host volumes
     - For =host1= that means =host1= and =Storage=
-    - Spotlight suggests applications and files on those volumes and you usually
-      don't want that
-    - Applications get locks on files on non host volumes
     - Write a shell script and run it at logon
-      #+BEGIN_SRC sh
-#!/usr/bin/env bash
+      - Customize this for the install partition
+        #+BEGIN_SRC sh
+  #!/usr/bin/env bash
 # -*- mode: sh; -*-
-
 diskutil unmount /dev/disk0s3
 diskutil unmount /dev/disk0s4
 diskutil unmount /dev/disk0s6
 diskutil unmount /dev/disk0s7
 diskutil unmount /dev/disk0s8
-      #+END_SRC
-- Mouse
-  - Host :: Connect Bluetooth mouse
-  - Make the mouse slow
-- Host :: Reconfigure control keys
-- Host :: Maximize resolution
-- Host :: Show Keychain Access in Menubar
-- Users & Groups: Enable Guest User
-- Screensaver: Flurry, 10m
-- Host :: Add printer
-- Energy saver
-  - Host :: do
-    - On power
-      - Display off at 15m
-      - Prevent computer from sleeping automatically when display is offp when display is off
-    - On battery, Screen sleep 5m
-      - Don't slightly dim the display on battery power
-  - Guest :: Computer sleep never, Screen sleep 15
-- Sound
-  - Show volume in menubar
-- Bluetooth
-  - Show in menu bar
+        #+END_SRC
+- System Preferences
+  - Desktop & Screensaver: Flurry, 10m
+  - *(Host)* Display \rarr Maximize resolution
+  - Energy saver
+    - *(Host)*
+      - On power
+        - Display off at 15m
+        - Prevent computer from sleeping automatically when display is offp
+          when display is off
+      - On battery, Screen sleep 5m
+        - Don't slightly dim the display on battery power
+    - (Guest) :: Computer sleep never, Screen sleep 15
+  - *(Host)* Keyboard \rarr Modifiers
+    - Caps Lock \rarr Control
+    - Control \rarr Caps Lock
+  - Mouse
+    - *(Host)* Connect Bluetooth mouse
+    - Tracking Speed: 20%
+  - Trackpad
+    - Point & Click
+      - Secondary click: TRUE
+      - Tap to click: TRUE
+  - *(Host)* Printers & Scanners
+    - Add printer(s)
+  - Sound
+    - Show volume in menubar
+  - Bluetooth
+    - Show in menu bar
+  - Users & Groups: Enable Guest User
+- *(Host)* Show Keychain Access in Menubar
+  - Start KeyChain Access
+  - Preferences
+  - Show keychain status in menubar
 - Finder
   - Preferences
     - Sidebar

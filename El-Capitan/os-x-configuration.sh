@@ -299,24 +299,24 @@ defaults write com.apple.screencapture location ~/Screen\ Shots
 # 598BE517-CC5C-4D99-AD0B-41D2D906E376 ends here
 
 # [[file:provisioning.org::446CE2EF-BCBE-4D83-9ACC-2A1E2F91C64B][446CE2EF-BCBE-4D83-9ACC-2A1E2F91C64B]]
-defaults write com.apple.dock wvous-tl-corner -int 2
+defaults write com.apple.dock wvous-tl-corner -int 4
 defaults write com.apple.dock wvous-tl-modifier -int 0
 # 446CE2EF-BCBE-4D83-9ACC-2A1E2F91C64B ends here
 
 # [[file:provisioning.org::FF4E8A69-A137-4E50-A4E4-59DA58A082B5][FF4E8A69-A137-4E50-A4E4-59DA58A082B5]]
-defaults write com.apple.dock wvous-tr-corner -int 4
+write defaults com.apple.dock wvous-tr-corner -int 2
 defaults write com.apple.dock wvous-tr-modifier -int 0
 # FF4E8A69-A137-4E50-A4E4-59DA58A082B5 ends here
-
-# [[file:provisioning.org::6A561511-8354-408E-8805-201BAAE80A04][6A561511-8354-408E-8805-201BAAE80A04]]
-defaults write com.apple.dock wvous-bl-corner -int 5
-defaults write com.apple.dock wvous-bl-modifier -int 0
-# 6A561511-8354-408E-8805-201BAAE80A04 ends here
 
 # [[file:provisioning.org::7C9DE1C5-BBF8-4D40-8FAC-E78D5B85231E][7C9DE1C5-BBF8-4D40-8FAC-E78D5B85231E]]
 defaults write com.apple.dock wvous-bl-corner -int 3
 defaults write com.apple.dock wvous-bl-modifier -int 0
 # 7C9DE1C5-BBF8-4D40-8FAC-E78D5B85231E ends here
+
+# [[file:provisioning.org::6A561511-8354-408E-8805-201BAAE80A04][6A561511-8354-408E-8805-201BAAE80A04]]
+defaults write com.apple.dock wvous-br-corner -int 0
+defauts write com.apple.dock wvous-br-modifier -int 0
+# 6A561511-8354-408E-8805-201BAAE80A04 ends here
 
 # [[file:provisioning.org::77191228-16CC-4B95-A030-A5C2DF90CD50][77191228-16CC-4B95-A030-A5C2DF90CD50]]
 # Don’t automatically rearrange Spaces based on most recent use
