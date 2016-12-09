@@ -747,10 +747,11 @@ First thing is to get these scripts from GitHub either:
     - Command is idempotent
 - Utility Scripts
   - Mount only required volumes
-    - Clarify: Spotlight suggests applications and files on those volumes and
-      you usually don't want that
-    - For =host1= that means =host1= and =Storage=
+    - Clarify
+      - Spotlight suggests applications and files on those volumes and
+        you usually don't want that
     - Applications get locks on files on non host volumes
+    - For =host1= that means =host1= and =Storage=
     - Write a shell script and run it at logon
       ,#+BEGIN_SRC sh
 #!/usr/bin/env bash
