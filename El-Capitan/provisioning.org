@@ -753,16 +753,16 @@ First thing is to get these scripts from GitHub either:
       - Applications get locks on files on non host volumes
     - For =host1= that means =host1= and =Storage=
     - Write a shell script and run it at logon
-      ,#+BEGIN_SRC sh
-#!/usr/bin/env bash
+      - Customize this for the install partition
+        ,#+BEGIN_SRC sh
+  #!/usr/bin/env bash
 # -*- mode: sh; -*-
-
 diskutil unmount /dev/disk0s3
 diskutil unmount /dev/disk0s4
 diskutil unmount /dev/disk0s6
 diskutil unmount /dev/disk0s7
 diskutil unmount /dev/disk0s8
-      ,#+END_SRC
+        ,#+END_SRC
 - Mouse
   - Host :: Connect Bluetooth mouse
   - Make the mouse slow
