@@ -1398,6 +1398,7 @@ defaults write 'NSGlobalDomain' com.apple.mouse.scaling -float 2
 :END:
 
 Only use UTF-8 in Terminal.app.
+
 #+NAME: 9AF4BB62-76D4-4943-88FC-704A7BA492AC
 #+BEGIN_SRC sh
 defaults write com.apple.terminal StringEncodings -array 4
@@ -2257,6 +2258,11 @@ brew install homebrew/gui/inkscape
 brew cask install gimp
 #+END_SRC
 
+***** airy
+#+NAME: orgmode:gcr:vela:860955A6-49A5-46BC-98B6-A7892740C38F
+#+BEGIN_SRC sh
+brew cask install airy
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle ./internet.org
@@ -2326,6 +2332,11 @@ brew cask install gimp
 ,* Screenflow
 
 - Register
+
+,* Airy
+
+- Register
+- Configure default download path
 #+END_SRC
 
 *** DevOps
