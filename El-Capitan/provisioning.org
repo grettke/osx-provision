@@ -736,6 +736,7 @@ First thing is to get these scripts from GitHub either:
 - Install software updates
 - Development Tools
   - If you want to use XCode :: Go to the App Store and Install it
+    - This step is not necessary to use the Brew stuff
     - 4.5GB download
     - During the download you can perform the other configuration steps
     - *Run it once*
