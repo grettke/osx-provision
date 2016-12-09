@@ -725,6 +725,7 @@ First thing is to get these scripts from GitHub either:
 #+NAME: 639707FE-FE60-439E-A8C8-9FBD9936D1C4
 #+BEGIN_SRC org
 - Re-image your box
+- Prefix tells one which type of box to perform the step
   - Host :: ~PHOSDI~
   - Guest :: ~IOSXECA~
 - During configuration log into the App Store
