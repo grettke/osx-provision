@@ -2259,6 +2259,9 @@ brew cask install gimp
 #+END_SRC
 
 ***** airy
+:PROPERTIES:
+:ID:       orgmode:gcr:vela:B0F987C4-55C3-4D8E-8C47-631F26A1F1D2
+:END:
 #+NAME: orgmode:gcr:vela:860955A6-49A5-46BC-98B6-A7892740C38F
 #+BEGIN_SRC sh
 brew cask install airy

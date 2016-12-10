@@ -65,3 +65,7 @@ brew install homebrew/gui/inkscape
 # [[file:provisioning.org::B9005B12-56A9-4AAF-ACF3-725C464B2D96][B9005B12-56A9-4AAF-ACF3-725C464B2D96]]
 brew cask install gimp
 # B9005B12-56A9-4AAF-ACF3-725C464B2D96 ends here
+
+# [[file:provisioning.org::orgmode:gcr:vela:860955A6-49A5-46BC-98B6-A7892740C38F][orgmode:gcr:vela:860955A6-49A5-46BC-98B6-A7892740C38F]]
+brew cask install airy
+# orgmode:gcr:vela:860955A6-49A5-46BC-98B6-A7892740C38F ends here
