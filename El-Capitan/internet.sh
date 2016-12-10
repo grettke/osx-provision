@@ -38,6 +38,10 @@ brew cask install firefox
 brew cask install opera
 # D852AD6F-DF45-4FF9-A391-954323438F96 ends here
 
+# [[file:provisioning.org::E35E5182-A810-4547-B6E8-866CC13AA7FA][E35E5182-A810-4547-B6E8-866CC13AA7FA]]
+brew cask install filezilla
+# E35E5182-A810-4547-B6E8-866CC13AA7FA ends here
+
 # [[file:provisioning.org::75569C81-CF17-482A-8EF3-53457897457C][75569C81-CF17-482A-8EF3-53457897457C]]
 brew cask install slack
 # 75569C81-CF17-482A-8EF3-53457897457C ends here

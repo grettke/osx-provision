@@ -2170,7 +2170,7 @@ brew cask install opera
    :END:
 
 #+NAME: E35E5182-A810-4547-B6E8-866CC13AA7FA
-#+begin_src sh :tangle
+#+begin_src sh
 brew cask install filezilla
 #+end_src
 
