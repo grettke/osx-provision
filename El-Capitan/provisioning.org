@@ -2,6 +2,16 @@
 
 #+STARTUP: showeverything
 
+* STOP!
+
+These are *all* of my /personal notes/ on provisioning my boxes. They won't make
+sense unless you read all of them. They are long… you won't want to :). You
+/are/ welcome to read them.
+
+If you are here then you probably only want to see the setup steps. They are a
+subset of this document. They live in =provisioning.org= and get tangled to
+individual files for implementation.
+
 * Goal
 :PROPERTIES:
 :ID:       572893EF-E80B-411B-9355-8CAB3DB23C27
