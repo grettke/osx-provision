@@ -9,7 +9,7 @@ sense unless you read all of them. They are long… you won't want to :). You
 /are/ welcome to read them.
 
 If you are here then you probably only want to see the setup steps. They are a
-subset of this document. They live in =provisioning.org= and get tangled to
+subset of this document. They live in =provisioning.md= and get tangled to
 individual files for implementation.
 
 * Goal
