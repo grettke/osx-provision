@@ -700,7 +700,7 @@ Steps are: configuration-writing-02-automated.sh
 
 * Provisioning
 :PROPERTIES:
-:ID:       262EEA68-1753-489D-A3BE-672C162CD356
+:ID:       PROVISIONING
 :Effort:   energy
 :END:
 ** Steps
