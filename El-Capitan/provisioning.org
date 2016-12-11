@@ -718,7 +718,7 @@ First thing is to get these scripts from GitHub either:
 :END:
 **** Installation
 :PROPERTIES:
-:header-args: :tangle "_os-x-installation.org"
+:header-args: :tangle "01_os-x-installation.org"
 :ID:       46781470-E45C-4E6E-98E9-CD41507FF6FE
 :END:
 
@@ -807,7 +807,7 @@ diskutil unmount /dev/disk0s8
 
 **** Configuration
 :PROPERTIES:
-:header-args: :tangle "_os-x-configuration.sh" :tangle-mode (identity #o755)
+:header-args: :tangle "02_os-x-configuration.sh" :tangle-mode (identity #o755)
 :ID:       46781470-E45C-4E6E-98E9-CD41507FF6FE
 :END:
 ***** Machine
@@ -1439,7 +1439,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 :END:
 **** Install
 :PROPERTIES:
-:header-args: :tangle "_administration.sh" :tangle-mode (identity #o755)
+:header-args: :tangle "03_administration.sh" :tangle-mode (identity #o755)
 :ID:       E0655C3B-2CEB-446E-BB5E-9A85CA4F8FF2
 :END:
 ****** Brew & Brew Cask
@@ -1583,7 +1583,7 @@ git clone https://github.com/caskroom/homebrew-cask.git
 #+END_SRC
 **** Configure
 :PROPERTIES:
-:header-args: :tangle "_administration.org"
+:header-args: :tangle "04_administration.org"
 :ID:       B7B4F0A4-C676-4B79-828F-837B3DAE851E
 :END:
 
@@ -1617,7 +1617,7 @@ git clone https://github.com/caskroom/homebrew-cask.git
 :END:
 **** Install
 :PROPERTIES:
-:header-args: :tangle "_usability.sh" :tangle-mode (identity #o755)
+:header-args: :tangle "05_usability.sh" :tangle-mode (identity #o755)
 :ID:       66C750A9-6702-43CA-86A2-A033B47B0138
 :END:
 ***** karabiner
@@ -1708,7 +1708,7 @@ brew cask install switchresx
 
 **** Configure
 :PROPERTIES:
-:header-args: :tangle "_usability.org"
+:header-args: :tangle "06_usability.org"
 :ID:       37C51946-B8BE-41B4-BEA6-7DBA95E1955F
 :END:
 
@@ -1836,7 +1836,7 @@ Granting:
 :END:
 **** Install
 :PROPERTIES:
-:header-args: :tangle "_utility.sh" :tangle-mode (identity #o755)
+:header-args: :tangle "07_utility.sh" :tangle-mode (identity #o755)
 :ID:       F2B0FCF0-1F56-4D3B-AC9F-10F4E430BBE2
 :END:
 ***** OpenSCAD
@@ -2037,7 +2037,7 @@ brew cask install freemind
 #+END_SRC
 **** Configure
 :PROPERTIES:
-:header-args: :tangle "_utility.org"
+:header-args: :tangle "08_utility.org"
 :ID:       D49412F1-54B0-4551-A449-6D353D1F973D
 :END:
 
@@ -2078,7 +2078,7 @@ brew cask install freemind
 :END:
 **** Install
 :PROPERTIES:
-:header-args: :tangle "_internet.sh" :tangle-mode (identity #o755)
+:header-args: :tangle "09_internet.sh" :tangle-mode (identity #o755)
 :ID:       138B24D9-2E1B-4D95-B068-BFBE2275755D
 :END:
 ***** MPlayer OSX Extended
@@ -2268,7 +2268,7 @@ brew cask install airy
 #+END_SRC
 **** Configure
 :PROPERTIES:
-:header-args: :tangle "_internet.org"
+:header-args: :tangle "10_internet.org"
 :ID:       A8BA5927-38E4-4B49-8DDC-92FDD05F468B
 :END:
 
@@ -2348,7 +2348,7 @@ brew cask install airy
 :END:
 **** Install
 :PROPERTIES:
-:header-args: :tangle "_dev-ops.sh" :tangle-mode (identity #o755)
+:header-args: :tangle "11_dev-ops.sh" :tangle-mode (identity #o755)
 :ID:       0B9DFAC8-45F5-4358-9A7D-C4DAAA3A7A69
 :END:
 ***** Carbon Copy Cloner
@@ -2431,7 +2431,7 @@ brew cask install ipartition
 
 **** Configure
 :PROPERTIES:
-:header-args: :tangle "_dev-ops.org"
+:header-args: :tangle "12_dev-ops.org"
 :ID:       3A6DCCFC-D601-4FA1-9013-82BDC97DF8D8
 :END:
 
@@ -2509,7 +2509,7 @@ vagrant up
 :END:
 **** Install
 :PROPERTIES:
-:header-args: :tangle "_development.sh" :tangle-mode (identity #o755)
+:header-args: :tangle "13_development.sh" :tangle-mode (identity #o755)
 :ID:       F2B0FCF0-1F56-4D3B-AC9F-10F4E430BBE2
 :END:
 ***** Deltawalker
@@ -2769,7 +2769,7 @@ brew install shellcheck
 
 **** Configure
 :PROPERTIES:
-:header-args: :tangle "_development.org"
+:header-args: :tangle "14_development.org"
 :ID:       FA5E0D88-1455-4DD5-9362-D8268BBFF3BF
 :END:
 #+NAME: 64C2907C-7D2E-4EEA-A9EC-9AE77C823D1C
@@ -2997,7 +2997,7 @@ mkdir ~/.Rpackages
 #+END_SRC
 *** Manual
 :PROPERTIES:
-:header-args: :tangle "_manual.org"
+:header-args: :tangle "15_manual.org"
 :ID:       CFDA666A-254C-4DE4-825E-872A878A47F6
 :END:
 **** PDFPenPro
@@ -3391,7 +3391,7 @@ Server properties:
 :END:
 **** Generic
 :PROPERTIES:
-:header-args: :tangle "_git-generic.sh" :tangle-mode (identity #o755)
+:header-args: :tangle "16_git-generic.sh" :tangle-mode (identity #o755)
 :ID:       F008829D-FCC5-426E-8CB6-3E3DED5EE2AF
 :END:
 
@@ -3470,7 +3470,7 @@ read -p "Did it work? If not, fix it."
 #+end_src
 **** Personal
 :PROPERTIES:
-:header-args: :tangle "_git-personal.sh" :tangle-mode (identity #o755)
+:header-args: :tangle "17_git-personal.sh" :tangle-mode (identity #o755)
 :ID:       83EF8B0F-8415-4870-98A7-B9B9F8A8481C
 :END:
 
@@ -3548,7 +3548,7 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 :END:
 **** Install
 :PROPERTIES:
-:header-args: :tangle "_org-mode.sh" :tangle-mode (identity #o755)
+:header-args: :tangle "18_org-mode.sh" :tangle-mode (identity #o755)
 :ID:       F2B0FCF0-1F56-4D3B-AC9F-10F4E430BBE2
 :END:
 
@@ -3574,7 +3574,7 @@ git clone https://github.com/jwiegley/use-package.git
 :END:
 **** Install
 :PROPERTIES:
-:header-args: :tangle "_tex.sh" :tangle-mode (identity #o755)
+:header-args: :tangle "19_tex.sh" :tangle-mode (identity #o755)
 :ID:       F2B0FCF0-1F56-4D3B-AC9F-10F4E430BBE2
 :END:
 ***** MacTeX
@@ -3603,7 +3603,7 @@ brew install gnuplot --with-latex --with-pdflib-lite --with-test --with-x11
 #+END_SRC
 **** Configure
 :PROPERTIES:
-:header-args: :tangle "_tex.org"
+:header-args: :tangle "20_tex.org"
 :ID:       FA5E0D88-1455-4DD5-9362-D8268BBFF3BF
 :END:
 
@@ -3638,7 +3638,7 @@ sudo mktexlsr
 #+END_SRC
 ** Testing
 :PROPERTIES:
-:header-args: :tangle "_testing.org"
+:header-args: :tangle "21_testing.org"
 :ID:       44798E7B-AC1F-4FD8-AB5E-3A3563B79C4B
 :END:
 
