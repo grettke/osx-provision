@@ -1,19 +1,18 @@
+-   **Start** with a local copy of this repository either by downloading it in a ZIP file or pulling it with Git
 -   `Steps` implements provisioning
+    -   ORG files are manual steps
+    -   SH files are shell scripts which may require human input
+    -   Perform them in order of their file names numerically eg `01..02..03..n`
+    -   The steps are tedious, time consuming and boring so they are broken up into to logical units to make it easy for you to take a break and finish later without forgetting where you are and what you were doing
 -   `Testing` tells you if it worked
--   The **source** document is *weaved* here and *tangled* to both SH and ORG files meant to be evaluated or performed in numerical order eg `1..2..3..n`
--   That means you should only be reading this
-    -   The first time to see how these files work
-    -   When you want to see the entire source document weaved for reference
+-   Only read this document for
+    -   An explanation of the provisioning steps
+    -   Reference
 
 
 # Steps
 
     ID: 6ACCC2CE-5EB4-42D6-AD12-0DC836C2A3FD
-
-First thing is to get these scripts from GitHub either:
-
--   As a ZIP
--   A git working copy
 
 
 ## OS X
