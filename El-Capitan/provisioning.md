@@ -1,3 +1,11 @@
+-   `Steps` implements provisioning
+-   `Testing` tells you if it worked
+-   The **source** document is *weaved* here and *tangled* to both SH and ORG files meant to be evaluated or performed in numerical order eg `1..2..3..n`
+-   That means you should only be reading this
+    -   The first time to see how these files work
+    -   When you want to see the entire source document weaved for reference
+
+
 # Steps
 
     ID: 6ACCC2CE-5EB4-42D6-AD12-0DC836C2A3FD
