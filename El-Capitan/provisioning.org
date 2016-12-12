@@ -3330,7 +3330,7 @@ Server properties:
 #+BEGIN_SRC org
 ,* PixelMator
 
-- Nothing special
+- NA
 #+END_SRC
 
 ***** Mousepose
