@@ -3116,7 +3116,9 @@ Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the 
 #+BEGIN_SRC org
 ,* Entropy
 
-- This is a [[http://www.eigenlogik.com/entropy/][download]] and manual install.
+- [[http://www.eigenlogik.com/entropy/][Download]]
+- Install
+- License
 #+END_SRC
 
 **** Guitar Pro
