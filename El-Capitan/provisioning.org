@@ -3385,7 +3385,7 @@ Server properties:
 - NA
 #+END_SRC
 
-*** Git
+*** SSH and Git
 :PROPERTIES:
 :ID:       A700593A-3D0C-49F0-AE05-2FAA5DFC95EF
 :END:
