@@ -3395,6 +3395,15 @@ Server properties:
 :ID:       F008829D-FCC5-426E-8CB6-3E3DED5EE2AF
 :END:
 
+OSX creates this directory everywhere and it must be ignored. This code block
+is surprising. It lives here because it should only hapen /after/ installing Git.
+
+#+NAME: 53F16E84-34DC-48D1-998C-B9214B32AD1E
+#+begin_src sh
+echo .DS_Store > ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+#+end_src
+
 Generate the key. There is no passphrase.
 #+NAME: 41FF7AA3-8273-4281-A7E8-C60B048723D4
 #+begin_src sh
@@ -3416,14 +3425,6 @@ Set permissions so that =ssh= will run.
 chmod 600 ~/.ssh/$SSHFILE
 chmod 600 ~/.ssh/$SSHFILE.pub
 ssh-add -K ~/.ssh/$SSHFILE
-#+end_src
-
-OSX creates this directory everywhere and it must be ignored.
-
-#+NAME: 53F16E84-34DC-48D1-998C-B9214B32AD1E
-#+begin_src sh
-echo .DS_Store > ~/.gitignore_global
-git config --global core.excludesfile ~/.gitignore_global
 #+end_src
 
 Add they key to Bitbucket and Github.
