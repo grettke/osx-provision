@@ -3201,7 +3201,7 @@ Set Dictation & Text to Speech to: Callie
 #+BEGIN_SRC org
 ,* Dyalog APL
 
-- Nothing exactly right now
+- NA
 #+END_SRC
 
 ****
