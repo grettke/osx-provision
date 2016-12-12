@@ -2058,16 +2058,16 @@ brew cask install freemind
     - MathJaxq
 - Preferences
   - General
-    - [ ] Show Style Picker
-    - [ ] Show word count
+    - NO Show Style Picker
+    - NO Show word count
   - Preview
-    - [X] Enable Mini Map navigation
-    - [X] Show scroll progress indicator
-    - [X] Automatically validate URLs on update
+    - YES Enable Mini Map navigation
+    - YES Show scroll progress indicator
+    - YES Automatically validate URLs on update
   - Style
     - Default style: GitHub
   - Proofing
-    - [X] Highlight Markdown syntax errors
+    - YES Highlight Markdown syntax errors
 #+END_SRC
 *** Internet
 :PROPERTIES:
