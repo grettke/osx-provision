@@ -2356,7 +2356,18 @@ brew cask install airy
 :ID:       F0BE2195-81FE-42F7-92F2-7AEB6A834041
 :END:
 
-Only install it on hosts. The brew version is 3 so install this manually.
+Only install it on hosts.
+
+#+NAME: orgmode:gcr:vela:5696A7AC-7227-49AA-9DDB-902BC6722018
+#+BEGIN_SRC sh
+,#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    carbon-copy-cloner
+else
+    echo "carbon-copy-cloner: Only install on hosts"
+fi
+
+#+END_SRC
 
 ***** VMWare Fusion
 :PROPERTIES:
