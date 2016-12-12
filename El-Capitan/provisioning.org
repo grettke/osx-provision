@@ -2874,28 +2874,6 @@ brew install shellcheck
 ,* WebStorm
 - Same configuration as PyCharm
 
-,* The R Project
-
-I haven't used R in a long time but I want to get it set up right again.
-Link my configs from ~/ into where they live now.
-This installer asks for my password, which halts the install. How will I deal
-with this?
-There is a =.Rinstall= file in my setup to get all of the packages installed. Be s
-sure to run that, too. All of my notes live in R.org already.
-
-Install the software manually.
-
-Migrate and link the configuration files
-
-,#+NAME: 0D50EA49-2A0B-40C9-865D-964FC75B7AC3
-,#+begin_src sh
-ln -s ~/git/bitbucket/alec/.Renviron ~/.Renviron
-ln -s ~/git/bitbucket/alec/.Rprofile ~/.Rprofile
-ln -s ~/git/bitbucket/alec/.Rinstall ~/.Rinstall
-rm -rf ~/.Rpackages
-mkdir ~/.Rpackages
-,#+end_src
-
 ,* Dash
 
 - Install the license file
