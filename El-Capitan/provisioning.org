@@ -2324,7 +2324,6 @@ brew cask install airy
 
 ,* Slack
 
-- Open-at-Login
 - Join
   - livecodepublic
   - milwaukee
