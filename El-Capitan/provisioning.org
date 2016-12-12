@@ -3382,7 +3382,7 @@ Server properties:
 #+BEGIN_SRC org
 ,* Key Codes
 
-- Nothing special
+- NA
 #+END_SRC
 
 *** Git
