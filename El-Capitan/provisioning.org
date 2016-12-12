@@ -2684,6 +2684,28 @@ brew cask install sourcetree
 #+BEGIN_SRC sh
 brew install smlnj
 #+END_SRC
+***** OCaml
+
+#+NAME: orgmode:gcr:vela:F8C7DC4C-3DB3-4547-9A94-AF03D2F15366
+#+BEGIN_SRC sh
+brew install ocaml
+brew install opam
+#+END_SRC
+
+***** Haskell
+
+#+NAME: orgmode:gcr:vela:1F488BEB-BCE5-4A80-8FC3-9E8F28E181D4
+#+BEGIN_SRC sh
+brew cask install haskell-platform
+#+END_SRC
+
+***** Squeak
+
+#+NAME: orgmode:gcr:vela:243473A9-D8D5-4F05-BC70-99E7BFAA9C78
+#+BEGIN_SRC sh
+brew cask install squeak
+#+END_SRC
+
 ***** cvs
 :PROPERTIES:
 :ID:       868C1487-47DD-40E9-832D-CBFCA6A74661
