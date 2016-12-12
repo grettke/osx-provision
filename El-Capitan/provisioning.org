@@ -749,7 +749,7 @@ Steps are: configuration-writing-02-automated.sh
   - Host :: "On the Metal"
   - Guest :: "Virtualized"
 - Re-image your box
-- During system configuration /before/ creating a user *DO* log into the App Store
+- During system configuration /before/ creating a user YES log into the App Store
 - Make a user named ~gcr~ and choose an avatar
 - Install software updates
 - Development Tools
@@ -1616,7 +1616,7 @@ git clone https://github.com/caskroom/homebrew-cask.git
   - Set it to the default theme
   - Set the font to DJSM 17
 - Profiles \rarr Advanced
-  - *DON'T* Set locale environment variables on startup
+  - NO Set locale environment variables on startup
     - Set them in your =bashrc=, not here
 
 ,* PopChar
