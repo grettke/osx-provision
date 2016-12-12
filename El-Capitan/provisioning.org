@@ -745,27 +745,24 @@ Steps are: configuration-writing-02-automated.sh
 
 #+NAME: 639707FE-FE60-439E-A8C8-9FBD9936D1C4
 #+BEGIN_SRC org
+- Action Prefix for Boxes:
+  - Host :: "On the Metal"
+  - Guest :: "Virtualized"
 - Re-image your box
-- Step Prefix
-  - There is a different manual set up for either a "on the metal" Host or a
-    "virtualized" guest
-  - These are the indicators
-    - Host :: ~PHOSDI~
-    - Guest :: ~IOSXECA~
-- During configuration log into the App Store
+- During system configuration /before/ creating a user *DO* log into the App Store
 - Make a user named ~gcr~ and choose an avatar
 - Install software updates
 - Development Tools
   - If you want to use XCode :: Go to the App Store and Install it
     - This step is not necessary to use the Brew stuff
     - 4.5GB download
-    - During the download you can perform the other configuration steps
-    - *Run it once*
+    - During the download you can perform the other configuration actions in
+      /this/ document but you must complete this /before/ installing the ~CLT~
+    - *Run this once*
   - Install the CLT. Choose *Install*.
     ,#+BEGIN_SRC sh
     xcode-select --install
     ,#+END_SRC
-    - Command is idempotent
 - Utility Scripts
   - Mount only required volumes
     - Clarify
@@ -785,7 +782,9 @@ diskutil unmount /dev/disk0s7
 diskutil unmount /dev/disk0s8
         ,#+END_SRC
 - System Preferences
-  - Desktop & Screensaver: Flurry, 10m
+  - Desktop & Screensaver
+    - *(Host)*: Flurry, 10m
+    - *(Guest)*: Blank screen, 5m
   - *(Host)* Display \rarr Maximize resolution
   - Energy saver
     - *(Host)*
