@@ -4,12 +4,44 @@ git config --global core.excludesfile ~/.gitignore_global
 # 53F16E84-34DC-48D1-998C-B9214B32AD1E ends here
 
 # [[file:provisioning.org::orgmode:gcr:vela:AD6DEA88-0EB1-4B7C-A2C6-E27C0EC92604][orgmode:gcr:vela:AD6DEA88-0EB1-4B7C-A2C6-E27C0EC92604]]
-echo "Are you manually installing your existing SSH and Git configuration for this box?"
+echo ""
+echo "With your help I configure SSH for you"
+echo ""
+echo "First I =rm -rf ~/.ssh= *destroying* your entire SSH configuration"
+echo "Second I create a public and private keypair"
+echo "Third I create a config file for Github and Bitbuccket"
+echo "Fourth you upload your public SSH key both to Github and Bitbucket"
+echo "Fifth I test each connection out and let you know if it worked"
+echo ""
+echo "Then again maybe you *don't want me to do any of that*"
+echo "Maybe you already ran this script want to *keep* it"
+echo "Maybe you brought an existing config and key pair files with you"
+echo "Doesn't make any difference... its completely hypothetical"
+echo ""
+echo "Time to choose:"
 
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) echo Gotcha, skipping SSH and Git setup; exit;;
-        No ) echo Gotcha, continuing SSH and Git setup; exit;;
+PS3="Your choice (press the corresonding number): "
+
+bail="*Stop*. *Don’t*. *Get me outta here*. *Exit this script*."
+stay="Yup. Gotcha. Do it. Run this script."
+options=("$bail" "$stay")
+
+select opt in "${options[@]}"
+do
+    case $opt in
+        "$bail")
+            echo "*Sayonara*"
+            sleep 1
+            exit
+            ;;
+        "$stay")
+            echo "Gotcha. Running it."
+            sleep 1
+            break
+            ;;
+        *)
+            echo "You're not getting outta here until you choose."
+            ;;
     esac
 done
 # orgmode:gcr:vela:AD6DEA88-0EB1-4B7C-A2C6-E27C0EC92604 ends here
