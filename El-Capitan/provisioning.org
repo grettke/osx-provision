@@ -2874,7 +2874,7 @@ brew install shellcheck
 ,* WebStorm
 - Same configuration as PyCharm
 
-,* R
+,* The R Project
 
 I haven't used R in a long time but I want to get it set up right again.
 Link my configs from ~/ into where they live now.
