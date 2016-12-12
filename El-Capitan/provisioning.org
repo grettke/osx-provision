@@ -3288,7 +3288,7 @@ Server properties:
 
 - Install via the app store
 - Start it
-- enable run on login
+- Enable run on login
 - Theme: Music Video
   - Easy to notice
 #+END_SRC
