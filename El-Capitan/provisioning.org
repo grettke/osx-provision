@@ -3162,7 +3162,7 @@ Set Dictation & Text to Speech to: Callie
 #+BEGIN_SRC org
 ,* Pushbullet
 
-- Sign in, it is web app
+- Sign in, it is a web app
 - Allow contact access
 - Install into Chrome, choose it
 - [X] Text from phone
