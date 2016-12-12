@@ -723,6 +723,8 @@ Steps are: configuration-writing-02-automated.sh
   - The steps are tedious, time consuming and boring so they are broken up into
     to logical units to make it easy for you to take a break and finish later
     without forgetting where you are and what you were doing
+    - For example you might run the script to install \TeX overnight and
+      configure it a day later
 - ~Testing~ tells you if it worked
 - Only read this document for
   - An explanation of the provisioning steps
