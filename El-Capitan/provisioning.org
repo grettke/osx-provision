@@ -1822,7 +1822,7 @@ Granting:
 
 ,* flux
 
-,*Only install on hosts*
+- NA
 
 - Enable at startup
 
