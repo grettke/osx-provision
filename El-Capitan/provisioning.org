@@ -3404,6 +3404,24 @@ echo .DS_Store > ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 #+end_src
 
+- Do you really want to create a new SSH and Git configuration?
+- Did you /already/ ran this script and you are copying over those files onto
+  this new box?
+- Check if the user wants to do that work again and make it easy to exit the
+  script
+
+#+NAME: orgmode:gcr:vela:AD6DEA88-0EB1-4B7C-A2C6-E27C0EC92604
+#+BEGIN_SRC sh
+echo "Are you manually installing your existing SSH and Git configuration for this box?"
+
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) echo Gotcha, skipping SSH and Git setup; exit;;
+        No ) echo Gotcha, continuing SSH and Git setup; exit;;
+    esac
+done
+#+END_SRC
+
 Generate the key. There is no passphrase.
 #+NAME: 41FF7AA3-8273-4281-A7E8-C60B048723D4
 #+begin_src sh
