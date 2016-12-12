@@ -16,14 +16,6 @@ Don't let it access Contacts.
 When it checks for updates, tell it to check daily.
 # C38471A4-27EF-4543-9076-299EC7FE2086 ends here
 
-# [[file:provisioning.org::E963365D-C3A8-46C1-89A9-7EA158482C6D][E963365D-C3A8-46C1-89A9-7EA158482C6D]]
-* SAS University Edition
-
-- Download with FireFox
-  - Fails with Chrome
-- 4096 MB RAM
-# E963365D-C3A8-46C1-89A9-7EA158482C6D ends here
-
 # [[file:provisioning.org::D7DCD73D-1ABA-4C47-B6C8-4E47C86EB13B][D7DCD73D-1ABA-4C47-B6C8-4E47C86EB13B]]
 * OSX Enhanced Voice Dictation
 
@@ -56,7 +48,9 @@ Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the 
 # [[file:provisioning.org::CBFB0524-49A3-475E-BE72-F72F878355D7][CBFB0524-49A3-475E-BE72-F72F878355D7]]
 * Entropy
 
-- This is a [[http://www.eigenlogik.com/entropy/][download]] and manual install.
+- [[http://www.eigenlogik.com/entropy/][Download]]
+- Install
+- License
 # CBFB0524-49A3-475E-BE72-F72F878355D7 ends here
 
 # [[file:provisioning.org::8D86833F-9C6A-430B-A238-D1537470EC46][8D86833F-9C6A-430B-A238-D1537470EC46]]
@@ -81,7 +75,7 @@ Set Dictation & Text to Speech to: Callie
 # [[file:provisioning.org::D47EAF07-91D0-4916-B6CD-AD0D126C05A9][D47EAF07-91D0-4916-B6CD-AD0D126C05A9]]
 * Pushbullet
 
-- Sign in, it is web app
+- Sign in, it is a web app
 - Allow contact access
 - Install into Chrome, choose it
 - [X] Text from phone
@@ -108,20 +102,19 @@ Set Dictation & Text to Speech to: Callie
 # [[file:provisioning.org::C621D8B5-B34E-48D7-BF7A-C8E316BA10FB][C621D8B5-B34E-48D7-BF7A-C8E316BA10FB]]
 * Dyalog APL
 
-- Nothing exactly right now
+- NA
 # C621D8B5-B34E-48D7-BF7A-C8E316BA10FB ends here
 
 # [[file:provisioning.org::C621D8B5-B34E-48D7-BF7A-C8E316BA10FB][C621D8B5-B34E-48D7-BF7A-C8E316BA10FB]]
 * Debtinator
 
-- Nothing exactly right now
+- NA
 # C621D8B5-B34E-48D7-BF7A-C8E316BA10FB ends here
 
 # [[file:provisioning.org::BBAFAEFB-E9B6-443C-8DAC-424483885BF2][BBAFAEFB-E9B6-443C-8DAC-424483885BF2]]
 * Textual
 
 - AppStore.
-- Open-at-Login
 
 Only note changes from the current default
 
@@ -174,7 +167,7 @@ Server properties:
 
 - Install via the app store
 - Start it
-- enable run on login
+- Enable run on login
 - Theme: Music Video
   - Easy to notice
 # 292B3960-AD89-413E-8E67-2BDBBAC7ACBE ends here
@@ -199,7 +192,7 @@ Server properties:
 # [[file:provisioning.org::05AD3C3A-761E-4CD5-8D45-FCF487A0DAEE][05AD3C3A-761E-4CD5-8D45-FCF487A0DAEE]]
 * PixelMator
 
-- Nothing special
+- NA
 # 05AD3C3A-761E-4CD5-8D45-FCF487A0DAEE ends here
 
 # [[file:provisioning.org::BA8A896A-29EE-43F5-AF6C-B9DB80E18115][BA8A896A-29EE-43F5-AF6C-B9DB80E18115]]
@@ -226,11 +219,13 @@ Server properties:
 # [[file:provisioning.org::142DA74D-407B-4F49-B833-093BB5EB83B6][142DA74D-407B-4F49-B833-093BB5EB83B6]]
 * Webcam Settings By Mactaris
 
-- Be sure to set the white balance
+- Set the white balance
+  - Hold up a bleached white piece of printer paper to the camera
+  - Balance until it is the same color on the screen
 # 142DA74D-407B-4F49-B833-093BB5EB83B6 ends here
 
 # [[file:provisioning.org::9AB3A903-24AA-430D-9B74-D0B9D787C2DD][9AB3A903-24AA-430D-9B74-D0B9D787C2DD]]
 * Key Codes
 
-- Nothing special
+- NA
 # 9AB3A903-24AA-430D-9B74-D0B9D787C2DD ends here

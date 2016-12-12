@@ -19,7 +19,7 @@ pip install proselint
 # orgmode:gcr:vela:696D3C27-F72A-4D64-BB70-A14D42CCCD5A ends here
 
 # [[file:provisioning.org::2C2EE0BA-1EED-401F-83BB-31DA8485A4AC][2C2EE0BA-1EED-401F-83BB-31DA8485A4AC]]
-\curl -L https://install.perlbrew.pl | bash
+curl -L https://install.perlbrew.pl | bash
 ~/perl5/perlbrew/bin/perlbrew install perl-5.24.0
 perl -v
 ~/perl5/perlbrew/bin/perlbrew switch perl-5.24.0
@@ -70,6 +70,19 @@ brew cask install sourcetree
 # [[file:provisioning.org::CC15039B-B03A-4B3B-AFF4-AF483DDFE3A6][CC15039B-B03A-4B3B-AFF4-AF483DDFE3A6]]
 brew install smlnj
 # CC15039B-B03A-4B3B-AFF4-AF483DDFE3A6 ends here
+
+# [[file:provisioning.org::orgmode:gcr:vela:F8C7DC4C-3DB3-4547-9A94-AF03D2F15366][orgmode:gcr:vela:F8C7DC4C-3DB3-4547-9A94-AF03D2F15366]]
+brew install ocaml
+brew install opam
+# orgmode:gcr:vela:F8C7DC4C-3DB3-4547-9A94-AF03D2F15366 ends here
+
+# [[file:provisioning.org::orgmode:gcr:vela:1F488BEB-BCE5-4A80-8FC3-9E8F28E181D4][orgmode:gcr:vela:1F488BEB-BCE5-4A80-8FC3-9E8F28E181D4]]
+brew cask install haskell-platform
+# orgmode:gcr:vela:1F488BEB-BCE5-4A80-8FC3-9E8F28E181D4 ends here
+
+# [[file:provisioning.org::orgmode:gcr:vela:243473A9-D8D5-4F05-BC70-99E7BFAA9C78][orgmode:gcr:vela:243473A9-D8D5-4F05-BC70-99E7BFAA9C78]]
+brew cask install squeak
+# orgmode:gcr:vela:243473A9-D8D5-4F05-BC70-99E7BFAA9C78 ends here
 
 # [[file:provisioning.org::50A94F7F-487B-485E-BEAE-6184D93C2933][50A94F7F-487B-485E-BEAE-6184D93C2933]]
 brew install cvs

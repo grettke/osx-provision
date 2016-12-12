@@ -7,7 +7,11 @@ fi
 ;; orgmode:gcr:vela:02BF16B3-9FC1-4F9A-AB48-795FB9969E88 ends here
 
 # [[file:provisioning.org::093814E5-DB0A-481C-9B39-ACF62216BB55][093814E5-DB0A-481C-9B39-ACF62216BB55]]
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
 brew cask install mplayer-osx-extended
+else
+    echo "mplayer: Only install on hosts"
+fi
 # 093814E5-DB0A-481C-9B39-ACF62216BB55 ends here
 
 # [[file:provisioning.org::D3411D0C-F38A-409F-8D6C-5A03AFEE9CCF][D3411D0C-F38A-409F-8D6C-5A03AFEE9CCF]]

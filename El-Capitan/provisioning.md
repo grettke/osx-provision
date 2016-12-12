@@ -4,6 +4,7 @@
     -   SH files are shell scripts which may require human input
     -   Perform them in order of their file names numerically eg `01..02..03..n`
     -   The steps are tedious, time consuming and boring so they are broken up into to logical units to make it easy for you to take a break and finish later without forgetting where you are and what you were doing
+        -   For example you might run the script to install \TeX overnight and configure it a day later
 -   `Testing` tells you if it worked
 -   Only read this document for
     -   An explanation of the provisioning steps
@@ -27,27 +28,24 @@
     ID: 46781470-E45C-4E6E-98E9-CD41507FF6FE
 
 ```org
+- Action Prefix for Boxes:
+  - Host :: "On the Metal"
+  - Guest :: "Virtualized"
 - Re-image your box
-- Step Prefix
-  - There is a different manual set up for either a "on the metal" Host or a
-    "virtualized" guest
-  - These are the indicators
-    - Host :: ~PHOSDI~
-    - Guest :: ~IOSXECA~
-- During configuration log into the App Store
+- During system configuration /before/ creating a user YES log into the App Store
 - Make a user named ~gcr~ and choose an avatar
 - Install software updates
 - Development Tools
   - If you want to use XCode :: Go to the App Store and Install it
     - This step is not necessary to use the Brew stuff
     - 4.5GB download
-    - During the download you can perform the other configuration steps
-    - *Run it once*
+    - During the download you can perform the other configuration actions in
+      /this/ document but you must complete this /before/ installing the ~CLT~
+    - *Run this once*
   - Install the CLT. Choose *Install*.
     #+BEGIN_SRC sh
     xcode-select --install
     #+END_SRC
-    - Command is idempotent
 - Utility Scripts
   - Mount only required volumes
     - Clarify
@@ -67,7 +65,9 @@ diskutil unmount /dev/disk0s7
 diskutil unmount /dev/disk0s8
         #+END_SRC
 - System Preferences
-  - Desktop & Screensaver: Flurry, 10m
+  - Desktop & Screensaver
+    - *(Host)*: Flurry, 10m
+    - *(Guest)*: Blank screen, 5m
   - *(Host)* Display \rarr Maximize resolution
   - Energy saver
     - *(Host)*
@@ -853,7 +853,7 @@ diskutil unmount /dev/disk0s8
   - Set it to the default theme
   - Set the font to DJSM 17
 - Profiles \rarr Advanced
-  - [ ] Set locale environment variables on startup
+  - NO Set locale environment variables on startup
     - Set them in your =bashrc=, not here
 
 * PopChar
@@ -969,8 +969,8 @@ diskutil unmount /dev/disk0s8
   - Return to Option_L
     (+ When you type Return only, send Return)
 - Under MenuBar
-  - [X] Show icon in menubar
-    - [X] Show settings name in menu bar
+  - YES Show icon in menubar
+    - YES Show settings name in menu bar
   - SettingsList
     - Create a new one named "Nothing"
       - This is for "turning Karabiner off"
@@ -1049,7 +1049,7 @@ Granting:
 
 * flux
 
-*Only install on hosts*
+- NA
 
 - Enable at startup
 
@@ -1089,23 +1089,7 @@ Granting:
 
     ID: F2B0FCF0-1F56-4D3B-AC9F-10F4E430BBE2
 
-1.  OpenSCAD
-
-        ID: 865B8B77-061A-4C5C-AB0D-B15F2261B5F5
-
-    ```sh
-    brew cask install openscad
-    ```
-
-2.  FreeCAD
-
-        ID: 3B4888B4-87C5-4108-A4C8-E2E5D835FFC3
-
-    ```sh
-    brew cask install freecad
-    ```
-
-3.  Java
+1.  Java
 
         ID: 7E76DE2C-7836-44B0-8636-90BB876A5E33
 
@@ -1113,7 +1097,7 @@ Granting:
     brew cask install java
     ```
 
-4.  ditaa
+2.  ditaa
 
         ID: 9854EF35-CB8E-4DBA-99E9-E41B9E5947C9
 
@@ -1121,7 +1105,7 @@ Granting:
     brew install ditaa
     ```
 
-5.  plantuml
+3.  plantuml
 
         ID: 0EB0DB85-1BCF-46AB-AF56-0653A41ABF82
 
@@ -1129,7 +1113,7 @@ Granting:
     brew install plantuml
     ```
 
-6.  languagetool
+4.  languagetool
 
         ID: 860B895C-E8C7-436E-BE3A-23F6B4605211
 
@@ -1137,7 +1121,7 @@ Granting:
     brew install languagetool
     ```
 
-7.  aspell
+5.  aspell
 
         ID: EA68D5E2-13DC-4B3D-B01C-DB023A989199
 
@@ -1145,7 +1129,7 @@ Granting:
     brew install aspell -all
     ```
 
-8.  graphviz
+6.  graphviz
 
         ID: 1CB4FAE9-39E8-4818-90D5-3AE372CD3BB8
 
@@ -1153,7 +1137,7 @@ Granting:
     brew install graphviz
     ```
 
-9.  pandoc
+7.  pandoc
 
         ID: 48D995F7-2EAC-49AC-ABC1-18A18A237901
 
@@ -1161,7 +1145,7 @@ Granting:
     brew install pandoc
     ```
 
-10. Marked 2
+8.  Marked 2
 
         ID: 844E1D37-0246-4C05-A52F-DE69DBB9B8BD
 
@@ -1169,7 +1153,7 @@ Granting:
     brew cask install marked
     ```
 
-11. ImageMagic
+9.  ImageMagic
 
         ID: CBBBABD0-B049-4669-B113-4417A04DD613
 
@@ -1177,7 +1161,7 @@ Granting:
     brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
     ```
 
-12. povray
+10. povray
 
         ID: 196A365A-802C-48F4-B35D-02958CF95E78
 
@@ -1185,7 +1169,7 @@ Granting:
     brew install povray --with-openexr
     ```
 
-13. growlnotify
+11. growlnotify
 
         ID: 9367E78C-5F6F-44A2-A370-CD0AF9D41F40
 
@@ -1193,7 +1177,7 @@ Granting:
     brew cask install growlnotify
     ```
 
-14. xmllint
+12. xmllint
 
         ID: 55AFF634-C899-4667-BC25-47F9099DFF9A
 
@@ -1201,7 +1185,7 @@ Granting:
     brew install libxml2
     ```
 
-15. dos2unix
+13. dos2unix
 
         ID: 59D47685-D541-4D78-88BF-F3313FE7DF10
 
@@ -1220,7 +1204,7 @@ Granting:
 
         chown -R `whoami` /usr/local/share/man/de/man1
 
-16. ccrypt
+14. ccrypt
 
         ID: F9E3F2A3-F16A-4EB8-8F4F-4FF47C7BBE06
 
@@ -1228,7 +1212,7 @@ Granting:
     brew install ccrypt
     ```
 
-17. tree
+15. tree
 
         ID: 8A7F33C7-CF3D-4E64-A63E-2AECD13FFD5F
 
@@ -1236,7 +1220,7 @@ Granting:
     brew install tree
     ```
 
-18. archey
+16. archey
 
         ID: AAF25357-3F8F-4A19-902D-D494D4D7FE38
 
@@ -1244,7 +1228,7 @@ Granting:
     brew install archey
     ```
 
-19. figlet
+17. figlet
 
         ID: ADF24324-CF88-44E0-BE77-DC65DF37502E
 
@@ -1252,7 +1236,7 @@ Granting:
     brew install figlet
     ```
 
-20. Freemind
+18. Freemind
 
         ID: A867B6FD-CD3A-4D5F-9EAF-26E96D31D760
 
@@ -1268,11 +1252,6 @@ Granting:
     ID: D49412F1-54B0-4551-A449-6D353D1F973D
 
 ```org
-* OpenSCAD
-
-- View
-  - Hide editor
-
 * Marked 2
 
 - License it
@@ -1286,16 +1265,16 @@ Granting:
     - MathJaxq
 - Preferences
   - General
-    - [ ] Show Style Picker
-    - [ ] Show word count
+    - NO Show Style Picker
+    - NO Show word count
   - Preview
-    - [X] Enable Mini Map navigation
-    - [X] Show scroll progress indicator
-    - [X] Automatically validate URLs on update
+    - YES Enable Mini Map navigation
+    - YES Show scroll progress indicator
+    - YES Automatically validate URLs on update
   - Style
     - Default style: GitHub
   - Proofing
-    - [X] Highlight Markdown syntax errors
+    - YES Highlight Markdown syntax errors
 ```
 
 
@@ -1315,7 +1294,11 @@ Granting:
         ID: C47DA927-A6B2-4751-98AC-D3200E6F4095
 
     ```sh
+    if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install mplayer-osx-extended
+    else
+        echo "mplayer: Only install on hosts"
+    fi
     ```
 
 2.  Skype
@@ -1508,9 +1491,6 @@ Granting:
 
 - Sign into Chrome
 - Let the settings sync
-- All the JS disabling stuff needs you to approve it. It is irritating.
-  You always forget to approve it and make worse.
-  - Disable ScriptSafe right away. Turn it on as needed.
 - Log into gmail
 
 * Firefox
@@ -1530,7 +1510,6 @@ Granting:
 
 * Slack
 
-- Open-at-Login
 - Join
   - livecodepublic
   - milwaukee
@@ -1565,7 +1544,16 @@ Granting:
 
         ID: F0BE2195-81FE-42F7-92F2-7AEB6A834041
 
-    Only install it on hosts. The brew version is 3 so install this manually.
+    Only install it on hosts.
+
+    ```sh
+    #+BEGIN_SRC sh
+    if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+        carbon-copy-cloner
+    else
+        echo "carbon-copy-cloner: Only install on hosts"
+    fi
+    ```
 
 2.  VMWare Fusion
 
@@ -1761,7 +1749,7 @@ vagrant up
     -   Install [Unidecode](http://search.cpan.org/~sburke/Text-Unidecode-1.27/lib/Text/Unidecode.pm) for ASCII&rsquo;fication
 
     ```sh
-    \curl -L https://install.perlbrew.pl | bash
+    curl -L https://install.perlbrew.pl | bash
     ~/perl5/perlbrew/bin/perlbrew install perl-5.24.0
     perl -v
     ~/perl5/perlbrew/bin/perlbrew switch perl-5.24.0
@@ -1859,7 +1847,32 @@ vagrant up
     brew install smlnj
     ```
 
-13. cvs
+13. OCaml
+
+        ID: orgmode:gcr:vela:A867DCB3-0F61-43AC-A61C-5690C37B54F2
+
+    ```sh
+    brew install ocaml
+    brew install opam
+    ```
+
+14. Haskell
+
+        ID: orgmode:gcr:vela:C394EFE3-DC3D-4BCB-A6DC-A1EF6AB4E337
+
+    ```sh
+    brew cask install haskell-platform
+    ```
+
+15. Squeak
+
+        ID: orgmode:gcr:vela:32F9C619-B381-45FD-84B9-7726B00B3CBE
+
+    ```sh
+    brew cask install squeak
+    ```
+
+16. cvs
 
         ID: 868C1487-47DD-40E9-832D-CBFCA6A74661
 
@@ -1867,7 +1880,7 @@ vagrant up
     brew install cvs
     ```
 
-14. bzr
+17. bzr
 
         ID: 000C4D3B-68E0-4356-8F1B-B9AA57F8468A
 
@@ -1875,7 +1888,7 @@ vagrant up
     brew install bzr
     ```
 
-15. mercurial
+18. mercurial
 
         ID: 4D35743F-DBC4-4A42-9104-8B4E6DB2CD5E
 
@@ -1883,7 +1896,7 @@ vagrant up
     brew install hg
     ```
 
-16. IntelliJ Idea
+19. IntelliJ Idea
 
         ID: 313F1B11-75E2-438A-9D48-16C233F1C2DB
 
@@ -1891,7 +1904,7 @@ vagrant up
     brew cask install intellij-idea
     ```
 
-17. PyCharm
+20. PyCharm
 
         ID: 18D4526F-B616-497D-A2A6-D39A6C541147
 
@@ -1899,7 +1912,7 @@ vagrant up
     brew cask install pycharm
     ```
 
-18. WebStorm
+21. WebStorm
 
         ID: 14FBE5CB-8068-4795-A549-FFD16649E46D
 
@@ -1907,7 +1920,7 @@ vagrant up
     brew cask install webstorm
     ```
 
-19. R Studio
+22. R Studio
 
         ID: 19930D0D-7A42-468E-B60E-134F1BEAA30E
 
@@ -1915,7 +1928,7 @@ vagrant up
     brew cask install rstudio
     ```
 
-20. Dash
+23. Dash
 
         ID: DE662BC7-83EC-4E6F-B6ED-9965C3687E60
 
@@ -1923,7 +1936,7 @@ vagrant up
     brew cask install dash
     ```
 
-21. glpk
+24. glpk
 
         ID: EF0A6FF1-9E4E-4A30-B8A0-2EC9B6D3A295
 
@@ -1932,7 +1945,7 @@ vagrant up
     brew install glpk
     ```
 
-22. The Silver Searcher
+25. The Silver Searcher
 
         ID: AD5FD9EA-E427-458A-9B25-244177D08640
 
@@ -1940,7 +1953,7 @@ vagrant up
     brew install the_silver_searcher
     ```
 
-23. shellcheck
+26. shellcheck
 
         ID: A32529E8-97E7-4347-848F-73C834447FEC
 
@@ -2044,28 +2057,6 @@ vagrant up
         - Editor -> Caret: #839496
 * WebStorm
 - Same configuration as PyCharm
-
-* R
-
-I haven't used R in a long time but I want to get it set up right again.
-Link my configs from ~/ into where they live now.
-This installer asks for my password, which halts the install. How will I deal
-with this?
-There is a =.Rinstall= file in my setup to get all of the packages installed. Be s
-sure to run that, too. All of my notes live in R.org already.
-
-Install the software manually.
-
-Migrate and link the configuration files
-
-#+NAME: 0D50EA49-2A0B-40C9-865D-964FC75B7AC3
-#+begin_src sh
-ln -s ~/git/bitbucket/alec/.Renviron ~/.Renviron
-ln -s ~/git/bitbucket/alec/.Rprofile ~/.Rprofile
-ln -s ~/git/bitbucket/alec/.Rinstall ~/.Rinstall
-rm -rf ~/.Rpackages
-mkdir ~/.Rpackages
-#+end_src
 
 * Dash
 
@@ -2243,19 +2234,6 @@ When it checks for updates, tell it to check daily.
 ```
 
 
-### SAS University Edition
-
-    ID: 3BE67982-9DDC-4FAC-BC9D-FB4F87DE58E3
-
-```org
-* SAS University Edition
-
-- Download with FireFox
-  - Fails with Chrome
-- 4096 MB RAM
-```
-
-
 ### OSX Enhanced Voice Dictation
 
     ID: C8E3A6E9-16E6-4ABD-A667-0E952D38D3E4
@@ -2302,7 +2280,9 @@ Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the 
 ```org
 * Entropy
 
-- This is a [[http://www.eigenlogik.com/entropy/][download]] and manual install.
+- [[http://www.eigenlogik.com/entropy/][Download]]
+- Install
+- License
 ```
 
 
@@ -2342,7 +2322,7 @@ Set Dictation & Text to Speech to: Callie
 ```org
 * Pushbullet
 
-- Sign in, it is web app
+- Sign in, it is a web app
 - Allow contact access
 - Install into Chrome, choose it
 - [X] Text from phone
@@ -2379,7 +2359,7 @@ Set Dictation & Text to Speech to: Callie
 ```org
 * Dyalog APL
 
-- Nothing exactly right now
+- NA
 ```
 
 **\*\***
@@ -2396,7 +2376,7 @@ Set Dictation & Text to Speech to: Callie
     ```org
     * Debtinator
 
-    - Nothing exactly right now
+    - NA
     ```
 
 2.  Textual IRC Client
@@ -2407,7 +2387,6 @@ Set Dictation & Text to Speech to: Callie
     * Textual
 
     - AppStore.
-    - Open-at-Login
 
     Only note changes from the current default
 
@@ -2464,7 +2443,7 @@ Set Dictation & Text to Speech to: Callie
 
     - Install via the app store
     - Start it
-    - enable run on login
+    - Enable run on login
     - Theme: Music Video
       - Easy to notice
     ```
@@ -2501,7 +2480,7 @@ Set Dictation & Text to Speech to: Callie
     ```org
     * PixelMator
 
-    - Nothing special
+    - NA
     ```
 
 7.  Mousepose
@@ -2536,7 +2515,9 @@ Set Dictation & Text to Speech to: Callie
     ```org
     * Webcam Settings By Mactaris
 
-    - Be sure to set the white balance
+    - Set the white balance
+      - Hold up a bleached white piece of printer paper to the camera
+      - Balance until it is the same color on the screen
     ```
 
 9.  Key Codes
@@ -2546,11 +2527,11 @@ Set Dictation & Text to Speech to: Callie
     ```org
     * Key Codes
 
-    - Nothing special
+    - NA
     ```
 
 
-## Git
+## SSH and Git
 
     ID: A700593A-3D0C-49F0-AE05-2FAA5DFC95EF
 
@@ -2560,6 +2541,28 @@ Set Dictation & Text to Speech to: Callie
     header-args: :tangle "16_git-generic.sh" :tangle-mode (identity #o755)
 
     ID: F008829D-FCC5-426E-8CB6-3E3DED5EE2AF
+
+OSX creates this directory everywhere and it must be ignored. This code block is surprising. It lives here because it should only hapen *after* installing Git.
+
+```sh
+echo .DS_Store > ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+```
+
+-   Do you really want to create a new SSH and Git configuration?
+-   Did you *already* ran this script and you are copying over those files onto this new box?
+-   Check if the user wants to do that work again and make it easy to exit the script
+
+```sh
+echo "Are you manually installing your existing SSH and Git configuration for this box?"
+
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) echo Gotcha, skipping SSH and Git setup; exit;;
+        No ) echo Gotcha, continuing SSH and Git setup; exit;;
+    esac
+done
+```
 
 Generate the key. There is no passphrase.
 
@@ -2581,13 +2584,6 @@ Set permissions so that `ssh` will run.
 chmod 600 ~/.ssh/$SSHFILE
 chmod 600 ~/.ssh/$SSHFILE.pub
 ssh-add -K ~/.ssh/$SSHFILE
-```
-
-OSX creates this directory everywhere and it must be ignored.
-
-```sh
-echo .DS_Store > ~/.gitignore_global
-git config --global core.excludesfile ~/.gitignore_global
 ```
 
 Add they key to Bitbucket and Github.
@@ -2720,7 +2716,7 @@ echo `date +%Y-%m-%dT%H:%M:%S%z`
 git clone git://orgmode.org/org-mode.git
 echo `date +%Y-%m-%dT%H:%M:%S%z`
 cd org-mode
-emacs -batch -Q -L lisp -l ../mk/org-fixup -f org-make-autoloads
+make autoloads
 cd ~/src
 git clone git@github.com:punchagan/org2blog.git
 git clone https://github.com/jwiegley/use-package.git
@@ -2835,7 +2831,7 @@ sudo mktexlsr
   - Verify installation, can have the wrong dir and the tool just says that
     there are no issues
   - Run =langtool-check-buffer=
-  - qkc does the scan, qkC suggests corrects, verified on a corresponsence
+  - ~qk c~ does the scan, ~qk C~ suggests corrects, verified on a corresponsence
 - [ ] Correspondence
   - Pick a letter
   - Address and signature and everything looks right

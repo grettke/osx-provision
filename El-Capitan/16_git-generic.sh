@@ -1,3 +1,19 @@
+# [[file:provisioning.org::53F16E84-34DC-48D1-998C-B9214B32AD1E][53F16E84-34DC-48D1-998C-B9214B32AD1E]]
+echo .DS_Store > ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+# 53F16E84-34DC-48D1-998C-B9214B32AD1E ends here
+
+# [[file:provisioning.org::orgmode:gcr:vela:AD6DEA88-0EB1-4B7C-A2C6-E27C0EC92604][orgmode:gcr:vela:AD6DEA88-0EB1-4B7C-A2C6-E27C0EC92604]]
+echo "Are you manually installing your existing SSH and Git configuration for this box?"
+
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) echo Gotcha, skipping SSH and Git setup; exit;;
+        No ) echo Gotcha, continuing SSH and Git setup; exit;;
+    esac
+done
+# orgmode:gcr:vela:AD6DEA88-0EB1-4B7C-A2C6-E27C0EC92604 ends here
+
 # [[file:provisioning.org::41FF7AA3-8273-4281-A7E8-C60B048723D4][41FF7AA3-8273-4281-A7E8-C60B048723D4]]
 rm -rf ~/.ssh
 mkdir ~/.ssh
@@ -15,11 +31,6 @@ chmod 600 ~/.ssh/$SSHFILE
 chmod 600 ~/.ssh/$SSHFILE.pub
 ssh-add -K ~/.ssh/$SSHFILE
 # 298B36CF-28A0-45CC-BACF-787EAB06F348 ends here
-
-# [[file:provisioning.org::53F16E84-34DC-48D1-998C-B9214B32AD1E][53F16E84-34DC-48D1-998C-B9214B32AD1E]]
-echo .DS_Store > ~/.gitignore_global
-git config --global core.excludesfile ~/.gitignore_global
-# 53F16E84-34DC-48D1-998C-B9214B32AD1E ends here
 
 # [[file:provisioning.org::3934CA71-20AE-4136-AB57-1DEF8EBC0ADB][3934CA71-20AE-4136-AB57-1DEF8EBC0ADB]]
 echo "Name your Git site key: $SSHFILE"

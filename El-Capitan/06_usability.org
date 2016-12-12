@@ -7,8 +7,8 @@
   - Return to Option_L
     (+ When you type Return only, send Return)
 - Under MenuBar
-  - [X] Show icon in menubar
-    - [X] Show settings name in menu bar
+  - YES Show icon in menubar
+    - YES Show settings name in menu bar
   - SettingsList
     - Create a new one named "Nothing"
       - This is for "turning Karabiner off"
@@ -87,7 +87,7 @@ Granting:
 
 * flux
 
-*Only install on hosts*
+- NA
 
 - Enable at startup
 

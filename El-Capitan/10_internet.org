@@ -26,9 +26,6 @@
 
 - Sign into Chrome
 - Let the settings sync
-- All the JS disabling stuff needs you to approve it. It is irritating.
-  You always forget to approve it and make worse.
-  - Disable ScriptSafe right away. Turn it on as needed.
 - Log into gmail
 
 * Firefox
@@ -48,7 +45,6 @@
 
 * Slack
 
-- Open-at-Login
 - Join
   - livecodepublic
   - milwaukee

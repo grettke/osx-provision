@@ -3,6 +3,9 @@
 #+STARTUP: showeverything
 
 * STOP!
+:PROPERTIES:
+:ID:       orgmode:gcr:vela:F4C8ADF4-C074-495B-BAD8-260D3F9CAAF2
+:END:
 
 These are *all* of my /personal notes/ on provisioning my boxes. They won't make
 sense unless you read all of them. They are long… you won't want to :). You
@@ -2685,6 +2688,9 @@ brew cask install sourcetree
 brew install smlnj
 #+END_SRC
 ***** OCaml
+:PROPERTIES:
+:ID:       orgmode:gcr:vela:A867DCB3-0F61-43AC-A61C-5690C37B54F2
+:END:
 
 #+NAME: orgmode:gcr:vela:F8C7DC4C-3DB3-4547-9A94-AF03D2F15366
 #+BEGIN_SRC sh
@@ -2693,6 +2699,9 @@ brew install opam
 #+END_SRC
 
 ***** Haskell
+:PROPERTIES:
+:ID:       orgmode:gcr:vela:C394EFE3-DC3D-4BCB-A6DC-A1EF6AB4E337
+:END:
 
 #+NAME: orgmode:gcr:vela:1F488BEB-BCE5-4A80-8FC3-9E8F28E181D4
 #+BEGIN_SRC sh
@@ -2700,6 +2709,9 @@ brew cask install haskell-platform
 #+END_SRC
 
 ***** Squeak
+:PROPERTIES:
+:ID:       orgmode:gcr:vela:32F9C619-B381-45FD-84B9-7726B00B3CBE
+:END:
 
 #+NAME: orgmode:gcr:vela:243473A9-D8D5-4F05-BC70-99E7BFAA9C78
 #+BEGIN_SRC sh

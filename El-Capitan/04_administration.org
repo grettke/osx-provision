@@ -6,7 +6,7 @@
   - Set it to the default theme
   - Set the font to DJSM 17
 - Profiles \rarr Advanced
-  - [ ] Set locale environment variables on startup
+  - NO Set locale environment variables on startup
     - Set them in your =bashrc=, not here
 
 * PopChar

@@ -1,3 +1,12 @@
+# [[file:provisioning.org::orgmode:gcr:vela:5696A7AC-7227-49AA-9DDB-902BC6722018][orgmode:gcr:vela:5696A7AC-7227-49AA-9DDB-902BC6722018]]
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    carbon-copy-cloner
+else
+    echo "carbon-copy-cloner: Only install on hosts"
+fi
+# orgmode:gcr:vela:5696A7AC-7227-49AA-9DDB-902BC6722018 ends here
+
 # [[file:provisioning.org::2B059288-F12E-48E1-939F-1138117FDE4B][2B059288-F12E-48E1-939F-1138117FDE4B]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vmware-fusion
