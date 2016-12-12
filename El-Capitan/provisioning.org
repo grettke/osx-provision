@@ -3675,7 +3675,7 @@ sudo mktexlsr
   - Verify installation, can have the wrong dir and the tool just says that
     there are no issues
   - Run =langtool-check-buffer=
-  - ~qkc~ does the scan, ~qkC~ suggests corrects, verified on a corresponsence
+  - ~qk c~ does the scan, ~qk C~ suggests corrects, verified on a corresponsence
 - [ ] Correspondence
   - Pick a letter
   - Address and signature and everything looks right
