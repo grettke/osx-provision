@@ -3067,20 +3067,6 @@ Don't let it access Contacts.
 
 When it checks for updates, tell it to check daily.
 #+END_SRC
-**** SAS University Edition
-    :PROPERTIES:
-    :ID:       3BE67982-9DDC-4FAC-BC9D-FB4F87DE58E3
-    :END:
-
-#+NAME: E963365D-C3A8-46C1-89A9-7EA158482C6D
-#+BEGIN_SRC org
-,* SAS University Edition
-
-- Download with FireFox
-  - Fails with Chrome
-- 4096 MB RAM
-#+END_SRC
-
 **** OSX Enhanced Voice Dictation
     :PROPERTIES:
     :ID:       C8E3A6E9-16E6-4ABD-A667-0E952D38D3E4
