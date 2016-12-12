@@ -3368,7 +3368,9 @@ Server properties:
 #+BEGIN_SRC org
 ,* Webcam Settings By Mactaris
 
-- Be sure to set the white balance
+- Set the white balance
+  - Hold up a bleached white piece of printer paper to the camera
+  - Balance until it is the same color on the screen
 #+END_SRC
 
 ***** Key Codes
