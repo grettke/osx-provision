@@ -2086,7 +2086,12 @@ brew cask install freemind
 :END:
 #+NAME: 093814E5-DB0A-481C-9B39-ACF62216BB55
 #+begin_src sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
 brew cask install mplayer-osx-extended
+else
+    echo "mplayer: Only install on hosts"
+fi
+
 #+end_src
 
 ***** Skype
