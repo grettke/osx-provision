@@ -3219,7 +3219,7 @@ Set Dictation & Text to Speech to: Callie
 #+BEGIN_SRC org
 ,* Debtinator
 
-- Nothing exactly right now
+- NA
 #+END_SRC
 ***** Textual IRC Client
 :PROPERTIES:
