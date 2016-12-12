@@ -3231,7 +3231,6 @@ Set Dictation & Text to Speech to: Callie
 ,* Textual
 
 - AppStore.
-- Open-at-Login
 
 Only note changes from the current default
 
