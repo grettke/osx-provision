@@ -1,3 +1,7 @@
+# [[file:provisioning.org::A02C8B94-4717-42AA-8676-36D13B168BB6][A02C8B94-4717-42AA-8676-36D13B168BB6]]
+brew cask install popchar
+# A02C8B94-4717-42AA-8676-36D13B168BB6 ends here
+
 # [[file:provisioning.org::F1B1D8B4-662F-4DD2-8C02-CE51CFF862E0][F1B1D8B4-662F-4DD2-8C02-CE51CFF862E0]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install karabiner

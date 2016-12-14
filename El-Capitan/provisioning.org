@@ -1571,16 +1571,6 @@ brew cask install font-fontawesome
 brew cask install font-montserrat
 #+END_SRC
 
-******* PopChar
-:PROPERTIES:
-:ID:       7EEB45C3-B585-421A-A710-43B85143BC75
-:END:
-
-#+NAME: A02C8B94-4717-42AA-8676-36D13B168BB6
-#+BEGIN_SRC sh
-brew cask install popchar
-#+END_SRC
-
 ****** Terminal
 :PROPERTIES:
 :ID:       4A37A9A3-A9D6-4ECD-AB89-EB0FE9815091
@@ -1668,6 +1658,20 @@ echo "Script complete"
 :header-args: :tangle "05_usability.sh" :tangle-mode (identity #o755)
 :ID:       66C750A9-6702-43CA-86A2-A033B47B0138
 :END:
+***** PopChar
+:PROPERTIES:
+:ID:       7EEB45C3-B585-421A-A710-43B85143BC75
+:END:
+:LOGBOOK:
+- Refiled on [2016-12-13 Tue 21:04] \\
+  Correct placement
+:END:
+
+#+NAME: A02C8B94-4717-42AA-8676-36D13B168BB6
+#+BEGIN_SRC sh
+brew cask install popchar
+#+END_SRC
+
 ***** karabiner
 :PROPERTIES:
 :ID:       EE4E6BA8-4BB5-4ACD-9657-36C776448CE4
