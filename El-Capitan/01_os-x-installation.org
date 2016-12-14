@@ -7,16 +7,19 @@
 - Make a user named ~gcr~ and choose an avatar
 - Install software updates
 - Development Tools
-  - If you want to use XCode :: Go to the App Store and Install it
-    - This step is not necessary to use the Brew stuff
+  - XCode
+    - This is optional!
+    - This step is not necessary to use the Brew stuff, the CLT provides
+      everything
+    - If you want it them go to the App Store and Install it
     - 4.5GB download
-    - During the download you can perform the other configuration actions in
-      /this/ document but you must complete this /before/ installing the ~CLT~
     - *Run this once*
-  - Install the CLT. Choose *Install*.
-    #+BEGIN_SRC sh
-    xcode-select --install
-    #+END_SRC
+  - Command Line Tools (CLT)
+    - Install the CLT.
+    - Run this and choose *Install*.
+      #+BEGIN_SRC sh
+      xcode-select --install
+      #+END_SRC
 - Utility Scripts
   - Mount only required volumes
     - Clarify
