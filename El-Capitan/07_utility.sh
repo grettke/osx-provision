@@ -69,3 +69,7 @@ brew install figlet
 # [[file:provisioning.org::C03CD9F2-0630-4E70-A20D-3D43931CE8FA][C03CD9F2-0630-4E70-A20D-3D43931CE8FA]]
 brew cask install freemind
 # C03CD9F2-0630-4E70-A20D-3D43931CE8FA ends here
+
+# [[file:provisioning.org::orgmode:gcr:vela:1402AA08-B373-4B34-BD11-C608177CE9F8][orgmode:gcr:vela:1402AA08-B373-4B34-BD11-C608177CE9F8]]
+echo "Script is done"
+# orgmode:gcr:vela:1402AA08-B373-4B34-BD11-C608177CE9F8 ends here

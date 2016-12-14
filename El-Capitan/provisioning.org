@@ -2080,6 +2080,17 @@ brew install figlet
 #+BEGIN_SRC sh
 brew cask install freemind
 #+END_SRC
+
+***** Completion
+:PROPERTIES:
+:ID:       orgmode:gcr:vela:C05687DA-1016-4329-A85D-A128773A867E
+:END:
+
+#+NAME: orgmode:gcr:vela:1402AA08-B373-4B34-BD11-C608177CE9F8
+#+BEGIN_SRC sh
+echo "Script is done"
+#+END_SRC
+
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "08_utility.org"
