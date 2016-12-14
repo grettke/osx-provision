@@ -801,7 +801,8 @@ diskutil unmount /dev/disk0s8
           when display is off
       - On battery, Screen sleep 5m
         - Don't slightly dim the display on battery power
-    - (Guest) :: Computer sleep never, Screen sleep 15
+    - (Guest)
+      - Computer sleep: never
   - *(Host)* Keyboard \rarr Modifiers
     - Caps Lock \rarr Control
     - Control \rarr Caps Lock
