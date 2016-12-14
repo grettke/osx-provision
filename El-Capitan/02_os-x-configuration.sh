@@ -348,3 +348,7 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 # [[file:provisioning.org::C2C6F54C-D4B7-4CBE-AF80-E45CE40C9A54][C2C6F54C-D4B7-4CBE-AF80-E45CE40C9A54]]
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 # C2C6F54C-D4B7-4CBE-AF80-E45CE40C9A54 ends here
+
+# [[file:provisioning.org::orgmode:gcr:vela:55999A59-D51C-48A3-A459-30E0951FB3E6][orgmode:gcr:vela:55999A59-D51C-48A3-A459-30E0951FB3E6]]
+echo "Script complete"
+# orgmode:gcr:vela:55999A59-D51C-48A3-A459-30E0951FB3E6 ends here

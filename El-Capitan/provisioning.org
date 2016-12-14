@@ -1461,6 +1461,16 @@ Sort Activity Monitor results by CPU usageefaults write com.apple.ActivityMonito
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 #+END_SRC
 
+****** Complete
+:PROPERTIES:
+:ID:       orgmode:gcr:vela:7EF2FF7F-24E1-465A-9AB2-B80CFEB93A56
+:END:
+
+#+NAME: orgmode:gcr:vela:55999A59-D51C-48A3-A459-30E0951FB3E6
+#+BEGIN_SRC sh
+echo "Script complete"
+#+END_SRC
+
 *** Administration
 :PROPERTIES:
 :ID:       539CAD89-6A07-404F-8AE6-D69B99C055FF
