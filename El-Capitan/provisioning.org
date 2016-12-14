@@ -809,7 +809,7 @@ diskutil unmount /dev/disk0s8
   - Mouse
     - *(Host)* Connect Bluetooth mouse
     - Tracking Speed: 20%
-  - Trackpad
+  - *(Host)* Trackpad
     - Point & Click
       - Secondary click: TRUE
       - Tap to click: TRUE
