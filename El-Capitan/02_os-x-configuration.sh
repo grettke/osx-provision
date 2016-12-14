@@ -351,4 +351,5 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 # [[file:provisioning.org::orgmode:gcr:vela:55999A59-D51C-48A3-A459-30E0951FB3E6][orgmode:gcr:vela:55999A59-D51C-48A3-A459-30E0951FB3E6]]
 echo "Script complete"
+echo "Log out then back in to see changes "
 # orgmode:gcr:vela:55999A59-D51C-48A3-A459-30E0951FB3E6 ends here

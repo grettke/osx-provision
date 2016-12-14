@@ -1469,6 +1469,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 #+NAME: orgmode:gcr:vela:55999A59-D51C-48A3-A459-30E0951FB3E6
 #+BEGIN_SRC sh
 echo "Script complete"
+echo "Log out then back in to see changes "
 #+END_SRC
 
 *** Administration
