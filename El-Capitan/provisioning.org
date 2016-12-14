@@ -1748,6 +1748,16 @@ brew cask install tuxera-ntfs
 brew cask install switchresx
 #+END_SRC
 
+***** Completion
+:PROPERTIES:
+:ID:       orgmode:gcr:vela:DA72CD21-2696-4266-852B-97239509EB22
+:END:
+
+#+NAME: orgmode:gcr:vela:C502206C-3635-4DC4-A937-00A9A2EABDC1
+#+BEGIN_SRC sh
+echo "Script is done"
+#+END_SRC
+
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "06_usability.org"

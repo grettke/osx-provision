@@ -42,3 +42,7 @@ brew cask install tuxera-ntfs
 # [[file:provisioning.org::A503FA0B-E147-40BC-BD01-E2EF3E09E259][A503FA0B-E147-40BC-BD01-E2EF3E09E259]]
 brew cask install switchresx
 # A503FA0B-E147-40BC-BD01-E2EF3E09E259 ends here
+
+# [[file:provisioning.org::orgmode:gcr:vela:C502206C-3635-4DC4-A937-00A9A2EABDC1][orgmode:gcr:vela:C502206C-3635-4DC4-A937-00A9A2EABDC1]]
+echo "Script is done"
+# orgmode:gcr:vela:C502206C-3635-4DC4-A937-00A9A2EABDC1 ends here
