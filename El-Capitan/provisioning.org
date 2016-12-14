@@ -1393,7 +1393,7 @@ Bottom right screen corner \rarr Nothing.
 #+NAME: 6A561511-8354-408E-8805-201BAAE80A04
 #+BEGIN_SRC sh
 defaults write com.apple.dock wvous-br-corner -int 0
-defauts write com.apple.dock wvous-br-modifier -int 0
+defaults write com.apple.dock wvous-br-modifier -int 0
 #+END_SRC
 
 ****** Spaces

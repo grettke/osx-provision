@@ -315,7 +315,7 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 
 # [[file:provisioning.org::6A561511-8354-408E-8805-201BAAE80A04][6A561511-8354-408E-8805-201BAAE80A04]]
 defaults write com.apple.dock wvous-br-corner -int 0
-defauts write com.apple.dock wvous-br-modifier -int 0
+defaults write com.apple.dock wvous-br-modifier -int 0
 # 6A561511-8354-408E-8805-201BAAE80A04 ends here
 
 # [[file:provisioning.org::77191228-16CC-4B95-A030-A5C2DF90CD50][77191228-16CC-4B95-A030-A5C2DF90CD50]]
