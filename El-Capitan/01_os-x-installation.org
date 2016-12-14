@@ -39,7 +39,7 @@ diskutil unmount /dev/disk0s8
         #+END_SRC
 - System Preferences
   - Desktop & Screensaver
-    - *(Host)*: Flurry, 10m
+    - *(Host)*: "Message", 10m
     - *(Guest)*: "Message", 5m
   - *(Host)* Display \rarr Maximize resolution
   - Energy saver
