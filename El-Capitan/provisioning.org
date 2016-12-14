@@ -764,7 +764,6 @@ Steps are: configuration-writing-02-automated.sh
       everything
     - If you want it them go to the App Store and Install it
     - 4.5GB download
-    - *Run this once*
   - Command Line Tools (CLT)
     - Install the CLT.
     - Run this and choose *Install*.
