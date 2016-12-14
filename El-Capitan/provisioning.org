@@ -819,7 +819,7 @@ diskutil unmount /dev/disk0s8
     - Show volume in menubar
   - *(Host)* Bluetooth
     - Show in menu bar
-  - Users & Groups: Enable Guest User
+  - Users & Groups: Enable Guest User without Parental Controls.
 - *(Host)* Show Keychain Access in Menubar
   - Start KeyChain Access
   - Preferences
