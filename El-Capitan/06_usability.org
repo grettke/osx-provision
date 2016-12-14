@@ -1,4 +1,15 @@
 # [[file:provisioning.org::3A1E7B61-A44D-4C11-9338-979D7BB7B05B][3A1E7B61-A44D-4C11-9338-979D7BB7B05B]]
+* PopChar
+
+- Register it
+- Preferences
+  - Activation
+    - Location: Status item
+    - Close window then
+      - After selecting a char: No
+      - When mouse leaves window: No
+      - When clicking outside window: No
+
 * Karabiner
 
 - Run it. Approve it. Configure it with the following. Look for the
