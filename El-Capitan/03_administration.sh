@@ -64,3 +64,7 @@ cd ~/git/github-anonymous
 git clone https://github.com/Homebrew/homebrew.git
 git clone https://github.com/caskroom/homebrew-cask.git
 # A61A74A8-B361-4395-B9DE-E6F843166511 ends here
+
+# [[file:provisioning.org::orgmode:gcr:vela:E4D94581-BF48-4D98-BAB4-74BEEBA09F4A][orgmode:gcr:vela:E4D94581-BF48-4D98-BAB4-74BEEBA09F4A]]
+echo "Script complete"
+# orgmode:gcr:vela:E4D94581-BF48-4D98-BAB4-74BEEBA09F4A ends here

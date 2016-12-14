@@ -1619,6 +1619,16 @@ cd ~/git/github-anonymous
 git clone https://github.com/Homebrew/homebrew.git
 git clone https://github.com/caskroom/homebrew-cask.git
 #+END_SRC
+****** Complete
+:PROPERTIES:
+:ID:       orgmode:gcr:vela:DE760FA6-E465-4EFA-BB8F-A46D459A9F44
+:END:
+
+#+NAME: orgmode:gcr:vela:E4D94581-BF48-4D98-BAB4-74BEEBA09F4A
+#+BEGIN_SRC sh
+echo "Script complete"
+#+END_SRC
+
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "04_administration.org"
