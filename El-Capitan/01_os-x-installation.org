@@ -40,7 +40,7 @@ diskutil unmount /dev/disk0s8
 - System Preferences
   - Desktop & Screensaver
     - *(Host)*: Flurry, 10m
-    - *(Guest)*: Blank screen, 5m
+    - *(Guest)*: "Message", 5m
   - *(Host)* Display \rarr Maximize resolution
   - Energy saver
     - *(Host)*
@@ -50,14 +50,15 @@ diskutil unmount /dev/disk0s8
           when display is off
       - On battery, Screen sleep 5m
         - Don't slightly dim the display on battery power
-    - (Guest) :: Computer sleep never, Screen sleep 15
+    - *(Guest)*
+      - Computer sleep: never
   - *(Host)* Keyboard \rarr Modifiers
     - Caps Lock \rarr Control
     - Control \rarr Caps Lock
   - Mouse
     - *(Host)* Connect Bluetooth mouse
     - Tracking Speed: 20%
-  - Trackpad
+  - *(Host)* Trackpad
     - Point & Click
       - Secondary click: TRUE
       - Tap to click: TRUE
@@ -65,9 +66,9 @@ diskutil unmount /dev/disk0s8
     - Add printer(s)
   - Sound
     - Show volume in menubar
-  - Bluetooth
+  - *(Host)* Bluetooth
     - Show in menu bar
-  - Users & Groups: Enable Guest User
+  - Users & Groups: Enable Guest User without Parental Controls.
 - *(Host)* Show Keychain Access in Menubar
   - Start KeyChain Access
   - Preferences
