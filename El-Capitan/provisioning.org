@@ -2868,6 +2868,16 @@ brew install shellcheck
 :END:
 #+NAME: 64C2907C-7D2E-4EEA-A9EC-9AE77C823D1C
 #+BEGIN_SRC org
+,* Sourcetree
+
+- Log into SourceTree
+- Let it scan the BitBucket folder to add those projects to SourceTree
+- Preferences
+  - General: Disallow SourceTree from modifying yoru global Git config file
+  - Diff: Set font to DJSM 14
+- Manually
+  - Go through the licensing process
+  - Old app just let you type it into the GUI, not seeing it here now
 ,* DeltaWalker
 
 - License it.
@@ -2898,7 +2908,7 @@ brew install shellcheck
     - [ ] Ignore differences in line endings (CF and LF)
       - Most systems don't care, but I do and should fix it
 - Set up the "Compare with DeltaWalker.workflow"
-  - Go to its Cask location/Extras
+  - Go to its [Cask location]/Extras
   - Copy it to ~/Library/Services
   - Opening it in Automator by double clicking it in Finder
   - Immediately saving it and closing it
@@ -2906,16 +2916,6 @@ brew install shellcheck
   that the settings are saved. Once they were not.
 - Test the sample files for a two-file diff.
 - After Git is set up, test everything.
-,* Sourcetree
-
-- Log into SourceTree
-- Let it scan the BitBucket folder to add those projects to SourceTree
-- Preferences
-  - General: Disallow SourceTree from modifying yoru global Git config file
-  - Diff: Set font to DJSM 14
-- Manually
-  - Go through the licensing process
-  - Old app just let you type it into the GUI, not seeing it here now
 ,* IntelliJ Idea
 
 - Pretty sure that I've got a config somewhere for this
