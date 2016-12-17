@@ -2870,7 +2870,6 @@ brew install shellcheck
 #+BEGIN_SRC org
 ,* DeltaWalker
 
-- Drag the bundle into Applications
 - License it.
 - Set preferences for new comparisons (be sure of this, easy not to)
   - General
