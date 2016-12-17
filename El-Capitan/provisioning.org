@@ -3117,8 +3117,8 @@ brew install shellcheck
 
 #+NAME: C38471A4-27EF-4543-9076-299EC7FE2086
 #+BEGIN_SRC org
-This is in BrewCask, but the download is waste of time. I have it locally. Use
-the version I bought; not the latest which is in brew.
+MS Office This is in BrewCask, but the download is waste of time. I have it
+locally. Use the version I bought; not the latest which is in brew.
 
 I keep going back and forth on this one. Is it worth saving 15 minutes having to
 install it myself?
