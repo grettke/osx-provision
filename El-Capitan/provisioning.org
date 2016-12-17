@@ -2898,7 +2898,7 @@ brew install shellcheck
     - [ ] Ignore differences in line endings (CF and LF)
       - Most systems don't care, but I do and should fix it
 - Set up the "Compare with DeltaWalker.workflow"
-  - Go to its Cask location
+  - Go to its Cask location/Extras
   - Copy it to ~/Library/Services
   - Opening it in Automator by double clicking it in Finder
   - Immediately saving it and closing it
