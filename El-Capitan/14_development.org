@@ -35,8 +35,8 @@
   - Immediately saving it and closing it
 - Save the new configuration and guit DW, and then start it again and verify
   that the settings are saved. Once they were not.
-- Test the sample files for a two-file diff.
-- After Git is set up, test everything.
+- Sample files for diffing used to be included
+  - Not anymore so nothing to test
 
 * Sourcetree
 
