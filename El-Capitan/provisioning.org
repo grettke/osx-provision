@@ -2614,6 +2614,7 @@ cd ~/util/proselint
 virtualenv env
 venv
 pip install proselint
+deactivate
 #+END_SRC
 
 ***** Perl
