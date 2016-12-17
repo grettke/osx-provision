@@ -22,6 +22,7 @@ cd
 # [[file:provisioning.org::ADE3737D-A638-4BBD-9DD5-C42681EA1C0D][ADE3737D-A638-4BBD-9DD5-C42681EA1C0D]]
 echo $BASH_VERSION
 brew install bash
+brew install bashdb
 if grep "/usr/local/bin/bash" /etc/shells > /dev/null; then
     echo "brew bash already configured in shells; doing nothing"
 else
