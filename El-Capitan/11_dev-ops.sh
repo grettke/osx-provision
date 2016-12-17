@@ -28,7 +28,6 @@ fi
 # [[file:provisioning.org::165A046E-FFC9-4431-8150-CF9F4890EA24][165A046E-FFC9-4431-8150-CF9F4890EA24]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vagrant
-    vagrant plugin install vagrant-digitalocean
 else
     echo "vagrant: Only install on hosts"
 fi
