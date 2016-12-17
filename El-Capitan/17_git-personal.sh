@@ -31,12 +31,10 @@ git clone bitbucket-`whoami`:grettke/correspondence.git
 git clone bitbucket-`whoami`:grettke/wnw.git
 git clone bitbucket-`whoami`:grettke/texmf.git
 git clone bitbucket-`whoami`:grettke/hardware
-git clone bitbucket-`whoami`:grettke/tracking01
 cd ~/git/github
 git clone github-`whoami`:grettke/osx-provision.git
 git clone github-`whoami`:grettke/bash.git
 git clone github-`whoami`:grettke/wisdomandwonder.git
-git clone github-`whoami`:grettke/home.git
 # 5BD1669B-8E2A-46B5-AB80-88DA5764DEEB ends here
 
 # [[file:provisioning.org::F407E69A-6C92-4254-A0E3-A442166AD57B][F407E69A-6C92-4254-A0E3-A442166AD57B]]
