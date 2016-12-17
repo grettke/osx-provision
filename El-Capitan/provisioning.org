@@ -3635,7 +3635,6 @@ cd ~/git/github
 git clone github-`whoami`:grettke/osx-provision.git
 git clone github-`whoami`:grettke/bash.git
 git clone github-`whoami`:grettke/wisdomandwonder.git
-git clone github-`whoami`:grettke/Linux-Nginx-MariaDB-PHP-WordPress.git
 git clone github-`whoami`:grettke/home.git
 #+end_src
 
