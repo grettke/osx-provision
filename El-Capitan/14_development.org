@@ -1,7 +1,6 @@
 # [[file:provisioning.org::64C2907C-7D2E-4EEA-A9EC-9AE77C823D1C][64C2907C-7D2E-4EEA-A9EC-9AE77C823D1C]]
 * DeltaWalker
 
-- Drag the bundle into Applications
 - License it.
 - Set preferences for new comparisons (be sure of this, easy not to)
   - General
@@ -30,7 +29,7 @@
     - [ ] Ignore differences in line endings (CF and LF)
       - Most systems don't care, but I do and should fix it
 - Set up the "Compare with DeltaWalker.workflow"
-  - Go to its Cask location
+  - Go to its [Cask location]/Extras
   - Copy it to ~/Library/Services
   - Opening it in Automator by double clicking it in Finder
   - Immediately saving it and closing it
@@ -38,16 +37,22 @@
   that the settings are saved. Once they were not.
 - Test the sample files for a two-file diff.
 - After Git is set up, test everything.
+
 * Sourcetree
 
-- Log into SourceTree
-- Let it scan the BitBucket folder to add those projects to SourceTree
+- Log into SourceTree using BitBucket
+- Skip Setup
+- If you have it
+  - Let it scan the BitBucket folder to add those projects to SourceTree
 - Preferences
   - General: Disallow SourceTree from modifying yoru global Git config file
-  - Diff: Set font to DJSM 14
-- Manually
-  - Go through the licensing process
-  - Old app just let you type it into the GUI, not seeing it here now
+  - Diff
+    - Set font to DJSM 14
+    - Do not integrate with DeltaWalker
+      - Command line Git is integrated
+      - SourceTree is standalone /to be alone/
+- Once you set up Git, pull a project from BB
+
 * IntelliJ Idea
 
 - Pretty sure that I've got a config somewhere for this
