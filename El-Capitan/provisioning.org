@@ -3645,8 +3645,6 @@ automate this part yet.
 #+NAME: F407E69A-6C92-4254-A0E3-A442166AD57B
 #+begin_src sh
 cd ~/git/github-anonymous
-git clone https://github.com/bkuhlmann/osx
-git clone https://github.com/monfresh/laptop
 rm -rf ~/src
 mkdir ~/src
 cd ~/src

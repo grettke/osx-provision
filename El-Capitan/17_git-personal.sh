@@ -41,8 +41,6 @@ git clone github-`whoami`:grettke/home.git
 
 # [[file:provisioning.org::F407E69A-6C92-4254-A0E3-A442166AD57B][F407E69A-6C92-4254-A0E3-A442166AD57B]]
 cd ~/git/github-anonymous
-git clone https://github.com/bkuhlmann/osx
-git clone https://github.com/monfresh/laptop
 rm -rf ~/src
 mkdir ~/src
 cd ~/src
