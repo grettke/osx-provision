@@ -1,7 +1,7 @@
 # [[file:provisioning.org::orgmode:gcr:vela:5696A7AC-7227-49AA-9DDB-902BC6722018][orgmode:gcr:vela:5696A7AC-7227-49AA-9DDB-902BC6722018]]
 #+BEGIN_SRC sh
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    carbon-copy-cloner
+    brew cask install carbon-copy-cloner
 else
     echo "carbon-copy-cloner: Only install on hosts"
 fi
