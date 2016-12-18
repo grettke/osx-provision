@@ -20,7 +20,7 @@ cd
 # D94BB210-9FCF-4A63-825A-9353E2709654 ends here
 
 # [[file:provisioning.org::ADE3737D-A638-4BBD-9DD5-C42681EA1C0D][ADE3737D-A638-4BBD-9DD5-C42681EA1C0D]]
-echo $BASH_VERSION
+bash --version
 brew install bash
 if grep "/usr/local/bin/bash" /etc/shells > /dev/null; then
     echo "brew bash already configured in shells; doing nothing"
@@ -28,7 +28,15 @@ else
     sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
     chsh -s /usr/local/bin/bash
 fi
-echo $BASH_VERSION
+brew install bashdb
+bashhome=$(brew --prefix bash)
+bdbhome=$(brew --prefix bashdb)
+rm $bashhome/share/bashdb
+ln -s $bdbhome/share/bashdb $bashhome/share/bashdb
+unset bashhome
+unset bdbhome
+bash --version
+bashdb --version
 # ADE3737D-A638-4BBD-9DD5-C42681EA1C0D ends here
 
 # [[file:provisioning.org::DD72394C-9D37-446C-A704-E88BE2B0CEED][DD72394C-9D37-446C-A704-E88BE2B0CEED]]
