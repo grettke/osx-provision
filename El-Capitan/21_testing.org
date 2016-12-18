@@ -5,11 +5,14 @@
   - [ ] Fundamental
   - [ ] Org2Blog
   - [ ] HELP
-- [ ] execution
+- [ ] Diagram.org verification
   - Delete every result block: just do it manually search for =#+RESULT=
   - Delete all image output
   - Execute entire document successfully
   - Images re-appear
+  - [ ] Ditaa
+  - [ ] PlantUML
+  - [ ] Graphviz
 - [ ] eshell
   - Run it
   - Emacs uses correct HELP directory
