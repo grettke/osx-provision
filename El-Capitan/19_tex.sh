@@ -4,5 +4,5 @@ brew cask install mactex
 
 # [[file:provisioning.org::A6FDD2B6-412D-41A5-B58A-942C6540BB57][A6FDD2B6-412D-41A5-B58A-942C6540BB57]]
 brew install lua
-brew install gnuplot --with-latex --with-pdflib-lite --with-test --with-x11
+brew install gnuplot --with-tex --with-pdflib-lite --with-test --with-x11
 # A6FDD2B6-412D-41A5-B58A-942C6540BB57 ends here
