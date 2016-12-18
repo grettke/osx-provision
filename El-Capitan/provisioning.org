@@ -3737,9 +3737,9 @@ Set up my TeX stuff for KOMA-script. Backup the default configuration first.
 
 ,#+NAME: 4053A83F-EA3D-4431-AA4A-62336DF2F95E
 ,#+begin_src sh
-ls /usr/local/texlive/2015
-sudo cp /usr/local/texlive/2015/texmf.cnf /usr/local/texlive/2015/texmf.cnf-`date '+%Y_%m_%d__%H_%M_%S'`
-ls /usr/local/texlive/2015
+ls /usr/local/texlive/2016
+sudo cp /usr/local/texlive/2016/texmf.cnf /usr/local/texlive/2016/texmf.cnf-`date '+%Y_%m_%d__%H_%M_%S'`
+ls /usr/local/texlive/2016
 sudo tlmgr conf texmf TEXMFHOME ~/git/bitbucket/texmf/
 ,#+end_src
 
