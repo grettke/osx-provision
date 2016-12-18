@@ -1,4 +1,4 @@
-# [[file:provisioning.org::D880F24A-DE8D-4513-A354-45C9B57E0631][D880F24A-DE8D-4513-A354-45C9B57E0631]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::D880F24A-DE8D-4513-A354-45C9B57E0631][D880F24A-DE8D-4513-A354-45C9B57E0631]]
 * Terminal
 
 - Profiles

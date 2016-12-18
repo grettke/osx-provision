@@ -1,4 +1,4 @@
-# [[file:provisioning.org::465FEE16-2EC6-475F-B2C4-C68E9E10E45F][465FEE16-2EC6-475F-B2C4-C68E9E10E45F]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::465FEE16-2EC6-475F-B2C4-C68E9E10E45F][465FEE16-2EC6-475F-B2C4-C68E9E10E45F]]
 * Marked 2
 
 - License it

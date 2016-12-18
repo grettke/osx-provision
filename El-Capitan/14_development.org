@@ -1,4 +1,4 @@
-# [[file:provisioning.org::64C2907C-7D2E-4EEA-A9EC-9AE77C823D1C][64C2907C-7D2E-4EEA-A9EC-9AE77C823D1C]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::64C2907C-7D2E-4EEA-A9EC-9AE77C823D1C][64C2907C-7D2E-4EEA-A9EC-9AE77C823D1C]]
 * DeltaWalker
 
 - License it.

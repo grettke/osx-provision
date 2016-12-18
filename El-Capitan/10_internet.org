@@ -1,4 +1,4 @@
-# [[file:provisioning.org::A26787A7-8AB7-4737-AECA-822CE9E99C23][A26787A7-8AB7-4737-AECA-822CE9E99C23]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::A26787A7-8AB7-4737-AECA-822CE9E99C23][A26787A7-8AB7-4737-AECA-822CE9E99C23]]
 * MPlayer OSX Extended
 
 - Run it

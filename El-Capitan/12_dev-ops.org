@@ -1,4 +1,4 @@
-# [[file:provisioning.org::089A38CA-43AD-4BE4-8EF4-C77E57CF25F3][089A38CA-43AD-4BE4-8EF4-C77E57CF25F3]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::089A38CA-43AD-4BE4-8EF4-C77E57CF25F3][089A38CA-43AD-4BE4-8EF4-C77E57CF25F3]]
 * Carbon Copy Cloner
 
 *Only install on hosts*

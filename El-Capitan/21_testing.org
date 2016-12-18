@@ -1,4 +1,4 @@
-# [[file:provisioning.org::0E466E47-8ED3-4462-8939-2318ED91AD64][0E466E47-8ED3-4462-8939-2318ED91AD64]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::0E466E47-8ED3-4462-8939-2318ED91AD64][0E466E47-8ED3-4462-8939-2318ED91AD64]]
 - [ ] Get Emacs running
 - [ ] Re-tangle everything step by step
   - [ ] ECM
