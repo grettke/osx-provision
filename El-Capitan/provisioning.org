@@ -3766,8 +3766,11 @@ sudo mktexlsr
 #+NAME: 0E466E47-8ED3-4462-8939-2318ED91AD64
 #+BEGIN_SRC org
 - [ ] Get Emacs running
-- [ ] tangle
-  - Tangle the document successfully
+- [ ] Re-tangle everything step by step
+  - [ ] ECM
+  - [ ] Fundamental
+  - [ ] Org2Blog
+  - [ ] HELP
 - [ ] execution
   - Delete every result block: just do it manually search for =#+RESULT=
   - Delete all image output
