@@ -3719,6 +3719,7 @@ Must install TeX before GNUPlot.
 
 #+NAME: A6FDD2B6-412D-41A5-B58A-942C6540BB57
 #+BEGIN_SRC sh
+brew install lua
 brew install gnuplot --with-latex --with-pdflib-lite --with-test --with-x11
 #+END_SRC
 **** Configure
