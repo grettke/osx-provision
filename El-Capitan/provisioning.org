@@ -1380,11 +1380,11 @@ write defaults com.apple.dock wvous-tr-corner -int 2
 defaults write com.apple.dock wvous-tr-modifier -int 0
 #+END_SRC
 
-Bottom left screen corner \rarr Application window.
+Bottom left screen corner \rarr Start Screensaver
 
 #+NAME: 7C9DE1C5-BBF8-4D40-8FAC-E78D5B85231E
 #+BEGIN_SRC sh
-defaults write com.apple.dock wvous-bl-corner -int 3
+defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
 #+END_SRC
 

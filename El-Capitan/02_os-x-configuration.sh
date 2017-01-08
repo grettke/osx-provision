@@ -309,7 +309,7 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 # FF4E8A69-A137-4E50-A4E4-59DA58A082B5 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::7C9DE1C5-BBF8-4D40-8FAC-E78D5B85231E][7C9DE1C5-BBF8-4D40-8FAC-E78D5B85231E]]
-defaults write com.apple.dock wvous-bl-corner -int 3
+defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
 # 7C9DE1C5-BBF8-4D40-8FAC-E78D5B85231E ends here
 
