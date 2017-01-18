@@ -222,6 +222,7 @@ Server properties:
 - Set the white balance
   - Hold up a bleached white piece of printer paper to the camera
   - Balance until it is the same color on the screen
+- Enable at startup
 # 142DA74D-407B-4F49-B833-093BB5EB83B6 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::9AB3A903-24AA-430D-9B74-D0B9D787C2DD][9AB3A903-24AA-430D-9B74-D0B9D787C2DD]]

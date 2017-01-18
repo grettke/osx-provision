@@ -3445,6 +3445,7 @@ Server properties:
 - Set the white balance
   - Hold up a bleached white piece of printer paper to the camera
   - Balance until it is the same color on the screen
+- Enable at startup
 #+END_SRC
 
 ***** Key Codes
