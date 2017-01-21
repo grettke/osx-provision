@@ -57,6 +57,7 @@ brew install gnu-apl
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::F5E5B964-50FA-49EF-BABF-EFE558057EC2][F5E5B964-50FA-49EF-BABF-EFE558057EC2]]
 brew install git
+brew install git-flow-avh
 # F5E5B964-50FA-49EF-BABF-EFE558057EC2 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::CCF91EC0-F689-4279-972C-9F1D32C4C64B][CCF91EC0-F689-4279-972C-9F1D32C4C64B]]

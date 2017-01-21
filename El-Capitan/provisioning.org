@@ -2714,6 +2714,7 @@ For everything beyond the built in.
 #+NAME: F5E5B964-50FA-49EF-BABF-EFE558057EC2
 #+BEGIN_SRC sh
 brew install git
+brew install git-flow-avh
 #+END_SRC
 
 ***** EMACS
