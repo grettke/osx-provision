@@ -82,6 +82,11 @@ Host bitbucket-`whoami`
      User git
      PreferredAuthentications publickey
      IdentityFile ~/.ssh/$SSHFILE.pub
+Host gitlab-`whoami`
+     HostName gitlab.com
+     User git
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/$SSHFILE.pub
 EOF
 # 70D5D9F2-6CFC-4FB5-BC45-416B4ABA029F ends here
 
