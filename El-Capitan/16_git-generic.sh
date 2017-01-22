@@ -90,12 +90,12 @@ Host gitlab-`whoami`
 EOF
 # 70D5D9F2-6CFC-4FB5-BC45-416B4ABA029F ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::07933181-5F02-43CB-9DF8-232DA213E4BB][07933181-5F02-43CB-9DF8-232DA213E4BB]]
-ssh -T github-`whoami`
-read -p "Did it work? If not, fix it. [hit enter to continue]"
-# 07933181-5F02-43CB-9DF8-232DA213E4BB ends here
-
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::66DAC891-FB97-48A8-9C8B-0292095F13A6][66DAC891-FB97-48A8-9C8B-0292095F13A6]]
 ssh -T bitbucket-`whoami`
 read -p "Did it work? If not, fix it. [hit enter to continue]"
 # 66DAC891-FB97-48A8-9C8B-0292095F13A6 ends here
+
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::07933181-5F02-43CB-9DF8-232DA213E4BB][07933181-5F02-43CB-9DF8-232DA213E4BB]]
+ssh -T github-`whoami`
+read -p "Did it work? If not, fix it. [hit enter to continue]"
+# 07933181-5F02-43CB-9DF8-232DA213E4BB ends here
