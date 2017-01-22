@@ -67,7 +67,7 @@ ssh-add -K ~/.ssh/$SSHFILE
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::3934CA71-20AE-4136-AB57-1DEF8EBC0ADB][3934CA71-20AE-4136-AB57-1DEF8EBC0ADB]]
 echo "Name your Git site key: $SSHFILE"
 cat ~/.ssh/$SSHFILE.pub | pbcopy
-read -p "The new key is in your clipboard. Go and add this key to BitBucket and GitHub. When you are finished, hit [enter] to continue."
+read -p "The new key is in your clipboard. Go and add this key to BitBucket, GitLab and GitHub. When you are finished, hit [enter] to continue."
 # 3934CA71-20AE-4136-AB57-1DEF8EBC0ADB ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::70D5D9F2-6CFC-4FB5-BC45-416B4ABA029F][70D5D9F2-6CFC-4FB5-BC45-416B4ABA029F]]

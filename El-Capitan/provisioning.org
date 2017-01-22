@@ -3559,7 +3559,7 @@ Add they key to Bitbucket and Github.
 #+begin_src sh
 echo "Name your Git site key: $SSHFILE"
 cat ~/.ssh/$SSHFILE.pub | pbcopy
-read -p "The new key is in your clipboard. Go and add this key to BitBucket and GitHub. When you are finished, hit [enter] to continue."
+read -p "The new key is in your clipboard. Go and add this key to BitBucket, GitLab and GitHub. When you are finished, hit [enter] to continue."
 #+end_src
 
 Set up ~/.ssh/config.
