@@ -3595,6 +3595,12 @@ ssh -T bitbucket-`whoami`
 read -p "Did it work? If not, fix it. [hit enter to continue]"
 #+end_src
 
+#+NAME: orgmode:gcr:2017-01-21:mara:42CE5B43-ED8C-473C-B8D0-C630181C15F5
+#+BEGIN_SRC sh
+ssh -T gitlab-`whoami`
+read -p "Did it work? If not, fix it. [hit enter to continue]"
+#+END_SRC
+
 #+NAME: 07933181-5F02-43CB-9DF8-232DA213E4BB
 #+begin_src sh
 ssh -T github-`whoami`

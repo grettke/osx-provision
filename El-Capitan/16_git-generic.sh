@@ -95,6 +95,11 @@ ssh -T bitbucket-`whoami`
 read -p "Did it work? If not, fix it. [hit enter to continue]"
 # 66DAC891-FB97-48A8-9C8B-0292095F13A6 ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:2017-01-21:mara:42CE5B43-ED8C-473C-B8D0-C630181C15F5][orgmode:gcr:2017-01-21:mara:42CE5B43-ED8C-473C-B8D0-C630181C15F5]]
+ssh -T gitlab-`whoami`
+read -p "Did it work? If not, fix it. [hit enter to continue]"
+# orgmode:gcr:2017-01-21:mara:42CE5B43-ED8C-473C-B8D0-C630181C15F5 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::07933181-5F02-43CB-9DF8-232DA213E4BB][07933181-5F02-43CB-9DF8-232DA213E4BB]]
 ssh -T github-`whoami`
 read -p "Did it work? If not, fix it. [hit enter to continue]"
