@@ -3587,13 +3587,13 @@ EOF
 
 Test each one out.
 
+Separate them to allow for easier copy-pasting.
+
 #+NAME: 07933181-5F02-43CB-9DF8-232DA213E4BB
 #+begin_src sh
 ssh -T github-`whoami`
 read -p "Did it work? If not, fix it. [hit enter to continue]"
 #+end_src
-
-Separate them to allow for easier copy-pasting.
 
 #+NAME: 66DAC891-FB97-48A8-9C8B-0292095F13A6
 #+begin_src sh
