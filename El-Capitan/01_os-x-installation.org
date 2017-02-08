@@ -41,6 +41,14 @@ diskutil unmount /dev/disk0s8
   - Desktop & Screensaver
     - *(Host)*: "Message", 10m
     - *(Guest)*: "Message", 5m
+  - Spotlight
+    - Search Results
+      - Applications
+      - Documents
+      - Folders
+      - System Preferences
+    - Privacy
+      - \deg
   - *(Host)* Display \rarr Maximize resolution
   - Energy saver
     - *(Host)*
