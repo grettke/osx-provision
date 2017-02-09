@@ -2338,6 +2338,16 @@ brew cask install gimp
 #+BEGIN_SRC sh
 brew cask install airy
 #+END_SRC
+***** Deluge
+:PROPERTIES:
+:ID:       orgmode:gcr:2017-02-08:mara:5FE9F3DD-7E3E-4B80-B712-FD06701A0860
+:END:
+
+#+NAME: orgmode:gcr:2017-02-08:mara:F4284C67-E5C8-4B44-AC61-87BA6FCC248D
+#+BEGIN_SRC shell
+brew cask install deluge
+#+END_SRC
+
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "10_internet.org"

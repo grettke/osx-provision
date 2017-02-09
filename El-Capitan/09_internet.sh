@@ -1,3 +1,7 @@
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:2017-02-08:mara:F4284C67-E5C8-4B44-AC61-87BA6FCC248D][orgmode:gcr:2017-02-08:mara:F4284C67-E5C8-4B44-AC61-87BA6FCC248D]]
+brew cask install deluge
+# orgmode:gcr:2017-02-08:mara:F4284C67-E5C8-4B44-AC61-87BA6FCC248D ends here
+
 ;; [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:02BF16B3-9FC1-4F9A-AB48-795FB9969E88][orgmode:gcr:vela:02BF16B3-9FC1-4F9A-AB48-795FB9969E88]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install whatsapp
