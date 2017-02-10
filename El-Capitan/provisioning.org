@@ -795,6 +795,7 @@ diskutil unmount /dev/disk0s8
   - Spotlight
     - Search Results
       - Applications
+      - Calculator
       - Documents
       - Folders
       - System Preferences
