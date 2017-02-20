@@ -8,11 +8,11 @@
     - Max available memory: 4096
     - [X] Automatically find new updates and notify me
     - Colors and Fonts
-      - Basic: DJSM 14
+      - Basic: DJSM 11
         - Text Font
         - Text Editor Block Selection Font
       - Differences
-        - Font: DJSM 14
+        - Font: DJSM 11
         - Colors:
           - Addition: Green
           - Change: Yellow

@@ -2905,11 +2905,11 @@ brew install shellcheck
     - Max available memory: 4096
     - [X] Automatically find new updates and notify me
     - Colors and Fonts
-      - Basic: DJSM 14
+      - Basic: DJSM 11
         - Text Font
         - Text Editor Block Selection Font
       - Differences
-        - Font: DJSM 14
+        - Font: DJSM 11
         - Colors:
           - Addition: Green
           - Change: Yellow
@@ -3671,6 +3671,7 @@ git clone bitbucket-`whoami`:grettke/correspondence.git
 git clone bitbucket-`whoami`:grettke/wnw.git
 git clone bitbucket-`whoami`:grettke/texmf.git
 git clone bitbucket-`whoami`:grettke/hardware
+git clone bitbucket-`whoami`:grettke/hamradio
 cd ~/git/github
 git clone github-`whoami`:grettke/osx-provision.git
 git clone github-`whoami`:grettke/bash.git

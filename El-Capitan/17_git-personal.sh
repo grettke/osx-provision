@@ -31,6 +31,7 @@ git clone bitbucket-`whoami`:grettke/correspondence.git
 git clone bitbucket-`whoami`:grettke/wnw.git
 git clone bitbucket-`whoami`:grettke/texmf.git
 git clone bitbucket-`whoami`:grettke/hardware
+git clone bitbucket-`whoami`:grettke/hamradio
 cd ~/git/github
 git clone github-`whoami`:grettke/osx-provision.git
 git clone github-`whoami`:grettke/bash.git
