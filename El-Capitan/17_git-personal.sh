@@ -38,6 +38,8 @@ git clone github-`whoami`:grettke/bash.git
 git clone github-`whoami`:grettke/wisdomandwonder.git
 git clone github-`whoami`:grettke/recursive-git-status-bash.git
 git clone github-`whoami`:akatov/pretty-mode.git
+cd ~/git/github-anonymous
+git clone https://github.com/altercation/solarized.git
 # 5BD1669B-8E2A-46B5-AB80-88DA5764DEEB ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::F407E69A-6C92-4254-A0E3-A442166AD57B][F407E69A-6C92-4254-A0E3-A442166AD57B]]

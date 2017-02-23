@@ -3678,6 +3678,8 @@ git clone github-`whoami`:grettke/bash.git
 git clone github-`whoami`:grettke/wisdomandwonder.git
 git clone github-`whoami`:grettke/recursive-git-status-bash.git
 git clone github-`whoami`:akatov/pretty-mode.git
+cd ~/git/github-anonymous
+git clone https://github.com/altercation/solarized.git
 #+end_src
 
 At this point, the Bash initialization files point at the directory with my
