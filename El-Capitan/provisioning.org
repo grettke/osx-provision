@@ -2912,7 +2912,7 @@ brew install shellcheck
         - Font: DJSM 10
         - Colors:
           - Addition: Green
-          - Change: Yellow
+          - Change: Orange
           - Conflict: Red
           - Deletion: Purple
   - All Comparisons
