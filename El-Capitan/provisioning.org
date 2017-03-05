@@ -2639,9 +2639,9 @@ rm -rf ~/util/proselint
 mkdir -p ~/util/proselint
 cd ~/util/proselint
 virtualenv env
-venv
+veon
 pip install proselint
-deactivate
+veof
 #+END_SRC
 
 ***** Perl
