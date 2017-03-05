@@ -13,7 +13,7 @@ pip install --upgrade pip setuptools virtualenv
 rm -rf ~/util/proselint
 mkdir -p ~/util/proselint
 cd ~/util/proselint
-virtualenv env
+vens
 veon
 pip install proselint
 veof
