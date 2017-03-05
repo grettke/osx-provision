@@ -2642,6 +2642,7 @@ vens
 veon
 pip install proselint
 veof
+cd ~/util/
 #+END_SRC
 
 ***** Perl

@@ -17,6 +17,7 @@ vens
 veon
 pip install proselint
 veof
+cd ~/util/
 # orgmode:gcr:vela:696D3C27-F72A-4D64-BB70-A14D42CCCD5A ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::2C2EE0BA-1EED-401F-83BB-31DA8485A4AC][2C2EE0BA-1EED-401F-83BB-31DA8485A4AC]]
