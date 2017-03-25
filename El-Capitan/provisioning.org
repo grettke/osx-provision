@@ -2098,6 +2098,16 @@ brew install figlet
 brew cask install freemind
 #+END_SRC
 
+***** LAME
+:PROPERTIES:
+:ID:       orgmode:gcr:2017-03-24:mara:98954753-F4D5-4D1F-AD1B-5A19E00E7FDB
+:END:
+
+#+NAME: orgmode:gcr:2017-03-24:mara:DCC88C70-3620-4C6A-9299-ECFDE9053327
+#+BEGIN_SRC sh
+brew install lame
+#+END_SRC
+
 ***** Completion
 :PROPERTIES:
 :ID:       orgmode:gcr:vela:C05687DA-1016-4329-A85D-A128773A867E

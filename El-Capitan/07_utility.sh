@@ -70,6 +70,10 @@ brew install figlet
 brew cask install freemind
 # C03CD9F2-0630-4E70-A20D-3D43931CE8FA ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:2017-03-24:mara:DCC88C70-3620-4C6A-9299-ECFDE9053327][orgmode:gcr:2017-03-24:mara:DCC88C70-3620-4C6A-9299-ECFDE9053327]]
+brew install lame
+# orgmode:gcr:2017-03-24:mara:DCC88C70-3620-4C6A-9299-ECFDE9053327 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:1402AA08-B373-4B34-BD11-C608177CE9F8][orgmode:gcr:vela:1402AA08-B373-4B34-BD11-C608177CE9F8]]
 echo "Script is done"
 # orgmode:gcr:vela:1402AA08-B373-4B34-BD11-C608177CE9F8 ends here
