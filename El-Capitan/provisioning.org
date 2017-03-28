@@ -843,7 +843,14 @@ diskutil unmount /dev/disk0s8
   - Parental Controls: *NA*
   - App Store: *NA*
   - Dictation & Speech
-    - TODO
+    - Dictation
+      - ON
+      - DO Use Enhanced Dictation
+      - Shortcut: Press Right Command Key Twice
+    - Text 2 Speech
+      - Voice: Cepstral Preference
+      - Rate: \frac14 left of Normal
+      - Speak selected text on key: Command Escape
   - Date & Time: *NA*
   - Startup Disk: *NA*
   - Time Machine: *NA*
