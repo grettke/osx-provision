@@ -789,9 +789,14 @@ diskutil unmount /dev/disk0s7
 diskutil unmount /dev/disk0s8
         ,#+END_SRC
 - System Preferences
+  - General: *NA*
   - Desktop & Screensaver
     - *(Host)*: "Message", 10m
     - *(Guest)*: "Message", 5m
+  - Dock: *NA*
+  - Mission Control: *NA*
+  - Language & Region: *NA*
+  - Security & Privacy: *NA*
   - Spotlight
     - Search Results
       - Applications
@@ -801,7 +806,8 @@ diskutil unmount /dev/disk0s8
       - System Preferences
     - Privacy
       - \deg
-  - *(Host)* Display \rarr Maximize resolution
+  - Notifications: *NA*
+  - Displays *(Host)* \rarr Maximize resolution
   - Energy saver
     - *(Host)*
       - On power
@@ -812,23 +818,42 @@ diskutil unmount /dev/disk0s8
         - Don't slightly dim the display on battery power
     - *(Guest)*
       - Computer sleep: never
-  - *(Host)* Keyboard \rarr Modifiers
+  - Keyboard *(Host)* \rarr Modifiers
     - Caps Lock \rarr Control
     - Control \rarr Caps Lock
   - Mouse
     - *(Host)* Connect Bluetooth mouse
     - Tracking Speed: 20%
-  - *(Host)* Trackpad
+  - Trackpad *(Host)*
     - Point & Click
       - Secondary click: TRUE
       - Tap to click: TRUE
-  - *(Host)* Printers & Scanners
+  - Printers & Scanners *(Host)*
     - Add printer(s)
   - Sound
     - Show volume in menubar
-  - *(Host)* Bluetooth
+  - iCloud: *NA*
+  - Internet Accounts: *NA*
+  - Extensions: *NA*
+  - Network: *NA*
+  - Bluetooth *(Host)*
     - Show in menu bar
+  - Sharing: *NA*
   - Users & Groups: Enable Guest User without Parental Controls.
+  - Parental Controls: *NA*
+  - App Store: *NA*
+  - Dictation & Speech
+    - TODO
+  - Date & Time: *NA*
+  - Startup Disk: *NA*
+  - Time Machine: *NA*
+  - Accessibility
+    - TODO
+  - Cepestral Voices
+    - See below
+  - Java: *NA*
+  - SwitchResX: *NA*
+  - Tuxera NTFA: *NA*
 - *(Host)* Show Keychain Access in Menubar
   - Start KeyChain Access
   - Preferences
