@@ -94,7 +94,7 @@ diskutil unmount /dev/disk0s8
   - Dictation & Speech
     - Dictation
       - ON
-      - DO Use Enhanced Dictation
+      - YES Use Enhanced Dictation
       - Shortcut: Press Right Command Key Twice
     - Text 2 Speech
       - Voice: Cepstral Preference
@@ -104,12 +104,36 @@ diskutil unmount /dev/disk0s8
   - Startup Disk: *NA*
   - Time Machine: *NA*
   - Accessibility
-    - TODO
-  - Cepestral Voices
+    - Display
+      - Increase contrast
+        - Automatically Reduces transparency
+      - Contrast: Normal
+      - Cursor size: At 20% mark between Normal and Large
+      - YES Shake mouse pointer to locate  - Cepestral Voices
     - See below
-  - Java: *NA*
+  - Zoom
+    - YES Use keyboard shortcuts
+    - YES Zoom images
+    - Zoom Style:  Fullscreen
+      - More Options
+        - When zoomed in, the screen image moves:
+          - Continuously with pointer
+  - VoiceOver: *NA*
+  - Descriptions: *NA*
+  - Captions: *NA*
+  - Audio: *NA*
+  - Keyboard: *NA*
+  - Mouse & Trackpad
+    - Trackpad Options
+      - Enable Dragging: *Without* Drag Lock
+  - Switch Control: *NA*
+  - Dictation: *NA* (Review all of the commands though)
+    - That: Selected or desired thing
+    - Select N, Go To N, Move N, Scroll N
+    - Cut/Copy/Paste
+    - Capitalize/Lowercase  - Java: *NA*
   - SwitchResX: *NA*
-  - Tuxera NTFA: *NA*
+  - Tuxera NTFS: *NA*
 - *(Host)* Show Keychain Access in Menubar
   - Start KeyChain Access
   - Preferences
