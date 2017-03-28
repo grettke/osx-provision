@@ -3310,7 +3310,6 @@ Set Dictation & Text to Speech to: Callie
 - NA
 #+END_SRC
 
-****
 **** App Store Installs
    :PROPERTIES:
    :ID:       798AD4C6-AFB7-4AB6-B794-16E1E83CDF5C
