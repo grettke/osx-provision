@@ -3366,6 +3366,13 @@ Set Dictation & Text to Speech to: Callie
 - NA
 #+END_SRC
 
+**** PL2303 Driver
+:PROPERTIES:
+:ID:       orgmode:gcr:2017-04-05:mara:3E1EB029-0050-4555-9CE6-65868C1BE17A
+:END:
+
+Install the [[http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=229&pcid=41][PL2303 Driver]].
+
 **** App Store Installs
    :PROPERTIES:
    :ID:       798AD4C6-AFB7-4AB6-B794-16E1E83CDF5C
