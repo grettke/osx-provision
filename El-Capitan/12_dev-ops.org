@@ -3,8 +3,24 @@
 
 *Only install on hosts*
 
-- Install version 4
-- License it
+- Steps
+  - Install version 4
+  - License it
+  - Preferences \rarr Notifications \rarr Show CCC icon in the menu bar
+- Application Configuration
+  - Mirror the storage partition
+    - Identify and drag \rarr storage partition
+    - Identify and drag \rarr destination partition
+    - Schedule the task
+      - Daily
+      - 5:30pm
+      - Defer to other writers
+      - If the external is not mounted then run it when it returns
+  - Mirror the boot partition
+    - Identify and drag \rarr boot partition
+    - Identify and drag \rarr destination partition
+    - Save it
+    - Modify the storage backup task to run /this/ task upon completion
 
 * VMWare
 
