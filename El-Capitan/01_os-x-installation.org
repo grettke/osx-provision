@@ -72,7 +72,10 @@ diskutil unmount /dev/disk0s8
     - Control \rarr Caps Lock
   - Mouse
     - *(Host)* Connect Bluetooth mouse
-    - Tracking Speed: 20%
+    - Tracking Speed
+      - MBP Trackpad: 50%
+      - Anker Palm Mouse: 50%
+      - Dell Mouse: 80%
   - Trackpad *(Host)*
     - Point & Click
       - Secondary click: TRUE
