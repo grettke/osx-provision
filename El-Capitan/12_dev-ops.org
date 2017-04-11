@@ -16,6 +16,8 @@
       - 5:30pm
       - Defer to other writers
       - If the external is not mounted then run it when it returns
+    - Before this task runs
+      - Pull Git repos
   - Mirror the boot partition
     - Identify and drag \rarr boot partition
     - Identify and drag \rarr destination partition
