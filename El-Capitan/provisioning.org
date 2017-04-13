@@ -2417,7 +2417,14 @@ brew cask install airy
 #+BEGIN_SRC shell
 brew cask install deluge
 #+END_SRC
-
+***** Speedtest.net CLI
+:PROPERTIES:
+:ID:       orgmode:gcr:2017-04-12:mara:1D78D28C-4F61-4F83-A690-24F361EBE082
+:END:
+#+NAME: orgmode:gcr:2017-04-12:mara:F62AD1C7-8F6E-47B4-859B-767610A25DF0
+#+BEGIN_SRC shell
+brew install speedtest_cli
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "10_internet.org"
