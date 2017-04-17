@@ -1135,12 +1135,6 @@ Check for software updates daily, not just once per week.
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 #+END_SRC
 
-Disable Notification Center and remove the menu bar icon.
-#+NAME: 493ABAF1-8385-4ADF-90C3-B61699A5603B
-#+BEGIN_SRC sh
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
-#+END_SRC
-
 Disable smart quotes as they’re annoying when typing code.
 #+NAME: 1450BB2D-B822-48D3-ADC8-46FFF00B730C
 #+BEGIN_SRC sh

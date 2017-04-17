@@ -127,10 +127,6 @@ sudo systemsetup -setrestartfreeze on
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # B0166A42-EB93-444D-ACDA-A0E2AED02543 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::493ABAF1-8385-4ADF-90C3-B61699A5603B][493ABAF1-8385-4ADF-90C3-B61699A5603B]]
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
-# 493ABAF1-8385-4ADF-90C3-B61699A5603B ends here
-
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::1450BB2D-B822-48D3-ADC8-46FFF00B730C][1450BB2D-B822-48D3-ADC8-46FFF00B730C]]
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # 1450BB2D-B822-48D3-ADC8-46FFF00B730C ends here
