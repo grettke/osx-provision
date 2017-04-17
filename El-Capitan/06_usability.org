@@ -84,7 +84,6 @@ Granting:
 - Appearance
   - Menu bar icon: "..."
   - Show when bartender bar is open: YES.
-
 - Never hide
   - Volume
   - Clock
@@ -95,7 +94,12 @@ Granting:
   - Webcam Settings
   - Screenflow
 - Hide everything else
-
+- Maybe
+  - Don't even use it. At some point I quit using it and I don't remember why.
+    It probably was something like "Because I never use it anymore". Actually
+    I never use it anymore.
+  - It is OK to install it since it /is/ licensed and I /might/ use it and it is a
+    pretty small install of 5MB.
 * flux
 
 - NA
