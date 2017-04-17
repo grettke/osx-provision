@@ -43,6 +43,10 @@ brew cask install tuxera-ntfs
 brew cask install switchresx
 # A503FA0B-E147-40BC-BD01-E2EF3E09E259 ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:2017-04-16:mara:4DAE1704-977F-467E-A3B2-8DCDDA20AEB1][orgmode:gcr:2017-04-16:mara:4DAE1704-977F-467E-A3B2-8DCDDA20AEB1]]
+brew install terminal-notifier
+# orgmode:gcr:2017-04-16:mara:4DAE1704-977F-467E-A3B2-8DCDDA20AEB1 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:C502206C-3635-4DC4-A937-00A9A2EABDC1][orgmode:gcr:vela:C502206C-3635-4DC4-A937-00A9A2EABDC1]]
 echo "Script is done"
 # orgmode:gcr:vela:C502206C-3635-4DC4-A937-00A9A2EABDC1 ends here

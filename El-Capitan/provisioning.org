@@ -1818,6 +1818,14 @@ brew cask install tuxera-ntfs
 brew cask install switchresx
 #+END_SRC
 
+***** Terminal Notifier
+:PROPERTIES:
+:ID:       orgmode:gcr:2017-04-16:mara:208C3280-3CDC-4911-B61A-1635525BC232
+:END:
+#+NAME: orgmode:gcr:2017-04-16:mara:4DAE1704-977F-467E-A3B2-8DCDDA20AEB1
+#+BEGIN_SRC sh
+brew install terminal-notifier
+#+END_SRC
 ***** Completion
 :PROPERTIES:
 :ID:       orgmode:gcr:vela:DA72CD21-2696-4266-852B-97239509EB22
