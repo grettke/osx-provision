@@ -81,3 +81,7 @@ brew cask install gimp
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:860955A6-49A5-46BC-98B6-A7892740C38F][orgmode:gcr:vela:860955A6-49A5-46BC-98B6-A7892740C38F]]
 brew cask install airy
 # orgmode:gcr:vela:860955A6-49A5-46BC-98B6-A7892740C38F ends here
+
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:2017-04-19:mara:692660E3-022D-4590-B025-1639BD7084C4][orgmode:gcr:2017-04-19:mara:692660E3-022D-4590-B025-1639BD7084C4]]
+brew cask install gmvault
+# orgmode:gcr:2017-04-19:mara:692660E3-022D-4590-B025-1639BD7084C4 ends here

@@ -2431,6 +2431,14 @@ brew cask install deluge
 #+BEGIN_SRC shell
 brew install speedtest_cli
 #+END_SRC
+***** GMVault
+:PROPERTIES:
+:ID:       orgmode:gcr:2017-04-19:mara:5BF83FEA-C3A6-4AAE-ACB8-D651C5BB2804
+:END:
+#+NAME: orgmode:gcr:2017-04-19:mara:692660E3-022D-4590-B025-1639BD7084C4
+#+BEGIN_SRC sh
+brew cask install gmvault
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "10_internet.org"
