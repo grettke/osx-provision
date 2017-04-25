@@ -2734,7 +2734,7 @@ pip install virtualenv
 pip install --upgrade pip setuptools virtualenv
 #+END_SRC
 
-****** Proselint
+***** Proselint
 :PROPERTIES:
 :ID:       orgmode:gcr:vela:8F8E8E86-F202-434A-BF25-A3160CB4A4CF
 :END:
