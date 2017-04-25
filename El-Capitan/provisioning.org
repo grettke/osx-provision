@@ -2813,7 +2813,7 @@ brew install gforth
 brew install node
 #+END_SRC
 
-****** jshint
+***** jshint
 :PROPERTIES:
 :ID:       orgmode:gcr:vela:7C84C823-61B3-413B-9F23-91E87AD755A3
 :END:
