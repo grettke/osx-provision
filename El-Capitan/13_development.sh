@@ -63,7 +63,8 @@ brew install git-flow-avh
 # F5E5B964-50FA-49EF-BABF-EFE558057EC2 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::CCF91EC0-F689-4279-972C-9F1D32C4C64B][CCF91EC0-F689-4279-972C-9F1D32C4C64B]]
-brew install emacs --with-cocoa --with-gnutls --with-imagemagick
+brew tap d12frosted/emacs-plus
+brew install emacs-plus --with-natural-title-bar --without-spacemacs-icon
 brew linkapps
 # CCF91EC0-F689-4279-972C-9F1D32C4C64B ends here
 

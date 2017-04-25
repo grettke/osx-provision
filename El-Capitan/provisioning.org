@@ -2852,11 +2852,14 @@ brew install git-flow-avh
 :END:
 #+NAME: CCF91EC0-F689-4279-972C-9F1D32C4C64B
 #+BEGIN_SRC sh
-brew install emacs --with-cocoa --with-gnutls --with-imagemagick
+brew tap d12frosted/emacs-plus
+brew install emacs-plus --with-natural-title-bar --without-spacemacs-icon
 brew linkapps
 #+END_SRC
-
 ****** Magit
+:PROPERTIES:
+:ID:       orgmode:gcr:2017-04-25:mara:89998554-9493-4ADE-9ACF-3E0EC1D7D7F1
+:END:
 Magit is probably faster in dev.
 :PROPERTIES:
 :ID:       orgmode:gcr:2017-04-25:mara:40017974-5364-4AA2-8D49-C21D83C850E7
