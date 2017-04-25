@@ -67,6 +67,14 @@ brew install emacs --with-cocoa --with-gnutls --with-imagemagick
 brew linkapps
 # CCF91EC0-F689-4279-972C-9F1D32C4C64B ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:2017-04-25:mara:2F10442E-9672-48FE-90BF-46B52E197FF1][orgmode:gcr:2017-04-25:mara:2F10442E-9672-48FE-90BF-46B52E197FF1]]
+rm -rf ~/src/magit
+cd ~/src
+git clone https://github.com/magit/magit.git
+cd magit
+make
+# orgmode:gcr:2017-04-25:mara:2F10442E-9672-48FE-90BF-46B52E197FF1 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::7143E58E-A1B9-4A5A-B189-6E88AB0612D7][7143E58E-A1B9-4A5A-B189-6E88AB0612D7]]
 brew cask install sourcetree
 # 7143E58E-A1B9-4A5A-B189-6E88AB0612D7 ends here

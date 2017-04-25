@@ -2856,6 +2856,19 @@ brew install emacs --with-cocoa --with-gnutls --with-imagemagick
 brew linkapps
 #+END_SRC
 
+****** Magit
+Magit is probably faster in dev.
+:PROPERTIES:
+:ID:       orgmode:gcr:2017-04-25:mara:40017974-5364-4AA2-8D49-C21D83C850E7
+:END:
+#+NAME: orgmode:gcr:2017-04-25:mara:2F10442E-9672-48FE-90BF-46B52E197FF1
+#+BEGIN_SRC sh
+rm -rf ~/src/magit
+cd ~/src
+git clone https://github.com/magit/magit.git
+cd magit
+make
+#+END_SRC
 ***** Sourcetree
 :PROPERTIES:
 :ID:       11602B65-2D6C-4A6D-805C-8ED0B5509B09
