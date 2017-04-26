@@ -3269,6 +3269,7 @@ brew install shellcheck
   - Review R.org
   - Tangle R.org
   - Link the configuration files: sh .Rsetup.sh
+  - Open up R in a terminal because it will be prompting you for things
   - Install ~assertthat~ first because everything depends on it
   - Install the local libraries: source(".Rinstall.r")
 
