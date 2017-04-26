@@ -3262,7 +3262,14 @@ brew install shellcheck
 - Downloaded the pkg
 - Ran the package
 - It finishes
-- Run the linking script for the R config files in R.org
+- Set up the development environment
+  - By now
+    - HELP is installed
+    - R is installed
+  - Review R.org
+  - Tangle R.org
+  - Link the configuration files: sh .Rsetup.sh
+  - Install the local libraries: source(".Rinstall.r")
 
 **** Microsoft Office
     :PROPERTIES:
