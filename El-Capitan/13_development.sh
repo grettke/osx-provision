@@ -64,6 +64,8 @@ brew install git-flow-avh
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::CCF91EC0-F689-4279-972C-9F1D32C4C64B][CCF91EC0-F689-4279-972C-9F1D32C4C64B]]
 brew tap d12frosted/emacs-plus
 brew install emacs-plus --with-natural-title-bar --without-spacemacs-icon
+rm $(brew --prefix)/bin/emacs
+ln -s $(brew --prefix emacs-plus)/bin/emacs $(brew --prefix)/bin/emacs
 # CCF91EC0-F689-4279-972C-9F1D32C4C64B ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:2017-04-25:mara:2F10442E-9672-48FE-90BF-46B52E197FF1][orgmode:gcr:2017-04-25:mara:2F10442E-9672-48FE-90BF-46B52E197FF1]]
