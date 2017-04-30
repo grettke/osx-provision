@@ -2729,7 +2729,6 @@ Install Python 2 and virtualenv.
 #+NAME: 4128F3DB-7E7C-4885-B54E-AA78423855C5
 #+BEGIN_SRC sh
 brew install python
-brew linkapps python
 pip install virtualenv
 pip install --upgrade pip setuptools virtualenv
 #+END_SRC
@@ -2854,7 +2853,6 @@ brew install git-flow-avh
 #+BEGIN_SRC sh
 brew tap d12frosted/emacs-plus
 brew install emacs-plus --with-natural-title-bar --without-spacemacs-icon
-brew linkapps
 #+END_SRC
 ****** Magit
 :PROPERTIES:
