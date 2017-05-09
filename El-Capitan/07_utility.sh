@@ -74,6 +74,10 @@ brew cask install freemind
 brew install lame
 # orgmode:gcr:2017-03-24:mara:DCC88C70-3620-4C6A-9299-ECFDE9053327 ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:2017-05-08:mara:60F816FC-2502-4E6C-A6A5-712C18D0F3A2][orgmode:gcr:2017-05-08:mara:60F816FC-2502-4E6C-A6A5-712C18D0F3A2]]
+brew install ffmpeg
+# orgmode:gcr:2017-05-08:mara:60F816FC-2502-4E6C-A6A5-712C18D0F3A2 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:1402AA08-B373-4B34-BD11-C608177CE9F8][orgmode:gcr:vela:1402AA08-B373-4B34-BD11-C608177CE9F8]]
 echo "Script is done"
 # orgmode:gcr:vela:1402AA08-B373-4B34-BD11-C608177CE9F8 ends here

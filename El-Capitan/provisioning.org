@@ -2173,6 +2173,14 @@ brew cask install freemind
 brew install lame
 #+END_SRC
 
+***** FFmpeg
+:PROPERTIES:
+:ID:       orgmode:gcr:2017-05-08:mara:9A53A7EC-53A2-4EA1-A300-6E1D0C275CDA
+:END:
+#+NAME: orgmode:gcr:2017-05-08:mara:60F816FC-2502-4E6C-A6A5-712C18D0F3A2
+#+BEGIN_SRC sh
+brew install ffmpeg
+#+END_SRC
 ***** Completion
 :PROPERTIES:
 :ID:       orgmode:gcr:vela:C05687DA-1016-4329-A85D-A128773A867E
