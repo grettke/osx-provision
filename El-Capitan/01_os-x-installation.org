@@ -117,7 +117,7 @@ diskutil unmount /dev/disk0s8
   - Zoom
     - YES Use keyboard shortcuts
     - YES Zoom images
-    - Zoom Style:  Fullscreen
+    - Zoom Style: default Fullscreen
       - More Options
         - When zoomed in, the screen image moves:
           - Continuously with pointer
