@@ -1,9 +1,9 @@
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::53F16E84-34DC-48D1-998C-B9214B32AD1E][53F16E84-34DC-48D1-998C-B9214B32AD1E]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_55FC3852-A687-4430-9F57-BB871B1AE9C7][org_gcr_2017-05-12_mara_55FC3852-A687-4430-9F57-BB871B1AE9C7]]
 echo .DS_Store > ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
-# 53F16E84-34DC-48D1-998C-B9214B32AD1E ends here
+# org_gcr_2017-05-12_mara_55FC3852-A687-4430-9F57-BB871B1AE9C7 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:AD6DEA88-0EB1-4B7C-A2C6-E27C0EC92604][orgmode:gcr:vela:AD6DEA88-0EB1-4B7C-A2C6-E27C0EC92604]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_3F6EFEBA-1E8A-46D8-AC65-4E0948C1EF86][org_gcr_2017-05-12_mara_3F6EFEBA-1E8A-46D8-AC65-4E0948C1EF86]]
 echo ""
 echo "With your help I configure SSH for you"
 echo ""
@@ -44,9 +44,9 @@ do
             ;;
     esac
 done
-# orgmode:gcr:vela:AD6DEA88-0EB1-4B7C-A2C6-E27C0EC92604 ends here
+# org_gcr_2017-05-12_mara_3F6EFEBA-1E8A-46D8-AC65-4E0948C1EF86 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::41FF7AA3-8273-4281-A7E8-C60B048723D4][41FF7AA3-8273-4281-A7E8-C60B048723D4]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_2A10A4BD-3F69-43B0-98CF-F5217F12E427][org_gcr_2017-05-12_mara_2A10A4BD-3F69-43B0-98CF-F5217F12E427]]
 rm -rf ~/.ssh
 mkdir ~/.ssh
 cd ~/.ssh
@@ -56,21 +56,21 @@ SSHID=`whoami`-`hostname`
 SSHUID=$SSHID-`date '+%Y_%m_%d_%H_%M_%S'`
 SSHFILE=$SSHUID-rsa
 ssh-keygen -N '' -t rsa -C $SSHEMAIL -f $SSHFILE
-# 41FF7AA3-8273-4281-A7E8-C60B048723D4 ends here
+# org_gcr_2017-05-12_mara_2A10A4BD-3F69-43B0-98CF-F5217F12E427 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::298B36CF-28A0-45CC-BACF-787EAB06F348][298B36CF-28A0-45CC-BACF-787EAB06F348]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_4DAD3656-07C1-4832-A45F-8712D9643B3E][org_gcr_2017-05-12_mara_4DAD3656-07C1-4832-A45F-8712D9643B3E]]
 chmod 600 ~/.ssh/$SSHFILE
 chmod 600 ~/.ssh/$SSHFILE.pub
 ssh-add -K ~/.ssh/$SSHFILE
-# 298B36CF-28A0-45CC-BACF-787EAB06F348 ends here
+# org_gcr_2017-05-12_mara_4DAD3656-07C1-4832-A45F-8712D9643B3E ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::3934CA71-20AE-4136-AB57-1DEF8EBC0ADB][3934CA71-20AE-4136-AB57-1DEF8EBC0ADB]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_DCEFE0DD-F891-4909-AB33-C8BC4A4B6D68][org_gcr_2017-05-12_mara_DCEFE0DD-F891-4909-AB33-C8BC4A4B6D68]]
 echo "Name your Git site key: $SSHFILE"
 cat ~/.ssh/$SSHFILE.pub | pbcopy
 read -p "The new key is in your clipboard. Go and add this key to BitBucket, GitLab and GitHub. When you are finished, hit [enter] to continue."
-# 3934CA71-20AE-4136-AB57-1DEF8EBC0ADB ends here
+# org_gcr_2017-05-12_mara_DCEFE0DD-F891-4909-AB33-C8BC4A4B6D68 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::70D5D9F2-6CFC-4FB5-BC45-416B4ABA029F][70D5D9F2-6CFC-4FB5-BC45-416B4ABA029F]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_D7361B03-DEA4-40C7-A44A-CCE122078DF6][org_gcr_2017-05-12_mara_D7361B03-DEA4-40C7-A44A-CCE122078DF6]]
 cat > ~/.ssh/config << EOF
 Host github-`whoami`
      HostName github.com
@@ -88,19 +88,19 @@ Host gitlab-`whoami`
      PreferredAuthentications publickey
      IdentityFile ~/.ssh/$SSHFILE.pub
 EOF
-# 70D5D9F2-6CFC-4FB5-BC45-416B4ABA029F ends here
+# org_gcr_2017-05-12_mara_D7361B03-DEA4-40C7-A44A-CCE122078DF6 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::66DAC891-FB97-48A8-9C8B-0292095F13A6][66DAC891-FB97-48A8-9C8B-0292095F13A6]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_7DF422E7-EF5D-4D66-841A-F55AE00F0554][org_gcr_2017-05-12_mara_7DF422E7-EF5D-4D66-841A-F55AE00F0554]]
 ssh -T bitbucket-`whoami`
 read -p "Did it work? If not, fix it. [hit enter to continue]"
-# 66DAC891-FB97-48A8-9C8B-0292095F13A6 ends here
+# org_gcr_2017-05-12_mara_7DF422E7-EF5D-4D66-841A-F55AE00F0554 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:2017-01-21:mara:42CE5B43-ED8C-473C-B8D0-C630181C15F5][orgmode:gcr:2017-01-21:mara:42CE5B43-ED8C-473C-B8D0-C630181C15F5]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_D580852C-DEE2-4EB4-A4A0-B7EF0262EB27][org_gcr_2017-05-12_mara_D580852C-DEE2-4EB4-A4A0-B7EF0262EB27]]
 ssh -T gitlab-`whoami`
 read -p "Did it work? If not, fix it. [hit enter to continue]"
-# orgmode:gcr:2017-01-21:mara:42CE5B43-ED8C-473C-B8D0-C630181C15F5 ends here
+# org_gcr_2017-05-12_mara_D580852C-DEE2-4EB4-A4A0-B7EF0262EB27 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::07933181-5F02-43CB-9DF8-232DA213E4BB][07933181-5F02-43CB-9DF8-232DA213E4BB]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CA0BFC40-D793-455D-98EA-CF40A940E003][org_gcr_2017-05-12_mara_CA0BFC40-D793-455D-98EA-CF40A940E003]]
 ssh -T github-`whoami`
 read -p "Did it work? If not, fix it. [hit enter to continue]"
-# 07933181-5F02-43CB-9DF8-232DA213E4BB ends here
+# org_gcr_2017-05-12_mara_CA0BFC40-D793-455D-98EA-CF40A940E003 ends here

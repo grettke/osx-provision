@@ -1,4 +1,4 @@
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::916D6512-03E7-4971-8BAC-53D6FA258BBD][916D6512-03E7-4971-8BAC-53D6FA258BBD]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_9ED0592E-A409-4049-BD98-DD5151723C1A][org_gcr_2017-05-12_mara_9ED0592E-A409-4049-BD98-DD5151723C1A]]
 rm -rf ~/src/org-mode
 rm -rf ~/src/org2blog
 rm -rf ~/src/use-package
@@ -11,4 +11,4 @@ make autoloads
 cd ~/src
 git clone git@github.com:punchagan/org2blog.git
 git clone https://github.com/jwiegley/use-package.git
-# 916D6512-03E7-4971-8BAC-53D6FA258BBD ends here
+# org_gcr_2017-05-12_mara_9ED0592E-A409-4049-BD98-DD5151723C1A ends here

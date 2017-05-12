@@ -1,4 +1,4 @@
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::C38471A4-27EF-4543-9076-299EC7FE2086][C38471A4-27EF-4543-9076-299EC7FE2086]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_AA02C112-ACBB-4415-813D-69BE649D4600][org_gcr_2017-05-12_mara_AA02C112-ACBB-4415-813D-69BE649D4600]]
 MS Office This is in BrewCask, but the download is waste of time. I have it
 locally. Use the version I bought; not the latest which is in brew.
 
@@ -14,9 +14,9 @@ after sending an error report.
 Don't let it access Contacts.
 
 When it checks for updates, tell it to check daily.
-# C38471A4-27EF-4543-9076-299EC7FE2086 ends here
+# org_gcr_2017-05-12_mara_AA02C112-ACBB-4415-813D-69BE649D4600 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::D7DCD73D-1ABA-4C47-B6C8-4E47C86EB13B][D7DCD73D-1ABA-4C47-B6C8-4E47C86EB13B]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_B2BA0539-A377-48C8-B01E-A65818B7B7B8][org_gcr_2017-05-12_mara_B2BA0539-A377-48C8-B01E-A65818B7B7B8]]
 * OSX Enhanced Voice Dictation
 
 Somehow I activated the installer for "OSX Enhanced Voice Dictation". I said "Yes".
@@ -30,9 +30,9 @@ Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the 
 - Yes: Use Enhanced Dictation
 - [X] Speak selected text when the key is pressed:
   - Option+Esc
-# D7DCD73D-1ABA-4C47-B6C8-4E47C86EB13B ends here
+# org_gcr_2017-05-12_mara_B2BA0539-A377-48C8-B01E-A65818B7B7B8 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::D569323D-3922-4D3A-814D-B6413DBBE3F2][D569323D-3922-4D3A-814D-B6413DBBE3F2]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_A11DCB72-72E4-4B80-BF0C-D56FF6866E72][org_gcr_2017-05-12_mara_A11DCB72-72E4-4B80-BF0C-D56FF6866E72]]
 * Visible Body
 
 - Human Anatomy Atlas
@@ -43,23 +43,23 @@ Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the 
   - Tried printing to pdf or saving to a file and copying from that and neither
     work
   - Need to copy from their into an Org document and try that
-# D569323D-3922-4D3A-814D-B6413DBBE3F2 ends here
+# org_gcr_2017-05-12_mara_A11DCB72-72E4-4B80-BF0C-D56FF6866E72 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::CBFB0524-49A3-475E-BE72-F72F878355D7][CBFB0524-49A3-475E-BE72-F72F878355D7]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_346129DB-CC0F-42DC-B5AE-5892008D4A67][org_gcr_2017-05-12_mara_346129DB-CC0F-42DC-B5AE-5892008D4A67]]
 * Entropy
 
 - [[http://www.eigenlogik.com/entropy/][Download]]
 - Install
 - License
-# CBFB0524-49A3-475E-BE72-F72F878355D7 ends here
+# org_gcr_2017-05-12_mara_346129DB-CC0F-42DC-B5AE-5892008D4A67 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::8D86833F-9C6A-430B-A238-D1537470EC46][8D86833F-9C6A-430B-A238-D1537470EC46]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_2E5C8692-189B-4125-B22F-62149679A0C2][org_gcr_2017-05-12_mara_2E5C8692-189B-4125-B22F-62149679A0C2]]
 * Guitar Pro
 
 - [[http://www.guitar-pro.com/en/index.php][Here]]. Sign into MySongBook.
-# 8D86833F-9C6A-430B-A238-D1537470EC46 ends here
+# org_gcr_2017-05-12_mara_2E5C8692-189B-4125-B22F-62149679A0C2 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::350809D4-E824-4F60-B121-CD6E34B62075][350809D4-E824-4F60-B121-CD6E34B62075]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_F641981A-9788-46E2-BF9B-76E509A8E995][org_gcr_2017-05-12_mara_F641981A-9788-46E2-BF9B-76E509A8E995]]
 * Cepestral Callie & David
 
 [[http://www.cepstral.com/][Here]].
@@ -70,9 +70,9 @@ System Preferences.
 License them. Test them.
 
 Set Dictation & Text to Speech to: Callie
-# 350809D4-E824-4F60-B121-CD6E34B62075 ends here
+# org_gcr_2017-05-12_mara_F641981A-9788-46E2-BF9B-76E509A8E995 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::D47EAF07-91D0-4916-B6CD-AD0D126C05A9][D47EAF07-91D0-4916-B6CD-AD0D126C05A9]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_109E2C96-0F9D-4F4A-841A-AF15C1F93D8D][org_gcr_2017-05-12_mara_109E2C96-0F9D-4F4A-841A-AF15C1F93D8D]]
 * Pushbullet
 
 - Sign in, it is a web app
@@ -81,9 +81,9 @@ Set Dictation & Text to Speech to: Callie
 - [X] Text from phone
 - [X] See notifications
 - Configure nothing else
-# D47EAF07-91D0-4916-B6CD-AD0D126C05A9 ends here
+# org_gcr_2017-05-12_mara_109E2C96-0F9D-4F4A-841A-AF15C1F93D8D ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::2534FD8E-2749-4EE5-87C3-B813B25AF4BB][2534FD8E-2749-4EE5-87C3-B813B25AF4BB]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_8615C7A4-EE2A-4CF6-89FB-CAD6A95CC84A][org_gcr_2017-05-12_mara_8615C7A4-EE2A-4CF6-89FB-CAD6A95CC84A]]
 * Ink2Go
 
 - [[http://ink2go.org/][Here]]
@@ -97,21 +97,21 @@ Set Dictation & Text to Speech to: Callie
       - Crop / Pause
       - Record / Stop
       - Webcam
-# 2534FD8E-2749-4EE5-87C3-B813B25AF4BB ends here
+# org_gcr_2017-05-12_mara_8615C7A4-EE2A-4CF6-89FB-CAD6A95CC84A ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::C621D8B5-B34E-48D7-BF7A-C8E316BA10FB][C621D8B5-B34E-48D7-BF7A-C8E316BA10FB]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_0EB14936-F6A7-4785-9489-D9A333392078][org_gcr_2017-05-12_mara_0EB14936-F6A7-4785-9489-D9A333392078]]
 * Dyalog APL
 
 - NA
-# C621D8B5-B34E-48D7-BF7A-C8E316BA10FB ends here
+# org_gcr_2017-05-12_mara_0EB14936-F6A7-4785-9489-D9A333392078 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::C621D8B5-B34E-48D7-BF7A-C8E316BA10FB][C621D8B5-B34E-48D7-BF7A-C8E316BA10FB]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_1B6FE230-CEF8-4977-A3F9-A70EE5E1A39B][org_gcr_2017-05-12_mara_1B6FE230-CEF8-4977-A3F9-A70EE5E1A39B]]
 * Debtinator
 
 - NA
-# C621D8B5-B34E-48D7-BF7A-C8E316BA10FB ends here
+# org_gcr_2017-05-12_mara_1B6FE230-CEF8-4977-A3F9-A70EE5E1A39B ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::BBAFAEFB-E9B6-443C-8DAC-424483885BF2][BBAFAEFB-E9B6-443C-8DAC-424483885BF2]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_AF9EA775-3EAC-45CE-BE38-2C2B0B0C2618][org_gcr_2017-05-12_mara_AF9EA775-3EAC-45CE-BE38-2C2B0B0C2618]]
 * Textual
 
 - AppStore.
@@ -160,9 +160,9 @@ Server properties:
   - #scheme
   - #bash
   - #apl
-# BBAFAEFB-E9B6-443C-8DAC-424483885BF2 ends here
+# org_gcr_2017-05-12_mara_AF9EA775-3EAC-45CE-BE38-2C2B0B0C2618 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::292B3960-AD89-413E-8E67-2BDBBAC7ACBE][292B3960-AD89-413E-8E67-2BDBBAC7ACBE]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_5B156D72-4EF7-46BC-A3AF-F7B4049A9271][org_gcr_2017-05-12_mara_5B156D72-4EF7-46BC-A3AF-F7B4049A9271]]
 * Growl
 
 - Install via the app store
@@ -170,15 +170,15 @@ Server properties:
 - Enable run on login
 - Theme: Music Video
   - Easy to notice
-# 292B3960-AD89-413E-8E67-2BDBBAC7ACBE ends here
+# org_gcr_2017-05-12_mara_5B156D72-4EF7-46BC-A3AF-F7B4049A9271 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::D86C6A4D-08CB-4674-81CA-4777E3AAAF8B][D86C6A4D-08CB-4674-81CA-4777E3AAAF8B]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_2341C9FA-93E8-4E03-BEE3-A0A1D616F474][org_gcr_2017-05-12_mara_2341C9FA-93E8-4E03-BEE3-A0A1D616F474]]
 * Microsoft Remote Desktop
 
 - Don't open the session full-screen.
-# D86C6A4D-08CB-4674-81CA-4777E3AAAF8B ends here
+# org_gcr_2017-05-12_mara_2341C9FA-93E8-4E03-BEE3-A0A1D616F474 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::725DFF13-3E51-4B7E-90B3-19F07375B26E][725DFF13-3E51-4B7E-90B3-19F07375B26E]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_A897EEBB-49AD-41E8-9890-AEBBDA0866B9][org_gcr_2017-05-12_mara_A897EEBB-49AD-41E8-9890-AEBBDA0866B9]]
 * Text2Speech PRO
 
 - General
@@ -187,15 +187,15 @@ Server properties:
     - Speaking Rate :: 175 w/m
     - App check text encoding failover :: UTF-8
     - [ ] Send file to iTunes
-# 725DFF13-3E51-4B7E-90B3-19F07375B26E ends here
+# org_gcr_2017-05-12_mara_A897EEBB-49AD-41E8-9890-AEBBDA0866B9 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::05AD3C3A-761E-4CD5-8D45-FCF487A0DAEE][05AD3C3A-761E-4CD5-8D45-FCF487A0DAEE]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CF58A1FB-5BCD-4DE3-B24A-BD5B48CEB85C][org_gcr_2017-05-12_mara_CF58A1FB-5BCD-4DE3-B24A-BD5B48CEB85C]]
 * PixelMator
 
 - NA
-# 05AD3C3A-761E-4CD5-8D45-FCF487A0DAEE ends here
+# org_gcr_2017-05-12_mara_CF58A1FB-5BCD-4DE3-B24A-BD5B48CEB85C ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::BA8A896A-29EE-43F5-AF6C-B9DB80E18115][BA8A896A-29EE-43F5-AF6C-B9DB80E18115]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_1303D8AC-B192-42F3-95C1-4124F5839534][org_gcr_2017-05-12_mara_1303D8AC-B192-42F3-95C1-4124F5839534]]
 * Mousepose
 
 - Grant "accessibility" permission
@@ -214,19 +214,19 @@ Server properties:
     - When logging in: Start Mousepose
     - Show icon in: Menu bar
 - Bartend it
-# BA8A896A-29EE-43F5-AF6C-B9DB80E18115 ends here
+# org_gcr_2017-05-12_mara_1303D8AC-B192-42F3-95C1-4124F5839534 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::142DA74D-407B-4F49-B833-093BB5EB83B6][142DA74D-407B-4F49-B833-093BB5EB83B6]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_97712287-0228-4D40-9BD5-038FB9B5AB5F][org_gcr_2017-05-12_mara_97712287-0228-4D40-9BD5-038FB9B5AB5F]]
 * Webcam Settings By Mactaris
 
 - Set the white balance
   - Hold up a bleached white piece of printer paper to the camera
   - Balance until it is the same color on the screen
 - Enable at startup
-# 142DA74D-407B-4F49-B833-093BB5EB83B6 ends here
+# org_gcr_2017-05-12_mara_97712287-0228-4D40-9BD5-038FB9B5AB5F ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::9AB3A903-24AA-430D-9B74-D0B9D787C2DD][9AB3A903-24AA-430D-9B74-D0B9D787C2DD]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_08A7BB54-05AB-4D18-A07A-32687D3F44EF][org_gcr_2017-05-12_mara_08A7BB54-05AB-4D18-A07A-32687D3F44EF]]
 * Key Codes
 
 - NA
-# 9AB3A903-24AA-430D-9B74-D0B9D787C2DD ends here
+# org_gcr_2017-05-12_mara_08A7BB54-05AB-4D18-A07A-32687D3F44EF ends here

@@ -1,52 +1,52 @@
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::A02C8B94-4717-42AA-8676-36D13B168BB6][A02C8B94-4717-42AA-8676-36D13B168BB6]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_8F72F214-3D61-446E-B0A0-ED9629115936][org_gcr_2017-05-12_mara_8F72F214-3D61-446E-B0A0-ED9629115936]]
 brew cask install popchar
-# A02C8B94-4717-42AA-8676-36D13B168BB6 ends here
+# org_gcr_2017-05-12_mara_8F72F214-3D61-446E-B0A0-ED9629115936 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::F1B1D8B4-662F-4DD2-8C02-CE51CFF862E0][F1B1D8B4-662F-4DD2-8C02-CE51CFF862E0]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988][org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install karabiner
 else
     echo "karabiner: Only install on hosts"
 fi
-# F1B1D8B4-662F-4DD2-8C02-CE51CFF862E0 ends here
+# org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::944FB8AE-DD79-49C6-8ABC-878A782234BE][944FB8AE-DD79-49C6-8ABC-878A782234BE]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_995F2EC7-2BD0-4966-9FEE-BE512C28786E][org_gcr_2017-05-12_mara_995F2EC7-2BD0-4966-9FEE-BE512C28786E]]
 brew cask install spectacle
-# 944FB8AE-DD79-49C6-8ABC-878A782234BE ends here
+# org_gcr_2017-05-12_mara_995F2EC7-2BD0-4966-9FEE-BE512C28786E ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::0A6CDD3C-BB1F-4AB1-8523-C4F5383A6856][0A6CDD3C-BB1F-4AB1-8523-C4F5383A6856]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_785FA752-E2FA-411E-8D07-911938D9E656][org_gcr_2017-05-12_mara_785FA752-E2FA-411E-8D07-911938D9E656]]
 brew cask install little-snitch
-# 0A6CDD3C-BB1F-4AB1-8523-C4F5383A6856 ends here
+# org_gcr_2017-05-12_mara_785FA752-E2FA-411E-8D07-911938D9E656 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::1483E8B6-098B-4793-91BD-F5081B2F76ED][1483E8B6-098B-4793-91BD-F5081B2F76ED]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_34436A54-0E97-48DD-8391-E6A6B36A6A84][org_gcr_2017-05-12_mara_34436A54-0E97-48DD-8391-E6A6B36A6A84]]
 brew cask install bartender
-# 1483E8B6-098B-4793-91BD-F5081B2F76ED ends here
+# org_gcr_2017-05-12_mara_34436A54-0E97-48DD-8391-E6A6B36A6A84 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::17B2744A-477B-4E79-A152-D1D43E8FB030][17B2744A-477B-4E79-A152-D1D43E8FB030]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_3DA6A9C5-8086-4B61-B38F-A87E6A470345][org_gcr_2017-05-12_mara_3DA6A9C5-8086-4B61-B38F-A87E6A470345]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install flux
 else
     echo "flux: Only install on hosts"
 fi
-# 17B2744A-477B-4E79-A152-D1D43E8FB030 ends here
+# org_gcr_2017-05-12_mara_3DA6A9C5-8086-4B61-B38F-A87E6A470345 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::442A6B4B-C210-4436-B0AE-F571D3F75B01][442A6B4B-C210-4436-B0AE-F571D3F75B01]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_9F387AF4-1A72-4D36-866B-4AF99B771776][org_gcr_2017-05-12_mara_9F387AF4-1A72-4D36-866B-4AF99B771776]]
 brew cask install xquartz
 defaults write org.macosforge.xquartz.X11 dpi -int 170
-# 442A6B4B-C210-4436-B0AE-F571D3F75B01 ends here
+# org_gcr_2017-05-12_mara_9F387AF4-1A72-4D36-866B-4AF99B771776 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::F09F391E-0A25-4B8D-B70F-6FD35A103D95][F09F391E-0A25-4B8D-B70F-6FD35A103D95]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_60488E6B-8459-40A4-8811-1B146A6802EC][org_gcr_2017-05-12_mara_60488E6B-8459-40A4-8811-1B146A6802EC]]
 brew cask install tuxera-ntfs
-# F09F391E-0A25-4B8D-B70F-6FD35A103D95 ends here
+# org_gcr_2017-05-12_mara_60488E6B-8459-40A4-8811-1B146A6802EC ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::A503FA0B-E147-40BC-BD01-E2EF3E09E259][A503FA0B-E147-40BC-BD01-E2EF3E09E259]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_66B04382-0B16-4B9E-8388-9339BBA44308][org_gcr_2017-05-12_mara_66B04382-0B16-4B9E-8388-9339BBA44308]]
 brew cask install switchresx
-# A503FA0B-E147-40BC-BD01-E2EF3E09E259 ends here
+# org_gcr_2017-05-12_mara_66B04382-0B16-4B9E-8388-9339BBA44308 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:2017-04-16:mara:4DAE1704-977F-467E-A3B2-8DCDDA20AEB1][orgmode:gcr:2017-04-16:mara:4DAE1704-977F-467E-A3B2-8DCDDA20AEB1]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_C5F1CDAB-387E-4549-BCAA-0315C7482A7A][org_gcr_2017-05-12_mara_C5F1CDAB-387E-4549-BCAA-0315C7482A7A]]
 brew install terminal-notifier
-# orgmode:gcr:2017-04-16:mara:4DAE1704-977F-467E-A3B2-8DCDDA20AEB1 ends here
+# org_gcr_2017-05-12_mara_C5F1CDAB-387E-4549-BCAA-0315C7482A7A ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:C502206C-3635-4DC4-A937-00A9A2EABDC1][orgmode:gcr:vela:C502206C-3635-4DC4-A937-00A9A2EABDC1]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB][org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB]]
 echo "Script is done"
-# orgmode:gcr:vela:C502206C-3635-4DC4-A937-00A9A2EABDC1 ends here
+# org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB ends here

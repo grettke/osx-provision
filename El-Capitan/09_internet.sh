@@ -1,87 +1,87 @@
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:2017-02-08:mara:F4284C67-E5C8-4B44-AC61-87BA6FCC248D][orgmode:gcr:2017-02-08:mara:F4284C67-E5C8-4B44-AC61-87BA6FCC248D]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54][org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54]]
 brew cask install deluge
-# orgmode:gcr:2017-02-08:mara:F4284C67-E5C8-4B44-AC61-87BA6FCC248D ends here
+# org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:2017-04-12:mara:F62AD1C7-8F6E-47B4-859B-767610A25DF0][orgmode:gcr:2017-04-12:mara:F62AD1C7-8F6E-47B4-859B-767610A25DF0]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A][org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A]]
 brew install speedtest_cli
-# orgmode:gcr:2017-04-12:mara:F62AD1C7-8F6E-47B4-859B-767610A25DF0 ends here
+# org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A ends here
 
-;; [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:02BF16B3-9FC1-4F9A-AB48-795FB9969E88][orgmode:gcr:vela:02BF16B3-9FC1-4F9A-AB48-795FB9969E88]]
+;; [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_9217F137-CCF7-4B66-AE32-6ED72D2D629F][org_gcr_2017-05-12_mara_9217F137-CCF7-4B66-AE32-6ED72D2D629F]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install whatsapp
 else
     echo "whatsapp: Only install on hosts"
 fi
-;; orgmode:gcr:vela:02BF16B3-9FC1-4F9A-AB48-795FB9969E88 ends here
+;; org_gcr_2017-05-12_mara_9217F137-CCF7-4B66-AE32-6ED72D2D629F ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::093814E5-DB0A-481C-9B39-ACF62216BB55][093814E5-DB0A-481C-9B39-ACF62216BB55]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_7C4DE397-48F6-44AC-B9CD-948375915EFF][org_gcr_2017-05-12_mara_7C4DE397-48F6-44AC-B9CD-948375915EFF]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
 brew cask install mplayer-osx-extended
 else
     echo "mplayer: Only install on hosts"
 fi
-# 093814E5-DB0A-481C-9B39-ACF62216BB55 ends here
+# org_gcr_2017-05-12_mara_7C4DE397-48F6-44AC-B9CD-948375915EFF ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::D3411D0C-F38A-409F-8D6C-5A03AFEE9CCF][D3411D0C-F38A-409F-8D6C-5A03AFEE9CCF]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_9CDCD936-A30A-4712-8A5F-780D8810FBDE][org_gcr_2017-05-12_mara_9CDCD936-A30A-4712-8A5F-780D8810FBDE]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install skype
 else
     echo "skype: Only install on hosts"
 fi
-# D3411D0C-F38A-409F-8D6C-5A03AFEE9CCF ends here
+# org_gcr_2017-05-12_mara_9CDCD936-A30A-4712-8A5F-780D8810FBDE ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86][3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_1F291E61-A8F1-43BE-A839-0E6997099AD4][org_gcr_2017-05-12_mara_1F291E61-A8F1-43BE-A839-0E6997099AD4]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install dropbox
 else
     echo "dropbox: Only install on hosts"
 fi
-# 3F5B9D5C-F54B-4DE9-A9FC-64D5AFDF2C86 ends here
+# org_gcr_2017-05-12_mara_1F291E61-A8F1-43BE-A839-0E6997099AD4 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::63C6CF90-7C76-4260-A7A5-7786561B2A70][63C6CF90-7C76-4260-A7A5-7786561B2A70]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_F99FAFA6-C774-4453-BCDA-F86636ADB336][org_gcr_2017-05-12_mara_F99FAFA6-C774-4453-BCDA-F86636ADB336]]
 brew cask install google-chrome
-# 63C6CF90-7C76-4260-A7A5-7786561B2A70 ends here
+# org_gcr_2017-05-12_mara_F99FAFA6-C774-4453-BCDA-F86636ADB336 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::32D109DB-1554-40D5-B591-FCC2F922F903][32D109DB-1554-40D5-B591-FCC2F922F903]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_66031DAC-6541-4D27-9BE9-80166EB13119][org_gcr_2017-05-12_mara_66031DAC-6541-4D27-9BE9-80166EB13119]]
 brew cask install firefox
-# 32D109DB-1554-40D5-B591-FCC2F922F903 ends here
+# org_gcr_2017-05-12_mara_66031DAC-6541-4D27-9BE9-80166EB13119 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::D852AD6F-DF45-4FF9-A391-954323438F96][D852AD6F-DF45-4FF9-A391-954323438F96]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_0A7F6745-0609-4606-B4C1-7428E64E4313][org_gcr_2017-05-12_mara_0A7F6745-0609-4606-B4C1-7428E64E4313]]
 brew cask install opera
-# D852AD6F-DF45-4FF9-A391-954323438F96 ends here
+# org_gcr_2017-05-12_mara_0A7F6745-0609-4606-B4C1-7428E64E4313 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::E35E5182-A810-4547-B6E8-866CC13AA7FA][E35E5182-A810-4547-B6E8-866CC13AA7FA]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_F8797C4F-7492-441D-B8B2-A13C818672FB][org_gcr_2017-05-12_mara_F8797C4F-7492-441D-B8B2-A13C818672FB]]
 brew cask install filezilla
-# E35E5182-A810-4547-B6E8-866CC13AA7FA ends here
+# org_gcr_2017-05-12_mara_F8797C4F-7492-441D-B8B2-A13C818672FB ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::75569C81-CF17-482A-8EF3-53457897457C][75569C81-CF17-482A-8EF3-53457897457C]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_22BF5CEE-DB48-45D4-9331-85B67AFE3A5D][org_gcr_2017-05-12_mara_22BF5CEE-DB48-45D4-9331-85B67AFE3A5D]]
 brew cask install slack
-# 75569C81-CF17-482A-8EF3-53457897457C ends here
+# org_gcr_2017-05-12_mara_22BF5CEE-DB48-45D4-9331-85B67AFE3A5D ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::B4E47A43-27D2-4478-821A-0E6C6138FB40][B4E47A43-27D2-4478-821A-0E6C6138FB40]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_A2BB25B5-F80B-44B1-84CA-3669F9FD04F2][org_gcr_2017-05-12_mara_A2BB25B5-F80B-44B1-84CA-3669F9FD04F2]]
 brew cask install kindle
-# B4E47A43-27D2-4478-821A-0E6C6138FB40 ends here
+# org_gcr_2017-05-12_mara_A2BB25B5-F80B-44B1-84CA-3669F9FD04F2 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::59E4E9CA-178C-4901-9E02-F5D1CDE00BB4][59E4E9CA-178C-4901-9E02-F5D1CDE00BB4]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_587FEB0F-0601-410D-AA8B-677635E91321][org_gcr_2017-05-12_mara_587FEB0F-0601-410D-AA8B-677635E91321]]
 brew install wget
-# 59E4E9CA-178C-4901-9E02-F5D1CDE00BB4 ends here
+# org_gcr_2017-05-12_mara_587FEB0F-0601-410D-AA8B-677635E91321 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::536ADA22-0876-44F9-A76D-57B961A7A8A0][536ADA22-0876-44F9-A76D-57B961A7A8A0]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_059F15F1-A456-4885-A364-F363AC30F6CE][org_gcr_2017-05-12_mara_059F15F1-A456-4885-A364-F363AC30F6CE]]
 brew cask install screenflow
-# 536ADA22-0876-44F9-A76D-57B961A7A8A0 ends here
+# org_gcr_2017-05-12_mara_059F15F1-A456-4885-A364-F363AC30F6CE ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::97116D0B-68F4-4E15-B06C-CD9EF99A084A][97116D0B-68F4-4E15-B06C-CD9EF99A084A]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_2B757414-ED99-4964-96FC-C76DC6512DD0][org_gcr_2017-05-12_mara_2B757414-ED99-4964-96FC-C76DC6512DD0]]
 brew install homebrew/gui/inkscape
-# 97116D0B-68F4-4E15-B06C-CD9EF99A084A ends here
+# org_gcr_2017-05-12_mara_2B757414-ED99-4964-96FC-C76DC6512DD0 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::B9005B12-56A9-4AAF-ACF3-725C464B2D96][B9005B12-56A9-4AAF-ACF3-725C464B2D96]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_86FEB8A0-A34E-4B44-BABA-BB5CE24D8655][org_gcr_2017-05-12_mara_86FEB8A0-A34E-4B44-BABA-BB5CE24D8655]]
 brew cask install gimp
-# B9005B12-56A9-4AAF-ACF3-725C464B2D96 ends here
+# org_gcr_2017-05-12_mara_86FEB8A0-A34E-4B44-BABA-BB5CE24D8655 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:860955A6-49A5-46BC-98B6-A7892740C38F][orgmode:gcr:vela:860955A6-49A5-46BC-98B6-A7892740C38F]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_EE89A131-05A3-4521-B304-301F5B89A5CD][org_gcr_2017-05-12_mara_EE89A131-05A3-4521-B304-301F5B89A5CD]]
 brew cask install airy
-# orgmode:gcr:vela:860955A6-49A5-46BC-98B6-A7892740C38F ends here
+# org_gcr_2017-05-12_mara_EE89A131-05A3-4521-B304-301F5B89A5CD ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:2017-04-19:mara:692660E3-022D-4590-B025-1639BD7084C4][orgmode:gcr:2017-04-19:mara:692660E3-022D-4590-B025-1639BD7084C4]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_49EFB334-9D0E-4354-AD70-3F6E8647C27E][org_gcr_2017-05-12_mara_49EFB334-9D0E-4354-AD70-3F6E8647C27E]]
 brew cask install gmvault
-# orgmode:gcr:2017-04-19:mara:692660E3-022D-4590-B025-1639BD7084C4 ends here
+# org_gcr_2017-05-12_mara_49EFB334-9D0E-4354-AD70-3F6E8647C27E ends here

@@ -1,4 +1,4 @@
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::D880F24A-DE8D-4513-A354-45C9B57E0631][D880F24A-DE8D-4513-A354-45C9B57E0631]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_DE67722F-643A-460E-930A-4A9FF7270B6A][org_gcr_2017-05-12_mara_DE67722F-643A-460E-930A-4A9FF7270B6A]]
 * Terminal
 
 - Profiles
@@ -8,4 +8,4 @@
 - Profiles \rarr Advanced
   - NO Set locale environment variables on startup
     - Set them in your =bashrc=, not here
-# D880F24A-DE8D-4513-A354-45C9B57E0631 ends here
+# org_gcr_2017-05-12_mara_DE67722F-643A-460E-930A-4A9FF7270B6A ends here

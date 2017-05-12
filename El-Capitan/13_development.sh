@@ -1,14 +1,14 @@
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::82653612-8AFE-4FF7-86D8-921DDA662EB9][82653612-8AFE-4FF7-86D8-921DDA662EB9]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_7281D794-15F4-4C0B-BCEB-E6BD05E5DF0B][org_gcr_2017-05-12_mara_7281D794-15F4-4C0B-BCEB-E6BD05E5DF0B]]
 brew cask install deltawalker
-# 82653612-8AFE-4FF7-86D8-921DDA662EB9 ends here
+# org_gcr_2017-05-12_mara_7281D794-15F4-4C0B-BCEB-E6BD05E5DF0B ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::4128F3DB-7E7C-4885-B54E-AA78423855C5][4128F3DB-7E7C-4885-B54E-AA78423855C5]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_C91E9080-A185-4BA7-ABB8-4EBA21E3FA31][org_gcr_2017-05-12_mara_C91E9080-A185-4BA7-ABB8-4EBA21E3FA31]]
 brew install python
 pip install virtualenv
 pip install --upgrade pip setuptools virtualenv
-# 4128F3DB-7E7C-4885-B54E-AA78423855C5 ends here
+# org_gcr_2017-05-12_mara_C91E9080-A185-4BA7-ABB8-4EBA21E3FA31 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:696D3C27-F72A-4D64-BB70-A14D42CCCD5A][orgmode:gcr:vela:696D3C27-F72A-4D64-BB70-A14D42CCCD5A]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_88321593-1A4B-46A2-AC58-A42C6B24F1C2][org_gcr_2017-05-12_mara_88321593-1A4B-46A2-AC58-A42C6B24F1C2]]
 cd ~/
 rm -rf ~/util/proselint
 mkdir -p ~/util/proselint
@@ -18,9 +18,9 @@ veon
 pip install proselint
 veof
 cd ~/util/
-# orgmode:gcr:vela:696D3C27-F72A-4D64-BB70-A14D42CCCD5A ends here
+# org_gcr_2017-05-12_mara_88321593-1A4B-46A2-AC58-A42C6B24F1C2 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::2C2EE0BA-1EED-401F-83BB-31DA8485A4AC][2C2EE0BA-1EED-401F-83BB-31DA8485A4AC]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_D02A1D1B-25D6-4D30-9D81-6E1F3E59AC20][org_gcr_2017-05-12_mara_D02A1D1B-25D6-4D30-9D81-6E1F3E59AC20]]
 curl -L https://install.perlbrew.pl | bash
 ~/perl5/perlbrew/bin/perlbrew install perl-5.24.0
 perl -v
@@ -28,116 +28,116 @@ perl -v
 perl -v
 perlbrew install-cpanm
 cpanm install Text::Unidecode
-# 2C2EE0BA-1EED-401F-83BB-31DA8485A4AC ends here
+# org_gcr_2017-05-12_mara_D02A1D1B-25D6-4D30-9D81-6E1F3E59AC20 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D][EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CB12AE91-2573-4886-85B1-56F2EA62062E][org_gcr_2017-05-12_mara_CB12AE91-2573-4886-85B1-56F2EA62062E]]
 brew install ruby
-# EF706E2F-46B7-4F69-ADDB-9D62FDFCD23D ends here
+# org_gcr_2017-05-12_mara_CB12AE91-2573-4886-85B1-56F2EA62062E ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::519EF47C-E443-4445-B762-C8FC781566F0][519EF47C-E443-4445-B762-C8FC781566F0]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_45F5FEE0-3692-4AB2-B942-D6895BDF956A][org_gcr_2017-05-12_mara_45F5FEE0-3692-4AB2-B942-D6895BDF956A]]
 brew cask install racket
-# 519EF47C-E443-4445-B762-C8FC781566F0 ends here
+# org_gcr_2017-05-12_mara_45F5FEE0-3692-4AB2-B942-D6895BDF956A ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::1CE4F12C-241C-4B77-8262-D08472B78B4B][1CE4F12C-241C-4B77-8262-D08472B78B4B]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_9B75A8BF-1F84-41C7-BA05-E2094F541B69][org_gcr_2017-05-12_mara_9B75A8BF-1F84-41C7-BA05-E2094F541B69]]
 brew install gforth
-# 1CE4F12C-241C-4B77-8262-D08472B78B4B ends here
+# org_gcr_2017-05-12_mara_9B75A8BF-1F84-41C7-BA05-E2094F541B69 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:BA81BB77-0E23-4B3F-B4D7-0112502A464C][orgmode:gcr:vela:BA81BB77-0E23-4B3F-B4D7-0112502A464C]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_F2DCC726-8AFD-490F-92D6-61EAD46119F9][org_gcr_2017-05-12_mara_F2DCC726-8AFD-490F-92D6-61EAD46119F9]]
 brew install node
-# orgmode:gcr:vela:BA81BB77-0E23-4B3F-B4D7-0112502A464C ends here
+# org_gcr_2017-05-12_mara_F2DCC726-8AFD-490F-92D6-61EAD46119F9 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:4EFB1142-C26F-4A2D-8A75-8A970646442D][orgmode:gcr:vela:4EFB1142-C26F-4A2D-8A75-8A970646442D]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_FF9AFF4C-BF99-4553-BECC-1C176C8FE4A3][org_gcr_2017-05-12_mara_FF9AFF4C-BF99-4553-BECC-1C176C8FE4A3]]
 npm install -g jshint
 rm ~/.jshintrc
 ln -s ~/src/help/.jshintrc ~/.jshintrc
-# orgmode:gcr:vela:4EFB1142-C26F-4A2D-8A75-8A970646442D ends here
+# org_gcr_2017-05-12_mara_FF9AFF4C-BF99-4553-BECC-1C176C8FE4A3 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::89EB0121-7F14-4AFD-BB61-E46F675FE4A3][89EB0121-7F14-4AFD-BB61-E46F675FE4A3]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_FACDF6BA-3CAA-4265-B1B3-563FF5D60151][org_gcr_2017-05-12_mara_FACDF6BA-3CAA-4265-B1B3-563FF5D60151]]
 brew install gnu-apl
-# 89EB0121-7F14-4AFD-BB61-E46F675FE4A3 ends here
+# org_gcr_2017-05-12_mara_FACDF6BA-3CAA-4265-B1B3-563FF5D60151 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::F5E5B964-50FA-49EF-BABF-EFE558057EC2][F5E5B964-50FA-49EF-BABF-EFE558057EC2]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4][org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4]]
 brew install git
 brew install git-flow-avh
-# F5E5B964-50FA-49EF-BABF-EFE558057EC2 ends here
+# org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::CCF91EC0-F689-4279-972C-9F1D32C4C64B][CCF91EC0-F689-4279-972C-9F1D32C4C64B]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5][org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5]]
 brew tap d12frosted/emacs-plus
 brew install emacs-plus --with-natural-title-bar --without-spacemacs-icon
 rm $(brew --prefix)/bin/emacs
 ln -s $(brew --prefix emacs-plus)/bin/emacs $(brew --prefix)/bin/emacs
-# CCF91EC0-F689-4279-972C-9F1D32C4C64B ends here
+# org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:2017-04-25:mara:2F10442E-9672-48FE-90BF-46B52E197FF1][orgmode:gcr:2017-04-25:mara:2F10442E-9672-48FE-90BF-46B52E197FF1]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_97EED15A-390A-49AA-B645-A4BA156A79D3][org_gcr_2017-05-12_mara_97EED15A-390A-49AA-B645-A4BA156A79D3]]
 rm -rf ~/src/magit
 cd ~/src
 git clone https://github.com/magit/magit.git
 cd magit
 make
-# orgmode:gcr:2017-04-25:mara:2F10442E-9672-48FE-90BF-46B52E197FF1 ends here
+# org_gcr_2017-05-12_mara_97EED15A-390A-49AA-B645-A4BA156A79D3 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::7143E58E-A1B9-4A5A-B189-6E88AB0612D7][7143E58E-A1B9-4A5A-B189-6E88AB0612D7]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CFCB8712-4E27-484C-A459-402C008961A1][org_gcr_2017-05-12_mara_CFCB8712-4E27-484C-A459-402C008961A1]]
 brew cask install sourcetree
-# 7143E58E-A1B9-4A5A-B189-6E88AB0612D7 ends here
+# org_gcr_2017-05-12_mara_CFCB8712-4E27-484C-A459-402C008961A1 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::CC15039B-B03A-4B3B-AFF4-AF483DDFE3A6][CC15039B-B03A-4B3B-AFF4-AF483DDFE3A6]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_50F9FD2F-2906-41A7-A3F0-62E57D784594][org_gcr_2017-05-12_mara_50F9FD2F-2906-41A7-A3F0-62E57D784594]]
 brew install smlnj
-# CC15039B-B03A-4B3B-AFF4-AF483DDFE3A6 ends here
+# org_gcr_2017-05-12_mara_50F9FD2F-2906-41A7-A3F0-62E57D784594 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:F8C7DC4C-3DB3-4547-9A94-AF03D2F15366][orgmode:gcr:vela:F8C7DC4C-3DB3-4547-9A94-AF03D2F15366]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_1CA17E50-8BCC-43A2-99C3-A3052FF3B262][org_gcr_2017-05-12_mara_1CA17E50-8BCC-43A2-99C3-A3052FF3B262]]
 brew install ocaml
 brew install opam
-# orgmode:gcr:vela:F8C7DC4C-3DB3-4547-9A94-AF03D2F15366 ends here
+# org_gcr_2017-05-12_mara_1CA17E50-8BCC-43A2-99C3-A3052FF3B262 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:1F488BEB-BCE5-4A80-8FC3-9E8F28E181D4][orgmode:gcr:vela:1F488BEB-BCE5-4A80-8FC3-9E8F28E181D4]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_421506C6-DA2D-49F8-9615-485DD7E2CAEF][org_gcr_2017-05-12_mara_421506C6-DA2D-49F8-9615-485DD7E2CAEF]]
 brew cask install haskell-platform
-# orgmode:gcr:vela:1F488BEB-BCE5-4A80-8FC3-9E8F28E181D4 ends here
+# org_gcr_2017-05-12_mara_421506C6-DA2D-49F8-9615-485DD7E2CAEF ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:243473A9-D8D5-4F05-BC70-99E7BFAA9C78][orgmode:gcr:vela:243473A9-D8D5-4F05-BC70-99E7BFAA9C78]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_FB0EF355-80E7-4CC1-BCE5-4DB157B15F6F][org_gcr_2017-05-12_mara_FB0EF355-80E7-4CC1-BCE5-4DB157B15F6F]]
 brew cask install squeak
-# orgmode:gcr:vela:243473A9-D8D5-4F05-BC70-99E7BFAA9C78 ends here
+# org_gcr_2017-05-12_mara_FB0EF355-80E7-4CC1-BCE5-4DB157B15F6F ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::50A94F7F-487B-485E-BEAE-6184D93C2933][50A94F7F-487B-485E-BEAE-6184D93C2933]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_C9E429BB-EA4B-4164-953F-B6228F3D660A][org_gcr_2017-05-12_mara_C9E429BB-EA4B-4164-953F-B6228F3D660A]]
 brew install cvs
-# 50A94F7F-487B-485E-BEAE-6184D93C2933 ends here
+# org_gcr_2017-05-12_mara_C9E429BB-EA4B-4164-953F-B6228F3D660A ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::0D6175B9-3005-4AB5-AA71-F34C875D2FE1][0D6175B9-3005-4AB5-AA71-F34C875D2FE1]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_2C9CC44F-3EC7-4744-8AA7-2EE4EFCFCA4D][org_gcr_2017-05-12_mara_2C9CC44F-3EC7-4744-8AA7-2EE4EFCFCA4D]]
 brew install bzr
-# 0D6175B9-3005-4AB5-AA71-F34C875D2FE1 ends here
+# org_gcr_2017-05-12_mara_2C9CC44F-3EC7-4744-8AA7-2EE4EFCFCA4D ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::6C03B646-2683-4BB5-88F7-D8EB337B3596][6C03B646-2683-4BB5-88F7-D8EB337B3596]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_3BA20AD2-3D13-4738-84BC-D83FA092E32E][org_gcr_2017-05-12_mara_3BA20AD2-3D13-4738-84BC-D83FA092E32E]]
 brew install hg
-# 6C03B646-2683-4BB5-88F7-D8EB337B3596 ends here
+# org_gcr_2017-05-12_mara_3BA20AD2-3D13-4738-84BC-D83FA092E32E ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::0E3B9A2C-7E91-4D21-A9F0-A94C483B7992][0E3B9A2C-7E91-4D21-A9F0-A94C483B7992]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_BC282D24-78F6-4CA4-B9B0-DD59A9BDDC2D][org_gcr_2017-05-12_mara_BC282D24-78F6-4CA4-B9B0-DD59A9BDDC2D]]
 brew cask install intellij-idea
-# 0E3B9A2C-7E91-4D21-A9F0-A94C483B7992 ends here
+# org_gcr_2017-05-12_mara_BC282D24-78F6-4CA4-B9B0-DD59A9BDDC2D ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::610E12B1-3C58-4326-BE81-18EF1F40D544][610E12B1-3C58-4326-BE81-18EF1F40D544]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_40BDECF3-BBA5-47C8-83D0-A30BE58C2896][org_gcr_2017-05-12_mara_40BDECF3-BBA5-47C8-83D0-A30BE58C2896]]
 brew cask install pycharm
-# 610E12B1-3C58-4326-BE81-18EF1F40D544 ends here
+# org_gcr_2017-05-12_mara_40BDECF3-BBA5-47C8-83D0-A30BE58C2896 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::479B7BC3-9F35-4422-82C9-DE3722E4A4B6][479B7BC3-9F35-4422-82C9-DE3722E4A4B6]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_DF8C77C0-B051-4C54-943E-18FDA192039D][org_gcr_2017-05-12_mara_DF8C77C0-B051-4C54-943E-18FDA192039D]]
 brew cask install webstorm
-# 479B7BC3-9F35-4422-82C9-DE3722E4A4B6 ends here
+# org_gcr_2017-05-12_mara_DF8C77C0-B051-4C54-943E-18FDA192039D ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::8D154800-90B1-4D63-9B75-D6C3F61FED9E][8D154800-90B1-4D63-9B75-D6C3F61FED9E]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_39185E42-F547-489B-85F1-D754C1794178][org_gcr_2017-05-12_mara_39185E42-F547-489B-85F1-D754C1794178]]
 brew cask install rstudio
-# 8D154800-90B1-4D63-9B75-D6C3F61FED9E ends here
+# org_gcr_2017-05-12_mara_39185E42-F547-489B-85F1-D754C1794178 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::23B49731-0AA0-4FD9-AA2F-EEBBCF21C3F9][23B49731-0AA0-4FD9-AA2F-EEBBCF21C3F9]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_4FB4D5A0-C3AF-4BBD-84B5-C9579DA2AFE6][org_gcr_2017-05-12_mara_4FB4D5A0-C3AF-4BBD-84B5-C9579DA2AFE6]]
 brew cask install dash
-# 23B49731-0AA0-4FD9-AA2F-EEBBCF21C3F9 ends here
+# org_gcr_2017-05-12_mara_4FB4D5A0-C3AF-4BBD-84B5-C9579DA2AFE6 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::5E540A84-0B1E-4D24-9576-54B6993493BD][5E540A84-0B1E-4D24-9576-54B6993493BD]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_D19983EF-ED98-425B-8485-EC2E5E682DA1][org_gcr_2017-05-12_mara_D19983EF-ED98-425B-8485-EC2E5E682DA1]]
 brew tap homebrew/science
 brew install glpk
-# 5E540A84-0B1E-4D24-9576-54B6993493BD ends here
+# org_gcr_2017-05-12_mara_D19983EF-ED98-425B-8485-EC2E5E682DA1 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::4B420426-4B25-4E40-AB5C-F7EDDDB4C0AA][4B420426-4B25-4E40-AB5C-F7EDDDB4C0AA]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_550D985C-BAE4-409E-9289-A712EA44B335][org_gcr_2017-05-12_mara_550D985C-BAE4-409E-9289-A712EA44B335]]
 brew install the_silver_searcher
-# 4B420426-4B25-4E40-AB5C-F7EDDDB4C0AA ends here
+# org_gcr_2017-05-12_mara_550D985C-BAE4-409E-9289-A712EA44B335 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::B4C9F9F6-E628-4771-82E5-083212B30942][B4C9F9F6-E628-4771-82E5-083212B30942]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_1E6B3FB1-97E1-456D-A0CE-7D686FDF5E31][org_gcr_2017-05-12_mara_1E6B3FB1-97E1-456D-A0CE-7D686FDF5E31]]
 brew install shellcheck
-# B4C9F9F6-E628-4771-82E5-083212B30942 ends here
+# org_gcr_2017-05-12_mara_1E6B3FB1-97E1-456D-A0CE-7D686FDF5E31 ends here

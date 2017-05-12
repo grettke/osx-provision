@@ -1,25 +1,25 @@
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::DB082535-A43F-46EA-9F1B-1BB6302CA396][DB082535-A43F-46EA-9F1B-1BB6302CA396]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_5876A250-F4E4-4B63-996B-95123802B918][org_gcr_2017-05-12_mara_5876A250-F4E4-4B63-996B-95123802B918]]
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-# DB082535-A43F-46EA-9F1B-1BB6302CA396 ends here
+# org_gcr_2017-05-12_mara_5876A250-F4E4-4B63-996B-95123802B918 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::5C68042B-9C59-42C9-9A7F-D625C0475C3A][5C68042B-9C59-42C9-9A7F-D625C0475C3A]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_A1A27177-989C-4DB3-8C8F-DF9CFA241DD0][org_gcr_2017-05-12_mara_A1A27177-989C-4DB3-8C8F-DF9CFA241DD0]]
 brew tap caskroom/cask
-# 5C68042B-9C59-42C9-9A7F-D625C0475C3A ends here
+# org_gcr_2017-05-12_mara_A1A27177-989C-4DB3-8C8F-DF9CFA241DD0 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::92F77AD1-E9DC-4740-B3A3-C6A3A4034068][92F77AD1-E9DC-4740-B3A3-C6A3A4034068]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_9F9C42F7-6E0F-45C9-8719-B6E8A0CFEC7C][org_gcr_2017-05-12_mara_9F9C42F7-6E0F-45C9-8719-B6E8A0CFEC7C]]
 rm -rf ~/git/github-anonymous
 mkdir -p ~/git/github-anonymous
 cd ~/git/github-anonymous
-# 92F77AD1-E9DC-4740-B3A3-C6A3A4034068 ends here
+# org_gcr_2017-05-12_mara_9F9C42F7-6E0F-45C9-8719-B6E8A0CFEC7C ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::D94BB210-9FCF-4A63-825A-9353E2709654][D94BB210-9FCF-4A63-825A-9353E2709654]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_8E036592-BF53-4D12-ACA4-F9CED385432C][org_gcr_2017-05-12_mara_8E036592-BF53-4D12-ACA4-F9CED385432C]]
 git clone https://github.com/grettke/bash.git
 cd bash
 ./deploy
 cd
-# D94BB210-9FCF-4A63-825A-9353E2709654 ends here
+# org_gcr_2017-05-12_mara_8E036592-BF53-4D12-ACA4-F9CED385432C ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::ADE3737D-A638-4BBD-9DD5-C42681EA1C0D][ADE3737D-A638-4BBD-9DD5-C42681EA1C0D]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_F8CE935B-10B1-4261-857C-42C5281BDF9E][org_gcr_2017-05-12_mara_F8CE935B-10B1-4261-857C-42C5281BDF9E]]
 bash --version
 brew install bash
 if grep "/usr/local/bin/bash" /etc/shells > /dev/null; then
@@ -37,13 +37,13 @@ unset bashhome
 unset bdbhome
 bash --version
 bashdb --version
-# ADE3737D-A638-4BBD-9DD5-C42681EA1C0D ends here
+# org_gcr_2017-05-12_mara_F8CE935B-10B1-4261-857C-42C5281BDF9E ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::DD72394C-9D37-446C-A704-E88BE2B0CEED][DD72394C-9D37-446C-A704-E88BE2B0CEED]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_C4A8F02D-CF13-414E-B515-A9E6ADE8E5FC][org_gcr_2017-05-12_mara_C4A8F02D-CF13-414E-B515-A9E6ADE8E5FC]]
 brew tap caskroom/fonts
-# DD72394C-9D37-446C-A704-E88BE2B0CEED ends here
+# org_gcr_2017-05-12_mara_C4A8F02D-CF13-414E-B515-A9E6ADE8E5FC ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::74BEB31B-9499-4144-B997-9E16B3FA24D9][74BEB31B-9499-4144-B997-9E16B3FA24D9]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_57293DFD-7465-4AE6-9FCB-AF240AFEA14C][org_gcr_2017-05-12_mara_57293DFD-7465-4AE6-9FCB-AF240AFEA14C]]
 brew cask install font-dejavu-sans
 brew cask install font-quivira
 brew cask install font-noto-sans
@@ -51,24 +51,24 @@ brew cask install font-noto-sans-symbols
 brew cask install font-symbola
 brew cask install font-fontawesome
 brew cask install font-montserrat
-# 74BEB31B-9499-4144-B997-9E16B3FA24D9 ends here
+# org_gcr_2017-05-12_mara_57293DFD-7465-4AE6-9FCB-AF240AFEA14C ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::429CCB8C-CFCF-40C9-87B5-03384D5DFE14][429CCB8C-CFCF-40C9-87B5-03384D5DFE14]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_55BC0C54-06BC-4D75-84AA-587B1C282E80][org_gcr_2017-05-12_mara_55BC0C54-06BC-4D75-84AA-587B1C282E80]]
 rm -rf ~/git/github-anonymous/osx-terminal.app-colors-solarized
 cd ~/git/github-anonymous
 git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
-# 429CCB8C-CFCF-40C9-87B5-03384D5DFE14 ends here
+# org_gcr_2017-05-12_mara_55BC0C54-06BC-4D75-84AA-587B1C282E80 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::716756F8-6497-4367-9330-9A578AC31AA6][716756F8-6497-4367-9330-9A578AC31AA6]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_DBDFD463-19F7-4708-B2DE-33B6F66EEB04][org_gcr_2017-05-12_mara_DBDFD463-19F7-4708-B2DE-33B6F66EEB04]]
 brew install fortune
-# 716756F8-6497-4367-9330-9A578AC31AA6 ends here
+# org_gcr_2017-05-12_mara_DBDFD463-19F7-4708-B2DE-33B6F66EEB04 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::A61A74A8-B361-4395-B9DE-E6F843166511][A61A74A8-B361-4395-B9DE-E6F843166511]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_E3924B58-B0D8-4FEB-8C75-2CDE56647E2C][org_gcr_2017-05-12_mara_E3924B58-B0D8-4FEB-8C75-2CDE56647E2C]]
 cd ~/git/github-anonymous
 git clone https://github.com/Homebrew/homebrew.git
 git clone https://github.com/caskroom/homebrew-cask.git
-# A61A74A8-B361-4395-B9DE-E6F843166511 ends here
+# org_gcr_2017-05-12_mara_E3924B58-B0D8-4FEB-8C75-2CDE56647E2C ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:E4D94581-BF48-4D98-BAB4-74BEEBA09F4A][orgmode:gcr:vela:E4D94581-BF48-4D98-BAB4-74BEEBA09F4A]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB][org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB]]
 echo "Script complete"
-# orgmode:gcr:vela:E4D94581-BF48-4D98-BAB4-74BEEBA09F4A ends here
+# org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB ends here

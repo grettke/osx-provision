@@ -1,4 +1,4 @@
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::291FDE06-DF44-4156-A013-B763A8727B00][291FDE06-DF44-4156-A013-B763A8727B00]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_8082AC3B-7751-40C3-B8C3-E1C8B678F07A][org_gcr_2017-05-12_mara_8082AC3B-7751-40C3-B8C3-E1C8B678F07A]]
 sudo scutil --set HostName ""
 echo "Enter HostName (plain old hostname): "
 read vhn
@@ -15,337 +15,337 @@ sudo scutil --set ComputerName ""
 echo "Enter ComputerName (human friendly GUI name): "
 read vcn
 sudo scutil --set ComputerName $cn
-# 291FDE06-DF44-4156-A013-B763A8727B00 ends here
+# org_gcr_2017-05-12_mara_8082AC3B-7751-40C3-B8C3-E1C8B678F07A ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::2F39C8B9-CA25-4C94-8E77-AD348D5235A9][2F39C8B9-CA25-4C94-8E77-AD348D5235A9]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_E7F0585C-736B-4B4F-8123-BEF176250886][org_gcr_2017-05-12_mara_E7F0585C-736B-4B4F-8123-BEF176250886]]
 sudo defaults write /Library/Preferences/com.apple.loginwindow.plist SHOWFULLNAME -bool true
-# 2F39C8B9-CA25-4C94-8E77-AD348D5235A9 ends here
+# org_gcr_2017-05-12_mara_E7F0585C-736B-4B4F-8123-BEF176250886 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::850816F3-B82E-4EE0-9895-6E99CB6A7593][850816F3-B82E-4EE0-9895-6E99CB6A7593]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_D79CA624-89B0-4F92-877A-B0C2C14A4B2F][org_gcr_2017-05-12_mara_D79CA624-89B0-4F92-877A-B0C2C14A4B2F]]
 sudo defaults write /Library/Preferences/com.apple.loginwindow.plist LoginwindowText -string "
 All creativity is an extended form of a joke.
           — Alan Kay"
-# 850816F3-B82E-4EE0-9895-6E99CB6A7593 ends here
+# org_gcr_2017-05-12_mara_D79CA624-89B0-4F92-877A-B0C2C14A4B2F ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::91AA8678-421C-4F05-8ECA-1D1219582C7E][91AA8678-421C-4F05-8ECA-1D1219582C7E]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_3290F2DF-990B-4CE3-8529-36521F720963][org_gcr_2017-05-12_mara_3290F2DF-990B-4CE3-8529-36521F720963]]
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-# 91AA8678-421C-4F05-8ECA-1D1219582C7E ends here
+# org_gcr_2017-05-12_mara_3290F2DF-990B-4CE3-8529-36521F720963 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::DBE84671-1CC0-4DBA-AC7C-72F9EAC857A0][DBE84671-1CC0-4DBA-AC7C-72F9EAC857A0]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_AD487C53-1C16-4734-9275-B1B72F41D725][org_gcr_2017-05-12_mara_AD487C53-1C16-4734-9275-B1B72F41D725]]
 sudo spctl --master-disable
-# DBE84671-1CC0-4DBA-AC7C-72F9EAC857A0 ends here
+# org_gcr_2017-05-12_mara_AD487C53-1C16-4734-9275-B1B72F41D725 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::6755B45A-4331-4CA4-89D5-7A5906C3966A][6755B45A-4331-4CA4-89D5-7A5906C3966A]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_2C19CF8E-CA4E-4589-82E2-D1A3D2D18353][org_gcr_2017-05-12_mara_2C19CF8E-CA4E-4589-82E2-D1A3D2D18353]]
 cd ~/Pictures/
 curl -O http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2015/02/M101-ORG.jpg
 sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '~/Pictures/M101-ORG.jpg'";
-# 6755B45A-4331-4CA4-89D5-7A5906C3966A ends here
+# org_gcr_2017-05-12_mara_2C19CF8E-CA4E-4589-82E2-D1A3D2D18353 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::57F27EEA-630B-4CB4-9A04-27091C4AD4CB][57F27EEA-630B-4CB4-9A04-27091C4AD4CB]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_C35A4166-B7B0-4DC8-967F-F360777F869F][org_gcr_2017-05-12_mara_C35A4166-B7B0-4DC8-967F-F360777F869F]]
 osascript -e 'set volume output volume 50'
-# 57F27EEA-630B-4CB4-9A04-27091C4AD4CB ends here
+# org_gcr_2017-05-12_mara_C35A4166-B7B0-4DC8-967F-F360777F869F ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::02346DB0-0D1F-4A80-89ED-C8B723C05BB6][02346DB0-0D1F-4A80-89ED-C8B723C05BB6]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_FECCE7E6-6F35-4DC3-8646-CD445EBFE430][org_gcr_2017-05-12_mara_FECCE7E6-6F35-4DC3-8646-CD445EBFE430]]
 defaults write 'NSGlobalDomain' NSAutomaticSpellingCorrectionEnabled -bool false
-# 02346DB0-0D1F-4A80-89ED-C8B723C05BB6 ends here
+# org_gcr_2017-05-12_mara_FECCE7E6-6F35-4DC3-8646-CD445EBFE430 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::207B6C0E-E636-4FAB-A859-6E3CA370C40E][207B6C0E-E636-4FAB-A859-6E3CA370C40E]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_0865BC69-697B-44F1-BAAD-8F0EA0F62E47][org_gcr_2017-05-12_mara_0865BC69-697B-44F1-BAAD-8F0EA0F62E47]]
 defaults write 'NSGlobalDomain' PMPrintingExpandedStateForPrint -bool true
 defaults write 'NSGlobalDomain' PMPrintingExpandedStateForPrint2 -bool true
-# 207B6C0E-E636-4FAB-A859-6E3CA370C40E ends here
+# org_gcr_2017-05-12_mara_0865BC69-697B-44F1-BAAD-8F0EA0F62E47 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::FBAD5CA1-F984-46AE-940D-90B1FC6C8454][FBAD5CA1-F984-46AE-940D-90B1FC6C8454]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_17B24F88-6FFB-4BC3-811F-546E4A875EA5][org_gcr_2017-05-12_mara_17B24F88-6FFB-4BC3-811F-546E4A875EA5]]
 defaults write 'NSGlobalDomain' NSNavPanelExpandedStateForSaveMode -bool true
 defaults write 'NSGlobalDomain' NSNavPanelExpandedStateForSaveMode2 -bool true
-# FBAD5CA1-F984-46AE-940D-90B1FC6C8454 ends here
+# org_gcr_2017-05-12_mara_17B24F88-6FFB-4BC3-811F-546E4A875EA5 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::F6899984-2233-4027-BBEF-1005657C7B5E][F6899984-2233-4027-BBEF-1005657C7B5E]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_C358FC0F-758F-4B87-9608-9AB34FA17B0A][org_gcr_2017-05-12_mara_C358FC0F-758F-4B87-9608-9AB34FA17B0A]]
 defaults write 'com.apple.print.PrintingPrefs' 'Quit When Finished' -bool true
-# F6899984-2233-4027-BBEF-1005657C7B5E ends here
+# org_gcr_2017-05-12_mara_C358FC0F-758F-4B87-9608-9AB34FA17B0A ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::29013D61-3A46-42CB-80CF-7C896C69D56E][29013D61-3A46-42CB-80CF-7C896C69D56E]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_9F534597-1727-420D-BA53-09267E9EB7AB][org_gcr_2017-05-12_mara_9F534597-1727-420D-BA53-09267E9EB7AB]]
 defaults write NSGlobalDomain _HIHideMenuBar -bool true
-# 29013D61-3A46-42CB-80CF-7C896C69D56E ends here
+# org_gcr_2017-05-12_mara_9F534597-1727-420D-BA53-09267E9EB7AB ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::8351B207-A376-4149-A876-4E3E8CE06732][8351B207-A376-4149-A876-4E3E8CE06732]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_35F6C8B1-4D7A-4823-A77E-DDA7F8060AFF][org_gcr_2017-05-12_mara_35F6C8B1-4D7A-4823-A77E-DDA7F8060AFF]]
 defaults write 'com.apple.menuextra.battery' ShowPercent -bool true
-# 8351B207-A376-4149-A876-4E3E8CE06732 ends here
+# org_gcr_2017-05-12_mara_35F6C8B1-4D7A-4823-A77E-DDA7F8060AFF ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::3525C306-F373-4146-8579-60E38D765425][3525C306-F373-4146-8579-60E38D765425]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_7B2BD1E7-4165-4E7F-92D1-C658E9804F51][org_gcr_2017-05-12_mara_7B2BD1E7-4165-4E7F-92D1-C658E9804F51]]
 defaults write 'com.apple.menuextra.clock' DateFormat -string "EEE MMM d  HH:mm"
-# 3525C306-F373-4146-8579-60E38D765425 ends here
+# org_gcr_2017-05-12_mara_7B2BD1E7-4165-4E7F-92D1-C658E9804F51 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::B7665462-71BC-4929-86C9-4766C3BAA9DB][B7665462-71BC-4929-86C9-4766C3BAA9DB]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_FA0C8365-624A-4590-98D1-131671483174][org_gcr_2017-05-12_mara_FA0C8365-624A-4590-98D1-131671483174]]
 defaults write 'com.apple.TimeMachine' DoNotOfferNewDisksForBackup -bool true
-# B7665462-71BC-4929-86C9-4766C3BAA9DB ends here
+# org_gcr_2017-05-12_mara_FA0C8365-624A-4590-98D1-131671483174 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::EE3BD935-46A0-425C-9DAB-0CB341D5E501][EE3BD935-46A0-425C-9DAB-0CB341D5E501]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_4073FE48-C5ED-4074-84C9-212B5544CB05][org_gcr_2017-05-12_mara_4073FE48-C5ED-4074-84C9-212B5544CB05]]
 defaults write 'com.apple.desktopservices' DSDontWriteNetworkStores -bool true
-# EE3BD935-46A0-425C-9DAB-0CB341D5E501 ends here
+# org_gcr_2017-05-12_mara_4073FE48-C5ED-4074-84C9-212B5544CB05 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::526B969F-94AD-441B-8F5D-52141EDA0507][526B969F-94AD-441B-8F5D-52141EDA0507]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_4D88B78D-92CA-46AE-AFBC-B69D78F46296][org_gcr_2017-05-12_mara_4D88B78D-92CA-46AE-AFBC-B69D78F46296]]
 defaults write 'NSGlobalDomain' NSDocumentSaveNewDocumentsToCloud -bool false
-# 526B969F-94AD-441B-8F5D-52141EDA0507 ends here
+# org_gcr_2017-05-12_mara_4D88B78D-92CA-46AE-AFBC-B69D78F46296 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::16416BAF-CFEE-43E2-9B6B-C2B85C73D627][16416BAF-CFEE-43E2-9B6B-C2B85C73D627]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_BD54854E-74A3-42C0-989A-F39C70D762F1][org_gcr_2017-05-12_mara_BD54854E-74A3-42C0-989A-F39C70D762F1]]
 defaults write 'NSGlobalDomain' NSWindowResizeTime -float 0.001
-# 16416BAF-CFEE-43E2-9B6B-C2B85C73D627 ends here
+# org_gcr_2017-05-12_mara_BD54854E-74A3-42C0-989A-F39C70D762F1 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::8D12169D-8717-46D4-920E-D4C322C4458E][8D12169D-8717-46D4-920E-D4C322C4458E]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_40FA9179-1D81-4F78-8AE0-6F1338947AB7][org_gcr_2017-05-12_mara_40FA9179-1D81-4F78-8AE0-6F1338947AB7]]
 defaults write 'NSGlobalDomain' AppleAquaColorVariant -int 6
-# 8D12169D-8717-46D4-920E-D4C322C4458E ends here
+# org_gcr_2017-05-12_mara_40FA9179-1D81-4F78-8AE0-6F1338947AB7 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::337E87AE-39CC-41F5-B115-11B994E125B5][337E87AE-39CC-41F5-B115-11B994E125B5]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_1C882423-44FB-4605-BFDE-7CF7D06644B1][org_gcr_2017-05-12_mara_1C882423-44FB-4605-BFDE-7CF7D06644B1]]
 defaults write 'NSGlobalDomain' AppleInterfaceStyle -string Dark
-# 337E87AE-39CC-41F5-B115-11B994E125B5 ends here
+# org_gcr_2017-05-12_mara_1C882423-44FB-4605-BFDE-7CF7D06644B1 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::F89AEE9E-D5D6-4EF9-9914-CE2C3AE53B9B][F89AEE9E-D5D6-4EF9-9914-CE2C3AE53B9B]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CE6EBA74-B9B0-45AA-B741-7F2BF0F0AD24][org_gcr_2017-05-12_mara_CE6EBA74-B9B0-45AA-B741-7F2BF0F0AD24]]
 defaults write com.apple.LaunchServices LSQuarantine -bool false
-# F89AEE9E-D5D6-4EF9-9914-CE2C3AE53B9B ends here
+# org_gcr_2017-05-12_mara_CE6EBA74-B9B0-45AA-B741-7F2BF0F0AD24 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::A2CDF5C4-9239-47AD-9978-09582362316C][A2CDF5C4-9239-47AD-9978-09582362316C]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_F0EC81C0-85C3-401D-BADF-B7156B043B00][org_gcr_2017-05-12_mara_F0EC81C0-85C3-401D-BADF-B7156B043B00]]
 defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
-# A2CDF5C4-9239-47AD-9978-09582362316C ends here
+# org_gcr_2017-05-12_mara_F0EC81C0-85C3-401D-BADF-B7156B043B00 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::4FDA48E0-AC9B-48B9-A09D-E54F72787F64][4FDA48E0-AC9B-48B9-A09D-E54F72787F64]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_F839E739-239F-452B-BB09-557FBC539EF1][org_gcr_2017-05-12_mara_F839E739-239F-452B-BB09-557FBC539EF1]]
 defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
-# 4FDA48E0-AC9B-48B9-A09D-E54F72787F64 ends here
+# org_gcr_2017-05-12_mara_F839E739-239F-452B-BB09-557FBC539EF1 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::E102244A-C691-4E62-BE68-3BF1EB8D340F][E102244A-C691-4E62-BE68-3BF1EB8D340F]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_9D937F98-0106-444A-BC40-C37283FAB316][org_gcr_2017-05-12_mara_9D937F98-0106-444A-BC40-C37283FAB316]]
 defaults write com.apple.CrashReporter DialogType -string "none"
-# E102244A-C691-4E62-BE68-3BF1EB8D340F ends here
+# org_gcr_2017-05-12_mara_9D937F98-0106-444A-BC40-C37283FAB316 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::FC22C88E-44B4-4C50-B00A-82DB0DCDB519][FC22C88E-44B4-4C50-B00A-82DB0DCDB519]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_6A505F3E-B686-46A7-A617-EEC6419C81A5][org_gcr_2017-05-12_mara_6A505F3E-B686-46A7-A617-EEC6419C81A5]]
 defaults write com.apple.helpviewer DevMode -bool true
-# FC22C88E-44B4-4C50-B00A-82DB0DCDB519 ends here
+# org_gcr_2017-05-12_mara_6A505F3E-B686-46A7-A617-EEC6419C81A5 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::F3347821-BEB6-4D91-8ADC-D968F825D491][F3347821-BEB6-4D91-8ADC-D968F825D491]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_10BE7A63-4C25-40AA-B9C8-60F2267FB5F6][org_gcr_2017-05-12_mara_10BE7A63-4C25-40AA-B9C8-60F2267FB5F6]]
 sudo systemsetup -setrestartfreeze on
-# F3347821-BEB6-4D91-8ADC-D968F825D491 ends here
+# org_gcr_2017-05-12_mara_10BE7A63-4C25-40AA-B9C8-60F2267FB5F6 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::B0166A42-EB93-444D-ACDA-A0E2AED02543][B0166A42-EB93-444D-ACDA-A0E2AED02543]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_24BCF9D2-732A-472C-855D-6AFAE6BE1967][org_gcr_2017-05-12_mara_24BCF9D2-732A-472C-855D-6AFAE6BE1967]]
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-# B0166A42-EB93-444D-ACDA-A0E2AED02543 ends here
+# org_gcr_2017-05-12_mara_24BCF9D2-732A-472C-855D-6AFAE6BE1967 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::1450BB2D-B822-48D3-ADC8-46FFF00B730C][1450BB2D-B822-48D3-ADC8-46FFF00B730C]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_4F242371-3696-4DF2-AC94-22F2038E83BE][org_gcr_2017-05-12_mara_4F242371-3696-4DF2-AC94-22F2038E83BE]]
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-# 1450BB2D-B822-48D3-ADC8-46FFF00B730C ends here
+# org_gcr_2017-05-12_mara_4F242371-3696-4DF2-AC94-22F2038E83BE ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::B829AB6A-309B-406F-A51F-2CF38C183210][B829AB6A-309B-406F-A51F-2CF38C183210]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_B5E344AD-EF14-4F0D-BE99-E6717081917B][org_gcr_2017-05-12_mara_B5E344AD-EF14-4F0D-BE99-E6717081917B]]
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-# B829AB6A-309B-406F-A51F-2CF38C183210 ends here
+# org_gcr_2017-05-12_mara_B5E344AD-EF14-4F0D-BE99-E6717081917B ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::9078E7EB-65AE-4B8E-978A-E6687DB2C4EA][9078E7EB-65AE-4B8E-978A-E6687DB2C4EA]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_278431C8-F6C9-4648-9828-EC3C001265FE][org_gcr_2017-05-12_mara_278431C8-F6C9-4648-9828-EC3C001265FE]]
 defaults write 'NSGlobalDomain' ApplePressAndHoldEnabled -bool false
-# 9078E7EB-65AE-4B8E-978A-E6687DB2C4EA ends here
+# org_gcr_2017-05-12_mara_278431C8-F6C9-4648-9828-EC3C001265FE ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::662F5288-F102-4FCA-B052-31933DFEFC0B][662F5288-F102-4FCA-B052-31933DFEFC0B]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_35F9EFDE-BB1B-440E-8475-07BFD16B57A7][org_gcr_2017-05-12_mara_35F9EFDE-BB1B-440E-8475-07BFD16B57A7]]
 defaults write 'NSGlobalDomain' com.apple.keyboard.fnState -bool true
-# 662F5288-F102-4FCA-B052-31933DFEFC0B ends here
+# org_gcr_2017-05-12_mara_35F9EFDE-BB1B-440E-8475-07BFD16B57A7 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::03E4D631-C6E3-4E4E-BCE9-BDB87D8549FD][03E4D631-C6E3-4E4E-BCE9-BDB87D8549FD]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_1535AE8C-9440-484F-8916-B3B1E0E367E9][org_gcr_2017-05-12_mara_1535AE8C-9440-484F-8916-B3B1E0E367E9]]
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
-# 03E4D631-C6E3-4E4E-BCE9-BDB87D8549FD ends here
+# org_gcr_2017-05-12_mara_1535AE8C-9440-484F-8916-B3B1E0E367E9 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::44629106-AB81-4099-AAAE-2A1692110652][44629106-AB81-4099-AAAE-2A1692110652]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_92C03F93-F5AB-480A-9D11-AD4B0340175D][org_gcr_2017-05-12_mara_92C03F93-F5AB-480A-9D11-AD4B0340175D]]
 defaults write com.apple.dock autohide -bool true && killall Dock
-# 44629106-AB81-4099-AAAE-2A1692110652 ends here
+# org_gcr_2017-05-12_mara_92C03F93-F5AB-480A-9D11-AD4B0340175D ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::3A5370F0-1F37-47A9-8AD2-5A54F7BEBAF6][3A5370F0-1F37-47A9-8AD2-5A54F7BEBAF6]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_AED4ACD0-8AC0-4DA1-84C2-854352BF862E][org_gcr_2017-05-12_mara_AED4ACD0-8AC0-4DA1-84C2-854352BF862E]]
 defaults write com.apple.dock launchanim -bool false && killall Dock
-# 3A5370F0-1F37-47A9-8AD2-5A54F7BEBAF6 ends here
+# org_gcr_2017-05-12_mara_AED4ACD0-8AC0-4DA1-84C2-854352BF862E ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::2D1566D0-5912-4770-A53E-DAB815E886F1][2D1566D0-5912-4770-A53E-DAB815E886F1]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_0BBDBF25-1CD4-4E9A-9C30-2AC387CF4F8D][org_gcr_2017-05-12_mara_0BBDBF25-1CD4-4E9A-9C30-2AC387CF4F8D]]
 defaults write com.apple.dock mouse-over-hilte-stack -bool true && killall Dock
-# 2D1566D0-5912-4770-A53E-DAB815E886F1 ends here
+# org_gcr_2017-05-12_mara_0BBDBF25-1CD4-4E9A-9C30-2AC387CF4F8D ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::95CAD941-7BDA-4D4E-BF2E-976D9D07DA37][95CAD941-7BDA-4D4E-BF2E-976D9D07DA37]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_9FE18292-E785-433D-901F-C6BA8673D4CC][org_gcr_2017-05-12_mara_9FE18292-E785-433D-901F-C6BA8673D4CC]]
 defaults write com.apple.dock showhidden -bool true && killall Dock
-# 95CAD941-7BDA-4D4E-BF2E-976D9D07DA37 ends here
+# org_gcr_2017-05-12_mara_9FE18292-E785-433D-901F-C6BA8673D4CC ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::6AB142A8-9150-4B3B-8709-237D468212E0][6AB142A8-9150-4B3B-8709-237D468212E0]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_F97562F8-8DC4-4E1B-8E0C-A91ED6404138][org_gcr_2017-05-12_mara_F97562F8-8DC4-4E1B-8E0C-A91ED6404138]]
 defaults write com.apple.dock minimize-to-application -bool true && killall Dock
-# 6AB142A8-9150-4B3B-8709-237D468212E0 ends here
+# org_gcr_2017-05-12_mara_F97562F8-8DC4-4E1B-8E0C-A91ED6404138 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::7CF0E408-7318-4921-B8BE-F834C8A63BC7][7CF0E408-7318-4921-B8BE-F834C8A63BC7]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_7660A9DA-AAD9-4B44-A40A-4A9AD376DAA4][org_gcr_2017-05-12_mara_7660A9DA-AAD9-4B44-A40A-4A9AD376DAA4]]
 defaults write com.apple.dock orientation -string left && killall Dock
-# 7CF0E408-7318-4921-B8BE-F834C8A63BC7 ends here
+# org_gcr_2017-05-12_mara_7660A9DA-AAD9-4B44-A40A-4A9AD376DAA4 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::2250EED5-046B-4F55-B64E-04787C078F5B][2250EED5-046B-4F55-B64E-04787C078F5B]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CE835494-145D-494D-AA53-60BDE5132068][org_gcr_2017-05-12_mara_CE835494-145D-494D-AA53-60BDE5132068]]
 defaults write com.apple.Dock autohide-time-modifier -float 0 && killall Dock
-# 2250EED5-046B-4F55-B64E-04787C078F5B ends here
+# org_gcr_2017-05-12_mara_CE835494-145D-494D-AA53-60BDE5132068 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::CA55EDF7-AB57-450A-A80A-D9BCE9219951][CA55EDF7-AB57-450A-A80A-D9BCE9219951]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_FFFF9528-5771-410A-B554-CDEECE46223C][org_gcr_2017-05-12_mara_FFFF9528-5771-410A-B554-CDEECE46223C]]
 defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
-# CA55EDF7-AB57-450A-A80A-D9BCE9219951 ends here
+# org_gcr_2017-05-12_mara_FFFF9528-5771-410A-B554-CDEECE46223C ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::C92642D8-BA50-46E4-B9D0-A0A7DEEAF0B9][C92642D8-BA50-46E4-B9D0-A0A7DEEAF0B9]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CC22C9D3-6537-48AB-9C73-3B3BFAE32571][org_gcr_2017-05-12_mara_CC22C9D3-6537-48AB-9C73-3B3BFAE32571]]
 defaults write com.apple.Dock tilesize -int 50 && killall Dock
-# C92642D8-BA50-46E4-B9D0-A0A7DEEAF0B9 ends here
+# org_gcr_2017-05-12_mara_CC22C9D3-6537-48AB-9C73-3B3BFAE32571 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::D643A6DB-461A-425D-9516-C841B0A4C9E0][D643A6DB-461A-425D-9516-C841B0A4C9E0]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CC1758DF-1E34-4335-BE0A-A3ADFF94E289][org_gcr_2017-05-12_mara_CC1758DF-1E34-4335-BE0A-A3ADFF94E289]]
 defaults write com.apple.Dock show-process-indicators -bool true && killall Dock
-# D643A6DB-461A-425D-9516-C841B0A4C9E0 ends here
+# org_gcr_2017-05-12_mara_CC1758DF-1E34-4335-BE0A-A3ADFF94E289 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::88023507-0070-4713-9F0D-36344D3FDED0][88023507-0070-4713-9F0D-36344D3FDED0]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_2C282764-302C-48B3-8526-BCBBC68136D7][org_gcr_2017-05-12_mara_2C282764-302C-48B3-8526-BCBBC68136D7]]
 defaults write 'com.apple.dock' persistent-apps -array '' && killall Dock
-# 88023507-0070-4713-9F0D-36344D3FDED0 ends here
+# org_gcr_2017-05-12_mara_2C282764-302C-48B3-8526-BCBBC68136D7 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::2AEA50FA-CA94-438A-B82E-3B465CAA2E12][2AEA50FA-CA94-438A-B82E-3B465CAA2E12]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_51190ECF-96AF-41E5-A3D5-305733CB369B][org_gcr_2017-05-12_mara_51190ECF-96AF-41E5-A3D5-305733CB369B]]
 defaults write 'com.apple.dock' expose-animation-duration -float 0.1 && killall Dock
-# 2AEA50FA-CA94-438A-B82E-3B465CAA2E12 ends here
+# org_gcr_2017-05-12_mara_51190ECF-96AF-41E5-A3D5-305733CB369B ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::A6759B25-1B21-40C2-A75C-B2DF18A3CAC1][A6759B25-1B21-40C2-A75C-B2DF18A3CAC1]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_8A95C7A0-1FFC-4F4A-B85B-E615692D3DD0][org_gcr_2017-05-12_mara_8A95C7A0-1FFC-4F4A-B85B-E615692D3DD0]]
 defaults write 'com.apple.finder' QLEnableTextSelection -bool true && killall Finder
-# A6759B25-1B21-40C2-A75C-B2DF18A3CAC1 ends here
+# org_gcr_2017-05-12_mara_8A95C7A0-1FFC-4F4A-B85B-E615692D3DD0 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::DCDE10BB-3848-4C70-9B7A-8F5641950CCB][DCDE10BB-3848-4C70-9B7A-8F5641950CCB]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_B0C608AD-9265-4878-AEBC-7E33A048F1A1][org_gcr_2017-05-12_mara_B0C608AD-9265-4878-AEBC-7E33A048F1A1]]
 defaults write 'com.apple.frameworks.diskimages' auto-open-ro-root -bool true && killall Finder
 defaults write 'com.apple.frameworks.diskimages' auto-open-rw-root -bool true && killall Finder
 defaults write 'com.apple.finder' OpenWindowForNewRemovableDisk -bool true && killall Finder
-# DCDE10BB-3848-4C70-9B7A-8F5641950CCB ends here
+# org_gcr_2017-05-12_mara_B0C608AD-9265-4878-AEBC-7E33A048F1A1 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::4647036E-8DB1-4119-B6D1-2028941B9A91][4647036E-8DB1-4119-B6D1-2028941B9A91]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_699478D2-54ED-41DF-B98C-723EF7535502][org_gcr_2017-05-12_mara_699478D2-54ED-41DF-B98C-723EF7535502]]
 defaults write 'com.apple.finder' WarnOnEmptyTrash -bool false && killall Finder
-# 4647036E-8DB1-4119-B6D1-2028941B9A91 ends here
+# org_gcr_2017-05-12_mara_699478D2-54ED-41DF-B98C-723EF7535502 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::00CEF20F-FDD2-464F-B8E4-968682A62B26][00CEF20F-FDD2-464F-B8E4-968682A62B26]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_2E852A5E-D156-4AC6-8B54-7B7F055BE34D][org_gcr_2017-05-12_mara_2E852A5E-D156-4AC6-8B54-7B7F055BE34D]]
 defaults write 'com.apple.finder' FXEnableExtensionChangeWarning -bool false && killall Finder
-# 00CEF20F-FDD2-464F-B8E4-968682A62B26 ends here
+# org_gcr_2017-05-12_mara_2E852A5E-D156-4AC6-8B54-7B7F055BE34D ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::1C946EE8-4D17-4D03-BF58-F2C5C1280739][1C946EE8-4D17-4D03-BF58-F2C5C1280739]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_FD73E47E-42A4-4AB9-A599-12E44D822A79][org_gcr_2017-05-12_mara_FD73E47E-42A4-4AB9-A599-12E44D822A79]]
 defaults write 'com.apple.finder' _FXShowPosixPathInTitle -bool true && killall Finder
-# 1C946EE8-4D17-4D03-BF58-F2C5C1280739 ends here
+# org_gcr_2017-05-12_mara_FD73E47E-42A4-4AB9-A599-12E44D822A79 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::85E615B8-24C6-4819-B437-BB1ED2384E82][85E615B8-24C6-4819-B437-BB1ED2384E82]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_2D637649-277F-4E7B-959E-924E88F046A6][org_gcr_2017-05-12_mara_2D637649-277F-4E7B-959E-924E88F046A6]]
 defaults write 'com.apple.finder' NewWindowTarget -string PfHm && killall Finder
-# 85E615B8-24C6-4819-B437-BB1ED2384E82 ends here
+# org_gcr_2017-05-12_mara_2D637649-277F-4E7B-959E-924E88F046A6 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::FB3EFB97-6BEC-4BE4-B8D5-8EACD289CE66][FB3EFB97-6BEC-4BE4-B8D5-8EACD289CE66]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_1A04F6F5-D673-4043-90B1-F6283FBEF5C9][org_gcr_2017-05-12_mara_1A04F6F5-D673-4043-90B1-F6283FBEF5C9]]
 defaults write 'com.apple.finder' FXDefaultSearchScope -string SCcf && killall Finder
-# FB3EFB97-6BEC-4BE4-B8D5-8EACD289CE66 ends here
+# org_gcr_2017-05-12_mara_1A04F6F5-D673-4043-90B1-F6283FBEF5C9 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::5F5E19CE-ECA4-4633-8C67-299C2237C7E2][5F5E19CE-ECA4-4633-8C67-299C2237C7E2]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_91DF78CB-D5A0-4F5D-AA66-C402BF61F1B4][org_gcr_2017-05-12_mara_91DF78CB-D5A0-4F5D-AA66-C402BF61F1B4]]
 defaults write 'com.apple.finder' AppleShowAllFiles -bool true && killall Finder
-# 5F5E19CE-ECA4-4633-8C67-299C2237C7E2 ends here
+# org_gcr_2017-05-12_mara_91DF78CB-D5A0-4F5D-AA66-C402BF61F1B4 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::7C10B346-5B87-456F-B424-1ED79C2ADE2B][7C10B346-5B87-456F-B424-1ED79C2ADE2B]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_47D3778D-108C-4FE8-8500-7219FDE66F65][org_gcr_2017-05-12_mara_47D3778D-108C-4FE8-8500-7219FDE66F65]]
 defaults write 'com.apple.finder' AppleShowAllExtensions -bool true && killall Finder
-# 7C10B346-5B87-456F-B424-1ED79C2ADE2B ends here
+# org_gcr_2017-05-12_mara_47D3778D-108C-4FE8-8500-7219FDE66F65 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::69400DBC-BA03-4CB4-B724-BA22C070CB2B][69400DBC-BA03-4CB4-B724-BA22C070CB2B]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_E686D674-F91E-41C1-9AAC-CCAE9A045BE9][org_gcr_2017-05-12_mara_E686D674-F91E-41C1-9AAC-CCAE9A045BE9]]
 defaults write 'com.apple.finder' ShowPathbar -bool true && killall Finder
-# 69400DBC-BA03-4CB4-B724-BA22C070CB2B ends here
+# org_gcr_2017-05-12_mara_E686D674-F91E-41C1-9AAC-CCAE9A045BE9 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::6D032485-D6D0-47A4-9B14-06FE6FC0CB80][6D032485-D6D0-47A4-9B14-06FE6FC0CB80]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_0A61D4B3-E473-4260-BC09-E7AE3466B3FF][org_gcr_2017-05-12_mara_0A61D4B3-E473-4260-BC09-E7AE3466B3FF]]
 defaults write 'com.apple.finder' ShowStatusBar -bool true && killall Finder
-# 6D032485-D6D0-47A4-9B14-06FE6FC0CB80 ends here
+# org_gcr_2017-05-12_mara_0A61D4B3-E473-4260-BC09-E7AE3466B3FF ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::38B74BA0-FFCD-4E46-A1F0-BA839DF631DB][38B74BA0-FFCD-4E46-A1F0-BA839DF631DB]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_0E915742-485B-4FD0-B884-D2D479803765][org_gcr_2017-05-12_mara_0E915742-485B-4FD0-B884-D2D479803765]]
 defaults write 'NSGlobalDomain' NSTableViewDefaultSizeMode -bool true && killall Finder
-# 38B74BA0-FFCD-4E46-A1F0-BA839DF631DB ends here
+# org_gcr_2017-05-12_mara_0E915742-485B-4FD0-B884-D2D479803765 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::17D25945-67E7-4F54-9DAA-C23FD89A2758][17D25945-67E7-4F54-9DAA-C23FD89A2758]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_C3B234B5-498F-4C29-B548-03DF4D57085A][org_gcr_2017-05-12_mara_C3B234B5-498F-4C29-B548-03DF4D57085A]]
 defaults write 'com.apple.Finder' FXPreferredViewStyle Nlsv && killall Finder
-# 17D25945-67E7-4F54-9DAA-C23FD89A2758 ends here
+# org_gcr_2017-05-12_mara_C3B234B5-498F-4C29-B548-03DF4D57085A ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::49C95048-C7D9-4E7C-BAAE-5D78181FF112][49C95048-C7D9-4E7C-BAAE-5D78181FF112]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_818E594F-4D81-43E3-9734-F52C4C827D77][org_gcr_2017-05-12_mara_818E594F-4D81-43E3-9734-F52C4C827D77]]
 defaults write com.apple.finder FXPreferredGroupBy -string "None"
-# 49C95048-C7D9-4E7C-BAAE-5D78181FF112 ends here
+# org_gcr_2017-05-12_mara_818E594F-4D81-43E3-9734-F52C4C827D77 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::C3E4AFE6-5FB1-4432-B53C-933D83B3BA48][C3E4AFE6-5FB1-4432-B53C-933D83B3BA48]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_3A24B6A5-AA20-4377-9D5A-5544B7DA6C8E][org_gcr_2017-05-12_mara_3A24B6A5-AA20-4377-9D5A-5544B7DA6C8E]]
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettings:sortColumn kind" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettings:columns:4:ascending true" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ListViewSettings:sortColumn kind" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ListViewSettings:columns:kind:ascending true" ~/Library/Preferences/com.apple.finder.plist
-# C3E4AFE6-5FB1-4432-B53C-933D83B3BA48 ends here
+# org_gcr_2017-05-12_mara_3A24B6A5-AA20-4377-9D5A-5544B7DA6C8E ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::AF8A02A4-CFFC-4740-A6E9-3341F912906A][AF8A02A4-CFFC-4740-A6E9-3341F912906A]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_67D184D1-B9CC-4020-8E2C-DB4A308723D1][org_gcr_2017-05-12_mara_67D184D1-B9CC-4020-8E2C-DB4A308723D1]]
 defaults write com.apple.finder DisableAllAnimations -bool true
-# AF8A02A4-CFFC-4740-A6E9-3341F912906A ends here
+# org_gcr_2017-05-12_mara_67D184D1-B9CC-4020-8E2C-DB4A308723D1 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::5F9ED39D-B319-46AE-B64F-F8CCE66C14CB][5F9ED39D-B319-46AE-B64F-F8CCE66C14CB]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_1F11E130-3D0F-4351-ADF1-A96F891B5055][org_gcr_2017-05-12_mara_1F11E130-3D0F-4351-ADF1-A96F891B5055]]
 defaults write com.apple.finder CreateDesktop -bool false
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
-# 5F9ED39D-B319-46AE-B64F-F8CCE66C14CB ends here
+# org_gcr_2017-05-12_mara_1F11E130-3D0F-4351-ADF1-A96F891B5055 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::A73210E6-B619-4523-BD19-A5F8951E8495][A73210E6-B619-4523-BD19-A5F8951E8495]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_058DEDDA-6F7B-4EC1-80EC-EDC032D321A8][org_gcr_2017-05-12_mara_058DEDDA-6F7B-4EC1-80EC-EDC032D321A8]]
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
-# A73210E6-B619-4523-BD19-A5F8951E8495 ends here
+# org_gcr_2017-05-12_mara_058DEDDA-6F7B-4EC1-80EC-EDC032D321A8 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::E99413DF-0D11-4824-873D-3514F9333D6E][E99413DF-0D11-4824-873D-3514F9333D6E]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_C7F807FE-086C-4DAD-874B-663354851470][org_gcr_2017-05-12_mara_C7F807FE-086C-4DAD-874B-663354851470]]
 defaults write com.apple.screencapture disable-shadow -bool true
-# E99413DF-0D11-4824-873D-3514F9333D6E ends here
+# org_gcr_2017-05-12_mara_C7F807FE-086C-4DAD-874B-663354851470 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::EE876749-BDB9-466F-A0FC-567EBBF9C5C2][EE876749-BDB9-466F-A0FC-567EBBF9C5C2]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_F453C1D8-DAD0-4EFC-B03C-5D502014F323][org_gcr_2017-05-12_mara_F453C1D8-DAD0-4EFC-B03C-5D502014F323]]
 defaults write 'com.apple.screencapture' type -string png && killall SystemUIServer
-# EE876749-BDB9-466F-A0FC-567EBBF9C5C2 ends here
+# org_gcr_2017-05-12_mara_F453C1D8-DAD0-4EFC-B03C-5D502014F323 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::66472988-E3AE-44D0-9423-17E9FEA0F5F1][66472988-E3AE-44D0-9423-17E9FEA0F5F1]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_E9B0CDED-1981-4EDC-8B79-7FF6D807347C][org_gcr_2017-05-12_mara_E9B0CDED-1981-4EDC-8B79-7FF6D807347C]]
 defaults write 'NSGlobalDomain' AppleFontSmoothing -int 2
-# 66472988-E3AE-44D0-9423-17E9FEA0F5F1 ends here
+# org_gcr_2017-05-12_mara_E9B0CDED-1981-4EDC-8B79-7FF6D807347C ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::598BE517-CC5C-4D99-AD0B-41D2D906E376][598BE517-CC5C-4D99-AD0B-41D2D906E376]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_C6FCF96E-90C8-42CF-86E9-028CCF471B92][org_gcr_2017-05-12_mara_C6FCF96E-90C8-42CF-86E9-028CCF471B92]]
 mkdir -p ~/Screen\ Shots
 defaults write com.apple.screencapture location ~/Screen\ Shots
-# 598BE517-CC5C-4D99-AD0B-41D2D906E376 ends here
+# org_gcr_2017-05-12_mara_C6FCF96E-90C8-42CF-86E9-028CCF471B92 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::446CE2EF-BCBE-4D83-9ACC-2A1E2F91C64B][446CE2EF-BCBE-4D83-9ACC-2A1E2F91C64B]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_671B115A-3FB5-4A61-8922-DD7156A4CCDE][org_gcr_2017-05-12_mara_671B115A-3FB5-4A61-8922-DD7156A4CCDE]]
 defaults write com.apple.dock wvous-tl-corner -int 4
 defaults write com.apple.dock wvous-tl-modifier -int 0
-# 446CE2EF-BCBE-4D83-9ACC-2A1E2F91C64B ends here
+# org_gcr_2017-05-12_mara_671B115A-3FB5-4A61-8922-DD7156A4CCDE ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::FF4E8A69-A137-4E50-A4E4-59DA58A082B5][FF4E8A69-A137-4E50-A4E4-59DA58A082B5]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_FD4B1467-B0D2-4997-9D2B-510F009E13FA][org_gcr_2017-05-12_mara_FD4B1467-B0D2-4997-9D2B-510F009E13FA]]
 write defaults com.apple.dock wvous-tr-corner -int 2
 defaults write com.apple.dock wvous-tr-modifier -int 0
-# FF4E8A69-A137-4E50-A4E4-59DA58A082B5 ends here
+# org_gcr_2017-05-12_mara_FD4B1467-B0D2-4997-9D2B-510F009E13FA ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::7C9DE1C5-BBF8-4D40-8FAC-E78D5B85231E][7C9DE1C5-BBF8-4D40-8FAC-E78D5B85231E]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_DE90A065-7C16-41F3-A0DA-A2113F19FB24][org_gcr_2017-05-12_mara_DE90A065-7C16-41F3-A0DA-A2113F19FB24]]
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
-# 7C9DE1C5-BBF8-4D40-8FAC-E78D5B85231E ends here
+# org_gcr_2017-05-12_mara_DE90A065-7C16-41F3-A0DA-A2113F19FB24 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::6A561511-8354-408E-8805-201BAAE80A04][6A561511-8354-408E-8805-201BAAE80A04]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_890E6CB7-695F-4A71-83B4-9F54632E6338][org_gcr_2017-05-12_mara_890E6CB7-695F-4A71-83B4-9F54632E6338]]
 defaults write com.apple.dock wvous-br-corner -int 0
 defaults write com.apple.dock wvous-br-modifier -int 0
-# 6A561511-8354-408E-8805-201BAAE80A04 ends here
+# org_gcr_2017-05-12_mara_890E6CB7-695F-4A71-83B4-9F54632E6338 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::77191228-16CC-4B95-A030-A5C2DF90CD50][77191228-16CC-4B95-A030-A5C2DF90CD50]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CDD537A4-A928-4084-BC7A-22EE8DA50D23][org_gcr_2017-05-12_mara_CDD537A4-A928-4084-BC7A-22EE8DA50D23]]
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 # Set edge-dragging delay to 0.7
 defaults write com.apple.dock workspaces-edge-delay -float 1.0
-# 77191228-16CC-4B95-A030-A5C2DF90CD50 ends here
+# org_gcr_2017-05-12_mara_CDD537A4-A928-4084-BC7A-22EE8DA50D23 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::9B804905-E9D0-43BE-8106-DC53009C58C4][9B804905-E9D0-43BE-8106-DC53009C58C4]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_056BF575-EB40-428F-92FF-DA8A4164A45B][org_gcr_2017-05-12_mara_056BF575-EB40-428F-92FF-DA8A4164A45B]]
 defaults write 'NSGlobalDomain' com.apple.mouse.scaling -float 2
-# 9B804905-E9D0-43BE-8106-DC53009C58C4 ends here
+# org_gcr_2017-05-12_mara_056BF575-EB40-428F-92FF-DA8A4164A45B ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::9AF4BB62-76D4-4943-88FC-704A7BA492AC][9AF4BB62-76D4-4943-88FC-704A7BA492AC]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_B61838B5-13A9-4714-8702-C4BFDA5CE680][org_gcr_2017-05-12_mara_B61838B5-13A9-4714-8702-C4BFDA5CE680]]
 defaults write com.apple.terminal StringEncodings -array 4
-# 9AF4BB62-76D4-4943-88FC-704A7BA492AC ends here
+# org_gcr_2017-05-12_mara_B61838B5-13A9-4714-8702-C4BFDA5CE680 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::BC6F1328-5EA2-4B1D-AC72-654D829BDB31][BC6F1328-5EA2-4B1D-AC72-654D829BDB31]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_0177C8D4-4113-4149-97DF-D83AEA5B65B6][org_gcr_2017-05-12_mara_0177C8D4-4113-4149-97DF-D83AEA5B65B6]]
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
-# BC6F1328-5EA2-4B1D-AC72-654D829BDB31 ends here
+# org_gcr_2017-05-12_mara_0177C8D4-4113-4149-97DF-D83AEA5B65B6 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::81FD865B-E76D-4873-8C12-42C6194AB300][81FD865B-E76D-4873-8C12-42C6194AB300]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_E7775BEC-2D26-4D19-A8C9-0BCF9AA22230][org_gcr_2017-05-12_mara_E7775BEC-2D26-4D19-A8C9-0BCF9AA22230]]
 defaults write com.apple.ActivityMonitor IconType -int 5
-# 81FD865B-E76D-4873-8C12-42C6194AB300 ends here
+# org_gcr_2017-05-12_mara_E7775BEC-2D26-4D19-A8C9-0BCF9AA22230 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::F02FC4BB-0B04-4B8A-965C-71B181139FC8][F02FC4BB-0B04-4B8A-965C-71B181139FC8]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_5C9A0DEA-DBD3-46BA-A85C-A17CDC79826D][org_gcr_2017-05-12_mara_5C9A0DEA-DBD3-46BA-A85C-A17CDC79826D]]
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
-# F02FC4BB-0B04-4B8A-965C-71B181139FC8 ends here
+# org_gcr_2017-05-12_mara_5C9A0DEA-DBD3-46BA-A85C-A17CDC79826D ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::C2C6F54C-D4B7-4CBE-AF80-E45CE40C9A54][C2C6F54C-D4B7-4CBE-AF80-E45CE40C9A54]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_51F2F5A5-7037-4458-8468-AD019892EBE9][org_gcr_2017-05-12_mara_51F2F5A5-7037-4458-8468-AD019892EBE9]]
 defaults write com.apple.ActivityMonitor SortDirection -int 0
-# C2C6F54C-D4B7-4CBE-AF80-E45CE40C9A54 ends here
+# org_gcr_2017-05-12_mara_51F2F5A5-7037-4458-8468-AD019892EBE9 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:55999A59-D51C-48A3-A459-30E0951FB3E6][orgmode:gcr:vela:55999A59-D51C-48A3-A459-30E0951FB3E6]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_4C582518-39DC-4D1A-BB0C-5499B4CA78D3][org_gcr_2017-05-12_mara_4C582518-39DC-4D1A-BB0C-5499B4CA78D3]]
 echo "Script complete"
 echo "Log out then back in to see changes "
-# orgmode:gcr:vela:55999A59-D51C-48A3-A459-30E0951FB3E6 ends here
+# org_gcr_2017-05-12_mara_4C582518-39DC-4D1A-BB0C-5499B4CA78D3 ends here

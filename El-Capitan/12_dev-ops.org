@@ -1,4 +1,4 @@
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::089A38CA-43AD-4BE4-8EF4-C77E57CF25F3][089A38CA-43AD-4BE4-8EF4-C77E57CF25F3]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_F8442214-41F6-4F42-9B5C-B4BBDF9A840A][org_gcr_2017-05-12_mara_F8442214-41F6-4F42-9B5C-B4BBDF9A840A]]
 * Carbon Copy Cloner
 
 *Only install on hosts*
@@ -50,7 +50,6 @@ rm -rf ~/.vagrant
 
 Verify the plugin is licensed and happy:
 
-#+NAME: CCCFA8CD-1754-4BD6-A355-7907E885B6C4
 #+BEGIN_SRC sh
 vagrant plugin list
 #+END_SRC
@@ -82,4 +81,4 @@ vagrant up
 * iPartition
 
 - License it
-# 089A38CA-43AD-4BE4-8EF4-C77E57CF25F3 ends here
+# org_gcr_2017-05-12_mara_F8442214-41F6-4F42-9B5C-B4BBDF9A840A ends here

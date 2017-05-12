@@ -1,4 +1,4 @@
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::465FEE16-2EC6-475F-B2C4-C68E9E10E45F][465FEE16-2EC6-475F-B2C4-C68E9E10E45F]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CC86395C-8487-451E-AC32-A3C6ABE812B7][org_gcr_2017-05-12_mara_CC86395C-8487-451E-AC32-A3C6ABE812B7]]
 * Marked 2
 
 - License it
@@ -22,4 +22,4 @@
     - Default style: GitHub
   - Proofing
     - YES Highlight Markdown syntax errors
-# 465FEE16-2EC6-475F-B2C4-C68E9E10E45F ends here
+# org_gcr_2017-05-12_mara_CC86395C-8487-451E-AC32-A3C6ABE812B7 ends here

@@ -1,21 +1,21 @@
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::orgmode:gcr:vela:5696A7AC-7227-49AA-9DDB-902BC6722018][orgmode:gcr:vela:5696A7AC-7227-49AA-9DDB-902BC6722018]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_3DA5AD9E-E1DD-4B4D-9CC3-A2894A312E13][org_gcr_2017-05-12_mara_3DA5AD9E-E1DD-4B4D-9CC3-A2894A312E13]]
 #+BEGIN_SRC sh
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install carbon-copy-cloner
 else
     echo "carbon-copy-cloner: Only install on hosts"
 fi
-# orgmode:gcr:vela:5696A7AC-7227-49AA-9DDB-902BC6722018 ends here
+# org_gcr_2017-05-12_mara_3DA5AD9E-E1DD-4B4D-9CC3-A2894A312E13 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::2B059288-F12E-48E1-939F-1138117FDE4B][2B059288-F12E-48E1-939F-1138117FDE4B]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_0E88C363-DC01-4894-AD2A-B826AEE96847][org_gcr_2017-05-12_mara_0E88C363-DC01-4894-AD2A-B826AEE96847]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vmware-fusion
 else
     echo "vmware-fusion: Only install on hosts"
 fi
-# 2B059288-F12E-48E1-939F-1138117FDE4B ends here
+# org_gcr_2017-05-12_mara_0E88C363-DC01-4894-AD2A-B826AEE96847 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::0B6E9298-89D3-40D5-83F1-9F2DC21590E8][0B6E9298-89D3-40D5-83F1-9F2DC21590E8]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_FBFF1A68-5361-46F9-8B29-F566DE748DD0][org_gcr_2017-05-12_mara_FBFF1A68-5361-46F9-8B29-F566DE748DD0]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install virtualbox
     brew cask install virtualbox-extension-pack
@@ -23,24 +23,24 @@ if [ ! -d "/Library/Application Support/VMware Tools" ]; then
 else
     echo "virtualbox: Only install on hosts"
 fi
-# 0B6E9298-89D3-40D5-83F1-9F2DC21590E8 ends here
+# org_gcr_2017-05-12_mara_FBFF1A68-5361-46F9-8B29-F566DE748DD0 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::165A046E-FFC9-4431-8150-CF9F4890EA24][165A046E-FFC9-4431-8150-CF9F4890EA24]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_C9473DCC-226B-4291-86E7-5707B3F034AB][org_gcr_2017-05-12_mara_C9473DCC-226B-4291-86E7-5707B3F034AB]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vagrant
 else
     echo "vagrant: Only install on hosts"
 fi
-# 165A046E-FFC9-4431-8150-CF9F4890EA24 ends here
+# org_gcr_2017-05-12_mara_C9473DCC-226B-4291-86E7-5707B3F034AB ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::5C1B39F1-FC9C-4992-B891-D6208168D5F1][5C1B39F1-FC9C-4992-B891-D6208168D5F1]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_945C5784-810A-4C4B-90E6-FADC7453E54A][org_gcr_2017-05-12_mara_945C5784-810A-4C4B-90E6-FADC7453E54A]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install packer
 else
     echo "packer: Only install on hosts"
 fi
-# 5C1B39F1-FC9C-4992-B891-D6208168D5F1 ends here
+# org_gcr_2017-05-12_mara_945C5784-810A-4C4B-90E6-FADC7453E54A ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::D7F9F051-BE46-4E38-BE35-6E8CE4B5D727][D7F9F051-BE46-4E38-BE35-6E8CE4B5D727]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_411A8284-5DDC-45B4-A0D1-37EE4B6F6CC5][org_gcr_2017-05-12_mara_411A8284-5DDC-45B4-A0D1-37EE4B6F6CC5]]
 brew cask install ipartition
-# D7F9F051-BE46-4E38-BE35-6E8CE4B5D727 ends here
+# org_gcr_2017-05-12_mara_411A8284-5DDC-45B4-A0D1-37EE4B6F6CC5 ends here

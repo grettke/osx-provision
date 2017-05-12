@@ -1,4 +1,4 @@
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::C85D0036-9DDA-4786-9621-470FB418BBD6][C85D0036-9DDA-4786-9621-470FB418BBD6]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_DA1B734B-8994-4465-AA58-08E2EF337770][org_gcr_2017-05-12_mara_DA1B734B-8994-4465-AA58-08E2EF337770]]
 git config --global user.name "Grant Rettke"
 git config --global user.email gcr@wisdomandwonder.com
 git config --global color.ui true
@@ -13,9 +13,9 @@ git config --global difftool.prompt false
 git config --global merge.tool deltawalker
 git config --global mergetool.deltawalker.cmd '/Applications/DeltaWalker.app/Contents/Resources/git-merge/git-merge $LOCAL $REMOTE $BASE $MERGED'
 git config --global mergetool.keepBackup false
-# C85D0036-9DDA-4786-9621-470FB418BBD6 ends here
+# org_gcr_2017-05-12_mara_DA1B734B-8994-4465-AA58-08E2EF337770 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::5BD1669B-8E2A-46B5-AB80-88DA5764DEEB][5BD1669B-8E2A-46B5-AB80-88DA5764DEEB]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CF6E9DCD-5A6E-4335-93CF-2E03937C9C28][org_gcr_2017-05-12_mara_CF6E9DCD-5A6E-4335-93CF-2E03937C9C28]]
 rm -rf ~/git/bitbucket
 rm -rf ~/git/github
 rm -rf ~/src/help
@@ -40,9 +40,9 @@ git clone github-`whoami`:grettke/recursive-git-status-bash.git
 git clone github-`whoami`:akatov/pretty-mode.git
 cd ~/git/github-anonymous
 git clone https://github.com/altercation/solarized.git
-# 5BD1669B-8E2A-46B5-AB80-88DA5764DEEB ends here
+# org_gcr_2017-05-12_mara_CF6E9DCD-5A6E-4335-93CF-2E03937C9C28 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::F407E69A-6C92-4254-A0E3-A442166AD57B][F407E69A-6C92-4254-A0E3-A442166AD57B]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_300013CB-D6E2-414E-9FBF-68D4581D971C][org_gcr_2017-05-12_mara_300013CB-D6E2-414E-9FBF-68D4581D971C]]
 cd ~/git/github-anonymous
 rm -rf ~/src
 mkdir ~/src
@@ -53,4 +53,4 @@ ln -s ~/src/help/.emacs.el ~/.emacs.el
 rm -rf ~/.emacs.d
 mkdir ~/.emacs.d
 ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
-# F407E69A-6C92-4254-A0E3-A442166AD57B ends here
+# org_gcr_2017-05-12_mara_300013CB-D6E2-414E-9FBF-68D4581D971C ends here

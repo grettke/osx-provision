@@ -1,4 +1,4 @@
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::0E466E47-8ED3-4462-8939-2318ED91AD64][0E466E47-8ED3-4462-8939-2318ED91AD64]]
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_C5A1C22E-5F4A-44B8-AC33-B5A8C2F94617][org_gcr_2017-05-12_mara_C5A1C22E-5F4A-44B8-AC33-B5A8C2F94617]]
 - [ ] Get Emacs running
 - [ ] Re-tangle everything step by step
   - [ ] ECM
@@ -48,4 +48,4 @@
     - Images are links, not images
   - [ ] pdf
   - [ ] txt
-# 0E466E47-8ED3-4462-8939-2318ED91AD64 ends here
+# org_gcr_2017-05-12_mara_C5A1C22E-5F4A-44B8-AC33-B5A8C2F94617 ends here
