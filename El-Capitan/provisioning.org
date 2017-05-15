@@ -3860,6 +3860,7 @@ ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 #+BEGIN_SRC sh
 rm -rf ~/src/org-mode
 rm -rf ~/src/org2blog
+rm -rf ~/src/pretty-mode
 rm -rf ~/src/use-package
 cd ~/src
 echo `date +%Y-%m-%dT%H:%M:%S%z`
@@ -3869,6 +3870,7 @@ cd org-mode
 make autoloads
 cd ~/src
 git clone github-gcr:grettke/org2blog.git
+git clone github-gcr:grettke/pretty-mode.git
 git clone https://github.com/jwiegley/use-package.git
 #+END_SRC
 
