@@ -78,6 +78,10 @@ brew install lame
 brew install ffmpeg
 # org_gcr_2017-05-12_mara_408DC731-7C7E-4C41-99D3-9C559DCBE6B4 ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-16_mara_7DD2E7E1-12B9-41B7-BAFD-A4EEAFBD654F][org_gcr_2017-05-16_mara_7DD2E7E1-12B9-41B7-BAFD-A4EEAFBD654F]]
+brew install qpdf
+# org_gcr_2017-05-16_mara_7DD2E7E1-12B9-41B7-BAFD-A4EEAFBD654F ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E][org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E]]
 echo "Script is done"
 # org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E ends here

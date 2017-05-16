@@ -2180,6 +2180,14 @@ brew install lame
 #+BEGIN_SRC sh
 brew install ffmpeg
 #+END_SRC
+***** qpdf
+:PROPERTIES:
+:ID:       org_gcr_2017-05-16_mara:3A2A97E8-3168-4D18-A6EA-6DF4CF075791
+:END:
+#+NAME: org_gcr_2017-05-16_mara_7DD2E7E1-12B9-41B7-BAFD-A4EEAFBD654F
+#+BEGIN_SRC sh
+brew install qpdf
+#+END_SRC
 ***** Completion
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:5E5BCE6B-D095-4CA0-9CC3-9A5F13EF104B
