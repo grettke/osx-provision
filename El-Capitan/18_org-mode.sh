@@ -10,7 +10,7 @@ echo `date +%Y-%m-%dT%H:%M:%S%z`
 cd org-mode
 make autoloads
 cd ~/src
-git clone github-gcr:grettke/org2blog.git
+git clone github-gcr:punchagan/org2blog.git
 git clone github-gcr:grettke/pretty-mode.git
 git clone https://github.com/jwiegley/use-package.git
 # org_gcr_2017-05-12_mara_9ED0592E-A409-4049-BD98-DD5151723C1A ends here
