@@ -3525,21 +3525,6 @@ Server properties:
   - #bash
   - #apl
 #+END_SRC
-***** Growl
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:A59ABF24-77F0-47B0-9439-776D62A472A2
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_5B156D72-4EF7-46BC-A3AF-F7B4049A9271
-#+BEGIN_SRC org
-,* Growl
-
-- Install via the app store
-- Start it
-- Enable run on login
-- Theme: Music Video
-  - Easy to notice
-#+END_SRC
 ***** Microsoft Remote Desktop
     :PROPERTIES:
     :ID:       org_gcr_2017-05-12_mara:71D3C2E0-B185-4166-8D96-C9FABD67D43A

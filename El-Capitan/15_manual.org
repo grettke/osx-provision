@@ -162,16 +162,6 @@ Server properties:
   - #apl
 # org_gcr_2017-05-12_mara_AF9EA775-3EAC-45CE-BE38-2C2B0B0C2618 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_5B156D72-4EF7-46BC-A3AF-F7B4049A9271][org_gcr_2017-05-12_mara_5B156D72-4EF7-46BC-A3AF-F7B4049A9271]]
-* Growl
-
-- Install via the app store
-- Start it
-- Enable run on login
-- Theme: Music Video
-  - Easy to notice
-# org_gcr_2017-05-12_mara_5B156D72-4EF7-46BC-A3AF-F7B4049A9271 ends here
-
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_2341C9FA-93E8-4E03-BEE3-A0A1D616F474][org_gcr_2017-05-12_mara_2341C9FA-93E8-4E03-BEE3-A0A1D616F474]]
 * Microsoft Remote Desktop
 
