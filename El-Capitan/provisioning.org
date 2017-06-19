@@ -3798,7 +3798,7 @@ Check out projects to get basic stuff working.
 #+begin_src sh
 rm -rf ~/git/bitbucket
 rm -rf ~/git/github
-rm -rf ~/src/help
+rm -rf ~/git/gitlab
 mkdir -p ~/git/bitbucket
 mkdir -p ~/git/github
 cd ~/git/bitbucket
