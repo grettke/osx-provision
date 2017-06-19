@@ -3711,7 +3711,7 @@ chmod 600 ~/.ssh/$SSHFILE.pub
 ssh-add -K ~/.ssh/$SSHFILE
 #+end_src
 
-Add they key to Bitbucket and Github.
+Add they key to Bitbucket and GitHub.
 
 #+NAME: org_gcr_2017-05-12_mara_DCEFE0DD-F891-4909-AB33-C8BC4A4B6D68
 #+begin_src sh
