@@ -2757,14 +2757,14 @@ Install proselint.
 #+NAME: org_gcr_2017-05-12_mara_88321593-1A4B-46A2-AC58-A42C6B24F1C2
 #+BEGIN_SRC sh
 cd ~/
-rm -rf ~/util/proselint
-mkdir -p ~/util/proselint
-cd ~/util/proselint
+rm -rf ~/proselint
+mkdir -p ~/proselint
+cd ~/proselint
 vens
 veon
 pip install proselint
 veof
-cd ~/util/
+cd ~/
 #+END_SRC
 
 ***** Perl

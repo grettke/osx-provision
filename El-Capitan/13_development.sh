@@ -10,14 +10,14 @@ pip install --upgrade pip setuptools virtualenv
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_88321593-1A4B-46A2-AC58-A42C6B24F1C2][org_gcr_2017-05-12_mara_88321593-1A4B-46A2-AC58-A42C6B24F1C2]]
 cd ~/
-rm -rf ~/util/proselint
-mkdir -p ~/util/proselint
-cd ~/util/proselint
+rm -rf ~/proselint
+mkdir -p ~/proselint
+cd ~/proselint
 vens
 veon
 pip install proselint
 veof
-cd ~/util/
+cd ~/
 # org_gcr_2017-05-12_mara_88321593-1A4B-46A2-AC58-A42C6B24F1C2 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_D02A1D1B-25D6-4D30-9D81-6E1F3E59AC20][org_gcr_2017-05-12_mara_D02A1D1B-25D6-4D30-9D81-6E1F3E59AC20]]
