@@ -54,3 +54,10 @@ rm -rf ~/.emacs.d
 mkdir ~/.emacs.d
 ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 # org_gcr_2017-05-12_mara_300013CB-D6E2-414E-9FBF-68D4581D971C ends here
+
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-06-18_mara_4833AB48-1C15-4E4E-A767-F2711FFDAAE5][org_gcr_2017-06-18_mara_4833AB48-1C15-4E4E-A767-F2711FFDAAE5]]
+cd ~/
+rm -rf ~/util
+git clone gitlab-`whoami`:grettke/util.git
+cd ~/
+# org_gcr_2017-06-18_mara_4833AB48-1C15-4E4E-A767-F2711FFDAAE5 ends here

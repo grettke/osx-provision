@@ -28,6 +28,7 @@
     - For =host1= that means =host1= and =Storage=
     - Write a shell script and run it at logon
       - Customize this for the install partition
+      - These scripts live in my personal =util= directory
         #+BEGIN_SRC sh
   #!/usr/bin/env bash
 # -*- mode: sh; -*-
