@@ -3711,13 +3711,14 @@ chmod 600 ~/.ssh/$SSHFILE.pub
 ssh-add -K ~/.ssh/$SSHFILE
 #+end_src
 
-Add they key to Bitbucket and GitHub.
+Add they key to Bitbucket and GitHub and GitLab.
 
 #+NAME: org_gcr_2017-05-12_mara_DCEFE0DD-F891-4909-AB33-C8BC4A4B6D68
 #+begin_src sh
 echo "Name your Git site key: $SSHFILE"
 cat ~/.ssh/$SSHFILE.pub | pbcopy
-read -p "The new key is in your clipboard. Go and add this key to BitBucket, GitLab and GitHub. When you are finished, hit [enter] to continue."
+read -p
+"The new key is in your clipboard. Go and add this key to BitBucket, GitHub and GitLab. When you are finished, hit [enter] to continue."
 #+end_src
 
 Set up ~/.ssh/config.
