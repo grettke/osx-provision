@@ -67,7 +67,8 @@ ssh-add -K ~/.ssh/$SSHFILE
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_DCEFE0DD-F891-4909-AB33-C8BC4A4B6D68][org_gcr_2017-05-12_mara_DCEFE0DD-F891-4909-AB33-C8BC4A4B6D68]]
 echo "Name your Git site key: $SSHFILE"
 cat ~/.ssh/$SSHFILE.pub | pbcopy
-read -p "The new key is in your clipboard. Go and add this key to BitBucket, GitLab and GitHub. When you are finished, hit [enter] to continue."
+read -p
+"The new key is in your clipboard. Go and add this key to BitBucket, GitHub and GitLab. When you are finished, hit [enter] to continue."
 # org_gcr_2017-05-12_mara_DCEFE0DD-F891-4909-AB33-C8BC4A4B6D68 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_D7361B03-DEA4-40C7-A44A-CCE122078DF6][org_gcr_2017-05-12_mara_D7361B03-DEA4-40C7-A44A-CCE122078DF6]]

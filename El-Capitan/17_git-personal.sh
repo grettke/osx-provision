@@ -18,9 +18,12 @@ git config --global mergetool.keepBackup false
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CF6E9DCD-5A6E-4335-93CF-2E03937C9C28][org_gcr_2017-05-12_mara_CF6E9DCD-5A6E-4335-93CF-2E03937C9C28]]
 rm -rf ~/git/bitbucket
 rm -rf ~/git/github
-rm -rf ~/src/help
+rm -rf ~/git/gitlab
+
 mkdir -p ~/git/bitbucket
 mkdir -p ~/git/github
+mkdir -p ~/git/gitlab
+
 cd ~/git/bitbucket
 git clone bitbucket-`whoami`:grettke/list.git
 git clone bitbucket-`whoami`:grettke/resume.git
@@ -32,12 +35,14 @@ git clone bitbucket-`whoami`:grettke/wnw.git
 git clone bitbucket-`whoami`:grettke/texmf.git
 git clone bitbucket-`whoami`:grettke/hardware
 git clone bitbucket-`whoami`:grettke/hamradio
+
 cd ~/git/github
 git clone github-`whoami`:grettke/osx-provision.git
 git clone github-`whoami`:grettke/bash.git
 git clone github-`whoami`:grettke/wisdomandwonder.git
 git clone github-`whoami`:grettke/recursive-git-status-bash.git
 git clone github-`whoami`:akatov/pretty-mode.git
+
 cd ~/git/github-anonymous
 git clone https://github.com/altercation/solarized.git
 # org_gcr_2017-05-12_mara_CF6E9DCD-5A6E-4335-93CF-2E03937C9C28 ends here

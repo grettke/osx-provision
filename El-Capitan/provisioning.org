@@ -778,6 +778,7 @@ Steps are: configuration-writing-02-automated.sh
     - For =host1= that means =host1= and =Storage=
     - Write a shell script and run it at logon
       - Customize this for the install partition
+      - These scripts live in my personal =util= directory
         ,#+BEGIN_SRC sh
   #!/usr/bin/env bash
 # -*- mode: sh; -*-
@@ -3799,8 +3800,11 @@ Check out projects to get basic stuff working.
 rm -rf ~/git/bitbucket
 rm -rf ~/git/github
 rm -rf ~/git/gitlab
+
 mkdir -p ~/git/bitbucket
 mkdir -p ~/git/github
+mkdir -p ~/git/gitlab
+
 cd ~/git/bitbucket
 git clone bitbucket-`whoami`:grettke/list.git
 git clone bitbucket-`whoami`:grettke/resume.git
@@ -3812,12 +3816,14 @@ git clone bitbucket-`whoami`:grettke/wnw.git
 git clone bitbucket-`whoami`:grettke/texmf.git
 git clone bitbucket-`whoami`:grettke/hardware
 git clone bitbucket-`whoami`:grettke/hamradio
+
 cd ~/git/github
 git clone github-`whoami`:grettke/osx-provision.git
 git clone github-`whoami`:grettke/bash.git
 git clone github-`whoami`:grettke/wisdomandwonder.git
 git clone github-`whoami`:grettke/recursive-git-status-bash.git
 git clone github-`whoami`:akatov/pretty-mode.git
+
 cd ~/git/github-anonymous
 git clone https://github.com/altercation/solarized.git
 #+end_src
