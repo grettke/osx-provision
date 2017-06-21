@@ -818,9 +818,10 @@ diskutil unmount /dev/disk0s8
         - Don't slightly dim the display on battery power
     - *(Guest)*
       - Computer sleep: never
-  - Keyboard *(Host)* \rarr Modifiers
-    - Caps Lock \rarr Control
-    - Control \rarr Caps Lock
+  - Keyboard *(Host)*
+    - Modifiers Keys
+      - Caps Lock \rarr Control
+      - Control \rarr Caps Lock
   - Mouse
     - *(Host)* Connect Bluetooth mouse
     - Tracking Speed
