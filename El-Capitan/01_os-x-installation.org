@@ -1,7 +1,7 @@
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_60B53D12-60D7-40ED-81AC-27902FE027FA][org_gcr_2017-05-12_mara_60B53D12-60D7-40ED-81AC-27902FE027FA]]
 - Action Prefix for Boxes:
-  - Host :: "On the Metal"
-  - Guest :: "Virtualized"
+- Host :: "On the Metal"
+- Guest :: "Virtualized"
 - Re-image your box
 - During system configuration /before/ creating a user YES log into the App Store
 - Make a user named ~gcr~ and choose an avatar
@@ -68,9 +68,28 @@ diskutil unmount /dev/disk0s8
         - Don't slightly dim the display on battery power
     - *(Guest)*
       - Computer sleep: never
-  - Keyboard *(Host)* \rarr Modifiers
-    - Caps Lock \rarr Control
-    - Control \rarr Caps Lock
+  - Keyboard *(Host)*
+    - Modifiers Keys
+      - Caps Lock \rarr Control
+      - Control \rarr Caps Lock
+    - Shortcuts
+      - Launchpad & Dock
+        - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.
+      - Mission Control
+        - Mission Control: Disable
+        - Application windows: Disable
+        - Mission Control: Disable
+        - Show Desktop: Disable
+        - Show Dashboard: Disable it. I never use it.
+      - Keyboard
+        - Doesn't matter because F keys are F keys first
+      - Screen Shots
+        - Change each one to a prefix of M-s then M-s-S
+          - 3 and 4
+      - Services
+        - Disable anything with control keybindings
+      - Accessibility
+        - Disable everything
   - Mouse
     - *(Host)* Connect Bluetooth mouse
     - Tracking Speed
