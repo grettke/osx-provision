@@ -750,8 +750,8 @@ Steps are: configuration-writing-02-automated.sh
 #+NAME: org_gcr_2017-05-12_mara_60B53D12-60D7-40ED-81AC-27902FE027FA
 #+BEGIN_SRC org
 - Action Prefix for Boxes:
-  - Host :: "On the Metal"
-  - Guest :: "Virtualized"
+- Host :: "On the Metal"
+- Guest :: "Virtualized"
 - Re-image your box
 - During system configuration /before/ creating a user YES log into the App Store
 - Make a user named ~gcr~ and choose an avatar
@@ -826,19 +826,16 @@ diskutil unmount /dev/disk0s8
       - Launchpad & Dock
         - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.
       - Mission Control
-        - Mission Control: C-M-s-<up arrow>
-        - Application windows: C-M-s-<down arrow>
-        - Mission Control, Move left a space: C-M-s-<left arrow>
-        - Mission Control, Move right a space: C-M-s-<right arrow>
-        - Show Desktop: It is a hot-corner so disable it.
+        - Mission Control: Disable
+        - Application windows: Disable
+        - Mission Control: Disable
+        - Show Desktop: Disable
         - Show Dashboard: Disable it. I never use it.
-        - Switch to desktop 1-3
-          - Change each one to a prefix of C-M-s then C-M-S-s
       - Keyboard
         - Doesn't matter because F keys are F keys first
       - Screen Shots
-        - Change each one to a prefix of C-M-s then C-M-S-s
-          - 4 and 5
+        - Change each one to a prefix of M-s then M-s-S
+          - 3 and 4
       - Services
         - Disable anything with control keybindings
       - Accessibility
@@ -921,7 +918,7 @@ diskutil unmount /dev/disk0s8
         - <Home>
       - Devices
         - <Computer>
-#+END_SRC
+        #+END_SRC
 
 **** Configuration
 :PROPERTIES:
