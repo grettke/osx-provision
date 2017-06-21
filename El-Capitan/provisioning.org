@@ -822,6 +822,22 @@ diskutil unmount /dev/disk0s8
     - Modifiers Keys
       - Caps Lock \rarr Control
       - Control \rarr Caps Lock
+    - Shortcuts
+      - Launchpad & Dock
+        - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.
+      - Mission Control
+        - Mission Control: C-M-s-<up arrow>
+        - Application windows: C-M-s-<down arrow>
+        - Mission Control, Move left a space: C-M-s-<left arrow>
+        - Mission Control, Move right a space: C-M-s-<right arrow>
+        - Show Desktop: It is a hot-corner so disable it.
+        - Show Dashboard: Disable it. I never use it.
+      - Keyboard
+        - Doesn't matter because F keys are F keys first
+      - Screen Shots
+        - Change each one to a prefix of C-M-s
+      - Accessibility
+        - Disable everything
   - Mouse
     - *(Host)* Connect Bluetooth mouse
     - Tracking Speed
