@@ -68,9 +68,31 @@ diskutil unmount /dev/disk0s8
         - Don't slightly dim the display on battery power
     - *(Guest)*
       - Computer sleep: never
-  - Keyboard *(Host)* \rarr Modifiers
-    - Caps Lock \rarr Control
-    - Control \rarr Caps Lock
+  - Keyboard *(Host)*
+    - Modifiers Keys
+      - Caps Lock \rarr Control
+      - Control \rarr Caps Lock
+    - Shortcuts
+      - Launchpad & Dock
+        - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.
+      - Mission Control
+        - Mission Control: C-M-s-<up arrow>
+        - Application windows: C-M-s-<down arrow>
+        - Mission Control, Move left a space: C-M-s-<left arrow>
+        - Mission Control, Move right a space: C-M-s-<right arrow>
+        - Show Desktop: It is a hot-corner so disable it.
+        - Show Dashboard: Disable it. I never use it.
+        - Switch to desktop 1-3
+          - Change each one to a prefix of C-M-s then C-M-S-s
+      - Keyboard
+        - Doesn't matter because F keys are F keys first
+      - Screen Shots
+        - Change each one to a prefix of C-M-s then C-M-S-s
+          - 4 and 5
+      - Services
+        - Disable anything with control keybindings
+      - Accessibility
+        - Disable everything
   - Mouse
     - *(Host)* Connect Bluetooth mouse
     - Tracking Speed
