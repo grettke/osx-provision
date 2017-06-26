@@ -3900,7 +3900,7 @@ echo `date +%Y-%m-%dT%H:%M:%S%z`
 cd org-mode
 make autoloads
 cd ~/src
-git clone github-gcr:punchagan/metaweblog.git
+git clone github-gcr:org2blog/metaweblog.git
 git clone github-gcr:punchagan/org2blog.git
 git clone github-gcr:grettke/pretty-mode.git
 git clone https://github.com/jwiegley/use-package.git
