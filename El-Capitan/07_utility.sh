@@ -82,6 +82,10 @@ brew install ffmpeg
 brew install qpdf
 # org_gcr_2017-05-16_mara_7DD2E7E1-12B9-41B7-BAFD-A4EEAFBD654F ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-06-28_mara_8AFE030D-1C5C-42DA-9435-24AF1A0D80EF][org_gcr_2017-06-28_mara_8AFE030D-1C5C-42DA-9435-24AF1A0D80EF]]
+brew cask install xnviewmp
+# org_gcr_2017-06-28_mara_8AFE030D-1C5C-42DA-9435-24AF1A0D80EF ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E][org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E]]
 echo "Script is done"
 # org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E ends here

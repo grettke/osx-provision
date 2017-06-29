@@ -2208,6 +2208,14 @@ brew install ffmpeg
 #+BEGIN_SRC sh
 brew install qpdf
 #+END_SRC
+***** XnView MP
+:PROPERTIES:
+:ID:       org_gcr_2017-06-28_mara:A8D06806-D574-40A3-879C-01FC2D78125D
+:END:
+#+NAME: org_gcr_2017-06-28_mara_8AFE030D-1C5C-42DA-9435-24AF1A0D80EF
+#+BEGIN_SRC sh
+brew cask install xnviewmp
+#+END_SRC
 ***** Completion
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:5E5BCE6B-D095-4CA0-9CC3-9A5F13EF104B
