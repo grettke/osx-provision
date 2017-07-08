@@ -2847,7 +2847,7 @@ brew install gforth
 :ID:       org_gcr_2017-05-12_mara:7A1E0081-C9F2-40BF-A1C1-C64E8B7313EC
 :END:
 
-=Brew installs =NPM= by defailt with =Node=.
+=Brew installs =NPM= by default with =Node=.
 
 #+NAME: org_gcr_2017-05-12_mara_F2DCC726-8AFD-490F-92D6-61EAD46119F9
 #+BEGIN_SRC sh
