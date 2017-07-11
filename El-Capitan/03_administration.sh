@@ -45,12 +45,15 @@ brew tap caskroom/fonts
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_57293DFD-7465-4AE6-9FCB-AF240AFEA14C][org_gcr_2017-05-12_mara_57293DFD-7465-4AE6-9FCB-AF240AFEA14C]]
 brew cask install font-dejavu-sans
-brew cask install font-quivira
+brew cask install font-fontawesome
+brew cask install font-icomoon
+brew cask install font-mfizz
+brew cask install font-montserrat
 brew cask install font-noto-sans
 brew cask install font-noto-sans-symbols
+brew cask install font-octicons
+brew cask install font-quivira
 brew cask install font-symbola
-brew cask install font-fontawesome
-brew cask install font-montserrat
 # org_gcr_2017-05-12_mara_57293DFD-7465-4AE6-9FCB-AF240AFEA14C ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_55BC0C54-06BC-4D75-84AA-587B1C282E80][org_gcr_2017-05-12_mara_55BC0C54-06BC-4D75-84AA-587B1C282E80]]
