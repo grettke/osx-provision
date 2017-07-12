@@ -2452,6 +2452,16 @@ brew install homebrew/gui/inkscape
 brew cask install gimp
 #+END_SRC
 
+***** librsvg
+:PROPERTIES:
+:ID:       org_gcr_2017-07-11_mara:150DACBC-B896-47ED-8CC2-3C9111C765DD
+:END:
+For ~rsvg-convert~.
+
+#+NAME: org_gcr_2017-07-11_mara_AB43CB70-381C-4C4D-AF4C-CC7C895D1848
+#+BEGIN_SRC sh
+brew install librsvg
+#+END_SRC
 ***** airy
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:EA02ED57-7DED-40F0-819A-26BE2A237C18

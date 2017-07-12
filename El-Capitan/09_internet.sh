@@ -78,6 +78,10 @@ brew install speedtest_cli
      brew cask install gimp
      # org_gcr_2017-05-12_mara_86FEB8A0-A34E-4B44-BABA-BB5CE24D8655 ends here
 
+     # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-07-11_mara_AB43CB70-381C-4C4D-AF4C-CC7C895D1848][org_gcr_2017-07-11_mara_AB43CB70-381C-4C4D-AF4C-CC7C895D1848]]
+     brew install librsvg
+     # org_gcr_2017-07-11_mara_AB43CB70-381C-4C4D-AF4C-CC7C895D1848 ends here
+
      # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_EE89A131-05A3-4521-B304-301F5B89A5CD][org_gcr_2017-05-12_mara_EE89A131-05A3-4521-B304-301F5B89A5CD]]
      brew cask install airy
      # org_gcr_2017-05-12_mara_EE89A131-05A3-4521-B304-301F5B89A5CD ends here
