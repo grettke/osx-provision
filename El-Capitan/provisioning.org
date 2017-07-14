@@ -2904,6 +2904,13 @@ brew install git-flow-avh
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:9CE47B04-32B9-4C8F-A3D8-D5E82BE06D47
 :END:
+Set up this alias:
+
+#+NAME: org_gcr_2017-07-13_mara_8D285163-3967-4ABE-81F8-5F66CB250184
+#+BEGIN_SRC sh :tangle no
+alias emacs="open /usr/local/opt/emacs-mac/Emacs.app --args $1"
+#+END_SRC
+
 #+NAME: org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5
 #+BEGIN_SRC sh
 brew tap d12frosted/emacs-plus
