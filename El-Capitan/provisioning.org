@@ -2908,8 +2908,17 @@ brew install git-flow-avh
 #+BEGIN_SRC sh
 brew tap d12frosted/emacs-plus
 brew install emacs-plus --with-natural-title-bar --without-spacemacs-icon
+brew tap railwaycat/emacsmacport
+brew install emacs-mac \
+     --with-dbus \
+     --with-gnutls \
+     --with-imagemagick \
+     --with-modules \
+     --with-natural-title-bar \
+     --with-official-icon \
+     --with-xml2
 rm $(brew --prefix)/bin/emacs
-ln -s $(brew --prefix emacs-plus)/bin/emacs $(brew --prefix)/bin/emacs
+ln -s $(brew --prefix emacs-mac)/bin/emacs $(brew --prefix)/bin/emacs
 #+END_SRC
 ****** Magit
 :PROPERTIES:
