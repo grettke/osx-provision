@@ -2839,6 +2839,14 @@ For everything beyond the built in.
 #+BEGIN_SRC sh
 brew install ruby
 #+END_SRC
+***** Chez Scheme
+:PROPERTIES:
+:ID:       org_gcr_2017-07-13_mara:CAFBD055-E6BC-4948-88E1-30003163281F
+:END:
+#+NAME: org_gcr_2017-07-13_mara_1E3E6EF0-544C-4903-A64D-322223B3309C
+#+BEGIN_SRC sh
+brew install chezscheme
+#+END_SRC
 ***** Racket
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:FF7030F4-FE70-4EC9-B3E4-078FEBA1546F

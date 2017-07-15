@@ -34,6 +34,10 @@ cpanm install Text::Unidecode
 brew install ruby
 # org_gcr_2017-05-12_mara_CB12AE91-2573-4886-85B1-56F2EA62062E ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-07-13_mara_1E3E6EF0-544C-4903-A64D-322223B3309C][org_gcr_2017-07-13_mara_1E3E6EF0-544C-4903-A64D-322223B3309C]]
+brew install chezscheme
+# org_gcr_2017-07-13_mara_1E3E6EF0-544C-4903-A64D-322223B3309C ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_45F5FEE0-3692-4AB2-B942-D6895BDF956A][org_gcr_2017-05-12_mara_45F5FEE0-3692-4AB2-B942-D6895BDF956A]]
 brew cask install racket
 # org_gcr_2017-05-12_mara_45F5FEE0-3692-4AB2-B942-D6895BDF956A ends here
