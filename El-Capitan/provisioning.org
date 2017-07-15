@@ -3890,6 +3890,7 @@ git clone github-`whoami`:akatov/pretty-mode.git
 
 cd ~/git/github-anonymous
 git clone https://github.com/altercation/solarized.git
+git clone https://github.com/encharm/Font-Awesome-SVG-PNG
 #+end_src
 
 At this point, the Bash initialization files point at the directory with my
