@@ -74,7 +74,6 @@ brew install emacs-mac \
      --with-gnutls \
      --with-imagemagick \
      --with-modules \
-     --with-natural-title-bar \
      --with-official-icon \
      --with-xml2
 rm $(brew --prefix)/bin/emacs
