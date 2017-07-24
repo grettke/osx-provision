@@ -2933,6 +2933,8 @@ brew install emacs-mac \
      --with-xml2
 rm $(brew --prefix)/bin/emacs
 ln -s $(brew --prefix emacs-mac)/bin/emacs $(brew --prefix)/bin/emacs
+rm $(brew --prefix)/bin/emacsclient
+ln -s $(brew --prefix emacs-mac)/bin/emacsclient $(brew --prefix)/bin/emacsclient
 #+END_SRC
 ****** Magit
 :PROPERTIES:
