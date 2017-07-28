@@ -86,6 +86,10 @@ brew install qpdf
 brew cask install xnviewmp
 # org_gcr_2017-06-28_mara_8AFE030D-1C5C-42DA-9435-24AF1A0D80EF ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-07-28_mara_04698A6C-1A32-4C95-AEBB-F95E848376A0][org_gcr_2017-07-28_mara_04698A6C-1A32-4C95-AEBB-F95E848376A0]]
+brew cask install libreoffice
+# org_gcr_2017-07-28_mara_04698A6C-1A32-4C95-AEBB-F95E848376A0 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E][org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E]]
 echo "Script is done"
 # org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E ends here

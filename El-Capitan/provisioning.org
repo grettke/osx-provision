@@ -2219,6 +2219,14 @@ brew install qpdf
 #+BEGIN_SRC sh
 brew cask install xnviewmp
 #+END_SRC
+***** LibreOffice
+:PROPERTIES:
+:ID:       org_gcr_2017-07-28_mara:24F8C69E-D0A8-4B87-89C3-BDB07121D726
+:END:
+#+NAME: org_gcr_2017-07-28_mara_04698A6C-1A32-4C95-AEBB-F95E848376A0
+#+BEGIN_SRC sh
+brew cask install libreoffice
+#+END_SRC
 ***** Completion
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:5E5BCE6B-D095-4CA0-9CC3-9A5F13EF104B
