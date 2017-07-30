@@ -3,7 +3,7 @@
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install carbon-copy-cloner
 else
-    echo "carbon-copy-cloner: Only install on hosts"
+  echo "carbon-copy-cloner: Only install on hosts"
 fi
 # org_gcr_2017-05-12_mara_3DA5AD9E-E1DD-4B4D-9CC3-A2894A312E13 ends here
 
@@ -11,7 +11,7 @@ fi
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vmware-fusion
 else
-    echo "vmware-fusion: Only install on hosts"
+  echo "vmware-fusion: Only install on hosts"
 fi
 # org_gcr_2017-05-12_mara_0E88C363-DC01-4894-AD2A-B826AEE96847 ends here
 
@@ -21,7 +21,7 @@ if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install virtualbox-extension-pack
 
 else
-    echo "virtualbox: Only install on hosts"
+  echo "virtualbox: Only install on hosts"
 fi
 # org_gcr_2017-05-12_mara_FBFF1A68-5361-46F9-8B29-F566DE748DD0 ends here
 
@@ -29,7 +29,7 @@ fi
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install vagrant
 else
-    echo "vagrant: Only install on hosts"
+  echo "vagrant: Only install on hosts"
 fi
 # org_gcr_2017-05-12_mara_C9473DCC-226B-4291-86E7-5707B3F034AB ends here
 
@@ -37,7 +37,7 @@ fi
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install packer
 else
-    echo "packer: Only install on hosts"
+  echo "packer: Only install on hosts"
 fi
 # org_gcr_2017-05-12_mara_945C5784-810A-4C4B-90E6-FADC7453E54A ends here
 

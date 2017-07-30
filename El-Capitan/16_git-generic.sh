@@ -28,21 +28,21 @@ options=("$bail" "$stay")
 
 select opt in "${options[@]}"
 do
-    case $opt in
-        "$bail")
-            echo "*Sayonara*"
-            sleep 1
-            exit
-            ;;
-        "$stay")
-            echo "Gotcha. Running it."
-            sleep 1
-            break
-            ;;
-        *)
-            echo "You're not getting outta here until you choose."
-            ;;
-    esac
+  case $opt in
+    "$bail")
+      echo "*Sayonara*"
+      sleep 1
+      exit
+      ;;
+    "$stay")
+      echo "Gotcha. Running it."
+      sleep 1
+      break
+      ;;
+    *)
+      echo "You're not getting outta here until you choose."
+      ;;
+  esac
 done
 # org_gcr_2017-05-12_mara_3F6EFEBA-1E8A-46D8-AC65-4E0948C1EF86 ends here
 

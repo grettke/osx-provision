@@ -6,7 +6,7 @@ brew cask install popchar
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install karabiner
 else
-    echo "karabiner: Only install on hosts"
+  echo "karabiner: Only install on hosts"
 fi
 # org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988 ends here
 
@@ -26,7 +26,7 @@ brew cask install bartender
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install flux
 else
-    echo "flux: Only install on hosts"
+  echo "flux: Only install on hosts"
 fi
 # org_gcr_2017-05-12_mara_3DA6A9C5-8086-4B61-B38F-A87E6A470345 ends here
 

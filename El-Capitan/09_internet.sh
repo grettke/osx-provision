@@ -10,7 +10,7 @@ brew install speedtest_cli
      if [ ! -d "/Library/Application Support/VMware Tools" ]; then
          brew cask install whatsapp
      else
-         echo "whatsapp: Only install on hosts"
+       echo "whatsapp: Only install on hosts"
      fi
   ;; org_gcr_2017-05-12_mara_9217F137-CCF7-4B66-AE32-6ED72D2D629F ends here
 
@@ -18,7 +18,7 @@ brew install speedtest_cli
      if [ ! -d "/Library/Application Support/VMware Tools" ]; then
          brew cask install mplayer-osx-extended
      else
-         echo "mplayer: Only install on hosts"
+       echo "mplayer: Only install on hosts"
      fi
      # org_gcr_2017-05-12_mara_7C4DE397-48F6-44AC-B9CD-948375915EFF ends here
 
@@ -26,7 +26,7 @@ brew install speedtest_cli
      if [ ! -d "/Library/Application Support/VMware Tools" ]; then
          brew cask install skype
      else
-         echo "skype: Only install on hosts"
+       echo "skype: Only install on hosts"
      fi
      # org_gcr_2017-05-12_mara_9CDCD936-A30A-4712-8A5F-780D8810FBDE ends here
 
@@ -34,7 +34,7 @@ brew install speedtest_cli
      if [ ! -d "/Library/Application Support/VMware Tools" ]; then
          brew cask install dropbox
      else
-         echo "dropbox: Only install on hosts"
+       echo "dropbox: Only install on hosts"
      fi
      # org_gcr_2017-05-12_mara_1F291E61-A8F1-43BE-A839-0E6997099AD4 ends here
 
