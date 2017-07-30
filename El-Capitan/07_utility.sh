@@ -78,6 +78,10 @@ brew install lame
 brew install ffmpeg
 # org_gcr_2017-05-12_mara_408DC731-7C7E-4C41-99D3-9C559DCBE6B4 ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-07-30_mara_7509216F-8D92-4FDF-9A5A-7CE4431B13D2][org_gcr_2017-07-30_mara_7509216F-8D92-4FDF-9A5A-7CE4431B13D2]]
+brew cask install vlc
+# org_gcr_2017-07-30_mara_7509216F-8D92-4FDF-9A5A-7CE4431B13D2 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-16_mara_7DD2E7E1-12B9-41B7-BAFD-A4EEAFBD654F][org_gcr_2017-05-16_mara_7DD2E7E1-12B9-41B7-BAFD-A4EEAFBD654F]]
 brew install qpdf
 # org_gcr_2017-05-16_mara_7DD2E7E1-12B9-41B7-BAFD-A4EEAFBD654F ends here

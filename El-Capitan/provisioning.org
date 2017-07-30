@@ -2203,6 +2203,14 @@ brew install lame
 #+BEGIN_SRC sh
 brew install ffmpeg
 #+END_SRC
+***** VLC
+:PROPERTIES:
+:ID:       org_gcr_2017-07-30_mara:717E5624-3BB6-4F91-9117-9A6B890C62EF
+:END:
+#+NAME: org_gcr_2017-07-30_mara_7509216F-8D92-4FDF-9A5A-7CE4431B13D2
+#+BEGIN_SRC sh
+brew cask install vlc
+#+END_SRC
 ***** qpdf
 :PROPERTIES:
 :ID:       org_gcr_2017-05-16_mara:3A2A97E8-3168-4D18-A6EA-6DF4CF075791
