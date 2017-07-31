@@ -2967,6 +2967,14 @@ git clone https://github.com/magit/magit.git
 cd magit
 make
 #+END_SRC
+***** go
+:PROPERTIES:
+:ID:       org_gcr_2017-07-30_mara:125CE9C7-3173-4F82-B27D-6E0F64042F3E
+:END:
+#+NAME: org_gcr_2017-07-30_mara_1F4656FC-2D17-4C4D-975B-DBC94ADAD23A
+#+BEGIN_SRC sh
+brew install go
+#+END_SRC
 ***** Sourcetree
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:4E26CD06-A08F-41E0-9BF3-A350ED26E69A
