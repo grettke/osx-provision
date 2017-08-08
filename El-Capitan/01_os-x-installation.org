@@ -84,8 +84,8 @@ diskutil unmount /dev/disk0s8
       - Keyboard
         - Doesn't matter because F keys are F keys first
       - Screen Shots
-        - Change each one to a prefix of M-s then M-s-S
-          - 3 and 4
+        - Change each one to a prefix of Control-Command-Option, plus a shift
+          - To keys 3 and 4
       - Services
         - Disable anything with control keybindings
       - Accessibility
@@ -118,11 +118,11 @@ diskutil unmount /dev/disk0s8
     - Dictation
       - ON
       - YES Use Enhanced Dictation
-      - Shortcut: Press Right Command Key Twice
+      - Shortcut: Press Control-Command-Option-D
     - Text 2 Speech
       - Voice: Cepstral Preference
       - Rate: \frac14 left of Normal
-      - Speak selected text on key: Command Escape
+      - Speak selected text on key: Control-Command-Option S
   - Date & Time: *NA*
   - Startup Disk: *NA*
   - Time Machine: *NA*

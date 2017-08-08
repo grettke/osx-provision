@@ -16,22 +16,6 @@ Don't let it access Contacts.
 When it checks for updates, tell it to check daily.
 # org_gcr_2017-05-12_mara_AA02C112-ACBB-4415-813D-69BE649D4600 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_B2BA0539-A377-48C8-B01E-A65818B7B7B8][org_gcr_2017-05-12_mara_B2BA0539-A377-48C8-B01E-A65818B7B7B8]]
-* OSX Enhanced Voice Dictation
-
-Somehow I activated the installer for "OSX Enhanced Voice Dictation". I said "Yes".
-Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the steps:
-
-- Apple
-- System Preferences
-- Dictation & Speech
-- Dictation
-- Enable
-- Yes: Use Enhanced Dictation
-- [X] Speak selected text when the key is pressed:
-  - Option+Esc
-# org_gcr_2017-05-12_mara_B2BA0539-A377-48C8-B01E-A65818B7B7B8 ends here
-
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_A11DCB72-72E4-4B80-BF0C-D56FF6866E72][org_gcr_2017-05-12_mara_A11DCB72-72E4-4B80-BF0C-D56FF6866E72]]
 * Visible Body
 

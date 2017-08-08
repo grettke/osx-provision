@@ -29,6 +29,10 @@
 - Start it
 - Enable integration
 - Start at boot
+- Delete all keybindings
+- Configure
+  - Left Half: Control-Command-Option-\leftarrow{}
+  - Right Half: Control-Command-Option-\rightarrow{}
 
 * Little Snitch
 

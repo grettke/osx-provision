@@ -834,8 +834,8 @@ diskutil unmount /dev/disk0s8
       - Keyboard
         - Doesn't matter because F keys are F keys first
       - Screen Shots
-        - Change each one to a prefix of M-s then M-s-S
-          - 3 and 4
+        - Change each one to a prefix of Control-Command-Option, plus a shift
+          - To keys 3 and 4
       - Services
         - Disable anything with control keybindings
       - Accessibility
@@ -868,11 +868,11 @@ diskutil unmount /dev/disk0s8
     - Dictation
       - ON
       - YES Use Enhanced Dictation
-      - Shortcut: Press Right Command Key Twice
+      - Shortcut: Press Control-Command-Option-D
     - Text 2 Speech
       - Voice: Cepstral Preference
       - Rate: \frac14 left of Normal
-      - Speak selected text on key: Command Escape
+      - Speak selected text on key: Control-Command-Option S
   - Date & Time: *NA*
   - Startup Disk: *NA*
   - Time Machine: *NA*
@@ -1896,6 +1896,10 @@ echo "Script is done"
 - Start it
 - Enable integration
 - Start at boot
+- Delete all keybindings
+- Configure
+  - Left Half: Control-Command-Option-\leftarrow{}
+  - Right Half: Control-Command-Option-\rightarrow{}
 
 ,* Little Snitch
 
@@ -3398,27 +3402,6 @@ after sending an error report.
 Don't let it access Contacts.
 
 When it checks for updates, tell it to check daily.
-#+END_SRC
-**** OSX Enhanced Voice Dictation
-    :PROPERTIES:
-    :ID:       org_gcr_2017-05-12_mara:022919EF-D22D-4332-B083-9D6FE366262C
-    :END:
-
-#+NAME: org_gcr_2017-05-12_mara_B2BA0539-A377-48C8-B01E-A65818B7B7B8
-#+BEGIN_SRC org
-,* OSX Enhanced Voice Dictation
-
-Somehow I activated the installer for "OSX Enhanced Voice Dictation". I said "Yes".
-Found [[https://support.apple.com/en-us/HT202584][this]] guide and here are the steps:
-
-- Apple
-- System Preferences
-- Dictation & Speech
-- Dictation
-- Enable
-- Yes: Use Enhanced Dictation
-- [X] Speak selected text when the key is pressed:
-  - Option+Esc
 #+END_SRC
 **** Visible Body
     :PROPERTIES:
