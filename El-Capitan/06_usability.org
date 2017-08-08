@@ -33,6 +33,7 @@
 - Configure
   - Left Half: Control-Command-Option-\leftarrow{}
   - Right Half: Control-Command-Option-\rightarrow{}
+  - Fullscreen: Control-Command-Option-F
 
 * Little Snitch
 
