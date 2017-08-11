@@ -107,6 +107,10 @@ brew install ocaml
 brew install opam
 # org_gcr_2017-05-12_mara_1CA17E50-8BCC-43A2-99C3-A3052FF3B262 ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-08-10_mara_BF5AB863-0D25-4ADA-8D7A-B324AF8E4096][org_gcr_2017-08-10_mara_BF5AB863-0D25-4ADA-8D7A-B324AF8E4096]]
+brew install mono
+# org_gcr_2017-08-10_mara_BF5AB863-0D25-4ADA-8D7A-B324AF8E4096 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_421506C6-DA2D-49F8-9615-485DD7E2CAEF][org_gcr_2017-05-12_mara_421506C6-DA2D-49F8-9615-485DD7E2CAEF]]
 brew cask install haskell-platform
 # org_gcr_2017-05-12_mara_421506C6-DA2D-49F8-9615-485DD7E2CAEF ends here

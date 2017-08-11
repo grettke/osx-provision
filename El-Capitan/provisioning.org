@@ -3009,6 +3009,14 @@ brew install ocaml
 brew install opam
 #+END_SRC
 
+***** Mono & F#
+:PROPERTIES:
+:ID:       org_gcr_2017-08-10_mara:1D2F00AF-3A76-4B21-9113-3B5B642ED839
+:END:
+#+NAME: org_gcr_2017-08-10_mara_BF5AB863-0D25-4ADA-8D7A-B324AF8E4096
+#+BEGIN_SRC sh
+brew install mono
+#+END_SRC
 ***** Haskell
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:2CAF6CDB-37C4-48C9-94E2-4B50C408C63F
