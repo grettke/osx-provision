@@ -52,8 +52,10 @@ mkdir ~/.ssh
 cd ~/.ssh
 echo "What email address would you like to use for this SSH key?"
 read SSHEMAIL
+echo "What logical name, organization, or group name? For example: gitlab"
+read SSHORG
 SSHID=`whoami`-`hostname`
-SSHUID=$SSHID-`date '+%Y_%m_%d_%H_%M_%S'`
+SSHUID=$SSHID-$SSHORG-`date '+%Y_%m_%d_%H_%M_%S'`
 SSHFILE=$SSHUID-rsa
 ssh-keygen -N '' -t rsa -C $SSHEMAIL -f $SSHFILE
 # org_gcr_2017-05-12_mara_2A10A4BD-3F69-43B0-98CF-F5217F12E427 ends here
