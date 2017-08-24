@@ -3960,7 +3960,6 @@ rm -rf ~/src/pretty-mode
 rm -rf ~/src/use-package
 rm -rf ~/src/reveal.js
 rm -rf ~/src/go-hydra
-rm -rf ~/src/go-snippets
 cd ~/src
 echo `date +%Y-%m-%dT%H:%M:%S%z`
 git clone git://orgmode.org/org-mode.git
@@ -3975,7 +3974,6 @@ git clone github-`whoami`:grettke/pretty-mode.git
 git clone https://github.com/jwiegley/use-package.git
 git clone https://github.com/hakimel/reveal.js.git
 git clone gitlab-`whoami`:grettke/go-hydra.git
-git clone https://github.com/toumorokoshi/go-snippets
 #+END_SRC
 
 *** TeX
