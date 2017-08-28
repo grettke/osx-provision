@@ -2726,28 +2726,6 @@ brew cask install ipartition
 
 ,* Vagrant
 
-Install the VMWare provider for Vagrant and then license it.
-
-Remember to [[http://docs.vagrantup.com/v2/other/debugging.html][log]] appropriately.
-
-It goes something like this:
-
-,#+begin_src sh
-vagrant plugin install vagrant-vmware-fusion
-mkdir ~/.vagrant
-cd ~/.vagrant
-# copy that license file in there
-vagrant plugin license vagrant-vmware-fusion license.lic
-cd
-rm -rf ~/.vagrant
-,#+end_src
-
-Verify the plugin is licensed and happy:
-
-,#+BEGIN_SRC sh
-vagrant plugin list
-,#+END_SRC
-
 Test out VirtualBox box:
 
 ,#+begin_src sh
@@ -2755,13 +2733,9 @@ cd ~/tmp
 mkdir vgtest
 cd vgtest
 vagrant init hashicorp/precise64
-vagrant up --provider virtualbox
 ,#+end_src
 
-The first time I tried this, it failed. I restarted OSX. Then it worked.
-
-Test out VMWare. The default provider is vmware, so don't have to specify
-provider.
+Test out VirtualBox.
 
 ,#+begin_src sh
 cd ~/tmp/vgtest
