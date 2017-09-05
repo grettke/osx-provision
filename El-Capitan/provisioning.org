@@ -2516,6 +2516,14 @@ brew install speedtest_cli
 #+BEGIN_SRC sh
 brew cask install gmvault
 #+END_SRC
+***** youtube-dl
+:PROPERTIES:
+:ID:       org_gcr_2017-09-04_mara:A7056C12-8B08-49A1-B8C3-BE02C864A03E
+:END:
+#+NAME: org_gcr_2017-09-04_mara_A5554AFF-B9FC-4139-945C-A7337F4DB79F
+#+BEGIN_SRC sh
+brew install youtube-dl
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "10_internet.org"

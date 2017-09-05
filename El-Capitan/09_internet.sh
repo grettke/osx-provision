@@ -89,3 +89,7 @@ brew install speedtest_cli
      # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_49EFB334-9D0E-4354-AD70-3F6E8647C27E][org_gcr_2017-05-12_mara_49EFB334-9D0E-4354-AD70-3F6E8647C27E]]
      brew cask install gmvault
      # org_gcr_2017-05-12_mara_49EFB334-9D0E-4354-AD70-3F6E8647C27E ends here
+
+     # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-09-04_mara_A5554AFF-B9FC-4139-945C-A7337F4DB79F][org_gcr_2017-09-04_mara_A5554AFF-B9FC-4139-945C-A7337F4DB79F]]
+     brew install youtube-dl
+     # org_gcr_2017-09-04_mara_A5554AFF-B9FC-4139-945C-A7337F4DB79F ends here
