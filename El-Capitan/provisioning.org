@@ -843,7 +843,7 @@ diskutil unmount /dev/disk0s8
   - Mouse
     - *(Host)* Connect Bluetooth mouse
     - Tracking Speed
-      - MBP Trackpad: 50%
+      - MBP Trackpad: 100%
       - Anker Palm Mouse: 50%
       - Dell Mouse: 80%
   - Trackpad *(Host)*
