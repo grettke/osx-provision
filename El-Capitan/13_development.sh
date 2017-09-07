@@ -163,3 +163,7 @@ brew install the_silver_searcher
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_1E6B3FB1-97E1-456D-A0CE-7D686FDF5E31][org_gcr_2017-05-12_mara_1E6B3FB1-97E1-456D-A0CE-7D686FDF5E31]]
 brew install shellcheck
 # org_gcr_2017-05-12_mara_1E6B3FB1-97E1-456D-A0CE-7D686FDF5E31 ends here
+
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-09-07_mara_A2CEC35D-5F40-4568-8057-C791E34B7E8F][org_gcr_2017-09-07_mara_A2CEC35D-5F40-4568-8057-C791E34B7E8F]]
+brew install make
+# org_gcr_2017-09-07_mara_A2CEC35D-5F40-4568-8057-C791E34B7E8F ends here

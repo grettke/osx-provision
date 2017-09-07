@@ -3121,6 +3121,14 @@ brew install the_silver_searcher
 brew install shellcheck
 #+END_SRC
 
+***** make
+:PROPERTIES:
+:ID:       org_gcr_2017-09-07_mara:4103D1BA-55A5-4C17-B8AA-7E768398DB4A
+:END:
+#+NAME: org_gcr_2017-09-07_mara_A2CEC35D-5F40-4568-8057-C791E34B7E8F
+#+BEGIN_SRC sh
+brew install make
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "14_development.org"
