@@ -41,6 +41,10 @@ else
 fi
 # org_gcr_2017-05-12_mara_945C5784-810A-4C4B-90E6-FADC7453E54A ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-09-07_mara_9B33A7A7-CC1C-451C-A020-E4B0CFD002F1][org_gcr_2017-09-07_mara_9B33A7A7-CC1C-451C-A020-E4B0CFD002F1]]
+brew cask install docker-toolbox
+# org_gcr_2017-09-07_mara_9B33A7A7-CC1C-451C-A020-E4B0CFD002F1 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_411A8284-5DDC-45B4-A0D1-37EE4B6F6CC5][org_gcr_2017-05-12_mara_411A8284-5DDC-45B4-A0D1-37EE4B6F6CC5]]
 brew cask install ipartition
 # org_gcr_2017-05-12_mara_411A8284-5DDC-45B4-A0D1-37EE4B6F6CC5 ends here
