@@ -2240,6 +2240,14 @@ brew cask install xnviewmp
 #+BEGIN_SRC sh
 brew cask install libreoffice
 #+END_SRC
+***** rename
+:PROPERTIES:
+:ID:       org_gcr_2017-09-12_mara:E7FC365F-FE80-4C18-8A92-F35D0A7D059C
+:END:
+#+NAME: org_gcr_2017-09-12_mara_3436631A-2DFC-4BBC-951E-425B86815432
+#+BEGIN_SRC sh
+brew install rename
+#+END_SRC
 ***** Completion
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:5E5BCE6B-D095-4CA0-9CC3-9A5F13EF104B

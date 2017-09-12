@@ -94,6 +94,10 @@ brew cask install xnviewmp
 brew cask install libreoffice
 # org_gcr_2017-07-28_mara_04698A6C-1A32-4C95-AEBB-F95E848376A0 ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-09-12_mara_3436631A-2DFC-4BBC-951E-425B86815432][org_gcr_2017-09-12_mara_3436631A-2DFC-4BBC-951E-425B86815432]]
+brew install rename
+# org_gcr_2017-09-12_mara_3436631A-2DFC-4BBC-951E-425B86815432 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E][org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E]]
 echo "Script is done"
 # org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E ends here
