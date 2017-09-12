@@ -97,3 +97,7 @@ brew install speedtest_cli
      # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-09-12_mara_B3515604-B02B-4A5B-9E5A-388E999A26B7][org_gcr_2017-09-12_mara_B3515604-B02B-4A5B-9E5A-388E999A26B7]]
      brew install sox --with-lame
      # org_gcr_2017-09-12_mara_B3515604-B02B-4A5B-9E5A-388E999A26B7 ends here
+
+     # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-09-12_mara_D647A4C6-4296-4F49-A5CB-0FBAE77C1F8F][org_gcr_2017-09-12_mara_D647A4C6-4296-4F49-A5CB-0FBAE77C1F8F]]
+     brew install mp3gain
+     # org_gcr_2017-09-12_mara_D647A4C6-4296-4F49-A5CB-0FBAE77C1F8F ends here
