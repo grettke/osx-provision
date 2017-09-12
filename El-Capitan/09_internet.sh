@@ -93,3 +93,7 @@ brew install speedtest_cli
      # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-09-04_mara_A5554AFF-B9FC-4139-945C-A7337F4DB79F][org_gcr_2017-09-04_mara_A5554AFF-B9FC-4139-945C-A7337F4DB79F]]
      brew install youtube-dl
      # org_gcr_2017-09-04_mara_A5554AFF-B9FC-4139-945C-A7337F4DB79F ends here
+
+     # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-09-12_mara_B3515604-B02B-4A5B-9E5A-388E999A26B7][org_gcr_2017-09-12_mara_B3515604-B02B-4A5B-9E5A-388E999A26B7]]
+     brew install sox --with-lame
+     # org_gcr_2017-09-12_mara_B3515604-B02B-4A5B-9E5A-388E999A26B7 ends here

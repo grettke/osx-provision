@@ -2524,6 +2524,14 @@ brew cask install gmvault
 #+BEGIN_SRC sh
 brew install youtube-dl
 #+END_SRC
+***** SoX
+:PROPERTIES:
+:ID:       org_gcr_2017-09-12_mara:D9FCD17E-D25F-46DC-977D-372D7CF416D4
+:END:
+#+NAME: org_gcr_2017-09-12_mara_B3515604-B02B-4A5B-9E5A-388E999A26B7
+#+BEGIN_SRC sh
+brew install sox --with-lame
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "10_internet.org"
