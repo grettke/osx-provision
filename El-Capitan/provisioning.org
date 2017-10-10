@@ -3723,6 +3723,21 @@ Server properties:
 - NA
 #+END_SRC
 
+***** Anti Sleep
+:PROPERTIES:
+:ID:       org_gcr_2017-10-07_mara:A59F5331-0685-4EFC-8F63-F3843F454919
+:END:
+#+NAME: org_gcr_2017-10-07_mara_CC65CA4E-4725-4350-825E-7F1C8C2863AD
+#+BEGIN_SRC org
+,* Anti Sleep
+- Display: ☐
+- System: ☑
+- Timeout: \infin{}
+- Critical Battery Charge%: 30
+- Activate AntiSleep at Launch: ☐
+- Activate when AC Power On: ☑
+- Open at Login: ☐
+#+END_SRC
 *** SSH and Git
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:52BA0225-96A9-4A56-B130-4A43FDF25DA1

@@ -204,3 +204,14 @@ Server properties:
 
 - NA
 # org_gcr_2017-05-12_mara_08A7BB54-05AB-4D18-A07A-32687D3F44EF ends here
+
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-10-07_mara_CC65CA4E-4725-4350-825E-7F1C8C2863AD][org_gcr_2017-10-07_mara_CC65CA4E-4725-4350-825E-7F1C8C2863AD]]
+* Anti Sleep
+- Display: ☐
+- System: ☑
+- Timeout: \infin{}
+- Critical Battery Charge%: 30
+- Activate AntiSleep at Launch: ☐
+- Activate when AC Power On: ☑
+- Open at Login: ☐
+# org_gcr_2017-10-07_mara_CC65CA4E-4725-4350-825E-7F1C8C2863AD ends here
