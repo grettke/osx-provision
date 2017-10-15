@@ -2540,6 +2540,14 @@ brew install youtube-dl
 #+BEGIN_SRC sh
 brew install sox --with-lame
 #+END_SRC
+***** Deluge
+:PROPERTIES:
+:ID:       org_gcr_2017-10-15_mara:3D744F86-E913-45AC-A3A6-7581A7D63D98
+:END:
+#+NAME: org_gcr_2017-10-15_mara_56428EA5-AAEE-4E56-9A48-18EB1CE2742E
+#+BEGIN_SRC sh
+brew cask install deluge
+#+END_SRC
 ***** mp3gain
 :PROPERTIES:
 :ID:       org_gcr_2017-09-12_mara:C26075AB-A201-42C7-8511-62A690390377
@@ -2618,6 +2626,9 @@ brew install mp3gain
 
 - Register
 - Configure default download path
+
+,* Deluge
+- Start on login
 #+END_SRC
 
 *** DevOps

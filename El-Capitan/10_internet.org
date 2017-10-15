@@ -61,4 +61,7 @@
 
 - Register
 - Configure default download path
+
+* Deluge
+- Start on login
 # org_gcr_2017-05-12_mara_AB15F22E-D841-45AA-86A4-C61FB1486D29 ends here
