@@ -3184,7 +3184,7 @@ brew install make
         - Text Editor Block Selection Font
         - Text Font
       - Differences
-        - Font: DJSM 10
+        - Font: DJSM 12
         - Colors:
           - Addition: Green
           - Change: Orange
@@ -3200,6 +3200,10 @@ brew install make
       - Interesting but default do care
     - [ ] Ignore differences in line endings (CF and LF)
       - Most systems don't care, but I do and should fix it
+  - Text comparison
+    - Editors
+      - YES Show whitespace characters
+      - Current line highlight: cyan
 - Set up the "Compare with DeltaWalker.workflow"
   - Go to its [Cask location]/Extras
   - Copy it to ~/Library/Services
