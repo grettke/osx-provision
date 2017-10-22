@@ -2248,6 +2248,14 @@ brew cask install libreoffice
 #+BEGIN_SRC sh
 brew install rename
 #+END_SRC
+***** DjVu
+:PROPERTIES:
+:ID:       org_gcr_2017-10-21_mara:7BFB981F-EF98-4E48-ABD2-0708E5228B9B
+:END:
+#+NAME: org_gcr_2017-10-21_mara_7745761B-ED11-48FD-9E73-A9AA38DFB70D
+#+BEGIN_SRC sh
+brew cask install djview
+#+END_SRC
 ***** Completion
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:5E5BCE6B-D095-4CA0-9CC3-9A5F13EF104B
