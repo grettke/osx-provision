@@ -3172,6 +3172,14 @@ brew install shellcheck
 #+BEGIN_SRC sh
 brew install make
 #+END_SRC
+***** sequel-pro
+:PROPERTIES:
+:ID:       org_gcr_2017-10-23_mara:F2F8B08D-FFD6-4557-BF90-FEE01179A8E3
+:END:
+#+NAME: org_gcr_2017-10-23_mara_EB19B642-F0A4-465A-8AE1-372533560289
+#+BEGIN_SRC sh
+brew cask install sequel-pro
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "14_development.org"
