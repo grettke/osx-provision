@@ -3172,6 +3172,14 @@ brew install shellcheck
 #+BEGIN_SRC sh
 brew install make
 #+END_SRC
+***** MAMP
+:PROPERTIES:
+:ID:       org_gcr_2017-10-23_mara:AC6B50EC-F2DA-4886-8375-A0432CBC553E
+:END:
+#+NAME: org_gcr_2017-10-23_mara_D6B1A43E-FECE-4122-A5D7-D79B923409A0
+#+BEGIN_SRC sh
+brew cask install mamp
+#+END_SRC
 ***** sequel-pro
 :PROPERTIES:
 :ID:       org_gcr_2017-10-23_mara:F2F8B08D-FFD6-4557-BF90-FEE01179A8E3
