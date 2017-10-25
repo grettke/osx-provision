@@ -3180,6 +3180,24 @@ brew install make
 #+BEGIN_SRC sh
 brew install mysql
 #+END_SRC
+
+Unlock the root account via [[https://gist.github.com/fallwith/987731][here]].
+
+#+NAME: org_gcr_2017-10-23_mara_E47288C8-656E-4E5C-94F9-973FF271CA0F
+#+BEGIN_SRC sql :tangle no
+mysql.server restart --skip-grant-tables
+#+END_SRC
+
+Set root password.
+
+#+NAME: org_gcr_2017-10-23_mara_1B8DE431-0C29-428B-94DA-58718F0CDF36
+#+BEGIN_SRC sql :tangle no
+UPDATE mysql.user
+    SET authentication_string = PASSWORD('root'), password_expired = 'N'
+    WHERE User = 'root' AND Host = 'localhost';
+FLUSH PRIVILEGES;
+#+END_SRC
+
 ***** MAMP
 :PROPERTIES:
 :ID:       org_gcr_2017-10-23_mara:AC6B50EC-F2DA-4886-8375-A0432CBC553E
