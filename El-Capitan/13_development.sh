@@ -168,6 +168,10 @@ brew install shellcheck
 brew install make
 # org_gcr_2017-09-07_mara_A2CEC35D-5F40-4568-8057-C791E34B7E8F ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-10-23_mara_BDE68F57-EB90-499A-ADF8-2EEEC572D80E][org_gcr_2017-10-23_mara_BDE68F57-EB90-499A-ADF8-2EEEC572D80E]]
+brew install mysql
+# org_gcr_2017-10-23_mara_BDE68F57-EB90-499A-ADF8-2EEEC572D80E ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-10-23_mara_D6B1A43E-FECE-4122-A5D7-D79B923409A0][org_gcr_2017-10-23_mara_D6B1A43E-FECE-4122-A5D7-D79B923409A0]]
 brew cask install mamp
 # org_gcr_2017-10-23_mara_D6B1A43E-FECE-4122-A5D7-D79B923409A0 ends here

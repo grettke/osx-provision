@@ -3172,6 +3172,14 @@ brew install shellcheck
 #+BEGIN_SRC sh
 brew install make
 #+END_SRC
+***** MySQL
+:PROPERTIES:
+:ID:       org_gcr_2017-10-23_mara:82D63748-CFAD-42C2-87B0-26EE38C18142
+:END:
+#+NAME: org_gcr_2017-10-23_mara_BDE68F57-EB90-499A-ADF8-2EEEC572D80E
+#+BEGIN_SRC sh
+brew install mysql
+#+END_SRC
 ***** MAMP
 :PROPERTIES:
 :ID:       org_gcr_2017-10-23_mara:AC6B50EC-F2DA-4886-8375-A0432CBC553E
