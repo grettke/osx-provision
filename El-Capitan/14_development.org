@@ -31,7 +31,9 @@
   - Text comparison
     - Editors
       - YES Show whitespace characters
-      - Current line highlight: cyan
+      - Current line highlight: Silver
+        - So you can see the outline of the change while the current line
+          indication is still obvious
 - Set up the "Compare with DeltaWalker.workflow"
   - Go to its [Cask location]/Extras
   - Copy it to ~/Library/Services
