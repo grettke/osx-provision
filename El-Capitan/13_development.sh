@@ -67,7 +67,10 @@ brew install git-flow-avh
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5][org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5]]
 brew tap d12frosted/emacs-plus
-brew install emacs-plus --with-natural-title-bar --without-spacemacs-icon
+brew install emacs-plus \
+     --with-x11
+rm $(brew --prefix)/bin/emacs-x11
+ln -s $(brew --prefix emacs-plus)/bin/emacs $(brew --prefix)/bin/emacs-x11
 brew tap railwaycat/emacsmacport
 brew install emacs-mac \
      --with-dbus \
