@@ -47,6 +47,10 @@ brew cask install switchresx
 brew install terminal-notifier
 # org_gcr_2017-05-12_mara_C5F1CDAB-387E-4549-BCAA-0315C7482A7A ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-10-30_mara_F7594669-E656-4276-BCA0-70A239877046][org_gcr_2017-10-30_mara_F7594669-E656-4276-BCA0-70A239877046]]
+brew cask install malwarebytes
+# org_gcr_2017-10-30_mara_F7594669-E656-4276-BCA0-70A239877046 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB][org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB]]
 echo "Script is done"
 # org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB ends here

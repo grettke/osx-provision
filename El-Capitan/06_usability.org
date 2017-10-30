@@ -133,4 +133,8 @@ Granting:
 * Inkscape
 
 - [[https://inkscape.org/en/download/mac-os/][Follow directions]]
+
+* Malwarebytes
+- License pro version
+- Enable realtime scanning
 # org_gcr_2017-05-12_mara_BFEC18FA-40CF-4C90-A572-8700944EE344 ends here

@@ -1848,6 +1848,14 @@ brew cask install switchresx
 #+BEGIN_SRC sh
 brew install terminal-notifier
 #+END_SRC
+***** Malwarebytes
+:PROPERTIES:
+:ID:       org_gcr_2017-10-30_mara:B43F1E33-A9EF-470D-B7C4-3E3383B3D4B6
+:END:
+#+NAME: org_gcr_2017-10-30_mara_F7594669-E656-4276-BCA0-70A239877046
+#+BEGIN_SRC sh
+brew cask install malwarebytes
+#+END_SRC
 ***** Completion
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:419E4ADD-30A3-470F-8858-0DA41B95598D
@@ -2000,6 +2008,10 @@ Granting:
 ,* Inkscape
 
 - [[https://inkscape.org/en/download/mac-os/][Follow directions]]
+
+,* Malwarebytes
+- License pro version
+- Enable realtime scanning
 #+END_SRC
 
 *** Utility
