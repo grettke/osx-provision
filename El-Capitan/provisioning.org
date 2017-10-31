@@ -1662,6 +1662,8 @@ brew cask install font-noto-sans-symbols
 brew cask install font-octicons
 brew cask install font-quivira
 brew cask install font-symbola
+brew cask install font-unifrakturcook
+brew cask install font-unifrakturmaguntia
 #+END_SRC
 
 ****** Terminal
