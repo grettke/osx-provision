@@ -38,7 +38,7 @@ git clone github-`whoami`:grettke/osx-provision.git
 git clone github-`whoami`:grettke/bash.git
 git clone github-`whoami`:grettke/wisdomandwonder.git
 git clone github-`whoami`:grettke/recursive-git-status-bash.git
-git clone github-`whoami`:akatov/pretty-mode.git
+git clone github-`whoami`:pretty-mode/pretty-mode.git
 
 cd ~/git/github-anonymous
 git clone https://github.com/altercation/solarized.git
