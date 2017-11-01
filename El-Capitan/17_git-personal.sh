@@ -16,25 +16,22 @@ git config --global mergetool.keepBackup false
 # org_gcr_2017-05-12_mara_DA1B734B-8994-4465-AA58-08E2EF337770 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CF6E9DCD-5A6E-4335-93CF-2E03937C9C28][org_gcr_2017-05-12_mara_CF6E9DCD-5A6E-4335-93CF-2E03937C9C28]]
-rm -rf ~/git/bitbucket
 rm -rf ~/git/github
 rm -rf ~/git/gitlab
 
-mkdir -p ~/git/bitbucket
 mkdir -p ~/git/github
 mkdir -p ~/git/gitlab
 
-cd ~/git/bitbucket
-git clone bitbucket-`whoami`:grettke/list.git
-git clone bitbucket-`whoami`:grettke/resume.git
-git clone bitbucket-`whoami`:grettke/notes.git
-git clone bitbucket-`whoami`:grettke/signature.git
-git clone bitbucket-`whoami`:grettke/grant-personal.git
-git clone bitbucket-`whoami`:grettke/correspondence.git
-git clone bitbucket-`whoami`:grettke/wnw.git
-git clone bitbucket-`whoami`:grettke/texmf.git
-git clone bitbucket-`whoami`:grettke/hardware
-git clone bitbucket-`whoami`:grettke/hamradio
+cd ~/git/gitlab
+git clone gitlab-`whoami`:grettke/list.git
+git clone gitlab-`whoami`:grettke/resume.git
+git clone gitlab-`whoami`:grettke/notes.git
+git clone gitlab-`whoami`:grettke/signature.git
+git clone gitlab-`whoami`:grettke/grant-personal.git
+git clone gitlab-`whoami`:grettke/correspondence.git
+git clone gitlab-`whoami`:grettke/wnw.git
+git clone gitlab-`whoami`:grettke/texmf.git
+git clone gitlab-`whoami`:grettke/hardware
 
 cd ~/git/github
 git clone github-`whoami`:grettke/osx-provision.git
