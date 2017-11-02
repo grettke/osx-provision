@@ -3453,6 +3453,35 @@ brew cask install sequel-pro
 :header-args: :tangle "15_manual.org"
 :ID:       org_gcr_2017-05-12_mara:BB9E3D7F-B9C2-4545-BE21-D612B37CFED2
 :END:
+**** iTunes
+:PROPERTIES:
+:ID:       org_gcr_2017-11-01_mara:BF7BA256-70D0-421E-A5B5-0F5568FFAB6F
+:END:
+- General
+  - Library name has no spaces
+  - No star ratings
+  - Large list size
+  - No notifications
+  - CD Import settings
+    - AAC, 160kbps, Use VBR
+    - Use error correction
+- Playback
+  - na
+- Sharing
+  - everything
+- Downloads
+  - Only check download full-size and high-quality
+- Store
+  - Always require a password, automatically download artwork
+- Restrictions
+  - None and don't show content ratings
+- Devices
+  - na
+- Advanced
+  - Media folder location on Dropbox
+  - Keep it organized
+  - Copy files into it when adding
+  - Share iTunes library XML
 **** PDFPenPro
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:23E72876-924E-4844-86F8-3CF2837C6217
