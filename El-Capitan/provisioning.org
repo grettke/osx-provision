@@ -3457,6 +3457,9 @@ brew cask install sequel-pro
 :PROPERTIES:
 :ID:       org_gcr_2017-11-01_mara:BF7BA256-70D0-421E-A5B5-0F5568FFAB6F
 :END:
+- References
+  - [[http://www.kenrockwell.com/apple/itunes.htm][Secrets of iTunes: A recording engineer's guide to importing CDs]]
+
 - General
   - Library name has no spaces
   - No star ratings
