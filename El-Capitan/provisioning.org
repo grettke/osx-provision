@@ -3459,6 +3459,7 @@ brew cask install sequel-pro
 :END:
 - References
   - [[http://www.kenrockwell.com/apple/itunes.htm][Secrets of iTunes: A recording engineer's guide to importing CDs]]
+  - [[http://www.lairware.com/guide/fix_damaged_library.html][How to fix a damaged iTunes library]]
 
 - General
   - Library name has no spaces
