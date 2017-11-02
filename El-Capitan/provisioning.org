@@ -3486,6 +3486,7 @@ brew cask install sequel-pro
   - Keep it organized
   - Copy files into it when adding
   - Share iTunes library XML
+  - Keep miniplayer on top
 **** PDFPenPro
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:23E72876-924E-4844-86F8-3CF2837C6217
