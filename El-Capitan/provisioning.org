@@ -2578,6 +2578,14 @@ brew cask install deluge
 #+BEGIN_SRC sh
 brew install mp3gain
 #+END_SRC
+***** iSyncr Mac
+:PROPERTIES:
+:ID:       org_gcr_2017-11-01_mara:245D0436-400B-4A03-BC25-6A83A972735B
+:END:
+#+NAME: org_gcr_2017-11-01_mara_0F91CE3D-3F59-4351-A0D3-AE383CC9BB47
+#+BEGIN_SRC sh
+brew cask install isyncr
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "10_internet.org"
