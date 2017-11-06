@@ -102,6 +102,10 @@ brew install rename
 brew cask install djview
 # org_gcr_2017-10-21_mara_7745761B-ED11-48FD-9E73-A9AA38DFB70D ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-11-04_mara_3DCBCE60-F036-49ED-999C-B972AF10C1E7][org_gcr_2017-11-04_mara_3DCBCE60-F036-49ED-999C-B972AF10C1E7]]
+brew install exiftool
+# org_gcr_2017-11-04_mara_3DCBCE60-F036-49ED-999C-B972AF10C1E7 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E][org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E]]
 echo "Script is done"
 # org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E ends here
