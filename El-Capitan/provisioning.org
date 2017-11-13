@@ -1858,6 +1858,14 @@ brew install terminal-notifier
 #+BEGIN_SRC sh
 brew cask install malwarebytes
 #+END_SRC
+***** Flycut
+:PROPERTIES:
+:ID:       org_gcr_2017-11-12_mara:D83D07FB-1C76-4A0A-9016-51370AF4BD3D
+:END:
+#+NAME: org_gcr_2017-11-12_mara_978C02D7-9C7B-4B4F-8CC2-298B5329BF60
+#+BEGIN_SRC sh
+brew cask install flycut
+#+END_SRC
 ***** Completion
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:419E4ADD-30A3-470F-8858-0DA41B95598D
@@ -2014,6 +2022,13 @@ Granting:
 ,* Malwarebytes
 - License pro version
 - Enable realtime scanning
+
+,* Flycut
+- (Changed from default)
+- Preferences
+  - Launch Flycut on login: yes
+- Appearance
+  - White scissors
 #+END_SRC
 
 *** Utility
