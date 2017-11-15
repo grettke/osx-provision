@@ -3611,6 +3611,8 @@ When it checks for updates, tell it to check daily.
 - [[http://www.eigenlogik.com/entropy/][Download]]
 - Install
 - License
+- Open all zip files with Entropy
+  - Find a zip file, Get Info, Open With, Entropy, Change All
 #+END_SRC
 
 **** Guitar Pro

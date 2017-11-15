@@ -35,6 +35,8 @@ When it checks for updates, tell it to check daily.
 - [[http://www.eigenlogik.com/entropy/][Download]]
 - Install
 - License
+- Open all zip files with Entropy
+  - Find a zip file, Get Info, Open With, Entropy, Change All
 # org_gcr_2017-05-12_mara_346129DB-CC0F-42DC-B5AE-5892008D4A67 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_2E5C8692-189B-4125-B22F-62149679A0C2][org_gcr_2017-05-12_mara_2E5C8692-189B-4125-B22F-62149679A0C2]]
