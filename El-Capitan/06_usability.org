@@ -14,9 +14,10 @@
 
 - Run it. Approve it. Configure it with the following. Look for the
   heading with the name below following "Modify".
-- Check:
+- For All The Time
   - Return to Option_L
     (+ When you type Return only, send Return)
+- For When You Want To Use Emacs In The Terminal
   - For Applications
     - Enable at only Terminal
       - Change Command_L to Option_L
