@@ -97,24 +97,11 @@ Granting:
   - At bartender launch: show bartender bar: NO.
   - Bartender bar: autohides, YES.
 - Appearance
-  - Menu bar icon: "..."
+  - Menu bar icon: Glasses
   - Show when bartender bar is open: YES.
-- Never hide
-  - Volume
-  - Clock
-  - Little Snitch
-  - Bluetooth
-  - Wifi
-  - SwitchResX
-  - Webcam Settings
-  - Screenflow
-- Hide everything else
-- Maybe
-  - Don't even use it. At some point I quit using it and I don't remember why.
-    It probably was something like "Because I never use it anymore". Actually
-    I never use it anymore.
-  - It is OK to install it since it /is/ licensed and I /might/ use it and it is a
-    pretty small install of 5MB.
+- Setup
+  - The stuff that I use a lot goes on the right
+  - Ends with: volume, wifi, date, name
 * flux
 
 - NA
