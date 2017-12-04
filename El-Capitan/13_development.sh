@@ -66,23 +66,18 @@ brew install git-flow-avh
 # org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5][org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5]]
-brew tap d12frosted/emacs-plus
-brew install emacs-plus \
-     --with-x11
-rm $(brew --prefix)/bin/emacs-x11
-ln -s $(brew --prefix emacs-plus)/bin/emacs $(brew --prefix)/bin/emacs-x11
-brew tap railwaycat/emacsmacport
-brew install emacs-mac \
+brew install emacs \
+     --with-cocoa \
      --with-dbus \
      --with-gnutls \
-     --with-imagemagick \
-     --with-modules \
-     --with-official-icon \
-     --with-xml2
+     --with-imagemagick@6 \
+     --with-librsvg \
+     --with-mailutils \
+     --with-modules
 rm $(brew --prefix)/bin/emacs
-ln -s $(brew --prefix emacs-mac)/bin/emacs $(brew --prefix)/bin/emacs
+ln -s $(brew --prefix emacs)/bin/emacs $(brew --prefix)/bin/emacs
 rm $(brew --prefix)/bin/emacsclient
-ln -s $(brew --prefix emacs-mac)/bin/emacsclient $(brew --prefix)/bin/emacsclient
+ln -s $(brew --prefix emacs)/bin/emacsclient $(brew --prefix)/bin/emacsclient
 # org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_97EED15A-390A-49AA-B645-A4BA156A79D3][org_gcr_2017-05-12_mara_97EED15A-390A-49AA-B645-A4BA156A79D3]]
