@@ -15,6 +15,8 @@
 - Run it. Approve it. Configure it with the following. Look for the
   heading with the name below following "Modify".
 - For All The Time
+  - Control_L to Control_L
+    (+ When you type Control_ only, send Escape)
   - Return to Option_L
     (+ When you type Return only, send Return)
 - For When You Want To Use Emacs In The Terminal
