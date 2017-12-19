@@ -840,7 +840,8 @@ diskutil unmount /dev/disk0s8
       - Services
         - Disable anything with control keybindings
       - Accessibility
-        - Disable everything
+        - Disable everything and then
+        - Invert Colors, Yes
   - Mouse
     - *(Host)* Connect Bluetooth mouse
     - Tracking Speed
