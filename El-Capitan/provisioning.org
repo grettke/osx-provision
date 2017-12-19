@@ -805,7 +805,7 @@ diskutil unmount /dev/disk0s8
       - Folders
       - System Preferences
     - Privacy
-      - \deg
+      - Big folders like DropBox or TimeMachine
   - Notifications: *NA*
   - Displays *(Host)* \rarr Maximize resolution
   - Energy saver
