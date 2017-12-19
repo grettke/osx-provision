@@ -82,7 +82,8 @@ diskutil unmount /dev/disk0s8
         - Show Desktop: Disable
         - Show Dashboard: Disable it. I never use it.
       - Keyboard
-        - Doesn't matter because F keys are F keys first
+        - Move focus to next window: Alt-TAB
+          - Keep parity with Command-TAB
       - Screen Shots
         - Change each one to a prefix of Control-Command-Option, plus a shift
           - To keys 3 and 4
