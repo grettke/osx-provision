@@ -3881,9 +3881,9 @@ Server properties:
 - System: ☑
 - Timeout: \infin{}
 - Critical Battery Charge%: 30
-- Activate AntiSleep at Launch: ☐
+- Activate AntiSleep at Launch: ☑
 - Activate when AC Power On: ☑
-- Open at Login: ☐
+- Open at Login: ☑
 #+END_SRC
 *** SSH and Git
 :PROPERTIES:
