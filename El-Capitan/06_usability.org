@@ -24,19 +24,9 @@
   heading with the name below following "Modify".
 - For All The Time
   - Control_L to Control_L
-    (+ When you type Control_ only, send Escape)
-  - Return to Option_L
+    (+ When you type Control_L only, send Escape)
+  - Return to Control_L
     (+ When you type Return only, send Return)
-- For When You Want To Use Emacs In The Terminal
-  - For Applications
-    - Enable at only Terminal
-      - Change Command_L to Option_L
-      - Change Option_L to Command_L
-  - Change Command_R key (Right Command)
-    - Variations for specific apps
-      - Command_R to Option_R (only in Emacs, Terminal, X11)
-      - This makes Meta work in Emacs terminal but leaves Command as an
-        orphan, so not Command-Tabbing when in the Terminal
 - Under MenuBar
   - YES Show icon in menubar
     - YES Show settings name in menu bar
