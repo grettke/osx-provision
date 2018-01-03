@@ -5,11 +5,19 @@
 - Preferences
   - Activation
     - Location: Status item
+      - Hotkey: Can't figure out how to set this
+    - Animate window: No
     - Close window then
       - After selecting a char: No
       - When mouse leaves window: No
       - When clicking outside window: No
-
+    - Start at Login: Yes
+  - View & Insert
+    - Character size: About 50%
+    - Display shadows: Yes
+    - Recent fonts: 10
+    - Highlight recent: No
+    - Insert HTML as: only numbers
 * Karabiner
 
 - Run it. Approve it. Configure it with the following. Look for the
