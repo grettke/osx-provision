@@ -54,8 +54,13 @@ cd ~/src
 git clone github-`whoami`:grettke/help.git
 rm ~/.emacs.el
 ln -s ~/src/help/.emacs.el ~/.emacs.el
-rm -rf ~/.emacs.d
-mkdir ~/.emacs.d
+rm -rf ~/.emacs.d.copy
+mv ~/.emacs.d ~/.emacs.d.copy
+rm -rf ~/src/.emacs.d
+mkdir ~/src/.emacs.d
+cd ~/src/.emacs.d
+git clone gitlab-`whoami`:grettke/dotemacsdotd.git .
+ln -s ~/src/.emacs.d ~/.emacs.d
 ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 # org_gcr_2017-05-12_mara_300013CB-D6E2-414E-9FBF-68D4581D971C ends here
 
