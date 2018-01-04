@@ -3054,6 +3054,7 @@ make
 #+NAME: org_gcr_2017-07-30_mara_1F4656FC-2D17-4C4D-975B-DBC94ADAD23A
 #+BEGIN_SRC sh
 brew install go
+brew install gox
 #+END_SRC
 ***** Sourcetree
 :PROPERTIES:

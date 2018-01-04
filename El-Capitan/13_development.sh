@@ -90,6 +90,7 @@ make
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-07-30_mara_1F4656FC-2D17-4C4D-975B-DBC94ADAD23A][org_gcr_2017-07-30_mara_1F4656FC-2D17-4C4D-975B-DBC94ADAD23A]]
 brew install go
+brew install gox
 # org_gcr_2017-07-30_mara_1F4656FC-2D17-4C4D-975B-DBC94ADAD23A ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CFCB8712-4E27-484C-A459-402C008961A1][org_gcr_2017-05-12_mara_CFCB8712-4E27-484C-A459-402C008961A1]]
