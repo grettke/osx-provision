@@ -52,3 +52,9 @@ brew cask install ipartition
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-01-03_mara_209AB55E-7801-42AE-87ED-AD2E2AF61C4F][org_gcr_2018-01-03_mara_209AB55E-7801-42AE-87ED-AD2E2AF61C4F]]
 brew install terraform
 # org_gcr_2018-01-03_mara_209AB55E-7801-42AE-87ED-AD2E2AF61C4F ends here
+
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-01-03_mara_51C9C084-72E7-48EC-8E72-9638C180A086][org_gcr_2018-01-03_mara_51C9C084-72E7-48EC-8E72-9638C180A086]]
+brew install ansible
+brew install ansible-lint
+brew install terraform-provisioner-ansible
+# org_gcr_2018-01-03_mara_51C9C084-72E7-48EC-8E72-9638C180A086 ends here

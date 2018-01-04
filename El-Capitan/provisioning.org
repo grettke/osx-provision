@@ -2796,6 +2796,16 @@ brew cask install ipartition
 #+BEGIN_SRC sh
 brew install terraform
 #+END_SRC
+***** Ansible
+:PROPERTIES:
+:ID:       org_gcr_2018-01-03_mara:828088D7-2E3C-4AB6-91A0-FFD959795699
+:END:
+#+NAME: org_gcr_2018-01-03_mara_51C9C084-72E7-48EC-8E72-9638C180A086
+#+BEGIN_SRC sh
+brew install ansible
+brew install ansible-lint
+brew install terraform-provisioner-ansible
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "12_dev-ops.org"
