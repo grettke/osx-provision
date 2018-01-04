@@ -2788,6 +2788,14 @@ brew cask install docker-toolbox
 brew cask install ipartition
 #+END_SRC
 
+***** Terraform
+:PROPERTIES:
+:ID:       org_gcr_2018-01-03_mara:BE9C589C-E7E0-4145-A264-5C06FF15F933
+:END:
+#+NAME: org_gcr_2018-01-03_mara_209AB55E-7801-42AE-87ED-AD2E2AF61C4F
+#+BEGIN_SRC sh
+brew install terraform
+#+END_SRC
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "12_dev-ops.org"

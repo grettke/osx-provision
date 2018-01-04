@@ -48,3 +48,7 @@ brew cask install docker-toolbox
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_411A8284-5DDC-45B4-A0D1-37EE4B6F6CC5][org_gcr_2017-05-12_mara_411A8284-5DDC-45B4-A0D1-37EE4B6F6CC5]]
 brew cask install ipartition
 # org_gcr_2017-05-12_mara_411A8284-5DDC-45B4-A0D1-37EE4B6F6CC5 ends here
+
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-01-03_mara_209AB55E-7801-42AE-87ED-AD2E2AF61C4F][org_gcr_2018-01-03_mara_209AB55E-7801-42AE-87ED-AD2E2AF61C4F]]
+brew install terraform
+# org_gcr_2018-01-03_mara_209AB55E-7801-42AE-87ED-AD2E2AF61C4F ends here
