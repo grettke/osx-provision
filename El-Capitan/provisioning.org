@@ -1636,6 +1636,7 @@ rm $bashhome/share/bashdb
 ln -s $bdbhome/share/bashdb $bashhome/share/bashdb
 unset bashhome
 unset bdbhome
+brew install bash-completion@2
 bash --version
 bashdb --version
 #+END_SRC

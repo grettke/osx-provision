@@ -35,6 +35,7 @@ rm $bashhome/share/bashdb
 ln -s $bdbhome/share/bashdb $bashhome/share/bashdb
 unset bashhome
 unset bdbhome
+brew install bash-completion@2
 bash --version
 bashdb --version
 # org_gcr_2017-05-12_mara_F8CE935B-10B1-4261-857C-42C5281BDF9E ends here
