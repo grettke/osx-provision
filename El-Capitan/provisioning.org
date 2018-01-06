@@ -834,6 +834,7 @@ diskutil unmount /dev/disk0s8
       - Keyboard
         - Move focus to next window: Alt-TAB
           - Keep parity with Command-TAB
+          - Add SHIFT to cycle to previous window
       - Screen Shots
         - Change each one to a prefix of Control-Command-Option, plus a shift
           - To keys 3 and 4
