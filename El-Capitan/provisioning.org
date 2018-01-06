@@ -1919,10 +1919,12 @@ echo "Script is done"
 - Run it. Approve it. Configure it with the following. Look for the
   heading with the name below following "Modify".
 - For All The Time
-  - Control_L to Control_L
-    (+ When you type Control_L only, send Escape)
-  - Return to Control_L
-    (+ When you type Return only, send Return)
+  - Change Control_L Key (Left Control)
+    - Control_L to Control_L
+      (+ When you type Control_L only, send Escape)
+  - Change Return Key
+    - Return to Control_L
+      (+ When you type Return only, send Return)
 - Under MenuBar
   - YES Show icon in menubar
     - YES Show settings name in menu bar
