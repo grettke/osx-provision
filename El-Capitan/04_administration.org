@@ -2,10 +2,17 @@
 * Terminal
 
 - Profiles
-  - Import the Solarized dark theme
-  - Set it to the default theme
-  - Set the font to DJSM 17
-- Profiles \rarr Advanced
-  - NO Set locale environment variables on startup
-    - Set them in your =bashrc=, not here
+  - Profile chooser thing
+    - Import the Solarized dark theme
+    - Set it to the default theme
+  - Text
+    - Font: DejaVu Sans Mono: 17
+    - Cursor: block
+  - Window
+    - Yes: Working directory or document, and path
+  - Advanced
+    - No Audible bell
+    - Yes visual bell (not just when sound is muted)
+    - NO Set locale environment variables on startup
+      - Set them in your =bashrc=, not here
 # org_gcr_2017-05-12_mara_DE67722F-643A-460E-930A-4A9FF7270B6A ends here
