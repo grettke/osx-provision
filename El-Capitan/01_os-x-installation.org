@@ -69,9 +69,6 @@ diskutil unmount /dev/disk0s8
     - *(Guest)*
       - Computer sleep: never
   - Keyboard *(Host)*
-    - Modifiers Keys
-      - Caps Lock \rarr Control
-      - Control \rarr Caps Lock
     - Shortcuts
       - Launchpad & Dock
         - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.

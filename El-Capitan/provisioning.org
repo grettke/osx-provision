@@ -819,9 +819,6 @@ diskutil unmount /dev/disk0s8
     - *(Guest)*
       - Computer sleep: never
   - Keyboard *(Host)*
-    - Modifiers Keys
-      - Caps Lock \rarr Control
-      - Control \rarr Caps Lock
     - Shortcuts
       - Launchpad & Dock
         - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.
@@ -1767,7 +1764,7 @@ echo "Script complete"
 brew cask install popchar
 #+END_SRC
 
-***** karabiner
+***** karabiner-elements
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:AD5DE8E1-3B73-45F8-BE9F-5DB57282B403
 :END:
@@ -1775,9 +1772,12 @@ brew cask install popchar
 #+NAME: org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988
 #+BEGIN_SRC sh
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install karabiner
+        cd ~/.config/
+        rm -rf karabiner
+        git clone gitlab-`whoami`:grettke/karabiner-elements.git karabiner
+        brew cask install karabiner-elements
 else
-    echo "karabiner: Only install on hosts"
+  echo "karabiner-elements: Only install on hosts"
 fi
 #+END_SRC
 
@@ -1914,23 +1914,22 @@ echo "Script is done"
     - Recent fonts: 10
     - Highlight recent: No
     - Insert HTML as: only numbers
-,* Karabiner
+,* karabiner-elements
 
-- Run it. Approve it. Configure it with the following. Look for the
-  heading with the name below following "Modify".
-- For All The Time
-  - Change Control_L Key (Left Control)
-    - Control_L to Control_L
-      (+ When you type Control_L only, send Escape)
-  - Change Return Key
-    - Return to Control_L
-      (+ When you type Return only, send Return)
-- Under MenuBar
-  - YES Show icon in menubar
-    - YES Show settings name in menu bar
-  - SettingsList
-    - Create a new one named "Nothing"
-      - This is for "turning Karabiner off"
+- Function Keys
+  - YES: Use F keys as standard function keys
+- Complex Modifications
+  - The files live in Git but this is what they do
+    - Return is control when held
+    - Caps lock is control when held and esc when struck
+    - Right shift is backspace on strike and shift when held
+    - Left shift is forward delete on strike and shift when held
+    - Left control is caps lock
+- Virtual Keyboard
+  - ANSI
+  - Caps Lock Delay ms: 0
+- Misc
+  - YES: Show icon in menu bar
 
 ,* Spectacle
 

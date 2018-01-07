@@ -4,9 +4,12 @@ brew cask install popchar
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988][org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install karabiner
+    cd ~/.config/
+    rm -rf karabiner
+    git clone gitlab-`whoami`:grettke/karabiner-elements.git karabiner
+    brew cask install karabiner-elements
 else
-  echo "karabiner: Only install on hosts"
+  echo "karabiner-elements: Only install on hosts"
 fi
 # org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988 ends here
 
