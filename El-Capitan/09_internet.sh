@@ -71,7 +71,7 @@ brew install speedtest_cli
      # org_gcr_2017-05-12_mara_059F15F1-A456-4885-A364-F363AC30F6CE ends here
 
      # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_2B757414-ED99-4964-96FC-C76DC6512DD0][org_gcr_2017-05-12_mara_2B757414-ED99-4964-96FC-C76DC6512DD0]]
-     brew install homebrew/gui/inkscape
+     brew cask install inkscape
      # org_gcr_2017-05-12_mara_2B757414-ED99-4964-96FC-C76DC6512DD0 ends here
 
      # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_86FEB8A0-A34E-4B44-BABA-BB5CE24D8655][org_gcr_2017-05-12_mara_86FEB8A0-A34E-4B44-BABA-BB5CE24D8655]]

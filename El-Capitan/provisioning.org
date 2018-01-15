@@ -2519,10 +2519,14 @@ brew cask install screenflow
   - Switched to Brew Cask
   - Updated xquartz
   - That didn't work, went back to plain brew
+- <2018-01-14 Sun 21:36>
+  - Fixed my X startup. Removed a check for non-interactive shells from "doing things".
+    turns out that X is a non-interactive shell.
+  - Corrected install command: Cask not Brew.
 
 #+NAME: org_gcr_2017-05-12_mara_2B757414-ED99-4964-96FC-C76DC6512DD0
 #+BEGIN_SRC sh
-brew install homebrew/gui/inkscape
+brew cask install inkscape
 #+END_SRC
 
 ***** gimp
