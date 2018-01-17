@@ -4123,6 +4123,8 @@ cd ~/git/github-anonymous
 git clone https://github.com/altercation/solarized.git
 git clone https://github.com/encharm/Font-Awesome-SVG-PNG
 git clone https://github.com/dwyl/english-words.git
+git clone https://github.com/LearnWebCode/json-example.git
+git clone https://github.com/codefresh-io/yaml-examples.git
 #+end_src
 
 At this point, the Bash initialization files point at the directory with my
