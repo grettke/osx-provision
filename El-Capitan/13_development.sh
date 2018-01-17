@@ -20,6 +20,18 @@ veof
 cd ~/
 # org_gcr_2017-05-12_mara_88321593-1A4B-46A2-AC58-A42C6B24F1C2 ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-01-17_mara_A27CD30B-8EE7-4F98-919D-68E170038150][org_gcr_2018-01-17_mara_A27CD30B-8EE7-4F98-919D-68E170038150]]
+cd ~/
+rm -rf ~/yamllint
+mkdir -p ~/yamllint
+cd ~/yamllint
+vens
+veon
+pip install yamllint
+veof
+cd ~/
+# org_gcr_2018-01-17_mara_A27CD30B-8EE7-4F98-919D-68E170038150 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_D02A1D1B-25D6-4D30-9D81-6E1F3E59AC20][org_gcr_2017-05-12_mara_D02A1D1B-25D6-4D30-9D81-6E1F3E59AC20]]
 curl -L https://install.perlbrew.pl | bash
 ~/perl5/perlbrew/bin/perlbrew install perl-5.24.0
