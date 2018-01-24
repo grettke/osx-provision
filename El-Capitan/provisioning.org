@@ -3945,6 +3945,15 @@ Server properties:
 - Activate when AC Power On: ☑
 - Open at Login: ☑
 #+END_SRC
+***** Blackmagic Disk Speed Test
+:PROPERTIES:
+:ID:       org_gcr_2018-01-23_mara:4BC52A36-310C-4784-93AE-0257B0B3A11E
+:END:
+#+NAME: org_gcr_2018-01-23_mara_92364F01-6795-4B03-8811-D20BCB38D176
+#+BEGIN_SRC org
+,* Blackmagic Disk Speed Test
+- Always use the smallest file size
+#+END_SRC
 *** SSH and Git
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:52BA0225-96A9-4A56-B130-4A43FDF25DA1
