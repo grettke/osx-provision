@@ -141,5 +141,10 @@ Granting:
 - Preferences
   - Launch Flycut on login: yes
 - Appearance
-  - White scissors
+  - White
+
+* Geekbench
+- Run it.
+- Accept license.
+- Enter license.
 # org_gcr_2017-05-12_mara_BFEC18FA-40CF-4C90-A572-8700944EE344 ends here

@@ -1877,6 +1877,14 @@ brew cask install malwarebytes
 #+BEGIN_SRC sh
 brew cask install flycut
 #+END_SRC
+***** Geekbench
+:PROPERTIES:
+:ID:       org_gcr_2018-01-23_mara:30A9E161-2D43-4B99-A6DE-B87335435D05
+:END:
+#+NAME: org_gcr_2018-01-23_mara_D2FA266D-85A3-4CA5-A196-4E80E7AC354B
+#+BEGIN_SRC sh
+brew cask install geekbench
+#+END_SRC
 ***** Completion
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:419E4ADD-30A3-470F-8858-0DA41B95598D
@@ -2037,7 +2045,12 @@ Granting:
 - Preferences
   - Launch Flycut on login: yes
 - Appearance
-  - White scissors
+  - White
+
+,* Geekbench
+- Run it.
+- Accept license.
+- Enter license.
 #+END_SRC
 
 *** Utility

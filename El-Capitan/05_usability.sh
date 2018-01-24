@@ -58,6 +58,10 @@ brew cask install malwarebytes
 brew cask install flycut
 # org_gcr_2017-11-12_mara_978C02D7-9C7B-4B4F-8CC2-298B5329BF60 ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-01-23_mara_D2FA266D-85A3-4CA5-A196-4E80E7AC354B][org_gcr_2018-01-23_mara_D2FA266D-85A3-4CA5-A196-4E80E7AC354B]]
+brew cask install geekbench
+# org_gcr_2018-01-23_mara_D2FA266D-85A3-4CA5-A196-4E80E7AC354B ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB][org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB]]
 echo "Script is done"
 # org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB ends here
