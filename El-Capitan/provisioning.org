@@ -1885,6 +1885,14 @@ brew cask install flycut
 #+BEGIN_SRC sh
 brew cask install geekbench
 #+END_SRC
+***** DaisyDisk
+:PROPERTIES:
+:ID:       org_gcr_2018-01-23_mara:90E6EE5E-B738-42E0-AE60-EBCF33F9035B
+:END:
+#+NAME: org_gcr_2018-01-23_mara_9B535D8D-868D-4004-BBA1-A7FEFC9939DC
+#+BEGIN_SRC sh
+brew cask install daisydisk
+#+END_SRC
 ***** Completion
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:419E4ADD-30A3-470F-8858-0DA41B95598D
@@ -2051,6 +2059,9 @@ Granting:
 - Run it.
 - Accept license.
 - Enter license.
+
+,* DaisyDisk
+- License it.
 #+END_SRC
 
 *** Utility
