@@ -1975,23 +1975,26 @@ Granting:
   - For apps that want to call homen do forever
 
 - Gen
-  - Show inactive warning
-  - Silent mode: no
-  - Show status in menu bar.
+  - YES Show satus in the menu bar
+  - YES Show inactive warning
+  - Operation mode: Alert
+  - Use managed rules for macOS Services and iCloud
 - Alert:
-  - Detail level: Show full details
   - Yes: Confirm automatically
   - NO: Confirm with return and escape.
     - Can use control-return and command-return intead
+  - Detail level: Show full details
 - Monitor:
+  - On: Network monitor
   - Keyboard shortcut: Off
   - Show network activity in menu bar.
     - Show data rates numerically. Monochrome.
-  - Show auto when mouse enters. Hide in 2s.
+  - NO: Show auto when mouse enters. Hide in 2s.
 - APS
   - Yes: Enable automatic profile switching
     - When joining: Ask
   - Yes: Save geolocation of networks.
+  - Yes: Distinguish OPenVPN remote servers
 - Security
   - Allow rules and profile edit.
   - Allow profile switch.
