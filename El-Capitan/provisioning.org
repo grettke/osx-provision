@@ -3778,6 +3778,15 @@ Set Dictation & Text to Speech to: Callie
 
 Install the [[http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=229&pcid=41][PL2303 Driver]].
 
+**** Pulse Messenger
+:PROPERTIES:
+:ID:       org_gcr_2018-01-25_mara:9376AA6E-6BBF-465B-A6D6-A27376F563A5
+:END:
+#+NAME: org_gcr_2018-01-25_mara_8E2F6C65-8C83-4C2D-BB90-072429524A4C
+#+BEGIN_SRC org
+,* Pulse Messenger
+- Install and register
+#+END_SRC
 **** App Store Installs
    :PROPERTIES:
    :ID:       org_gcr_2017-05-12_mara:AC034850-5D7A-492F-B2E3-55167B7B1C25
