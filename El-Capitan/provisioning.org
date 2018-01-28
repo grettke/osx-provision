@@ -1705,6 +1705,14 @@ cd ~/git/github-anonymous
 git clone https://github.com/Homebrew/homebrew.git
 git clone https://github.com/caskroom/homebrew-cask.git
 #+END_SRC
+****** GNU Core Utilities
+:PROPERTIES:
+:ID:       org_gcr_2018-01-25_mara:44354A23-99A3-4A52-98F8-708CDDD1E736
+:END:
+#+NAME: org_gcr_2018-01-25_mara_9783633F-1314-4A17-B057-ECBE72BA782A
+#+BEGIN_SRC sh
+brew install coreutils
+#+END_SRC
 ****** Complete
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:9C6C763C-5676-407E-8C14-77B2D6615873

@@ -75,6 +75,10 @@ git clone https://github.com/Homebrew/homebrew.git
 git clone https://github.com/caskroom/homebrew-cask.git
 # org_gcr_2017-05-12_mara_E3924B58-B0D8-4FEB-8C75-2CDE56647E2C ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-01-25_mara_9783633F-1314-4A17-B057-ECBE72BA782A][org_gcr_2018-01-25_mara_9783633F-1314-4A17-B057-ECBE72BA782A]]
+brew install coreutils
+# org_gcr_2018-01-25_mara_9783633F-1314-4A17-B057-ECBE72BA782A ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB][org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB]]
 echo "Script complete"
 # org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB ends here
