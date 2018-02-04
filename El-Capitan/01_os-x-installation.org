@@ -121,7 +121,7 @@ diskutil unmount /dev/disk0s8
       - Shortcut: Press Control-Command-Option-D
     - Text 2 Speech
       - Voice: Cepstral Preference
-      - Rate: \frac14 left of Normal
+      - Rate: Normal
       - Speak selected text on key: Control-Command-Option S
   - Date & Time: *NA*
   - Startup Disk: *NA*
