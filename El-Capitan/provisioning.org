@@ -881,7 +881,7 @@ diskutil unmount /dev/disk0s8
       - Increase contrast
         - Automatically Reduces transparency
       - Contrast: Normal
-      - Cursor size: At 20% mark between Normal and Large
+      - Cursor size: 50%
       - YES Shake mouse pointer to locate  - Cepestral Voices
     - See below
   - Zoom
