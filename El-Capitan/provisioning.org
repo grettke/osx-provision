@@ -4316,7 +4316,7 @@ Set up my TeX stuff for KOMA-script. Backup the default configuration first.
 ls /usr/local/texlive/2016
 sudo cp /usr/local/texlive/2016/texmf.cnf /usr/local/texlive/2016/texmf.cnf-`date '+%Y_%m_%d__%H_%M_%S'`
 ls /usr/local/texlive/2016
-sudo tlmgr conf texmf TEXMFHOME ~/git/bitbucket/texmf/
+sudo tlmgr conf texmf TEXMFHOME ~/git/gitlab/texmf/
 ,#+end_src
 
 Check that the path is really updated.
