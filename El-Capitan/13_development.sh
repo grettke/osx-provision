@@ -4,8 +4,8 @@ brew cask install deltawalker
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_C91E9080-A185-4BA7-ABB8-4EBA21E3FA31][org_gcr_2017-05-12_mara_C91E9080-A185-4BA7-ABB8-4EBA21E3FA31]]
 brew install python
-pip install virtualenv
-pip install --upgrade pip setuptools virtualenv
+pip2.7 install virtualenv
+pip2.7 install --upgrade pip setuptools virtualenv
 # org_gcr_2017-05-12_mara_C91E9080-A185-4BA7-ABB8-4EBA21E3FA31 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_88321593-1A4B-46A2-AC58-A42C6B24F1C2][org_gcr_2017-05-12_mara_88321593-1A4B-46A2-AC58-A42C6B24F1C2]]
@@ -15,7 +15,7 @@ mkdir -p ~/proselint
 cd ~/proselint
 vens
 veon
-pip install proselint
+pip2.7 install proselint
 veof
 cd ~/
 # org_gcr_2017-05-12_mara_88321593-1A4B-46A2-AC58-A42C6B24F1C2 ends here
@@ -27,7 +27,7 @@ mkdir -p ~/yamllint
 cd ~/yamllint
 vens
 veon
-pip install yamllint
+pip2.7 install yamllint
 veof
 cd ~/
 # org_gcr_2018-01-17_mara_A27CD30B-8EE7-4F98-919D-68E170038150 ends here

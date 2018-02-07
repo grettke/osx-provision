@@ -2949,8 +2949,8 @@ Install Python 2 and virtualenv.
 #+NAME: org_gcr_2017-05-12_mara_C91E9080-A185-4BA7-ABB8-4EBA21E3FA31
 #+BEGIN_SRC sh
 brew install python
-pip install virtualenv
-pip install --upgrade pip setuptools virtualenv
+pip2.7 install virtualenv
+pip2.7 install --upgrade pip setuptools virtualenv
 #+END_SRC
 
 ***** Proselint
@@ -2968,7 +2968,7 @@ mkdir -p ~/proselint
 cd ~/proselint
 vens
 veon
-pip install proselint
+pip2.7 install proselint
 veof
 cd ~/
 #+END_SRC
@@ -2985,7 +2985,7 @@ mkdir -p ~/yamllint
 cd ~/yamllint
 vens
 veon
-pip install yamllint
+pip2.7 install yamllint
 veof
 cd ~/
 #+END_SRC
