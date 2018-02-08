@@ -3014,11 +3014,11 @@ cpanm install Text::Unidecode
 :ID:       org_gcr_2017-05-12_mara:378DED14-EB2C-440C-AC4F-B52F10A988B2
 :END:
 
-For everything beyond the built in.
+Manage multiple versions.
 
 #+NAME: org_gcr_2017-05-12_mara_CB12AE91-2573-4886-85B1-56F2EA62062E
 #+BEGIN_SRC sh
-brew install ruby
+brew install rbenv
 #+END_SRC
 ***** Chez Scheme
 :PROPERTIES:
@@ -3556,6 +3556,26 @@ brew cask install sequel-pro
       - Editor font: DejaVuSansMono
       - Font size: 12
       - Editor theme: Solarized Dark
+,* Rbenv
+
+Steps:
+- It is already installed by brew
+- Run this: rbenv init
+  - And update your environment setup
+- Run this: curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+  - And make sure that it works.
+- Install some Ruby versions
+  - Find out what is the current stable version [[https://www.ruby-lang.org/en/downloads/][here]]
+    - 2.5.0 on 2018-02-08
+  - Check if it is available: rbenv install -l | grep 2.5.0
+  - Install it: rbenv install 2.5.0
+- Set the global version
+  - rbenv global 2.5.0
+- Verify that the current version is 2.5.0
+  - I never set a local version so it should always be the global
+  - rbenv version
+- View where gems are stored: gem env home
+- Install Bundler: gem install bundler
 #+END_SRC
 *** Manual
 :PROPERTIES:

@@ -43,7 +43,7 @@ cpanm install Text::Unidecode
 # org_gcr_2017-05-12_mara_D02A1D1B-25D6-4D30-9D81-6E1F3E59AC20 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CB12AE91-2573-4886-85B1-56F2EA62062E][org_gcr_2017-05-12_mara_CB12AE91-2573-4886-85B1-56F2EA62062E]]
-brew install ruby
+brew install rbenv
 # org_gcr_2017-05-12_mara_CB12AE91-2573-4886-85B1-56F2EA62062E ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-07-13_mara_1E3E6EF0-544C-4903-A64D-322223B3309C][org_gcr_2017-07-13_mara_1E3E6EF0-544C-4903-A64D-322223B3309C]]
