@@ -7,6 +7,7 @@ rm -rf ~/src/pretty-mode
 rm -rf ~/src/use-package
 rm -rf ~/src/reveal.js
 rm -rf ~/src/go-hydra
+rm -rf ~/src/emacs-batteries-included
 cd ~/src
 echo `date +%Y-%m-%dT%H:%M:%S%z`
 git clone git://orgmode.org/org-mode.git
@@ -21,4 +22,5 @@ git clone github-`whoami`:grettke/pretty-mode.git
 git clone https://github.com/jwiegley/use-package.git
 git clone https://github.com/hakimel/reveal.js.git
 git clone gitlab-`whoami`:grettke/go-hydra.git
+git clone github-`whoami`:grettke/emacs-batteries-included.git
 # org_gcr_2017-05-12_mara_9ED0592E-A409-4049-BD98-DD5151723C1A ends here
