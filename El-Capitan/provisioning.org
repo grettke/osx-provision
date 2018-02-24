@@ -3815,6 +3815,37 @@ Install the [[http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=229&pcid=41][P
 ,* Pulse Messenger
 - Install and register
 #+END_SRC
+**** Gramps
+:PROPERTIES:
+:ID:       org_gcr_2018-02-24_mara:4B00917C-29D0-42E0-86D3-F35E086DDF15
+:END:
+***** Use The Persisted Data
+:PROPERTIES:
+:ID:       org_gcr_2018-02-24_mara:41317A61-9E7A-4E43-9BA1-4A30C251A605
+:END:
+- Pull application data
+  #+name: org_gcr_2018-02-24_mara_6901C47A-7D9B-4F9A-AD20-FADAB8FEF44B
+  #+begin_src sh :tangle no
+git clone gitlab-gcr:grettke/gramps.git ~/git/gitlab/gramps
+  #+end_src
+- (Re)Install and (re)prepare directories without running it (before its data directory is created)
+  #+name: org_gcr_2018-02-24_mara_80FC8AA9-5D9C-4CAC-97AF-4B74B04C25F8
+  #+begin_src sh :tangle no
+brew cask remove gramps
+rm ~/Library/Application\ Support/gramps
+ln -s ~/git/gitlab/gramps ~/Library/Application\ Support/gramps
+brew cask install gramps
+  #+end_src
+- Start it and you should see the database and preferences
+***** Create The Persisted Data
+:PROPERTIES:
+:ID:       org_gcr_2018-02-24_mara:25BDA90B-8B10-4530-9A16-83B3113E97A0
+:END:
+- Create a new Git project (for this example using the names in the "Use Persisted Data")
+- Follow the same setup directions as in "Use The Persisted Data"
+- This leaves you with empty folders: Gramps hasn't been initialized yet. Openening it initilizes it.
+- Open Gramps and then immediately close it without having changed anything anywhere
+- Add this to Git: it is the starting point of your project.
 **** App Store Installs
    :PROPERTIES:
    :ID:       org_gcr_2017-05-12_mara:AC034850-5D7A-492F-B2E3-55167B7B1C25
