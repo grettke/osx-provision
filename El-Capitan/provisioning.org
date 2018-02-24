@@ -2057,7 +2057,7 @@ Granting:
 
 ,* Malwarebytes
 - License pro version
-- Disable Real-Time Protection
+- Enable Real-Time Protection
 
 ,* Flycut
 - (Changed from default)
