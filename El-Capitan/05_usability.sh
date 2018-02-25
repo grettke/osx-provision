@@ -35,7 +35,7 @@ fi
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_9F387AF4-1A72-4D36-866B-4AF99B771776][org_gcr_2017-05-12_mara_9F387AF4-1A72-4D36-866B-4AF99B771776]]
 brew cask install xquartz
-defaults write org.macosforge.xquartz.X11 dpi -int 170
+defaults write org.macosforge.xquartz.X11 dpi -int 105
 # org_gcr_2017-05-12_mara_9F387AF4-1A72-4D36-866B-4AF99B771776 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_60488E6B-8459-40A4-8811-1B146A6802EC][org_gcr_2017-05-12_mara_60488E6B-8459-40A4-8811-1B146A6802EC]]

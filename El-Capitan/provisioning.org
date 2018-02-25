@@ -1839,7 +1839,7 @@ fi
 #+NAME: org_gcr_2017-05-12_mara_9F387AF4-1A72-4D36-866B-4AF99B771776
 #+BEGIN_SRC sh
 brew cask install xquartz
-defaults write org.macosforge.xquartz.X11 dpi -int 170
+defaults write org.macosforge.xquartz.X11 dpi -int 105
 #+END_SRC
 ***** Tuxera NTFS
 :PROPERTIES:
@@ -2049,6 +2049,11 @@ Granting:
 
 ,* XQuartz
 
+- Figure out the best DPI for XQuartz
+  - Read [[https://www.xquartz.org/FAQs.html][this]]
+  - Check Acrobat's settings
+  - Play around with it comparing it to the menu-bar
+- Update it in the script
 - Log out and back in again
 
 ,* Inkscape

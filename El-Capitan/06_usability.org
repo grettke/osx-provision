@@ -129,6 +129,11 @@ Granting:
 
 * XQuartz
 
+- Figure out the best DPI for XQuartz
+  - Read [[https://www.xquartz.org/FAQs.html][this]]
+  - Check Acrobat's settings
+  - Play around with it comparing it to the menu-bar
+- Update it in the script
 - Log out and back in again
 
 * Inkscape
