@@ -2558,6 +2558,8 @@ brew cask install screenflow
   - Fixed my X startup. Removed a check for non-interactive shells from "doing things".
     turns out that X is a non-interactive shell.
   - Corrected install command: Cask not Brew.
+- <2018-02-24 Sat>
+  - Be at ease: it takes one or two minutes to start up
 
 #+NAME: org_gcr_2017-05-12_mara_2B757414-ED99-4964-96FC-C76DC6512DD0
 #+BEGIN_SRC sh
