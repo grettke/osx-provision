@@ -1840,6 +1840,7 @@ fi
 #+BEGIN_SRC sh
 brew cask install xquartz
 defaults write org.macosforge.xquartz.X11 dpi -int 105
+brew install wmctrl
 #+END_SRC
 ***** Tuxera NTFS
 :PROPERTIES:
