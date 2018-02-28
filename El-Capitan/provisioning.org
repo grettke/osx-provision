@@ -4283,10 +4283,12 @@ Set up =util= scripts.
 
 #+NAME: org_gcr_2017-06-18_mara_4833AB48-1C15-4E4E-A767-F2711FFDAAE5
 #+BEGIN_SRC sh
-cd ~/
-rm -rf ~/util
+cd ~/src
+rm -rf util
 git clone gitlab-`whoami`:grettke/util.git
-cd ~/
+rm ~/util
+ln -s ~/src/util ~/util
+cd
 #+END_SRC
 
 *** Org-Mode
