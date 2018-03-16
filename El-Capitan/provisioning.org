@@ -3112,7 +3112,6 @@ alias emacs="open /usr/local/opt/emacs-mac/Emacs.app --new --args $1"
 #+BEGIN_SRC sh
 brew install emacs \
      --with-cocoa \
-     --with-dbus \
      --with-gnutls \
      --with-imagemagick@6 \
      --with-librsvg \

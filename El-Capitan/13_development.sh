@@ -80,7 +80,6 @@ brew install git-flow-avh
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5][org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5]]
 brew install emacs \
      --with-cocoa \
-     --with-dbus \
      --with-gnutls \
      --with-imagemagick@6 \
      --with-librsvg \
