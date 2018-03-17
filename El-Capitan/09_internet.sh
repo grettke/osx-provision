@@ -109,3 +109,7 @@ brew install speedtest_cli
      # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-11-01_mara_0F91CE3D-3F59-4351-A0D3-AE383CC9BB47][org_gcr_2017-11-01_mara_0F91CE3D-3F59-4351-A0D3-AE383CC9BB47]]
      brew cask install isyncr
      # org_gcr_2017-11-01_mara_0F91CE3D-3F59-4351-A0D3-AE383CC9BB47 ends here
+
+     # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-03-17T09-54-29-05-00_mara_6945F43D-4026-4095-960A-D0AF0517FC79][org_gcr_2018-03-17T09-54-29-05-00_mara_6945F43D-4026-4095-960A-D0AF0517FC79]]
+     brew install rsync
+     # org_gcr_2018-03-17T09-54-29-05-00_mara_6945F43D-4026-4095-960A-D0AF0517FC79 ends here

@@ -2665,6 +2665,14 @@ brew install mp3gain
 #+BEGIN_SRC sh
 brew cask install isyncr
 #+END_SRC
+***** rsync
+:PROPERTIES:
+:ID:       org_gcr_2018-03-17T09-54-29-05-00_mara:D9B66EA3-7124-4EDC-A171-2943B986E574
+:END:
+#+name: org_gcr_2018-03-17T09-54-29-05-00_mara_6945F43D-4026-4095-960A-D0AF0517FC79
+#+begin_src sh
+brew install rsync
+#+end_src
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "10_internet.org"
