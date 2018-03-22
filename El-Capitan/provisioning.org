@@ -1667,6 +1667,12 @@ brew cask install font-unifrakturcook
 brew cask install font-unifrakturmaguntia
 #+END_SRC
 
+Utilities.
+
+#+name: org_gcr_2018-03-21T11-56-35-05-00_mara_9769893B-7CC8-4097-A9DF-19BB6532D1DA
+#+begin_src sh
+brew install fondu
+#+end_src
 ****** Terminal
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:C0008D7A-28D0-4FDD-994E-4E50DB34ACAA

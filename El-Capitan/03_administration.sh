@@ -59,6 +59,10 @@ brew cask install font-unifrakturcook
 brew cask install font-unifrakturmaguntia
 # org_gcr_2017-05-12_mara_57293DFD-7465-4AE6-9FCB-AF240AFEA14C ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-03-21T11-56-35-05-00_mara_9769893B-7CC8-4097-A9DF-19BB6532D1DA][org_gcr_2018-03-21T11-56-35-05-00_mara_9769893B-7CC8-4097-A9DF-19BB6532D1DA]]
+brew install fondu
+# org_gcr_2018-03-21T11-56-35-05-00_mara_9769893B-7CC8-4097-A9DF-19BB6532D1DA ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_55BC0C54-06BC-4D75-84AA-587B1C282E80][org_gcr_2017-05-12_mara_55BC0C54-06BC-4D75-84AA-587B1C282E80]]
 rm -rf ~/git/github-anonymous/osx-terminal.app-colors-solarized
 cd ~/git/github-anonymous
