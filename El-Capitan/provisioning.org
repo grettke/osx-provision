@@ -2174,6 +2174,14 @@ brew cask install marked
 #+BEGIN_SRC sh
 brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
 #+END_SRC
+***** icoutils
+:PROPERTIES:
+:ID:       org_gcr_2018-03-23T12-00-28-05-00_mara:9218E86D-B71F-4D62-BF14-297F52A5A8D8
+:END:
+#+name: org_gcr_2018-03-23T12-00-28-05-00_mara_E1EC5C26-75A4-444D-9D76-722808D6FE23
+#+begin_src sh
+brew install icoutils
+#+end_src
 ***** povray
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:1BF19A26-CAF1-4A15-B468-975B2AAE3618
