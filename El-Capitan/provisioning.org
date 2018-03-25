@@ -2157,6 +2157,14 @@ brew install graphviz
 #+BEGIN_SRC sh
 brew install pandoc
 #+END_SRC
+***** Markdown
+:PROPERTIES:
+:ID:       org_gcr_2018-03-24T17-49-08-05-00_mara:2B5559FB-6F41-48CE-8716-142AF114C3FE
+:END:
+#+name: org_gcr_2018-03-24T17-49-08-05-00_mara_51EFA29B-B7AC-4F54-BD7D-022E986C2ED4
+#+begin_src sh
+brew install markdown
+#+end_src
 ***** Marked 2
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:DADDC9A6-B5DB-4AF4-A58A-57B27834FEA9

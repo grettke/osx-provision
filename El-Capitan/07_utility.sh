@@ -26,6 +26,10 @@ brew install graphviz
 brew install pandoc
 # org_gcr_2017-05-12_mara_37B0A99E-3144-4DB6-BF73-8CFAC09F2AF9 ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-03-24T17-49-08-05-00_mara_51EFA29B-B7AC-4F54-BD7D-022E986C2ED4][org_gcr_2018-03-24T17-49-08-05-00_mara_51EFA29B-B7AC-4F54-BD7D-022E986C2ED4]]
+brew install markdown
+# org_gcr_2018-03-24T17-49-08-05-00_mara_51EFA29B-B7AC-4F54-BD7D-022E986C2ED4 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_7376CE1D-C112-4D86-90F4-10BCFCE154E6][org_gcr_2017-05-12_mara_7376CE1D-C112-4D86-90F4-10BCFCE154E6]]
 brew cask install marked
 # org_gcr_2017-05-12_mara_7376CE1D-C112-4D86-90F4-10BCFCE154E6 ends here
@@ -33,10 +37,6 @@ brew cask install marked
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_0AF38E91-A81B-4D28-A834-0DF26F3898E3][org_gcr_2017-05-12_mara_0AF38E91-A81B-4D28-A834-0DF26F3898E3]]
 brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
 # org_gcr_2017-05-12_mara_0AF38E91-A81B-4D28-A834-0DF26F3898E3 ends here
-
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-03-23T12-00-28-05-00_mara_E1EC5C26-75A4-444D-9D76-722808D6FE23][org_gcr_2018-03-23T12-00-28-05-00_mara_E1EC5C26-75A4-444D-9D76-722808D6FE23]]
-brew install icoutils
-# org_gcr_2018-03-23T12-00-28-05-00_mara_E1EC5C26-75A4-444D-9D76-722808D6FE23 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_02A7BE9E-D9BD-4BBD-BC55-094C22F8D8B9][org_gcr_2017-05-12_mara_02A7BE9E-D9BD-4BBD-BC55-094C22F8D8B9]]
 brew install povray --with-openexr
