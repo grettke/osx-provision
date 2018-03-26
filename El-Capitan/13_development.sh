@@ -189,3 +189,7 @@ brew cask install mamp
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-10-23_mara_EB19B642-F0A4-465A-8AE1-372533560289][org_gcr_2017-10-23_mara_EB19B642-F0A4-465A-8AE1-372533560289]]
 brew cask install sequel-pro
 # org_gcr_2017-10-23_mara_EB19B642-F0A4-465A-8AE1-372533560289 ends here
+
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-03-25T00-45-40-05-00_mara_A28478F1-2909-46E3-9B27-2F0C68FE4C40][org_gcr_2018-03-25T00-45-40-05-00_mara_A28478F1-2909-46E3-9B27-2F0C68FE4C40]]
+brew install make --with-guile@2.0
+# org_gcr_2018-03-25T00-45-40-05-00_mara_A28478F1-2909-46E3-9B27-2F0C68FE4C40 ends here

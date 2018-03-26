@@ -3377,6 +3377,14 @@ brew cask install mamp
 #+BEGIN_SRC sh
 brew cask install sequel-pro
 #+END_SRC
+***** make
+:PROPERTIES:
+:ID:       org_gcr_2018-03-25T00-45-40-05-00_mara:E36BB250-AC54-40F3-979B-CEBF10677EA2
+:END:
+#+name: org_gcr_2018-03-25T00-45-40-05-00_mara_A28478F1-2909-46E3-9B27-2F0C68FE4C40
+#+begin_src sh
+brew install make --with-guile@2.0
+#+end_src
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "14_development.org"
