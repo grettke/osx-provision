@@ -43,7 +43,16 @@ diskutil unmount /dev/disk0s8
   - Desktop & Screensaver
     - *(Host)*: "Message", 10m
     - *(Guest)*: "Message", 5m
-  - Dock: *NA*
+  - Dock
+    - Size: Largest
+    - Magnification: Off
+    - Position: Left
+    - Manes windows using: Genie Effect
+    - Double clicking a title bar: zoom
+    - Minimize windows into application icon: Yes
+    - Animate opening apps: Yes
+    - Auto hide/show dock: Yes
+    - Show indicator for open apps: Yes
   - Mission Control: *NA*
   - Language & Region: *NA*
   - Security & Privacy: *NA*
