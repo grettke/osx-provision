@@ -2631,6 +2631,14 @@ brew install librsvg
 #+begin_src sh
 brew install jpegoptim
 #+end_src
+***** optipng
+:PROPERTIES:
+:ID:       org_gcr_2018-03-31T20-45-48-05-00_mara:A42203A8-9C48-4E5D-95C7-2354A44F799B
+:END:
+#+name: org_gcr_2018-03-31T20-45-48-05-00_mara_9BAA13C4-534C-4CD6-87BE-C75E547D80E3
+#+begin_src sh
+brew install optipng
+#+end_src
 ***** airy
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:EA02ED57-7DED-40F0-819A-26BE2A237C18
