@@ -2623,6 +2623,14 @@ For ~rsvg-convert~.
 #+BEGIN_SRC sh
 brew install librsvg
 #+END_SRC
+***** jpegoptim
+:PROPERTIES:
+:ID:       org_gcr_2018-03-31T20-45-48-05-00_mara:23F5C914-9092-4402-B248-0CCF38306022
+:END:
+#+name: org_gcr_2018-03-31T20-45-48-05-00_mara_69E779D8-21A0-4275-ABFB-2A59DF6EC194
+#+begin_src sh
+brew install jpegoptim
+#+end_src
 ***** airy
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:EA02ED57-7DED-40F0-819A-26BE2A237C18

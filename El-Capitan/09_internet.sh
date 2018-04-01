@@ -82,6 +82,10 @@ brew install speedtest_cli
      brew install librsvg
      # org_gcr_2017-07-11_mara_AB43CB70-381C-4C4D-AF4C-CC7C895D1848 ends here
 
+     # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-03-31T20-45-48-05-00_mara_69E779D8-21A0-4275-ABFB-2A59DF6EC194][org_gcr_2018-03-31T20-45-48-05-00_mara_69E779D8-21A0-4275-ABFB-2A59DF6EC194]]
+     brew install jpegoptim
+     # org_gcr_2018-03-31T20-45-48-05-00_mara_69E779D8-21A0-4275-ABFB-2A59DF6EC194 ends here
+
      # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_EE89A131-05A3-4521-B304-301F5B89A5CD][org_gcr_2017-05-12_mara_EE89A131-05A3-4521-B304-301F5B89A5CD]]
      brew cask install airy
      # org_gcr_2017-05-12_mara_EE89A131-05A3-4521-B304-301F5B89A5CD ends here
