@@ -216,3 +216,23 @@ Server properties:
 * Blackmagic Disk Speed Test
 - Always use the smallest file size
 # org_gcr_2018-01-23_mara_92364F01-6795-4B03-8811-D20BCB38D176 ends here
+
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-04-04T12-17-23-05-00_mara_259C6998-F024-4F2E-AF69-7EAF2E656C62][org_gcr_2018-04-04T12-17-23-05-00_mara_259C6998-F024-4F2E-AF69-7EAF2E656C62]]
+* HazeOver
+- General
+  - Percent haze: 20%
+  - Enable Hazeover: YES
+  - Start at login: YES
+  - Show status on menubar: YES
+- Advanced
+  - Shortcut: No
+  - Background color: Black
+    Highlight: One window only
+  - Animation: 0.25s
+- Displays
+  - Choose:
+    - YES: Dim all windows on displays without keyboard focus
+    - NO: Highlight windows on displays without keyboard focus
+  - Show when secondary display is connected? YES
+  - Allow accessibility features? YES
+# org_gcr_2018-04-04T12-17-23-05-00_mara_259C6998-F024-4F2E-AF69-7EAF2E656C62 ends here

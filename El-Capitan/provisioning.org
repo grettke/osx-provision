@@ -4096,6 +4096,30 @@ Server properties:
 ,* Blackmagic Disk Speed Test
 - Always use the smallest file size
 #+END_SRC
+***** HazeOver
+:PROPERTIES:
+:ID:       org_gcr_2018-04-04T12-17-23-05-00_mara:50B78A72-A304-4246-B1D6-2E27843C4326
+:END:
+#+name: org_gcr_2018-04-04T12-17-23-05-00_mara_259C6998-F024-4F2E-AF69-7EAF2E656C62
+#+begin_src org
+,* HazeOver
+- General
+  - Percent haze: 20%
+  - Enable Hazeover: YES
+  - Start at login: YES
+  - Show status on menubar: YES
+- Advanced
+  - Shortcut: No
+  - Background color: Black
+    Highlight: One window only
+  - Animation: 0.25s
+- Displays
+  - Choose:
+    - YES: Dim all windows on displays without keyboard focus
+    - NO: Highlight windows on displays without keyboard focus
+  - Show when secondary display is connected? YES
+  - Allow accessibility features? YES
+#+end_src
 *** SSH and Git
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:52BA0225-96A9-4A56-B130-4A43FDF25DA1
