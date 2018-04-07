@@ -46,6 +46,8 @@ brew tap caskroom/fonts
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_57293DFD-7465-4AE6-9FCB-AF240AFEA14C][org_gcr_2017-05-12_mara_57293DFD-7465-4AE6-9FCB-AF240AFEA14C]]
 brew cask install font-dejavu-sans
+brew cask install font-fira-mono
+brew cask install font-fira-sans
 brew cask install font-fontawesome
 brew cask install font-icomoon
 brew cask install font-mfizz
