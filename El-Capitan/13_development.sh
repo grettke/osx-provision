@@ -193,3 +193,15 @@ brew cask install sequel-pro
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-03-25T00-45-40-05-00_mara_A28478F1-2909-46E3-9B27-2F0C68FE4C40][org_gcr_2018-03-25T00-45-40-05-00_mara_A28478F1-2909-46E3-9B27-2F0C68FE4C40]]
 brew install make --with-guile@2.0
 # org_gcr_2018-03-25T00-45-40-05-00_mara_A28478F1-2909-46E3-9B27-2F0C68FE4C40 ends here
+
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-04-09T19-27-23-05-00_mara_4F071667-58DE-427E-A738-A222180928EA][org_gcr_2018-04-09T19-27-23-05-00_mara_4F071667-58DE-427E-A738-A222180928EA]]
+cd ~/
+rm -rf ~/vcard
+mkdir -p ~/vcard
+cd ~/vcard
+vens
+veon
+pip2.7 install vcard
+veof
+cd ~/
+# org_gcr_2018-04-09T19-27-23-05-00_mara_4F071667-58DE-427E-A738-A222180928EA ends here

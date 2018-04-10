@@ -3412,6 +3412,22 @@ brew cask install sequel-pro
 #+begin_src sh
 brew install make --with-guile@2.0
 #+end_src
+***** vcard
+:PROPERTIES:
+:ID:       org_gcr_2018-04-09T19-27-23-05-00_mara:0A132F34-8034-404B-A4C0-3B7E80BBD3F4
+:END:
+#+name: org_gcr_2018-04-09T19-27-23-05-00_mara_4F071667-58DE-427E-A738-A222180928EA
+#+begin_src sh
+cd ~/
+rm -rf ~/vcard
+mkdir -p ~/vcard
+cd ~/vcard
+vens
+veon
+pip2.7 install vcard
+veof
+cd ~/
+#+end_src
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "14_development.org"
