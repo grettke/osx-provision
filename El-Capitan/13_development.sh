@@ -3,7 +3,7 @@ brew cask install deltawalker
 # org_gcr_2017-05-12_mara_7281D794-15F4-4C0B-BCEB-E6BD05E5DF0B ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_C91E9080-A185-4BA7-ABB8-4EBA21E3FA31][org_gcr_2017-05-12_mara_C91E9080-A185-4BA7-ABB8-4EBA21E3FA31]]
-brew install python
+brew install python@2
 pip2.7 install virtualenv
 pip2.7 install --upgrade pip setuptools virtualenv
 # org_gcr_2017-05-12_mara_C91E9080-A185-4BA7-ABB8-4EBA21E3FA31 ends here

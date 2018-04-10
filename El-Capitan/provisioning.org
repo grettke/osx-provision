@@ -3013,7 +3013,7 @@ Install Python 2 and virtualenv.
 
 #+NAME: org_gcr_2017-05-12_mara_C91E9080-A185-4BA7-ABB8-4EBA21E3FA31
 #+BEGIN_SRC sh
-brew install python
+brew install python@2
 pip2.7 install virtualenv
 pip2.7 install --upgrade pip setuptools virtualenv
 #+END_SRC
