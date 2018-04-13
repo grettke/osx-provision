@@ -1,0 +1,814 @@
+* STOP!
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:5AD4D059-7133-4A33-A656-548DE34B76B6
+:END:
+:LOGBOOK:
+- Refiled on [2018-04-13 Fri 17:45] \\
+  Separating research from implementation in provision.org.
+:END:
+
+These are *all* of my /personal notes/ on provisioning my boxes. They won't make
+sense unless you read all of them. They are long… you won't want to :). You
+/are/ welcome to read them.
+
+If you are here then you probably only want to see the setup steps. They are a
+subset of this document. They live in =provisioning.md= and get tangled to
+individual files for implementation.
+
+* Goal
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:C0C4D4EC-DB30-44FC-B19E-CF3F7874B23F
+:END:
+
+** Desire
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:C56FF21A-774E-47CE-88CA-91D4CD4406D1
+:END:
+
+- To quickly and easily
+  - Explore cognitive spaces using operating systems and software
+  - Try, fail, learn, improve, and repeat
+  - For expensive operations measured in time and complexity
+    - Minimize their execution time
+      - Central Processing Unit (CPU)
+      - Input/Output (IO)
+    - Rebound from failure
+  - Share
+
+** Satisfaction
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:B7B9FAFF-1D63-4C5D-9ECE-2B7859AFAAA5
+:END:
+
+- First-class support for OS X, Windows, Linux and all of their software
+- Manage machines as easily and flexibly as you would with version control
+- Use the fastest devices possible for every operation
+- First class operating system image management
+- Virtual machines (VM)
+
+** Decision
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:C9199445-8662-4535-927A-A47A2A025E41
+:END:
+
+- Current:
+  - Macintosh Computer (Mac)
+  - OS X
+  - VMWare Fusion Professional
+- With /Best/:
+  - Solid State Disk (SSD)
+  - RAM
+  - CPU count and speed
+
+** Lessons Learned
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:80284838-6C68-4B49-A4FF-29B02C36C1C4
+:END:
+
+- Verify easily verifiable operations
+  - Installation scripts often reveal new information
+- Either name things with a meaningful name or a 6 digit UUID from
+  [[https://www.uuidgenerator.net/][Online UUID Generator]]
+  - In the beginning this helped me keep track of disks, VMs, and software;
+    by working through it I found that names were more meaningful, only after
+    developing the sections for the definition (and name)
+- Evidence based; no fantasy or delusion
+  - Decide using experience; in absence make a best decision and move on
+  - It takes at least 3 iterations before things start making sense
+- "Thinking ahead" is crippling
+- Snapshot
+  - After expensive operations
+    - Can always delete them later
+    - Easy to for get how to do
+  - Snapshot frequently; you never know how things will go
+    - You will forget to do this
+    - You will only care after something got wrecked
+- Don't go to sleep in the middle of configuration sections
+- Get the fastest Internet sold before starting
+- Remember that Control-Command-F pressed inside of a host tells VMWare
+  to go to and from full-screen.
+- VMWare's folder sharing
+  - Works perfectly for sharing between two guests a lot of the time. When it
+    quits working I log in and out of one of the guests and it works again
+    - Happens often
+  - Is happy with Finder and unhappy with Eshell, so don't use Eshell in shared
+    directories. They just stop working.
+- Java
+  - Sometimes the installation directory includes the build number. Sometimes
+    it does not.
+- Writing 100% automated idempotent scripts is worth the effort
+  - It is not worth the effort for theoretical reasons because it is usually
+    faster to do it by hand. The first 2 or 3 times you perform a task, it is
+    slow, and then you figure it how to do it all correctly and then you can
+    perform it quickly. You might ask yourself "If I can do it this quickly then
+    why bother automated it?" because of the extra effort. That is a good
+    question. When you are doing it, it is faster to do it by hand. Here is the
+    problem that I ran into: you make mistakes that you find long after the
+    set up. The /right/ thing to do is to correct the documentation/scripts and
+    then rebuild the image. If you left manual steps then you have to do that
+    work all over again. I know this seems obvious, but at the time, it didn't
+    seem worth the effort of automating everything. Now much later, I'm left
+    with a system imaged somewhat differently than the documentation. It is
+    worth the effort to automate everything. The item on snap-shotting makes this
+    easier.
+  - After using them only 2 times you will feel how flexible and fun it makes
+    the whole development process
+- Never allow manual steps
+  - If they are unavoidable then move them all to the same place to get them
+    over with and start the automated part
+- Make VMWare Disk Drive capacity in multiples of 8
+  - That way they can be easily shared and transferred on SD cards
+- VMWare Fusion hard disk size
+  - VMWare does not pre-allocate disk space and doesn't give you the option
+    to do so. This is different than VMWare Workstation and that might surprise
+    you.
+- Spending most of my time on OSX
+  - Started out planning on using 100% OSX. That led me to realize that I
+    value OSS/Emacs the most. So I started to set up Linux. Through that effort
+    I realized how much I've invested on the OSX platform. I felt that not only
+    would it take too much additional effort to migrated to Linux; but more-so
+    that the investment would take away from future work I would be doing on
+    OSX. Both thing are surprising.
+- A new to me option is to download everything and don't configure it until you
+  need it
+  - Pros
+    - Faster setup
+    - Only use what you need
+    - Nothing stopping you from configuring anything; key is to know what you
+      want immediately available when you restore a snapshot or image, assuming
+      that it is not automatically configurable or you don't want to
+      automatically configure it (which is rare)
+- Deleting the RP
+  - DU does not list the RP. CCC does. You work a lot with DU and a little with
+    CCC. When you modify the disk partitions, you have to rebuild the RP with
+    CCC. It is easy to forget to do this. I am not sure now how to restore the
+    RP without a working RP.
+- Utilize compressed disk images
+  - Save space
+  - On the SSD they are fast
+- How to utilize hosts and guests
+  - I had the idea that I would work 100% in the guest because that is simple
+    and familiar. It didn't work out well because audio in Skype was horrible.
+    So I installed Skype in the host and use it there. Now I use both host and
+    guest.
+    - Is it a waste of space to use the same provisioner for both host and
+      guest? No. It is important to have one script that does the right thing
+      instead of having to worry about two boxes. It also fails the goal of
+      having a single transportable and re-usable guest that can easily and
+      completely move between hosts.
+- Always use the present tense for directions and the past tense for notes
+- Software downloads during provisioning often fail
+- =brew= is explicit
+  - You need to pay attention to the command at least once. Some applications
+    will auto-install them self when you try to run them, and that is great.
+    Others don't and run from the Caskroom. Sometimes the latter is fine, other
+    times it is not.
+- Working on identically provisioned boxes where one will replace the other
+  - Easy to confuse them and muck things up on the "good one"
+  - Easy to test valuable changes in the "new one" and blow them away before
+    pushing them to a remote git repo or migrating them back into the "good one"
+    to do so
+  - Forget about what you did where, and blow it away while reverting snapshots
+- Ignore the urge to provision on-the-metal until you've provisioned a box 5-10
+  times and have used it for a month or two without major changes
+  - Every other time will be to soon
+- Backups
+  - Keep everything you value
+    - On another computer
+      - Local or remote
+  - Minimize stress during non-trivial provisioning efforts
+- Download speed is the weakest link
+  - Separate work into separate steps to get downloads finished and configure
+    later
+- Every single provisioning run is different because
+  - You learn new things: want to fix stuff, want to make it better
+  - Things change: new versions, stuff not available
+  - Everything you script ends up being designed around being able to make
+    mistakes
+    - Easily resize partitions
+    - Easily reprovision (idempotent)
+    - Easily recover from unknowns and errors and learning
+
+* Dictionary
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:0772A4A7-7FAF-45CA-BE99-A49083C96E53
+:END:
+
+- Carbon Copy Cloner (CCC)
+- Disk Utility (DU)
+- Install OS X El Capitan Application (IOSXECA)
+  - Application used to
+    - Upgrade current installation to 10.11
+    - Create USB boot-disks to install 10.11
+    - Drag into VMWare Fusion to install guests
+- Pristine Host Operating System Image (PHOSI)
+  - A hard disk imaged from Apple
+- Pristine Host Operating System Disk Image (PHOSDI)
+  - A disk-image created from a ~PHOSI~
+- Recovery Partition (RP)
+
+* Preparation
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:F065B087-EC37-4855-928A-08D565D54EA9
+:END:
+
+** External Drive
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:A90DFA8B-60AD-4AED-BCD3-983F74B548B9
+:END:
+
+Get a 7200RPM 1TB external disk drive with USB3 or Lightning.
+
+Create a partition named =Storage= that is at least 100GB. The =EXT:= naming
+convention is to indicate that it lives on an external device. This is helpful
+to make sense of partitions there versus on the Macintosh HD. That is not part
+of the name of the partition itself. I'll use that naming also to indicate
+computers that contain a single disk drive.
+
+** Software
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:AC36789D-3046-4CC0-BCFC-3093E2964554
+:END:
+
+- Before provisioning software installs, I downloaded these manually and stored
+  them because they are critical to the setup process
+
+*** Carbon Copy Cloner (CCC)
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:7DC6081B-328E-4A78-AFC8-8C8A1CF6534E
+:END:
+
+[[https://bombich.com/][Purchase]] the latest version that supports El Capitan. Download it along with the
+license to =EXT:Storage=. Install it on the =Support Computer=.
+*** VMWare Fusion
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:45F3410A-92A1-4606-A813-709081744E0A
+:END:
+
+[[https://www.vmware.com/products/fusion][Purchase]] a copy and download it to =EXT:Storage=. Download your license key.
+
+** Support Computer
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:1F3D70B1-B148-424B-A106-E8CC6021D675
+:END:
+
+Keep a working Mac nearby. You will use it to work with the contents of
+your Git repositories, research configuration steps, and rest easy knowing that
+you've always got a working machine.
+
+Make sure that it has Internet access and download all of your Git repositories
+required for configuring these machines.
+
+Don't try use your host computer for this role by booting it to an external
+drive; it is too easy to confuse partitions and what you are doing.
+
+Use CCC to clone this Mac's partition, =Support:Macintosh HD=, to a partition on
+=EXT=. The easiest thing to do is to connect =EXT=
+to =Support Computer=. Create a new partition big enough to hold it and perform
+the clone. Name it =EXT:Utility=. Reboot to it to test it.
+
+** Host Computer: 44fad7
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:B4E425EB-CFEB-4A7F-91B4-D8CB93BB908F
+:END:
+
+- Collect the Pristine Host Operating System Image (PHOSI)
+  - Pristine means that it has never been logged into or configured
+  - Has the latest OS X on it with at least the second fix pack or later
+  - Verify that it contains the RP for that OS X on the disk
+    - If the imaging takes less than 10 minutes then they didn't include the
+      RP
+  - You can easily get this from an appointment at the Genius Bar
+- Create the Pristine Host Operating System Disk Image (PHOSDI)
+  - Take your Mac home
+  - Boot from =EXT:Utility=
+  - Use CCC
+    - From the host computer's =PHOSI=, =Host:Macintosh HD=
+    - To
+      - A new =PHOSDI=; *read-only* and *compressed* disk image
+      - Located on =EXT:Storage=
+    - Execute the imaging task
+- Test =PHOSDI=
+  - Boot into =Host:Macintosh HD=, configure it
+  - Boot into =EXT:Support= and re-image =Host:Macintosh HD= from =PHOSDI=
+  - Boot into =Host:Macintosh HD=
+    - It should appear pristine, you need to enter all of the installation
+      information again. This will be re-imaged again soon so don't worry
+      about this.
+  - Copy =EXT:Storage PHOSDI= to =Host:Storage=
+- Create the =Host:Utility= partition using =PHOSDI=
+  - Boot into =EXT:Support=
+  - Create 1 new partition on =Host=, named =Utility=: 16GB
+    - Now there are 3: =Macintosh HD=, =Support=, and =Utility=
+  - Verify that you can
+    - Boot into =Host:Support=
+    - Install CCC
+    - Access the =Storage= partition
+      - CCC images
+      - Disk images
+      - Software
+      - Scripts
+* Notes on Machine Configurations & Snaphots
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:C53E03AB-FBD1-4050-827E-32B9F9DE474D
+:END:
+** Base (09d89d)
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:74C95F25-B3C3-4E48-A35C-A3ADB18E1DB8
+:END:
+
+- Configured with a =sysop= like above
+- Unprovisioned
+- Used for quickly cloning for user for anything
+
+**** Steps
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:D1B13B35-D589-4DA0-BF98-013DC7AE03CA
+:END:
+
+- Obtain ~IOSEXECA~ via the App Store
+  - Can do this on a Mac or in a VM of a prior version of OSX
+  - Back it up to both =External:Storage= and =Host:Storage=
+- Start VMWare Fusion, click File \rarr New, the "Select the Installation Method"
+  dialog appears
+- Create a new machine by dragging the OS X Installer onto the dialog
+- Continue
+- Default configuration don't change anything
+  - 40GB HD, 2 CPU, 2GB RAM seems fine and allows you to have another VM
+    running for notes during configuration
+  - Assuming that 40GB will be enough to allow OS updates as they occur over
+    the lifetime of the operating system
+  - Full-Clones will configure the machine in unique ways not worth capturing
+    here
+- Click Finish
+  - Name it "El Capitan - Base (09d89d)" and leave all of the default machine configuration
+    alone
+- Installation takes 20m every time
+  - Installer reports "35s remaining" accurately, and then 0s remaining
+    inaccurately, and sits there for about 5 minutes
+  - Then it reports 20m remaining, and completes in 15m
+  any personal information or configuration
+- Set up box and create =sysop=, don't configure, don't provision:
+  - Use the name =sysop= and password =sysop=
+  - Don't do it like you set up the host
+  - Don't provision or customize anything
+  - Don't set up printers or resolution
+  - Just create the account and do nothing more
+- Shutdown
+
+**** Snapshots
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:DAF943ED-4579-453D-8D41-2378EBB0D2F9
+:END:
+
+***** First Run (d0a475)
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:FA7E0CE2-6DA6-4EC8-A7A6-BA6D9C322ED0
+:END:
+
+- Installed, created user, shutdown
+- This was the first run
+
+** Personal (3a546a)
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:93F61EAD-55B0-4E0C-B909-1E27556E1819
+:END:
+
+*** Base (3d4a52)
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:25BD7C0F-D63C-4A3B-948A-16E6ACEF2DC3
+:END:
+**** Plan
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:7ACC46BD-C989-45E0-AAF7-73A95984E2F4
+:END:
+- *Full-Clone of 09d89d*
+  - Right Click d0a475 \rarr Create Full Clone\ldots
+  - Named "El Capitan - gcr (3a546a)"
+- Machine configuration
+  - Processors
+    - 3 cores
+      - [[https://pubs.vmware.com/fusion-7/index.jsp?topic=%252Fcom.vmware.fusion.help.doc%252FGUID-4EABCE73-69AB-4665-A5BB-B34C5B736CC7.html][Choosing]]
+    - 6144 RAM
+      - 2048 (2 GiB) for host
+      - Two guests running at the same time
+        - 7168 (7 GiB) each
+    - Enable hypervisor
+    - Enable code profiling
+  - Hard Disk
+    - 250.00 GB HD
+  - Sharing
+    - =Host:Storage=
+- Start the VM
+- Resize the disk
+  - Note that on a real Mac you can't resize a partition that OS X has
+    booted from so you might boot from the RP to perform
+    the resize instead. This doesn't work on the VMWare drive. If you try it,
+    it will fail for a couple of reasons like "The partition is not journaled"
+    or "The operation filed". Instead, boot into the OS and resize the partition
+    there.
+  - Start DU
+  - Choose VMWare Virtual SATA Hard Drive Media
+  - Click "Partition"
+  - Look at it to get a sense of the space for the main partition and what is
+    actually available
+  - Close DU
+  - Read [[https://themacwrangler.wordpress.com/2015/10/21/resizing-el-capitan-mac-volumes-under-vmware-fusion/][this]] for a reference
+  - Open Terminal
+  - Execute:
+    #+NAME: org_gcr_2017-05-12_mara_FD520AD5-AE3C-46E6-9A87-14739313D53F
+    #+BEGIN_SRC sh
+    sudo diskutil resizeVolume / R
+    #+END_SRC
+  - View the results, they should be what you expect
+  - Verify in DU
+- Change =sysop= password
+- Install VMWare Tools
+  - In El Capitan, the display driver works correctly so you can set any
+    resolution via VMWare Fusion. You can verify in the VM.
+- Provision this machine
+  - Use the UUID
+- Perform the "Manual Steps" setup for the sysop user on this box just like the
+  host
+  - The host =sysop= instruction note things unique to the host and guest
+- Provision =sysop=
+- Create, login as, perform the "Manual Steps", and provision =gcr=,
+  log out and in again
+- Install software updates via App Store
+- Shutdown
+
+*** Xcode (39e716)
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:5E4A3AD8-BF38-420C-9A01-CF16023F2889
+:END:
+
+Downloading Xcode takes a long time so snapshot it.
+
+*** VC/Shell (283c98)
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:21DAAC40-B26F-42D1-ADAF-D7CE5329A8ED
+:END:
+
+Originally this was part of the =Writing= setup. I moved all of those steps into a
+script
+
+*** Git
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:0367EFDF-7BD6-4DB2-B1C4-ADEE3BF6CE3F
+:END:
+
+*** gcr
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:54286E09-D465-44DD-879D-2B83064B06D1
+:END:
+
+This box configuration will follow and utilize the manual and automated
+provisioning scripts for the "writing" scenario.
+
+**** Snapshots
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:496A3701-D03C-41F9-9FBC-F2FC32ED8A5D
+:END:
+
+***** 000 (65289699-3B29-48A0-9135-A0BD467CC47E)
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:0DEFBFBF-2A4C-4F2D-A09B-FB614613E52D
+:END:
+
+- Create a new machine using
+  - IOSXECA
+  - Settings
+    - Sharing
+      - Shelf
+      - Mirror
+    - Processors & Memory
+      - Processors: 2
+      - Memory: 5120MB
+        - 7GB for each of the two boxes and 2GB for the host makes the guests
+          too slow
+        - 6GB and 2 boxes made the host run out of memory in a "freak event"
+          that happened on two host systems
+      - Advanced options
+        - Starting to wonder how expensive it is to check these
+        - [X] Enable hypervisor
+        - [X] Enable code profiling
+    - Display
+      - [X] Use full resolution for Retina display
+      - Scaled resolution :: All View Modes
+      - Virtual Machine Resolution
+        - Single Window :: Resize the virtual machine and the window
+        - Full Screen :: Resize the virtual machine to fit the screen
+    - Hard Disk (SATA)
+      - 256GB
+      - Click "Apply"
+- Close the Settings
+- Boot the box <2016-01-08 Fri 19:45>
+- Progress indicator appears <2016-01-08 Fri 19:45>
+- Progress indicator remained on left end for a while
+  - It jumps around between far left and middle
+- Progress indicator closes <2016-01-08 Fri 19:47>
+- Menu appears, chose English <2016-01-08 Fri 19:48>
+- Chose "Install OS X"
+- Continue
+- Continue
+- Agree
+- Agree
+- Macintosh HD (42GB)
+- Install
+- Install sequence begins <2016-01-08 Fri 19:49>
+  - Sometimes it says "About a second remaining" for the entire duration then
+    completes. Other times it shows a countdown to 0 and then says "About a
+    second remaining" for a long time and then says "About 0 seconds remainng"
+    for a while and then completes.
+- Reboots into another install sequence <2016-01-08 Fri 19:54>
+- Progress bar again sits on the left side
+- No message for a while
+- Says "Installing: About 20 minutes remaining" <2016-01-08 Fri 19:55>
+- Keyboard and palm-rest warm <2016-01-08 Fri 19:59>
+- Fan turned on <2016-01-08 Fri 20:00>
+- Another progress indicator appears <2016-01-08 Fri 20:07>
+- Installer completed and "first-boot" screen appeared <2016-01-08 Fri 20:07>
+- Took a snapshot of this running box
+
+***** 001 (47FEE341-D051-4CC0-8C59-324CA57E4CBB)
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:53FF2DB3-F4FE-41B7-9E5F-27D2FC206F6C
+:END:
+
+- Perform only account creation steps for creation of =gcr= following the
+  "Common Manual" flow
+  - Because this is getting snapshotted it only needs to go this far. The goal
+    is to set up the base machine correctly now.
+- Read [[https://themacwrangler.wordpress.com/2015/10/21/resizing-el-capitan-mac-volumes-under-vmware-fusion/][this]] for a reference
+- Open Terminal
+- Execute:
+  #+NAME: org_gcr_2017-05-12_mara_9B11ED65-645A-4A19-A117-860B880FAD83
+  #+BEGIN_SRC sh
+  sudo diskutil resizeVolume / R
+  #+END_SRC
+- View the results, they should be what you expect
+- Verify in DU
+- Install VMWare Tools
+- Test it
+  - Shared Folders
+  - Windows versus Full-Screen
+    - Check resolution in full, and windowed-half-screen
+    - Check it by choosing "Scaled" and after checking it choose
+      "Default for display"
+- Get updates from AppStore
+  - When prompted: Turn on Auto Updates
+- Check for updates again
+- Shutdown
+- Take a snapshot (while box is off)
+
+***** 002 (309AC7C5-FE7F-42F8-8680-BA78B6D7C239)
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:A1E49039-14B5-496E-A38D-0D648E0882C1
+:END:
+
+- Steps are: configuration-writing-01-manual.org
+- Perform the remaining account configuration and Xcode/CLT setup in the
+  "Common Manual", choosing to install Xcode
+  - Don't set up the profile or provision or do anything beyond there
+  - Goal is to snapshot more frequently than just at the divisions between
+    runnning the provisioner scripts (both manual and automated)
+- Check for updates again
+- Shutdown
+- Take a snapshot (while box is off)
+- From here snapshots should occur at script divisions
+
+***** 003 (D9D1B231-DAC8-4EC3-A140-7EC60D4914AF)
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:09EE2A16-CD97-4533-B762-CAC9286E48E0
+:END:
+
+Steps are: configuration-writing-02-automated.sh
+- Follow the directions to run the automated provisioning =02=
+  - Remember: nothing is configured now
+  - Downloads failed 2 times; re-ran the script
+  - Bug when copying over the new profile; re-wrote that part 5 times
+  - =xquartz= installer is slow
+  - =org-mode= checkout is slow
+  - Noticed bugs with how the final Emacs linking goes
+  - Forgot that all of this was untested
+  - Script is happy now
+  - Downloads are slow
+  - Restarting brew sometimes restarts downloads at their original progress
+  - How to drop MacTeX.pkg into the brew cache in case the download never
+    completes?
+    - Read [[http://mygeekdaddy.net/2014/12/05/how-to-install-a-local-file-in-homebrew/][this]]
+    - Tried renaming the pkg to "mactex-latest.pkg, didn't work
+    - Tried renaming it to "mactex-latest.pkg.incomplete", didn't work
+    - Quit trying and kept re-running the download until it completed and
+      installed
+    - Downloading mactex via direct-download is too slow
+  - Out of the 10 tries to finish mactex and fix bugs, I wanted to manually fix
+    things and move on. I didn't, and that is probably good. In the end, the
+    automatic provisioner did it's job and I didn't do anything manually. That
+    is a hard habit to break.
+  - There is a different issue on every run. Sometimes the org-mode git checkout
+    never completes. It sits at 98% forever. Control-Z and re-ran
+- Named box "osiris"
+- That is it; didn't even click around or inspect anything.
+- Kept forgetting to copy the new version of the script onto the box; should
+  automate that
+- Shutdown
+- Take a snapshot (while box is off)
+
+***** 004 (59F8EDFF-5C26-48B2-9CEF-28BDD316B629)
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:CBD51467-7D16-49E7-949B-B0E8E8881431
+:END:
+
+- Steps are: configuration-writing-03-manual.org
+- Manually set the background to the galaxy
+- Bug fix in provisioner
+  - Don't install karabiner on a guest, so, fixed scriptand manually removed
+    from the boxes
+  - VLC doesn't work, replaced it with MPlayer OSX Extended
+  - Added Opera
+  - Added cask project checkout to easily browse Casks
+- Every time I restore the image now I have to make all of the corrections just
+  because I don't want to have to install MacTeX again
+  - Note: All expensive operations should isolated via snapshots in addition to
+    just using them.
+- Stuff that can't get tested until Emacs is set up
+  - Git key stuff
+  - Fonts for Emacs, can see in profile though
+  - Deltawalker
+- Rebooted and reviewed the steps again
+  - Tried DW again just to be sure
+- Shutdown
+- Take a snapshot (while box is off)
+
+***** 005 (579C50D8-9665-4F7F-9F14-91CE7A735667)
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:3913404F-EDCB-4819-A82D-32441817761F
+:END:
+
+- Blew away ~/writing
+- Downloaded osx-provision.zip from github to ~/Downloads and expanded it
+- Ran configuration-writing-04-automated-generic.sh
+- Ran personal git setup
+- Run configuration-writing-05-automated-personal.sh
+- Worked through configuration-writing-06-manual-personal.org, working with
+  help.org
+  - Emacs runs fine
+  - Tangling works fine
+  - Image generation works
+  - eshell works
+  - ccrypt works
+  - ispell works
+  - weasel words works
+  - langtool
+    - Initially didn't work: "langtool--check-command: java command is not found"
+    - java is in the path
+    - java_home was not set
+    - works
+  - Koma letter works
+  - No startup messages
+  - Weaving everything works
+- org2blog is missing
+  #+NAME: org_gcr_2017-05-12_mara_AEEC604C-AD5F-4571-AFDE-029F949F02D2
+  #+BEGIN_SRC sh
+  cd ~/src
+  git clone https://github.com/punchagan/org2blog.git
+  ,#+END_SRC sh
+  - Manually fixed it
+- Rebooted
+- Test DeltaWalker
+  - In Finder, Compare two files with DW works
+  - The value of difftool.deltawalker.cmd
+    - Looks fine in the script, looks weird when I list it and that is OK
+    - In the terminal, calling that path makes DW run as expected
+  - This works fine
+    ,#+BEGIN_SRC sh
+/Applications/DeltaWalker.app/Contents/MacOS/git-diff /opt/homebrew-cask/Caskroom/deltawalker/2.1.2/Extras/samples/q0.txt /opt/homebrew-cask/Caskroom/deltawalker/2.1.2/Extras/samples/q1.txt
+    #+END_SRC
+  - Just tested a 3 way merge and that worked totally fine. Need to get plain
+    diffs working
+  - Right now, not sure what changed, and Git diff with DW is working. Suspect
+    that up above, I re-wran the command to set the external diff tool for Git,
+    not touching merge at all, well maybe that had something to do with it?
+- Noting that I want a command for checking for Git working copy bad states
+- Checked for updates
+- Shutdown
+- Take a snapshot (while box is off)
+
+***** 006 (61B52468-9004-4B8C-9C9B-32D05F3F16AC)
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:8176E20E-9E37-4EEC-B057-C300DA50410A
+:END:
+
+- Forgot to empty the trash
+- Forgot racket for resume
+  - Installed it manually
+  - Built and tested it
+  - Updated provisoner to install
+  - Updated doc for testing out the installation to include testing this
+- Flash Player
+  - Cask installed software does not work
+  - Manually installed software does not work
+* Full System Backups
+  :PROPERTIES:
+  :ID:       org_gcr_2017-05-12_mara:0CBE01D2-0858-4E75-9FC5-E9106EE22794
+  :END:
+** On the Host
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:DD6E32DD-CDB2-4267-A813-F948ED0B1F0B
+:END:
+Doing provisioning using Kitchenplan and Brew and BrewCask still takes at least
+6 hours. You still need to perform manual steps. For me, it is unavoidable. This
+is painful. This is a waste of 6 hours. It is the waste of your evening. It is a
+waste of your weekend.
+
+My new plan is to get the box provisioned and image it there. I want to minimize
+provisioning ever again. The opportunity here is that you learn new things each
+time. That is cool. The problem is that your goal is not to learn new things
+every time. It is a decision, and it needs to be thoughtfully made. This
+evidence is valuable. It has helped me understand my decision to work in
+virtuals here forward.
+
+To image a full system:
+
+- Note the base configuration, =01=
+- Get system and application updates
+- Trim contents of included-folders
+  - Most of my stuff will never be in them anyway
+  - More like DropBox and Git
+    - Keep Git checkouts. Simpler. Update will get new stuff.
+  - =/Users/gcr/Documents=
+  - Empty the trash
+  - Vagrant box definitions will exist under source control, but the individual
+    boxes will only ever live in the storage locations configured for the
+    provider
+  - Double-check that all of your Git working-copies are pushed home.
+- Disk utility
+  - Verify disk permissions
+    - Logs a lot of info
+    - Unsure if any of it is useful
+  - Repair disk permissions if necessary
+    - At the very bottom will log "Permissions repair complete"
+  - Verify disk
+  - Repair disk if necessary
+- For the clone exclude
+  - =/Users/gcr/Downloads=
+  - =/Users/gcr/Dropbox=
+  - =/Users/gcr/tmp=
+  - =/Users/gcr/.vagrant.d/boxes=
+    - [[http://docs-v1.vagrantup.com/v1/docs/boxes.html][Reference]]
+    - How this works is that when CCC cloned that disk image back to the machine,
+      this directory was present, and it was empty. I was curious about whether
+      the directory would be present or not and happy to see it was.
+    - After upping a box successfully, I verified that the base box was
+      installed here as expected
+  - =/VirtualBox VMs=
+    - VirtualBox stores its VMS here by default
+    - When you start making changes to a Vagrant box, they are saved [[https://stackoverflow.com/questions/8225820/where-is-vagrant-saving-changes-to-the-vm][here]]
+    - For example I booted up the Vagrant box from "Getting started", created a
+      hello world file, logged out and halted it, and this directory was
+      =tmp_default_1426807980079_94539= was created in there and it contained all
+      of the .vbox stuff for that machine.
+      - Verified that =vagrant destroy= deletes that directory
+  - =/Users/gcr/Documents/Virtual Machines=
+    - http://kb.vmware.com/selfservice/search.do?cmd=displayKC&docType=kc&docTypeID=DT_KB_1_1&externalId=2056798
+    - This seems to be the directory where VMWare creates machines when you do
+      so through the GUI
+  - When Vagrant VMWare Fusion creates machines it creates them inside of a
+    =.vagrant= directory where the Vagrantfile lives.
+      - The path is =<directory where the Vagrant file lives>/.vagrant/machines/default/vmware_fusion=
+      - Found this info [[https://blog.safaribooksonline.com/2014/01/16/building-vagrant-vms-with-the-vmware-fusion-provider/][here]] and verified it on my machine
+      - Verified that =vagrant destroy= deletes that directory
+- Make sure that this configuration, including Kitchenplan, is tagged
+- Note that tag here:
+  - Machine name
+  - Built from image
+  - Provisioning Tag
+  - Timestamp
+  - c02M-01-v1.7-2015-03-17T18:58:40-0500
+- On successful creation of the new image
+  - Erase the machine and clone the new image to it
+    - Address any image restoration issues now
+  - Backup this new image to Stargate
+  - Copy thse Dropbox folder
+
+#  LocalWords:  doesn AppStore kitchenplan railwaycat's paralellize dev GitHub
+#  LocalWords:  BitBucket repo smartphone OSX EF FS CCC Journaled MOSEJ XCode
+#  LocalWords:  journaled Xcode CLT IDE KitchenPlan BrewCask PyCharm JetBrains
+#  LocalWords:  Keymap CMD Solarized DJSM WebStorm DeltaWalker DiffMerge vc el
+#  LocalWords:  Magit passphrase Bitbucket Github GitPython Stathon Config VLC
+#  LocalWords:  LaTeX emacs login XQuartz Karabiner Growlnotify CCrypt Langtool
+#  LocalWords:  Ditaa startup reprovisionined ImageMagic eshell config Dropbox
+#  LocalWords:  reproducibility Filezilla SourceTree Pandoc MacTeX Freemind MiB
+#  LocalWords:  mindmaps MacVIM Enscript Virtualbox VMWare VirtualBox Libre IRC
+#  LocalWords:  MOTD nox Addons grettke Rettke Recomment MySongBook GotoMeeting
+#  LocalWords:  WebMeeting Cepestral Cepstral MacTex GnuPlot GiB gnuplot KOMA
+#  LocalWords:  PixelMator Keychain keychain rarr VoiceOver virtuals DropBox bc
+#  LocalWords:  gc VMs tmp vbox Timestamp Stargate README DevOps Cloner
+** On the Guest
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:51E4382E-F569-430A-B896-6FAB80974BA3
+:END:
+
+- Make a copy of the entire folder
+
