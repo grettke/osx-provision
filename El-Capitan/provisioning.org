@@ -709,6 +709,108 @@ Steps are: configuration-writing-02-automated.sh
 - Flash Player
   - Cask installed software does not work
   - Manually installed software does not work
+* Full System Backups
+  :PROPERTIES:
+  :ID:       org_gcr_2017-05-12_mara:0CBE01D2-0858-4E75-9FC5-E9106EE22794
+  :END:
+** On the Host
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:DD6E32DD-CDB2-4267-A813-F948ED0B1F0B
+:END:
+Doing provisioning using Kitchenplan and Brew and BrewCask still takes at least
+6 hours. You still need to perform manual steps. For me, it is unavoidable. This
+is painful. This is a waste of 6 hours. It is the waste of your evening. It is a
+waste of your weekend.
+
+My new plan is to get the box provisioned and image it there. I want to minimize
+provisioning ever again. The opportunity here is that you learn new things each
+time. That is cool. The problem is that your goal is not to learn new things
+every time. It is a decision, and it needs to be thoughtfully made. This
+evidence is valuable. It has helped me understand my decision to work in
+virtuals here forward.
+
+To image a full system:
+
+- Note the base configuration, =01=
+- Get system and application updates
+- Trim contents of included-folders
+  - Most of my stuff will never be in them anyway
+  - More like DropBox and Git
+    - Keep Git checkouts. Simpler. Update will get new stuff.
+  - =/Users/gcr/Documents=
+  - Empty the trash
+  - Vagrant box definitions will exist under source control, but the individual
+    boxes will only ever live in the storage locations configured for the
+    provider
+  - Double-check that all of your Git working-copies are pushed home.
+- Disk utility
+  - Verify disk permissions
+    - Logs a lot of info
+    - Unsure if any of it is useful
+  - Repair disk permissions if necessary
+    - At the very bottom will log "Permissions repair complete"
+  - Verify disk
+  - Repair disk if necessary
+- For the clone exclude
+  - =/Users/gcr/Downloads=
+  - =/Users/gcr/Dropbox=
+  - =/Users/gcr/tmp=
+  - =/Users/gcr/.vagrant.d/boxes=
+    - [[http://docs-v1.vagrantup.com/v1/docs/boxes.html][Reference]]
+    - How this works is that when CCC cloned that disk image back to the machine,
+      this directory was present, and it was empty. I was curious about whether
+      the directory would be present or not and happy to see it was.
+    - After upping a box successfully, I verified that the base box was
+      installed here as expected
+  - =/VirtualBox VMs=
+    - VirtualBox stores its VMS here by default
+    - When you start making changes to a Vagrant box, they are saved [[https://stackoverflow.com/questions/8225820/where-is-vagrant-saving-changes-to-the-vm][here]]
+    - For example I booted up the Vagrant box from "Getting started", created a
+      hello world file, logged out and halted it, and this directory was
+      =tmp_default_1426807980079_94539= was created in there and it contained all
+      of the .vbox stuff for that machine.
+      - Verified that =vagrant destroy= deletes that directory
+  - =/Users/gcr/Documents/Virtual Machines=
+    - http://kb.vmware.com/selfservice/search.do?cmd=displayKC&docType=kc&docTypeID=DT_KB_1_1&externalId=2056798
+    - This seems to be the directory where VMWare creates machines when you do
+      so through the GUI
+  - When Vagrant VMWare Fusion creates machines it creates them inside of a
+    =.vagrant= directory where the Vagrantfile lives.
+      - The path is =<directory where the Vagrant file lives>/.vagrant/machines/default/vmware_fusion=
+      - Found this info [[https://blog.safaribooksonline.com/2014/01/16/building-vagrant-vms-with-the-vmware-fusion-provider/][here]] and verified it on my machine
+      - Verified that =vagrant destroy= deletes that directory
+- Make sure that this configuration, including Kitchenplan, is tagged
+- Note that tag here:
+  - Machine name
+  - Built from image
+  - Provisioning Tag
+  - Timestamp
+  - c02M-01-v1.7-2015-03-17T18:58:40-0500
+- On successful creation of the new image
+  - Erase the machine and clone the new image to it
+    - Address any image restoration issues now
+  - Backup this new image to Stargate
+  - Copy thse Dropbox folder
+
+#  LocalWords:  doesn AppStore kitchenplan railwaycat's paralellize dev GitHub
+#  LocalWords:  BitBucket repo smartphone OSX EF FS CCC Journaled MOSEJ XCode
+#  LocalWords:  journaled Xcode CLT IDE KitchenPlan BrewCask PyCharm JetBrains
+#  LocalWords:  Keymap CMD Solarized DJSM WebStorm DeltaWalker DiffMerge vc el
+#  LocalWords:  Magit passphrase Bitbucket Github GitPython Stathon Config VLC
+#  LocalWords:  LaTeX emacs login XQuartz Karabiner Growlnotify CCrypt Langtool
+#  LocalWords:  Ditaa startup reprovisionined ImageMagic eshell config Dropbox
+#  LocalWords:  reproducibility Filezilla SourceTree Pandoc MacTeX Freemind MiB
+#  LocalWords:  mindmaps MacVIM Enscript Virtualbox VMWare VirtualBox Libre IRC
+#  LocalWords:  MOTD nox Addons grettke Rettke Recomment MySongBook GotoMeeting
+#  LocalWords:  WebMeeting Cepestral Cepstral MacTex GnuPlot GiB gnuplot KOMA
+#  LocalWords:  PixelMator Keychain keychain rarr VoiceOver virtuals DropBox bc
+#  LocalWords:  gc VMs tmp vbox Timestamp Stargate README DevOps Cloner
+** On the Guest
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:51E4382E-F569-430A-B896-6FAB80974BA3
+:END:
+
+- Make a copy of the entire folder
 
 * Provisioning
 :PROPERTIES:
@@ -4546,105 +4648,3 @@ sudo mktexlsr
   - [ ] pdf
   - [ ] txt
 #+END_SRC
-* Full System Backups
-  :PROPERTIES:
-  :ID:       org_gcr_2017-05-12_mara:0CBE01D2-0858-4E75-9FC5-E9106EE22794
-  :END:
-** On the Host
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:DD6E32DD-CDB2-4267-A813-F948ED0B1F0B
-:END:
-Doing provisioning using Kitchenplan and Brew and BrewCask still takes at least
-6 hours. You still need to perform manual steps. For me, it is unavoidable. This
-is painful. This is a waste of 6 hours. It is the waste of your evening. It is a
-waste of your weekend.
-
-My new plan is to get the box provisioned and image it there. I want to minimize
-provisioning ever again. The opportunity here is that you learn new things each
-time. That is cool. The problem is that your goal is not to learn new things
-every time. It is a decision, and it needs to be thoughtfully made. This
-evidence is valuable. It has helped me understand my decision to work in
-virtuals here forward.
-
-To image a full system:
-
-- Note the base configuration, =01=
-- Get system and application updates
-- Trim contents of included-folders
-  - Most of my stuff will never be in them anyway
-  - More like DropBox and Git
-    - Keep Git checkouts. Simpler. Update will get new stuff.
-  - =/Users/gcr/Documents=
-  - Empty the trash
-  - Vagrant box definitions will exist under source control, but the individual
-    boxes will only ever live in the storage locations configured for the
-    provider
-  - Double-check that all of your Git working-copies are pushed home.
-- Disk utility
-  - Verify disk permissions
-    - Logs a lot of info
-    - Unsure if any of it is useful
-  - Repair disk permissions if necessary
-    - At the very bottom will log "Permissions repair complete"
-  - Verify disk
-  - Repair disk if necessary
-- For the clone exclude
-  - =/Users/gcr/Downloads=
-  - =/Users/gcr/Dropbox=
-  - =/Users/gcr/tmp=
-  - =/Users/gcr/.vagrant.d/boxes=
-    - [[http://docs-v1.vagrantup.com/v1/docs/boxes.html][Reference]]
-    - How this works is that when CCC cloned that disk image back to the machine,
-      this directory was present, and it was empty. I was curious about whether
-      the directory would be present or not and happy to see it was.
-    - After upping a box successfully, I verified that the base box was
-      installed here as expected
-  - =/VirtualBox VMs=
-    - VirtualBox stores its VMS here by default
-    - When you start making changes to a Vagrant box, they are saved [[https://stackoverflow.com/questions/8225820/where-is-vagrant-saving-changes-to-the-vm][here]]
-    - For example I booted up the Vagrant box from "Getting started", created a
-      hello world file, logged out and halted it, and this directory was
-      =tmp_default_1426807980079_94539= was created in there and it contained all
-      of the .vbox stuff for that machine.
-      - Verified that =vagrant destroy= deletes that directory
-  - =/Users/gcr/Documents/Virtual Machines=
-    - http://kb.vmware.com/selfservice/search.do?cmd=displayKC&docType=kc&docTypeID=DT_KB_1_1&externalId=2056798
-    - This seems to be the directory where VMWare creates machines when you do
-      so through the GUI
-  - When Vagrant VMWare Fusion creates machines it creates them inside of a
-    =.vagrant= directory where the Vagrantfile lives.
-      - The path is =<directory where the Vagrant file lives>/.vagrant/machines/default/vmware_fusion=
-      - Found this info [[https://blog.safaribooksonline.com/2014/01/16/building-vagrant-vms-with-the-vmware-fusion-provider/][here]] and verified it on my machine
-      - Verified that =vagrant destroy= deletes that directory
-- Make sure that this configuration, including Kitchenplan, is tagged
-- Note that tag here:
-  - Machine name
-  - Built from image
-  - Provisioning Tag
-  - Timestamp
-  - c02M-01-v1.7-2015-03-17T18:58:40-0500
-- On successful creation of the new image
-  - Erase the machine and clone the new image to it
-    - Address any image restoration issues now
-  - Backup this new image to Stargate
-  - Copy thse Dropbox folder
-
-#  LocalWords:  doesn AppStore kitchenplan railwaycat's paralellize dev GitHub
-#  LocalWords:  BitBucket repo smartphone OSX EF FS CCC Journaled MOSEJ XCode
-#  LocalWords:  journaled Xcode CLT IDE KitchenPlan BrewCask PyCharm JetBrains
-#  LocalWords:  Keymap CMD Solarized DJSM WebStorm DeltaWalker DiffMerge vc el
-#  LocalWords:  Magit passphrase Bitbucket Github GitPython Stathon Config VLC
-#  LocalWords:  LaTeX emacs login XQuartz Karabiner Growlnotify CCrypt Langtool
-#  LocalWords:  Ditaa startup reprovisionined ImageMagic eshell config Dropbox
-#  LocalWords:  reproducibility Filezilla SourceTree Pandoc MacTeX Freemind MiB
-#  LocalWords:  mindmaps MacVIM Enscript Virtualbox VMWare VirtualBox Libre IRC
-#  LocalWords:  MOTD nox Addons grettke Rettke Recomment MySongBook GotoMeeting
-#  LocalWords:  WebMeeting Cepestral Cepstral MacTex GnuPlot GiB gnuplot KOMA
-#  LocalWords:  PixelMator Keychain keychain rarr VoiceOver virtuals DropBox bc
-#  LocalWords:  gc VMs tmp vbox Timestamp Stargate README DevOps Cloner
-** On the Guest
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:51E4382E-F569-430A-B896-6FAB80974BA3
-:END:
-
-- Make a copy of the entire folder
