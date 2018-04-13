@@ -762,20 +762,21 @@ write defaults com.apple.dock wvous-tr-corner -int 2
 defaults write com.apple.dock wvous-tr-modifier -int 0
 #+END_SRC
 
+Bottom right screen corner \rarr App windows.
+
+#+NAME: org_gcr_2017-05-12_mara_890E6CB7-695F-4A71-83B4-9F54632E6338
+#+BEGIN_SRC sh
+defaults write com.apple.dock wvous-br-corner -int 3
+defaults write com.apple.dock wvous-br-modifier -int 3
+#+END_SRC
+
+
 Bottom left screen corner \rarr Start Screensaver
 
 #+NAME: org_gcr_2017-05-12_mara_DE90A065-7C16-41F3-A0DA-A2113F19FB24
 #+BEGIN_SRC sh
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
-#+END_SRC
-
-Bottom right screen corner \rarr Nothing.
-
-#+NAME: org_gcr_2017-05-12_mara_890E6CB7-695F-4A71-83B4-9F54632E6338
-#+BEGIN_SRC sh
-defaults write com.apple.dock wvous-br-corner -int 0
-defaults write com.apple.dock wvous-br-modifier -int 0
 #+END_SRC
 
 ****** Spaces

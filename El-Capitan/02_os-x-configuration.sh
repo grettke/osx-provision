@@ -304,15 +304,15 @@ write defaults com.apple.dock wvous-tr-corner -int 2
 defaults write com.apple.dock wvous-tr-modifier -int 0
 # org_gcr_2017-05-12_mara_FD4B1467-B0D2-4997-9D2B-510F009E13FA ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_890E6CB7-695F-4A71-83B4-9F54632E6338][org_gcr_2017-05-12_mara_890E6CB7-695F-4A71-83B4-9F54632E6338]]
+defaults write com.apple.dock wvous-br-corner -int 3
+defaults write com.apple.dock wvous-br-modifier -int 3
+# org_gcr_2017-05-12_mara_890E6CB7-695F-4A71-83B4-9F54632E6338 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_DE90A065-7C16-41F3-A0DA-A2113F19FB24][org_gcr_2017-05-12_mara_DE90A065-7C16-41F3-A0DA-A2113F19FB24]]
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
 # org_gcr_2017-05-12_mara_DE90A065-7C16-41F3-A0DA-A2113F19FB24 ends here
-
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_890E6CB7-695F-4A71-83B4-9F54632E6338][org_gcr_2017-05-12_mara_890E6CB7-695F-4A71-83B4-9F54632E6338]]
-defaults write com.apple.dock wvous-br-corner -int 0
-defaults write com.apple.dock wvous-br-modifier -int 0
-# org_gcr_2017-05-12_mara_890E6CB7-695F-4A71-83B4-9F54632E6338 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CDD537A4-A928-4084-BC7A-22EE8DA50D23][org_gcr_2017-05-12_mara_CDD537A4-A928-4084-BC7A-22EE8DA50D23]]
 # Don’t automatically rearrange Spaces based on most recent use
