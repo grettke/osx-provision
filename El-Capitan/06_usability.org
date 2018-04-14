@@ -158,4 +158,44 @@ Granting:
 
 * DaisyDisk
 - License it.
+
+* Contexts
+- Welcome
+  - Yes: Launch Context at login
+- Appearance
+  - Theme: Subtle
+  - Yes: Increase contrast
+  - Text size: Large
+- Features
+  - General
+    - Keyboard layout: Use current
+    - Yes: When switching to an app w/out windows then open the Dock
+    - Yes: When using multiple displays, use switching workaround
+      Yes: Show app icon badges
+  - Rules
+    - Group windows: By space
+    - Yes: Show running apps which do not have any windows open
+  - Sidebar
+    - Show sidebar on: No display
+      (This disables the sidebar so nothing to configure)
+  - Panel
+    - Show panel on: All displays
+    - Panel width: %50
+    - No: Moving the cursor over Panel changes the selected item
+    - No: Scrolling when Panel is visible changes the selected item
+  - Search
+    - Search with: Option-Tab
+    - Fast search with: Nothing (disable it)
+    - Search shortcuts: 3
+    - Yes: Allow one mismatched character
+  - Command-Tab
+    - There are a lot of defaults so I won't specify them, just leave them alone
+    - Yes: Typing characters starts Fast Search when Panel is visible
+    - Disable the other prefix bindings: command-backtick, option-tab, and option-backtick
+  - Number Switcher
+    - Change nothing
+  - Gestures
+    - Change nothing
+- License
+- About
 # org_gcr_2017-05-12_mara_BFEC18FA-40CF-4C90-A572-8700944EE344 ends here
