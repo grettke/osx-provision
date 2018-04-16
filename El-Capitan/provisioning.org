@@ -88,8 +88,8 @@ diskutil unmount /dev/disk0s8
   - Dock
     - Size: Largest
     - Magnification: Off
-    - Position: Left
-    - Manes windows using: Genie Effect
+    - Position: Bottom
+    - Maximize windows using: Genie Effect
     - Double clicking a title bar: zoom
     - Minimize windows into application icon: Yes
     - Animate opening apps: Yes
@@ -525,10 +525,10 @@ Minimize to application.
 defaults write com.apple.dock minimize-to-application -bool true && killall Dock
 #+END_SRC
 
-Move the Dock to the left side of the screen.
+Move the Dock to the bottom side of the screen.
 #+NAME: org_gcr_2017-05-12_mara_7660A9DA-AAD9-4B44-A40A-4A9AD376DAA4
 #+BEGIN_SRC sh
-defaults write com.apple.dock orientation -string left && killall Dock
+defaults write com.apple.dock orientation -string bottom && killall Dock
 #+END_SRC
 
 Remove the animation when hiding/showing the dock.

@@ -168,7 +168,7 @@ defaults write com.apple.dock minimize-to-application -bool true && killall Dock
 # org_gcr_2017-05-12_mara_F97562F8-8DC4-4E1B-8E0C-A91ED6404138 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_7660A9DA-AAD9-4B44-A40A-4A9AD376DAA4][org_gcr_2017-05-12_mara_7660A9DA-AAD9-4B44-A40A-4A9AD376DAA4]]
-defaults write com.apple.dock orientation -string left && killall Dock
+defaults write com.apple.dock orientation -string bottom && killall Dock
 # org_gcr_2017-05-12_mara_7660A9DA-AAD9-4B44-A40A-4A9AD376DAA4 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_CE835494-145D-494D-AA53-60BDE5132068][org_gcr_2017-05-12_mara_CE835494-145D-494D-AA53-60BDE5132068]]

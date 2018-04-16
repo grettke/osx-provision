@@ -46,8 +46,8 @@ diskutil unmount /dev/disk0s8
   - Dock
     - Size: Largest
     - Magnification: Off
-    - Position: Left
-    - Manes windows using: Genie Effect
+    - Position: Bottom
+    - Maximize windows using: Genie Effect
     - Double clicking a title bar: zoom
     - Minimize windows into application icon: Yes
     - Animate opening apps: Yes
