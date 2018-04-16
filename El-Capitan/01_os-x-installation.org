@@ -82,10 +82,10 @@ diskutil unmount /dev/disk0s8
       - Launchpad & Dock
         - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.
       - Mission Control
-        - Mission Control: Disable
+        - Mission Control: C-9
         - Application windows: Disable
         - Mission Control: Disable
-        - Show Desktop: Disable
+        - Show Desktop: C-8
         - Show Dashboard: Disable it. I never use it.
       - Keyboard
         - Move focus to next window: Alt-TAB

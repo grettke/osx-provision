@@ -295,22 +295,22 @@ defaults write com.apple.screencapture location ~/Screen\ Shots
 # org_gcr_2017-05-12_mara_C6FCF96E-90C8-42CF-86E9-028CCF471B92 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_671B115A-3FB5-4A61-8922-DD7156A4CCDE][org_gcr_2017-05-12_mara_671B115A-3FB5-4A61-8922-DD7156A4CCDE]]
-defaults write com.apple.dock wvous-tl-corner -int 4
+defaults write com.apple.dock wvous-tl-corner -int 0
 defaults write com.apple.dock wvous-tl-modifier -int 0
 # org_gcr_2017-05-12_mara_671B115A-3FB5-4A61-8922-DD7156A4CCDE ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_FD4B1467-B0D2-4997-9D2B-510F009E13FA][org_gcr_2017-05-12_mara_FD4B1467-B0D2-4997-9D2B-510F009E13FA]]
-write defaults com.apple.dock wvous-tr-corner -int 2
+write defaults com.apple.dock wvous-tr-corner -int 0
 defaults write com.apple.dock wvous-tr-modifier -int 0
 # org_gcr_2017-05-12_mara_FD4B1467-B0D2-4997-9D2B-510F009E13FA ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_890E6CB7-695F-4A71-83B4-9F54632E6338][org_gcr_2017-05-12_mara_890E6CB7-695F-4A71-83B4-9F54632E6338]]
-defaults write com.apple.dock wvous-br-corner -int 3
-defaults write com.apple.dock wvous-br-modifier -int 3
+defaults write com.apple.dock wvous-br-corner -int 0
+defaults write com.apple.dock wvous-br-modifier -int 0
 # org_gcr_2017-05-12_mara_890E6CB7-695F-4A71-83B4-9F54632E6338 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_DE90A065-7C16-41F3-A0DA-A2113F19FB24][org_gcr_2017-05-12_mara_DE90A065-7C16-41F3-A0DA-A2113F19FB24]]
-defaults write com.apple.dock wvous-bl-corner -int 5
+defaults write com.apple.dock wvous-bl-corner -int 0
 defaults write com.apple.dock wvous-bl-modifier -int 0
 # org_gcr_2017-05-12_mara_DE90A065-7C16-41F3-A0DA-A2113F19FB24 ends here
 

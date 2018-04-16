@@ -124,10 +124,10 @@ diskutil unmount /dev/disk0s8
       - Launchpad & Dock
         - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.
       - Mission Control
-        - Mission Control: Disable
+        - Mission Control: C-9
         - Application windows: Disable
         - Mission Control: Disable
-        - Show Desktop: Disable
+        - Show Desktop: C-8
         - Show Dashboard: Disable it. I never use it.
       - Keyboard
         - Move focus to next window: Alt-TAB
@@ -746,36 +746,36 @@ defaults write com.apple.screencapture location ~/Screen\ Shots
   - 11 :: Launchpad
   - 12 :: Notification Center
 
-Top left screen corner \rarr Desktop.
++Top left screen corner \rarr Desktop.+ Changed to keybinding.
 
 #+NAME: org_gcr_2017-05-12_mara_671B115A-3FB5-4A61-8922-DD7156A4CCDE
 #+BEGIN_SRC sh
-defaults write com.apple.dock wvous-tl-corner -int 4
+defaults write com.apple.dock wvous-tl-corner -int 0
 defaults write com.apple.dock wvous-tl-modifier -int 0
 #+END_SRC
 
-Top right screen corner \rarr Mission Control.
++Top right screen corner \rarr Mission Control.+ Changed to keybinding.
 
 #+NAME: org_gcr_2017-05-12_mara_FD4B1467-B0D2-4997-9D2B-510F009E13FA
 #+BEGIN_SRC sh
-write defaults com.apple.dock wvous-tr-corner -int 2
+write defaults com.apple.dock wvous-tr-corner -int 0
 defaults write com.apple.dock wvous-tr-modifier -int 0
 #+END_SRC
 
-Bottom right screen corner \rarr App windows.
++Bottom right screen corner \rarr App windows.+ Changed to keybinding.
 
 #+NAME: org_gcr_2017-05-12_mara_890E6CB7-695F-4A71-83B4-9F54632E6338
 #+BEGIN_SRC sh
-defaults write com.apple.dock wvous-br-corner -int 3
-defaults write com.apple.dock wvous-br-modifier -int 3
+defaults write com.apple.dock wvous-br-corner -int 0
+defaults write com.apple.dock wvous-br-modifier -int 0
 #+END_SRC
 
 
-Bottom left screen corner \rarr Start Screensaver
++Bottom left screen corner \rarr Start Screensaver+ Changed to keybinding.
 
 #+NAME: org_gcr_2017-05-12_mara_DE90A065-7C16-41F3-A0DA-A2113F19FB24
 #+BEGIN_SRC sh
-defaults write com.apple.dock wvous-bl-corner -int 5
+defaults write com.apple.dock wvous-bl-corner -int 0
 defaults write com.apple.dock wvous-bl-modifier -int 0
 #+END_SRC
 
