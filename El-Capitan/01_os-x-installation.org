@@ -41,7 +41,7 @@ diskutil unmount /dev/disk0s8
 - System Preferences
   - General: *NA*
   - Desktop & Screensaver
-    - *(Host)*: "Message", 10m
+    - *(Host)*: "Message", 5m
     - *(Guest)*: "Message", 5m
   - Dock
     - Size: Largest
