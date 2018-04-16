@@ -55,7 +55,10 @@ diskutil unmount /dev/disk0s8
     - Show indicator for open apps: Yes
   - Mission Control: *NA*
   - Language & Region: *NA*
-  - Security & Privacy: *NA*
+  - Security & Privacy
+    - Privacy
+      - Unlock
+      - Add =Terminal=
   - Spotlight
     - Search Results
       - Applications
