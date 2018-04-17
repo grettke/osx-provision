@@ -757,7 +757,7 @@ defaults write com.apple.dock wvous-tl-corner -int 0
 defaults write com.apple.dock wvous-tl-modifier -int 0
 #+END_SRC
 
-+Top right screen corner \rarr Mission Control.+ Changed to keybinding.
+Top right screen corner \rarr Mission Control. Also added a keybinding.
 
 #+NAME: org_gcr_2017-05-12_mara_FD4B1467-B0D2-4997-9D2B-510F009E13FA
 #+BEGIN_SRC sh
