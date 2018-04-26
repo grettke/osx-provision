@@ -114,6 +114,10 @@ brew cask install djview
 brew install exiftool
 # org_gcr_2017-11-04_mara_3DCBCE60-F036-49ED-999C-B972AF10C1E7 ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-04-25T02-34-33-05-00_mara_62A77131-8ECC-48C7-B13D-D1456A708266][org_gcr_2018-04-25T02-34-33-05-00_mara_62A77131-8ECC-48C7-B13D-D1456A708266]]
+brew install qpdf
+# org_gcr_2018-04-25T02-34-33-05-00_mara_62A77131-8ECC-48C7-B13D-D1456A708266 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E][org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E]]
 echo "Script is done"
 # org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E ends here

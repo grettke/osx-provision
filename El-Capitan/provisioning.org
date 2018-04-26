@@ -1720,6 +1720,14 @@ brew cask install djview
 #+BEGIN_SRC sh
 brew install exiftool
 #+END_SRC
+***** qpdf
+:PROPERTIES:
+:ID:       org_gcr_2018-04-25T02-34-33-05-00_mara:6077E7C5-9335-4758-ADB3-87C75944961B
+:END:
+#+name: org_gcr_2018-04-25T02-34-33-05-00_mara_62A77131-8ECC-48C7-B13D-D1456A708266
+#+begin_src sh
+brew install qpdf
+#+end_src
 ***** Completion
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:5E5BCE6B-D095-4CA0-9CC3-9A5F13EF104B
