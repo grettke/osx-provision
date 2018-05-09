@@ -1026,6 +1026,14 @@ git clone https://github.com/caskroom/homebrew-cask.git
 #+BEGIN_SRC sh
 brew install coreutils
 #+END_SRC
+****** Joe
+:PROPERTIES:
+:ID:       org_gcr_2018-05-08T04-16-55-05-00_mara:9376978E-168C-4C70-B9DB-5FA39977902E
+:END:
+#+name: org_gcr_2018-05-08T04-16-55-05-00_mara_5693091A-3304-4506-9B95-6615BEAB04E0
+#+begin_src sh
+brew install joe
+#+end_src
 ****** Complete
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:9C6C763C-5676-407E-8C14-77B2D6615873
