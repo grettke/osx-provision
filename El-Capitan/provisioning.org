@@ -3408,7 +3408,7 @@ Server properties:
   - Start at login: YES
   - Show status on menubar: YES
 - Advanced
-  - Shortcut: No
+  - Shortcut: C-M-s-h
   - Background color: Black
     Highlight: One window only
   - Animation: 0.25s
