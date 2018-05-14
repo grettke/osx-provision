@@ -3033,22 +3033,26 @@ Steps:
     :END:
 
 #+NAME: org_gcr_2017-05-12_mara_AA02C112-ACBB-4415-813D-69BE649D4600
-#+BEGIN_SRC org
+
 MS Office This is in BrewCask, but the download is waste of time. I have it
 locally. Use the version I bought; not the latest which is in brew.
 
 I keep going back and forth on this one. Is it worth saving 15 minutes having to
 install it myself?
 
-Start it. It asks for your name. It asks about updates and stuff. Get them all.
-Start Outlook. Enter in new license for that.
-
-When activation occurs, the app always locks up then I quit it and it restarts
-after sending an error report.
-
-Don't let it access Contacts.
-
-When it checks for updates, tell it to check daily.
+#+NAME: org_gcr_2018-05-13T21-25-21-05-00_mara_C7215412-09C0-4128-A234-1BE1A468EEBD
+#+BEGIN_SRC org
+- Start it.
+- It asks for your name.
+- It asks about updates and stuff.
+  - Get them all.
+  - Take 3-5 iterations
+- When activation occurs, the app always locks up then I quit it and it
+  restarts after sending an error report. It works after that.
+- When it checks for updates, tell it to check daily.
+- Configure
+  - Save
+    - Save AutoRecover information after this number of minutes: 1
 #+END_SRC
 **** Visible Body
     :PROPERTIES:
