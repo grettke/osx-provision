@@ -2951,6 +2951,18 @@ Steps:
 :header-args: :tangle "15_manual.org"
 :ID:       org_gcr_2017-05-12_mara:BB9E3D7F-B9C2-4545-BE21-D612B37CFED2
 :END:
+**** Font By Language
+***** APL: SimPL Font
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:1E8B0850-1610-4DB7-BC89-866C31B04AA1
+:END:
+- http://wiki.nars2000.org/index.php/APL_Font
+***** Egyptian Hieroglyphs: NewGardiner TrueType Font
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:541D2603-FEFA-48B6-86E7-2CC47370B3E4
+:END:
+- [[https://mjn.host.cs.st-andrews.ac.uk/egyptian/fonts/newgardiner.html][See]]
+- Install =NewGardinerSMP.ttf=
 **** iTunes
 :PROPERTIES:
 :ID:       org_gcr_2017-11-01_mara:BF7BA256-70D0-421E-A5B5-0F5568FFAB6F
@@ -2989,21 +3001,6 @@ Steps:
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:23E72876-924E-4844-86F8-3CF2837C6217
 :END:
-**** SimPL Font
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:1E8B0850-1610-4DB7-BC89-866C31B04AA1
-:END:
-
-- http://wiki.nars2000.org/index.php/APL_Font
-
-**** NewGardiner TrueType Font
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:541D2603-FEFA-48B6-86E7-2CC47370B3E4
-:END:
-
-- [[https://mjn.host.cs.st-andrews.ac.uk/egyptian/fonts/newgardiner.html][See]]
-- Install =NewGardinerSMP.ttf=
-
 **** The R Project
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:D6FBFF78-B0A4-4168-A319-71E30BABDE2C
