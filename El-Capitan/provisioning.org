@@ -2957,11 +2957,14 @@ Steps:
 :ID:       org_gcr_2017-05-12_mara:1E8B0850-1610-4DB7-BC89-866C31B04AA1
 :END:
 - http://wiki.nars2000.org/index.php/APL_Font
+  "The default APL font for NARS200"
 ***** Egyptian Hieroglyphs: NewGardiner TrueType Font
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:541D2603-FEFA-48B6-86E7-2CC47370B3E4
 :END:
-- [[https://mjn.host.cs.st-andrews.ac.uk/egyptian/fonts/newgardiner.html][See]]
+- https://mjn.host.cs.st-andrews.ac.uk/egyptian/fonts/newgardiner.html
+  "This font contains the 1071 glyphs from 0x13000 to 0x1342E, forming the
+  section from document WG2/N3349R that deals with Egyptian Hieroglyphs."
 - Install =NewGardinerSMP.ttf=
 **** iTunes
 :PROPERTIES:
