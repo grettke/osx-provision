@@ -53,10 +53,6 @@ brew cask install font-icomoon
 brew cask install font-han-nom-a
 brew cask install font-mfizz
 brew cask install font-montserrat
-brew cask install font-noto-serif
-brew cask install font-noto-sans
-brew cask install font-noto-sans-mono
-brew cask install font-noto-sans-symbols
 brew cask install font-octicons
 brew cask install font-quivira
 brew cask install font-symbola
