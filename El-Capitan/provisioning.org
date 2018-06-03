@@ -2963,6 +2963,11 @@ Steps:
 :END:
 - http://wiki.nars2000.org/index.php/APL_Font
   "The default APL font for NARS200"
+***** Devanagari
+:PROPERTIES:
+:ID:       org_gcr_2018-06-03T01-16-43-05-00_mara:32CCF6E4-A264-4905-BFB1-08CF12E285AD
+:END:
+- [[http://software.sil.org/annapurna/download/][Annapurna SIL]]
 ***** Egyptian Hieroglyphs: NewGardiner TrueType Font
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:541D2603-FEFA-48B6-86E7-2CC47370B3E4
