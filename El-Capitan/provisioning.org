@@ -965,7 +965,9 @@ brew cask install font-fontawesome
 brew cask install font-icomoon
 brew cask install font-mfizz
 brew cask install font-montserrat
+brew cask install font-noto-serif
 brew cask install font-noto-sans
+brew cask install font-noto-sans-mono
 brew cask install font-noto-sans-symbols
 brew cask install font-octicons
 brew cask install font-quivira
@@ -2952,6 +2954,9 @@ Steps:
 :ID:       org_gcr_2017-05-12_mara:BB9E3D7F-B9C2-4545-BE21-D612B37CFED2
 :END:
 **** Font By Language
+:PROPERTIES:
+:ID:       org_gcr_2018-06-02T18-25-17-05-00_mara:812F2418-645B-4149-A4E0-0792B670DA02
+:END:
 ***** APL: SimPL Font
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:1E8B0850-1610-4DB7-BC89-866C31B04AA1
