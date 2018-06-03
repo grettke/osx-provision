@@ -963,6 +963,7 @@ brew cask install font-fira-mono
 brew cask install font-fira-sans
 brew cask install font-fontawesome
 brew cask install font-icomoon
+brew cask install font-han-nom-a
 brew cask install font-mfizz
 brew cask install font-montserrat
 brew cask install font-noto-serif
