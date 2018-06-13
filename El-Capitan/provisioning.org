@@ -2553,6 +2553,16 @@ git clone https://github.com/magit/magit.git
 cd magit
 make
 #+END_SRC
+****** auto-capitalize
+:PROPERTIES:
+:ID:       org_gcr_2018-06-12T18-03-51-05-00_mara:5C910F70-39E4-44B6-83B4-194EE1ECF55F
+:END:
+#+name: org_gcr_2018-06-12T18-03-51-05-00_mara_6233CC14-BC22-4938-A490-1E4B50D6198C
+#+begin_src sh
+cd ~/src
+rm -rf auto-capitalize
+git clone https://github.com/yuutayamada/auto-capitalize-el.git auto-capitalize
+#+end_src
 ***** go
 :PROPERTIES:
 :ID:       org_gcr_2017-07-30_mara:125CE9C7-3173-4F82-B27D-6E0F64042F3E

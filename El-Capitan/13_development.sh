@@ -99,6 +99,12 @@ cd magit
 make
 # org_gcr_2017-05-12_mara_97EED15A-390A-49AA-B645-A4BA156A79D3 ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-06-12T18-03-51-05-00_mara_6233CC14-BC22-4938-A490-1E4B50D6198C][org_gcr_2018-06-12T18-03-51-05-00_mara_6233CC14-BC22-4938-A490-1E4B50D6198C]]
+cd ~/src
+rm -rf auto-capitalize
+git clone https://github.com/yuutayamada/auto-capitalize-el.git auto-capitalize
+# org_gcr_2018-06-12T18-03-51-05-00_mara_6233CC14-BC22-4938-A490-1E4B50D6198C ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-07-30_mara_1F4656FC-2D17-4C4D-975B-DBC94ADAD23A][org_gcr_2017-07-30_mara_1F4656FC-2D17-4C4D-975B-DBC94ADAD23A]]
 brew install go
 brew install gox
