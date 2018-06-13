@@ -886,6 +886,14 @@ BrewCask is [[http://caskroom.io][here]].
 brew tap caskroom/cask
 #+END_SRC
 
+Software with different releases
+
+#+name: org_gcr_2018-06-12T21-48-52-05-00_mara_82D7A5A9-0B09-473C-82B8-7DB744CD2FA8
+#+begin_src sh
+brew tap caskroom/versions
+brew update
+#+end_src
+
 ****** Git Checkout Directory
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:7791D5FE-F7D8-4A63-B048-4D21A973185C
