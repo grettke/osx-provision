@@ -2875,44 +2875,35 @@ cd ~/
       - SourceTree is standalone /to be alone/
 - Once you set up Git, pull a project from BB
 
-,* IntelliJ Idea
+,* IntelliJ Idea or PyCharm
 
-- Pretty sure that I've got a config somewhere for this
-
-,* PyCharm
-- "use your JetBrains Account credentials in PyCharm to use this license"
-- Import settings: I do not have any
-- Allow it to accept incoming network connections
-- PyCharm initial configuration
-  - Keymap: Emacs
-  - Theme: Default
-  - Editor colors and fonts: Default
-  - Enable opening files CMD: Yes =/usr/local/bin/charm=
+- Complete Installation: Do not import settings
+- EULA: Yes
+- Data Sharing: Send Usage Statistics
+- Customize: Skip Remaining and Set Defaults
+- File -> Import Settings -> settings.jar
+  - IntelliJ Now restarts
 - Preferences
-  - Appearance & Behavior
-    - System Settings
-      - Usage Statistics
-        - Do send anonymous statistics: weekly
-    - Appearance
-      - Show tool window bars
+  - Appearance
+    - Override default font size not font, change it to 16
   - Editor
-    - General
-      - Use soft wraps
-      - Appearance
-        - Show line numbers
-        - Use block caret
-        - nil Caret blinking
     - Code Style
-      - Right margin column: 80
-      - Wrap on typing: YES
-    - Colors & Fonts
-      - [[https://github.com/jkaving/intellij-colors-solarized][Solarized Theme]]: Dark
-        - Do this first
-        - The code lives in github-anonymous
-      - Font
-        - DJSM 17
-      - General
-        - Editor -> Caret: #839496
+      - Scheme: Copy the Default IDE style appending 'gcr'
+      - Indent Detection? No Nothing.
+    - Color Scheme
+      - Choose Solarized Dark
+      - Then duplicate it by appending 'gcr'
+      - Apply
+    - Font
+      - Font: DejaVu Sans Mono
+      - Show only monospaced fonts? No
+      - Size: 18
+      - Fallback: Symbola
+    - General
+      - Apperance
+        - No blinking
+        - Use block caret
+        - No line numbers
 ,* WebStorm
 - Same configuration as PyCharm
 
