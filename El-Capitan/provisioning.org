@@ -3644,6 +3644,7 @@ git clone https://github.com/encharm/Font-Awesome-SVG-PNG
 git clone https://github.com/dwyl/english-words.git
 git clone https://github.com/LearnWebCode/json-example.git
 git clone https://github.com/codefresh-io/yaml-examples.git
+git clone https://github.com/languagetool-org/languagetool.git
 #+end_src
 
 At this point, the Bash initialization files point at the directory with my
