@@ -92,6 +92,7 @@
     - Colors & Fonts
       - [[https://github.com/jkaving/intellij-colors-solarized][Solarized Theme]]: Dark
         - Do this first
+        - The code lives in github-anonymous
       - Font
         - DJSM 17
       - General

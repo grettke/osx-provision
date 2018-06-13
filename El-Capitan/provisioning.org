@@ -2908,6 +2908,7 @@ cd ~/
     - Colors & Fonts
       - [[https://github.com/jkaving/intellij-colors-solarized][Solarized Theme]]: Dark
         - Do this first
+        - The code lives in github-anonymous
       - Font
         - DJSM 17
       - General
@@ -3661,6 +3662,7 @@ git clone https://github.com/dwyl/english-words.git
 git clone https://github.com/LearnWebCode/json-example.git
 git clone https://github.com/codefresh-io/yaml-examples.git
 git clone https://github.com/languagetool-org/languagetool.git
+git clone https://github.com/jkaving/intellij-colors-solarized.git
 #+end_src
 
 At this point, the Bash initialization files point at the directory with my
