@@ -1272,12 +1272,7 @@ echo "Script is done"
 - Function Keys
   - YES: Use F keys as standard function keys
 - Complex Modifications
-  - The files live in Git but this is what they do
-    - Return is control when held
-    - Caps lock is control when held and esc when struck
-    - Right shift is backspace on strike and shift when held
-    - Left shift is forward delete on strike and shift when held
-    - Left control is caps lock
+  - The files live in Git.
 - Virtual Keyboard
   - ANSI
   - Caps Lock Delay ms: 0
