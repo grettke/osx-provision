@@ -1,5 +1,5 @@
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_1ED4B68B-4C9C-420F-9C25-19A6F6812A66][org_gcr_2017-05-12_mara_1ED4B68B-4C9C-420F-9C25-19A6F6812A66]]
-brew cask install java
+brew cask install java8
 # org_gcr_2017-05-12_mara_1ED4B68B-4C9C-420F-9C25-19A6F6812A66 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_6E1474FB-6E85-4D0C-BC36-913CD2882548][org_gcr_2017-05-12_mara_6E1474FB-6E85-4D0C-BC36-913CD2882548]]
