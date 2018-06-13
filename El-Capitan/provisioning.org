@@ -1469,6 +1469,14 @@ Granting:
 #+BEGIN_SRC sh
 brew cask install java8
 #+END_SRC
+***** Maven
+:PROPERTIES:
+:ID:       org_gcr_2018-06-12T21-48-52-05-00_mara:8B3602B1-66C8-4299-8E51-61260FB909B8
+:END:
+#+name: org_gcr_2018-06-12T21-48-52-05-00_mara_8D458C41-06C2-484B-9D17-8DDA6BDFFAD8
+#+begin_src sh
+brew install maven
+#+end_src
 ***** ditaa
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:E633B5AE-FD35-4911-9F38-59711EAB243B

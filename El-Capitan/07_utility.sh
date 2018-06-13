@@ -2,6 +2,10 @@
 brew cask install java8
 # org_gcr_2017-05-12_mara_1ED4B68B-4C9C-420F-9C25-19A6F6812A66 ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-06-12T21-48-52-05-00_mara_8D458C41-06C2-484B-9D17-8DDA6BDFFAD8][org_gcr_2018-06-12T21-48-52-05-00_mara_8D458C41-06C2-484B-9D17-8DDA6BDFFAD8]]
+brew install maven
+# org_gcr_2018-06-12T21-48-52-05-00_mara_8D458C41-06C2-484B-9D17-8DDA6BDFFAD8 ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_6E1474FB-6E85-4D0C-BC36-913CD2882548][org_gcr_2017-05-12_mara_6E1474FB-6E85-4D0C-BC36-913CD2882548]]
 brew install ditaa
 # org_gcr_2017-05-12_mara_6E1474FB-6E85-4D0C-BC36-913CD2882548 ends here
