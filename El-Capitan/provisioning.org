@@ -3712,6 +3712,7 @@ rm -rf ~/src/use-package
 rm -rf ~/src/reveal.js
 rm -rf ~/src/go-hydra
 rm -rf ~/src/emacs-batteries-included
+rm -rf ~/src/solarized-emacs
 cd ~/src
 echo `date +%Y-%m-%dT%H:%M:%S%z`
 git clone git://orgmode.org/org-mode.git
@@ -3727,6 +3728,7 @@ git clone https://github.com/jwiegley/use-package.git
 git clone https://github.com/hakimel/reveal.js.git
 git clone gitlab-`whoami`:grettke/go-hydra.git
 git clone github-`whoami`:grettke/emacs-batteries-included.git
+git clone github-`whoami`:grettke/solarized-emacs.git
 #+END_SRC
 
 *** TeX
