@@ -2986,6 +2986,11 @@ Steps:
   "This font contains the 1071 glyphs from 0x13000 to 0x1342E, forming the
   section from document WG2/N3349R that deals with Egyptian Hieroglyphs."
 - Install =NewGardinerSMP.ttf=
+***** Last Resort
+:PROPERTIES:
+:ID:       org_gcr_2018-06-30T12-27-18-05-00_mara:B17532CA-F96A-42E2-AA86-55E96194A2F5
+:END:
+- https://www.unicode.org/policies/lastresortfont_eula.html
 **** iTunes
 :PROPERTIES:
 :ID:       org_gcr_2017-11-01_mara:BF7BA256-70D0-421E-A5B5-0F5568FFAB6F
