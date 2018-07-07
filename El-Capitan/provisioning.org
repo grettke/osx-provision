@@ -3734,6 +3734,7 @@ git clone https://github.com/hakimel/reveal.js.git
 git clone gitlab-`whoami`:grettke/go-hydra.git
 git clone github-`whoami`:grettke/emacs-batteries-included.git
 git clone github-`whoami`:grettke/solarized-emacs.git
+git clone github-`whoami`:grettke/corporate-bs-generator.git
 #+END_SRC
 
 *** TeX

@@ -25,4 +25,5 @@ git clone https://github.com/hakimel/reveal.js.git
 git clone gitlab-`whoami`:grettke/go-hydra.git
 git clone github-`whoami`:grettke/emacs-batteries-included.git
 git clone github-`whoami`:grettke/solarized-emacs.git
+git clone github-`whoami`:grettke/corporate-bs-generator.git
 # org_gcr_2017-05-12_mara_9ED0592E-A409-4049-BD98-DD5151723C1A ends here
