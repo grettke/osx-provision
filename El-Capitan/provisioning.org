@@ -1062,11 +1062,11 @@ echo "Script complete"
 ,* Terminal
 
 - Profiles
-  - Profile chooser thing
-    - Import the Solarized dark theme
-    - Set it to the default theme
+  - Profile bar on the left
+    - Import the Solarized dark and light theme
+    - The the default theme to light
   - Text
-    - Font: DejaVu Sans Mono: 17
+    - Font: DejaVu Sans Mono: 18
     - Cursor: block
   - Window
     - Yes: Working directory or document, and path
