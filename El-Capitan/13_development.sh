@@ -91,14 +91,6 @@ rm $(brew --prefix)/bin/emacsclient
 ln -s $(brew --prefix emacs)/bin/emacsclient $(brew --prefix)/bin/emacsclient
 # org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5 ends here
 
-# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_97EED15A-390A-49AA-B645-A4BA156A79D3][org_gcr_2017-05-12_mara_97EED15A-390A-49AA-B645-A4BA156A79D3]]
-rm -rf ~/src/magit
-cd ~/src
-git clone https://github.com/magit/magit.git
-cd magit
-make
-# org_gcr_2017-05-12_mara_97EED15A-390A-49AA-B645-A4BA156A79D3 ends here
-
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-06-12T18-03-51-05-00_mara_6233CC14-BC22-4938-A490-1E4B50D6198C][org_gcr_2018-06-12T18-03-51-05-00_mara_6233CC14-BC22-4938-A490-1E4B50D6198C]]
 cd ~/src
 rm -rf auto-capitalize
