@@ -258,6 +258,10 @@ strategy to name machines now:
 Defining this naming approach helped me learn more about the intent of the
 name and what I wanted from them.
 
+Depending upon "who" is asking, your Mac has four names. If you want to set
+them all at once your can do it like this. I care most about the correct name
+showing up in the terminal.
+
 #+NAME: org_gcr_2017-05-12_mara_8082AC3B-7751-40C3-B8C3-E1C8B678F07A
 #+BEGIN_SRC sh
 sudo scutil --set HostName ""
