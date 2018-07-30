@@ -112,6 +112,7 @@ brew install speedtest_cli
 
      # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-09-12_mara_D647A4C6-4296-4F49-A5CB-0FBAE77C1F8F][org_gcr_2017-09-12_mara_D647A4C6-4296-4F49-A5CB-0FBAE77C1F8F]]
      brew install mp3gain
+     brew install mp3gain-express
      # org_gcr_2017-09-12_mara_D647A4C6-4296-4F49-A5CB-0FBAE77C1F8F ends here
 
      # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-11-01_mara_0F91CE3D-3F59-4351-A0D3-AE383CC9BB47][org_gcr_2017-11-01_mara_0F91CE3D-3F59-4351-A0D3-AE383CC9BB47]]
