@@ -1629,6 +1629,15 @@ chown -R `whoami` /usr/local/share/man/de/man1
 brew install ccrypt
 #+END_SRC
 
+***** GnuPG
+:PROPERTIES:
+:ID:       org_gcr_2018-08-09T09-29-25-05-00_globigerina:EBC2DD91-E484-4CD0-B999-8D1A2D617576
+:END:
+#+name: org_gcr_2018-08-09T09-29-25-05-00_globigerina_0757D9F4-A97E-4E3D-9B66-A6EB2E270C3C
+#+begin_src sh
+brew install gnupg
+#+end_src
+
 ***** tree
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:AED8018A-5CDE-423D-83F4-CE7CB599EAE4

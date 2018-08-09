@@ -66,6 +66,10 @@ brew install dos2unix
 brew install ccrypt
 # org_gcr_2017-05-12_mara_100A7D9C-CB1E-4BFB-A796-2C9FEA802EB0 ends here
 
+# [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2018-08-09T09-29-25-05-00_globigerina_0757D9F4-A97E-4E3D-9B66-A6EB2E270C3C][org_gcr_2018-08-09T09-29-25-05-00_globigerina_0757D9F4-A97E-4E3D-9B66-A6EB2E270C3C]]
+brew install gnupg
+# org_gcr_2018-08-09T09-29-25-05-00_globigerina_0757D9F4-A97E-4E3D-9B66-A6EB2E270C3C ends here
+
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_3328C40D-6F31-4AA3-B0B0-AA6FD759D724][org_gcr_2017-05-12_mara_3328C40D-6F31-4AA3-B0B0-AA6FD759D724]]
 brew install tree
 # org_gcr_2017-05-12_mara_3328C40D-6F31-4AA3-B0B0-AA6FD759D724 ends here
