@@ -2072,13 +2072,14 @@ brew install sox --with-lame
 #+BEGIN_SRC sh
 brew cask install deluge
 #+END_SRC
-***** mp3gain
+***** audio
 :PROPERTIES:
 :ID:       org_gcr_2017-09-12_mara:C26075AB-A201-42C7-8511-62A690390377
 :END:
 #+NAME: org_gcr_2017-09-12_mara_D647A4C6-4296-4F49-A5CB-0FBAE77C1F8F
 #+BEGIN_SRC sh
 brew install mp3gain
+brew install normalize
 brew cask install mp3gain-express
 #+END_SRC
 ***** iSyncr Mac
