@@ -28,7 +28,7 @@ cd
 bash --version
 brew install bash
 if grep "/usr/local/bin/bash" /etc/shells > /dev/null; then
-    echo "brew bash already configured in shells; doing nothing"
+  echo "brew bash already configured in shells; doing nothing"
 else
   sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
   chsh -s /usr/local/bin/bash

@@ -8,7 +8,7 @@ brew install speedtest_cli
 
   ;; [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_9217F137-CCF7-4B66-AE32-6ED72D2D629F][org_gcr_2017-05-12_mara_9217F137-CCF7-4B66-AE32-6ED72D2D629F]]
      if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-         brew cask install whatsapp
+       brew cask install whatsapp
      else
        echo "whatsapp: Only install on hosts"
      fi
@@ -16,7 +16,7 @@ brew install speedtest_cli
 
      # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_7C4DE397-48F6-44AC-B9CD-948375915EFF][org_gcr_2017-05-12_mara_7C4DE397-48F6-44AC-B9CD-948375915EFF]]
      if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-         brew cask install mplayer-osx-extended
+       brew cask install mplayer-osx-extended
      else
        echo "mplayer: Only install on hosts"
      fi
@@ -24,7 +24,7 @@ brew install speedtest_cli
 
      # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_9CDCD936-A30A-4712-8A5F-780D8810FBDE][org_gcr_2017-05-12_mara_9CDCD936-A30A-4712-8A5F-780D8810FBDE]]
      if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-         brew cask install skype
+       brew cask install skype
      else
        echo "skype: Only install on hosts"
      fi
@@ -32,7 +32,7 @@ brew install speedtest_cli
 
      # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_1F291E61-A8F1-43BE-A839-0E6997099AD4][org_gcr_2017-05-12_mara_1F291E61-A8F1-43BE-A839-0E6997099AD4]]
      if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-         brew cask install dropbox
+       brew cask install dropbox
      else
        echo "dropbox: Only install on hosts"
      fi
@@ -112,7 +112,7 @@ brew install speedtest_cli
 
      # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-09-12_mara_D647A4C6-4296-4F49-A5CB-0FBAE77C1F8F][org_gcr_2017-09-12_mara_D647A4C6-4296-4F49-A5CB-0FBAE77C1F8F]]
      brew install mp3gain
-     brew install mp3gain-express
+     brew cask install mp3gain-express
      # org_gcr_2017-09-12_mara_D647A4C6-4296-4F49-A5CB-0FBAE77C1F8F ends here
 
      # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-11-01_mara_0F91CE3D-3F59-4351-A0D3-AE383CC9BB47][org_gcr_2017-11-01_mara_0F91CE3D-3F59-4351-A0D3-AE383CC9BB47]]

@@ -1,7 +1,7 @@
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_3DA5AD9E-E1DD-4B4D-9CC3-A2894A312E13][org_gcr_2017-05-12_mara_3DA5AD9E-E1DD-4B4D-9CC3-A2894A312E13]]
 #+BEGIN_SRC sh
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install carbon-copy-cloner
+  brew cask install carbon-copy-cloner
 else
   echo "carbon-copy-cloner: Only install on hosts"
 fi
@@ -9,7 +9,7 @@ fi
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_0E88C363-DC01-4894-AD2A-B826AEE96847][org_gcr_2017-05-12_mara_0E88C363-DC01-4894-AD2A-B826AEE96847]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install vmware-fusion
+  brew cask install vmware-fusion
 else
   echo "vmware-fusion: Only install on hosts"
 fi
@@ -17,8 +17,8 @@ fi
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_FBFF1A68-5361-46F9-8B29-F566DE748DD0][org_gcr_2017-05-12_mara_FBFF1A68-5361-46F9-8B29-F566DE748DD0]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install virtualbox
-    brew cask install virtualbox-extension-pack
+  brew cask install virtualbox
+  brew cask install virtualbox-extension-pack
 
 else
   echo "virtualbox: Only install on hosts"
@@ -27,7 +27,7 @@ fi
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_C9473DCC-226B-4291-86E7-5707B3F034AB][org_gcr_2017-05-12_mara_C9473DCC-226B-4291-86E7-5707B3F034AB]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install vagrant
+  brew cask install vagrant
 else
   echo "vagrant: Only install on hosts"
 fi
@@ -35,7 +35,7 @@ fi
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_945C5784-810A-4C4B-90E6-FADC7453E54A][org_gcr_2017-05-12_mara_945C5784-810A-4C4B-90E6-FADC7453E54A]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install packer
+  brew cask install packer
 else
   echo "packer: Only install on hosts"
 fi
