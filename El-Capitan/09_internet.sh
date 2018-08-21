@@ -114,6 +114,7 @@ brew install speedtest_cli
      brew install mp3gain
      brew install normalize
      brew install mp3val
+     brew install id3lib
      brew cask install mp3gain-express
      # org_gcr_2017-09-12_mara_D647A4C6-4296-4F49-A5CB-0FBAE77C1F8F ends here
 
