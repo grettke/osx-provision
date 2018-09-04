@@ -11,7 +11,7 @@ git config --global diff.tool deltawalker
 git config --global difftool.deltawalker.cmd '/Applications/DeltaWalker.app/Contents/Resources/git-diff $LOCAL $REMOTE'
 git config --global difftool.prompt false
 git config --global merge.tool deltawalker
-git config --global mergetool.deltawalker.cmd '/Applications/DeltaWalker.app/Contents/Resources/git-merge/git-merge $LOCAL $REMOTE $BASE $MERGED'
+git config --global mergetool.deltawalker.cmd '/Applications/DeltaWalker.app/Contents/Resources/git-merge $LOCAL $REMOTE $BASE $MERGED'
 git config --global mergetool.keepBackup false
 # org_gcr_2017-05-12_mara_DA1B734B-8994-4465-AA58-08E2EF337770 ends here
 
