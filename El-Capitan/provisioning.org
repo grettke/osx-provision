@@ -3675,7 +3675,6 @@ automate this part yet.
 
 #+NAME: org_gcr_2017-05-12_mara_300013CB-D6E2-414E-9FBF-68D4581D971C
 #+begin_src sh
-cd ~/git/github-anonymous
 rm -rf ~/src
 mkdir ~/src
 cd ~/src
