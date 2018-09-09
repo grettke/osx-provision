@@ -38,16 +38,10 @@ git clone github-`whoami`:grettke/osx-provision.git
 git clone github-`whoami`:grettke/bash.git
 git clone github-`whoami`:grettke/wisdomandwonder.git
 git clone github-`whoami`:grettke/recursive-git-status-bash.git
-git clone github-`whoami`:pretty-mode/pretty-mode.git
 
 cd ~/git/github-anonymous
-git clone https://github.com/altercation/solarized.git
 git clone https://github.com/encharm/Font-Awesome-SVG-PNG
 git clone https://github.com/dwyl/english-words.git
-git clone https://github.com/LearnWebCode/json-example.git
-git clone https://github.com/codefresh-io/yaml-examples.git
-git clone https://github.com/languagetool-org/languagetool.git
-git clone https://github.com/jkaving/intellij-colors-solarized.git
 # org_gcr_2017-05-12_mara_CF6E9DCD-5A6E-4335-93CF-2E03937C9C28 ends here
 
 # [[file:~/git/github/osx-provision/El-Capitan/provisioning.org::org_gcr_2017-05-12_mara_300013CB-D6E2-414E-9FBF-68D4581D971C][org_gcr_2017-05-12_mara_300013CB-D6E2-414E-9FBF-68D4581D971C]]
