@@ -9,6 +9,7 @@ rm -rf ~/src/reveal.js
 rm -rf ~/src/go-hydra
 rm -rf ~/src/emacs-batteries-included
 rm -rf ~/src/solarized-emacs
+rm -rf ~/src/auto-capitalize
 cd ~/src
 echo `date +%Y-%m-%dT%H:%M:%S%z`
 git clone git://orgmode.org/org-mode.git
@@ -26,4 +27,5 @@ git clone gitlab-`whoami`:grettke/go-hydra.git
 git clone github-`whoami`:grettke/emacs-batteries-included.git
 git clone github-`whoami`:grettke/solarized-emacs.git
 git clone github-`whoami`:grettke/corporate-bs-generator.git
+git clone https://github.com/yuutayamada/auto-capitalize-el.git auto-capitalize
 # org_gcr_2017-05-12_mara_9ED0592E-A409-4049-BD98-DD5151723C1A ends here
