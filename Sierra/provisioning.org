@@ -1,0 +1,3862 @@
+#  LocalWords:  IOSXECA PHOSI PHOSDI IOSEXECA gcr Xcode VC orion orgion rsa github
+
+#+STARTUP: showeverything
+
+* Provisioning
+:PROPERTIES:
+:Effort:   energy
+:ID:       org_gcr_2017-05-12_mara:D301EB59-864A-43EB-B574-D285BFAE157C
+:END:
+
+- *Start* with a local copy of this repository either by downloading it in a ZIP
+  file or pulling it with Git
+- ~Steps~ implements provisioning
+  - ORG files are manual steps
+  - SH files are shell scripts which may require human input
+  - Perform them in order of their file names numerically eg ~01..02..03..n~
+  - The steps are tedious, time consuming and boring so they are broken up into
+    to logical units to make it easy for you to take a break and finish later
+    without forgetting where you are and what you were doing
+    - For example you might run the script to install \TeX overnight and
+      configure it a day later
+- ~Testing~ tells you if it worked
+- Only read this document for
+  - An explanation of the provisioning steps
+  - Reference
+
+** Steps
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:0C728A7D-6497-4E72-AB63-C76976BDC26B
+:END:
+
+*** OS X
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:290CC2E4-8BD9-4A47-AB48-CDFE5CFAC926
+:END:
+**** Installation
+:PROPERTIES:
+:header-args: :tangle "01_os-x-installation.org"
+:ID:       org_gcr_2017-05-12_mara:C1783066-13DE-46D9-9EEB-245CBD373F7E
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_60B53D12-60D7-40ED-81AC-27902FE027FA
+#+BEGIN_SRC org
+- Action Prefix for Boxes:
+- Host :: "On the Metal"
+- Guest :: "Virtualized"
+- Re-image your box
+- During system configuration /before/ creating a user YES log into the App Store
+- Make a user named ~gcr~ and choose an avatar
+- Install software updates
+- Development Tools
+  - XCode
+    - This is optional!
+    - This step is not necessary to use the Brew stuff, the CLT provides
+      everything
+    - If you want it them go to the App Store and Install it
+    - 4.5GB download
+  - Command Line Tools (CLT)
+    - Install the CLT.
+    - Run this and choose *Install*.
+      ,#+BEGIN_SRC sh
+      xcode-select --install
+      ,#+END_SRC
+- Utility Scripts
+  - Mount only required volumes
+    - Clarify
+      - Spotlight suggests applications and files on those volumes and
+        you usually don't want that
+      - Applications get locks on files on non host volumes
+    - For =host1= that means =host1= and =Storage=
+    - Write a shell script and run it at logon
+      - Customize this for the install partition
+      - These scripts live in my personal =util= directory
+        ,#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+# -*- mode: sh; -*-
+diskutil unmount /dev/disk0s3
+diskutil unmount /dev/disk0s4
+diskutil unmount /dev/disk0s6
+diskutil unmount /dev/disk0s7
+diskutil unmount /dev/disk0s8
+        ,#+END_SRC
+- System Preferences
+  - General: *NA*
+  - Desktop & Screensaver
+    - *(Host)*: "Message", 5m
+    - *(Guest)*: "Message", 5m
+  - Dock
+    - Size: Largest
+    - Magnification: Off
+    - Position: Bottom
+    - Maximize windows using: Genie Effect
+    - Double clicking a title bar: zoom
+    - Minimize windows into application icon: Yes
+    - Animate opening apps: Yes
+    - Auto hide/show dock: Yes
+    - Show indicator for open apps: Yes
+  - Mission Control: *NA*
+  - Language & Region: *NA*
+  - Security & Privacy
+    - Privacy
+      - Unlock
+      - Add =Terminal=
+  - Spotlight
+    - Search Results
+      - Applications
+      - Calculator
+      - Documents
+      - Folders
+      - System Preferences
+    - Privacy
+      - Big folders like DropBox or TimeMachine
+  - Notifications: *NA*
+  - Displays *(Host)* \rarr Maximize resolution
+  - Energy saver
+    - *(Host)*
+      - On power
+        - Display off at 15m
+        - Prevent computer from sleeping automatically when display is offp
+          when display is off
+      - On battery, Screen sleep 5m
+        - Don't slightly dim the display on battery power
+    - *(Guest)*
+      - Computer sleep: never
+  - Keyboard *(Host)*
+    - Shortcuts
+      - Launchpad & Dock
+        - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.
+      - Mission Control
+        - Mission Control: C-9
+        - Application windows: Disable
+        - Mission Control: Disable
+        - Show Desktop: C-8
+        - Show Dashboard: Disable it. I never use it.
+      - Keyboard
+        - Move focus to next window: Alt-TAB
+          - Keep parity with Command-TAB
+          - Add SHIFT to cycle to previous window
+      - Screen Shots
+        - Change each one to a prefix of Control-Command-Option, plus a shift
+          - To keys 3 and 4
+      - Services
+        - Disable anything with control keybindings
+      - Accessibility
+        - Disable everything and then
+        - Invert Colors, Yes
+  - Mouse
+    - *(Host)* Connect Bluetooth mouse
+    - Tracking Speed
+      - MBP Trackpad: 100%
+      - Anker Palm Mouse: 50%
+      - Dell Mouse: 80%
+  - Trackpad *(Host)*
+    - Point & Click
+      - Secondary click: TRUE
+      - Tap to click: TRUE
+  - Printers & Scanners *(Host)*
+    - Add printer(s)
+  - Sound
+    - Show volume in menubar
+  - iCloud: *NA*
+  - Internet Accounts: *NA*
+  - Extensions: *NA*
+  - Network: *NA*
+  - Bluetooth *(Host)*
+    - Show in menu bar
+  - Sharing: *NA*
+  - Users & Groups: Enable Guest User without Parental Controls.
+  - Parental Controls: *NA*
+  - App Store: *NA*
+  - Dictation & Speech
+    - Dictation
+      - ON
+      - YES Use Enhanced Dictation
+      - Shortcut: Press Control-Command-Option-D
+    - Text 2 Speech
+      - Voice: Cepstral Preference
+      - Rate: Normal
+      - Speak selected text on key: Control-Command-Option S
+  - Date & Time: *NA*
+  - Startup Disk: *NA*
+  - Time Machine: *NA*
+  - Accessibility
+    - Display
+      - Increase contrast
+        - Automatically Reduces transparency
+      - Contrast: Normal
+      - Cursor size: 50%
+      - YES Shake mouse pointer to locate  - Cepestral Voices
+    - See below
+  - Zoom
+    - YES Use keyboard shortcuts
+    - YES Zoom images
+    - Zoom Style: default Fullscreen
+      - More Options
+        - When zoomed in, the screen image moves:
+          - Continuously with pointer
+  - VoiceOver: *NA*
+  - Descriptions: *NA*
+  - Captions: *NA*
+  - Audio: *NA*
+  - Keyboard: *NA*
+  - Mouse & Trackpad
+    - Trackpad Options
+      - Enable Dragging: *Without* Drag Lock
+  - Switch Control: *NA*
+  - Dictation: *NA* (Review all of the commands though)
+    - That: Selected or desired thing
+    - Select N, Go To N, Move N, Scroll N
+    - Cut/Copy/Paste
+    - Capitalize/Lowercase  - Java: *NA*
+  - SwitchResX: *NA*
+  - Tuxera NTFS: *NA*
+- *(Host)* Show Keychain Access in Menubar
+  - Start KeyChain Access
+  - Preferences
+  - Show keychain status in menubar
+- Finder
+  - Preferences
+    - Sidebar
+      - Favorites
+        - <Home>
+      - Devices
+        - <Computer>
+        #+END_SRC
+
+**** Configuration
+:PROPERTIES:
+:header-args: :tangle "02_os-x-configuration.sh" :tangle-mode (identity #o755)
+:ID:       org_gcr_2017-05-12_mara:A6A791A2-0BDD-45D0-A028-C7055E4E9686
+:END:
+***** Machine
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:F583C4D6-505C-436D-AB89-E17478183C3C
+:END:
+
+This script should be idempotent.
+Set the computer's "names". There are 3 resources ([[http://ilostmynotes.blogspot.com/2012/03/computername-vs-localhostname-vs.html][1]], [[http://osxdaily.com/2012/10/24/set-the-hostname-computer-name-and-bonjour-name-separately-in-os-x/][2]], [[http://hack.org/mc/writings/mac-survival.html][3]]) that I used to make
+sense of the different names. It is simple, and new to me.
+
+Originally I set every name to the same value. Doing so didn't result in
+warnings but it did result in an incorrect "Computer Name" and
+"Local Host Name". Based on that experience, I'm going to give names using this
+strategy to name machines now:
+
+- HostName
+  - All lower case
+  - <Logical name>-<UUID>.<org|vm>
+- LocalHostName
+  - All lower case
+  - <Logical name>-<UUID>
+- NetBIOS
+  - All lower case
+  - <Logical name>-<UUID>
+- ComputerName
+  - "<Logical name> (<UUID>)"
+
+Defining this naming approach helped me learn more about the intent of the
+name and what I wanted from them.
+
+Depending upon "who" is asking, your Mac has four names. If you want to set
+them all at once your can do it like this. I care most about the correct name
+showing up in the terminal.
+
+#+NAME: org_gcr_2017-05-12_mara_8082AC3B-7751-40C3-B8C3-E1C8B678F07A
+#+BEGIN_SRC sh
+sudo scutil --set HostName ""
+echo "Enter HostName (plain old hostname): "
+read vhn
+sudo scutil --set HostName $vhn
+sudo scutil --set LocalHostName ""
+echo "Enter LocalHostName (name for Bonjour services): "
+read vlhn
+sudo scutil --set LocalHostName $vlhn
+sudo defaults delete 'com.apple.smb.server' NetBIOSName
+echo "Enter NetBIOSName (name that Windows boxes will see): "
+read vnbn
+sudo defaults write 'com.apple.smb.server' NetBIOSName -string $vnbn
+sudo scutil --set ComputerName ""
+echo "Enter ComputerName (human friendly GUI name): "
+read vcn
+sudo scutil --set ComputerName $cn
+#+END_SRC
+
+Display login window as name and password.
+#+NAME: org_gcr_2017-05-12_mara_E7F0585C-736B-4B4F-8123-BEF176250886
+#+BEGIN_SRC sh
+sudo defaults write /Library/Preferences/com.apple.loginwindow.plist SHOWFULLNAME -bool true
+#+END_SRC
+
+Login message.
+#+NAME: org_gcr_2017-05-12_mara_D79CA624-89B0-4F92-877A-B0C2C14A4B2F
+#+BEGIN_SRC sh
+sudo defaults write /Library/Preferences/com.apple.loginwindow.plist LoginwindowText -string "
+All creativity is an extended form of a joke.
+          — Alan Kay"
+#+END_SRC
+
+Cycle through system information by clicking on the clock at the login
+screen[fn:1f8bbd98e464862a:https://apple.stackexchange.com/questions/155429/view-machine-name-on-login-screen].
+
+#+NAME: org_gcr_2017-05-12_mara_3290F2DF-990B-4CE3-8529-36521F720963
+#+BEGIN_SRC sh
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+#+END_SRC
+
+Disable Gatekeeper.
+#+NAME: org_gcr_2017-05-12_mara_AD487C53-1C16-4734-9275-B1B72F41D725
+#+BEGIN_SRC sh
+sudo spctl --master-disable
+#+END_SRC
+
+***** User
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:F95498B5-C927-4AD2-8CC5-2C846C4D6FA6
+:END:
+
+This script should be idempotent.
+
+- These commands are all [[https://github.com/kitchenplan/chef-osxdefaults/tree/master/recipes][copied]]
+  - Including the documentation
+  - Some of them have corrections and changes
+****** Globals, Logical or Literal
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:06E5E4F8-6D2F-4404-A159-CE3FF95A08A5
+:END:
+
+Set background.
+#+NAME: org_gcr_2017-05-12_mara_2C19CF8E-CA4E-4589-82E2-D1A3D2D18353
+#+BEGIN_SRC sh
+cd ~/Pictures/
+curl -O http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2015/02/M101-ORG.jpg
+sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '~/Pictures/M101-ORG.jpg'";
+#+END_SRC
+
+Set default volume.
+#+NAME: org_gcr_2017-05-12_mara_C35A4166-B7B0-4DC8-967F-F360777F869F
+#+BEGIN_SRC sh
+osascript -e 'set volume output volume 50'
+#+END_SRC
+
+Disable auto-correct.
+#+NAME: org_gcr_2017-05-12_mara_FECCE7E6-6F35-4DC3-8646-CD445EBFE430
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' NSAutomaticSpellingCorrectionEnabled -bool false
+#+END_SRC
+
+Expand print panel by default.
+#+NAME: org_gcr_2017-05-12_mara_0865BC69-697B-44F1-BAAD-8F0EA0F62E47
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' PMPrintingExpandedStateForPrint -bool true
+defaults write 'NSGlobalDomain' PMPrintingExpandedStateForPrint2 -bool true
+#+END_SRC
+
+Expand save panel by default.
+#+NAME: org_gcr_2017-05-12_mara_17B24F88-6FFB-4BC3-811F-546E4A875EA5
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' NSNavPanelExpandedStateForSaveMode -bool true
+defaults write 'NSGlobalDomain' NSNavPanelExpandedStateForSaveMode2 -bool true
+#+END_SRC
+
+Automatically quit printer app once the print jobs complete.
+#+NAME: org_gcr_2017-05-12_mara_C358FC0F-758F-4B87-9608-9AB34FA17B0A
+#+BEGIN_SRC sh
+defaults write 'com.apple.print.PrintingPrefs' 'Quit When Finished' -bool true
+#+END_SRC
+
+Hide the menubar.
+#+NAME: org_gcr_2017-05-12_mara_9F534597-1727-420D-BA53-09267E9EB7AB
+#+BEGIN_SRC sh
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+#+END_SRC
+
+Add battery percentage in menubar.
+#+NAME: org_gcr_2017-05-12_mara_35F6C8B1-4D7A-4823-A77E-DDA7F8060AFF
+#+BEGIN_SRC sh
+defaults write 'com.apple.menuextra.battery' ShowPercent -bool true
+#+END_SRC
+
+Add date in menubar clock.
+#+NAME: org_gcr_2017-05-12_mara_7B2BD1E7-4165-4E7F-92D1-C658E9804F51
+#+BEGIN_SRC sh
+defaults write 'com.apple.menuextra.clock' DateFormat -string "EEE MMM d  HH:mm"
+#+END_SRC
+
+Prevent Time Machine from prompting to use new hard drives as backup volume.
+#+NAME: org_gcr_2017-05-12_mara_FA0C8365-624A-4590-98D1-131671483174
+#+BEGIN_SRC sh
+defaults write 'com.apple.TimeMachine' DoNotOfferNewDisksForBackup -bool true
+#+END_SRC
+
+Avoid creating .DS_Store files on network volumes.
+#+NAME: org_gcr_2017-05-12_mara_4073FE48-C5ED-4074-84C9-212B5544CB05
+#+BEGIN_SRC sh
+defaults write 'com.apple.desktopservices' DSDontWriteNetworkStores -bool true
+#+END_SRC
+
+Save to disk (not to iCloud) by default.
+#+NAME: org_gcr_2017-05-12_mara_4D88B78D-92CA-46AE-AFBC-B69D78F46296
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' NSDocumentSaveNewDocumentsToCloud -bool false
+#+END_SRC
+
+Increase window resize speed for Cocoa applications.
+#+NAME: org_gcr_2017-05-12_mara_BD54854E-74A3-42C0-989A-F39C70D762F1
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' NSWindowResizeTime -float 0.001
+#+END_SRC
+
+Use the Graphite theme.
+#+NAME: org_gcr_2017-05-12_mara_40FA9179-1D81-4F78-8AE0-6F1338947AB7
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' AppleAquaColorVariant -int 6
+#+END_SRC
+
+Use dark menu bar and Dock
+#+NAME: org_gcr_2017-05-12_mara_1C882423-44FB-4605-BFDE-7CF7D06644B1
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' AppleInterfaceStyle -string Dark
+#+END_SRC
+
+Disable the “Are you sure you want to open this application?” dialog.
+#+NAME: org_gcr_2017-05-12_mara_CE6EBA74-B9B0-45AA-B741-7F2BF0F0AD24
+#+BEGIN_SRC sh
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+#+END_SRC
+
+Display ASCII control characters using caret notation in standard text views.
+Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`.
+#+NAME: org_gcr_2017-05-12_mara_F0EC81C0-85C3-401D-BADF-B7156B043B00
+#+BEGIN_SRC sh
+defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
+#+END_SRC
+
+Disable automatic termination of inactive apps.
+#+NAME: org_gcr_2017-05-12_mara_F839E739-239F-452B-BB09-557FBC539EF1
+#+BEGIN_SRC sh
+defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+#+END_SRC
+
+Disable the crash reporter.
+#+NAME: org_gcr_2017-05-12_mara_9D937F98-0106-444A-BC40-C37283FAB316
+#+BEGIN_SRC sh
+defaults write com.apple.CrashReporter DialogType -string "none"
+#+END_SRC
+
+Set Help Viewer windows to non-floating mode.
+#+NAME: org_gcr_2017-05-12_mara_6A505F3E-B686-46A7-A617-EEC6419C81A5
+#+BEGIN_SRC sh
+defaults write com.apple.helpviewer DevMode -bool true
+#+END_SRC
+
+Restart automatically if the computer freezes.
+#+NAME: org_gcr_2017-05-12_mara_10BE7A63-4C25-40AA-B9C8-60F2267FB5F6
+#+BEGIN_SRC sh
+sudo systemsetup -setrestartfreeze on
+#+END_SRC
+
+Check for software updates daily, not just once per week.
+#+NAME: org_gcr_2017-05-12_mara_24BCF9D2-732A-472C-855D-6AFAE6BE1967
+#+BEGIN_SRC sh
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+#+END_SRC
+
+Disable smart quotes as they’re annoying when typing code.
+#+NAME: org_gcr_2017-05-12_mara_4F242371-3696-4DF2-AC94-22F2038E83BE
+#+BEGIN_SRC sh
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+#+END_SRC
+
+Disable smart dashes as they’re annoying when typing code.
+#+NAME: org_gcr_2017-05-12_mara_B5E344AD-EF14-4F0D-BE99-E6717081917B
+#+BEGIN_SRC sh
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+#+END_SRC
+
+****** Hardware
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:86EF4EB5-CB24-4FAD-B21D-C7CFB233EE8B
+:END:
+
+Disable press-and-hold for keys in favor of key repeat.
+#+NAME: org_gcr_2017-05-12_mara_278431C8-F6C9-4648-9828-EC3C001265FE
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' ApplePressAndHoldEnabled -bool false
+#+END_SRC
+
+Use all F1, F2, etc. keys as standard function keys.
+#+NAME: org_gcr_2017-05-12_mara_35F9EFDE-BB1B-440E-8475-07BFD16B57A7
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' com.apple.keyboard.fnState -bool true
+#+END_SRC
+
+Increase sound quality for Bluetooth headphones/headsets.
+#+NAME: org_gcr_2017-05-12_mara_1535AE8C-9440-484F-8916-B3B1E0E367E9
+#+BEGIN_SRC sh
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+#+END_SRC
+
+****** Dock
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:97B586C1-CF32-410F-8763-9CEA8C72B556
+:END:
+
+Automatically hide and show the dock.
+#+NAME: org_gcr_2017-05-12_mara_92C03F93-F5AB-480A-9D11-AD4B0340175D
+#+BEGIN_SRC sh
+defaults write com.apple.dock autohide -bool true && killall Dock
+#+END_SRC
+
+Do not animate opening applications from the Dock.
+#+NAME: org_gcr_2017-05-12_mara_AED4ACD0-8AC0-4DA1-84C2-854352BF862E
+#+BEGIN_SRC sh
+defaults write com.apple.dock launchanim -bool false && killall Dock
+#+END_SRC
+
+Enable highlight hover effect for the grid view of a stack.
+#+NAME: org_gcr_2017-05-12_mara_0BBDBF25-1CD4-4E9A-9C30-2AC387CF4F8D
+#+BEGIN_SRC sh
+defaults write com.apple.dock mouse-over-hilte-stack -bool true && killall Dock
+#+END_SRC
+
+Make Dock icons of hidden applications translucent.
+#+NAME: org_gcr_2017-05-12_mara_9FE18292-E785-433D-901F-C6BA8673D4CC
+#+BEGIN_SRC sh
+defaults write com.apple.dock showhidden -bool true && killall Dock
+#+END_SRC
+
+Minimize to application.
+#+NAME: org_gcr_2017-05-12_mara_F97562F8-8DC4-4E1B-8E0C-A91ED6404138
+#+BEGIN_SRC sh
+defaults write com.apple.dock minimize-to-application -bool true && killall Dock
+#+END_SRC
+
+Move the Dock to the bottom side of the screen.
+#+NAME: org_gcr_2017-05-12_mara_7660A9DA-AAD9-4B44-A40A-4A9AD376DAA4
+#+BEGIN_SRC sh
+defaults write com.apple.dock orientation -string bottom && killall Dock
+#+END_SRC
+
+Remove the animation when hiding/showing the dock.
+#+NAME: org_gcr_2017-05-12_mara_CE835494-145D-494D-AA53-60BDE5132068
+#+BEGIN_SRC sh
+defaults write com.apple.Dock autohide-time-modifier -float 0 && killall Dock
+#+END_SRC
+
+Remove the auto-hiding Dock delay".
+#+NAME: org_gcr_2017-05-12_mara_FFFF9528-5771-410A-B554-CDEECE46223C
+#+BEGIN_SRC sh
+defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
+#+END_SRC
+
+Set the icon size of Dock items to 50 pixels.
+#+NAME: org_gcr_2017-05-12_mara_CC22C9D3-6537-48AB-9C73-3B3BFAE32571
+#+BEGIN_SRC sh
+defaults write com.apple.Dock tilesize -int 50 && killall Dock
+#+END_SRC
+
+Show indicator lights for open applications in the Dock.
+#+NAME: org_gcr_2017-05-12_mara_CC1758DF-1E34-4335-BE0A-A3ADFF94E289
+#+BEGIN_SRC sh
+defaults write com.apple.Dock show-process-indicators -bool true && killall Dock
+#+END_SRC
+
+Wipe all (default) app icons from Dock.
+#+NAME: org_gcr_2017-05-12_mara_2C282764-302C-48B3-8526-BCBBC68136D7
+#+BEGIN_SRC sh
+defaults write 'com.apple.dock' persistent-apps -array '' && killall Dock
+#+END_SRC
+
+Speed up Mission Control animations.
+#+NAME: org_gcr_2017-05-12_mara_51190ECF-96AF-41E5-A3D5-305733CB369B
+#+BEGIN_SRC sh
+defaults write 'com.apple.dock' expose-animation-duration -float 0.1 && killall Dock
+#+END_SRC
+
+****** Finder
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:7898D315-F4DB-44C8-87D7-95A386CE489C
+:END:
+
+Allow text selection in Quick Look.
+#+NAME: org_gcr_2017-05-12_mara_8A95C7A0-1FFC-4F4A-B85B-E615692D3DD0
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' QLEnableTextSelection -bool true && killall Finder
+#+END_SRC
+
+Automatically open a new Finder window when a volume is mounted.
+#+NAME: org_gcr_2017-05-12_mara_B0C608AD-9265-4878-AEBC-7E33A048F1A1
+#+BEGIN_SRC sh
+defaults write 'com.apple.frameworks.diskimages' auto-open-ro-root -bool true && killall Finder
+defaults write 'com.apple.frameworks.diskimages' auto-open-rw-root -bool true && killall Finder
+defaults write 'com.apple.finder' OpenWindowForNewRemovableDisk -bool true && killall Finder
+#+END_SRC
+
+Disable the warning before emptying the Trash.
+#+NAME: org_gcr_2017-05-12_mara_699478D2-54ED-41DF-B98C-723EF7535502
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' WarnOnEmptyTrash -bool false && killall Finder
+#+END_SRC
+
+Disable the warning when changing a file extension.
+#+NAME: org_gcr_2017-05-12_mara_2E852A5E-D156-4AC6-8B54-7B7F055BE34D
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' FXEnableExtensionChangeWarning -bool false && killall Finder
+#+END_SRC
+
+Set finder to display full path in title bar.
+#+NAME: org_gcr_2017-05-12_mara_FD73E47E-42A4-4AB9-A599-12E44D822A79
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' _FXShowPosixPathInTitle -bool true && killall Finder
+#+END_SRC
+
+New Finder window shows the homefolder.
+#+NAME: org_gcr_2017-05-12_mara_2D637649-277F-4E7B-959E-924E88F046A6
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' NewWindowTarget -string PfHm && killall Finder
+#+END_SRC
+
+When performing a search, search the current folder by default.
+#+NAME: org_gcr_2017-05-12_mara_1A04F6F5-D673-4043-90B1-F6283FBEF5C9
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' FXDefaultSearchScope -string SCcf && killall Finder
+#+END_SRC
+
+Show all files in Finder.
+#+NAME: org_gcr_2017-05-12_mara_91DF78CB-D5A0-4F5D-AA66-C402BF61F1B4
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' AppleShowAllFiles -bool true && killall Finder
+#+END_SRC
+
+Show file extensions in Finder.
+#+NAME: org_gcr_2017-05-12_mara_47D3778D-108C-4FE8-8500-7219FDE66F65
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' AppleShowAllExtensions -bool true && killall Finder
+#+END_SRC
+
+Show path bar in Finder.
+#+NAME: org_gcr_2017-05-12_mara_E686D674-F91E-41C1-9AAC-CCAE9A045BE9
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' ShowPathbar -bool true && killall Finder
+#+END_SRC
+
+Show status bar in Finder.
+#+NAME: org_gcr_2017-05-12_mara_0A61D4B3-E473-4260-BC09-E7AE3466B3FF
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' ShowStatusBar -bool true && killall Finder
+#+END_SRC
+
+Sidebar icon size Small.
+#+NAME: org_gcr_2017-05-12_mara_0E915742-485B-4FD0-B884-D2D479803765
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' NSTableViewDefaultSizeMode -bool true && killall Finder
+#+END_SRC
+
+- Finder view style settings [[icnv: Icon View
+Nlsv: List View
+clmv: Column View
+Flwv: Cover Flow View][Via]]
+  - icnv :: Icon View
+  - Nlsv :: List View
+  - clmv :: Column View
+  - Flwv :: Cover Flow View
+#+NAME: org_gcr_2017-05-12_mara_C3B234B5-498F-4C29-B548-03DF4D57085A
+#+BEGIN_SRC sh
+defaults write 'com.apple.Finder' FXPreferredViewStyle Nlsv && killall Finder
+#+END_SRC
+
+[[https://gist.github.com/nickbudi/11277384][Via:]]
+Set item arrangement to none (enables folder dropdowns, 'Name' if you want to
+remove them)
+#+NAME: org_gcr_2017-05-12_mara_818E594F-4D81-43E3-9734-F52C4C827D77
+#+BEGIN_SRC sh
+defaults write com.apple.finder FXPreferredGroupBy -string "None"
+#+END_SRC
+
+Sort list view by kind in ascending order (Windows style).
+#+NAME: org_gcr_2017-05-12_mara_3A24B6A5-AA20-4377-9D5A-5544B7DA6C8E
+#+BEGIN_SRC sh
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettings:sortColumn kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettings:columns:4:ascending true" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ListViewSettings:sortColumn kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ListViewSettings:columns:kind:ascending true" ~/Library/Preferences/com.apple.finder.plist
+#+END_SRC
+
+Finder: disable window animations and Get Info animations.
+#+NAME: org_gcr_2017-05-12_mara_67D184D1-B9CC-4020-8E2C-DB4A308723D1
+#+BEGIN_SRC sh
+defaults write com.apple.finder DisableAllAnimations -bool true
+#+END_SRC
+
+Show nothing on the desktop.
+#+NAME: org_gcr_2017-05-12_mara_1F11E130-3D0F-4351-ADF1-A96F891B5055
+#+BEGIN_SRC sh
+defaults write com.apple.finder CreateDesktop -bool false
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+#+END_SRC
+
+****** Screen
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:DA95ADE8-F98C-45BC-843C-08AECC659BBC
+:END:
+
+Require password immediately after sleep or screen saver begins.
+#+NAME: org_gcr_2017-05-12_mara_058DEDDA-6F7B-4EC1-80EC-EDC032D321A8
+#+BEGIN_SRC sh
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+#+END_SRC
+
+Disable shadow in screenshots.
+#+NAME: org_gcr_2017-05-12_mara_C7F807FE-086C-4DAD-874B-663354851470
+#+BEGIN_SRC sh
+defaults write com.apple.screencapture disable-shadow -bool true
+#+END_SRC
+
+Save screenshots in PNG format.
+#+NAME: org_gcr_2017-05-12_mara_F453C1D8-DAD0-4EFC-B03C-5D502014F323
+#+BEGIN_SRC sh
+defaults write 'com.apple.screencapture' type -string png && killall SystemUIServer
+#+END_SRC
+
+Enable subpixel font rendering on non-Apple LCDs.
+#+NAME: org_gcr_2017-05-12_mara_E9B0CDED-1981-4EDC-8B79-7FF6D807347C
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' AppleFontSmoothing -int 2
+#+END_SRC
+
+[[https://github.com/robb/.dotfiles/blob/master/osx/defaults.install][Via]]
+#+NAME: org_gcr_2017-05-12_mara_C6FCF96E-90C8-42CF-86E9-028CCF471B92
+#+BEGIN_SRC sh
+mkdir -p ~/Screen\ Shots
+defaults write com.apple.screencapture location ~/Screen\ Shots
+#+END_SRC
+
+****** Hotcorners
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:CC6D3BBA-ACAE-4188-A301-3F8555D7A3D7
+:END:
+
+- Possible values:
+  - 0 :: no-op
+  - 2 :: Mission Control
+  - 3 :: Show application windows
+  - 4 :: Desktop
+  - 5 :: Start screen saver
+  - 6 :: Disable screen saver
+  - 7 :: Dashboard
+  - 10 :: Put display to sleep
+  - 11 :: Launchpad
+  - 12 :: Notification Center
+
++Top left screen corner \rarr Desktop.+ Changed to keybinding.
+
+#+NAME: org_gcr_2017-05-12_mara_671B115A-3FB5-4A61-8922-DD7156A4CCDE
+#+BEGIN_SRC sh
+defaults write com.apple.dock wvous-tl-corner -int 0
+defaults write com.apple.dock wvous-tl-modifier -int 0
+#+END_SRC
+
+Top right screen corner \rarr Mission Control. Also added a keybinding.
+
+#+NAME: org_gcr_2017-05-12_mara_FD4B1467-B0D2-4997-9D2B-510F009E13FA
+#+BEGIN_SRC sh
+write defaults com.apple.dock wvous-tr-corner -int 0
+defaults write com.apple.dock wvous-tr-modifier -int 0
+#+END_SRC
+
++Bottom right screen corner \rarr App windows.+ Changed to keybinding.
+
+#+NAME: org_gcr_2017-05-12_mara_890E6CB7-695F-4A71-83B4-9F54632E6338
+#+BEGIN_SRC sh
+defaults write com.apple.dock wvous-br-corner -int 0
+defaults write com.apple.dock wvous-br-modifier -int 0
+#+END_SRC
+
+
++Bottom left screen corner \rarr Start Screensaver+ Changed to keybinding.
+
+#+NAME: org_gcr_2017-05-12_mara_DE90A065-7C16-41F3-A0DA-A2113F19FB24
+#+BEGIN_SRC sh
+defaults write com.apple.dock wvous-bl-corner -int 0
+defaults write com.apple.dock wvous-bl-modifier -int 0
+#+END_SRC
+
+****** Spaces
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:3D29A9A2-2A19-4930-91AF-7190EFD610FA
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_CDD537A4-A928-4084-BC7A-22EE8DA50D23
+#+BEGIN_SRC sh
+# Don’t automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
+# Set edge-dragging delay to 0.7
+defaults write com.apple.dock workspaces-edge-delay -float 1.0
+#+END_SRC
+
+****** Mouse
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:681C8538-D4B5-440E-B71E-19F2B17406D1
+:END:
+
+Reasonably fast.
+#+NAME: org_gcr_2017-05-12_mara_056BF575-EB40-428F-92FF-DA8A4164A45B
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' com.apple.mouse.scaling -float 2
+#+END_SRC
+
+****** Terminal
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:9311984B-AF14-479D-8E8A-CE17CE468CE2
+:END:
+
+Only use UTF-8 in Terminal.app.
+
+#+NAME: org_gcr_2017-05-12_mara_B61838B5-13A9-4714-8702-C4BFDA5CE680
+#+BEGIN_SRC sh
+defaults write com.apple.terminal StringEncodings -array 4
+#+END_SRC
+
+****** Activity Monitor
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:4C594D4F-6FF8-4455-8D65-756511C905FA
+:END:
+
+Show the main window when launching Activity Monitor.
+#+NAME: org_gcr_2017-05-12_mara_0177C8D4-4113-4149-97DF-D83AEA5B65B6
+#+BEGIN_SRC sh :results output silent
+defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
+#+END_SRC
+
+Visualize CPU usage in the Activity Monitor Dock icon.
+#+NAME: org_gcr_2017-05-12_mara_E7775BEC-2D26-4D19-A8C9-0BCF9AA22230
+#+BEGIN_SRC sh :results output silent
+defaults write com.apple.ActivityMonitor IconType -int 5
+#+END_SRC
+
+Show all processes in Activity Monitor.
+#+NAME: org_gcr_2017-05-12_mara_5C9A0DEA-DBD3-46BA-A85C-A17CDC79826D
+#+BEGIN_SRC sh :results output silent
+defaults write com.apple.ActivityMonitor ShowCategory -int 0
+#+END_SRC
+
+Sort Activity Monitor results by CPU usageefaults write com.apple.ActivityMonitor Sort.Column -string "CPUUsage".
+#+NAME: org_gcr_2017-05-12_mara_51F2F5A5-7037-4458-8468-AD019892EBE9
+#+BEGIN_SRC sh :results output silent
+defaults write com.apple.ActivityMonitor SortDirection -int 0
+#+END_SRC
+
+****** Complete
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:5873CCFC-6E5A-43BB-96F3-10003F879BCB
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_4C582518-39DC-4D1A-BB0C-5499B4CA78D3
+#+BEGIN_SRC sh
+echo "Script complete"
+echo "Log out then back in to see changes "
+#+END_SRC
+
+*** Administration
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:95195AE3-7217-4065-8ED1-3B55EE98EFAE
+:END:
+**** Install
+:PROPERTIES:
+:header-args: :tangle "03_administration.sh" :tangle-mode (identity #o755)
+:ID:       org_gcr_2017-05-12_mara:3C11A2F0-C0CD-4E82-872F-95CB55109C01
+:END:
+****** Brew & Brew Cask
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:5E9CF7CE-F1CB-43FD-ABA0-7ECC2D5A3C3E
+:END:
+
+Brew is [[http://brew.sh/][here]].
+
+#+NAME: org_gcr_2017-05-12_mara_5876A250-F4E4-4B63-996B-95123802B918
+#+BEGIN_SRC sh
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#+END_SRC
+
+BrewCask is [[http://caskroom.io][here]].
+
+#+NAME: org_gcr_2017-05-12_mara_A1A27177-989C-4DB3-8C8F-DF9CFA241DD0
+#+BEGIN_SRC sh
+brew tap caskroom/cask
+#+END_SRC
+
+Software with different releases
+
+#+name: org_gcr_2018-06-12T21-48-52-05-00_mara_82D7A5A9-0B09-473C-82B8-7DB744CD2FA8
+#+begin_src sh
+brew tap caskroom/versions
+brew update
+#+end_src
+
+****** Git Checkout Directory
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:7791D5FE-F7D8-4A63-B048-4D21A973185C
+:END:
+
+Prepare the anonymous GitHub directory.
+
+#+NAME: org_gcr_2017-05-12_mara_9F9C42F7-6E0F-45C9-8719-B6E8A0CFEC7C
+#+BEGIN_SRC sh
+rm -rf ~/git/github-anonymous
+mkdir -p ~/git/github-anonymous
+cd ~/git/github-anonymous
+#+END_SRC
+
+****** Bash Configuration
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:D90D208D-478F-452A-ABF9-2312611AB42D
+:END:
+
+Set up Bash. Make everything expected available.
+
+#+NAME: org_gcr_2017-05-12_mara_8E036592-BF53-4D12-ACA4-F9CED385432C
+#+BEGIN_SRC sh
+git clone https://github.com/grettke/bash.git
+cd bash
+./deploy
+cd
+#+END_SRC
+
+****** Bash Software
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:2B8230B7-51D6-4BC0-B38D-2D590F48272F
+:END:
+
+[[http://clubmate.fi/upgrade-to-bash-4-in-mac-os-x/][Via]].
+
+#+NAME: org_gcr_2017-05-12_mara_F8CE935B-10B1-4261-857C-42C5281BDF9E
+#+BEGIN_SRC sh
+bash --version
+brew install bash
+if grep "/usr/local/bin/bash" /etc/shells > /dev/null; then
+    echo "brew bash already configured in shells; doing nothing"
+else
+    sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+    chsh -s /usr/local/bin/bash
+fi
+brew install bashdb
+bashhome=$(brew --prefix bash)
+bdbhome=$(brew --prefix bashdb)
+rm $bashhome/share/bashdb
+ln -s $bdbhome/share/bashdb $bashhome/share/bashdb
+unset bashhome
+unset bdbhome
+brew install bash-completion@2
+bash --version
+bashdb --version
+#+END_SRC
+
+****** Fonts
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:15890934-2945-4469-A905-EBFDBCE7A6FD
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_C4A8F02D-CF13-414E-B515-A9E6ADE8E5FC
+#+BEGIN_SRC sh
+brew tap caskroom/fonts
+#+END_SRC
+
+Install them automatically.
+
+#+NAME: org_gcr_2017-05-12_mara_57293DFD-7465-4AE6-9FCB-AF240AFEA14C
+#+BEGIN_SRC sh
+brew cask install font-dejavu-sans
+brew cask install font-fira-mono
+brew cask install font-fira-sans
+brew cask install font-fontawesome
+brew cask install font-han-nom-a
+brew cask install font-icomoon
+brew cask install font-mfizz
+brew cask install font-montserrat
+brew cask install font-octicons
+brew cask install font-quivira
+brew cask install font-symbola
+brew cask install font-unifrakturcook
+brew cask install font-unifrakturmaguntia
+#+END_SRC
+
+Utilities.
+
+#+name: org_gcr_2018-03-21T11-56-35-05-00_mara_9769893B-7CC8-4097-A9DF-19BB6532D1DA
+#+begin_src sh
+brew install fondu
+#+end_src
+****** Terminal
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:C0008D7A-28D0-4FDD-994E-4E50DB34ACAA
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_55BC0C54-06BC-4D75-84AA-587B1C282E80
+#+BEGIN_SRC sh
+rm -rf ~/git/github-anonymous/osx-terminal.app-colors-solarized
+cd ~/git/github-anonymous
+git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
+#+END_SRC
+
+****** Fortune
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:90CF480B-7858-4FDB-84DD-168F7BC10959
+:END:
+#+NAME: org_gcr_2017-05-12_mara_DBDFD463-19F7-4708-B2DE-33B6F66EEB04
+#+BEGIN_SRC sh
+brew install fortune
+#+END_SRC
+****** Recipes
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:4EE93B7D-9B90-40D9-99DE-CCC6CED9129B
+:END:
+
+You will want to know details about the software you are installing. Details
+include version number, dependencies, and post-installation requirements.
+Sometimes the recipes install old versions of the software and need to be
+updated. Sometimes recipes don't link the software and you need to do it
+manually. When you want details, you will have easy access to them that neither
+the Github GUI or the Brew Cask GUI easily provide.
+
+#+NAME: org_gcr_2017-05-12_mara_E3924B58-B0D8-4FEB-8C75-2CDE56647E2C
+#+BEGIN_SRC sh
+cd ~/git/github-anonymous
+git clone https://github.com/Homebrew/homebrew.git
+git clone https://github.com/caskroom/homebrew-cask.git
+#+END_SRC
+****** GNU Core Utilities
+:PROPERTIES:
+:ID:       org_gcr_2018-01-25_mara:44354A23-99A3-4A52-98F8-708CDDD1E736
+:END:
+#+NAME: org_gcr_2018-01-25_mara_9783633F-1314-4A17-B057-ECBE72BA782A
+#+BEGIN_SRC sh
+brew install coreutils
+#+END_SRC
+****** Joe
+:PROPERTIES:
+:ID:       org_gcr_2018-05-08T04-16-55-05-00_mara:9376978E-168C-4C70-B9DB-5FA39977902E
+:END:
+#+name: org_gcr_2018-05-08T04-16-55-05-00_mara_5693091A-3304-4506-9B95-6615BEAB04E0
+#+begin_src sh
+brew install joe
+#+end_src
+****** Complete
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:9C6C763C-5676-407E-8C14-77B2D6615873
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB
+#+BEGIN_SRC sh
+echo "Script complete"
+#+END_SRC
+
+**** Configure
+:PROPERTIES:
+:header-args: :tangle "04_administration.org"
+:ID:       org_gcr_2017-05-12_mara:D5AF7EF8-5CBD-42ED-98B1-5D20BBDE5BCC
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_DE67722F-643A-460E-930A-4A9FF7270B6A
+#+BEGIN_SRC org
+,* Terminal
+
+- Profiles
+  - Profile bar on the left
+    - Import the Solarized dark and light theme
+    - The the default theme to light
+  - Text
+    - Font: DejaVu Sans Mono: 18
+    - Cursor: block
+  - Window
+    - Yes: Working directory or document, and path
+  - Advanced
+    - No Audible bell
+    - Yes visual bell (not just when sound is muted)
+    - NO Set locale environment variables on startup
+      - Set them in your =bashrc=, not here
+#+END_SRC
+
+*** Usability
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:6E60E3B4-61DD-41B4-97C1-EDE334BBB3E3
+:END:
+**** Install
+:PROPERTIES:
+:header-args: :tangle "05_usability.sh" :tangle-mode (identity #o755)
+:ID:       org_gcr_2017-05-12_mara:F55B173B-368A-44EA-9863-8D69D1E612F3
+:END:
+***** PopChar
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:1669469B-F3EF-48E0-85FD-7C773CF94F06
+:END:
+:LOGBOOK:
+- Refiled on [2016-12-13 Tue 21:04] \\
+  Correct placement
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_8F72F214-3D61-446E-B0A0-ED9629115936
+#+BEGIN_SRC sh
+brew cask install popchar
+#+END_SRC
+
+***** karabiner-elements
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:AD5DE8E1-3B73-45F8-BE9F-5DB57282B403
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+        cd ~/.config/
+        rm -rf karabiner
+        git clone gitlab-`whoami`:grettke/karabiner-elements.git karabiner
+        brew cask install karabiner-elements
+else
+  echo "karabiner-elements: Only install on hosts"
+fi
+#+END_SRC
+
+***** Spectacle
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:A09CC468-C651-47E2-9CF5-6D831CE1F247
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_995F2EC7-2BD0-4966-9FEE-BE512C28786E
+#+BEGIN_SRC sh
+brew cask install spectacle
+#+END_SRC
+
+***** Little Snitch
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:D669BA2C-C710-4EFD-8682-A63D63476AFE
+:END:
+#+NAME: org_gcr_2017-05-12_mara_785FA752-E2FA-411E-8D07-911938D9E656
+#+BEGIN_SRC sh
+brew cask install little-snitch
+#+END_SRC
+
+***** Bartender
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:1183CC3B-1D9C-42F5-A663-1ECD53F13314
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_34436A54-0E97-48DD-8391-E6A6B36A6A84
+#+begin_src sh
+brew cask install bartender
+#+end_src
+
+***** flux
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:66D3575D-B83A-4246-B36C-14593876C465
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_3DA6A9C5-8086-4B61-B38F-A87E6A470345
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install flux
+else
+    echo "flux: Only install on hosts"
+fi
+#+END_SRC
+
+***** xquartz
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:DFD00D78-6B0D-4828-A9CB-80276178F239
+:END:
+#+NAME: org_gcr_2017-05-12_mara_9F387AF4-1A72-4D36-866B-4AF99B771776
+#+BEGIN_SRC sh
+brew cask install xquartz
+defaults write org.macosforge.xquartz.X11 dpi -int 105
+brew install wmctrl
+#+END_SRC
+***** Tuxera NTFS
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:7FFEBC91-356E-4D76-AC25-8275C4BE6F36
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_60488E6B-8459-40A4-8811-1B146A6802EC
+#+BEGIN_SRC sh
+brew cask install tuxera-ntfs
+#+END_SRC
+
+***** SwitchResX
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:8F4A153C-7E5D-4E67-B99B-6AE882327CA0
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_66B04382-0B16-4B9E-8388-9339BBA44308
+#+BEGIN_SRC sh
+brew cask install switchresx
+#+END_SRC
+
+***** Terminal Notifier
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:09A0876E-18DB-43CE-936B-A088B970C149
+:END:
+#+NAME: org_gcr_2017-05-12_mara_C5F1CDAB-387E-4549-BCAA-0315C7482A7A
+#+BEGIN_SRC sh
+brew install terminal-notifier
+#+END_SRC
+***** Malwarebytes
+:PROPERTIES:
+:ID:       org_gcr_2017-10-30_mara:B43F1E33-A9EF-470D-B7C4-3E3383B3D4B6
+:END:
+#+NAME: org_gcr_2017-10-30_mara_F7594669-E656-4276-BCA0-70A239877046
+#+BEGIN_SRC sh
+brew cask install malwarebytes
+#+END_SRC
+***** Flycut
+:PROPERTIES:
+:ID:       org_gcr_2017-11-12_mara:D83D07FB-1C76-4A0A-9016-51370AF4BD3D
+:END:
+#+NAME: org_gcr_2017-11-12_mara_978C02D7-9C7B-4B4F-8CC2-298B5329BF60
+#+BEGIN_SRC sh
+brew cask install flycut
+#+END_SRC
+***** Geekbench
+:PROPERTIES:
+:ID:       org_gcr_2018-01-23_mara:30A9E161-2D43-4B99-A6DE-B87335435D05
+:END:
+#+NAME: org_gcr_2018-01-23_mara_D2FA266D-85A3-4CA5-A196-4E80E7AC354B
+#+BEGIN_SRC sh
+brew cask install geekbench
+#+END_SRC
+***** DaisyDisk
+:PROPERTIES:
+:ID:       org_gcr_2018-01-23_mara:90E6EE5E-B738-42E0-AE60-EBCF33F9035B
+:END:
+#+NAME: org_gcr_2018-01-23_mara_9B535D8D-868D-4004-BBA1-A7FEFC9939DC
+#+BEGIN_SRC sh
+brew cask install daisydisk
+#+END_SRC
+***** Contexts
+:PROPERTIES:
+:ID:       org_gcr_2018-04-12T21-31-52-05-00_mara:E42C95C9-D397-4929-A875-EDBFD58C3645
+:END:
+#+name: org_gcr_2018-04-12T21-31-52-05-00_mara_B0101C87-2562-4D78-9BC0-11F49488ED1E
+#+begin_src sh
+brew cask install contexts
+#+end_src
+***** Completion
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:419E4ADD-30A3-470F-8858-0DA41B95598D
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB
+#+BEGIN_SRC sh
+echo "Script is done"
+#+END_SRC
+
+**** Configure
+:PROPERTIES:
+:header-args: :tangle "06_usability.org"
+:ID:       org_gcr_2017-05-12_mara:37462A17-EA62-4713-89A4-3A0DBC8BD8EA
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_BFEC18FA-40CF-4C90-A572-8700944EE344
+#+BEGIN_SRC org
+,* PopChar
+
+- Register it
+- Preferences
+  - Activation
+    - Location: Status item
+      - Hotkey: Can't figure out how to set this
+    - Animate window: No
+    - Close window then
+      - After selecting a char: No
+      - When mouse leaves window: No
+      - When clicking outside window: No
+    - Start at Login: Yes
+  - View & Insert
+    - Character size: About 50%
+    - Display shadows: Yes
+    - Recent fonts: 10
+    - Highlight recent: No
+    - Insert HTML as: only numbers
+,* karabiner-elements
+
+- Function Keys
+  - YES: Use F keys as standard function keys
+- Complex Modifications
+  - The files live in Git.
+- Virtual Keyboard
+  - ANSI
+  - Caps Lock Delay ms: 0
+- Misc
+  - YES: Show icon in menu bar
+
+,* Spectacle
+
+- Start it
+- Enable integration
+- Start at boot
+- Delete all keybindings
+- Configure
+  - Left Half: Control-Command-Option-\leftarrow{}
+  - Right Half: Control-Command-Option-\rightarrow{}
+  - Fullscreen: Control-Command-Option-F
+
+,* Little Snitch
+
+- Run the installer
+- Start it
+- Register it
+- Configure per below
+- Enable integration
+- Start at boot
+
+Granting:
+
+- *Always grant minimum required*
+- For known good TLD's, grant it forever
+  - Lots of connections to *.apple.com
+  - For apps that want to call homen do forever
+
+- Gen
+  - YES Show satus in the menu bar
+  - YES Show inactive warning
+  - Operation mode: Alert
+  - Use managed rules for macOS Services and iCloud
+- Alert:
+  - Yes: Confirm automatically
+  - NO: Confirm with return and escape.
+    - Can use control-return and command-return intead
+  - Detail level: Show full details
+- Monitor:
+  - On: Network monitor
+  - Keyboard shortcut: Off
+  - Show network activity in menu bar.
+    - Show data rates numerically. Monochrome.
+  - NO: Show auto when mouse enters. Hide in 2s.
+- APS
+  - Yes: Enable automatic profile switching
+    - When joining: Ask
+  - Yes: Save geolocation of networks.
+  - Yes: Distinguish OPenVPN remote servers
+- Security
+  - Allow rules and profile edit.
+  - Allow profile switch.
+  - Allow preference editing
+  - Respect privacy.
+- Advanced
+  - Approve rules automatically.
+- Update
+  - Automatically check for updates daily
+
+,* Bartender
+
+- License it
+- GENERAL
+  - Launch Bartender at login: yes.
+  - At bartender launch: show bartender bar: NO.
+  - Bartender bar: autohides, YES.
+- Appearance
+  - Menu bar icon: Glasses
+  - Show when bartender bar is open: YES.
+- Setup
+  - The stuff that I use a lot goes on the right
+  - Ends with: volume, wifi, date, name
+,* flux
+
+- NA
+
+- Enable at startup
+
+,* Tuxera NTFS
+
+- Install it
+  - brew only downloads the installer
+- License it
+
+,* SwitchResX
+
+- License it
+- General Settings
+  - Key shortcut
+    - Open: Command-F10
+  - Startup Settings
+    - [X] Launch SwitchResX Daemon automatically after login
+
+,* XQuartz
+
+- Figure out the best DPI for XQuartz
+  - Read [[https://www.xquartz.org/FAQs.html][this]]
+  - Check Acrobat's settings
+  - Play around with it comparing it to the menu-bar
+- Update it in the script
+- Log out and back in again
+
+,* Inkscape
+
+- [[https://inkscape.org/en/download/mac-os/][Follow directions]]
+
+,* Malwarebytes
+- License pro version
+- Enable Real-Time Protection
+
+,* Flycut
+- (Changed from default)
+- Preferences
+  - Launch Flycut on login: yes
+- Appearance
+  - White
+
+,* Geekbench
+- Run it.
+- Accept license.
+- Enter license.
+
+,* DaisyDisk
+- License it.
+
+,* Contexts
+- Welcome
+  - Yes: Launch Context at login
+- Appearance
+  - Theme: Subtle
+  - Yes: Increase contrast
+  - Text size: Large
+- Features
+  - General
+    - Keyboard layout: Use current
+    - Yes: When switching to an app w/out windows then open the Dock
+    - Yes: When using multiple displays, use switching workaround
+      Yes: Show app icon badges
+  - Rules
+    - Group windows: By space
+    - Yes: Show running apps which do not have any windows open
+  - Sidebar
+    - Show sidebar on: No display
+      (This disables the sidebar so nothing to configure)
+  - Panel
+    - Show panel on: All displays
+    - Panel width: %50
+    - No: Moving the cursor over Panel changes the selected item
+    - No: Scrolling when Panel is visible changes the selected item
+  - Search
+    - Search with: Option-Tab
+    - Fast search with: Nothing (disable it)
+    - Search shortcuts: 3
+    - Yes: Allow one mismatched character
+  - Command-Tab
+    - There are a lot of defaults so I won't specify them, just leave them alone
+    - Yes: Typing characters starts Fast Search when Panel is visible
+    - Disable the other prefix bindings: command-backtick, option-tab, and option-backtick
+  - Number Switcher
+    - Change nothing
+  - Gestures
+    - Change nothing
+- License
+- About
+#+END_SRC
+
+*** Utility
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:D513CDD1-E4A0-4062-BADC-F3C0BE64270D
+:END:
+**** Install
+:PROPERTIES:
+:header-args: :tangle "07_utility.sh" :tangle-mode (identity #o755)
+:ID:       org_gcr_2017-05-12_mara:BCFD071A-6190-4994-AE01-93AA24ECB90C
+:END:
+***** Java
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:2FCB25A5-62E9-4414-88AC-F64791853046
+:END:
+#+NAME: org_gcr_2017-05-12_mara_1ED4B68B-4C9C-420F-9C25-19A6F6812A66
+#+BEGIN_SRC sh
+brew cask install java8
+#+END_SRC
+***** Maven
+:PROPERTIES:
+:ID:       org_gcr_2018-06-12T21-48-52-05-00_mara:8B3602B1-66C8-4299-8E51-61260FB909B8
+:END:
+#+name: org_gcr_2018-06-12T21-48-52-05-00_mara_8D458C41-06C2-484B-9D17-8DDA6BDFFAD8
+#+begin_src sh
+brew install maven
+#+end_src
+***** ditaa
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:E633B5AE-FD35-4911-9F38-59711EAB243B
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_6E1474FB-6E85-4D0C-BC36-913CD2882548
+#+BEGIN_SRC sh
+brew install ditaa
+#+END_SRC
+
+***** plantuml
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:A7FAF763-C298-485F-AA88-4BB71E10EDA2
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_4C3BDEF1-5651-49FA-B627-A858E52A0888
+#+BEGIN_SRC sh
+brew install plantuml
+#+END_SRC
+
+***** languagetool
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:540336F1-B48D-421A-A473-96880172FB69
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_97BAD5BA-A7DF-49B5-BADF-632A7E329DD7
+#+BEGIN_SRC sh
+brew install languagetool
+#+END_SRC
+***** aspell
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:3D5A2EBA-A954-451C-8955-BD1F02F28AFE
+:END:
+#+NAME: org_gcr_2017-05-12_mara_60CE855B-D70B-415C-8850-BE34B07754E3
+#+BEGIN_SRC sh
+brew install aspell -all
+#+END_SRC
+***** graphviz
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:C2CB2DCC-754D-410A-90E2-CABDD4CC0BEC
+:END:
+#+NAME: org_gcr_2017-05-12_mara_921EC70F-F3B3-4D5A-8EEA-1FFCD83CCFC3
+#+BEGIN_SRC sh
+brew install graphviz
+#+END_SRC
+***** pandoc
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:FAD3A855-E741-4B86-B690-9316EC724087
+:END:
+#+NAME: org_gcr_2017-05-12_mara_37B0A99E-3144-4DB6-BF73-8CFAC09F2AF9
+#+BEGIN_SRC sh
+brew install pandoc
+#+END_SRC
+***** Markdown
+:PROPERTIES:
+:ID:       org_gcr_2018-03-24T17-49-08-05-00_mara:2B5559FB-6F41-48CE-8716-142AF114C3FE
+:END:
+#+name: org_gcr_2018-03-24T17-49-08-05-00_mara_51EFA29B-B7AC-4F54-BD7D-022E986C2ED4
+#+begin_src sh
+brew install markdown
+#+end_src
+***** Marked 2
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:DADDC9A6-B5DB-4AF4-A58A-57B27834FEA9
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_7376CE1D-C112-4D86-90F4-10BCFCE154E6
+#+BEGIN_SRC sh
+brew cask install marked
+#+END_SRC
+***** ImageMagic
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:C09026A2-7FF4-472C-9D4B-669A4C69CD2B
+:END:
+#+NAME: org_gcr_2017-05-12_mara_0AF38E91-A81B-4D28-A834-0DF26F3898E3
+#+BEGIN_SRC sh
+brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
+#+END_SRC
+***** icoutils
+:PROPERTIES:
+:ID:       org_gcr_2018-03-23T12-00-28-05-00_mara:9218E86D-B71F-4D62-BF14-297F52A5A8D8
+:END:
+#+name: org_gcr_2018-03-23T12-00-28-05-00_mara_E1EC5C26-75A4-444D-9D76-722808D6FE23
+#+begin_src sh
+brew install icoutils
+#+end_src
+***** povray
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:1BF19A26-CAF1-4A15-B468-975B2AAE3618
+:END:
+#+NAME: org_gcr_2017-05-12_mara_02A7BE9E-D9BD-4BBD-BC55-094C22F8D8B9
+#+BEGIN_SRC sh
+brew install povray --with-openexr
+#+END_SRC
+***** growlnotify
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:B48EC513-EC86-4E9A-AFFE-97541821C458
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_53E6F73B-22D8-4269-B6CE-B39687CD8B5F
+#+BEGIN_SRC sh
+brew cask install growlnotify
+#+END_SRC
+
+***** xmllint
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:1354D5A4-A956-4A1F-B80D-C83EBF62FD33
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_DF529935-83C8-4FC4-8661-79D0DFB0C042
+#+BEGIN_SRC sh
+brew install libxml2
+#+END_SRC
+***** dos2unix
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:E896B6FF-9421-434D-8E79-BDD9F2BBDF44
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_8593AEC8-97D5-4B06-B2D3-7ED583A48C84
+#+BEGIN_SRC sh
+brew install dos2unix
+#+END_SRC
+
+Sometimes installation [[https://github.com/Homebrew/homebrew/issues/33622][fails]] with the error.
+
+#+BEGIN_EXAMPLE
+gcr@vela:.../man/de/man1⮞ brew link dos2unix
+Linking /usr/local/Cellar/dos2unix/7.3.2...
+Error: Could not symlink share/man/de/man1/dos2unix.1
+/usr/local/share/man/de/man1 is not writable.
+#+END_EXAMPLE
+
+The solution is.
+
+#+BEGIN_EXAMPLE
+chown -R `whoami` /usr/local/share/man/de/man1
+#+END_EXAMPLE
+
+***** ccrypt
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:E928DF16-8966-42B8-B2B1-115DDD6D156E
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_100A7D9C-CB1E-4BFB-A796-2C9FEA802EB0
+#+BEGIN_SRC sh
+brew install ccrypt
+#+END_SRC
+
+***** GnuPG
+:PROPERTIES:
+:ID:       org_gcr_2018-08-09T09-29-25-05-00_globigerina:EBC2DD91-E484-4CD0-B999-8D1A2D617576
+:END:
+#+name: org_gcr_2018-08-09T09-29-25-05-00_globigerina_0757D9F4-A97E-4E3D-9B66-A6EB2E270C3C
+#+begin_src sh
+brew install gnupg
+#+end_src
+
+***** tree
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:AED8018A-5CDE-423D-83F4-CE7CB599EAE4
+:END:
+#+NAME: org_gcr_2017-05-12_mara_3328C40D-6F31-4AA3-B0B0-AA6FD759D724
+#+BEGIN_SRC sh
+brew install tree
+#+END_SRC
+
+***** archey
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:0971F8A8-23FB-4CC1-B16A-D9CAB559CC77
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_4C14BEB6-4484-49FD-BC28-C7D935FE1AA5
+#+BEGIN_SRC sh
+brew install archey
+#+END_SRC
+
+***** figlet
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:7540AFCB-D93D-48B1-93C3-379E4D90250C
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_7A14BC39-51C0-4656-B862-B13F226BA98D
+#+BEGIN_SRC sh
+brew install figlet
+#+END_SRC
+
+***** Freemind
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:D5D0EF07-E6F0-4734-9D30-BF516B8F24AA
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_AC178F06-AA7B-413A-828D-605F120E7C2F
+#+BEGIN_SRC sh
+brew cask install freemind
+#+END_SRC
+
+***** LAME
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:EAEC5141-5F69-4B55-A5E2-2654568DCFB4
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_F613FAE4-87A5-4922-B1DE-D2114686FDD3
+#+BEGIN_SRC sh
+brew install lame
+#+END_SRC
+
+***** FFmpeg
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:3F5EF478-6A9A-42C7-9E7C-BC4CDD8C5692
+:END:
+#+NAME: org_gcr_2017-05-12_mara_408DC731-7C7E-4C41-99D3-9C559DCBE6B4
+#+BEGIN_SRC sh
+brew install ffmpeg
+#+END_SRC
+***** VLC
+:PROPERTIES:
+:ID:       org_gcr_2017-07-30_mara:717E5624-3BB6-4F91-9117-9A6B890C62EF
+:END:
+#+NAME: org_gcr_2017-07-30_mara_7509216F-8D92-4FDF-9A5A-7CE4431B13D2
+#+BEGIN_SRC sh
+brew cask install vlc
+#+END_SRC
+***** qpdf
+:PROPERTIES:
+:ID:       org_gcr_2017-05-16_mara:3A2A97E8-3168-4D18-A6EA-6DF4CF075791
+:END:
+#+NAME: org_gcr_2017-05-16_mara_7DD2E7E1-12B9-41B7-BAFD-A4EEAFBD654F
+#+BEGIN_SRC sh
+brew install qpdf
+#+END_SRC
+***** XnView MP
+:PROPERTIES:
+:ID:       org_gcr_2017-06-28_mara:A8D06806-D574-40A3-879C-01FC2D78125D
+:END:
+#+NAME: org_gcr_2017-06-28_mara_8AFE030D-1C5C-42DA-9435-24AF1A0D80EF
+#+BEGIN_SRC sh
+brew cask install xnviewmp
+#+END_SRC
+***** LibreOffice
+:PROPERTIES:
+:ID:       org_gcr_2017-07-28_mara:24F8C69E-D0A8-4B87-89C3-BDB07121D726
+:END:
+#+NAME: org_gcr_2017-07-28_mara_04698A6C-1A32-4C95-AEBB-F95E848376A0
+#+BEGIN_SRC sh
+brew cask install libreoffice
+#+END_SRC
+***** rename
+:PROPERTIES:
+:ID:       org_gcr_2017-09-12_mara:E7FC365F-FE80-4C18-8A92-F35D0A7D059C
+:END:
+#+NAME: org_gcr_2017-09-12_mara_3436631A-2DFC-4BBC-951E-425B86815432
+#+BEGIN_SRC sh
+brew install rename
+#+END_SRC
+***** DjVu
+:PROPERTIES:
+:ID:       org_gcr_2017-10-21_mara:7BFB981F-EF98-4E48-ABD2-0708E5228B9B
+:END:
+#+NAME: org_gcr_2017-10-21_mara_7745761B-ED11-48FD-9E73-A9AA38DFB70D
+#+BEGIN_SRC sh
+brew cask install djview
+#+END_SRC
+***** exiftool
+:PROPERTIES:
+:ID:       org_gcr_2017-11-04_mara:FB3E8377-EB76-48F0-AB54-ED25AC6991FA
+:END:
+#+NAME: org_gcr_2017-11-04_mara_3DCBCE60-F036-49ED-999C-B972AF10C1E7
+#+BEGIN_SRC sh
+brew install exiftool
+#+END_SRC
+***** qpdf
+:PROPERTIES:
+:ID:       org_gcr_2018-04-25T02-34-33-05-00_mara:6077E7C5-9335-4758-ADB3-87C75944961B
+:END:
+#+name: org_gcr_2018-04-25T02-34-33-05-00_mara_62A77131-8ECC-48C7-B13D-D1456A708266
+#+begin_src sh
+brew install qpdf
+#+end_src
+***** Completion
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:5E5BCE6B-D095-4CA0-9CC3-9A5F13EF104B
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E
+#+BEGIN_SRC sh
+echo "Script is done"
+#+END_SRC
+
+**** Configure
+:PROPERTIES:
+:header-args: :tangle "08_utility.org"
+:ID:       org_gcr_2017-05-12_mara:4023864F-DD70-45A8-99E3-F2B67E792954
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_CC86395C-8487-451E-AC32-A3C6ABE812B7
+#+BEGIN_SRC org
+,* Marked 2
+
+- License it
+- Chose "Code" profile which chooses
+  - Default style: Github
+  - Processor: Discount (GFM)
+  - Syntax Highlight Style: Github
+  - Enabled
+    - Syntax Highlighting
+    - GitHub Checkboxes
+    - MathJaxq
+- Preferences
+  - General
+    - NO Show Style Picker
+    - NO Show word count
+  - Preview
+    - YES Enable Mini Map navigation
+    - YES Show scroll progress indicator
+    - YES Automatically validate URLs on update
+  - Style
+    - Default style: GitHub
+  - Proofing
+    - YES Highlight Markdown syntax errors
+#+END_SRC
+*** Internet
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:791A3246-FA22-405B-9138-0EA712989808
+:END:
+**** Install
+:PROPERTIES:
+:header-args: :tangle "09_internet.sh" :tangle-mode (identity #o755)
+:ID:       org_gcr_2017-05-12_mara:2EFFC60E-EBDF-45F5-9137-3A87BBA90AE3
+:END:
+***** MPlayer OSX Extended
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:4306B2C2-FA09-444C-992F-CAD6DFD0D4B5
+:END:
+#+NAME: org_gcr_2017-05-12_mara_7C4DE397-48F6-44AC-B9CD-948375915EFF
+#+begin_src sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+brew cask install mplayer-osx-extended
+else
+    echo "mplayer: Only install on hosts"
+fi
+
+#+end_src
+
+***** Skype
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:71E38243-3DEB-4453-AE5F-FF8261F53E48
+:END:
+Only install it on hosts.
+
+#+NAME: org_gcr_2017-05-12_mara_9CDCD936-A30A-4712-8A5F-780D8810FBDE
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install skype
+else
+    echo "skype: Only install on hosts"
+fi
+#+END_SRC
+
+***** WhatsApp
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:0E29C1F1-F01E-4E7F-B621-E1BC785A6F47
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_9217F137-CCF7-4B66-AE32-6ED72D2D629F
+#+BEGIN_SRC emacs-lisp
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install whatsapp
+else
+    echo "whatsapp: Only install on hosts"
+fi
+#+END_SRC
+
+***** Dropbox
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:7F93247A-75E2-4233-90A9-BFC43592E87D
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_1F291E61-A8F1-43BE-A839-0E6997099AD4
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install dropbox
+else
+    echo "dropbox: Only install on hosts"
+fi
+#+END_SRC
+
+***** Chrome
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:816830E8-2B96-4A43-85F8-D14BEB321D42
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_F99FAFA6-C774-4453-BCDA-F86636ADB336
+#+begin_src sh
+brew cask install google-chrome
+#+end_src
+
+***** Firefox
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:EB3EFDFC-7604-463D-9978-2BAC9C9DEBCD
+:END:
+#+NAME: org_gcr_2017-05-12_mara_66031DAC-6541-4D27-9BE9-80166EB13119
+#+begin_src sh
+brew cask install firefox
+#+end_src
+
+Sometimes this install fails. I checked the file download. The file exists. The
+name hasn't changed. Did a manual install instead.
+
+***** Opera
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:22B3B150-6354-4C72-84D6-4FC408679057
+:END:
+#+NAME: org_gcr_2017-05-12_mara_0A7F6745-0609-4606-B4C1-7428E64E4313
+#+begin_src sh
+brew cask install opera
+#+end_src
+
+***** Filezilla
+   :PROPERTIES:
+   :ID:       org_gcr_2017-05-12_mara:CB43AE42-448D-455A-93F0-4D77BF1AFF75
+   :END:
+
+#+NAME: org_gcr_2017-05-12_mara_F8797C4F-7492-441D-B8B2-A13C818672FB
+#+begin_src sh
+brew cask install filezilla
+#+end_src
+
+***** Slack
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:73DAB077-19F2-4721-8A26-E96A6E67C68B
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_22BF5CEE-DB48-45D4-9331-85B67AFE3A5D
+#+BEGIN_SRC sh
+brew cask install slack
+#+END_SRC
+***** Kindle
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:3EDFA35C-AFFD-4BD3-9F6B-76BC9C1E1349
+:END:
+#+NAME: org_gcr_2017-05-12_mara_A2BB25B5-F80B-44B1-84CA-3669F9FD04F2
+#+BEGIN_SRC sh
+brew cask install kindle
+#+END_SRC
+***** wget
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:E1431623-6F16-4300-81F8-524D0C506AD8
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_587FEB0F-0601-410D-AA8B-677635E91321
+#+BEGIN_SRC sh
+brew install wget
+#+END_SRC
+
+***** Screenflow
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:D855E6A3-C1DE-445A-9A47-F7FD56958485
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_059F15F1-A456-4885-A364-F363AC30F6CE
+#+BEGIN_SRC sh
+brew cask install screenflow
+#+END_SRC
+
+***** inkscape
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:A2F3E4DF-7C16-4806-9614-DF4AF8F59A4A
+:END:
+
+- When I installed it via Brew-Cask the app would not run
+  - No errors were reported
+- Switched to brew
+- Installation notes
+  - Lot of C++ stuff
+  - Freetype
+  - Fontconfig
+  - cairo
+  - gsl
+  - gobject-introspection
+  - gtk
+  - pango
+  - harfbuzz
+  - Avoid the builtin
+    - get-text
+    - icu4c
+- Tried to run it
+  - Fontconfig error: Cannot load default config file
+  - Segmentation fault: 11
+  - Set FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
+  - Tried running inkscape: it ran
+- <2016-07-19 Tue 19:01>
+  - X version still doesn't work right
+  - Switched to Brew Cask
+  - Updated xquartz
+  - That didn't work, went back to plain brew
+- <2018-01-14 Sun 21:36>
+  - Fixed my X startup. Removed a check for non-interactive shells from "doing things".
+    turns out that X is a non-interactive shell.
+  - Corrected install command: Cask not Brew.
+- <2018-02-24 Sat>
+  - Be at ease: it takes one or two minutes to start up
+
+#+NAME: org_gcr_2017-05-12_mara_2B757414-ED99-4964-96FC-C76DC6512DD0
+#+BEGIN_SRC sh
+brew cask install inkscape
+#+END_SRC
+
+***** gimp
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:22211052-07A8-490C-9EC4-97E2346C1343
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_86FEB8A0-A34E-4B44-BABA-BB5CE24D8655
+#+BEGIN_SRC sh
+brew cask install gimp
+#+END_SRC
+
+***** librsvg
+:PROPERTIES:
+:ID:       org_gcr_2017-07-11_mara:150DACBC-B896-47ED-8CC2-3C9111C765DD
+:END:
+For ~rsvg-convert~.
+
+#+NAME: org_gcr_2017-07-11_mara_AB43CB70-381C-4C4D-AF4C-CC7C895D1848
+#+BEGIN_SRC sh
+brew install librsvg
+#+END_SRC
+***** jpegoptim
+:PROPERTIES:
+:ID:       org_gcr_2018-03-31T20-45-48-05-00_mara:23F5C914-9092-4402-B248-0CCF38306022
+:END:
+#+name: org_gcr_2018-03-31T20-45-48-05-00_mara_69E779D8-21A0-4275-ABFB-2A59DF6EC194
+#+begin_src sh
+brew install jpegoptim
+#+end_src
+***** optipng
+:PROPERTIES:
+:ID:       org_gcr_2018-03-31T20-45-48-05-00_mara:A42203A8-9C48-4E5D-95C7-2354A44F799B
+:END:
+#+name: org_gcr_2018-03-31T20-45-48-05-00_mara_9BAA13C4-534C-4CD6-87BE-C75E547D80E3
+#+begin_src sh
+brew install optipng
+#+end_src
+***** airy
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:EA02ED57-7DED-40F0-819A-26BE2A237C18
+:END:
+#+NAME: org_gcr_2017-05-12_mara_EE89A131-05A3-4521-B304-301F5B89A5CD
+#+BEGIN_SRC sh
+brew cask install airy
+#+END_SRC
+***** Deluge
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:18D1C673-E863-4141-A02F-A986A609627F
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54
+#+BEGIN_SRC shell
+brew cask install deluge
+#+END_SRC
+***** Speedtest.net CLI
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:8E034007-1D9C-4F5A-BCCA-D9165A5636D8
+:END:
+#+NAME: org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A
+#+BEGIN_SRC shell
+brew install speedtest_cli
+#+END_SRC
+***** GMVault
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:A9DDBAB1-904C-4685-AED4-8DACC95FB62E
+:END:
+#+NAME: org_gcr_2017-05-12_mara_49EFB334-9D0E-4354-AD70-3F6E8647C27E
+#+BEGIN_SRC sh
+brew cask install gmvault
+#+END_SRC
+***** youtube-dl
+:PROPERTIES:
+:ID:       org_gcr_2017-09-04_mara:A7056C12-8B08-49A1-B8C3-BE02C864A03E
+:END:
+#+NAME: org_gcr_2017-09-04_mara_A5554AFF-B9FC-4139-945C-A7337F4DB79F
+#+BEGIN_SRC sh
+brew install youtube-dl
+#+END_SRC
+***** SoX
+:PROPERTIES:
+:ID:       org_gcr_2017-09-12_mara:D9FCD17E-D25F-46DC-977D-372D7CF416D4
+:END:
+#+NAME: org_gcr_2017-09-12_mara_B3515604-B02B-4A5B-9E5A-388E999A26B7
+#+BEGIN_SRC sh
+brew install sox --with-lame
+#+END_SRC
+***** Deluge
+:PROPERTIES:
+:ID:       org_gcr_2017-10-15_mara:3D744F86-E913-45AC-A3A6-7581A7D63D98
+:END:
+#+NAME: org_gcr_2017-10-15_mara_56428EA5-AAEE-4E56-9A48-18EB1CE2742E
+#+BEGIN_SRC sh
+brew cask install deluge
+#+END_SRC
+***** audio
+:PROPERTIES:
+:ID:       org_gcr_2017-09-12_mara:C26075AB-A201-42C7-8511-62A690390377
+:END:
+#+NAME: org_gcr_2017-09-12_mara_D647A4C6-4296-4F49-A5CB-0FBAE77C1F8F
+#+BEGIN_SRC sh
+brew install mp3gain
+brew install normalize
+brew install mp3val
+brew install id3lib
+brew cask install mp3gain-express
+#+END_SRC
+***** iSyncr Mac
+:PROPERTIES:
+:ID:       org_gcr_2017-11-01_mara:245D0436-400B-4A03-BC25-6A83A972735B
+:END:
+#+NAME: org_gcr_2017-11-01_mara_0F91CE3D-3F59-4351-A0D3-AE383CC9BB47
+#+BEGIN_SRC sh
+brew cask install isyncr
+#+END_SRC
+***** rsync
+:PROPERTIES:
+:ID:       org_gcr_2018-03-17T09-54-29-05-00_mara:D9B66EA3-7124-4EDC-A171-2943B986E574
+:END:
+#+name: org_gcr_2018-03-17T09-54-29-05-00_mara_6945F43D-4026-4095-960A-D0AF0517FC79
+#+begin_src sh
+brew install rsync
+#+end_src
+**** Configure
+:PROPERTIES:
+:header-args: :tangle "10_internet.org"
+:ID:       org_gcr_2017-05-12_mara:CDC760A7-36FD-4972-B127-258667E1B99F
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_AB15F22E-D841-45AA-86A4-C61FB1486D29
+#+BEGIN_SRC org
+,* MPlayer OSX Extended
+
+- Run it
+- [[http://www.sample-videos.com/][Test it]]
+- Volume works?
+
+,* Skype
+
+,*Only install on hosts*
+
+- Log in and disable notifications for log in and out
+
+,* Dropbox
+
+,*Only install on hosts*
+
+- Log in
+- Sync nothing right away
+- Choose what is critical here
+  - Screenshots
+  - Everything
+- Pause it and copy everything over on a wired network
+
+,* Chrome
+
+- Sign into Chrome
+- Let the settings sync
+- Log into gmail
+
+,* Firefox
+
+- Install the standard plugins
+  - NoScript
+- Log into gmail
+
+,* Opera
+
+- Run it
+- Log into gmail
+
+,* FileZilla
+
+- Set up Filezilla for WnW
+
+,* Slack
+
+- Join
+  - livecodepublic
+  - milwaukee
+
+,* Kindle
+
+- Login
+
+,* Screenflow
+
+- Register
+
+,* Airy
+
+- Register
+- Configure default download path
+
+,* Deluge
+- Start on login
+#+END_SRC
+
+*** DevOps
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:6E8814A2-2E40-4FAC-9001-A893C765CFFC
+:END:
+**** Install
+:PROPERTIES:
+:header-args: :tangle "11_dev-ops.sh" :tangle-mode (identity #o755)
+:ID:       org_gcr_2017-05-12_mara:98807B3F-6EE1-4833-A916-9A759BDB5C73
+:END:
+***** Carbon Copy Cloner
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:3A8F893F-2460-40C1-9D6E-988BFEF678E9
+:END:
+
+Only install it on hosts.
+
+#+NAME: org_gcr_2017-05-12_mara_3DA5AD9E-E1DD-4B4D-9CC3-A2894A312E13
+#+BEGIN_SRC sh
+,#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install carbon-copy-cloner
+else
+    echo "carbon-copy-cloner: Only install on hosts"
+fi
+
+#+END_SRC
+
+***** VMWare Fusion
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:83DBD375-7F93-4658-B564-9A88771D96F6
+:END:
+
+Only install it on hosts.
+
+#+NAME: org_gcr_2017-05-12_mara_0E88C363-DC01-4894-AD2A-B826AEE96847
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install vmware-fusion
+else
+    echo "vmware-fusion: Only install on hosts"
+fi
+#+END_SRC
+
+***** VirtualBox
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:F7D116DF-9C6D-4B2E-9EA5-0F188A7D9532
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_FBFF1A68-5361-46F9-8B29-F566DE748DD0
+#+BEGIN_SRC sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install virtualbox
+    brew cask install virtualbox-extension-pack
+
+else
+    echo "virtualbox: Only install on hosts"
+fi
+#+END_SRC
+***** Vagrant
+    :PROPERTIES:
+    :ID:       org_gcr_2017-05-12_mara:4A9D0CD3-67D3-401C-9D5C-F92704E181EA
+    :END:
+
+#+NAME: org_gcr_2017-05-12_mara_C9473DCC-226B-4291-86E7-5707B3F034AB
+#+begin_src sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install vagrant
+else
+    echo "vagrant: Only install on hosts"
+fi
+
+#+end_src
+***** Packer
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:2001FA87-AD28-4292-BF7F-3BABA99FB64F
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_945C5784-810A-4C4B-90E6-FADC7453E54A
+#+begin_src sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+    brew cask install packer
+else
+    echo "packer: Only install on hosts"
+fi
+
+#+end_src
+
+***** Docker
+:PROPERTIES:
+:ID:       org_gcr_2017-09-07_mara:C3B19B7A-F99A-45D3-932B-ACA319F1AE54
+:END:
+#+NAME: org_gcr_2017-09-07_mara_9B33A7A7-CC1C-451C-A020-E4B0CFD002F1
+#+BEGIN_SRC sh
+brew cask install docker-toolbox
+#+END_SRC
+***** iPartition
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:1A8F1A7B-BF7C-4831-9CC7-D74A89A86B9D
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_411A8284-5DDC-45B4-A0D1-37EE4B6F6CC5
+#+BEGIN_SRC sh
+brew cask install ipartition
+#+END_SRC
+
+***** Terraform
+:PROPERTIES:
+:ID:       org_gcr_2018-01-03_mara:BE9C589C-E7E0-4145-A264-5C06FF15F933
+:END:
+#+NAME: org_gcr_2018-01-03_mara_209AB55E-7801-42AE-87ED-AD2E2AF61C4F
+#+BEGIN_SRC sh
+brew install terraform
+#+END_SRC
+***** Ansible
+:PROPERTIES:
+:ID:       org_gcr_2018-01-03_mara:828088D7-2E3C-4AB6-91A0-FFD959795699
+:END:
+#+NAME: org_gcr_2018-01-03_mara_51C9C084-72E7-48EC-8E72-9638C180A086
+#+BEGIN_SRC sh
+brew install ansible
+brew install ansible-lint
+brew install terraform-provisioner-ansible
+#+END_SRC
+**** Configure
+:PROPERTIES:
+:header-args: :tangle "12_dev-ops.org"
+:ID:       org_gcr_2017-05-12_mara:B16FADBE-39F8-473C-9658-7D33F0571840
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_F8442214-41F6-4F42-9B5C-B4BBDF9A840A
+#+BEGIN_SRC org
+,* Carbon Copy Cloner
+
+,*Only install on hosts*
+
+- Steps
+  - Install version 4
+  - License it
+  - Preferences \rarr Notifications \rarr Show CCC icon in the menu bar
+- Application Configuration
+  - Mirror the storage partition
+    - Identify and drag \rarr storage partition
+    - Identify and drag \rarr destination partition
+    - Schedule the task
+      - Daily
+      - 5:30pm
+      - Defer to other writers
+      - If the external is not mounted then run it when it returns
+    - Before this task runs
+      - Pull Git repos
+  - Mirror the boot partition
+    - Identify and drag \rarr boot partition
+    - Identify and drag \rarr destination partition
+    - Save it
+    - Modify the storage backup task to run /this/ task upon completion
+
+,* VMWare
+
+,*Only install on hosts*
+
+- On a host: License it
+
+,* Vagrant
+
+Test out VirtualBox box:
+
+,#+begin_src sh
+cd ~/tmp
+mkdir vgtest
+cd vgtest
+vagrant init hashicorp/precise64
+,#+end_src
+
+Test out VirtualBox.
+
+,#+begin_src sh
+cd ~/tmp/vgtest
+vagrant up
+,#+end_src
+
+,* Packer
+
+- Nothing at this time
+
+,* iPartition
+
+- License it
+#+END_SRC
+*** Development
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:7D19BE4E-6393-4EDD-912C-01A6182D92A0
+:END:
+**** Install
+:PROPERTIES:
+:header-args: :tangle "13_development.sh" :tangle-mode (identity #o755)
+:ID:       org_gcr_2017-05-12_mara:28BCD27E-C350-4FEA-96CE-85BC5F14DE6E
+:END:
+***** Deltawalker
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:6C28C177-1905-44A7-98A2-43BCD1622721
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_7281D794-15F4-4C0B-BCEB-E6BD05E5DF0B
+#+BEGIN_SRC sh
+brew cask install deltawalker
+cat << 'EOF' > /Applications/DeltaWalker.app/Contents/Resources/git-merge
+#!/bin/sh
+
+DW_PATH=`dirname "$0"`
+
+if [ -d "$DW_PATH/../MacOS" ]; then
+  DW_PATH="$DW_PATH/../MacOS"
+fi
+
+"$DW_PATH/DeltaWalker" "$1" "$2" "$3" -merged="$4" -nosplash -mi -pwd="$PWD"
+EOF
+chmod +x /Applications/DeltaWalker.app/Contents/Resources/git-merge
+#+END_SRC
+
+***** Python
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:5D18FCE4-1D02-4154-B1AE-9E82FD834A1F
+:END:
+
+Install Python 2 and virtualenv.
+
+#+NAME: org_gcr_2017-05-12_mara_C91E9080-A185-4BA7-ABB8-4EBA21E3FA31
+#+BEGIN_SRC sh
+brew install python@2
+globalpip install virtualenv
+globalpip install --upgrade pip setuptools virtualenv
+#+END_SRC
+
+***** Proselint
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:AA298A47-D7D7-47F4-951B-7FEDFC015B1D
+:END:
+
+Install proselint.
+
+#+NAME: org_gcr_2017-05-12_mara_88321593-1A4B-46A2-AC58-A42C6B24F1C2
+#+BEGIN_SRC sh
+cd ~/
+rm -rf ~/proselint
+mkdir -p ~/proselint
+cd ~/proselint
+vens
+veon
+pip2.7 install proselint
+veof
+cd ~/
+#+END_SRC
+
+***** YAMLLint
+:PROPERTIES:
+:ID:       org_gcr_2018-01-17_mara:C2231E72-5D4D-4290-843C-CAEDC3597172
+:END:
+#+NAME: org_gcr_2018-01-17_mara_A27CD30B-8EE7-4F98-919D-68E170038150
+#+BEGIN_SRC sh
+cd ~/
+rm -rf ~/yamllint
+mkdir -p ~/yamllint
+cd ~/yamllint
+vens
+veon
+pip2.7 install yamllint
+veof
+cd ~/
+#+END_SRC
+***** Perl
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:EF517B67-415B-48B7-B218-323671B8E0BC
+:END:
+
+- Get the [[https://www.perl.org/get.html][latest Perl]] via [[https://perlbrew.pl/][PerlBrew]]
+- Verify you are using the latest
+- Install CPANM because it works better with PerlBrewl
+- Install [[http://search.cpan.org/~sburke/Text-Unidecode-1.27/lib/Text/Unidecode.pm][Unidecode]] for ASCII'fication
+
+#+NAME: org_gcr_2017-05-12_mara_D02A1D1B-25D6-4D30-9D81-6E1F3E59AC20
+#+BEGIN_SRC sh
+curl -L https://install.perlbrew.pl | bash
+~/perl5/perlbrew/bin/perlbrew install perl-5.24.0
+perl -v
+~/perl5/perlbrew/bin/perlbrew switch perl-5.24.0
+perl -v
+perlbrew install-cpanm
+cpanm install Text::Unidecode
+#+END_SRC
+***** Ruby
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:378DED14-EB2C-440C-AC4F-B52F10A988B2
+:END:
+
+Manage multiple versions.
+
+#+NAME: org_gcr_2017-05-12_mara_CB12AE91-2573-4886-85B1-56F2EA62062E
+#+BEGIN_SRC sh
+brew install rbenv
+#+END_SRC
+***** Chez Scheme
+:PROPERTIES:
+:ID:       org_gcr_2017-07-13_mara:CAFBD055-E6BC-4948-88E1-30003163281F
+:END:
+#+NAME: org_gcr_2017-07-13_mara_1E3E6EF0-544C-4903-A64D-322223B3309C
+#+BEGIN_SRC sh
+brew install chezscheme
+#+END_SRC
+***** Racket
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:FF7030F4-FE70-4EC9-B3E4-078FEBA1546F
+:END:
+#+NAME: org_gcr_2017-05-12_mara_45F5FEE0-3692-4AB2-B942-D6895BDF956A
+#+BEGIN_SRC sh
+brew cask install racket
+#+END_SRC
+***** forth
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:410FD448-0CEE-44BA-9CE0-B920D60E4B66
+:END:
+#+NAME: org_gcr_2017-05-12_mara_9B75A8BF-1F84-41C7-BA05-E2094F541B69
+#+BEGIN_SRC sh
+brew install gforth
+#+END_SRC
+***** node & npm
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:7A1E0081-C9F2-40BF-A1C1-C64E8B7313EC
+:END:
+
+=Brew installs =NPM= by default with =Node=.
+
+#+NAME: org_gcr_2017-05-12_mara_F2DCC726-8AFD-490F-92D6-61EAD46119F9
+#+BEGIN_SRC sh
+brew install node
+#+END_SRC
+
+***** jshint
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:3CA11716-C6A4-445F-8130-B31342CBF102
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_FF9AFF4C-BF99-4553-BECC-1C176C8FE4A3
+#+BEGIN_SRC sh
+npm install -g jshint
+rm ~/.jshintrc
+ln -s ~/src/help/.jshintrc ~/.jshintrc
+#+END_SRC
+
+***** GNU APL
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:D7CA7053-1365-4C7D-BC18-7C2C1292D7F9
+:END:
+#+NAME: org_gcr_2017-05-12_mara_FACDF6BA-3CAA-4265-B1B3-563FF5D60151
+#+BEGIN_SRC sh
+brew install gnu-apl
+#+END_SRC
+***** git
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:9CE361CD-A2F2-4920-B828-13AA21F6DF44
+:END:
+
+For everything beyond the built in.
+
+#+NAME: org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4
+#+BEGIN_SRC sh
+brew install git
+brew install git-flow-avh
+#+END_SRC
+
+***** EMACS
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:9CE47B04-32B9-4C8F-A3D8-D5E82BE06D47
+:END:
+Set up this alias:
+
+#+NAME: org_gcr_2017-07-13_mara_8D285163-3967-4ABE-81F8-5F66CB250184
+#+BEGIN_SRC sh :tangle no
+alias emacs="open /usr/local/opt/emacs-mac/Emacs.app --new --args $1"
+#+END_SRC
+
+#+NAME: org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5
+#+BEGIN_SRC sh
+brew install emacs \
+     --with-cocoa \
+     --with-gnutls \
+     --with-imagemagick@6 \
+     --with-librsvg \
+     --with-mailutils \
+     --with-modules
+rm $(brew --prefix)/bin/emacs
+ln -s $(brew --prefix emacs)/bin/emacs $(brew --prefix)/bin/emacs
+rm $(brew --prefix)/bin/emacsclient
+ln -s $(brew --prefix emacs)/bin/emacsclient $(brew --prefix)/bin/emacsclient
+#+END_SRC
+***** go
+:PROPERTIES:
+:ID:       org_gcr_2017-07-30_mara:125CE9C7-3173-4F82-B27D-6E0F64042F3E
+:END:
+#+NAME: org_gcr_2017-07-30_mara_1F4656FC-2D17-4C4D-975B-DBC94ADAD23A
+#+BEGIN_SRC sh
+brew install go
+brew install gox
+#+END_SRC
+***** Sourcetree
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:4E26CD06-A08F-41E0-9BF3-A350ED26E69A
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_CFCB8712-4E27-484C-A459-402C008961A1
+#+begin_src sh
+brew cask install sourcetree
+#+end_src
+
+***** sml
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:A2C9101B-DA57-42F9-A119-FD75611FF285
+:END:
+#+NAME: org_gcr_2017-05-12_mara_50F9FD2F-2906-41A7-A3F0-62E57D784594
+#+BEGIN_SRC sh
+brew install smlnj
+#+END_SRC
+***** OCaml
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:BDE8DD3A-47A8-446D-99C6-D808D1F3003C
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_1CA17E50-8BCC-43A2-99C3-A3052FF3B262
+#+BEGIN_SRC sh
+brew install ocaml
+brew install opam
+#+END_SRC
+
+***** Mono & F#
+:PROPERTIES:
+:ID:       org_gcr_2017-08-10_mara:1D2F00AF-3A76-4B21-9113-3B5B642ED839
+:END:
+#+NAME: org_gcr_2017-08-10_mara_BF5AB863-0D25-4ADA-8D7A-B324AF8E4096
+#+BEGIN_SRC sh
+brew install mono
+#+END_SRC
+***** Haskell
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:2CAF6CDB-37C4-48C9-94E2-4B50C408C63F
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_421506C6-DA2D-49F8-9615-485DD7E2CAEF
+#+BEGIN_SRC sh
+brew cask install haskell-platform
+#+END_SRC
+
+***** Squeak
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:A083BE24-AECA-4F42-A84C-0C610BFFC298
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_FB0EF355-80E7-4CC1-BCE5-4DB157B15F6F
+#+BEGIN_SRC sh
+brew cask install squeak
+#+END_SRC
+
+***** cvs
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:EA73C3FD-98B6-4B85-80E4-07F5A8287168
+:END:
+#+NAME: org_gcr_2017-05-12_mara_C9E429BB-EA4B-4164-953F-B6228F3D660A
+#+BEGIN_SRC sh
+brew install cvs
+#+END_SRC
+***** bzr
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:FDDE0FB5-AFEB-4B10-8E46-97E868F5671C
+:END:
+#+NAME: org_gcr_2017-05-12_mara_2C9CC44F-3EC7-4744-8AA7-2EE4EFCFCA4D
+#+BEGIN_SRC sh
+brew install bzr
+#+END_SRC
+***** mercurial
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:E36E4CA3-60C9-4FEA-871E-148567146CC1
+:END:
+#+NAME: org_gcr_2017-05-12_mara_3BA20AD2-3D13-4738-84BC-D83FA092E32E
+#+BEGIN_SRC sh
+brew install hg
+#+END_SRC
+***** IntelliJ Idea
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:4E0FDDE1-7A40-4ADC-9A90-422BB4F85086
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_BC282D24-78F6-4CA4-B9B0-DD59A9BDDC2D
+#+BEGIN_SRC sh
+brew cask install intellij-idea
+#+END_SRC
+***** PyCharm
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:FE2DF3EF-9EE2-4BBD-9A87-D9F0E53CB625
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_40BDECF3-BBA5-47C8-83D0-A30BE58C2896
+#+BEGIN_SRC sh
+brew cask install pycharm
+#+END_SRC
+***** WebStorm
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:DEC24054-6AE2-4B5C-A8B4-0F2005C6926E
+:END:
+#+NAME: org_gcr_2017-05-12_mara_DF8C77C0-B051-4C54-943E-18FDA192039D
+#+BEGIN_SRC sh
+brew cask install webstorm
+#+END_SRC
+***** R Studio
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:12B46B24-415F-4D6F-ABD8-A92F324663D0
+:END:
+#+NAME: org_gcr_2017-05-12_mara_39185E42-F547-489B-85F1-D754C1794178
+#+BEGIN_SRC sh
+brew cask install rstudio
+#+END_SRC
+***** Dash
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:9A2A1D77-8E4C-4076-A8F2-782C96EE8E43
+:END:
+#+NAME: org_gcr_2017-05-12_mara_4FB4D5A0-C3AF-4BBD-84B5-C9579DA2AFE6
+#+BEGIN_SRC sh
+brew cask install dash
+#+END_SRC
+***** glpk
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:EF04F7CE-5263-4D0D-9B1D-CD61550F8D77
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_D19983EF-ED98-425B-8485-EC2E5E682DA1
+#+BEGIN_SRC sh
+brew tap homebrew/science
+brew install glpk
+#+END_SRC
+***** The Silver Searcher
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:18F2F041-0A02-441D-A69A-46428C49A5F2
+:END:
+#+NAME: org_gcr_2017-05-12_mara_550D985C-BAE4-409E-9289-A712EA44B335
+#+BEGIN_SRC sh
+brew install the_silver_searcher
+#+END_SRC
+***** shellcheck
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:2D9AF91E-3694-4D31-B9F2-569BD5E97882
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_1E6B3FB1-97E1-456D-A0CE-7D686FDF5E31
+#+BEGIN_SRC sh
+brew install shellcheck
+#+END_SRC
+
+***** make
+:PROPERTIES:
+:ID:       org_gcr_2017-09-07_mara:4103D1BA-55A5-4C17-B8AA-7E768398DB4A
+:END:
+#+NAME: org_gcr_2017-09-07_mara_A2CEC35D-5F40-4568-8057-C791E34B7E8F
+#+BEGIN_SRC sh
+brew install make
+#+END_SRC
+***** MySQL
+:PROPERTIES:
+:ID:       org_gcr_2017-10-23_mara:82D63748-CFAD-42C2-87B0-26EE38C18142
+:END:
+#+NAME: org_gcr_2017-10-23_mara_BDE68F57-EB90-499A-ADF8-2EEEC572D80E
+#+BEGIN_SRC sh
+brew install mysql
+#+END_SRC
+
+Unlock the root account via [[https://gist.github.com/fallwith/987731][here]].
+
+#+NAME: org_gcr_2017-10-23_mara_E47288C8-656E-4E5C-94F9-973FF271CA0F
+#+BEGIN_SRC sql :tangle no
+mysql.server restart --skip-grant-tables
+#+END_SRC
+
+Set root password.
+
+#+NAME: org_gcr_2017-10-23_mara_1B8DE431-0C29-428B-94DA-58718F0CDF36
+#+BEGIN_SRC sql :tangle no
+UPDATE mysql.user
+    SET authentication_string = PASSWORD('root'), password_expired = 'N'
+    WHERE User = 'root' AND Host = 'localhost';
+FLUSH PRIVILEGES;
+#+END_SRC
+
+***** MAMP
+:PROPERTIES:
+:ID:       org_gcr_2017-10-23_mara:AC6B50EC-F2DA-4886-8375-A0432CBC553E
+:END:
+#+NAME: org_gcr_2017-10-23_mara_D6B1A43E-FECE-4122-A5D7-D79B923409A0
+#+BEGIN_SRC sh
+brew cask install mamp
+#+END_SRC
+***** sequel-pro
+:PROPERTIES:
+:ID:       org_gcr_2017-10-23_mara:F2F8B08D-FFD6-4557-BF90-FEE01179A8E3
+:END:
+#+NAME: org_gcr_2017-10-23_mara_EB19B642-F0A4-465A-8AE1-372533560289
+#+BEGIN_SRC sh
+brew cask install sequel-pro
+#+END_SRC
+***** make
+:PROPERTIES:
+:ID:       org_gcr_2018-03-25T00-45-40-05-00_mara:E36BB250-AC54-40F3-979B-CEBF10677EA2
+:END:
+#+name: org_gcr_2018-03-25T00-45-40-05-00_mara_A28478F1-2909-46E3-9B27-2F0C68FE4C40
+#+begin_src sh
+brew install make --with-guile@2.0
+#+end_src
+***** vcard
+:PROPERTIES:
+:ID:       org_gcr_2018-04-09T19-27-23-05-00_mara:0A132F34-8034-404B-A4C0-3B7E80BBD3F4
+:END:
+#+name: org_gcr_2018-04-09T19-27-23-05-00_mara_4F071667-58DE-427E-A738-A222180928EA
+#+begin_src sh
+cd ~/
+rm -rf ~/vcard
+mkdir -p ~/vcard
+cd ~/vcard
+vens
+veon
+pip2.7 install vcard
+veof
+cd ~/
+#+end_src
+**** Configure
+:PROPERTIES:
+:header-args: :tangle "14_development.org"
+:ID:       org_gcr_2017-05-12_mara:0838DC99-9B0D-46DB-B449-94F85275CAEB
+:END:
+#+NAME: org_gcr_2017-05-12_mara_99109C40-E9ED-4635-B8EF-7180D18849FC
+#+BEGIN_SRC org
+,* DeltaWalker
+
+- License it.
+- Set preferences for new comparisons (be sure of this, easy not to)
+  - General
+    - Date formatting: English (United States)
+    - Max available memory: 4096
+    - [X] Automatically find new updates and notify me
+    - Colors and Fonts
+      - Basic: DJSM 10
+        - Text Editor Block Selection Font
+        - Text Font
+      - Differences
+        - Font: DJSM 12
+        - Colors:
+          - Addition: Green
+          - Change: Orange
+          - Conflict: Red
+          - Deletion: Purple
+  - All Comparisons
+    - [ ] Use text differencing optimized for speed
+    - [X] Use text differencing optimized for accuracy
+    - [X] Follow symbolic links
+    - [ ] Ignore differences in whitespace
+      - Want to know about tabs versus spaces
+    - [ ] Ignore differences in character case
+      - Interesting but default do care
+    - [ ] Ignore differences in line endings (CF and LF)
+      - Most systems don't care, but I do and should fix it
+  - Text comparison
+    - Editors
+      - YES Show whitespace characters
+      - Current line highlight: Silver
+        - So you can see the outline of the change while the current line
+          indication is still obvious
+- Set up the "Compare with DeltaWalker.workflow"
+  - Go to its [Cask location]/Extras
+  - Copy it to ~/Library/Services
+  - Opening it in Automator by double clicking it in Finder
+  - Immediately saving it and closing it
+- Save the new configuration and guit DW, and then start it again and verify
+  that the settings are saved. Once they were not.
+- Sample files for diffing used to be included
+  - Not anymore so nothing to test
+
+,* Sourcetree
+
+- Log into SourceTree using BitBucket
+- Skip Setup
+- If you have it
+  - Let it scan the BitBucket folder to add those projects to SourceTree
+- Preferences
+  - General: Disallow SourceTree from modifying yoru global Git config file
+  - Diff
+    - Set font to DJSM 14
+    - Do not integrate with DeltaWalker
+      - Command line Git is integrated
+      - SourceTree is standalone /to be alone/
+- Once you set up Git, pull a project from BB
+
+,* IntelliJ Idea or PyCharm
+
+- Complete Installation: Do not import settings
+- EULA: Yes
+- Data Sharing: Send Usage Statistics
+- Customize: Skip Remaining and Set Defaults
+- File -> Import Settings -> settings.jar
+  - IntelliJ Now restarts
+- Preferences
+  - Appearance
+    - Override default font size not font, change it to 16
+  - Editor
+    - Code Style
+      - Scheme: Copy the Default IDE style appending 'gcr'
+      - Indent Detection? No Nothing.
+    - Color Scheme
+      - Choose Solarized Dark
+      - Then duplicate it by appending 'gcr'
+      - Apply
+    - Font
+      - Font: DejaVu Sans Mono
+      - Show only monospaced fonts? No
+      - Size: 18
+      - Fallback: Symbola
+    - General
+      - Apperance
+        - No blinking
+        - Use block caret
+        - No line numbers
+,* WebStorm
+- Same configuration as PyCharm
+
+,* XCode
+
+- Preferences
+  - Downloads
+    - Components (Document things that I installed)
+    - Documentation (Document things that I installed)
+      - iOS 9.2 Documentation
+      - OS X 10.11.2 Documentation
+      - XCode 7.2 Documentation
+    - Stand alone checkbox
+      - No: Check for and install updates automatically
+
+,* The Silver Searcher
+
+- NA
+
+,* RStudio
+
+- RSudio
+  - Preferences
+    - General
+      - Default working directory (when not in a project): ~
+      - Restore most recent project: Yes
+      - Restore previously open source documents: No
+      - Restore .RData: No
+      - Save worksapce to .RData: No
+    - Appearance
+      - Editor font: DejaVuSansMono
+      - Font size: 12
+      - Editor theme: Solarized Dark
+,* Rbenv
+
+Steps:
+- It is already installed by brew
+- Run this: rbenv init
+  - And update your environment setup
+- Run this: curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+  - And make sure that it works.
+- Install some Ruby versions
+  - Find out what is the current stable version [[https://www.ruby-lang.org/en/downloads/][here]]
+    - 2.5.0 on 2018-02-08
+  - Check if it is available: rbenv install -l | grep 2.5.0
+  - Install it: rbenv install 2.5.0
+- Set the global version
+  - rbenv global 2.5.0
+- Verify that the current version is 2.5.0
+  - I never set a local version so it should always be the global
+  - rbenv version
+- View where gems are stored: gem env home
+- Install Bundler: gem install bundler
+#+END_SRC
+*** Manual
+:PROPERTIES:
+:header-args: :tangle "15_manual.org"
+:ID:       org_gcr_2017-05-12_mara:BB9E3D7F-B9C2-4545-BE21-D612B37CFED2
+:END:
+**** Font By Language
+:PROPERTIES:
+:ID:       org_gcr_2018-06-02T18-25-17-05-00_mara:812F2418-645B-4149-A4E0-0792B670DA02
+:END:
+***** APL: SimPL Font
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:1E8B0850-1610-4DB7-BC89-866C31B04AA1
+:END:
+- http://wiki.nars2000.org/index.php/APL_Font
+  "The default APL font for NARS200"
+***** Devanagari
+:PROPERTIES:
+:ID:       org_gcr_2018-06-03T01-16-43-05-00_mara:32CCF6E4-A264-4905-BFB1-08CF12E285AD
+:END:
+- [[http://software.sil.org/annapurna/download/][Annapurna SIL]]
+***** Egyptian Hieroglyphs: NewGardiner TrueType Font
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:541D2603-FEFA-48B6-86E7-2CC47370B3E4
+:END:
+- https://mjn.host.cs.st-andrews.ac.uk/egyptian/fonts/newgardiner.html
+  "This font contains the 1071 glyphs from 0x13000 to 0x1342E, forming the
+  section from document WG2/N3349R that deals with Egyptian Hieroglyphs."
+- Install =NewGardinerSMP.ttf=
+***** Last Resort
+:PROPERTIES:
+:ID:       org_gcr_2018-06-30T12-27-18-05-00_mara:B17532CA-F96A-42E2-AA86-55E96194A2F5
+:END:
+- https://www.unicode.org/policies/lastresortfont_eula.html
+**** iTunes
+:PROPERTIES:
+:ID:       org_gcr_2017-11-01_mara:BF7BA256-70D0-421E-A5B5-0F5568FFAB6F
+:END:
+- References
+  - [[http://www.kenrockwell.com/apple/itunes.htm][Secrets of iTunes: A recording engineer's guide to importing CDs]]
+  - [[http://www.lairware.com/guide/fix_damaged_library.html][How to fix a damaged iTunes library]]
+
+- General
+  - Library name has no spaces
+  - No star ratings
+  - Large list size
+  - No notifications
+  - CD Import settings
+    - AAC, 160kbps, Use VBR
+    - Use error correction
+- Playback
+  - na
+- Sharing
+  - everything
+- Downloads
+  - Only check download full-size and high-quality
+- Store
+  - Always require a password, automatically download artwork
+- Restrictions
+  - None and don't show content ratings
+- Devices
+  - na
+- Advanced
+  - Media folder location on Dropbox
+  - Keep it organized
+  - Copy files into it when adding
+  - Share iTunes library XML
+  - Keep miniplayer on top
+**** PDFPenPro
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:23E72876-924E-4844-86F8-3CF2837C6217
+:END:
+**** The R Project
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:D6FBFF78-B0A4-4168-A319-71E30BABDE2C
+:END:
+
+- Context
+  - =brew install r= has runtime issues on /my/ machine
+  - =brew cask install r= has a bad download link
+  - Therefore install the package manually from a CRAN mirror
+- Downloaded the pkg
+- Ran the package
+- It finishes
+- Set up the development environment
+  - By now
+    - HELP is installed
+    - R is installed
+  - Review R.org
+  - Tangle R.org
+  - Link the configuration files: sh .Rsetup.sh
+  - Open up R in a terminal because it will be prompting you for things
+  - Install ~assertthat~ first because everything depends on it
+  - Install the local libraries: source(".Rinstall.r")
+
+**** Microsoft Office
+    :PROPERTIES:
+    :ID:       org_gcr_2017-05-12_mara:78E3489E-DF5E-4887-86D1-494EDAA77DFD
+    :END:
+
+#+NAME: org_gcr_2017-05-12_mara_AA02C112-ACBB-4415-813D-69BE649D4600
+
+MS Office This is in BrewCask, but the download is waste of time. I have it
+locally. Use the version I bought; not the latest which is in brew.
+
+I keep going back and forth on this one. Is it worth saving 15 minutes having to
+install it myself?
+
+#+NAME: org_gcr_2018-05-13T21-25-21-05-00_mara_C7215412-09C0-4128-A234-1BE1A468EEBD
+#+BEGIN_SRC org
+- Start it.
+- It asks for your name.
+- It asks about updates and stuff.
+  - Get them all.
+  - Take 3-5 iterations
+- When activation occurs, the app always locks up then I quit it and it
+  restarts after sending an error report. It works after that.
+- When it checks for updates, tell it to check daily.
+- Configure
+  - Save
+    - Save AutoRecover information after this number of minutes: 1
+#+END_SRC
+**** Visible Body
+    :PROPERTIES:
+    :ID:       org_gcr_2017-05-12_mara:B59FF468-DFB5-4A3D-AB6D-5BAE62C50658
+    :END:
+
+#+NAME: org_gcr_2017-05-12_mara_A11DCB72-72E4-4B80-BF0C-D56FF6866E72
+#+BEGIN_SRC org
+,* Visible Body
+
+- Human Anatomy Atlas
+- Muscle Premium
+- Skeleton Premium
+- License key
+  - Copy directory from the email
+  - Tried printing to pdf or saving to a file and copying from that and neither
+    work
+  - Need to copy from their into an Org document and try that
+#+END_SRC
+
+**** Entropy
+    :PROPERTIES:
+    :ID:       org_gcr_2017-05-12_mara:E9A1E948-8CB1-4824-B9E2-E3D5CDD0892C
+    :END:
+
+#+NAME: org_gcr_2017-05-12_mara_346129DB-CC0F-42DC-B5AE-5892008D4A67
+#+BEGIN_SRC org
+,* Entropy
+
+- [[http://www.eigenlogik.com/entropy/][Download]]
+- Install
+- License
+- Open all zip files with Entropy
+  - Find a zip file, Get Info, Open With, Entropy, Change All
+#+END_SRC
+
+**** Guitar Pro
+    :PROPERTIES:
+    :ID:       org_gcr_2017-05-12_mara:90556217-0181-4443-AE6C-934A96531761
+    :END:
+
+#+NAME: org_gcr_2017-05-12_mara_2E5C8692-189B-4125-B22F-62149679A0C2
+#+BEGIN_SRC org
+,* Guitar Pro
+
+- [[http://www.guitar-pro.com/en/index.php][Here]]. Sign into MySongBook.
+
+#+END_SRC
+
+**** Cepestral Callie & David
+    :PROPERTIES:
+    :ID:       org_gcr_2017-05-12_mara:0530264B-9C2B-4FDB-8B20-812F172980E9
+    :END:
+
+#+NAME: org_gcr_2017-05-12_mara_F641981A-9788-46E2-BF9B-76E509A8E995
+#+BEGIN_SRC org
+,* Cepestral Callie & David
+
+[[http://www.cepstral.com/][Here]].
+
+You might need to log out and in again to make the "Cepstral Voices" appear in
+System Preferences.
+
+License them. Test them.
+
+Set Dictation & Text to Speech to: Callie
+#+END_SRC
+
+**** Pushbullet
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:D248C9C2-B081-4929-B4C1-FE9CD2C8C7D3
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_109E2C96-0F9D-4F4A-841A-AF15C1F93D8D
+#+BEGIN_SRC org
+,* Pushbullet
+
+- Sign in, it is a web app
+- Allow contact access
+- Install into Chrome, choose it
+- [X] Text from phone
+- [X] See notifications
+- Configure nothing else
+
+#+END_SRC
+**** Ink2Go
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:A3350039-BBD6-4150-9EAA-A5419552074B
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_8615C7A4-EE2A-4CF6-89FB-CAD6A95CC84A
+#+BEGIN_SRC org
+,* Ink2Go
+
+- [[http://ink2go.org/][Here]]
+- License it
+- Preferences
+  - Keyboard Shortcuts
+    - Command-F12: Activate
+    - Command-F11: Activate+Pen
+  - Toolbar
+    - Everything enabled but
+      - Crop / Pause
+      - Record / Stop
+      - Webcam
+#+END_SRC
+
+**** Dyalog APL
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:8364462F-821E-459C-8DE7-8AD8331759AD
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_0EB14936-F6A7-4785-9489-D9A333392078
+#+BEGIN_SRC org
+,* Dyalog APL
+
+- NA
+#+END_SRC
+
+**** PL2303 Driver
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:78397020-307E-4483-A3F4-DDFDD8D74814
+:END:
+
+Install the [[http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=229&pcid=41][PL2303 Driver]].
+
+**** Pulse Messenger
+:PROPERTIES:
+:ID:       org_gcr_2018-01-25_mara:9376AA6E-6BBF-465B-A6D6-A27376F563A5
+:END:
+#+NAME: org_gcr_2018-01-25_mara_8E2F6C65-8C83-4C2D-BB90-072429524A4C
+#+BEGIN_SRC org
+,* Pulse Messenger
+- Install and register
+#+END_SRC
+**** Gramps
+:PROPERTIES:
+:ID:       org_gcr_2018-02-24_mara:4B00917C-29D0-42E0-86D3-F35E086DDF15
+:END:
+***** Use The Persisted Data
+:PROPERTIES:
+:ID:       org_gcr_2018-02-24_mara:41317A61-9E7A-4E43-9BA1-4A30C251A605
+:END:
+- Pull application data
+  #+name: org_gcr_2018-02-24_mara_6901C47A-7D9B-4F9A-AD20-FADAB8FEF44B
+  #+begin_src sh :tangle no
+git clone gitlab-gcr:grettke/gramps.git ~/git/gitlab/gramps
+  #+end_src
+- (Re)Install and (re)prepare directories without running it (before its data directory is created)
+  #+name: org_gcr_2018-02-24_mara_80FC8AA9-5D9C-4CAC-97AF-4B74B04C25F8
+  #+begin_src sh :tangle no
+brew cask remove gramps
+rm ~/Library/Application\ Support/gramps
+ln -s ~/git/gitlab/gramps ~/Library/Application\ Support/gramps
+brew cask install gramps
+  #+end_src
+- Start it and you should see the database and preferences
+***** Create The Persisted Data
+:PROPERTIES:
+:ID:       org_gcr_2018-02-24_mara:25BDA90B-8B10-4530-9A16-83B3113E97A0
+:END:
+- Create a new Git project (for this example using the names in the "Use Persisted Data")
+- Follow the same setup directions as in "Use The Persisted Data"
+- This leaves you with empty folders: Gramps hasn't been initialized yet. Openening it initilizes it.
+- Open Gramps and then immediately close it without having changed anything anywhere
+- Add this to Git: it is the starting point of your project.
+**** Phiewer
+:PROPERTIES:
+:ID:       org_gcr_2018-03-13_mara:496D691A-231E-4DCE-97B8-F02327C47935
+:END:
+Obvious settings.
+**** App Store Installs
+   :PROPERTIES:
+   :ID:       org_gcr_2017-05-12_mara:AC034850-5D7A-492F-B2E3-55167B7B1C25
+   :END:
+
+***** Debtinator
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:495FC0F9-827F-4993-9F09-559E40C18B51
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_1B6FE230-CEF8-4977-A3F9-A70EE5E1A39B
+#+BEGIN_SRC org
+,* Debtinator
+
+- NA
+#+END_SRC
+***** Textual IRC Client
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:6404E630-F3D2-4E8E-B45C-4834B3113C67
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_AF9EA775-3EAC-45CE-BE38-2C2B0B0C2618
+#+BEGIN_SRC org
+,* Textual
+
+- AppStore.
+
+Only note changes from the current default
+
+Set up preferences:
+
+- Preferences.
+- General.
+  - YES: Save the state of queries
+- Highlights.
+- Notifications.
+- Controls.
+- Interface.
+- Style.
+  - General.
+    - Style: Equinox
+    - Font: DJSM 17
+  - Inline Media.
+    - YES: Show images inline
+- Addons.
+- Advanced.
+  - Default Identity.
+    - grettke
+    - grettke💤
+    - grettke
+    - Grant Rettke
+
+Server properties:
+
+- Basic Settings.
+  - General
+    - YES
+      - Connect when Textual opens
+      - Perform reconnect on disconnect
+      - Perform reconnent on waking from sleep
+- Identity
+  - Wait for ID before joining
+  - Enter personal password; everything else got set from main screen
+  - Do wait for identification before joining channels
+
+- Join on Freenode
+  - #org-mode
+  - #emacs
+  - #scheme
+  - #bash
+  - #apl
+#+END_SRC
+***** Microsoft Remote Desktop
+    :PROPERTIES:
+    :ID:       org_gcr_2017-05-12_mara:71D3C2E0-B185-4166-8D96-C9FABD67D43A
+    :END:
+
+#+NAME: org_gcr_2017-05-12_mara_2341C9FA-93E8-4E03-BEE3-A0A1D616F474
+#+BEGIN_SRC org
+,* Microsoft Remote Desktop
+
+- Don't open the session full-screen.
+#+END_SRC
+
+***** Text2Speech PRO
+    :PROPERTIES:
+    :ID:       org_gcr_2017-05-12_mara:0C26CAB0-02D1-4EAA-9128-6A0D692B2035
+    :END:
+
+#+NAME: org_gcr_2017-05-12_mara_A897EEBB-49AD-41E8-9890-AEBBDA0866B9
+#+BEGIN_SRC org
+,* Text2Speech PRO
+
+- General
+  - Preferences
+    - Voice :: Cepstral Callie
+    - Speaking Rate :: 175 w/m
+    - App check text encoding failover :: UTF-8
+    - [ ] Send file to iTunes
+#+END_SRC
+
+***** PixelMator
+    :PROPERTIES:
+    :ID:       org_gcr_2017-05-12_mara:8E993645-78DC-488D-BA77-BBE59C7F3113
+    :END:
+
+#+NAME: org_gcr_2017-05-12_mara_CF58A1FB-5BCD-4DE3-B24A-BD5B48CEB85C
+#+BEGIN_SRC org
+,* PixelMator
+
+- NA
+#+END_SRC
+
+***** Mousepose
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:945A8456-0046-40DC-B1B8-4C7EE678ADA0
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_1303D8AC-B192-42F3-95C1-4124F5839534
+#+BEGIN_SRC org
+,* Mousepose
+
+- Grant "accessibility" permission
+- Settings
+  - Mousepose
+    - Toggle Hotkey: Control-Escape
+    - Advanced
+      - Increase hotkey: C-2
+      - Decrease hotkey: C-1
+      - Window focus toggle: C-3
+  - Mouse Clicks
+  - Keystrokes
+    - Default is standalone
+    - Hotkey: C-4
+  - Miscellaneous
+    - When logging in: Start Mousepose
+    - Show icon in: Menu bar
+- Bartend it
+#+END_SRC
+
+***** Webcam Settings By Mactaris
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:551EB2D7-5217-447D-83B1-0ABBF56E4E6F
+:END:
+#+NAME: org_gcr_2017-05-12_mara_97712287-0228-4D40-9BD5-038FB9B5AB5F
+#+BEGIN_SRC org
+,* Webcam Settings By Mactaris
+
+- Set the white balance
+  - Hold up a bleached white piece of printer paper to the camera
+  - Balance until it is the same color on the screen
+- Enable at startup
+#+END_SRC
+
+***** Key Codes
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:51B6C21F-0588-469B-A8C6-7C31B3BC2AFE
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_08A7BB54-05AB-4D18-A07A-32687D3F44EF
+#+BEGIN_SRC org
+,* Key Codes
+
+- NA
+#+END_SRC
+
+***** Blackmagic Disk Speed Test
+:PROPERTIES:
+:ID:       org_gcr_2018-01-23_mara:4BC52A36-310C-4784-93AE-0257B0B3A11E
+:END:
+#+NAME: org_gcr_2018-01-23_mara_92364F01-6795-4B03-8811-D20BCB38D176
+#+BEGIN_SRC org
+,* Blackmagic Disk Speed Test
+- Always use the smallest file size
+#+END_SRC
+***** HazeOver
+:PROPERTIES:
+:ID:       org_gcr_2018-04-04T12-17-23-05-00_mara:50B78A72-A304-4246-B1D6-2E27843C4326
+:END:
+#+name: org_gcr_2018-04-04T12-17-23-05-00_mara_259C6998-F024-4F2E-AF69-7EAF2E656C62
+#+begin_src org
+,* HazeOver
+- General
+  - Percent haze: 20%
+  - Enable Hazeover: YES
+  - Start at login: YES
+  - Show status on menubar: YES
+- Advanced
+  - Shortcut: C-M-s-h
+  - Background color: Black
+    Highlight: One window only
+  - Animation: 0.25s
+- Displays
+  - Choose:
+    - YES: Dim all windows on displays without keyboard focus
+    - NO: Highlight windows on displays without keyboard focus
+  - Show when secondary display is connected? YES
+  - Allow accessibility features? YES
+#+end_src
+*** SSH and Git
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:52BA0225-96A9-4A56-B130-4A43FDF25DA1
+:END:
+**** Generic
+:PROPERTIES:
+:header-args: :tangle "16_git-generic.sh" :tangle-mode (identity #o755)
+:ID:       org_gcr_2017-05-12_mara:7B232472-2AA7-41C3-B826-62116944F1B1
+:END:
+
+OSX creates this directory everywhere and it must be ignored. This code block
+is surprising. It lives here because it should only hapen /after/ installing Git.
+
+#+NAME: org_gcr_2017-05-12_mara_55FC3852-A687-4430-9F57-BB871B1AE9C7
+#+begin_src sh
+echo .DS_Store > ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+#+end_src
+
+- Do you really want to create a new SSH and Git configuration?
+- Did you /already/ ran this script and you are copying over those files onto
+  this new box?
+- Check if the user wants to do that work again and make it easy to exit the
+  script
+
+#+NAME: org_gcr_2017-05-12_mara_3F6EFEBA-1E8A-46D8-AC65-4E0948C1EF86
+#+BEGIN_SRC sh
+echo ""
+echo "With your help I configure SSH for you"
+echo ""
+echo "First I =rm -rf ~/.ssh= *destroying* your entire SSH configuration"
+echo "Second I create a public and private keypair"
+echo "Third I create a config file for Github and Bitbuccket"
+echo "Fourth you upload your public SSH key both to Github and Bitbucket"
+echo "Fifth I test each connection out and let you know if it worked"
+echo ""
+echo "Then again maybe you *don't want me to do any of that*"
+echo "Maybe you already ran this script want to *keep* it"
+echo "Maybe you brought an existing config and key pair files with you"
+echo "Doesn't make any difference... its completely hypothetical"
+echo ""
+echo "Time to choose:"
+
+PS3="Your choice (press the corresonding number): "
+
+bail="*Stop*. *Don’t*. *Get me outta here*. *Exit this script*."
+stay="Yup. Gotcha. Do it. Run this script."
+options=("$bail" "$stay")
+
+select opt in "${options[@]}"
+do
+    case $opt in
+        "$bail")
+            echo "*Sayonara*"
+            sleep 1
+            exit
+            ;;
+        "$stay")
+            echo "Gotcha. Running it."
+            sleep 1
+            break
+            ;;
+        ,*)
+            echo "You're not getting outta here until you choose."
+            ;;
+    esac
+done
+#+END_SRC
+
+Generate the key. There is no passphrase.
+#+NAME: org_gcr_2017-05-12_mara_2A10A4BD-3F69-43B0-98CF-F5217F12E427
+#+begin_src sh
+rm -rf ~/.ssh
+mkdir ~/.ssh
+cd ~/.ssh
+echo "What email address would you like to use for this SSH key?"
+read SSHEMAIL
+echo "What logical name, organization, or group name? For example: gitlab"
+read SSHORG
+SSHID=`whoami`-`hostname`
+SSHUID=$SSHID-$SSHORG-`date '+%Y_%m_%d_%H_%M_%S'`
+SSHFILE=$SSHUID-rsa
+ssh-keygen -N '' -t rsa -C $SSHEMAIL -f $SSHFILE
+#+end_src
+
+Set permissions so that =ssh= will run.
+
+#+NAME: org_gcr_2017-05-12_mara_4DAD3656-07C1-4832-A45F-8712D9643B3E
+#+begin_src sh
+chmod 600 ~/.ssh/$SSHFILE
+chmod 600 ~/.ssh/$SSHFILE.pub
+ssh-add -K ~/.ssh/$SSHFILE
+#+end_src
+
+Add they key to Bitbucket and GitHub and GitLab.
+
+#+NAME: org_gcr_2017-05-12_mara_DCEFE0DD-F891-4909-AB33-C8BC4A4B6D68
+#+begin_src sh
+echo "Name your Git site key: $SSHFILE"
+cat ~/.ssh/$SSHFILE.pub | pbcopy
+read -p
+"The new key is in your clipboard. Go and add this key to BitBucket, GitHub and GitLab. When you are finished, hit [enter] to continue."
+#+end_src
+
+Set up ~/.ssh/config.
+
+#+NAME: org_gcr_2017-05-12_mara_D7361B03-DEA4-40C7-A44A-CCE122078DF6
+#+begin_src sh
+cat > ~/.ssh/config << EOF
+Host github-`whoami`
+     HostName github.com
+     User git
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/$SSHFILE.pub
+Host bitbucket-`whoami`
+     HostName bitbucket.org
+     User git
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/$SSHFILE.pub
+Host gitlab-`whoami`
+     HostName gitlab.com
+     User git
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/$SSHFILE.pub
+EOF
+#+end_src
+
+Test each one out.
+
+Separate them to allow for easier copy-pasting.
+
+#+NAME: org_gcr_2017-05-12_mara_7DF422E7-EF5D-4D66-841A-F55AE00F0554
+#+begin_src sh
+ssh -T bitbucket-`whoami`
+read -p "Did it work? If not, fix it. [hit enter to continue]"
+#+end_src
+
+#+NAME: org_gcr_2017-05-12_mara_D580852C-DEE2-4EB4-A4A0-B7EF0262EB27
+#+BEGIN_SRC sh
+ssh -T gitlab-`whoami`
+read -p "Did it work? If not, fix it. [hit enter to continue]"
+#+END_SRC
+
+#+NAME: org_gcr_2017-05-12_mara_CA0BFC40-D793-455D-98EA-CF40A940E003
+#+begin_src sh
+ssh -T github-`whoami`
+read -p "Did it work? If not, fix it. [hit enter to continue]"
+#+end_src
+
+**** Personal
+:PROPERTIES:
+:header-args: :tangle "17_git-personal.sh" :tangle-mode (identity #o755)
+:ID:       org_gcr_2017-05-12_mara:BC858490-556E-42A7-82D1-FBFD7D9DC84C
+:END:
+
+Set up my preferences.
+
+#+NAME: org_gcr_2017-05-12_mara_DA1B734B-8994-4465-AA58-08E2EF337770
+#+begin_src sh
+git config --global user.name "Grant Rettke"
+git config --global user.email gcr@wisdomandwonder.com
+git config --global color.ui true
+git config --global core.autocrlf
+git config --global alias.st status
+git config --global alias.ci commit
+git config --global alias.dt difftool
+git config --global alias.mt mergetool
+git config --global diff.tool deltawalker
+git config --global difftool.deltawalker.cmd '/Applications/DeltaWalker.app/Contents/Resources/git-diff $LOCAL $REMOTE'
+git config --global difftool.prompt false
+git config --global merge.tool deltawalker
+git config --global mergetool.deltawalker.cmd '/Applications/DeltaWalker.app/Contents/Resources/git-merge $LOCAL $REMOTE $BASE $MERGED'
+git config --global mergetool.keepBackup false
+#+end_src
+
+Check out projects to get basic stuff working.
+
+#+NAME: org_gcr_2017-05-12_mara_CF6E9DCD-5A6E-4335-93CF-2E03937C9C28
+#+begin_src sh
+rm -rf ~/git/github
+rm -rf ~/git/gitlab
+
+mkdir -p ~/git/github
+mkdir -p ~/git/gitlab
+
+cd ~/git/gitlab
+git clone gitlab-`whoami`:grettke/list.git
+git clone gitlab-`whoami`:grettke/resume.git
+git clone gitlab-`whoami`:grettke/notes.git
+git clone gitlab-`whoami`:grettke/signature.git
+git clone gitlab-`whoami`:grettke/grant-personal.git
+git clone gitlab-`whoami`:grettke/correspondence.git
+git clone gitlab-`whoami`:grettke/wnw.git
+git clone gitlab-`whoami`:grettke/texmf.git
+git clone gitlab-`whoami`:grettke/hardware
+
+cd ~/git/github
+git clone github-`whoami`:grettke/osx-provision.git
+git clone github-`whoami`:grettke/bash.git
+git clone github-`whoami`:grettke/wisdomandwonder.git
+git clone github-`whoami`:grettke/recursive-git-status-bash.git
+
+cd ~/git/github-anonymous
+git clone https://github.com/encharm/Font-Awesome-SVG-PNG
+git clone https://github.com/dwyl/english-words.git
+#+end_src
+
+At this point, the Bash initialization files point at the directory with my
+SSH key. Log out and in again and delete the anonymous pull. Not sure how to
+automate this part yet.
+
+#+NAME: org_gcr_2017-05-12_mara_300013CB-D6E2-414E-9FBF-68D4581D971C
+#+begin_src sh
+rm -rf ~/src
+mkdir ~/src
+cd ~/src
+git clone github-`whoami`:grettke/help.git
+rm ~/.emacs.el
+ln -s ~/src/help/.emacs.el ~/.emacs.el
+rm -rf ~/.emacs.d.copy
+mv ~/.emacs.d ~/.emacs.d.copy
+rm -rf ~/src/.emacs.d
+mkdir ~/src/.emacs.d
+cd ~/src/.emacs.d
+git clone gitlab-`whoami`:grettke/dotemacsdotd.git .
+ln -s ~/src/.emacs.d ~/.emacs.d
+ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
+#+end_src
+
+Set up =util= scripts.
+
+#+NAME: org_gcr_2017-06-18_mara_4833AB48-1C15-4E4E-A767-F2711FFDAAE5
+#+BEGIN_SRC sh
+cd ~/src
+rm -rf util
+git clone gitlab-`whoami`:grettke/util.git
+rm ~/util
+ln -s ~/src/util ~/util
+cd
+#+END_SRC
+
+*** Org-Mode
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:0788FE76-2F16-4F66-9822-D4BDA3293CDD
+:END:
+**** Install
+:PROPERTIES:
+:header-args: :tangle "18_org-mode.sh" :tangle-mode (identity #o755)
+:ID:       org_gcr_2017-05-12_mara:2F164085-48F1-49BD-8FBA-FF64C6B75328
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_9ED0592E-A409-4049-BD98-DD5151723C1A
+#+BEGIN_SRC sh
+rm -rf ~/src/xml-rpc-el
+rm -rf ~/src/metaweblog
+rm -rf ~/src/org-mode
+rm -rf ~/src/org2blog
+rm -rf ~/src/pretty-mode
+rm -rf ~/src/use-package
+rm -rf ~/src/reveal.js
+rm -rf ~/src/go-hydra
+rm -rf ~/src/emacs-batteries-included
+rm -rf ~/src/solarized-emacs
+rm -rf ~/src/auto-capitalize
+cd ~/src
+echo `date +%Y-%m-%dT%H:%M:%S%z`
+git clone git://orgmode.org/org-mode.git
+echo `date +%Y-%m-%dT%H:%M:%S%z`
+cd org-mode
+make autoloads
+cd ~/src
+git clone github-`whoami`:grettke/xml-rpc-el.git
+git clone github-`whoami`:org2blog/metaweblog.git
+git clone github-`whoami`:org2blog/org2blog.git
+git clone github-`whoami`:grettke/pretty-mode.git
+git clone https://github.com/jwiegley/use-package.git
+git clone https://github.com/hakimel/reveal.js.git
+git clone gitlab-`whoami`:grettke/go-hydra.git
+git clone github-`whoami`:grettke/emacs-batteries-included.git
+git clone github-`whoami`:grettke/solarized-emacs.git
+git clone github-`whoami`:grettke/corporate-bs-generator.git
+git clone https://github.com/yuutayamada/auto-capitalize-el.git auto-capitalize
+#+END_SRC
+
+*** TeX
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:A0004B01-D7F4-4D4B-A42B-2F20B77D6A0B
+:END:
+**** Install
+:PROPERTIES:
+:header-args: :tangle "19_tex.sh" :tangle-mode (identity #o755)
+:ID:       org_gcr_2017-05-12_mara:2A39BC8B-0B60-452B-ACBC-CDDDF633D831
+:END:
+***** MacTeX
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:8C2DD58B-618C-40BF-8B38-077A88A0F9A7
+:END:
+
+Configuration comes at the end after my Git stuff is set up.
+
+Download speed varies wildly.
+
+#+NAME: org_gcr_2017-05-12_mara_7318ED66-78D7-4039-AF96-2A82F97AF128
+#+BEGIN_SRC sh
+brew cask install mactex
+#+END_SRC
+***** GnuPlot
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:CCB28FDC-25DD-41C0-97D1-09A01BCA2DB7
+:END:
+
+Must install TeX before GNUPlot.
+
+#+NAME: org_gcr_2017-05-12_mara_9D1833A5-9B40-441E-A279-9D72E9173D8F
+#+BEGIN_SRC sh
+brew install lua
+brew install gnuplot --with-tex --with-pdflib-lite --with-test --with-x11
+#+END_SRC
+**** Configure
+:PROPERTIES:
+:header-args: :tangle "20_tex.org"
+:ID:       org_gcr_2017-05-12_mara:0A2236B2-F4E9-441C-80F7-85FE07754863
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_2A49F260-75C7-4AFF-B789-F83BD9FB83D9
+#+BEGIN_SRC org
+- I value seeing these commands succeed so pasting them is OK
+- MacTeX installation is typically so painful that I want this part to be easy
+
+Set up my TeX stuff for KOMA-script. Backup the default configuration first.
+
+,#+begin_src sh
+ls /usr/local/texlive/2016
+sudo cp /usr/local/texlive/2016/texmf.cnf /usr/local/texlive/2016/texmf.cnf-`date '+%Y_%m_%d__%H_%M_%S'`
+ls /usr/local/texlive/2016
+sudo tlmgr conf texmf TEXMFHOME ~/git/gitlab/texmf/
+,#+end_src
+
+Check that the path is really updated.
+
+,#+begin_src sh
+kpsewhich KomaDefault.lco
+,#+end_src
+
+The documents say to maybe do the following. I did it.
+
+,#+begin_src sh
+sudo mktexlsr
+,#+end_src
+#+END_SRC
+** Testing
+:PROPERTIES:
+:header-args: :tangle "21_testing.org"
+:ID:       org_gcr_2017-05-12_mara:E21C0EE4-07E2-45C4-92A6-A37554E51304
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_C5A1C22E-5F4A-44B8-AC33-B5A8C2F94617
+#+BEGIN_SRC org
+- [ ] Get Emacs running
+- [ ] Re-tangle everything step by step
+  - [ ] ECM
+  - [ ] Fundamental
+  - [ ] Org2Blog
+  - [ ] HELP
+- [ ] Diagram.org verification
+  - Delete every result block: just do it manually search for =#+RESULT=
+  - Delete all image output
+  - Execute entire document successfully
+  - Images re-appear
+  - [ ] Ditaa
+  - [ ] PlantUML
+  - [ ] Graphviz
+- [ ] eshell
+  - Run it
+  - Emacs uses correct HELP directory
+- [ ] ccrypt
+- [ ] ispell
+- [ ] weasel words
+- [ ] proselint buffer
+  - Flycheck buffer
+- [ ] langtool
+  - Verify installation, can have the wrong dir and the tool just says that
+    there are no issues
+  - Run =langtool-check-buffer=
+  - ~qk c~ does the scan, ~qk C~ suggests corrects, verified on a corresponsence
+- [ ] Correspondence
+  - Pick a letter
+  - Address and signature and everything looks right
+- [ ] Messages
+  - Make sure that there are no startup warnings or issues
+- [ ] Build resume
+  - Blow away out-files and make
+  - [ ] MD
+  - [ ] TXT
+  - [ ] PDF FULL
+  - [ ] PDF ONE PAGE
+  - [ ] DOCX
+- [ ] Export to everything
+  - Longest test, takes 35m on a VM
+  - This is used for publishing
+  - First delete everything
+  - [ ] html
+    - Images are links, not images
+  - [ ] md
+    - Images are links, not images
+  - [ ] pdf
+  - [ ] txt
+#+END_SRC
