@@ -46,7 +46,14 @@
 - Guest :: "Virtualized"
 - Re-image your box
 - During system configuration /before/ creating a user YES log into the App Store
-- Make a user named ~gcr~ and choose an avatar
+- Make a user
+  - Named ~gcr~
+  - Choose an avatar
+  - Allow location services
+  - Disallow user analytics reporting.
+  - Don't use location for timezone
+  - Don't allow AppleID to reset this password
+  - Don't allow Siri
 - Install software updates
 - Development Tools
   - XCode
@@ -56,7 +63,8 @@
     - If you want it them go to the App Store and Install it
     - 4.5GB download
   - Command Line Tools (CLT)
-    - Install the CLT.
+    - Install the CLT and let it run since only need it once you start using
+      the provsioning scripts
     - Run this and choose *Install*.
       ,#+BEGIN_SRC sh
       xcode-select --install
@@ -83,8 +91,11 @@ diskutil unmount /dev/disk0s8
 - System Preferences
   - General: *NA*
   - Desktop & Screensaver
-    - *(Host)*: "Message", 5m
-    - *(Guest)*: "Message", 5m
+    - Desktop
+      - Black
+    - Screensaver
+      - *(Host)*: "Message", 5m
+      - *(Guest)*: "Message", 5m
   - Dock
     - Size: Largest
     - Magnification: Off
@@ -97,10 +108,7 @@ diskutil unmount /dev/disk0s8
     - Show indicator for open apps: Yes
   - Mission Control: *NA*
   - Language & Region: *NA*
-  - Security & Privacy
-    - Privacy
-      - Unlock
-      - Add =Terminal=
+  - Security & Privacy: *NA*
   - Spotlight
     - Search Results
       - Applications
@@ -108,6 +116,7 @@ diskutil unmount /dev/disk0s8
       - Documents
       - Folders
       - System Preferences
+      - UN-CHECK Allow Spotlight Suggestions in Look up
     - Privacy
       - Big folders like DropBox or TimeMachine
   - Notifications: *NA*
@@ -116,34 +125,30 @@ diskutil unmount /dev/disk0s8
     - *(Host)*
       - On power
         - Display off at 15m
-        - Prevent computer from sleeping automatically when display is offp
-          when display is off
       - On battery, Screen sleep 5m
         - Don't slightly dim the display on battery power
     - *(Guest)*
       - Computer sleep: never
   - Keyboard *(Host)*
+    - Keyboard
+      - Swap Caps Lock and Control
     - Shortcuts
       - Launchpad & Dock
         - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.
       - Mission Control
         - Mission Control: C-9
         - Application windows: Disable
-        - Mission Control: Disable
         - Show Desktop: C-8
         - Show Dashboard: Disable it. I never use it.
       - Keyboard
-        - Move focus to next window: Alt-TAB
-          - Keep parity with Command-TAB
-          - Add SHIFT to cycle to previous window
+        - Move focus to next window: Command-Option-TAB
       - Screen Shots
         - Change each one to a prefix of Control-Command-Option, plus a shift
           - To keys 3 and 4
       - Services
         - Disable anything with control keybindings
-      - Accessibility
-        - Disable everything and then
-        - Invert Colors, Yes
+      - Accessibility: *NA*
+    - Dictation: *NA*
   - Mouse
     - *(Host)* Connect Bluetooth mouse
     - Tracking Speed
@@ -169,10 +174,6 @@ diskutil unmount /dev/disk0s8
   - Parental Controls: *NA*
   - App Store: *NA*
   - Dictation & Speech
-    - Dictation
-      - ON
-      - YES Use Enhanced Dictation
-      - Shortcut: Press Control-Command-Option-D
     - Text 2 Speech
       - Voice: Cepstral Preference
       - Rate: Normal
@@ -186,42 +187,45 @@ diskutil unmount /dev/disk0s8
         - Automatically Reduces transparency
       - Contrast: Normal
       - Cursor size: 50%
-      - YES Shake mouse pointer to locate  - Cepestral Voices
-    - See below
-  - Zoom
-    - YES Use keyboard shortcuts
-    - YES Zoom images
-    - Zoom Style: default Fullscreen
-      - More Options
-        - When zoomed in, the screen image moves:
-          - Continuously with pointer
-  - VoiceOver: *NA*
-  - Descriptions: *NA*
-  - Captions: *NA*
-  - Audio: *NA*
-  - Keyboard: *NA*
-  - Mouse & Trackpad
-    - Trackpad Options
-      - Enable Dragging: *Without* Drag Lock
-  - Switch Control: *NA*
-  - Dictation: *NA* (Review all of the commands though)
-    - That: Selected or desired thing
-    - Select N, Go To N, Move N, Scroll N
-    - Cut/Copy/Paste
-    - Capitalize/Lowercase  - Java: *NA*
+      - YES Shake mouse pointer to locate
+    - Zoom
+      - NO Use keyboard shortcuts
+      - YES Smooth images
+        - VoiceOver: *NA*
+    - Descriptions: *NA*
+    - Captions: *NA*
+    - Audio: *NA*
+    - Dictation: *NA*
+    - Keyboard: *NA*
+    - Mouse & Trackpad
+      - Trackpad Options
+        - Enable Dragging: *Without* Drag Lock
+    - Switch Control: *NA*
+  - iCloud: *NA*
+    - Should be set up but I am not using it at all
   - SwitchResX: *NA*
   - Tuxera NTFS: *NA*
-- *(Host)* Show Keychain Access in Menubar
-  - Start KeyChain Access
+- *(Host)* KeyChain Access (Application)
   - Preferences
   - Show keychain status in menubar
 - Finder
   - Preferences
+    - General
+      - Show nothing on the desktop
+      - New Finder windows show: Home dir
     - Sidebar
-      - Favorites
-        - <Home>
-      - Devices
-        - <Computer>
+      - Applications
+      - Desktop
+        - Stuff gets placed there automatically sometimes
+      - Documents
+      - Downloads
+      - Home
+      - Connected servers
+      - Bonjour computers
+      - This computer
+      - Hard disks
+      - External disks
+      - CDs, DVDs, and iPods
         #+END_SRC
 
 **** Configuration
@@ -858,8 +862,8 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 #+NAME: org_gcr_2017-05-12_mara_4C582518-39DC-4D1A-BB0C-5499B4CA78D3
 #+BEGIN_SRC sh
-echo "Script complete"
-echo "Log out then back in to see changes "
+cry "Script complete"
+cry "Log out then back in to see changes "
 #+END_SRC
 
 *** Administration
@@ -947,7 +951,7 @@ fi
 brew install bashdb
 bashhome=$(brew --prefix bash)
 bdbhome=$(brew --prefix bashdb)
-rm $bashhome/share/bashdb
+rm -rf $bashhome/share/bashdb
 ln -s $bdbhome/share/bashdb $bashhome/share/bashdb
 unset bashhome
 unset bdbhome
@@ -978,7 +982,6 @@ brew cask install font-han-nom-a
 brew cask install font-icomoon
 brew cask install font-mfizz
 brew cask install font-montserrat
-brew cask install font-octicons
 brew cask install font-quivira
 brew cask install font-symbola
 brew cask install font-unifrakturcook
@@ -1011,24 +1014,6 @@ git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git
 #+BEGIN_SRC sh
 brew install fortune
 #+END_SRC
-****** Recipes
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:4EE93B7D-9B90-40D9-99DE-CCC6CED9129B
-:END:
-
-You will want to know details about the software you are installing. Details
-include version number, dependencies, and post-installation requirements.
-Sometimes the recipes install old versions of the software and need to be
-updated. Sometimes recipes don't link the software and you need to do it
-manually. When you want details, you will have easy access to them that neither
-the Github GUI or the Brew Cask GUI easily provide.
-
-#+NAME: org_gcr_2017-05-12_mara_E3924B58-B0D8-4FEB-8C75-2CDE56647E2C
-#+BEGIN_SRC sh
-cd ~/git/github-anonymous
-git clone https://github.com/Homebrew/homebrew.git
-git clone https://github.com/caskroom/homebrew-cask.git
-#+END_SRC
 ****** GNU Core Utilities
 :PROPERTIES:
 :ID:       org_gcr_2018-01-25_mara:44354A23-99A3-4A52-98F8-708CDDD1E736
@@ -1052,7 +1037,7 @@ brew install joe
 
 #+NAME: org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB
 #+BEGIN_SRC sh
-echo "Script complete"
+cry "Script complete"
 #+END_SRC
 
 **** Configure
@@ -1112,6 +1097,7 @@ brew cask install popchar
 #+NAME: org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988
 #+BEGIN_SRC sh
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+        mkdir -p ~/.config
         cd ~/.config/
         rm -rf karabiner
         git clone gitlab-`whoami`:grettke/karabiner-elements.git karabiner
@@ -1242,14 +1228,15 @@ brew cask install daisydisk
 #+begin_src sh
 brew cask install contexts
 #+end_src
-***** Completion
+***** Done
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:419E4ADD-30A3-470F-8858-0DA41B95598D
 :END:
 
 #+NAME: org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB
 #+BEGIN_SRC sh
-echo "Script is done"
+cry "The Administration is complete."
+cry "Restart your Terminal to pick up the changes."
 #+END_SRC
 
 **** Configure
@@ -1285,9 +1272,6 @@ echo "Script is done"
   - YES: Use F keys as standard function keys
 - Complex Modifications
   - The files live in Git.
-- Virtual Keyboard
-  - ANSI
-  - Caps Lock Delay ms: 0
 - Misc
   - YES: Show icon in menu bar
 
@@ -1575,16 +1559,6 @@ brew install icoutils
 #+BEGIN_SRC sh
 brew install povray --with-openexr
 #+END_SRC
-***** growlnotify
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:B48EC513-EC86-4E9A-AFFE-97541821C458
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_53E6F73B-22D8-4269-B6CE-B39687CD8B5F
-#+BEGIN_SRC sh
-brew cask install growlnotify
-#+END_SRC
-
 ***** xmllint
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:1354D5A4-A956-4A1F-B80D-C83EBF62FD33
@@ -1629,15 +1603,6 @@ chown -R `whoami` /usr/local/share/man/de/man1
 brew install ccrypt
 #+END_SRC
 
-***** GnuPG
-:PROPERTIES:
-:ID:       org_gcr_2018-08-09T09-29-25-05-00_globigerina:EBC2DD91-E484-4CD0-B999-8D1A2D617576
-:END:
-#+name: org_gcr_2018-08-09T09-29-25-05-00_globigerina_0757D9F4-A97E-4E3D-9B66-A6EB2E270C3C
-#+begin_src sh
-brew install gnupg
-#+end_src
-
 ***** tree
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:AED8018A-5CDE-423D-83F4-CE7CB599EAE4
@@ -1667,6 +1632,14 @@ brew install archey
 brew install figlet
 #+END_SRC
 
+***** toilet
+:PROPERTIES:
+:ID:       org_gcr_2018-09-12T14-42-11-05-00_cosmicality:98F2FCDA-7FE2-4CA9-A198-2E58ABB24737
+:END:
+#+name: org_gcr_2018-09-12T08-06-00-05-00_cosmicality_6949DCFE-4E10-41D7-813A-EBF737C4AD17
+#+begin_src sh
+brew install toilet
+#+end_src
 ***** Freemind
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:D5D0EF07-E6F0-4734-9D30-BF516B8F24AA
@@ -1695,14 +1668,6 @@ brew install lame
 #+BEGIN_SRC sh
 brew install ffmpeg
 #+END_SRC
-***** VLC
-:PROPERTIES:
-:ID:       org_gcr_2017-07-30_mara:717E5624-3BB6-4F91-9117-9A6B890C62EF
-:END:
-#+NAME: org_gcr_2017-07-30_mara_7509216F-8D92-4FDF-9A5A-7CE4431B13D2
-#+BEGIN_SRC sh
-brew cask install vlc
-#+END_SRC
 ***** qpdf
 :PROPERTIES:
 :ID:       org_gcr_2017-05-16_mara:3A2A97E8-3168-4D18-A6EA-6DF4CF075791
@@ -1718,14 +1683,6 @@ brew install qpdf
 #+NAME: org_gcr_2017-06-28_mara_8AFE030D-1C5C-42DA-9435-24AF1A0D80EF
 #+BEGIN_SRC sh
 brew cask install xnviewmp
-#+END_SRC
-***** LibreOffice
-:PROPERTIES:
-:ID:       org_gcr_2017-07-28_mara:24F8C69E-D0A8-4B87-89C3-BDB07121D726
-:END:
-#+NAME: org_gcr_2017-07-28_mara_04698A6C-1A32-4C95-AEBB-F95E848376A0
-#+BEGIN_SRC sh
-brew cask install libreoffice
 #+END_SRC
 ***** rename
 :PROPERTIES:
@@ -1759,14 +1716,14 @@ brew install exiftool
 #+begin_src sh
 brew install qpdf
 #+end_src
-***** Completion
+***** Done
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:5E5BCE6B-D095-4CA0-9CC3-9A5F13EF104B
 :END:
 
 #+NAME: org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E
 #+BEGIN_SRC sh
-echo "Script is done"
+cry "Script is done"
 #+END_SRC
 
 **** Configure
@@ -1810,20 +1767,6 @@ echo "Script is done"
 :header-args: :tangle "09_internet.sh" :tangle-mode (identity #o755)
 :ID:       org_gcr_2017-05-12_mara:2EFFC60E-EBDF-45F5-9137-3A87BBA90AE3
 :END:
-***** MPlayer OSX Extended
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:4306B2C2-FA09-444C-992F-CAD6DFD0D4B5
-:END:
-#+NAME: org_gcr_2017-05-12_mara_7C4DE397-48F6-44AC-B9CD-948375915EFF
-#+begin_src sh
-if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-brew cask install mplayer-osx-extended
-else
-    echo "mplayer: Only install on hosts"
-fi
-
-#+end_src
-
 ***** Skype
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:71E38243-3DEB-4453-AE5F-FF8261F53E48
@@ -1845,7 +1788,7 @@ fi
 :END:
 
 #+NAME: org_gcr_2017-05-12_mara_9217F137-CCF7-4B66-AE32-6ED72D2D629F
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC sh
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
     brew cask install whatsapp
 else
@@ -1872,10 +1815,7 @@ fi
 :ID:       org_gcr_2017-05-12_mara:816830E8-2B96-4A43-85F8-D14BEB321D42
 :END:
 
-#+NAME: org_gcr_2017-05-12_mara_F99FAFA6-C774-4453-BCDA-F86636ADB336
-#+begin_src sh
-brew cask install google-chrome
-#+end_src
+No work to do: it is installed manually.
 
 ***** Firefox
 :PROPERTIES:
@@ -1889,15 +1829,6 @@ brew cask install firefox
 Sometimes this install fails. I checked the file download. The file exists. The
 name hasn't changed. Did a manual install instead.
 
-***** Opera
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:22B3B150-6354-4C72-84D6-4FC408679057
-:END:
-#+NAME: org_gcr_2017-05-12_mara_0A7F6745-0609-4606-B4C1-7428E64E4313
-#+begin_src sh
-brew cask install opera
-#+end_src
-
 ***** Filezilla
    :PROPERTIES:
    :ID:       org_gcr_2017-05-12_mara:CB43AE42-448D-455A-93F0-4D77BF1AFF75
@@ -1908,15 +1839,6 @@ brew cask install opera
 brew cask install filezilla
 #+end_src
 
-***** Slack
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:73DAB077-19F2-4721-8A26-E96A6E67C68B
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_22BF5CEE-DB48-45D4-9331-85B67AFE3A5D
-#+BEGIN_SRC sh
-brew cask install slack
-#+END_SRC
 ***** Kindle
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:3EDFA35C-AFFD-4BD3-9F6B-76BC9C1E1349
@@ -1988,16 +1910,6 @@ brew cask install screenflow
 brew cask install inkscape
 #+END_SRC
 
-***** gimp
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:22211052-07A8-490C-9EC4-97E2346C1343
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_86FEB8A0-A34E-4B44-BABA-BB5CE24D8655
-#+BEGIN_SRC sh
-brew cask install gimp
-#+END_SRC
-
 ***** librsvg
 :PROPERTIES:
 :ID:       org_gcr_2017-07-11_mara:150DACBC-B896-47ED-8CC2-3C9111C765DD
@@ -2024,14 +1936,6 @@ brew install jpegoptim
 #+begin_src sh
 brew install optipng
 #+end_src
-***** airy
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:EA02ED57-7DED-40F0-819A-26BE2A237C18
-:END:
-#+NAME: org_gcr_2017-05-12_mara_EE89A131-05A3-4521-B304-301F5B89A5CD
-#+BEGIN_SRC sh
-brew cask install airy
-#+END_SRC
 ***** Deluge
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:18D1C673-E863-4141-A02F-A986A609627F
@@ -2057,14 +1961,6 @@ brew install speedtest_cli
 #+BEGIN_SRC sh
 brew cask install gmvault
 #+END_SRC
-***** youtube-dl
-:PROPERTIES:
-:ID:       org_gcr_2017-09-04_mara:A7056C12-8B08-49A1-B8C3-BE02C864A03E
-:END:
-#+NAME: org_gcr_2017-09-04_mara_A5554AFF-B9FC-4139-945C-A7337F4DB79F
-#+BEGIN_SRC sh
-brew install youtube-dl
-#+END_SRC
 ***** SoX
 :PROPERTIES:
 :ID:       org_gcr_2017-09-12_mara:D9FCD17E-D25F-46DC-977D-372D7CF416D4
@@ -2072,14 +1968,6 @@ brew install youtube-dl
 #+NAME: org_gcr_2017-09-12_mara_B3515604-B02B-4A5B-9E5A-388E999A26B7
 #+BEGIN_SRC sh
 brew install sox --with-lame
-#+END_SRC
-***** Deluge
-:PROPERTIES:
-:ID:       org_gcr_2017-10-15_mara:3D744F86-E913-45AC-A3A6-7581A7D63D98
-:END:
-#+NAME: org_gcr_2017-10-15_mara_56428EA5-AAEE-4E56-9A48-18EB1CE2742E
-#+BEGIN_SRC sh
-brew cask install deluge
 #+END_SRC
 ***** audio
 :PROPERTIES:
@@ -2117,12 +2005,6 @@ brew install rsync
 
 #+NAME: org_gcr_2017-05-12_mara_AB15F22E-D841-45AA-86A4-C61FB1486D29
 #+BEGIN_SRC org
-,* MPlayer OSX Extended
-
-- Run it
-- [[http://www.sample-videos.com/][Test it]]
-- Volume works?
-
 ,* Skype
 
 ,*Only install on hosts*
@@ -2152,20 +2034,9 @@ brew install rsync
   - NoScript
 - Log into gmail
 
-,* Opera
-
-- Run it
-- Log into gmail
-
 ,* FileZilla
 
 - Set up Filezilla for WnW
-
-,* Slack
-
-- Join
-  - livecodepublic
-  - milwaukee
 
 ,* Kindle
 
@@ -2174,11 +2045,6 @@ brew install rsync
 ,* Screenflow
 
 - Register
-
-,* Airy
-
-- Register
-- Configure default download path
 
 ,* Deluge
 - Start on login
@@ -2227,58 +2093,6 @@ else
 fi
 #+END_SRC
 
-***** VirtualBox
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:F7D116DF-9C6D-4B2E-9EA5-0F188A7D9532
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_FBFF1A68-5361-46F9-8B29-F566DE748DD0
-#+BEGIN_SRC sh
-if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install virtualbox
-    brew cask install virtualbox-extension-pack
-
-else
-    echo "virtualbox: Only install on hosts"
-fi
-#+END_SRC
-***** Vagrant
-    :PROPERTIES:
-    :ID:       org_gcr_2017-05-12_mara:4A9D0CD3-67D3-401C-9D5C-F92704E181EA
-    :END:
-
-#+NAME: org_gcr_2017-05-12_mara_C9473DCC-226B-4291-86E7-5707B3F034AB
-#+begin_src sh
-if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install vagrant
-else
-    echo "vagrant: Only install on hosts"
-fi
-
-#+end_src
-***** Packer
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:2001FA87-AD28-4292-BF7F-3BABA99FB64F
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_945C5784-810A-4C4B-90E6-FADC7453E54A
-#+begin_src sh
-if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install packer
-else
-    echo "packer: Only install on hosts"
-fi
-
-#+end_src
-
-***** Docker
-:PROPERTIES:
-:ID:       org_gcr_2017-09-07_mara:C3B19B7A-F99A-45D3-932B-ACA319F1AE54
-:END:
-#+NAME: org_gcr_2017-09-07_mara_9B33A7A7-CC1C-451C-A020-E4B0CFD002F1
-#+BEGIN_SRC sh
-brew cask install docker-toolbox
-#+END_SRC
 ***** iPartition
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:1A8F1A7B-BF7C-4831-9CC7-D74A89A86B9D
@@ -2345,28 +2159,6 @@ brew install terraform-provisioner-ansible
 ,*Only install on hosts*
 
 - On a host: License it
-
-,* Vagrant
-
-Test out VirtualBox box:
-
-,#+begin_src sh
-cd ~/tmp
-mkdir vgtest
-cd vgtest
-vagrant init hashicorp/precise64
-,#+end_src
-
-Test out VirtualBox.
-
-,#+begin_src sh
-cd ~/tmp/vgtest
-vagrant up
-,#+end_src
-
-,* Packer
-
-- Nothing at this time
 
 ,* iPartition
 
@@ -2453,26 +2245,6 @@ pip2.7 install yamllint
 veof
 cd ~/
 #+END_SRC
-***** Perl
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:EF517B67-415B-48B7-B218-323671B8E0BC
-:END:
-
-- Get the [[https://www.perl.org/get.html][latest Perl]] via [[https://perlbrew.pl/][PerlBrew]]
-- Verify you are using the latest
-- Install CPANM because it works better with PerlBrewl
-- Install [[http://search.cpan.org/~sburke/Text-Unidecode-1.27/lib/Text/Unidecode.pm][Unidecode]] for ASCII'fication
-
-#+NAME: org_gcr_2017-05-12_mara_D02A1D1B-25D6-4D30-9D81-6E1F3E59AC20
-#+BEGIN_SRC sh
-curl -L https://install.perlbrew.pl | bash
-~/perl5/perlbrew/bin/perlbrew install perl-5.24.0
-perl -v
-~/perl5/perlbrew/bin/perlbrew switch perl-5.24.0
-perl -v
-perlbrew install-cpanm
-cpanm install Text::Unidecode
-#+END_SRC
 ***** Ruby
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:378DED14-EB2C-440C-AC4F-B52F10A988B2
@@ -2483,14 +2255,6 @@ Manage multiple versions.
 #+NAME: org_gcr_2017-05-12_mara_CB12AE91-2573-4886-85B1-56F2EA62062E
 #+BEGIN_SRC sh
 brew install rbenv
-#+END_SRC
-***** Chez Scheme
-:PROPERTIES:
-:ID:       org_gcr_2017-07-13_mara:CAFBD055-E6BC-4948-88E1-30003163281F
-:END:
-#+NAME: org_gcr_2017-07-13_mara_1E3E6EF0-544C-4903-A64D-322223B3309C
-#+BEGIN_SRC sh
-brew install chezscheme
 #+END_SRC
 ***** Racket
 :PROPERTIES:
@@ -2528,8 +2292,6 @@ brew install node
 #+NAME: org_gcr_2017-05-12_mara_FF9AFF4C-BF99-4553-BECC-1C176C8FE4A3
 #+BEGIN_SRC sh
 npm install -g jshint
-rm ~/.jshintrc
-ln -s ~/src/help/.jshintrc ~/.jshintrc
 #+END_SRC
 
 ***** GNU APL
@@ -2568,7 +2330,6 @@ alias emacs="open /usr/local/opt/emacs-mac/Emacs.app --new --args $1"
 #+BEGIN_SRC sh
 brew install emacs \
      --with-cocoa \
-     --with-gnutls \
      --with-imagemagick@6 \
      --with-librsvg \
      --with-mailutils \
@@ -2597,77 +2358,6 @@ brew install gox
 brew cask install sourcetree
 #+end_src
 
-***** sml
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:A2C9101B-DA57-42F9-A119-FD75611FF285
-:END:
-#+NAME: org_gcr_2017-05-12_mara_50F9FD2F-2906-41A7-A3F0-62E57D784594
-#+BEGIN_SRC sh
-brew install smlnj
-#+END_SRC
-***** OCaml
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:BDE8DD3A-47A8-446D-99C6-D808D1F3003C
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_1CA17E50-8BCC-43A2-99C3-A3052FF3B262
-#+BEGIN_SRC sh
-brew install ocaml
-brew install opam
-#+END_SRC
-
-***** Mono & F#
-:PROPERTIES:
-:ID:       org_gcr_2017-08-10_mara:1D2F00AF-3A76-4B21-9113-3B5B642ED839
-:END:
-#+NAME: org_gcr_2017-08-10_mara_BF5AB863-0D25-4ADA-8D7A-B324AF8E4096
-#+BEGIN_SRC sh
-brew install mono
-#+END_SRC
-***** Haskell
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:2CAF6CDB-37C4-48C9-94E2-4B50C408C63F
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_421506C6-DA2D-49F8-9615-485DD7E2CAEF
-#+BEGIN_SRC sh
-brew cask install haskell-platform
-#+END_SRC
-
-***** Squeak
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:A083BE24-AECA-4F42-A84C-0C610BFFC298
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_FB0EF355-80E7-4CC1-BCE5-4DB157B15F6F
-#+BEGIN_SRC sh
-brew cask install squeak
-#+END_SRC
-
-***** cvs
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:EA73C3FD-98B6-4B85-80E4-07F5A8287168
-:END:
-#+NAME: org_gcr_2017-05-12_mara_C9E429BB-EA4B-4164-953F-B6228F3D660A
-#+BEGIN_SRC sh
-brew install cvs
-#+END_SRC
-***** bzr
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:FDDE0FB5-AFEB-4B10-8E46-97E868F5671C
-:END:
-#+NAME: org_gcr_2017-05-12_mara_2C9CC44F-3EC7-4744-8AA7-2EE4EFCFCA4D
-#+BEGIN_SRC sh
-brew install bzr
-#+END_SRC
-***** mercurial
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:E36E4CA3-60C9-4FEA-871E-148567146CC1
-:END:
-#+NAME: org_gcr_2017-05-12_mara_3BA20AD2-3D13-4738-84BC-D83FA092E32E
-#+BEGIN_SRC sh
-brew install hg
-#+END_SRC
 ***** IntelliJ Idea
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:4E0FDDE1-7A40-4ADC-9A90-422BB4F85086
@@ -2710,16 +2400,6 @@ brew cask install rstudio
 #+BEGIN_SRC sh
 brew cask install dash
 #+END_SRC
-***** glpk
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:EF04F7CE-5263-4D0D-9B1D-CD61550F8D77
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_D19983EF-ED98-425B-8485-EC2E5E682DA1
-#+BEGIN_SRC sh
-brew tap homebrew/science
-brew install glpk
-#+END_SRC
 ***** The Silver Searcher
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:18F2F041-0A02-441D-A69A-46428C49A5F2
@@ -2745,48 +2425,6 @@ brew install shellcheck
 #+NAME: org_gcr_2017-09-07_mara_A2CEC35D-5F40-4568-8057-C791E34B7E8F
 #+BEGIN_SRC sh
 brew install make
-#+END_SRC
-***** MySQL
-:PROPERTIES:
-:ID:       org_gcr_2017-10-23_mara:82D63748-CFAD-42C2-87B0-26EE38C18142
-:END:
-#+NAME: org_gcr_2017-10-23_mara_BDE68F57-EB90-499A-ADF8-2EEEC572D80E
-#+BEGIN_SRC sh
-brew install mysql
-#+END_SRC
-
-Unlock the root account via [[https://gist.github.com/fallwith/987731][here]].
-
-#+NAME: org_gcr_2017-10-23_mara_E47288C8-656E-4E5C-94F9-973FF271CA0F
-#+BEGIN_SRC sql :tangle no
-mysql.server restart --skip-grant-tables
-#+END_SRC
-
-Set root password.
-
-#+NAME: org_gcr_2017-10-23_mara_1B8DE431-0C29-428B-94DA-58718F0CDF36
-#+BEGIN_SRC sql :tangle no
-UPDATE mysql.user
-    SET authentication_string = PASSWORD('root'), password_expired = 'N'
-    WHERE User = 'root' AND Host = 'localhost';
-FLUSH PRIVILEGES;
-#+END_SRC
-
-***** MAMP
-:PROPERTIES:
-:ID:       org_gcr_2017-10-23_mara:AC6B50EC-F2DA-4886-8375-A0432CBC553E
-:END:
-#+NAME: org_gcr_2017-10-23_mara_D6B1A43E-FECE-4122-A5D7-D79B923409A0
-#+BEGIN_SRC sh
-brew cask install mamp
-#+END_SRC
-***** sequel-pro
-:PROPERTIES:
-:ID:       org_gcr_2017-10-23_mara:F2F8B08D-FFD6-4557-BF90-FEE01179A8E3
-:END:
-#+NAME: org_gcr_2017-10-23_mara_EB19B642-F0A4-465A-8AE1-372533560289
-#+BEGIN_SRC sh
-brew cask install sequel-pro
 #+END_SRC
 ***** make
 :PROPERTIES:
@@ -2911,18 +2549,6 @@ cd ~/
 ,* WebStorm
 - Same configuration as PyCharm
 
-,* XCode
-
-- Preferences
-  - Downloads
-    - Components (Document things that I installed)
-    - Documentation (Document things that I installed)
-      - iOS 9.2 Documentation
-      - OS X 10.11.2 Documentation
-      - XCode 7.2 Documentation
-    - Stand alone checkbox
-      - No: Check for and install updates automatically
-
 ,* The Silver Searcher
 
 - NA
@@ -2995,6 +2621,11 @@ Steps:
 :ID:       org_gcr_2018-06-30T12-27-18-05-00_mara:B17532CA-F96A-42E2-AA86-55E96194A2F5
 :END:
 - https://www.unicode.org/policies/lastresortfont_eula.html
+***** Rest
+:PROPERTIES:
+:ID:       org_gcr_2018-09-12T14-42-11-05-00_cosmicality:D5BAA0EC-8F76-4B61-B288-86744CE810F1
+:END:
+- [[https://octicons.github.com/][Octicons]]
 **** iTunes
 :PROPERTIES:
 :ID:       org_gcr_2017-11-01_mara:BF7BA256-70D0-421E-A5B5-0F5568FFAB6F
@@ -3029,6 +2660,7 @@ Steps:
   - Copy files into it when adding
   - Share iTunes library XML
   - Keep miniplayer on top
+
 **** PDFPenPro
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:23E72876-924E-4844-86F8-3CF2837C6217
@@ -3071,6 +2703,7 @@ install it myself?
 
 #+NAME: org_gcr_2018-05-13T21-25-21-05-00_mara_C7215412-09C0-4128-A234-1BE1A468EEBD
 #+BEGIN_SRC org
+,* MS Office For Mac
 - Start it.
 - It asks for your name.
 - It asks about updates and stuff.
@@ -3452,6 +3085,53 @@ Server properties:
   - Show when secondary display is connected? YES
   - Allow accessibility features? YES
 #+end_src
+**** TeX
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:A0004B01-D7F4-4D4B-A42B-2F20B77D6A0B
+:END:
+***** Install
+:PROPERTIES:
+:header-args: :tangle "19_tex.sh" :tangle-mode (identity #o755)
+:ID:       org_gcr_2017-05-12_mara:2A39BC8B-0B60-452B-ACBC-CDDDF633D831
+:END:
+****** MacTeX
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:8C2DD58B-618C-40BF-8B38-077A88A0F9A7
+:END:
+
+Use MacTex-2016.
+***** Configure
+:PROPERTIES:
+:header-args: :tangle "20_tex.org"
+:ID:       org_gcr_2017-05-12_mara:0A2236B2-F4E9-441C-80F7-85FE07754863
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_2A49F260-75C7-4AFF-B789-F83BD9FB83D9
+#+BEGIN_SRC org
+- I value seeing these commands succeed so pasting them is OK
+- MacTeX installation is typically so painful that I want this part to be easy
+
+Set up my TeX stuff for KOMA-script. Backup the default configuration first.
+
+,#+begin_src sh
+ls /usr/local/texlive/2016
+sudo cp /usr/local/texlive/2016/texmf.cnf /usr/local/texlive/2016/texmf.cnf-`date '+%Y_%m_%d__%H_%M_%S'`
+ls /usr/local/texlive/2018
+sudo tlmgr conf texmf TEXMFHOME ~/git/gitlab/texmf/
+,#+end_src
+
+Check that the path is really updated.
+
+,#+begin_src sh
+kpsewhich KomaDefault.lco
+,#+end_src
+
+The documents say to maybe do the following. I did it.
+
+,#+begin_src sh
+sudo mktexlsr
+,#+end_src
+#+END_SRC
 *** SSH and Git
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:52BA0225-96A9-4A56-B130-4A43FDF25DA1
@@ -3657,6 +3337,7 @@ git clone github-`whoami`:grettke/recursive-git-status-bash.git
 cd ~/git/github-anonymous
 git clone https://github.com/encharm/Font-Awesome-SVG-PNG
 git clone https://github.com/dwyl/english-words.git
+git clone https://github.com/manute/gorepl-mode.git
 #+end_src
 
 At this point, the Bash initialization files point at the directory with my
@@ -3665,8 +3346,10 @@ automate this part yet.
 
 #+NAME: org_gcr_2017-05-12_mara_300013CB-D6E2-414E-9FBF-68D4581D971C
 #+begin_src sh
-rm -rf ~/src
-mkdir ~/src
+rm ~/src
+rm -rf ~/git/src
+mkdir -p ~/git/src
+ln -s ~/git/src ~/src
 cd ~/src
 git clone github-`whoami`:grettke/help.git
 rm ~/.emacs.el
@@ -3678,7 +3361,54 @@ mkdir ~/src/.emacs.d
 cd ~/src/.emacs.d
 git clone gitlab-`whoami`:grettke/dotemacsdotd.git .
 ln -s ~/src/.emacs.d ~/.emacs.d
+mv ~/.emacs.d/eshell ~/.emacs.d/eshell.copy
 ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
+rm ~/.jshintrc
+ln -s ~/src/help/.jshintrc ~/.jshintrc
+#+end_src
+
+Get everything else that lives in =src=.
+
+#+name: org_gcr_2018-09-12T14-42-11-05-00_cosmicality_449B2EDF-1F14-4E08-B9F4-9469A71B9EE7
+#+begin_src sh
+rm -rf ~/src/xml-rpc-el
+rm -rf ~/src/metaweblog
+rm -rf ~/src/org2blog
+rm -rf ~/src/pretty-mode
+rm -rf ~/src/use-package
+rm -rf ~/src/reveal.js
+rm -rf ~/src/go-hydra
+rm -rf ~/src/emacs-batteries-included
+rm -rf ~/src/solarized-emacs
+rm -rf ~/src/auto-capitalize
+rm -rf ~/src/corporate-bs-generator
+rm -rf ~/src/org-utf-to-xetex
+cd ~/src
+git clone github-`whoami`:grettke/xml-rpc-el.git
+git clone github-`whoami`:org2blog/metaweblog.git
+git clone github-`whoami`:org2blog/org2blog.git
+git clone github-`whoami`:grettke/pretty-mode.git
+git clone https://github.com/jwiegley/use-package.git
+git clone https://github.com/hakimel/reveal.js.git
+git clone gitlab-`whoami`:grettke/go-hydra.git
+git clone github-`whoami`:grettke/emacs-batteries-included.git
+git clone github-`whoami`:grettke/solarized-emacs.git
+git clone github-`whoami`:grettke/corporate-bs-generator.git
+git clone github-`whoami`:grettke/org-utf-to-xetex.git
+git clone https://github.com/yuutayamada/auto-capitalize-el.git auto-capitalize
+
+#+end_src
+
+iTunes.
+
+#+name: org_gcr_2018-09-12T14-42-11-05-00_cosmicality_B7FE7813-593B-40D3-B3F8-BE15B898D81D
+#+begin_src sh :tangle no
+rm -rf ~/Music/iTunes
+rm ~/Music/iTunes
+cd ~/git/gitlab
+rm -rf ./iTunes
+git clone gitlab-`whoami`:grettke/iTunes.git
+ln -s ~/git/gitlab/iTunes ~/Music/iTunes
 #+end_src
 
 Set up =util= scripts.
@@ -3705,103 +3435,15 @@ cd
 
 #+NAME: org_gcr_2017-05-12_mara_9ED0592E-A409-4049-BD98-DD5151723C1A
 #+BEGIN_SRC sh
-rm -rf ~/src/xml-rpc-el
-rm -rf ~/src/metaweblog
 rm -rf ~/src/org-mode
-rm -rf ~/src/org2blog
-rm -rf ~/src/pretty-mode
-rm -rf ~/src/use-package
-rm -rf ~/src/reveal.js
-rm -rf ~/src/go-hydra
-rm -rf ~/src/emacs-batteries-included
-rm -rf ~/src/solarized-emacs
-rm -rf ~/src/auto-capitalize
 cd ~/src
 echo `date +%Y-%m-%dT%H:%M:%S%z`
-git clone git://orgmode.org/org-mode.git
+git clone git@code.orgmode.org:bzg/org-mode.git
 echo `date +%Y-%m-%dT%H:%M:%S%z`
 cd org-mode
 make autoloads
-cd ~/src
-git clone github-`whoami`:grettke/xml-rpc-el.git
-git clone github-`whoami`:org2blog/metaweblog.git
-git clone github-`whoami`:org2blog/org2blog.git
-git clone github-`whoami`:grettke/pretty-mode.git
-git clone https://github.com/jwiegley/use-package.git
-git clone https://github.com/hakimel/reveal.js.git
-git clone gitlab-`whoami`:grettke/go-hydra.git
-git clone github-`whoami`:grettke/emacs-batteries-included.git
-git clone github-`whoami`:grettke/solarized-emacs.git
-git clone github-`whoami`:grettke/corporate-bs-generator.git
-git clone https://github.com/yuutayamada/auto-capitalize-el.git auto-capitalize
 #+END_SRC
 
-*** TeX
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:A0004B01-D7F4-4D4B-A42B-2F20B77D6A0B
-:END:
-**** Install
-:PROPERTIES:
-:header-args: :tangle "19_tex.sh" :tangle-mode (identity #o755)
-:ID:       org_gcr_2017-05-12_mara:2A39BC8B-0B60-452B-ACBC-CDDDF633D831
-:END:
-***** MacTeX
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:8C2DD58B-618C-40BF-8B38-077A88A0F9A7
-:END:
-
-Configuration comes at the end after my Git stuff is set up.
-
-Download speed varies wildly.
-
-#+NAME: org_gcr_2017-05-12_mara_7318ED66-78D7-4039-AF96-2A82F97AF128
-#+BEGIN_SRC sh
-brew cask install mactex
-#+END_SRC
-***** GnuPlot
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:CCB28FDC-25DD-41C0-97D1-09A01BCA2DB7
-:END:
-
-Must install TeX before GNUPlot.
-
-#+NAME: org_gcr_2017-05-12_mara_9D1833A5-9B40-441E-A279-9D72E9173D8F
-#+BEGIN_SRC sh
-brew install lua
-brew install gnuplot --with-tex --with-pdflib-lite --with-test --with-x11
-#+END_SRC
-**** Configure
-:PROPERTIES:
-:header-args: :tangle "20_tex.org"
-:ID:       org_gcr_2017-05-12_mara:0A2236B2-F4E9-441C-80F7-85FE07754863
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_2A49F260-75C7-4AFF-B789-F83BD9FB83D9
-#+BEGIN_SRC org
-- I value seeing these commands succeed so pasting them is OK
-- MacTeX installation is typically so painful that I want this part to be easy
-
-Set up my TeX stuff for KOMA-script. Backup the default configuration first.
-
-,#+begin_src sh
-ls /usr/local/texlive/2016
-sudo cp /usr/local/texlive/2016/texmf.cnf /usr/local/texlive/2016/texmf.cnf-`date '+%Y_%m_%d__%H_%M_%S'`
-ls /usr/local/texlive/2016
-sudo tlmgr conf texmf TEXMFHOME ~/git/gitlab/texmf/
-,#+end_src
-
-Check that the path is really updated.
-
-,#+begin_src sh
-kpsewhich KomaDefault.lco
-,#+end_src
-
-The documents say to maybe do the following. I did it.
-
-,#+begin_src sh
-sudo mktexlsr
-,#+end_src
-#+END_SRC
 ** Testing
 :PROPERTIES:
 :header-args: :tangle "21_testing.org"
