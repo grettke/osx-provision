@@ -1467,6 +1467,8 @@ Granting:
 :header-args: :tangle "07_utility.sh" :tangle-mode (identity #o755)
 :ID:       org_gcr_2017-05-12_mara:BCFD071A-6190-4994-AE01-93AA24ECB90C
 :END:
+Some packages appear here in Utility because they are required to use Utility
+features.
 ***** Java
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:2FCB25A5-62E9-4414-88AC-F64791853046
