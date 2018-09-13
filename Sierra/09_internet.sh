@@ -14,6 +14,10 @@ else
 fi
 # org_gcr_2017-05-12_mara_9CDCD936-A30A-4712-8A5F-780D8810FBDE ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-12T23-47-05-05-00_ggg_2AFE0225-5CDE-468C-ABAA-31B1B7D9D1B5][org_gcr_2018-09-12T23-47-05-05-00_ggg_2AFE0225-5CDE-468C-ABAA-31B1B7D9D1B5]]
+brew cask install pulse-sms
+# org_gcr_2018-09-12T23-47-05-05-00_ggg_2AFE0225-5CDE-468C-ABAA-31B1B7D9D1B5 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_9217F137-CCF7-4B66-AE32-6ED72D2D629F][org_gcr_2017-05-12_mara_9217F137-CCF7-4B66-AE32-6ED72D2D629F]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
   brew cask install whatsapp

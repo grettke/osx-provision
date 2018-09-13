@@ -1800,6 +1800,14 @@ else
 fi
 #+END_SRC
 
+***** Pulse Messenger
+:PROPERTIES:
+:ID:       org_gcr_2018-09-12T23-47-05-05-00_ggg:4F3EC267-66CE-4DC6-99EF-B35B674A9533
+:END:
+#+name: org_gcr_2018-09-12T23-47-05-05-00_ggg_2AFE0225-5CDE-468C-ABAA-31B1B7D9D1B5
+#+begin_src sh
+brew cask install pulse-sms
+#+end_src
 ***** WhatsApp
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:0E29C1F1-F01E-4E7F-B621-E1BC785A6F47
@@ -2853,15 +2861,6 @@ Set Dictation & Text to Speech to: Callie
 
 Install the [[http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=229&pcid=41][PL2303 Driver]].
 
-**** Pulse Messenger
-:PROPERTIES:
-:ID:       org_gcr_2018-01-25_mara:9376AA6E-6BBF-465B-A6D6-A27376F563A5
-:END:
-#+NAME: org_gcr_2018-01-25_mara_8E2F6C65-8C83-4C2D-BB90-072429524A4C
-#+BEGIN_SRC org
-,* Pulse Messenger
-- Install and register
-#+END_SRC
 **** Gramps
 :PROPERTIES:
 :ID:       org_gcr_2018-02-24_mara:4B00917C-29D0-42E0-86D3-F35E086DDF15

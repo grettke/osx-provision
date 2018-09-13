@@ -88,11 +88,6 @@ Set Dictation & Text to Speech to: Callie
 - NA
 # org_gcr_2017-05-12_mara_0EB14936-F6A7-4785-9489-D9A333392078 ends here
 
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-01-25_mara_8E2F6C65-8C83-4C2D-BB90-072429524A4C][org_gcr_2018-01-25_mara_8E2F6C65-8C83-4C2D-BB90-072429524A4C]]
-* Pulse Messenger
-- Install and register
-# org_gcr_2018-01-25_mara_8E2F6C65-8C83-4C2D-BB90-072429524A4C ends here
-
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_1B6FE230-CEF8-4977-A3F9-A70EE5E1A39B][org_gcr_2017-05-12_mara_1B6FE230-CEF8-4977-A3F9-A70EE5E1A39B]]
 * Debtinator
 
