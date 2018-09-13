@@ -8,8 +8,9 @@
 :ID:       org_gcr_2017-05-12_mara:D301EB59-864A-43EB-B574-D285BFAE157C
 :END:
 
-- *Start* with a local copy of this repository either by downloading it in a ZIP
-  file or pulling it with Git
+- *Start*
+  - If you've got an Internet connection then access the steps online
+  - Otherwise find one beforehand and download it in a ZIP file or pull it with Git
 - ~Steps~ implements provisioning
   - ORG files are manual steps
   - SH files are shell scripts which may require human input
@@ -19,7 +20,9 @@
     without forgetting where you are and what you were doing
     - For example you might run the script to install \TeX overnight and
       configure it a day later
+  - Most of the configuration steps can be completed just in time when you use the app
 - ~Testing~ tells you if it worked
+- Install system updates whenever you feel like it
 - Only read this document for
   - An explanation of the provisioning steps
   - Reference
@@ -2593,6 +2596,18 @@ Steps:
 :header-args: :tangle "15_manual.org"
 :ID:       org_gcr_2017-05-12_mara:BB9E3D7F-B9C2-4545-BE21-D612B37CFED2
 :END:
+**** cron
+#+name: org_gcr_2018-09-12T15-56-53-05-00_cosmicality_B0DEB0C2-6D87-4FC8-8E94-877CB64CE730
+#+begin_src sh :tangle no
+SHELL=/usr/local/bin/bash
+BASH_ENV=$HOME/.bash_global_non_interactive
+MAILTO=''
+# min   hour    day     month   day-of-week command
+#(0-59) (0-23)  (1-31)  (1-12)  (0-6)
+#------------------------------------------------------------
+,*/30       *       *       *       *           $HOME/util/announcetime >> $HOME/.out 2>&1
+,*/45       7,19    *       *       *           $HOME/util/twicedaily >> $HOME/.out 2>&1
+#+end_src
 **** Font By Language
 :PROPERTIES:
 :ID:       org_gcr_2018-06-02T18-25-17-05-00_mara:812F2418-645B-4149-A4E0-0792B670DA02
@@ -3114,8 +3129,8 @@ Use MacTex-2016.
 Set up my TeX stuff for KOMA-script. Backup the default configuration first.
 
 ,#+begin_src sh
-ls /usr/local/texlive/2016
-sudo cp /usr/local/texlive/2016/texmf.cnf /usr/local/texlive/2016/texmf.cnf-`date '+%Y_%m_%d__%H_%M_%S'`
+ls /usr/local/texlive/2018
+sudo cp /usr/local/texlive/2018/texmf.cnf /usr/local/texlive/2018/texmf.cnf-`date '+%Y_%m_%d__%H_%M_%S'`
 ls /usr/local/texlive/2018
 sudo tlmgr conf texmf TEXMFHOME ~/git/gitlab/texmf/
 ,#+end_src
@@ -3383,6 +3398,7 @@ rm -rf ~/src/solarized-emacs
 rm -rf ~/src/auto-capitalize
 rm -rf ~/src/corporate-bs-generator
 rm -rf ~/src/org-utf-to-xetex
+rm -rf ~/src/universal-emotions-emoticons.git
 cd ~/src
 git clone github-`whoami`:grettke/xml-rpc-el.git
 git clone github-`whoami`:org2blog/metaweblog.git
@@ -3395,6 +3411,7 @@ git clone github-`whoami`:grettke/emacs-batteries-included.git
 git clone github-`whoami`:grettke/solarized-emacs.git
 git clone github-`whoami`:grettke/corporate-bs-generator.git
 git clone github-`whoami`:grettke/org-utf-to-xetex.git
+git clone github-`whoami`:grettke/universal-emotions-emoticons.git
 git clone https://github.com/yuutayamada/auto-capitalize-el.git auto-capitalize
 
 #+end_src
@@ -3415,12 +3432,11 @@ Set up =util= scripts.
 
 #+NAME: org_gcr_2017-06-18_mara_4833AB48-1C15-4E4E-A767-F2711FFDAAE5
 #+BEGIN_SRC sh
-cd ~/src
-rm -rf util
-git clone gitlab-`whoami`:grettke/util.git
 rm ~/util || true
+cd ~/src
+rm -rf ./util
+git clone gitlab-`whoami`:grettke/util.git
 ln -s ~/src/util ~/util
-cd
 #+END_SRC
 
 *** Org-Mode
