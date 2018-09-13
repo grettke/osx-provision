@@ -865,8 +865,8 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 #+NAME: org_gcr_2017-05-12_mara_4C582518-39DC-4D1A-BB0C-5499B4CA78D3
 #+BEGIN_SRC sh
-cry "Script complete"
-cry "Log out then back in to see changes "
+echo "Script complete"
+echo "Log out then back in to see changes"
 #+END_SRC
 
 *** Administration
