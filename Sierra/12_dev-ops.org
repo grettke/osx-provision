@@ -1,0 +1,36 @@
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_F8442214-41F6-4F42-9B5C-B4BBDF9A840A][org_gcr_2017-05-12_mara_F8442214-41F6-4F42-9B5C-B4BBDF9A840A]]
+* Carbon Copy Cloner
+
+*Only install on hosts*
+
+- Steps
+  - Install version 4
+  - License it
+  - Preferences \rarr Notifications \rarr Show CCC icon in the menu bar
+- Application Configuration
+  - Mirror the storage partition
+    - Identify and drag \rarr storage partition
+    - Identify and drag \rarr destination partition
+    - Schedule the task
+      - Daily
+      - 5:30pm
+      - Defer to other writers
+      - If the external is not mounted then run it when it returns
+    - Before this task runs
+      - Pull Git repos
+  - Mirror the boot partition
+    - Identify and drag \rarr boot partition
+    - Identify and drag \rarr destination partition
+    - Save it
+    - Modify the storage backup task to run /this/ task upon completion
+
+* VMWare
+
+*Only install on hosts*
+
+- On a host: License it
+
+* iPartition
+
+- License it
+# org_gcr_2017-05-12_mara_F8442214-41F6-4F42-9B5C-B4BBDF9A840A ends here

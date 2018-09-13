@@ -1,0 +1,235 @@
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-05-13T21-25-21-05-00_mara_C7215412-09C0-4128-A234-1BE1A468EEBD][org_gcr_2018-05-13T21-25-21-05-00_mara_C7215412-09C0-4128-A234-1BE1A468EEBD]]
+* MS Office For Mac
+- Start it.
+- It asks for your name.
+- It asks about updates and stuff.
+  - Get them all.
+  - Take 3-5 iterations
+- When activation occurs, the app always locks up then I quit it and it
+  restarts after sending an error report. It works after that.
+- When it checks for updates, tell it to check daily.
+- Configure
+  - Save
+    - Save AutoRecover information after this number of minutes: 1
+# org_gcr_2018-05-13T21-25-21-05-00_mara_C7215412-09C0-4128-A234-1BE1A468EEBD ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_A11DCB72-72E4-4B80-BF0C-D56FF6866E72][org_gcr_2017-05-12_mara_A11DCB72-72E4-4B80-BF0C-D56FF6866E72]]
+* Visible Body
+
+- Human Anatomy Atlas
+- Muscle Premium
+- Skeleton Premium
+- License key
+  - Copy directory from the email
+  - Tried printing to pdf or saving to a file and copying from that and neither
+    work
+  - Need to copy from their into an Org document and try that
+# org_gcr_2017-05-12_mara_A11DCB72-72E4-4B80-BF0C-D56FF6866E72 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_346129DB-CC0F-42DC-B5AE-5892008D4A67][org_gcr_2017-05-12_mara_346129DB-CC0F-42DC-B5AE-5892008D4A67]]
+* Entropy
+
+- [[http://www.eigenlogik.com/entropy/][Download]]
+- Install
+- License
+- Open all zip files with Entropy
+  - Find a zip file, Get Info, Open With, Entropy, Change All
+# org_gcr_2017-05-12_mara_346129DB-CC0F-42DC-B5AE-5892008D4A67 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_2E5C8692-189B-4125-B22F-62149679A0C2][org_gcr_2017-05-12_mara_2E5C8692-189B-4125-B22F-62149679A0C2]]
+* Guitar Pro
+
+- [[http://www.guitar-pro.com/en/index.php][Here]]. Sign into MySongBook.
+# org_gcr_2017-05-12_mara_2E5C8692-189B-4125-B22F-62149679A0C2 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_F641981A-9788-46E2-BF9B-76E509A8E995][org_gcr_2017-05-12_mara_F641981A-9788-46E2-BF9B-76E509A8E995]]
+* Cepestral Callie & David
+
+[[http://www.cepstral.com/][Here]].
+
+You might need to log out and in again to make the "Cepstral Voices" appear in
+System Preferences.
+
+License them. Test them.
+
+Set Dictation & Text to Speech to: Callie
+# org_gcr_2017-05-12_mara_F641981A-9788-46E2-BF9B-76E509A8E995 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_109E2C96-0F9D-4F4A-841A-AF15C1F93D8D][org_gcr_2017-05-12_mara_109E2C96-0F9D-4F4A-841A-AF15C1F93D8D]]
+* Pushbullet
+
+- Sign in, it is a web app
+- Allow contact access
+- Install into Chrome, choose it
+- [X] Text from phone
+- [X] See notifications
+- Configure nothing else
+# org_gcr_2017-05-12_mara_109E2C96-0F9D-4F4A-841A-AF15C1F93D8D ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_8615C7A4-EE2A-4CF6-89FB-CAD6A95CC84A][org_gcr_2017-05-12_mara_8615C7A4-EE2A-4CF6-89FB-CAD6A95CC84A]]
+* Ink2Go
+
+- [[http://ink2go.org/][Here]]
+- License it
+- Preferences
+  - Keyboard Shortcuts
+    - Command-F12: Activate
+    - Command-F11: Activate+Pen
+  - Toolbar
+    - Everything enabled but
+      - Crop / Pause
+      - Record / Stop
+      - Webcam
+# org_gcr_2017-05-12_mara_8615C7A4-EE2A-4CF6-89FB-CAD6A95CC84A ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_0EB14936-F6A7-4785-9489-D9A333392078][org_gcr_2017-05-12_mara_0EB14936-F6A7-4785-9489-D9A333392078]]
+* Dyalog APL
+
+- NA
+# org_gcr_2017-05-12_mara_0EB14936-F6A7-4785-9489-D9A333392078 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-01-25_mara_8E2F6C65-8C83-4C2D-BB90-072429524A4C][org_gcr_2018-01-25_mara_8E2F6C65-8C83-4C2D-BB90-072429524A4C]]
+* Pulse Messenger
+- Install and register
+# org_gcr_2018-01-25_mara_8E2F6C65-8C83-4C2D-BB90-072429524A4C ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_1B6FE230-CEF8-4977-A3F9-A70EE5E1A39B][org_gcr_2017-05-12_mara_1B6FE230-CEF8-4977-A3F9-A70EE5E1A39B]]
+* Debtinator
+
+- NA
+# org_gcr_2017-05-12_mara_1B6FE230-CEF8-4977-A3F9-A70EE5E1A39B ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_AF9EA775-3EAC-45CE-BE38-2C2B0B0C2618][org_gcr_2017-05-12_mara_AF9EA775-3EAC-45CE-BE38-2C2B0B0C2618]]
+* Textual
+
+- AppStore.
+
+Only note changes from the current default
+
+Set up preferences:
+
+- Preferences.
+- General.
+  - YES: Save the state of queries
+- Highlights.
+- Notifications.
+- Controls.
+- Interface.
+- Style.
+  - General.
+    - Style: Equinox
+    - Font: DJSM 17
+  - Inline Media.
+    - YES: Show images inline
+- Addons.
+- Advanced.
+  - Default Identity.
+    - grettke
+    - grettke💤
+    - grettke
+    - Grant Rettke
+
+Server properties:
+
+- Basic Settings.
+  - General
+    - YES
+      - Connect when Textual opens
+      - Perform reconnect on disconnect
+      - Perform reconnent on waking from sleep
+- Identity
+  - Wait for ID before joining
+  - Enter personal password; everything else got set from main screen
+  - Do wait for identification before joining channels
+
+- Join on Freenode
+  - #org-mode
+  - #emacs
+  - #scheme
+  - #bash
+  - #apl
+# org_gcr_2017-05-12_mara_AF9EA775-3EAC-45CE-BE38-2C2B0B0C2618 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_2341C9FA-93E8-4E03-BEE3-A0A1D616F474][org_gcr_2017-05-12_mara_2341C9FA-93E8-4E03-BEE3-A0A1D616F474]]
+* Microsoft Remote Desktop
+
+- Don't open the session full-screen.
+# org_gcr_2017-05-12_mara_2341C9FA-93E8-4E03-BEE3-A0A1D616F474 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_A897EEBB-49AD-41E8-9890-AEBBDA0866B9][org_gcr_2017-05-12_mara_A897EEBB-49AD-41E8-9890-AEBBDA0866B9]]
+* Text2Speech PRO
+
+- General
+  - Preferences
+    - Voice :: Cepstral Callie
+    - Speaking Rate :: 175 w/m
+    - App check text encoding failover :: UTF-8
+    - [ ] Send file to iTunes
+# org_gcr_2017-05-12_mara_A897EEBB-49AD-41E8-9890-AEBBDA0866B9 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_CF58A1FB-5BCD-4DE3-B24A-BD5B48CEB85C][org_gcr_2017-05-12_mara_CF58A1FB-5BCD-4DE3-B24A-BD5B48CEB85C]]
+* PixelMator
+
+- NA
+# org_gcr_2017-05-12_mara_CF58A1FB-5BCD-4DE3-B24A-BD5B48CEB85C ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_1303D8AC-B192-42F3-95C1-4124F5839534][org_gcr_2017-05-12_mara_1303D8AC-B192-42F3-95C1-4124F5839534]]
+* Mousepose
+
+- Grant "accessibility" permission
+- Settings
+  - Mousepose
+    - Toggle Hotkey: Control-Escape
+    - Advanced
+      - Increase hotkey: C-2
+      - Decrease hotkey: C-1
+      - Window focus toggle: C-3
+  - Mouse Clicks
+  - Keystrokes
+    - Default is standalone
+    - Hotkey: C-4
+  - Miscellaneous
+    - When logging in: Start Mousepose
+    - Show icon in: Menu bar
+- Bartend it
+# org_gcr_2017-05-12_mara_1303D8AC-B192-42F3-95C1-4124F5839534 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_97712287-0228-4D40-9BD5-038FB9B5AB5F][org_gcr_2017-05-12_mara_97712287-0228-4D40-9BD5-038FB9B5AB5F]]
+* Webcam Settings By Mactaris
+
+- Set the white balance
+  - Hold up a bleached white piece of printer paper to the camera
+  - Balance until it is the same color on the screen
+- Enable at startup
+# org_gcr_2017-05-12_mara_97712287-0228-4D40-9BD5-038FB9B5AB5F ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_08A7BB54-05AB-4D18-A07A-32687D3F44EF][org_gcr_2017-05-12_mara_08A7BB54-05AB-4D18-A07A-32687D3F44EF]]
+* Key Codes
+
+- NA
+# org_gcr_2017-05-12_mara_08A7BB54-05AB-4D18-A07A-32687D3F44EF ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-01-23_mara_92364F01-6795-4B03-8811-D20BCB38D176][org_gcr_2018-01-23_mara_92364F01-6795-4B03-8811-D20BCB38D176]]
+* Blackmagic Disk Speed Test
+- Always use the smallest file size
+# org_gcr_2018-01-23_mara_92364F01-6795-4B03-8811-D20BCB38D176 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-04-04T12-17-23-05-00_mara_259C6998-F024-4F2E-AF69-7EAF2E656C62][org_gcr_2018-04-04T12-17-23-05-00_mara_259C6998-F024-4F2E-AF69-7EAF2E656C62]]
+* HazeOver
+- General
+  - Percent haze: 20%
+  - Enable Hazeover: YES
+  - Start at login: YES
+  - Show status on menubar: YES
+- Advanced
+  - Shortcut: C-M-s-h
+  - Background color: Black
+    Highlight: One window only
+  - Animation: 0.25s
+- Displays
+  - Choose:
+    - YES: Dim all windows on displays without keyboard focus
+    - NO: Highlight windows on displays without keyboard focus
+  - Show when secondary display is connected? YES
+  - Allow accessibility features? YES
+# org_gcr_2018-04-04T12-17-23-05-00_mara_259C6998-F024-4F2E-AF69-7EAF2E656C62 ends here

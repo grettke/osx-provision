@@ -1,0 +1,25 @@
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_CC86395C-8487-451E-AC32-A3C6ABE812B7][org_gcr_2017-05-12_mara_CC86395C-8487-451E-AC32-A3C6ABE812B7]]
+* Marked 2
+
+- License it
+- Chose "Code" profile which chooses
+  - Default style: Github
+  - Processor: Discount (GFM)
+  - Syntax Highlight Style: Github
+  - Enabled
+    - Syntax Highlighting
+    - GitHub Checkboxes
+    - MathJaxq
+- Preferences
+  - General
+    - NO Show Style Picker
+    - NO Show word count
+  - Preview
+    - YES Enable Mini Map navigation
+    - YES Show scroll progress indicator
+    - YES Automatically validate URLs on update
+  - Style
+    - Default style: GitHub
+  - Proofing
+    - YES Highlight Markdown syntax errors
+# org_gcr_2017-05-12_mara_CC86395C-8487-451E-AC32-A3C6ABE812B7 ends here

@@ -1,0 +1,187 @@
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_60B53D12-60D7-40ED-81AC-27902FE027FA][org_gcr_2017-05-12_mara_60B53D12-60D7-40ED-81AC-27902FE027FA]]
+- Action Prefix for Boxes:
+- Host :: "On the Metal"
+- Guest :: "Virtualized"
+- Re-image your box
+- During system configuration /before/ creating a user YES log into the App Store
+- Make a user
+  - Named ~gcr~
+  - Choose an avatar
+  - Allow location services
+  - Disallow user analytics reporting.
+  - Don't use location for timezone
+  - Don't allow AppleID to reset this password
+  - Don't allow Siri
+- Install software updates
+- Development Tools
+  - XCode
+    - This is optional!
+    - This step is not necessary to use the Brew stuff, the CLT provides
+      everything
+    - If you want it them go to the App Store and Install it
+    - 4.5GB download
+  - Command Line Tools (CLT)
+    - Install the CLT and let it run since only need it once you start using
+      the provsioning scripts
+    - Run this and choose *Install*.
+      #+BEGIN_SRC sh
+      xcode-select --install
+      #+END_SRC
+- Utility Scripts
+  - Mount only required volumes
+    - Clarify
+      - Spotlight suggests applications and files on those volumes and
+        you usually don't want that
+      - Applications get locks on files on non host volumes
+    - For =host1= that means =host1= and =Storage=
+    - Write a shell script and run it at logon
+      - Customize this for the install partition
+      - These scripts live in my personal =util= directory
+        #+BEGIN_SRC sh
+  #!/usr/bin/env bash
+# -*- mode: sh; -*-
+diskutil unmount /dev/disk0s3
+diskutil unmount /dev/disk0s4
+diskutil unmount /dev/disk0s6
+diskutil unmount /dev/disk0s7
+diskutil unmount /dev/disk0s8
+        #+END_SRC
+- System Preferences
+  - General: *NA*
+  - Desktop & Screensaver
+    - Desktop
+      - Black
+    - Screensaver
+      - *(Host)*: "Message", 5m
+      - *(Guest)*: "Message", 5m
+  - Dock
+    - Size: Largest
+    - Magnification: Off
+    - Position: Bottom
+    - Maximize windows using: Genie Effect
+    - Double clicking a title bar: zoom
+    - Minimize windows into application icon: Yes
+    - Animate opening apps: Yes
+    - Auto hide/show dock: Yes
+    - Show indicator for open apps: Yes
+  - Mission Control: *NA*
+  - Language & Region: *NA*
+  - Security & Privacy: *NA*
+  - Spotlight
+    - Search Results
+      - Applications
+      - Calculator
+      - Documents
+      - Folders
+      - System Preferences
+      - UN-CHECK Allow Spotlight Suggestions in Look up
+    - Privacy
+      - Big folders like DropBox or TimeMachine
+  - Notifications: *NA*
+  - Displays *(Host)* \rarr Maximize resolution
+  - Energy saver
+    - *(Host)*
+      - On power
+        - Display off at 15m
+      - On battery, Screen sleep 5m
+        - Don't slightly dim the display on battery power
+    - *(Guest)*
+      - Computer sleep: never
+  - Keyboard *(Host)*
+    - Keyboard
+      - Swap Caps Lock and Control
+    - Shortcuts
+      - Launchpad & Dock
+        - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.
+      - Mission Control
+        - Mission Control: C-9
+        - Application windows: Disable
+        - Show Desktop: C-8
+        - Show Dashboard: Disable it. I never use it.
+      - Keyboard
+        - Move focus to next window: Command-Option-TAB
+      - Screen Shots
+        - Change each one to a prefix of Control-Command-Option, plus a shift
+          - To keys 3 and 4
+      - Services
+        - Disable anything with control keybindings
+      - Accessibility: *NA*
+    - Dictation: *NA*
+  - Mouse
+    - *(Host)* Connect Bluetooth mouse
+    - Tracking Speed
+      - MBP Trackpad: 100%
+      - Anker Palm Mouse: 50%
+      - Dell Mouse: 80%
+  - Trackpad *(Host)*
+    - Point & Click
+      - Secondary click: TRUE
+      - Tap to click: TRUE
+  - Printers & Scanners *(Host)*
+    - Add printer(s)
+  - Sound
+    - Show volume in menubar
+  - iCloud: *NA*
+  - Internet Accounts: *NA*
+  - Extensions: *NA*
+  - Network: *NA*
+  - Bluetooth *(Host)*
+    - Show in menu bar
+  - Sharing: *NA*
+  - Users & Groups: Enable Guest User without Parental Controls.
+  - Parental Controls: *NA*
+  - App Store: *NA*
+  - Dictation & Speech
+    - Text 2 Speech
+      - Voice: Cepstral Preference
+      - Rate: Normal
+      - Speak selected text on key: Control-Command-Option S
+  - Date & Time: *NA*
+  - Startup Disk: *NA*
+  - Time Machine: *NA*
+  - Accessibility
+    - Display
+      - Increase contrast
+        - Automatically Reduces transparency
+      - Contrast: Normal
+      - Cursor size: 50%
+      - YES Shake mouse pointer to locate
+    - Zoom
+      - NO Use keyboard shortcuts
+      - YES Smooth images
+        - VoiceOver: *NA*
+    - Descriptions: *NA*
+    - Captions: *NA*
+    - Audio: *NA*
+    - Dictation: *NA*
+    - Keyboard: *NA*
+    - Mouse & Trackpad
+      - Trackpad Options
+        - Enable Dragging: *Without* Drag Lock
+    - Switch Control: *NA*
+  - iCloud: *NA*
+    - Should be set up but I am not using it at all
+  - SwitchResX: *NA*
+  - Tuxera NTFS: *NA*
+- *(Host)* KeyChain Access (Application)
+  - Preferences
+  - Show keychain status in menubar
+- Finder
+  - Preferences
+    - General
+      - Show nothing on the desktop
+      - New Finder windows show: Home dir
+    - Sidebar
+      - Applications
+      - Desktop
+        - Stuff gets placed there automatically sometimes
+      - Documents
+      - Downloads
+      - Home
+      - Connected servers
+      - Bonjour computers
+      - This computer
+      - Hard disks
+      - External disks
+      - CDs, DVDs, and iPods
+# org_gcr_2017-05-12_mara_60B53D12-60D7-40ED-81AC-27902FE027FA ends here

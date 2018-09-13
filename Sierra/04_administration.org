@@ -1,0 +1,18 @@
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_DE67722F-643A-460E-930A-4A9FF7270B6A][org_gcr_2017-05-12_mara_DE67722F-643A-460E-930A-4A9FF7270B6A]]
+* Terminal
+
+- Profiles
+  - Profile bar on the left
+    - Import the Solarized dark and light theme
+    - The the default theme to light
+  - Text
+    - Font: DejaVu Sans Mono: 18
+    - Cursor: block
+  - Window
+    - Yes: Working directory or document, and path
+  - Advanced
+    - No Audible bell
+    - Yes visual bell (not just when sound is muted)
+    - NO Set locale environment variables on startup
+      - Set them in your =bashrc=, not here
+# org_gcr_2017-05-12_mara_DE67722F-643A-460E-930A-4A9FF7270B6A ends here

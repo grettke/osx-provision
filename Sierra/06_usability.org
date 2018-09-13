@@ -1,0 +1,193 @@
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_BFEC18FA-40CF-4C90-A572-8700944EE344][org_gcr_2017-05-12_mara_BFEC18FA-40CF-4C90-A572-8700944EE344]]
+* PopChar
+
+- Register it
+- Preferences
+  - Activation
+    - Location: Status item
+      - Hotkey: Can't figure out how to set this
+    - Animate window: No
+    - Close window then
+      - After selecting a char: No
+      - When mouse leaves window: No
+      - When clicking outside window: No
+    - Start at Login: Yes
+  - View & Insert
+    - Character size: About 50%
+    - Display shadows: Yes
+    - Recent fonts: 10
+    - Highlight recent: No
+    - Insert HTML as: only numbers
+* karabiner-elements
+
+- Function Keys
+  - YES: Use F keys as standard function keys
+- Complex Modifications
+  - The files live in Git.
+- Misc
+  - YES: Show icon in menu bar
+
+* Spectacle
+
+- Start it
+- Enable integration
+- Start at boot
+- Delete all keybindings
+- Configure
+  - Left Half: Control-Command-Option-\leftarrow{}
+  - Right Half: Control-Command-Option-\rightarrow{}
+  - Fullscreen: Control-Command-Option-F
+
+* Little Snitch
+
+- Run the installer
+- Start it
+- Register it
+- Configure per below
+- Enable integration
+- Start at boot
+
+Granting:
+
+- *Always grant minimum required*
+- For known good TLD's, grant it forever
+  - Lots of connections to *.apple.com
+  - For apps that want to call homen do forever
+
+- Gen
+  - YES Show satus in the menu bar
+  - YES Show inactive warning
+  - Operation mode: Alert
+  - Use managed rules for macOS Services and iCloud
+- Alert:
+  - Yes: Confirm automatically
+  - NO: Confirm with return and escape.
+    - Can use control-return and command-return intead
+  - Detail level: Show full details
+- Monitor:
+  - On: Network monitor
+  - Keyboard shortcut: Off
+  - Show network activity in menu bar.
+    - Show data rates numerically. Monochrome.
+  - NO: Show auto when mouse enters. Hide in 2s.
+- APS
+  - Yes: Enable automatic profile switching
+    - When joining: Ask
+  - Yes: Save geolocation of networks.
+  - Yes: Distinguish OPenVPN remote servers
+- Security
+  - Allow rules and profile edit.
+  - Allow profile switch.
+  - Allow preference editing
+  - Respect privacy.
+- Advanced
+  - Approve rules automatically.
+- Update
+  - Automatically check for updates daily
+
+* Bartender
+
+- License it
+- GENERAL
+  - Launch Bartender at login: yes.
+  - At bartender launch: show bartender bar: NO.
+  - Bartender bar: autohides, YES.
+- Appearance
+  - Menu bar icon: Glasses
+  - Show when bartender bar is open: YES.
+- Setup
+  - The stuff that I use a lot goes on the right
+  - Ends with: volume, wifi, date, name
+* flux
+
+- NA
+
+- Enable at startup
+
+* Tuxera NTFS
+
+- Install it
+  - brew only downloads the installer
+- License it
+
+* SwitchResX
+
+- License it
+- General Settings
+  - Key shortcut
+    - Open: Command-F10
+  - Startup Settings
+    - [X] Launch SwitchResX Daemon automatically after login
+
+* XQuartz
+
+- Figure out the best DPI for XQuartz
+  - Read [[https://www.xquartz.org/FAQs.html][this]]
+  - Check Acrobat's settings
+  - Play around with it comparing it to the menu-bar
+- Update it in the script
+- Log out and back in again
+
+* Inkscape
+
+- [[https://inkscape.org/en/download/mac-os/][Follow directions]]
+
+* Malwarebytes
+- License pro version
+- Enable Real-Time Protection
+
+* Flycut
+- (Changed from default)
+- Preferences
+  - Launch Flycut on login: yes
+- Appearance
+  - White
+
+* Geekbench
+- Run it.
+- Accept license.
+- Enter license.
+
+* DaisyDisk
+- License it.
+
+* Contexts
+- Welcome
+  - Yes: Launch Context at login
+- Appearance
+  - Theme: Subtle
+  - Yes: Increase contrast
+  - Text size: Large
+- Features
+  - General
+    - Keyboard layout: Use current
+    - Yes: When switching to an app w/out windows then open the Dock
+    - Yes: When using multiple displays, use switching workaround
+      Yes: Show app icon badges
+  - Rules
+    - Group windows: By space
+    - Yes: Show running apps which do not have any windows open
+  - Sidebar
+    - Show sidebar on: No display
+      (This disables the sidebar so nothing to configure)
+  - Panel
+    - Show panel on: All displays
+    - Panel width: %50
+    - No: Moving the cursor over Panel changes the selected item
+    - No: Scrolling when Panel is visible changes the selected item
+  - Search
+    - Search with: Option-Tab
+    - Fast search with: Nothing (disable it)
+    - Search shortcuts: 3
+    - Yes: Allow one mismatched character
+  - Command-Tab
+    - There are a lot of defaults so I won't specify them, just leave them alone
+    - Yes: Typing characters starts Fast Search when Panel is visible
+    - Disable the other prefix bindings: command-backtick, option-tab, and option-backtick
+  - Number Switcher
+    - Change nothing
+  - Gestures
+    - Change nothing
+- License
+- About
+# org_gcr_2017-05-12_mara_BFEC18FA-40CF-4C90-A572-8700944EE344 ends here

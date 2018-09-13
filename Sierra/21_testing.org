@@ -1,0 +1,51 @@
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_C5A1C22E-5F4A-44B8-AC33-B5A8C2F94617][org_gcr_2017-05-12_mara_C5A1C22E-5F4A-44B8-AC33-B5A8C2F94617]]
+- [ ] Get Emacs running
+- [ ] Re-tangle everything step by step
+  - [ ] ECM
+  - [ ] Fundamental
+  - [ ] Org2Blog
+  - [ ] HELP
+- [ ] Diagram.org verification
+  - Delete every result block: just do it manually search for =#+RESULT=
+  - Delete all image output
+  - Execute entire document successfully
+  - Images re-appear
+  - [ ] Ditaa
+  - [ ] PlantUML
+  - [ ] Graphviz
+- [ ] eshell
+  - Run it
+  - Emacs uses correct HELP directory
+- [ ] ccrypt
+- [ ] ispell
+- [ ] weasel words
+- [ ] proselint buffer
+  - Flycheck buffer
+- [ ] langtool
+  - Verify installation, can have the wrong dir and the tool just says that
+    there are no issues
+  - Run =langtool-check-buffer=
+  - ~qk c~ does the scan, ~qk C~ suggests corrects, verified on a corresponsence
+- [ ] Correspondence
+  - Pick a letter
+  - Address and signature and everything looks right
+- [ ] Messages
+  - Make sure that there are no startup warnings or issues
+- [ ] Build resume
+  - Blow away out-files and make
+  - [ ] MD
+  - [ ] TXT
+  - [ ] PDF FULL
+  - [ ] PDF ONE PAGE
+  - [ ] DOCX
+- [ ] Export to everything
+  - Longest test, takes 35m on a VM
+  - This is used for publishing
+  - First delete everything
+  - [ ] html
+    - Images are links, not images
+  - [ ] md
+    - Images are links, not images
+  - [ ] pdf
+  - [ ] txt
+# org_gcr_2017-05-12_mara_C5A1C22E-5F4A-44B8-AC33-B5A8C2F94617 ends here

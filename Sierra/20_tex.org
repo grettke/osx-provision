@@ -1,0 +1,25 @@
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_2A49F260-75C7-4AFF-B789-F83BD9FB83D9][org_gcr_2017-05-12_mara_2A49F260-75C7-4AFF-B789-F83BD9FB83D9]]
+- I value seeing these commands succeed so pasting them is OK
+- MacTeX installation is typically so painful that I want this part to be easy
+
+Set up my TeX stuff for KOMA-script. Backup the default configuration first.
+
+#+begin_src sh
+ls /usr/local/texlive/2018
+sudo cp /usr/local/texlive/2018/texmf.cnf /usr/local/texlive/2018/texmf.cnf-`date '+%Y_%m_%d__%H_%M_%S'`
+ls /usr/local/texlive/2018
+sudo tlmgr conf texmf TEXMFHOME ~/git/gitlab/texmf/
+#+end_src
+
+Check that the path is really updated.
+
+#+begin_src sh
+kpsewhich KomaDefault.lco
+#+end_src
+
+The documents say to maybe do the following. I did it.
+
+#+begin_src sh
+sudo mktexlsr
+#+end_src
+# org_gcr_2017-05-12_mara_2A49F260-75C7-4AFF-B789-F83BD9FB83D9 ends here
