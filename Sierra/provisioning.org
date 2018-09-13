@@ -1360,11 +1360,8 @@ Granting:
   - At bartender launch: show bartender bar: NO.
   - Bartender bar: autohides, YES.
 - Appearance
-  - Menu bar icon: Glasses
+  - Menu bar icon: Star
   - Show when bartender bar is open: YES.
-- Setup
-  - The stuff that I use a lot goes on the right
-  - Ends with: volume, wifi, date, name
 ,* flux
 
 - NA
