@@ -1375,11 +1375,12 @@ Granting:
 
 - Install it
   - brew only downloads the installer
+- Open the Preferences Panel
 - License it
 
 ,* SwitchResX
 
-- License it
+- Open the Preferences Panel- License it
 - General Settings
   - Key shortcut
     - Open: Command-F10
