@@ -2432,14 +2432,6 @@ brew install shellcheck
 #+BEGIN_SRC sh
 brew install make
 #+END_SRC
-***** make
-:PROPERTIES:
-:ID:       org_gcr_2018-03-25T00-45-40-05-00_mara:E36BB250-AC54-40F3-979B-CEBF10677EA2
-:END:
-#+name: org_gcr_2018-03-25T00-45-40-05-00_mara_A28478F1-2909-46E3-9B27-2F0C68FE4C40
-#+begin_src sh
-brew install make --with-guile@2.0
-#+end_src
 ***** vcard
 :PROPERTIES:
 :ID:       org_gcr_2018-04-09T19-27-23-05-00_mara:0A132F34-8034-404B-A4C0-3B7E80BBD3F4
