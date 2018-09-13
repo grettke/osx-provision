@@ -21,7 +21,9 @@
     - For example you might run the script to install \TeX overnight and
       configure it a day later
   - Most of the configuration steps can be completed just in time when you use the app
-  - ~SSH~: Install a copy of your =.ssh= directory before you move on from here
+  - *SSH Keys*
+    - Install a copy of your =.ssh= directory before you move on from here
+    - Manually do an =ssh-add -K private-key-name= on all of the keys
 - ~Testing~ tells you if it worked
 - Install system updates whenever you feel like it
 - Only read this document for
