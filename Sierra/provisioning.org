@@ -2601,21 +2601,6 @@ Steps:
 :header-args: :tangle "15_manual.org"
 :ID:       org_gcr_2017-05-12_mara:BB9E3D7F-B9C2-4545-BE21-D612B37CFED2
 :END:
-**** cron
-:PROPERTIES:
-:ID:       org_gcr_2018-09-12T21-10-55-05-00_globigerina:A91CD0FF-5A46-4DE6-90F7-ACB6E9D2C970
-:END:
-#+name: org_gcr_2018-09-12T15-56-53-05-00_cosmicality_B0DEB0C2-6D87-4FC8-8E94-877CB64CE730
-#+begin_src sh :tangle no
-SHELL=/usr/local/bin/bash
-BASH_ENV=$HOME/.bash_global_non_interactive
-MAILTO=''
-# min   hour    day     month   day-of-week command
-#(0-59) (0-23)  (1-31)  (1-12)  (0-6)
-#------------------------------------------------------------
-,*/30       *       *       *       *           $HOME/util/announcetime >> $HOME/.out 2>&1
-,*/45       7,19    *       *       *           $HOME/util/twicedaily >> $HOME/.out 2>&1
-#+end_src
 **** Font By Language
 :PROPERTIES:
 :ID:       org_gcr_2018-06-02T18-25-17-05-00_mara:812F2418-645B-4149-A4E0-0792B670DA02
