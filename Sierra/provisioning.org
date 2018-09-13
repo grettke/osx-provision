@@ -996,6 +996,7 @@ brew cask install font-dejavu-sans
 brew cask install font-fira-mono
 brew cask install font-fira-sans
 brew cask install font-fontawesome
+brew cask install font-awesome-terminal-fonts
 brew cask install font-han-nom-a
 brew cask install font-icomoon
 brew cask install font-mfizz
