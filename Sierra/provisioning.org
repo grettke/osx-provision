@@ -53,12 +53,12 @@
 - Re-image your box
 - During system configuration /before/ creating a user YES log into the App Store
 - Make a user
-  - Named ~gcr~
-  - Choose an avatar
   - DISAllow location services
+  - Named ~gcr~
+    - Choose an avatar
+    - Don't use location for timezone
+    - Don't allow AppleID to reset this password
   - Disallow user analytics reporting.
-  - Don't use location for timezone
-  - Don't allow AppleID to reset this password
   - Don't allow Siri
 - Install software updates
 - Development Tools
