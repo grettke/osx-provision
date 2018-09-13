@@ -70,7 +70,6 @@ brew install gnu-apl
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4][org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4]]
 brew install git
-brew install git-flow-avh
 # org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4 ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5][org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5]]
@@ -126,10 +125,6 @@ brew install shellcheck
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-09-07_mara_A2CEC35D-5F40-4568-8057-C791E34B7E8F][org_gcr_2017-09-07_mara_A2CEC35D-5F40-4568-8057-C791E34B7E8F]]
 brew install make
 # org_gcr_2017-09-07_mara_A2CEC35D-5F40-4568-8057-C791E34B7E8F ends here
-
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-03-25T00-45-40-05-00_mara_A28478F1-2909-46E3-9B27-2F0C68FE4C40][org_gcr_2018-03-25T00-45-40-05-00_mara_A28478F1-2909-46E3-9B27-2F0C68FE4C40]]
-brew install make --with-guile@2.0
-# org_gcr_2018-03-25T00-45-40-05-00_mara_A28478F1-2909-46E3-9B27-2F0C68FE4C40 ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-04-09T19-27-23-05-00_mara_4F071667-58DE-427E-A738-A222180928EA][org_gcr_2018-04-09T19-27-23-05-00_mara_4F071667-58DE-427E-A738-A222180928EA]]
 cd ~/

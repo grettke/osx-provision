@@ -346,6 +346,6 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # org_gcr_2017-05-12_mara_51F2F5A5-7037-4458-8468-AD019892EBE9 ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_4C582518-39DC-4D1A-BB0C-5499B4CA78D3][org_gcr_2017-05-12_mara_4C582518-39DC-4D1A-BB0C-5499B4CA78D3]]
-cry "Script complete"
-cry "Log out then back in to see changes "
+echo "Script complete"
+echo "Log out then back in to see changes"
 # org_gcr_2017-05-12_mara_4C582518-39DC-4D1A-BB0C-5499B4CA78D3 ends here

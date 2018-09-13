@@ -28,7 +28,7 @@ cd
 bash --version
 brew install bash
 if grep "/usr/local/bin/bash" /etc/shells > /dev/null; then
-    echo "brew bash already configured in shells; doing nothing"
+  echo "brew bash already configured in shells; doing nothing"
 else
   sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
   chsh -s /usr/local/bin/bash
@@ -87,5 +87,5 @@ brew install joe
 # org_gcr_2018-05-08T04-16-55-05-00_mara_5693091A-3304-4506-9B95-6615BEAB04E0 ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB][org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB]]
-cry "Script complete"
+echo "Script complete"
 # org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB ends here

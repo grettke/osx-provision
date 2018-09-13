@@ -4,11 +4,11 @@ brew cask install popchar
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988][org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    mkdir -p ~/.config
-    cd ~/.config/
-    rm -rf karabiner
-    git clone gitlab-`whoami`:grettke/karabiner-elements.git karabiner
-    brew cask install karabiner-elements
+  mkdir -p ~/.config
+  cd ~/.config/
+  rm -rf karabiner
+  git clone gitlab-`whoami`:grettke/karabiner-elements.git karabiner
+  brew cask install karabiner-elements
 else
   echo "karabiner-elements: Only install on hosts"
 fi
@@ -28,7 +28,7 @@ brew cask install bartender
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_3DA6A9C5-8086-4B61-B38F-A87E6A470345][org_gcr_2017-05-12_mara_3DA6A9C5-8086-4B61-B38F-A87E6A470345]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install flux
+  brew cask install flux
 else
   echo "flux: Only install on hosts"
 fi
@@ -73,6 +73,6 @@ brew cask install contexts
 # org_gcr_2018-04-12T21-31-52-05-00_mara_B0101C87-2562-4D78-9BC0-11F49488ED1E ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB][org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB]]
-cry "The Administration is complete."
-cry "Restart your Terminal to pick up the changes."
+echo "The Administration is complete."
+echo "Restart your Terminal to pick up the changes."
 # org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB ends here

@@ -8,7 +8,7 @@ brew install speedtest_cli
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_9CDCD936-A30A-4712-8A5F-780D8810FBDE][org_gcr_2017-05-12_mara_9CDCD936-A30A-4712-8A5F-780D8810FBDE]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install skype
+  brew cask install skype
 else
   echo "skype: Only install on hosts"
 fi
@@ -16,7 +16,7 @@ fi
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_9217F137-CCF7-4B66-AE32-6ED72D2D629F][org_gcr_2017-05-12_mara_9217F137-CCF7-4B66-AE32-6ED72D2D629F]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install whatsapp
+  brew cask install whatsapp
 else
   echo "whatsapp: Only install on hosts"
 fi
@@ -24,7 +24,7 @@ fi
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_1F291E61-A8F1-43BE-A839-0E6997099AD4][org_gcr_2017-05-12_mara_1F291E61-A8F1-43BE-A839-0E6997099AD4]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install dropbox
+  brew cask install dropbox
 else
   echo "dropbox: Only install on hosts"
 fi
