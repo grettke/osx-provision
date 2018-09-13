@@ -61,7 +61,7 @@
     - Don't allow AppleID to reset this password
   - Disallow user analytics reporting.
   - Don't allow Siri
-- Install software updates
+- Maybe install software updates, or do it later.
 - Development Tools
   - XCode
     - This is optional!
