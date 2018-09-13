@@ -8,27 +8,28 @@
 :ID:       org_gcr_2017-05-12_mara:D301EB59-864A-43EB-B574-D285BFAE157C
 :END:
 
-- *Start*
-  - If you've got an Internet connection then access the steps online
-  - Otherwise find one beforehand and download it in a ZIP file or pull it with Git
-- ~Steps~ implements provisioning
+- *First Steps*
+  - Download a ZIP copy of the repo
+  - *SSH Keys*
+    - If you are re-using an existing =.ssh= directory then prepare it _now_
+    - Install a copy of your =.ssh= directory before you move on from here
+      - Manually do an =ssh-add -K private-key-name= on all of the keys
+  - Open =provisioning.org=
+- Flow
   - ORG files are manual steps
   - SH files are shell scripts which may require human input
-  - Perform them in order of their file names numerically eg ~01..02..03..n~
-  - The steps are tedious, time consuming and boring so they are broken up into
-    to logical units to make it easy for you to take a break and finish later
-    without forgetting where you are and what you were doing
-    - For example you might run the script to install \TeX overnight and
-      configure it a day later
-  - Most of the configuration steps can be completed just in time when you use the app
-  - *SSH Keys*
-    - Install a copy of your =.ssh= directory before you move on from here
-    - Manually do an =ssh-add -K private-key-name= on all of the keys
-- ~Testing~ tells you if it worked
-- Install system updates whenever you feel like it
-- Only read this document for
-  - An explanation of the provisioning steps
-  - Reference
+  - Steps
+    - Perform them in order of their file names numerically eg ~01..02..03..n~
+    - The steps are tedious, time consuming and boring so they are broken up into
+      to logical units to make it easy for you to take a break and finish later
+      without forgetting where you are and what you were doing.
+    - You can usually perform the ORG file manual steps whenver you want
+      because they are configuration. This can be a stress-reliever. I usally
+      configure each application the first time that I need it instead of
+      configuring them all at once.
+  - =Testing.org= tells you if it worked
+- Notes
+  - Install system updates whenever you feel like it
 
 ** Steps
 :PROPERTIES:
