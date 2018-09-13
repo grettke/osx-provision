@@ -909,6 +909,17 @@ brew tap caskroom/versions
 brew update
 #+end_src
 
+****** git
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:9CE361CD-A2F2-4920-B828-13AA21F6DF44
+:END:
+Need current Git for Bash prompt so install immediately instead of in dev
+section.
+
+#+NAME: org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4
+#+BEGIN_SRC sh
+brew install git
+#+END_SRC
 ****** Git Checkout Directory
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:7791D5FE-F7D8-4A63-B048-4D21A973185C
@@ -2309,18 +2320,6 @@ npm install -g jshint
 #+BEGIN_SRC sh
 brew install gnu-apl
 #+END_SRC
-***** git
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:9CE361CD-A2F2-4920-B828-13AA21F6DF44
-:END:
-
-For everything beyond the built in.
-
-#+NAME: org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4
-#+BEGIN_SRC sh
-brew install git
-#+END_SRC
-
 ***** EMACS
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:9CE47B04-32B9-4C8F-A3D8-D5E82BE06D47

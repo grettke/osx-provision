@@ -68,10 +68,6 @@ npm install -g jshint
 brew install gnu-apl
 # org_gcr_2017-05-12_mara_FACDF6BA-3CAA-4265-B1B3-563FF5D60151 ends here
 
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4][org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4]]
-brew install git
-# org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4 ends here
-
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5][org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5]]
 brew install emacs \
      --with-cocoa \

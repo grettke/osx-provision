@@ -11,6 +11,10 @@ brew tap caskroom/versions
 brew update
 # org_gcr_2018-06-12T21-48-52-05-00_mara_82D7A5A9-0B09-473C-82B8-7DB744CD2FA8 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4][org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4]]
+brew install git
+# org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_9F9C42F7-6E0F-45C9-8719-B6E8A0CFEC7C][org_gcr_2017-05-12_mara_9F9C42F7-6E0F-45C9-8719-B6E8A0CFEC7C]]
 rm -rf ~/git/github-anonymous
 mkdir -p ~/git/github-anonymous
