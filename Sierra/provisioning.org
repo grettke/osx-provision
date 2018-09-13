@@ -2318,7 +2318,6 @@ For everything beyond the built in.
 #+NAME: org_gcr_2017-05-12_mara_3E37011A-C975-4EA2-82D7-15CEAB02C4F4
 #+BEGIN_SRC sh
 brew install git
-brew install git-flow-avh
 #+END_SRC
 
 ***** EMACS
