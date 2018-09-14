@@ -33,4 +33,5 @@
 * iPartition
 
 - License it
+  - It uses the PNG license file
 # org_gcr_2017-05-12_mara_F8442214-41F6-4F42-9B5C-B4BBDF9A840A ends here

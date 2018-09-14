@@ -2172,6 +2172,7 @@ brew cask install ipartition
 ,* iPartition
 
 - License it
+  - It uses the PNG license file
 #+END_SRC
 *** Development
 :PROPERTIES:
