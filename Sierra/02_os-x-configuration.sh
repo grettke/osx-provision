@@ -37,8 +37,7 @@ sudo spctl --master-disable
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_2C19CF8E-CA4E-4589-82E2-D1A3D2D18353][org_gcr_2017-05-12_mara_2C19CF8E-CA4E-4589-82E2-D1A3D2D18353]]
 cd ~/Pictures/
-curl -O http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2015/02/M101-ORG.jpg
-sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '~/Pictures/M101-ORG.jpg'";
+curl -O "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/M101_hires_STScI-PRC2006-10a.jpg/1280px-M101_hires_STScI-PRC2006-10a.jpg" P
 # org_gcr_2017-05-12_mara_2C19CF8E-CA4E-4589-82E2-D1A3D2D18353 ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_C35A4166-B7B0-4DC8-967F-F360777F869F][org_gcr_2017-05-12_mara_C35A4166-B7B0-4DC8-967F-F360777F869F]]

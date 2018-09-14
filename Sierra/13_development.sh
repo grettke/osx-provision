@@ -33,6 +33,7 @@ cd ~/
 # org_gcr_2018-01-17_mara_A27CD30B-8EE7-4F98-919D-68E170038150 ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_CB12AE91-2573-4886-85B1-56F2EA62062E][org_gcr_2017-05-12_mara_CB12AE91-2573-4886-85B1-56F2EA62062E]]
+brew install ruby
 brew install rbenv
 # org_gcr_2017-05-12_mara_CB12AE91-2573-4886-85B1-56F2EA62062E ends here
 

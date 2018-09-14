@@ -26,11 +26,11 @@
 
 - Install the standard plugins
   - NoScript
-- Log into gmail
+  - HTTPS Everywhere
 
 * FileZilla
 
-- Set up Filezilla for WnW
+- Set up later
 
 * Kindle
 

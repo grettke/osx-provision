@@ -1,4 +1,8 @@
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_DE67722F-643A-460E-930A-4A9FF7270B6A][org_gcr_2017-05-12_mara_DE67722F-643A-460E-930A-4A9FF7270B6A]]
+* Desktop
+- System Preferences, Desktop & Screensaver, Pictures
+- M101 should have been downloaded already
+  - Set it on every monitor
 * Terminal
 
 - Profiles

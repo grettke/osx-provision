@@ -13,6 +13,7 @@
   - Disallow user analytics reporting.
   - Don't allow Siri
 - Maybe install software updates, or do it later.
+- Install Google Chrome (manually)
 - Development Tools
   - XCode
     - This is optional!
@@ -101,12 +102,11 @@ diskutil unmount /dev/disk0s8
       - Keyboard
         - Move focus to next window: Command-Option-TAB
       - Screen Shots
-        - Change each one to a prefix of Control-Command-Option, plus a shift
-          - To keys 3 and 4
+        - Change each one to a prefix of Control-Command-Option to keys 3 and 4
+          - Add Shift to take a selection
       - Services
         - Disable anything with control keybindings
       - Accessibility: *NA*
-    - Dictation: *NA*
   - Mouse
     - *(Host)* Connect Bluetooth mouse
     - Tracking Speed
@@ -115,6 +115,7 @@ diskutil unmount /dev/disk0s8
       - Dell Mouse: 80%
   - Trackpad *(Host)*
     - Point & Click
+      - Look up & data detectors: FALSE
       - Secondary click: TRUE
       - Tap to click: TRUE
   - Printers & Scanners *(Host)*
@@ -131,11 +132,6 @@ diskutil unmount /dev/disk0s8
   - Users & Groups: Enable Guest User without Parental Controls.
   - Parental Controls: *NA*
   - App Store: *NA*
-  - Dictation & Speech
-    - Text 2 Speech
-      - Voice: Cepstral Preference
-      - Rate: Normal
-      - Speak selected text on key: Control-Command-Option S
   - Date & Time: *NA*
   - Startup Disk: *NA*
   - Time Machine: *NA*
@@ -146,6 +142,9 @@ diskutil unmount /dev/disk0s8
       - Contrast: Normal
       - Cursor size: 50%
       - YES Shake mouse pointer to locate
+      - Speech
+        - Voice: Cepstral Sallie
+        - Speak selected text on key: Control-Command-Option S
     - Zoom
       - NO Use keyboard shortcuts
       - YES Smooth images
@@ -159,8 +158,9 @@ diskutil unmount /dev/disk0s8
       - Trackpad Options
         - Enable Dragging: *Without* Drag Lock
     - Switch Control: *NA*
+    - YES: Show Accessibility status in menu bar
   - iCloud: *NA*
-    - Should be set up but I am not using it at all
+    - Don't use the file store or the keychain
   - SwitchResX: *NA*
   - Tuxera NTFS: *NA*
 - *(Host)* KeyChain Access (Application)
@@ -171,6 +171,7 @@ diskutil unmount /dev/disk0s8
     - General
       - Show nothing on the desktop
       - New Finder windows show: Home dir
+      - YES Open folders in tabs instead of new windows
     - Sidebar
       - Applications
       - Desktop

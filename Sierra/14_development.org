@@ -104,22 +104,24 @@
       - Editor theme: Solarized Light
 * Rbenv
 
-Steps:
-- It is already installed by brew
-- Run this: rbenv init
-  - And update your environment setup
-- Run this: curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
-  - And make sure that it works.
-- Install some Ruby versions
+Steps
+
+- Start a new Terminal to pick up the new Ruby in the new RBenv
+- Verify and view current installation details
+  - curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+  - You should see all =OKs=
+- Choose what to use for the default version
   - Find out what is the current stable version [[https://www.ruby-lang.org/en/downloads/][here]]
-    - 2.5.0 on 2018-02-08
-  - Check if it is available: rbenv install -l | grep 2.5.0
-  - Install it: rbenv install 2.5.0
-- Set the global version
-  - rbenv global 2.5.0
-- Verify that the current version is 2.5.0
-  - I never set a local version so it should always be the global
-  - rbenv version
-- View where gems are stored: gem env home
-- Install Bundler: gem install bundler
+    - 2.5.1 on 2018-09-14
+- Make it available
+  - rbenv install 2.5.1
+  - It builds it from scratch
+  - Verify that it is available now
+    - rbenv versions
+    - Should see it listed
+  - Verify you are using it
+    - rbenv version
+    - Should see 2.5.1
+- Set global version to 2.5.1
+  - rbenv global 2.5.1
 # org_gcr_2017-05-12_mara_99109C40-E9ED-4635-B8EF-7180D18849FC ends here
