@@ -1,17 +1,5 @@
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_7281D794-15F4-4C0B-BCEB-E6BD05E5DF0B][org_gcr_2017-05-12_mara_7281D794-15F4-4C0B-BCEB-E6BD05E5DF0B]]
 brew cask install deltawalker
-cat << 'EOF' > /Applications/DeltaWalker.app/Contents/Resources/git-merge
-#!/bin/sh
-
-DW_PATH=`dirname "$0"`
-
-if [ -d "$DW_PATH/../MacOS" ]; then
-  DW_PATH="$DW_PATH/../MacOS"
-fi
-
-"$DW_PATH/DeltaWalker" "$1" "$2" "$3" -merged="$4" -nosplash -mi -pwd="$PWD"
-EOF
-chmod +x /Applications/DeltaWalker.app/Contents/Resources/git-merge
 # org_gcr_2017-05-12_mara_7281D794-15F4-4C0B-BCEB-E6BD05E5DF0B ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_C91E9080-A185-4BA7-ABB8-4EBA21E3FA31][org_gcr_2017-05-12_mara_C91E9080-A185-4BA7-ABB8-4EBA21E3FA31]]
