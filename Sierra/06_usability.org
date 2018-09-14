@@ -55,15 +55,15 @@ Granting:
   - For apps that want to call homen do forever
 
 - Gen
-  - YES Show satus in the menu bar
+  - YES Show status in the menu bar
   - YES Show inactive warning
   - Operation mode: Alert
-  - Use managed rules for macOS Services and iCloud
 - Alert:
   - Yes: Confirm automatically
+    - Allow connection attempts
   - NO: Confirm with return and escape.
     - Can use control-return and command-return intead
-  - Detail level: Show full details
+  - Detail level: Show port and protocol details
 - Monitor:
   - On: Network monitor
   - Keyboard shortcut: Off
@@ -73,7 +73,7 @@ Granting:
 - APS
   - Yes: Enable automatic profile switching
     - When joining: Ask
-  - Yes: Save geolocation of networks.
+  - No: Save geolocation of networks.
   - Yes: Distinguish OPenVPN remote servers
 - Security
   - Allow rules and profile edit.
@@ -93,11 +93,8 @@ Granting:
   - At bartender launch: show bartender bar: NO.
   - Bartender bar: autohides, YES.
 - Appearance
-  - Menu bar icon: Glasses
+  - Menu bar icon: Star
   - Show when bartender bar is open: YES.
-- Setup
-  - The stuff that I use a lot goes on the right
-  - Ends with: volume, wifi, date, name
 * flux
 
 - NA
@@ -108,11 +105,12 @@ Granting:
 
 - Install it
   - brew only downloads the installer
+- Open the Preferences Panel
 - License it
 
 * SwitchResX
 
-- License it
+- Open the Preferences Panel- License it
 - General Settings
   - Key shortcut
     - Open: Command-F10
