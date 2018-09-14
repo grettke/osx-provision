@@ -94,57 +94,6 @@ Set Dictation & Text to Speech to: Callie
 - NA
 # org_gcr_2017-05-12_mara_1B6FE230-CEF8-4977-A3F9-A70EE5E1A39B ends here
 
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_AF9EA775-3EAC-45CE-BE38-2C2B0B0C2618][org_gcr_2017-05-12_mara_AF9EA775-3EAC-45CE-BE38-2C2B0B0C2618]]
-* Textual
-
-- AppStore.
-
-Only note changes from the current default
-
-Set up preferences:
-
-- Preferences.
-- General.
-  - YES: Save the state of queries
-- Highlights.
-- Notifications.
-- Controls.
-- Interface.
-- Style.
-  - General.
-    - Style: Equinox
-    - Font: DJSM 17
-  - Inline Media.
-    - YES: Show images inline
-- Addons.
-- Advanced.
-  - Default Identity.
-    - grettke
-    - grettke💤
-    - grettke
-    - Grant Rettke
-
-Server properties:
-
-- Basic Settings.
-  - General
-    - YES
-      - Connect when Textual opens
-      - Perform reconnect on disconnect
-      - Perform reconnent on waking from sleep
-- Identity
-  - Wait for ID before joining
-  - Enter personal password; everything else got set from main screen
-  - Do wait for identification before joining channels
-
-- Join on Freenode
-  - #org-mode
-  - #emacs
-  - #scheme
-  - #bash
-  - #apl
-# org_gcr_2017-05-12_mara_AF9EA775-3EAC-45CE-BE38-2C2B0B0C2618 ends here
-
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_2341C9FA-93E8-4E03-BEE3-A0A1D616F474][org_gcr_2017-05-12_mara_2341C9FA-93E8-4E03-BEE3-A0A1D616F474]]
 * Microsoft Remote Desktop
 
@@ -192,9 +141,6 @@ Server properties:
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_97712287-0228-4D40-9BD5-038FB9B5AB5F][org_gcr_2017-05-12_mara_97712287-0228-4D40-9BD5-038FB9B5AB5F]]
 * Webcam Settings By Mactaris
 
-- Set the white balance
-  - Hold up a bleached white piece of printer paper to the camera
-  - Balance until it is the same color on the screen
 - Enable at startup
 # org_gcr_2017-05-12_mara_97712287-0228-4D40-9BD5-038FB9B5AB5F ends here
 

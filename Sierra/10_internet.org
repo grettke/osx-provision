@@ -42,4 +42,55 @@
 
 * Deluge
 - Start on login
+
+* iSyncr Mac
+- Do not start at login
+
+* Textual
+
+Only note changes from the current default
+
+Set up preferences:
+
+- Preferences.
+- General.
+  - YES: Save the state of queries
+- Highlights.
+- Notifications.
+- Controls.
+- Interface.
+- Style.
+  - General.
+    - Style: Default
+    - Font: DJSM 18
+  - Inline Media.
+    - YES: Show images inline
+- Addons.
+- Advanced.
+  - Default Identity.
+    - grettke
+    - grettke💤
+    - grettke
+    - Grant Rettke
+
+Server properties:
+
+- Basic Settings.
+  - General
+    - YES
+      - Connect when Textual opens
+      - Perform reconnect on disconnect
+      - Perform reconnent on waking from sleep
+- Identity
+  - Wait for ID before joining
+  - Enter personal password; everything else got set from main screen
+  - Do wait for identification before joining channels
+
+- Join on Freenode
+  - #org-mode
+  - #emacs
+  - #scheme
+  - #bash
+  - #apl
+#+END_SRC
 # org_gcr_2017-05-12_mara_AB15F22E-D841-45AA-86A4-C61FB1486D29 ends here

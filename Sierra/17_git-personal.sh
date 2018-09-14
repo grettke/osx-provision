@@ -97,6 +97,15 @@ git clone github-`whoami`:grettke/universal-emotions-emoticons.git
 git clone https://github.com/yuutayamada/auto-capitalize-el.git auto-capitalize
 # org_gcr_2018-09-12T14-42-11-05-00_cosmicality_449B2EDF-1F14-4E08-B9F4-9469A71B9EE7 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-12T14-42-11-05-00_cosmicality_B7FE7813-593B-40D3-B3F8-BE15B898D81D][org_gcr_2018-09-12T14-42-11-05-00_cosmicality_B7FE7813-593B-40D3-B3F8-BE15B898D81D]]
+rm -rf ~/Music/iTunes
+rm ~/Music/iTunes || true
+cd ~/git/gitlab
+rm -rf ./iTunes
+git clone gitlab-`whoami`:grettke/iTunes.git
+ln -s ~/git/gitlab/iTunes ~/Music/iTunes
+# org_gcr_2018-09-12T14-42-11-05-00_cosmicality_B7FE7813-593B-40D3-B3F8-BE15B898D81D ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-06-18_mara_4833AB48-1C15-4E4E-A767-F2711FFDAAE5][org_gcr_2017-06-18_mara_4833AB48-1C15-4E4E-A767-F2711FFDAAE5]]
 rm ~/util || true
 cd ~/src

@@ -138,6 +138,8 @@ Granting:
 - (Changed from default)
 - Preferences
   - Launch Flycut on login: yes
+- HotKeys
+  - Key binding: C-M-s-v
 - Appearance
   - White
 

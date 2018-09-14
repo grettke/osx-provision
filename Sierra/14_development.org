@@ -12,7 +12,6 @@
         - Text Editor Block Selection Font
         - Text Font
       - Differences
-        - Font: DJSM 12
         - Colors:
           - Addition: Green
           - Change: Orange
@@ -46,18 +45,11 @@
 
 * Sourcetree
 
-- Log into SourceTree using BitBucket
-- Skip Setup
-- If you have it
-  - Let it scan the BitBucket folder to add those projects to SourceTree
+- Skip Setup, Login
 - Preferences
   - General: Disallow SourceTree from modifying yoru global Git config file
   - Diff
-    - Set font to DJSM 14
-    - Do not integrate with DeltaWalker
-      - Command line Git is integrated
-      - SourceTree is standalone /to be alone/
-- Once you set up Git, pull a project from BB
+    - Set font to DJSM 9
 
 * IntelliJ Idea or PyCharm
 
@@ -97,7 +89,8 @@
 
 * RStudio
 
-- RSudio
+- The R setup is still manual so only do this setup /after/ you install R.
+- RStudio
   - Preferences
     - General
       - Default working directory (when not in a project): ~
@@ -108,7 +101,7 @@
     - Appearance
       - Editor font: DejaVuSansMono
       - Font size: 12
-      - Editor theme: Solarized Dark
+      - Editor theme: Solarized Light
 * Rbenv
 
 Steps:

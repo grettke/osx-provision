@@ -30,7 +30,10 @@
   - =Testing.org= tells you if it worked
 - Notes
   - Install system updates whenever you feel like it
-
+  - When you re-run the provisioner it might install a newer version of your
+    software for which you don't have a license.
+  - Separating the scripts helps because they are usually a little bit wrong
+    and easier to fix the smaller scripts than one giant script.
 ** Steps
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:0C728A7D-6497-4E72-AB63-C76976BDC26B
@@ -1405,6 +1408,8 @@ Granting:
 - (Changed from default)
 - Preferences
   - Launch Flycut on login: yes
+- HotKeys
+  - Key binding: C-M-s-v
 - Appearance
   - White
 
@@ -1801,6 +1806,19 @@ else
 fi
 #+END_SRC
 
+***** Textual
+:PROPERTIES:
+:ID:       org_gcr_2018-09-13T21-22-30-05-00_cosmicality:628EE700-C578-418D-B5EF-1BE4FF7C0204
+:END:
+#+name: org_gcr_2018-09-13T21-22-30-05-00_cosmicality_D0AD1AFD-A6FA-46FF-8716-AC0E747D3028
+#+begin_src sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+  brew cask install textual
+else
+  echo "textual: Only install on hosts"
+fi
+
+#+end_src
 ***** Pulse Messenger
 :PROPERTIES:
 :ID:       org_gcr_2018-09-12T23-47-05-05-00_ggg:4F3EC267-66CE-4DC6-99EF-B35B674A9533
@@ -2075,6 +2093,58 @@ brew install rsync
 
 ,* Deluge
 - Start on login
+
+,* iSyncr Mac
+- Do not start at login
+
+,* Textual
+
+Only note changes from the current default
+
+Set up preferences:
+
+- Preferences.
+- General.
+  - YES: Save the state of queries
+- Highlights.
+- Notifications.
+- Controls.
+- Interface.
+- Style.
+  - General.
+    - Style: Default
+    - Font: DJSM 18
+  - Inline Media.
+    - YES: Show images inline
+- Addons.
+- Advanced.
+  - Default Identity.
+    - grettke
+    - grettke💤
+    - grettke
+    - Grant Rettke
+
+Server properties:
+
+- Basic Settings.
+  - General
+    - YES
+      - Connect when Textual opens
+      - Perform reconnect on disconnect
+      - Perform reconnent on waking from sleep
+- Identity
+  - Wait for ID before joining
+  - Enter personal password; everything else got set from main screen
+  - Do wait for identification before joining channels
+
+- Join on Freenode
+  - #org-mode
+  - #emacs
+  - #scheme
+  - #bash
+  - #apl
+,#+END_SRC
+
 #+END_SRC
 
 *** DevOps
@@ -2447,7 +2517,6 @@ cd ~/
         - Text Editor Block Selection Font
         - Text Font
       - Differences
-        - Font: DJSM 12
         - Colors:
           - Addition: Green
           - Change: Orange
@@ -2481,18 +2550,11 @@ cd ~/
 
 ,* Sourcetree
 
-- Log into SourceTree using BitBucket
-- Skip Setup
-- If you have it
-  - Let it scan the BitBucket folder to add those projects to SourceTree
+- Skip Setup, Login
 - Preferences
   - General: Disallow SourceTree from modifying yoru global Git config file
   - Diff
-    - Set font to DJSM 14
-    - Do not integrate with DeltaWalker
-      - Command line Git is integrated
-      - SourceTree is standalone /to be alone/
-- Once you set up Git, pull a project from BB
+    - Set font to DJSM 9
 
 ,* IntelliJ Idea or PyCharm
 
@@ -2532,7 +2594,8 @@ cd ~/
 
 ,* RStudio
 
-- RSudio
+- The R setup is still manual so only do this setup /after/ you install R.
+- RStudio
   - Preferences
     - General
       - Default working directory (when not in a project): ~
@@ -2543,7 +2606,7 @@ cd ~/
     - Appearance
       - Editor font: DejaVuSansMono
       - Font size: 12
-      - Editor theme: Solarized Dark
+      - Editor theme: Solarized Light
 ,* Rbenv
 
 Steps:
@@ -2598,11 +2661,6 @@ Steps:
 :ID:       org_gcr_2018-06-30T12-27-18-05-00_mara:B17532CA-F96A-42E2-AA86-55E96194A2F5
 :END:
 - https://www.unicode.org/policies/lastresortfont_eula.html
-***** Rest
-:PROPERTIES:
-:ID:       org_gcr_2018-09-12T14-42-11-05-00_cosmicality:D5BAA0EC-8F76-4B61-B288-86744CE810F1
-:END:
-- [[https://octicons.github.com/][Octicons]]
 **** iTunes
 :PROPERTIES:
 :ID:       org_gcr_2017-11-01_mara:BF7BA256-70D0-421E-A5B5-0F5568FFAB6F
@@ -2638,6 +2696,17 @@ Steps:
   - Share iTunes library XML
   - Keep miniplayer on top
 
+**** TextEdit
+:PROPERTIES:
+:ID:       org_gcr_2018-09-13T21-22-30-05-00_cosmicality:B11CBF28-F2A3-4A37-8C4B-A073F757E123
+:END:
+- Preferences
+  - New Document
+    - Default to: Plain Text
+    - Font Plain/Rich: 14—DJSM, DJ Serif
+  - Open and Save
+    - Opening a HTML or RTF, don't show the code, this isn't a code editor
+    - DO add a text extension to plain text files
 **** PDFPenPro
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:23E72876-924E-4844-86F8-3CF2837C6217
@@ -2870,62 +2939,6 @@ Obvious settings.
 
 - NA
 #+END_SRC
-***** Textual IRC Client
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:6404E630-F3D2-4E8E-B45C-4834B3113C67
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_AF9EA775-3EAC-45CE-BE38-2C2B0B0C2618
-#+BEGIN_SRC org
-,* Textual
-
-- AppStore.
-
-Only note changes from the current default
-
-Set up preferences:
-
-- Preferences.
-- General.
-  - YES: Save the state of queries
-- Highlights.
-- Notifications.
-- Controls.
-- Interface.
-- Style.
-  - General.
-    - Style: Equinox
-    - Font: DJSM 17
-  - Inline Media.
-    - YES: Show images inline
-- Addons.
-- Advanced.
-  - Default Identity.
-    - grettke
-    - grettke💤
-    - grettke
-    - Grant Rettke
-
-Server properties:
-
-- Basic Settings.
-  - General
-    - YES
-      - Connect when Textual opens
-      - Perform reconnect on disconnect
-      - Perform reconnent on waking from sleep
-- Identity
-  - Wait for ID before joining
-  - Enter personal password; everything else got set from main screen
-  - Do wait for identification before joining channels
-
-- Join on Freenode
-  - #org-mode
-  - #emacs
-  - #scheme
-  - #bash
-  - #apl
-#+END_SRC
 ***** Microsoft Remote Desktop
     :PROPERTIES:
     :ID:       org_gcr_2017-05-12_mara:71D3C2E0-B185-4166-8D96-C9FABD67D43A
@@ -3002,9 +3015,6 @@ Server properties:
 #+BEGIN_SRC org
 ,* Webcam Settings By Mactaris
 
-- Set the white balance
-  - Hold up a bleached white piece of printer paper to the camera
-  - Balance until it is the same color on the screen
 - Enable at startup
 #+END_SRC
 
@@ -3067,7 +3077,12 @@ Server properties:
 :ID:       org_gcr_2017-05-12_mara:8C2DD58B-618C-40BF-8B38-077A88A0F9A7
 :END:
 
-Use MacTex-2016.
+Manually install MacTex-2018.
+
+#+name: org_gcr_2018-09-13T21-22-30-05-00_cosmicality_47E23645-4394-48EC-A136-2ACCC3BE7E5F
+#+begin_src sh
+# This script is intentionally left blank.
+#+end_src
 ***** Configure
 :PROPERTIES:
 :header-args: :tangle "20_tex.org"
@@ -3372,7 +3387,7 @@ git clone https://github.com/yuutayamada/auto-capitalize-el.git auto-capitalize
 iTunes.
 
 #+name: org_gcr_2018-09-12T14-42-11-05-00_cosmicality_B7FE7813-593B-40D3-B3F8-BE15B898D81D
-#+begin_src sh :tangle no
+#+begin_src sh
 rm -rf ~/Music/iTunes
 rm ~/Music/iTunes || true
 cd ~/git/gitlab
