@@ -133,6 +133,9 @@ Granting:
 * Malwarebytes
 - License pro version
 - Enable Real-Time Protection
+- Preferences
+  - Scheduled Scans
+    - Daily
 
 * Flycut
 - (Changed from default)
