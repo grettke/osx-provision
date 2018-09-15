@@ -101,7 +101,8 @@ diskutil unmount /dev/disk0s7
 diskutil unmount /dev/disk0s8
         ,#+END_SRC
 - System Preferences
-  - General: *NA*
+  - General
+    - NO: Close windows when quitting an app
   - Desktop & Screensaver
     - Desktop
       - Black
