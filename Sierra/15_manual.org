@@ -88,6 +88,11 @@ Set Dictation & Text to Speech to: Callie
 - NA
 # org_gcr_2017-05-12_mara_0EB14936-F6A7-4785-9489-D9A333392078 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-15T00-32-28-05-00_cosmicality_DEBB7C3E-A7D0-46E5-AB4C-6E5ACEFEAB76][org_gcr_2018-09-15T00-32-28-05-00_cosmicality_DEBB7C3E-A7D0-46E5-AB4C-6E5ACEFEAB76]]
+* Pages
+- NA
+# org_gcr_2018-09-15T00-32-28-05-00_cosmicality_DEBB7C3E-A7D0-46E5-AB4C-6E5ACEFEAB76 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_1B6FE230-CEF8-4977-A3F9-A70EE5E1A39B][org_gcr_2017-05-12_mara_1B6FE230-CEF8-4977-A3F9-A70EE5E1A39B]]
 * Debtinator
 

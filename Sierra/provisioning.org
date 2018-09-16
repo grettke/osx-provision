@@ -2943,6 +2943,15 @@ Obvious settings.
    :ID:       org_gcr_2017-05-12_mara:AC034850-5D7A-492F-B2E3-55167B7B1C25
    :END:
 
+***** Pages
+:PROPERTIES:
+:ID:       org_gcr_2018-09-15T00-32-28-05-00_cosmicality:99966BC3-2E74-4FEF-AA79-7D4BF4A34567
+:END:
+#+name: org_gcr_2018-09-15T00-32-28-05-00_cosmicality_DEBB7C3E-A7D0-46E5-AB4C-6E5ACEFEAB76
+#+begin_src org
+,* Pages
+- NA
+#+end_src
 ***** Debtinator
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:495FC0F9-827F-4993-9F09-559E40C18B51
