@@ -98,6 +98,7 @@ rm -rf ~/src/auto-capitalize
 rm -rf ~/src/corporate-bs-generator
 rm -rf ~/src/org-utf-to-xetex
 rm -rf ~/src/universal-emotions-emoticons.git
+rm -rf ~/src/org-utf-to-xetex.git
 cd ~/src
 git clone github-`whoami`:grettke/xml-rpc-el.git
 git clone github-`whoami`:org2blog/metaweblog.git
@@ -111,6 +112,7 @@ git clone github-`whoami`:grettke/solarized-emacs.git
 git clone github-`whoami`:grettke/corporate-bs-generator.git
 git clone github-`whoami`:grettke/org-utf-to-xetex.git
 git clone github-`whoami`:grettke/universal-emotions-emoticons.git
+git clone github-`whoami`:grettke/org-utf-to-xetex.git
 git clone https://github.com/yuutayamada/auto-capitalize-el.git auto-capitalize
 # org_gcr_2018-09-12T14-42-11-05-00_cosmicality_449B2EDF-1F14-4E08-B9F4-9469A71B9EE7 ends here
 
