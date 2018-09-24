@@ -2426,32 +2426,15 @@ brew install gox
 brew cask install sourcetree
 #+end_src
 
-***** IntelliJ Idea
+***** JetBrains Toolbox*
 :PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:4E0FDDE1-7A40-4ADC-9A90-422BB4F85086
+:ID:       org_gcr_2018-09-24T09-26-51-05-00_cosmicality:A4509735-0196-4745-95A6-18533A10A740
 :END:
 
-#+NAME: org_gcr_2017-05-12_mara_BC282D24-78F6-4CA4-B9B0-DD59A9BDDC2D
-#+BEGIN_SRC sh
-brew cask install intellij-idea
-#+END_SRC
-***** PyCharm
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:FE2DF3EF-9EE2-4BBD-9A87-D9F0E53CB625
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_40BDECF3-BBA5-47C8-83D0-A30BE58C2896
-#+BEGIN_SRC sh
-brew cask install pycharm
-#+END_SRC
-***** WebStorm
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:DEC24054-6AE2-4B5C-A8B4-0F2005C6926E
-:END:
-#+NAME: org_gcr_2017-05-12_mara_DF8C77C0-B051-4C54-943E-18FDA192039D
-#+BEGIN_SRC sh
-brew cask install webstorm
-#+END_SRC
+#+name: org_gcr_2018-09-24T09-26-51-05-00_cosmicality_3D012A17-86CA-4215-8EB4-110E209B49BE
+#+begin_src sh
+brew cask install jetbrains-toolbox
+#+end_src
 ***** R Studio
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:12B46B24-415F-4D6F-ABD8-A92F324663D0
@@ -2570,38 +2553,54 @@ cd ~/
   - Diff
     - Set font to DJSM 9
 
-,* IntelliJ Idea or PyCharm
-
+,* JetBrains Toolbox*
+,** Toolbox Configuration
+- Update Toolbox App automatically: YES
+  - It is the app, not the installed products
+- Keep only latest version: NO
+  - Support multiple versions
+- Generate shell scripts: YES
+  - Into ~/.bin
+- Run at login: YES
+- Send usage statistics: NO
+,** Product Installation
+- For
+  - IntelliJ
+  - PyCharm
+  - WebStorm
+- Do
+  - Install the Current Stable version
+  - Open it's Toolbox Settings and Do
+    - Stay on the stable version you chose: YES
+    - Install updates automatically: NO
+    - Update to Release (instead of EAP): SELECTED
+,** Standard Product Configuration
 - Complete Installation: Do not import settings
 - EULA: Yes
-- Data Sharing: Send Usage Statistics
+- Data Sharing: No
 - Customize: Skip Remaining and Set Defaults
-- File -> Import Settings -> settings.jar
-  - IntelliJ Now restarts
 - Preferences
   - Appearance
-    - Override default font size not font, change it to 16
   - Editor
-    - Code Style
-      - Scheme: Copy the Default IDE style appending 'gcr'
-      - Indent Detection? No Nothing.
-    - Color Scheme
-      - Choose Solarized Dark
-      - Then duplicate it by appending 'gcr'
-      - Apply
-    - Font
-      - Font: DejaVu Sans Mono
-      - Show only monospaced fonts? No
-      - Size: 18
-      - Fallback: Symbola
     - General
       - Apperance
         - No blinking
         - Use block caret
+        - Now show hard wrap
         - No line numbers
-,* WebStorm
-- Same configuration as PyCharm
-
+    - Font
+      - Font: DejaVu Sans Mono
+        - Show only monospaced fonts? No
+      - Size: 14
+      - Fallback: Symbola
+    - Color Scheme
+      - Choose Darcula
+      - Then duplicate it by appending ' - Grant'
+    - Code Style
+      - Scheme: Copy the Default IDE style appending ' - Grant'
+      - Indent Detection? No Nothing.
+      - Hard wrap at: 80
+        - Wrap on typing: Yes
 ,* The Silver Searcher
 
 - NA

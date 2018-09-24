@@ -52,38 +52,54 @@
   - Diff
     - Set font to DJSM 9
 
-* IntelliJ Idea or PyCharm
-
+* JetBrains Toolbox*
+** Toolbox Configuration
+- Update Toolbox App automatically: YES
+  - It is the app, not the installed products
+- Keep only latest version: NO
+  - Support multiple versions
+- Generate shell scripts: YES
+  - Into ~/.bin
+- Run at login: YES
+- Send usage statistics: NO
+** Product Installation
+- For
+  - IntelliJ
+  - PyCharm
+  - WebStorm
+- Do
+  - Install the Current Stable version
+  - Open it's Toolbox Settings and Do
+    - Stay on the stable version you chose: YES
+    - Install updates automatically: NO
+    - Update to Release (instead of EAP): SELECTED
+** Standard Product Configuration
 - Complete Installation: Do not import settings
 - EULA: Yes
-- Data Sharing: Send Usage Statistics
+- Data Sharing: No
 - Customize: Skip Remaining and Set Defaults
-- File -> Import Settings -> settings.jar
-  - IntelliJ Now restarts
 - Preferences
   - Appearance
-    - Override default font size not font, change it to 16
   - Editor
-    - Code Style
-      - Scheme: Copy the Default IDE style appending 'gcr'
-      - Indent Detection? No Nothing.
-    - Color Scheme
-      - Choose Solarized Dark
-      - Then duplicate it by appending 'gcr'
-      - Apply
-    - Font
-      - Font: DejaVu Sans Mono
-      - Show only monospaced fonts? No
-      - Size: 18
-      - Fallback: Symbola
     - General
       - Apperance
         - No blinking
         - Use block caret
+        - Now show hard wrap
         - No line numbers
-* WebStorm
-- Same configuration as PyCharm
-
+    - Font
+      - Font: DejaVu Sans Mono
+        - Show only monospaced fonts? No
+      - Size: 14
+      - Fallback: Symbola
+    - Color Scheme
+      - Choose Darcula
+      - Then duplicate it by appending ' - Grant'
+    - Code Style
+      - Scheme: Copy the Default IDE style appending ' - Grant'
+      - Indent Detection? No Nothing.
+      - Hard wrap at: 80
+        - Wrap on typing: Yes
 * The Silver Searcher
 
 - NA

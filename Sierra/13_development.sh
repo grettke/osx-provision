@@ -79,17 +79,9 @@ brew install gox
 brew cask install sourcetree
 # org_gcr_2017-05-12_mara_CFCB8712-4E27-484C-A459-402C008961A1 ends here
 
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_BC282D24-78F6-4CA4-B9B0-DD59A9BDDC2D][org_gcr_2017-05-12_mara_BC282D24-78F6-4CA4-B9B0-DD59A9BDDC2D]]
-brew cask install intellij-idea
-# org_gcr_2017-05-12_mara_BC282D24-78F6-4CA4-B9B0-DD59A9BDDC2D ends here
-
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_40BDECF3-BBA5-47C8-83D0-A30BE58C2896][org_gcr_2017-05-12_mara_40BDECF3-BBA5-47C8-83D0-A30BE58C2896]]
-brew cask install pycharm
-# org_gcr_2017-05-12_mara_40BDECF3-BBA5-47C8-83D0-A30BE58C2896 ends here
-
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_DF8C77C0-B051-4C54-943E-18FDA192039D][org_gcr_2017-05-12_mara_DF8C77C0-B051-4C54-943E-18FDA192039D]]
-brew cask install webstorm
-# org_gcr_2017-05-12_mara_DF8C77C0-B051-4C54-943E-18FDA192039D ends here
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-24T09-26-51-05-00_cosmicality_3D012A17-86CA-4215-8EB4-110E209B49BE][org_gcr_2018-09-24T09-26-51-05-00_cosmicality_3D012A17-86CA-4215-8EB4-110E209B49BE]]
+brew cask install jetbrains-toolbox
+# org_gcr_2018-09-24T09-26-51-05-00_cosmicality_3D012A17-86CA-4215-8EB4-110E209B49BE ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_39185E42-F547-489B-85F1-D754C1794178][org_gcr_2017-05-12_mara_39185E42-F547-489B-85F1-D754C1794178]]
 brew cask install rstudio
