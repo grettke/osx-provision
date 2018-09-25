@@ -160,7 +160,7 @@ Granting:
       - Was the default
 * Inkscape
 
-- [[https://inkscape.org/en/download/mac-os/][Follow directions]]
+- Everything is store in Git
 
 * Malwarebytes
 - License pro version

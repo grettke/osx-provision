@@ -1483,7 +1483,7 @@ Granting:
       - Was the default
 ,* Inkscape
 
-- [[https://inkscape.org/en/download/mac-os/][Follow directions]]
+- Everything is store in Git
 
 ,* Malwarebytes
 - License pro version
@@ -2005,44 +2005,25 @@ brew cask install screenflow
 :ID:       org_gcr_2017-05-12_mara:A2F3E4DF-7C16-4806-9614-DF4AF8F59A4A
 :END:
 
-- When I installed it via Brew-Cask the app would not run
-  - No errors were reported
-- Switched to brew
-- Installation notes
-  - Lot of C++ stuff
-  - Freetype
-  - Fontconfig
-  - cairo
-  - gsl
-  - gobject-introspection
-  - gtk
-  - pango
-  - harfbuzz
-  - Avoid the builtin
-    - get-text
-    - icu4c
-- Tried to run it
-  - Fontconfig error: Cannot load default config file
-  - Segmentation fault: 11
-  - Set FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
-  - Tried running inkscape: it ran
-- <2016-07-19 Tue 19:01>
-  - X version still doesn't work right
-  - Switched to Brew Cask
-  - Updated xquartz
-  - That didn't work, went back to plain brew
-- <2018-01-14 Sun 21:36>
-  - Fixed my X startup. Removed a check for non-interactive shells from "doing things".
-    turns out that X is a non-interactive shell.
-  - Corrected install command: Cask not Brew.
-- <2018-02-24 Sat>
-  - Be at ease: it takes one or two minutes to start up
+Pull application configuration and data.
+
+#+name: org_gcr_2018-09-24T21-05-44-05-00_cosmicality_779449BF-5D46-4710-AE1F-CE03E71A1641
+#+begin_src sh
+cd ~/git/gitlab
+rm -rf ./inkscape
+git clone gitlab-`whoami`:grettke/inkscape.git
+#+end_src
+
+(Re)Install and (re)prepare directories without running it (before its data
+directory is created)
 
 #+NAME: org_gcr_2017-05-12_mara_2B757414-ED99-4964-96FC-C76DC6512DD0
 #+BEGIN_SRC sh
+brew cask remove inkscape
+rm ~/.config/inkscape || true
+ln -s ~/git/gitlab/inkscape ~/.config/inkscape
 brew cask install inkscape
 #+END_SRC
-
 ***** librsvg
 :PROPERTIES:
 :ID:       org_gcr_2017-07-11_mara:150DACBC-B896-47ED-8CC2-3C9111C765DD

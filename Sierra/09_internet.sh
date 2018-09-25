@@ -62,7 +62,16 @@ brew install wget
 brew cask install screenflow
 # org_gcr_2017-05-12_mara_059F15F1-A456-4885-A364-F363AC30F6CE ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-24T21-05-44-05-00_cosmicality_779449BF-5D46-4710-AE1F-CE03E71A1641][org_gcr_2018-09-24T21-05-44-05-00_cosmicality_779449BF-5D46-4710-AE1F-CE03E71A1641]]
+cd ~/git/gitlab
+rm -rf ./inkscape
+git clone gitlab-`whoami`:grettke/inkscape.git
+# org_gcr_2018-09-24T21-05-44-05-00_cosmicality_779449BF-5D46-4710-AE1F-CE03E71A1641 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_2B757414-ED99-4964-96FC-C76DC6512DD0][org_gcr_2017-05-12_mara_2B757414-ED99-4964-96FC-C76DC6512DD0]]
+brew cask remove inkscape
+rm ~/.config/inkscape || true
+ln -s ~/git/gitlab/inkscape ~/.config/inkscape
 brew cask install inkscape
 # org_gcr_2017-05-12_mara_2B757414-ED99-4964-96FC-C76DC6512DD0 ends here
 
