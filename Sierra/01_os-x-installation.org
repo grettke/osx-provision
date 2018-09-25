@@ -121,7 +121,20 @@ diskutil unmount /dev/disk0s8
       - Secondary click: TRUE
       - Tap to click: TRUE
   - Printers & Scanners *(Host)*
-    - Add printer(s)
+    - Canon MG6600
+      - Print
+        - Add it so it shows up.
+      - Scanner
+        - Must scan something for it to automatically install Apple's scanning
+          driver. NO NOT use Canon's software
+        - Scanning Setup
+          - Kind: Black & White
+          - Resolution DPI: 150
+          - Scan To: ~/Documents
+          - Name: HEREISTHESCAN
+          - Format: PDF
+            - Combine into single document: YES
+          - Everything else is: NO
   - Sound
     - Show volume in menubar
   - iCloud: *NA*
