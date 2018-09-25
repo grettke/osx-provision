@@ -82,6 +82,8 @@ mv ~/.emacs.d/eshell ~/.emacs.d/eshell.copy
 ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 rm ~/.jshintrc || true
 ln -s ~/src/help/.jshintrc ~/.jshintrc
+rm ~/.Xmodmap || true
+ln -s ~/src/help/.Xmodmap ~/.Xmodmap
 # org_gcr_2017-05-12_mara_300013CB-D6E2-414E-9FBF-68D4581D971C ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-12T14-42-11-05-00_cosmicality_449B2EDF-1F14-4E08-B9F4-9469A71B9EE7][org_gcr_2018-09-12T14-42-11-05-00_cosmicality_449B2EDF-1F14-4E08-B9F4-9469A71B9EE7]]

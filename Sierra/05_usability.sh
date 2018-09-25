@@ -36,9 +36,19 @@ fi
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_9F387AF4-1A72-4D36-866B-4AF99B771776][org_gcr_2017-05-12_mara_9F387AF4-1A72-4D36-866B-4AF99B771776]]
 brew cask install xquartz
-defaults write org.macosforge.xquartz.X11 dpi -int 105
-brew install wmctrl
 # org_gcr_2017-05-12_mara_9F387AF4-1A72-4D36-866B-4AF99B771776 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-24T09-26-51-05-00_cosmicality_14FD75A6-624E-4AB7-94A8-C5EF341B62A8][org_gcr_2018-09-24T09-26-51-05-00_cosmicality_14FD75A6-624E-4AB7-94A8-C5EF341B62A8]]
+defaults write org.macosforge.xquartz.X11 app_to_run /usr/bin/true
+# org_gcr_2018-09-24T09-26-51-05-00_cosmicality_14FD75A6-624E-4AB7-94A8-C5EF341B62A8 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-24T09-26-51-05-00_cosmicality_2EB565D2-70D7-4CE1-AD25-BB3BB28B62BB][org_gcr_2018-09-24T09-26-51-05-00_cosmicality_2EB565D2-70D7-4CE1-AD25-BB3BB28B62BB]]
+defaults write org.macosforge.xquartz.X11 dpi -int 105
+# org_gcr_2018-09-24T09-26-51-05-00_cosmicality_2EB565D2-70D7-4CE1-AD25-BB3BB28B62BB ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-24T09-26-51-05-00_cosmicality_7C0AA8D7-5B7C-462D-8EAD-F06BDDB36999][org_gcr_2018-09-24T09-26-51-05-00_cosmicality_7C0AA8D7-5B7C-462D-8EAD-F06BDDB36999]]
+brew install wmctrl
+# org_gcr_2018-09-24T09-26-51-05-00_cosmicality_7C0AA8D7-5B7C-462D-8EAD-F06BDDB36999 ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_60488E6B-8459-40A4-8811-1B146A6802EC][org_gcr_2017-05-12_mara_60488E6B-8459-40A4-8811-1B146A6802EC]]
 brew cask install tuxera-ntfs

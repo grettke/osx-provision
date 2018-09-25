@@ -1185,10 +1185,54 @@ fi
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:DFD00D78-6B0D-4828-A9CB-80276178F239
 :END:
+
+X-Server.
+
+Install it.
+
 #+NAME: org_gcr_2017-05-12_mara_9F387AF4-1A72-4D36-866B-4AF99B771776
 #+BEGIN_SRC sh
 brew cask install xquartz
+#+END_SRC
+
+Don't run any applications on startup.
+
+#+name: org_gcr_2018-09-24T09-26-51-05-00_cosmicality_14FD75A6-624E-4AB7-94A8-C5EF341B62A8
+#+begin_src sh
+defaults write org.macosforge.xquartz.X11 app_to_run /usr/bin/true
+#+end_src
+
+The font in application is too small.
+
+#+begin_example
+Default resolution too low? Fonts too small?
+
+Do your fonts come out too small in programs like Gimp? This and related
+problems are especially noticeable on the MacBook Pro with high-definition
+screen. The problem is that older versions of X11 use a resolution setting of
+75dpi (dots per inch), and even newer ones use 96dpi by default. Since X11
+2.3.2rc4, you can override this default and put in a value that suits your
+display. For example, for the MacBook Pro, the appropriate value is 133dpi. To
+do this, enter the following in the Terminal, and restart X11:
+
+You should replace 133 by some other number appropriate to your display if it
+is not 133dpi. How do you tell what the appropriate dpi setting is? One way
+(there may be simpler ones!) is to fire up Acrobat or Acrobat Reader, and look
+at Preferences -> Page Display, which will tell you what the System Setting
+for your resolution is in dpi.
+#+end_example
+
+#+name: org_gcr_2018-09-24T09-26-51-05-00_cosmicality_2EB565D2-70D7-4CE1-AD25-BB3BB28B62BB
+#+BEGIN_SRC sh
 defaults write org.macosforge.xquartz.X11 dpi -int 105
+#+END_SRC
+
+Depending on your Spaces and external monitor setup X windows can appear "off
+the screen" in a netherworld to which no mortal has access. Fortunately
+wmcontrol can access /and/ manipulate them to return them to this mortal realm.
+
+#+name: org_gcr_2018-09-24T09-26-51-05-00_cosmicality_7C0AA8D7-5B7C-462D-8EAD-F06BDDB36999
+#+BEGIN_SRC sh
 brew install wmctrl
 #+END_SRC
 ***** Tuxera NTFS
@@ -1398,13 +1442,45 @@ Granting:
 
 ,* XQuartz
 
-- Figure out the best DPI for XQuartz
-  - Read [[https://www.xquartz.org/FAQs.html][this]]
-  - Check Acrobat's settings
-  - Play around with it comparing it to the menu-bar
-- Update it in the script
-- Log out and back in again
-
+- Preferences
+  - Input
+    - Emulate three button mouse: NO
+      - Already works don't need to emulate it
+    - Follow system keyboard layout: NO
+      - Was the default
+    - Enable key equivelants under X11: NO
+      - Must be disabled in order for Control-Option swap in XModMap to work
+    - Option keys send Alt_L and Alt_R: NO
+      - By using XModMap you can still use Option for special characters
+  - Output
+    - Full screen mode (using command-option-a): NO
+      - Possibly useful for possible lone-window recovery
+      - Not using it because it seem to only allow working in full screen mode
+        and toggle just switches you back to the Mac desktop.
+  - Pasteboard
+    - Enable syncing: YES
+      - Was the default
+    - Update Pasteboard when CLIPBOARD changes: NO
+      - So copy paste works correctly under X apps. Can't paste from X into
+        macOS now, but can still copy from macOS and paste into X.
+    - Update CLIPBOARD when Pasteboard changes: YES
+      - So you can copy from macOS to X (I think)
+    - Update PRIMARY (middle-click) when Pasteboard changes: YES
+      - Was the default
+    - Update Pasteboard immediately when new text is selected: NO
+      - Was the default
+  - Windows
+    - Click-through Inactive Windows: NO
+      - Was the default
+    - Focus Follows Mouse: NO
+      - I don't like it
+    - Focus On New Windows: YES
+      - So you know a new window started
+  - Security
+    - Authenticate connections: YES
+      - If you don't then you get a .Xauthority error when you 'ssh -y'
+    - Allow connections from network clients: NO
+      - Was the default
 ,* Inkscape
 
 - [[https://inkscape.org/en/download/mac-os/][Follow directions]]
@@ -3394,6 +3470,8 @@ mv ~/.emacs.d/eshell ~/.emacs.d/eshell.copy
 ln -s ~/src/help/eshell/ ~/.emacs.d/eshell
 rm ~/.jshintrc || true
 ln -s ~/src/help/.jshintrc ~/.jshintrc
+rm ~/.Xmodmap || true
+ln -s ~/src/help/.Xmodmap ~/.Xmodmap
 #+end_src
 
 Get everything else that lives in =src=.

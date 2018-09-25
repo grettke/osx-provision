@@ -119,13 +119,45 @@ Granting:
 
 * XQuartz
 
-- Figure out the best DPI for XQuartz
-  - Read [[https://www.xquartz.org/FAQs.html][this]]
-  - Check Acrobat's settings
-  - Play around with it comparing it to the menu-bar
-- Update it in the script
-- Log out and back in again
-
+- Preferences
+  - Input
+    - Emulate three button mouse: NO
+      - Already works don't need to emulate it
+    - Follow system keyboard layout: NO
+      - Was the default
+    - Enable key equivelants under X11: NO
+      - Must be disabled in order for Control-Option swap in XModMap to work
+    - Option keys send Alt_L and Alt_R: NO
+      - By using XModMap you can still use Option for special characters
+  - Output
+    - Full screen mode (using command-option-a): NO
+      - Possibly useful for possible lone-window recovery
+      - Not using it because it seem to only allow working in full screen mode
+        and toggle just switches you back to the Mac desktop.
+  - Pasteboard
+    - Enable syncing: YES
+      - Was the default
+    - Update Pasteboard when CLIPBOARD changes: NO
+      - So copy paste works correctly under X apps. Can't paste from X into
+        macOS now, but can still copy from macOS and paste into X.
+    - Update CLIPBOARD when Pasteboard changes: YES
+      - So you can copy from macOS to X (I think)
+    - Update PRIMARY (middle-click) when Pasteboard changes: YES
+      - Was the default
+    - Update Pasteboard immediately when new text is selected: NO
+      - Was the default
+  - Windows
+    - Click-through Inactive Windows: NO
+      - Was the default
+    - Focus Follows Mouse: NO
+      - I don't like it
+    - Focus On New Windows: YES
+      - So you know a new window started
+  - Security
+    - Authenticate connections: YES
+      - If you don't then you get a .Xauthority error when you 'ssh -y'
+    - Allow connections from network clients: NO
+      - Was the default
 * Inkscape
 
 - [[https://inkscape.org/en/download/mac-os/][Follow directions]]
