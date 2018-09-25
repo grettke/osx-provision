@@ -75,6 +75,10 @@ ln -s ~/git/gitlab/inkscape ~/.config/inkscape
 brew cask install inkscape
 # org_gcr_2017-05-12_mara_2B757414-ED99-4964-96FC-C76DC6512DD0 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-25T01-05-02-05-00_cosmicality_291026F6-7FF7-4F7C-9E48-CE52452F8A04][org_gcr_2018-09-25T01-05-02-05-00_cosmicality_291026F6-7FF7-4F7C-9E48-CE52452F8A04]]
+brew cask install scribus
+# org_gcr_2018-09-25T01-05-02-05-00_cosmicality_291026F6-7FF7-4F7C-9E48-CE52452F8A04 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-07-11_mara_AB43CB70-381C-4C4D-AF4C-CC7C895D1848][org_gcr_2017-07-11_mara_AB43CB70-381C-4C4D-AF4C-CC7C895D1848]]
 brew install librsvg
 # org_gcr_2017-07-11_mara_AB43CB70-381C-4C4D-AF4C-CC7C895D1848 ends here

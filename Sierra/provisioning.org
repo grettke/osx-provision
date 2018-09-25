@@ -2024,6 +2024,14 @@ rm ~/.config/inkscape || true
 ln -s ~/git/gitlab/inkscape ~/.config/inkscape
 brew cask install inkscape
 #+END_SRC
+***** scribus
+:PROPERTIES:
+:ID:       org_gcr_2018-09-25T01-05-02-05-00_cosmicality:C0E906A5-8DB7-40A8-BDB9-0B1089C6B6DA
+:END:
+#+name: org_gcr_2018-09-25T01-05-02-05-00_cosmicality_291026F6-7FF7-4F7C-9E48-CE52452F8A04
+#+begin_src sh
+brew cask install scribus
+#+end_src
 ***** librsvg
 :PROPERTIES:
 :ID:       org_gcr_2017-07-11_mara:150DACBC-B896-47ED-8CC2-3C9111C765DD
