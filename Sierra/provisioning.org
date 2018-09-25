@@ -3432,6 +3432,7 @@ git config --global color.ui true
 git config --global core.autocrlf
 git config --global alias.st status
 git config --global alias.ci commit
+git config --global svn.rmdir true
 git config --global alias.dt difftool
 git config --global alias.mt mergetool
 git config --global diff.tool deltawalker
