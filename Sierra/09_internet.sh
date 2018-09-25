@@ -75,6 +75,14 @@ ln -s ~/git/gitlab/inkscape ~/.config/inkscape
 brew cask install inkscape
 # org_gcr_2017-05-12_mara_2B757414-ED99-4964-96FC-C76DC6512DD0 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-25T01-05-02-05-00_cosmicality_5651897E-0E74-4D17-BA7E-F1B42C11653E][org_gcr_2018-09-25T01-05-02-05-00_cosmicality_5651897E-0E74-4D17-BA7E-F1B42C11653E]]
+cd ~/git/gitlab
+rm -rf ./colorsyncprofiles
+git clone gitlab-`whoami`:grettke/colorsyncprofiles.git
+rm ~/Library/ColorSync/Profiles || true
+ln -s ~/git/gitlab/colorsyncprofiles ~/Library/ColorSync/Profiles
+# org_gcr_2018-09-25T01-05-02-05-00_cosmicality_5651897E-0E74-4D17-BA7E-F1B42C11653E ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-25T01-05-02-05-00_cosmicality_291026F6-7FF7-4F7C-9E48-CE52452F8A04][org_gcr_2018-09-25T01-05-02-05-00_cosmicality_291026F6-7FF7-4F7C-9E48-CE52452F8A04]]
 brew cask install scribus
 # org_gcr_2018-09-25T01-05-02-05-00_cosmicality_291026F6-7FF7-4F7C-9E48-CE52452F8A04 ends here

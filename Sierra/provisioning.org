@@ -1484,6 +1484,21 @@ Granting:
 ,* Inkscape
 
 - Everything is store in Git
+- Notables follow
+- Preferences
+  - Input/Output
+    - Color management ([[https://www.colourphil.co.uk/rendering_intents.shtml][reference]])
+      - Dispaly adjustment
+        - Display profile: Adobe RGB (1998)
+        - Retrieve profile from display: NO
+        - Display rendering intent: Saturation
+      - Proofing
+        - Simulate output on the screen: YES
+        - Mark out of gamut colors: YES
+        - Out of gamut warning color: Neon Green
+        - Device profile: GRACoL2006)Coated1v2.icc
+        - Device rendering intent: Relative Colormetric
+        - Black point compensation: YES
 
 ,* Malwarebytes
 - License pro version
@@ -2024,6 +2039,18 @@ rm ~/.config/inkscape || true
 ln -s ~/git/gitlab/inkscape ~/.config/inkscape
 brew cask install inkscape
 #+END_SRC
+***** Color Sync
+:PROPERTIES:
+:ID:       org_gcr_2018-09-25T01-05-02-05-00_cosmicality:E2912738-C5C7-4816-9482-C1701039183B
+:END:
+#+name: org_gcr_2018-09-25T01-05-02-05-00_cosmicality_5651897E-0E74-4D17-BA7E-F1B42C11653E
+#+begin_src sh
+cd ~/git/gitlab
+rm -rf ./colorsyncprofiles
+git clone gitlab-`whoami`:grettke/colorsyncprofiles.git
+rm ~/Library/ColorSync/Profiles || true
+ln -s ~/git/gitlab/colorsyncprofiles ~/Library/ColorSync/Profiles
+#+end_src
 ***** scribus
 :PROPERTIES:
 :ID:       org_gcr_2018-09-25T01-05-02-05-00_cosmicality:C0E906A5-8DB7-40A8-BDB9-0B1089C6B6DA
