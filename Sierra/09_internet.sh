@@ -34,6 +34,14 @@ else
 fi
 # org_gcr_2017-05-12_mara_9217F137-CCF7-4B66-AE32-6ED72D2D629F ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-26T11-07-19-05-00_cosmicality_9E9EA4B2-C8CD-4493-937C-4389153F7E05][org_gcr_2018-09-26T11-07-19-05-00_cosmicality_9E9EA4B2-C8CD-4493-937C-4389153F7E05]]
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+  brew cask install slack
+else
+  echo "slack: Only install on hosts"
+fi
+# org_gcr_2018-09-26T11-07-19-05-00_cosmicality_9E9EA4B2-C8CD-4493-937C-4389153F7E05 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_1F291E61-A8F1-43BE-A839-0E6997099AD4][org_gcr_2017-05-12_mara_1F291E61-A8F1-43BE-A839-0E6997099AD4]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
   brew cask install dropbox

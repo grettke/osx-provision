@@ -1957,7 +1957,19 @@ else
     echo "whatsapp: Only install on hosts"
 fi
 #+END_SRC
+***** Slack
+:PROPERTIES:
+:ID:       org_gcr_2018-09-26T11-07-19-05-00_cosmicality:D6A52D73-DD43-4A94-8A74-03D8318B0B38
+:END:
+#+name: org_gcr_2018-09-26T11-07-19-05-00_cosmicality_9E9EA4B2-C8CD-4493-937C-4389153F7E05
+#+begin_src sh
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+  brew cask install slack
+else
+  echo "slack: Only install on hosts"
+fi
 
+#+end_src
 ***** Dropbox
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:7F93247A-75E2-4233-90A9-BFC43592E87D
