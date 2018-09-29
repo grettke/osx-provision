@@ -1144,10 +1144,6 @@ brew cask install popchar
 #+NAME: org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988
 #+BEGIN_SRC sh
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-        mkdir -p ~/.config
-        cd ~/.config/
-        rm -rf karabiner
-        git clone gitlab-`whoami`:grettke/karabiner-elements.git karabiner
         brew cask install karabiner-elements
 else
   echo "karabiner-elements: Only install on hosts"
@@ -3565,6 +3561,16 @@ cd ~/git/gitlab
 rm -rf ./iTunes
 git clone gitlab-`whoami`:grettke/iTunes.git
 ln -s ~/git/gitlab/iTunes ~/Music/iTunes
+#+end_src
+
+Karabiner-Elements.
+#+name: org_gcr_2018-09-29T15-30-58-05-00_cosmicality_11F25977-79BA-4E0A-943C-4E4A2D038499
+#+begin_src sh
+rm ~/.config/karabiner || true
+cd ~/src
+rm -rf ./karabiner
+git clone gitlab-`whoami`:grettke/karabiner-elements.git karabiner
+ln -s ~/src/karabiner ~/.config/karabiner
 #+end_src
 
 Set up =util= scripts.

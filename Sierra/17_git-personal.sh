@@ -128,6 +128,14 @@ git clone gitlab-`whoami`:grettke/iTunes.git
 ln -s ~/git/gitlab/iTunes ~/Music/iTunes
 # org_gcr_2018-09-12T14-42-11-05-00_cosmicality_B7FE7813-593B-40D3-B3F8-BE15B898D81D ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-29T15-30-58-05-00_cosmicality_11F25977-79BA-4E0A-943C-4E4A2D038499][org_gcr_2018-09-29T15-30-58-05-00_cosmicality_11F25977-79BA-4E0A-943C-4E4A2D038499]]
+rm ~/.config/karabiner || true
+cd ~/src
+rm -rf ./karabiner
+git clone gitlab-`whoami`:grettke/karabiner-elements.git karabiner
+ln -s ~/src/karabiner ~/.config/karabiner
+# org_gcr_2018-09-29T15-30-58-05-00_cosmicality_11F25977-79BA-4E0A-943C-4E4A2D038499 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-06-18_mara_4833AB48-1C15-4E4E-A767-F2711FFDAAE5][org_gcr_2017-06-18_mara_4833AB48-1C15-4E4E-A767-F2711FFDAAE5]]
 rm ~/util || true
 cd ~/src
