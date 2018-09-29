@@ -18,15 +18,6 @@
     - Recent fonts: 10
     - Highlight recent: No
     - Insert HTML as: only numbers
-* karabiner-elements
-
-- Function Keys
-  - YES: Use F keys as standard function keys
-- Complex Modifications
-  - The files live in Git.
-- Misc
-  - YES: Show icon in menu bar
-
 * Spectacle
 
 - Start it

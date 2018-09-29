@@ -25,6 +25,7 @@
     - Install the CLT and let it run since only need it once you start using
       the provsioning scripts
     - Run this and choose *Install*.
+      #+NAME: org_gcr_2018-09-29T15-30-58-05-00_cosmicality_EFF7FEE8-6F4D-49AF-81E2-85120B6194D2
       #+BEGIN_SRC sh
       xcode-select --install
       #+END_SRC
@@ -38,6 +39,7 @@
     - Write a shell script and run it at logon
       - Customize this for the install partition
       - These scripts live in my personal =util= directory
+        #+NAME: org_gcr_2018-09-29T15-30-58-05-00_cosmicality_9C6DBD93-7735-4200-82A0-0A206002159D
         #+BEGIN_SRC sh
   #!/usr/bin/env bash
 # -*- mode: sh; -*-
@@ -93,8 +95,6 @@ diskutil unmount /dev/disk0s8
   - Keyboard *(Host)*
     - Keyboard
       - Swap Caps Lock and Control
-        - You can configure multiple keyboards in here. Set these preferences
-          both for the normal keyboard and also the Karabiner VirtualHIDKeyboard
     - Shortcuts
       - Launchpad & Dock
         - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.

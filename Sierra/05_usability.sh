@@ -2,14 +2,6 @@
 brew cask install popchar
 # org_gcr_2017-05-12_mara_8F72F214-3D61-446E-B0A0-ED9629115936 ends here
 
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988][org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988]]
-if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-  brew cask install karabiner-elements
-else
-  echo "karabiner-elements: Only install on hosts"
-fi
-# org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988 ends here
-
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_995F2EC7-2BD0-4966-9FEE-BE512C28786E][org_gcr_2017-05-12_mara_995F2EC7-2BD0-4966-9FEE-BE512C28786E]]
 brew cask install spectacle
 # org_gcr_2017-05-12_mara_995F2EC7-2BD0-4966-9FEE-BE512C28786E ends here

@@ -78,6 +78,7 @@
     - Install the CLT and let it run since only need it once you start using
       the provsioning scripts
     - Run this and choose *Install*.
+      ,#+NAME: org_gcr_2018-09-29T15-30-58-05-00_cosmicality_EFF7FEE8-6F4D-49AF-81E2-85120B6194D2
       ,#+BEGIN_SRC sh
       xcode-select --install
       ,#+END_SRC
@@ -91,6 +92,7 @@
     - Write a shell script and run it at logon
       - Customize this for the install partition
       - These scripts live in my personal =util= directory
+        ,#+NAME: org_gcr_2018-09-29T15-30-58-05-00_cosmicality_9C6DBD93-7735-4200-82A0-0A206002159D
         ,#+BEGIN_SRC sh
   #!/usr/bin/env bash
 # -*- mode: sh; -*-
@@ -146,8 +148,6 @@ diskutil unmount /dev/disk0s8
   - Keyboard *(Host)*
     - Keyboard
       - Swap Caps Lock and Control
-        - You can configure multiple keyboards in here. Set these preferences
-          both for the normal keyboard and also the Karabiner VirtualHIDKeyboard
     - Shortcuts
       - Launchpad & Dock
         - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.
@@ -1136,20 +1136,6 @@ echo "Script complete"
 brew cask install popchar
 #+END_SRC
 
-***** karabiner-elements
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:AD5DE8E1-3B73-45F8-BE9F-5DB57282B403
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_4C8F534B-7B5A-436B-AE43-9F603BF62988
-#+BEGIN_SRC sh
-if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-        brew cask install karabiner-elements
-else
-  echo "karabiner-elements: Only install on hosts"
-fi
-#+END_SRC
-
 ***** Spectacle
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:A09CC468-C651-47E2-9CF5-6D831CE1F247
@@ -1353,15 +1339,6 @@ echo "Restart your Terminal to pick up the changes."
     - Recent fonts: 10
     - Highlight recent: No
     - Insert HTML as: only numbers
-,* karabiner-elements
-
-- Function Keys
-  - YES: Use F keys as standard function keys
-- Complex Modifications
-  - The files live in Git.
-- Misc
-  - YES: Show icon in menu bar
-
 ,* Spectacle
 
 - Start it
@@ -3561,16 +3538,6 @@ cd ~/git/gitlab
 rm -rf ./iTunes
 git clone gitlab-`whoami`:grettke/iTunes.git
 ln -s ~/git/gitlab/iTunes ~/Music/iTunes
-#+end_src
-
-Karabiner-Elements.
-#+name: org_gcr_2018-09-29T15-30-58-05-00_cosmicality_11F25977-79BA-4E0A-943C-4E4A2D038499
-#+begin_src sh
-rm ~/.config/karabiner || true
-cd ~/src
-rm -rf ./karabiner
-git clone gitlab-`whoami`:grettke/karabiner-elements.git karabiner
-ln -s ~/src/karabiner ~/.config/karabiner
 #+end_src
 
 Set up =util= scripts.
