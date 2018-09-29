@@ -93,6 +93,8 @@ diskutil unmount /dev/disk0s8
   - Keyboard *(Host)*
     - Keyboard
       - Swap Caps Lock and Control
+        - You can configure multiple keyboards in here. Set these preferences
+          both for the normal keyboard and also the Karabiner VirtualHIDKeyboard
     - Shortcuts
       - Launchpad & Dock
         - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.
