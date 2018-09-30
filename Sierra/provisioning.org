@@ -116,7 +116,7 @@ diskutil unmount /dev/disk0s8
     - Magnification: Off
     - Position: Bottom
     - Maximize windows using: Genie Effect
-    - Double clicking a title bar: zoom
+    - Double clicking a title bar: NO
     - Minimize windows into application icon: Yes
     - Animate opening apps: Yes
     - Auto hide/show dock: Yes
