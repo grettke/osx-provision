@@ -3158,6 +3158,25 @@ Obvious settings.
   - Show when secondary display is connected? YES
   - Allow accessibility features? YES
 #+end_src
+***** BetterSnapTool
+:PROPERTIES:
+:ID:       org_gcr_2018-09-29T16-11-05-05-00_cosmicality:DC3C70B2-06B8-416C-8B78-EB06CEAD1CA9
+:END:
+- General Settings
+  - Start BetterSnapTool every time your Mac starts up: YES
+- Customization
+  - Advanced settings
+    - Increase snapping recognition areas by: 33 px (YES)
+      - Only increase if more than one monitor is connected: YES
+- Keyboard Shortcuts: *NA*
+- Snap Areas
+  - If checked BetterSnapTool will use a bit more memory, but Snap Areas show up faster
+- Extras
+  - Double-click a windows' title-bar: show menu with all actions
+    - Restore old size & position after double-clicking again: YES
+
+#  LocalWords:  BetterSnapTool
+
 **** TeX
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:A0004B01-D7F4-4D4B-A42B-2F20B77D6A0B
