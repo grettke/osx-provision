@@ -2,10 +2,6 @@
 brew cask install popchar
 # org_gcr_2017-05-12_mara_8F72F214-3D61-446E-B0A0-ED9629115936 ends here
 
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_995F2EC7-2BD0-4966-9FEE-BE512C28786E][org_gcr_2017-05-12_mara_995F2EC7-2BD0-4966-9FEE-BE512C28786E]]
-brew cask install spectacle
-# org_gcr_2017-05-12_mara_995F2EC7-2BD0-4966-9FEE-BE512C28786E ends here
-
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_785FA752-E2FA-411E-8D07-911938D9E656][org_gcr_2017-05-12_mara_785FA752-E2FA-411E-8D07-911938D9E656]]
 brew cask install little-snitch
 # org_gcr_2017-05-12_mara_785FA752-E2FA-411E-8D07-911938D9E656 ends here

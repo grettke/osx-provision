@@ -1135,17 +1135,6 @@ echo "Script complete"
 #+BEGIN_SRC sh
 brew cask install popchar
 #+END_SRC
-
-***** Spectacle
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:A09CC468-C651-47E2-9CF5-6D831CE1F247
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_995F2EC7-2BD0-4966-9FEE-BE512C28786E
-#+BEGIN_SRC sh
-brew cask install spectacle
-#+END_SRC
-
 ***** Little Snitch
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:D669BA2C-C710-4EFD-8682-A63D63476AFE
@@ -1339,17 +1328,6 @@ echo "Restart your Terminal to pick up the changes."
     - Recent fonts: 10
     - Highlight recent: No
     - Insert HTML as: only numbers
-,* Spectacle
-
-- Start it
-- Enable integration
-- Start at boot
-- Delete all keybindings
-- Configure
-  - Left Half: Control-Command-Option-\leftarrow{}
-  - Right Half: Control-Command-Option-\rightarrow{}
-  - Fullscreen: Control-Command-Option-F
-
 ,* Little Snitch
 
 - Run the installer
