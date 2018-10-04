@@ -14,7 +14,7 @@
       - Differences
         - Colors:
           - Addition: Green
-          - Change: Orange
+          - Change: Turqoise
           - Conflict: Red
           - Deletion: Purple
   - All Comparisons
