@@ -1956,6 +1956,11 @@ brew cask install firefox
 Sometimes this install fails. I checked the file download. The file exists. The
 name hasn't changed. Did a manual install instead.
 
+***** Brave
+:PROPERTIES:
+:ID:       org_gcr_2018-10-06T21-14-08-05-00_cosmicality:855D96B0-0F1B-43E2-96A2-A89EC273EA93
+:END:
+Brew recipe doesn’t work so manually install. a
 ***** Filezilla
    :PROPERTIES:
    :ID:       org_gcr_2017-05-12_mara:CB43AE42-448D-455A-93F0-4D77BF1AFF75
