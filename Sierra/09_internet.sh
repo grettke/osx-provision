@@ -1,11 +1,3 @@
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54][org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54]]
-brew cask install deluge
-# org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54 ends here
-
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A][org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A]]
-brew install speedtest_cli
-# org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A ends here
-
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_9CDCD936-A30A-4712-8A5F-780D8810FBDE][org_gcr_2017-05-12_mara_9CDCD936-A30A-4712-8A5F-780D8810FBDE]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
   brew cask install skype
@@ -130,3 +122,11 @@ brew cask install isyncr
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-03-17T09-54-29-05-00_mara_6945F43D-4026-4095-960A-D0AF0517FC79][org_gcr_2018-03-17T09-54-29-05-00_mara_6945F43D-4026-4095-960A-D0AF0517FC79]]
 brew install rsync
 # org_gcr_2018-03-17T09-54-29-05-00_mara_6945F43D-4026-4095-960A-D0AF0517FC79 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54][org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54]]
+brew cask install deluge
+# org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A][org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A]]
+brew install speedtest_cli
+# org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A ends here

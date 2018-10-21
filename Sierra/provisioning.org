@@ -2791,8 +2791,8 @@ Steps
 :END:
 - Preferences
   - New Document
-    - Default to: Plain Text
-    - Font Plain/Rich: 14—DJSM, DJ Serif
+    - Default to: Rich Text
+    - Font Plain/Rich: 18—DJSM, DJ Serif
   - Open and Save
     - Opening a HTML or RTF, don't show the code, this isn't a code editor
     - DO add a text extension to plain text files
