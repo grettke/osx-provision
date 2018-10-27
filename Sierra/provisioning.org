@@ -1106,6 +1106,8 @@ echo "Script complete"
     - Cursor: block
   - Window
     - Yes: Working directory or document, and path
+  - Keyboard
+    - Use Option as Meta key: YES
   - Advanced
     - No Audible bell
     - Yes visual bell (not just when sound is muted)
