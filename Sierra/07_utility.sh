@@ -114,6 +114,10 @@ brew install exiftool
 brew install qpdf
 # org_gcr_2018-04-25T02-34-33-05-00_mara_62A77131-8ECC-48C7-B13D-D1456A708266 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-10-26T19-19-09-05-00_cosmicality_EBD3D5D7-6E79-4E82-8B4A-72685BCA6A75][org_gcr_2018-10-26T19-19-09-05-00_cosmicality_EBD3D5D7-6E79-4E82-8B4A-72685BCA6A75]]
+brew install uni2ascii
+# org_gcr_2018-10-26T19-19-09-05-00_cosmicality_EBD3D5D7-6E79-4E82-8B4A-72685BCA6A75 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E][org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E]]
 cry "Script is done"
 # org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E ends here

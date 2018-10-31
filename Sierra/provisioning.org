@@ -1812,6 +1812,16 @@ brew install exiftool
 #+begin_src sh
 brew install qpdf
 #+end_src
+***** uni2ascii
+:PROPERTIES:
+:ID:       org_gcr_2018-10-26T19-19-09-05-00_cosmicality:3FB99A1C-B656-4DC5-B0D8-43DD1F90FDBE
+:END:
+
+#+name: org_gcr_2018-10-26T19-19-09-05-00_cosmicality_EBD3D5D7-6E79-4E82-8B4A-72685BCA6A75
+#+begin_src sh
+brew install uni2ascii
+#+end_src
+
 ***** Done
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:5E5BCE6B-D095-4CA0-9CC3-9A5F13EF104B
