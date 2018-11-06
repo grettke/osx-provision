@@ -94,6 +94,8 @@ diskutil unmount /dev/disk0s8
       - Computer sleep: never
   - Keyboard *(Host)*
     - Keyboard
+      - Modifier Keys
+        - Retain Defaults
       - Swap Caps Lock and Control
     - Shortcuts
       - Launchpad & Dock

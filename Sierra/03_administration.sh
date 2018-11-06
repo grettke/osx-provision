@@ -21,6 +21,22 @@ mkdir -p ~/git/github-anonymous
 cd ~/git/github-anonymous
 # org_gcr_2017-05-12_mara_9F9C42F7-6E0F-45C9-8719-B6E8A0CFEC7C ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-11-04T02-09-58-06-00_cosmicality_8E2C0260-F2EA-4656-B9F6-E0F374158ABE][org_gcr_2018-11-04T02-09-58-06-00_cosmicality_8E2C0260-F2EA-4656-B9F6-E0F374158ABE]]
+if [ ! -d "/Library/Application Support/VMware Tools" ]; then
+  brew cask install karabiner-elements
+else
+  echo "karabiner-elements: Only install on hosts"
+fi
+# org_gcr_2018-11-04T02-09-58-06-00_cosmicality_8E2C0260-F2EA-4656-B9F6-E0F374158ABE ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-11-04T02-09-58-06-00_cosmicality_753A2DB7-C321-430D-8945-C3407BAC23D6][org_gcr_2018-11-04T02-09-58-06-00_cosmicality_753A2DB7-C321-430D-8945-C3407BAC23D6]]
+rm ~/.config/karabiner || true
+cd ~/src
+rm -rf ./karabiner
+git clone gitlab-`whoami`:grettke/karabiner-elements.git karabiner
+ln -s ~/src/karabiner ~/.config/karabiner
+# org_gcr_2018-11-04T02-09-58-06-00_cosmicality_753A2DB7-C321-430D-8945-C3407BAC23D6 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_8E036592-BF53-4D12-ACA4-F9CED385432C][org_gcr_2017-05-12_mara_8E036592-BF53-4D12-ACA4-F9CED385432C]]
 git clone https://github.com/grettke/bash.git
 cd bash
