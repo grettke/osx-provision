@@ -2226,50 +2226,114 @@ brew install rsync
 
 ,* Textual
 
-Only note changes from the current default
+,*Textual Preferences*
 
-Set up preferences:
-
-- Preferences.
-- General.
-  - YES: Save the state of queries
-- Highlights.
-- Notifications.
-- Controls.
-- Interface.
+- General
+  - Request confirmation before quitting: YES
+  - Updates: Just notify if there are any
+- Highlights
+  - Match: Whole Words
+  - Log highlights to a separate window: YES
+  - Highlight current nickname: YES
+  - Highlight Words
+    - NA
+  - Exclude Words
+    - NA
+- Notifications
+  - Alerts
+    - NA
+  - Speech
+    - Only speak Channel Messages for the selected channel: YES
+    - Include when speaking a Channel Message:
+      - Nickname: YES
+  - Advanced
+    - Show number of unread private messages on dock icon: NO
+    - Show number of unread channel messages on doc icon: NO
+    - Show notifications when Textual is focused: YES
+- Behavior
+  - Open browser links in the background: YES
+  - Automatically rejoin a channel when kicked: NO
+  - Automatically join a channel when invited: NO
+  - Toggle away status when your display goes to sleep: NO
+  - Restore scrollback from previous sessions: YES
+  - Restore the state of queries from previous session: NO
+- Controls
+  - Keyboard & Mouse
+    - Channel navigation is limited to the selected server: YES
+    - Double clicking a user: Open Query
+    - Command + W key action: Close Main Windo
+    - Connect to server on double click: NO
+    - Disconnect from server on double click: NO
+    - Join channel on double click: NO
+    - Leave channel on double click: NO
+    - Automatically copy selected text: YES
+  - Main Text Field
+  - Hide the buttons left of the input text field: NO
+  - Check spelling while typing: NO
+  - Check grammar while typing: NO
+  - Correct spelling automatically: NO
+  - Save input history for each channel rather than globally: NO
+  - Command-Return sends message as an action: YES
+  - Control+Enter sends message instead of inserting a newline: YES
+  - Text size in the input field: Normal
+  - Tab key action: Completes everything
+  - Auto complete suffix: NA
+- Interface
+  - NA
 - Style.
   - General.
     - Style: Default
     - Font: DJSM 18
-  - Inline Media.
-    - YES: Show images inline
-- Addons.
+  - Everything else was NA
+- Addons
+  - NA
 - Advanced.
+  - Inline Media
+    - General: Show stuff: NO
+    - Images & Video: NA
+    - Limitations: Don't inline anything
   - Default Identity.
-    - grettke
-    - grettke💤
-    - grettke
-    - Grant Rettke
+    - Nickname: grettke
+    - Away Nickname: grettke💤
+    - Username: grettke
+    - Real Name: Grant Rettke
+  - Off-the-Record Messaging
+    - Enable: YES
+    - Do not send unencrypted messages: YES
+  - Everything else was NA
 
-Server properties:
+,*Server properties*
 
-- Basic Settings.
+- Server Properties
+  - Address Book: NA
+  - Channel List
+    - #org-mode
+    - #emacs
+    - #scheme
+    - #bash
+  - Connect Commands: NA
+  - Encoding: NA
   - General
-    - YES
-      - Connect when Textual opens
-      - Perform reconnect on disconnect
-      - Perform reconnent on waking from sleep
-- Identity
-  - Wait for ID before joining
-  - Enter personal password; everything else got set from main screen
-  - Do wait for identification before joining channels
+    - Name: freenode
+    - Server address: freenode
+    - Connect Securely: YES
+    - Connect when Textual opens: YES
+    - Perform reconnect on disconnect: YES
+    - Perform reconnent on waking from sleep: YES
+  - Identity
+    - Nickname, Username, and Real Name are copied over from the main preferences
+    - Password: yes enter it
+    - Wait for identification before joining channels: YES
+    - Warn if channels can't be joined: YES
+  - Highlights: NA
+  - Messages
+    - Part & Quit Message
+      - "Ever has it been that love knows not its own depth until the hour of separation."
+    - Computer Sleep Quit Message
+      - "Sleep, those little slices of death — how I loathe them."
+- Vendor Specific: NA
+- Advanced: NA
 
-- Join on Freenode
-  - #org-mode
-  - #emacs
-  - #scheme
-  - #bash
-  - #apl
 ,#+END_SRC
 
 #+END_SRC
