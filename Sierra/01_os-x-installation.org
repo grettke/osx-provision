@@ -94,9 +94,7 @@ diskutil unmount /dev/disk0s8
       - Computer sleep: never
   - Keyboard *(Host)*
     - Keyboard
-      - Modifier Keys
-        - Retain Defaults
-      - Swap Caps Lock and Control
+      - Do nothing to the modifier keys, everything will happen in Karabiner-Elements
     - Shortcuts
       - Launchpad & Dock
         - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.
