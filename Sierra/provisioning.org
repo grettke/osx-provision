@@ -2670,6 +2670,16 @@ pip2.7 install vcard
 veof
 cd ~/
 #+end_src
+***** nedit
+:PROPERTIES:
+:ID:       org_gcr_2018-11-15T23-09-36-06-00_cosmicality:33741369-A87E-4926-87E2-494253D0576F
+:END:
+
+#+name: org_gcr_2018-11-15T23-09-36-06-00_cosmicality_3BFA8986-0C02-4A52-B11C-274D0043FC53
+#+begin_src sh
+brew install nedit
+#+end_src
+
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "14_development.org"

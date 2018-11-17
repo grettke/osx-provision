@@ -114,3 +114,7 @@ pip2.7 install vcard
 veof
 cd ~/
 # org_gcr_2018-04-09T19-27-23-05-00_mara_4F071667-58DE-427E-A738-A222180928EA ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-11-15T23-09-36-06-00_cosmicality_3BFA8986-0C02-4A52-B11C-274D0043FC53][org_gcr_2018-11-15T23-09-36-06-00_cosmicality_3BFA8986-0C02-4A52-B11C-274D0043FC53]]
+brew install nedit
+# org_gcr_2018-11-15T23-09-36-06-00_cosmicality_3BFA8986-0C02-4A52-B11C-274D0043FC53 ends here
