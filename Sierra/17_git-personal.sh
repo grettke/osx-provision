@@ -135,3 +135,13 @@ rm -rf ./util
 git clone gitlab-`whoami`:grettke/util.git
 ln -s ~/src/util ~/util
 # org_gcr_2017-06-18_mara_4833AB48-1C15-4E4E-A767-F2711FFDAAE5 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-11-17T16-07-47-06-00_cosmicality_50DD5E72-371D-4304-814A-85DFD4AE6973][org_gcr_2018-11-17T16-07-47-06-00_cosmicality_50DD5E72-371D-4304-814A-85DFD4AE6973]]
+cd ~/src
+rm -rf ./aspell
+git clone gitlab-`whoami`:grettke/aspell.git
+rm ~/.aspell.en.pws || true
+rm ~/.aspell.en.prepl || true
+ln -s ~/src/aspell/.aspell.en.pws ~/.aspell.en.pws
+ln -s ~/src/aspell/.aspell.en.prepl ~/.aspell.en.prepl
+# org_gcr_2018-11-17T16-07-47-06-00_cosmicality_50DD5E72-371D-4304-814A-85DFD4AE6973 ends here

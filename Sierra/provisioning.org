@@ -3710,6 +3710,19 @@ git clone gitlab-`whoami`:grettke/util.git
 ln -s ~/src/util ~/util
 #+END_SRC
 
+aspell.
+
+#+name: org_gcr_2018-11-17T16-07-47-06-00_cosmicality_50DD5E72-371D-4304-814A-85DFD4AE6973
+#+begin_src sh
+cd ~/src
+rm -rf ./aspell
+git clone gitlab-`whoami`:grettke/aspell.git
+rm ~/.aspell.en.pws || true
+rm ~/.aspell.en.prepl || true
+ln -s ~/src/aspell/.aspell.en.pws ~/.aspell.en.pws
+ln -s ~/src/aspell/.aspell.en.prepl ~/.aspell.en.prepl
+#+end_src
+
 *** Org-Mode
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:0788FE76-2F16-4F66-9822-D4BDA3293CDD
