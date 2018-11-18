@@ -16,11 +16,19 @@
 - Install Google Chrome (manually)
 - Development Tools
   - XCode
-    - This is optional!
-    - This step is not necessary to use the Brew stuff, the CLT provides
-      everything
-    - If you want it them go to the App Store and Install it
-    - 4.5GB download
+    - This is *optional*.
+    - If you are only going to use the CLT tools (for development and utility)
+      then skip this step, *Xcode isn't required*.
+    - If you want to use the [[https://developer.apple.com/library/archive/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html][Accessibility Inspector]] then you /do/ need Xcode
+    - If you want to develop using Xcode then you will install it.
+    - If you determined that /yes/ you do need Xcode then
+      - If you are on the /latest/ version of macOS then you
+        *can only install latest version of Xcode* from the App Store. If you have
+        absolutely no requirements either for internal use (like specific versions
+        of development tools or accessibility tools) or external (support specific
+        older versions of iOS or macOS) can install Xcode via the App Store.
+      - If you are on a previous version of your tech stack then you may download
+        Xcode manually [[https://developer.apple.com/download/more/][here]]. .
   - Command Line Tools (CLT)
     - Install the CLT and let it run since only need it once you start using
       the provsioning scripts
