@@ -2841,6 +2841,10 @@ Steps
 :header-args: :tangle "15_manual.org"
 :ID:       org_gcr_2017-05-12_mara:BB9E3D7F-B9C2-4545-BE21-D612B37CFED2
 :END:
+**** CRON
+
+Install the crontab. 
+
 **** Font By Language
 :PROPERTIES:
 :ID:       org_gcr_2018-06-02T18-25-17-05-00_mara:812F2418-645B-4149-A4E0-0792B670DA02
