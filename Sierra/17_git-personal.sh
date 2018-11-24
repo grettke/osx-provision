@@ -50,6 +50,7 @@ git clone gitlab-`whoami`:grettke/correspondence.git
 git clone gitlab-`whoami`:grettke/wnw.git
 git clone gitlab-`whoami`:grettke/texmf.git
 git clone gitlab-`whoami`:grettke/hardware
+git clone gitlab-`whoami`:grettke/sgph
 
 cd ~/git/github
 git clone github-`whoami`:grettke/osx-provision.git
