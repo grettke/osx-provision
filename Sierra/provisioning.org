@@ -2175,6 +2175,16 @@ brew cask install isyncr
 #+begin_src sh
 brew install rsync
 #+end_src
+***** JabRef
+:PROPERTIES:
+:ID:       org_gcr_2018-11-23T20-53-25-06-00_cosmicality:BA8798DE-CBAF-4E71-AE95-7C78EF5C8BAF
+:END:
+
+#+name: org_gcr_2018-11-23T20-53-25-06-00_cosmicality_18345DE2-55A9-41AE-82AD-654BEB827171
+#+begin_src sh
+brew cask install jabref
+#+end_src
+
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "10_internet.org"
@@ -2842,8 +2852,11 @@ Steps
 :ID:       org_gcr_2017-05-12_mara:BB9E3D7F-B9C2-4545-BE21-D612B37CFED2
 :END:
 **** WNW
+:PROPERTIES:
+:ID:       org_gcr_2018-11-23T20-53-25-06-00_cosmicality:965130AA-5094-461B-814D-63F1D493AF11
+:END:
 
-Checkout a copy of the server /from/ the server. 
+Checkout a copy of the server /from/ the server.
 
 **** CRON
 :PROPERTIES:
