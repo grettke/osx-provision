@@ -2841,6 +2841,10 @@ Steps
 :header-args: :tangle "15_manual.org"
 :ID:       org_gcr_2017-05-12_mara:BB9E3D7F-B9C2-4545-BE21-D612B37CFED2
 :END:
+**** WNW
+
+Checkout a copy of the server /from/ the server. 
+
 **** CRON
 :PROPERTIES:
 :ID:       org_gcr_2018-11-22T01-41-22-06-00_cosmicality:C8C8F54C-04F4-4264-88B8-B669D27B3990
