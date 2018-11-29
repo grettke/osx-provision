@@ -2951,7 +2951,7 @@ Install the crontab.
 - Context
   - =brew install r= has runtime issues on /my/ machine
   - =brew cask install r= has a bad download link
-  - Therefore install the package manually from a CRAN mirror
+  - Therefore install the R manually from [[https://cran.r-project.org/bin/macosx/][here]]
 - Downloaded the pkg
 - Ran the package
 - It finishes
