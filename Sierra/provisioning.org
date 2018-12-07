@@ -1989,6 +1989,16 @@ fi
 
 No work to do: it is installed manually.
 
+***** Lynx
+:PROPERTIES:
+:ID:       org_gcr_2018-11-28T21-54-38-06-00_cosmicality:B4E2424F-C734-4489-9DF3-5F8CA9504684
+:END:
+
+#+name: org_gcr_2018-11-28T21-54-38-06-00_cosmicality_76B4B8E2-3326-4BDA-8197-F905B0A91BF0
+#+begin_src sh
+brew install lynx
+#+end_src
+
 ***** Firefox
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:EB3EFDFC-7604-463D-9978-2BAC9C9DEBCD

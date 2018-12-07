@@ -42,6 +42,10 @@ else
 fi
 # org_gcr_2017-05-12_mara_1F291E61-A8F1-43BE-A839-0E6997099AD4 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-11-28T21-54-38-06-00_cosmicality_76B4B8E2-3326-4BDA-8197-F905B0A91BF0][org_gcr_2018-11-28T21-54-38-06-00_cosmicality_76B4B8E2-3326-4BDA-8197-F905B0A91BF0]]
+brew install lynx
+# org_gcr_2018-11-28T21-54-38-06-00_cosmicality_76B4B8E2-3326-4BDA-8197-F905B0A91BF0 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_66031DAC-6541-4D27-9BE9-80166EB13119][org_gcr_2017-05-12_mara_66031DAC-6541-4D27-9BE9-80166EB13119]]
 brew cask install firefox
 # org_gcr_2017-05-12_mara_66031DAC-6541-4D27-9BE9-80166EB13119 ends here
