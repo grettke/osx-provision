@@ -177,7 +177,9 @@ diskutil unmount /dev/disk0s8
     - Descriptions: *NA*
     - Captions: *NA*
     - Audio: *NA*
-    - Dictation: *NA*
+    - Dictation: On
+      - Use Enhanced Dictation (Offline Enabled)
+      - Shortcut: Either Command Key Twice
     - Keyboard: *NA*
     - Mouse & Trackpad
       - Trackpad Options
