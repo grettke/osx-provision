@@ -232,7 +232,7 @@ diskutil unmount /dev/disk0s8
     - Audio: *NA*
     - Dictation: On
       - Use Enhanced Dictation (Offline Enabled)
-      - Shortcut: Either Command Key Twice
+      - Shortcut: Control-Command-Option d
     - Keyboard: *NA*
     - Mouse & Trackpad
       - Trackpad Options
