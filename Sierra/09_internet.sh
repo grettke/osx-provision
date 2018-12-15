@@ -131,6 +131,10 @@ brew install rsync
 brew cask install jabref
 # org_gcr_2018-11-23T20-53-25-06-00_cosmicality_18345DE2-55A9-41AE-82AD-654BEB827171 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-12-13T12-04-08-06-00_cosmicality_9CDEA100-5E51-443D-9D4C-F003455A92C2][org_gcr_2018-12-13T12-04-08-06-00_cosmicality_9CDEA100-5E51-443D-9D4C-F003455A92C2]]
+brew cask install libreoffice
+# org_gcr_2018-12-13T12-04-08-06-00_cosmicality_9CDEA100-5E51-443D-9D4C-F003455A92C2 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54][org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54]]
 brew cask install deluge
 # org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54 ends here

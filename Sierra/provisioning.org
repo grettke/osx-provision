@@ -2197,6 +2197,18 @@ brew install rsync
 brew cask install jabref
 #+end_src
 
+***** LibreOffice
+:PROPERTIES:
+:ID:       org_gcr_2018-12-13T12-04-08-06-00_cosmicality:2845B2A4-A6BB-4294-A325-190BFCAE66F2
+:END:
+
+Use the "power user" cutting edge release. 
+
+#+name: org_gcr_2018-12-13T12-04-08-06-00_cosmicality_9CDEA100-5E51-443D-9D4C-F003455A92C2
+#+begin_src sh
+brew cask install libreoffice
+#+end_src
+
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "10_internet.org"
