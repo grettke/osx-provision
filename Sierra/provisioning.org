@@ -155,7 +155,11 @@ diskutil unmount /dev/disk0s8
       - Computer sleep: never
   - Keyboard *(Host)*
     - Keyboard
-      - Do nothing to the modifier keys, everything will happen in Karabiner-Elements
+      - YES Adjust keyboard brightness in low light
+      - YES Turn keyboard backlight off after 30s
+      - YES Show keyboard and emoji viewers in menu bar
+      - NO Use F1,  F2,  etc.  keys as standard function keys
+        - Do nothing to the modifier keys, everything will happen in Karabiner-Elements
     - Shortcuts
       - Launchpad & Dock
         - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.
@@ -2202,7 +2206,7 @@ brew cask install jabref
 :ID:       org_gcr_2018-12-13T12-04-08-06-00_cosmicality:2845B2A4-A6BB-4294-A325-190BFCAE66F2
 :END:
 
-Use the "power user" cutting edge release. 
+Use the "power user" cutting edge release.
 
 #+name: org_gcr_2018-12-13T12-04-08-06-00_cosmicality_9CDEA100-5E51-443D-9D4C-F003455A92C2
 #+begin_src sh

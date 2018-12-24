@@ -102,7 +102,11 @@ diskutil unmount /dev/disk0s8
       - Computer sleep: never
   - Keyboard *(Host)*
     - Keyboard
-      - Do nothing to the modifier keys, everything will happen in Karabiner-Elements
+      - YES Adjust keyboard brightness in low light
+      - YES Turn keyboard backlight off after 30s
+      - YES Show keyboard and emoji viewers in menu bar
+      - NO Use F1,  F2,  etc.  keys as standard function keys
+        - Do nothing to the modifier keys, everything will happen in Karabiner-Elements
     - Shortcuts
       - Launchpad & Dock
         - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.
