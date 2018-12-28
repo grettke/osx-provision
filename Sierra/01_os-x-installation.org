@@ -162,6 +162,8 @@ diskutil unmount /dev/disk0s8
   - Parental Controls: *NA*
   - App Store: *NA*
   - Date & Time: *NA*
+    - Time Zone
+      - YES Set time zone automatically using current location. 
   - Startup Disk: *NA*
   - Time Machine: *NA*
   - Accessibility
