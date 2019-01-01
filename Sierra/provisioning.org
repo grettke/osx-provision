@@ -216,7 +216,7 @@ diskutil unmount /dev/disk0s8
   - App Store: *NA*
   - Date & Time: *NA*
     - Time Zone
-      - YES Set time zone automatically using current location. 
+      - YES Set time zone automatically using current location.
   - Startup Disk: *NA*
   - Time Machine: *NA*
   - Accessibility
@@ -271,6 +271,16 @@ diskutil unmount /dev/disk0s8
       - Hard disks
       - External disks
       - CDs, DVDs, and iPods
+  - Favorites
+    - Dropbox
+    - gcr
+    - Screenshots
+    - Documents
+    - git
+    - Downloads
+    - tmp
+    - Desktop
+    - Applications    -
         #+END_SRC
 
 **** Configuration
