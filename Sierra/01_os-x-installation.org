@@ -174,8 +174,8 @@ diskutil unmount /dev/disk0s8
       - Cursor size: 50%
       - YES Shake mouse pointer to locate
       - Speech
-        - Voice: Cepstral Sallie
-        - Speak selected text on key: Control-Command-Option S
+        - Voice: Cepstral Callie
+        - Speak selected text on key: Command-Option S
     - Zoom
       - NO Use keyboard shortcuts
       - YES Smooth images
