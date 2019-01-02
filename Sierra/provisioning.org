@@ -227,7 +227,9 @@ diskutil unmount /dev/disk0s8
       - Cursor size: 50%
       - YES Shake mouse pointer to locate
       - Speech
-        - Voice: Cepstral Callie
+        - Voice: CereProc Jess
+          - Speaking Rate: Fast
+          - In the drop down add it to listed voices
         - Speak selected text on key: Command-Option S
     - Zoom
       - NO Use keyboard shortcuts
