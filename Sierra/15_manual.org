@@ -55,17 +55,6 @@ License them. Test them.
 Set Dictation & Text to Speech to: Callie
 # org_gcr_2017-05-12_mara_F641981A-9788-46E2-BF9B-76E509A8E995 ends here
 
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_109E2C96-0F9D-4F4A-841A-AF15C1F93D8D][org_gcr_2017-05-12_mara_109E2C96-0F9D-4F4A-841A-AF15C1F93D8D]]
-* Pushbullet
-
-- Sign in, it is a web app
-- Allow contact access
-- Install into Chrome, choose it
-- [X] Text from phone
-- [X] See notifications
-- Configure nothing else
-# org_gcr_2017-05-12_mara_109E2C96-0F9D-4F4A-841A-AF15C1F93D8D ends here
-
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_8615C7A4-EE2A-4CF6-89FB-CAD6A95CC84A][org_gcr_2017-05-12_mara_8615C7A4-EE2A-4CF6-89FB-CAD6A95CC84A]]
 * Ink2Go
 

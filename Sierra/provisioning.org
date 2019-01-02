@@ -3108,24 +3108,7 @@ Set Dictation & Text to Speech to: Callie
 
 - Install [[https://www.cereproc.com/en/node/672][Jess]].
   - Add to displayed voices from English (United Kingdom)
-    
-**** Pushbullet
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:D248C9C2-B081-4929-B4C1-FE9CD2C8C7D3
-:END:
 
-#+NAME: org_gcr_2017-05-12_mara_109E2C96-0F9D-4F4A-841A-AF15C1F93D8D
-#+BEGIN_SRC org
-,* Pushbullet
-
-- Sign in, it is a web app
-- Allow contact access
-- Install into Chrome, choose it
-- [X] Text from phone
-- [X] See notifications
-- Configure nothing else
-
-#+END_SRC
 **** Ink2Go
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:A3350039-BBD6-4150-9EAA-A5419552074B
