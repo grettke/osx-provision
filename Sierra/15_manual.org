@@ -157,7 +157,7 @@ Set Dictation & Text to Speech to: Callie
   - Start at login: YES
   - Show status on menubar: YES
 - Advanced
-  - Shortcut: Option-Command-\
+  - Shortcut: Option-Command-[
   - Background color: Black
     Highlight: One window only
   - Animation: 0.25s

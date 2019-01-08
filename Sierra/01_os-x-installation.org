@@ -177,7 +177,7 @@ diskutil unmount /dev/disk0s8
         - Voice: CereProc Jess
           - Speaking Rate: Normal+%10
           - In the drop down add it to listed voices
-        - Speak selected text on key: Option-]
+        - Speak selected text on key: Command-Option-]
     - Zoom
       - NO Use keyboard shortcuts
       - YES Smooth images
