@@ -3326,7 +3326,7 @@ Obvious settings.
   - Start at login: YES
   - Show status on menubar: YES
 - Advanced
-  - Shortcut: C-M-s-h
+  - Shortcut: Option-Command-\
   - Background color: Black
     Highlight: One window only
   - Animation: 0.25s
