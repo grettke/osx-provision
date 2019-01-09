@@ -3112,6 +3112,8 @@ Set Dictation & Text to Speech to: Callie
   - Add to displayed voices from English (United Kingdom)
 - Install [[https://www.cereproc.com/en/node/681][William]]
   - Add to displayed voices from English (United Kingdom)
+- Install [[https://www.cereproc.com/en/node/735][Hannah]]
+- Install [[https://www.cereproc.com/en/node/671][Adam]] 
 
 **** Ink2Go
 :PROPERTIES:
