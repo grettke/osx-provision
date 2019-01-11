@@ -3113,7 +3113,7 @@ Set Dictation & Text to Speech to: Callie
 - Install [[https://www.cereproc.com/en/node/681][William]]
   - Add to displayed voices from English (United Kingdom)
 - Install [[https://www.cereproc.com/en/node/735][Hannah]]
-- Install [[https://www.cereproc.com/en/node/671][Adam]] 
+- Install [[https://www.cereproc.com/en/node/671][Adam]]
 
 **** Ink2Go
 :PROPERTIES:
@@ -3669,7 +3669,6 @@ mkdir -p ~/git/github
 mkdir -p ~/git/gitlab
 
 cd ~/git/gitlab
-git clone gitlab-`whoami`:grettke/list.git
 git clone gitlab-`whoami`:grettke/resume.git
 git clone gitlab-`whoami`:grettke/notes.git
 git clone gitlab-`whoami`:grettke/signature.git
@@ -3740,6 +3739,7 @@ rm -rf ~/src/org-utf-to-xetex
 rm -rf ~/src/universal-emotions-emoticons.git
 rm -rf ~/src/org-utf-to-xetex.git
 rm -rf ~/src/megawin.git
+rm -rf ~/src/list
 cd ~/src
 git clone github-`whoami`:grettke/xml-rpc-el.git
 git clone github-`whoami`:org2blog/metaweblog.git
@@ -3756,7 +3756,7 @@ git clone github-`whoami`:grettke/universal-emotions-emoticons.git
 git clone github-`whoami`:grettke/org-utf-to-xetex.git
 git clone github-`whoami`:grettke/megawin.git
 git clone https://github.com/yuutayamada/auto-capitalize-el.git auto-capitalize
-
+git clone gitlab-`whoami`:grettke/list.git
 #+end_src
 
 iTunes.

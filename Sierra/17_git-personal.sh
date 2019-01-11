@@ -41,7 +41,6 @@ mkdir -p ~/git/github
 mkdir -p ~/git/gitlab
 
 cd ~/git/gitlab
-git clone gitlab-`whoami`:grettke/list.git
 git clone gitlab-`whoami`:grettke/resume.git
 git clone gitlab-`whoami`:grettke/notes.git
 git clone gitlab-`whoami`:grettke/signature.git
@@ -104,6 +103,7 @@ rm -rf ~/src/org-utf-to-xetex
 rm -rf ~/src/universal-emotions-emoticons.git
 rm -rf ~/src/org-utf-to-xetex.git
 rm -rf ~/src/megawin.git
+rm -rf ~/src/list
 cd ~/src
 git clone github-`whoami`:grettke/xml-rpc-el.git
 git clone github-`whoami`:org2blog/metaweblog.git
@@ -120,6 +120,7 @@ git clone github-`whoami`:grettke/universal-emotions-emoticons.git
 git clone github-`whoami`:grettke/org-utf-to-xetex.git
 git clone github-`whoami`:grettke/megawin.git
 git clone https://github.com/yuutayamada/auto-capitalize-el.git auto-capitalize
+git clone gitlab-`whoami`:grettke/list.git
 # org_gcr_2018-09-12T14-42-11-05-00_cosmicality_449B2EDF-1F14-4E08-B9F4-9469A71B9EE7 ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-12T14-42-11-05-00_cosmicality_B7FE7813-593B-40D3-B3F8-BE15B898D81D][org_gcr_2018-09-12T14-42-11-05-00_cosmicality_B7FE7813-593B-40D3-B3F8-BE15B898D81D]]
