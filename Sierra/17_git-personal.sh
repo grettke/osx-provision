@@ -100,9 +100,9 @@ rm -rf ~/src/solarized-emacs
 rm -rf ~/src/auto-capitalize
 rm -rf ~/src/corporate-bs-generator
 rm -rf ~/src/org-utf-to-xetex
-rm -rf ~/src/universal-emotions-emoticons.git
-rm -rf ~/src/org-utf-to-xetex.git
-rm -rf ~/src/megawin.git
+rm -rf ~/src/universal-emotions-emoticons
+rm -rf ~/src/org-utf-to-xetex
+rm -rf ~/src/megawin
 rm -rf ~/src/list
 cd ~/src
 git clone github-`whoami`:grettke/xml-rpc-el.git
