@@ -6,6 +6,10 @@ brew cask install popchar
 brew cask install little-snitch
 # org_gcr_2017-05-12_mara_785FA752-E2FA-411E-8D07-911938D9E656 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-01-11T19-53-25-06-00_cosmicality_86632247-7574-4AFE-957D-B7C698E45B26][org_gcr_2019-01-11T19-53-25-06-00_cosmicality_86632247-7574-4AFE-957D-B7C698E45B26]]
+brew cask install wireshark
+# org_gcr_2019-01-11T19-53-25-06-00_cosmicality_86632247-7574-4AFE-957D-B7C698E45B26 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_34436A54-0E97-48DD-8391-E6A6B36A6A84][org_gcr_2017-05-12_mara_34436A54-0E97-48DD-8391-E6A6B36A6A84]]
 brew cask install bartender
 # org_gcr_2017-05-12_mara_34436A54-0E97-48DD-8391-E6A6B36A6A84 ends here

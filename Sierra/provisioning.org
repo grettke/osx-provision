@@ -1199,6 +1199,16 @@ brew cask install popchar
 brew cask install little-snitch
 #+END_SRC
 
+***** Wireshark
+:PROPERTIES:
+:ID:       org_gcr_2019-01-11T19-53-25-06-00_cosmicality:A9FBF01E-32C1-4A45-A5C0-C2114834565B
+:END:
+
+#+name: org_gcr_2019-01-11T19-53-25-06-00_cosmicality_86632247-7574-4AFE-957D-B7C698E45B26
+#+begin_src sh
+brew cask install wireshark
+#+end_src
+
 ***** Bartender
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:1183CC3B-1D9C-42F5-A663-1ECD53F13314
