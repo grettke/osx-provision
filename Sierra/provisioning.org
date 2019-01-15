@@ -2067,6 +2067,16 @@ Brew recipe doesn’t work so manually install. a
 brew cask install filezilla
 #+end_src
 
+***** Cyberduck
+:PROPERTIES:
+:ID:       org_gcr_2019-01-14T09-58-00-06-00_cosmicality:7685F3FA-8165-4576-AFF1-6957945E7804
+:END:
+
+#+name: org_gcr_2019-01-14T09-58-00-06-00_cosmicality_6E544F75-1812-4A56-B873-2A30A2978583
+#+begin_src sh
+brew cask install cyberduck
+#+end_src
+
 ***** Kindle
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:3EDFA35C-AFFD-4BD3-9F6B-76BC9C1E1349

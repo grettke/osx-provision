@@ -54,6 +54,10 @@ brew cask install firefox
 brew cask install filezilla
 # org_gcr_2017-05-12_mara_F8797C4F-7492-441D-B8B2-A13C818672FB ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-01-14T09-58-00-06-00_cosmicality_6E544F75-1812-4A56-B873-2A30A2978583][org_gcr_2019-01-14T09-58-00-06-00_cosmicality_6E544F75-1812-4A56-B873-2A30A2978583]]
+brew cask install cyberduck
+# org_gcr_2019-01-14T09-58-00-06-00_cosmicality_6E544F75-1812-4A56-B873-2A30A2978583 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_A2BB25B5-F80B-44B1-84CA-3669F9FD04F2][org_gcr_2017-05-12_mara_A2BB25B5-F80B-44B1-84CA-3669F9FD04F2]]
 brew cask install kindle
 # org_gcr_2017-05-12_mara_A2BB25B5-F80B-44B1-84CA-3669F9FD04F2 ends here
