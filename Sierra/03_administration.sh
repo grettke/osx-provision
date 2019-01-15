@@ -107,6 +107,10 @@ brew install coreutils
 brew install joe
 # org_gcr_2018-05-08T04-16-55-05-00_mara_5693091A-3304-4506-9B95-6615BEAB04E0 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-01-14T09-58-00-06-00_cosmicality_BC3E5845-FE3A-4BA1-B00F-45084C5D7BAA][org_gcr_2019-01-14T09-58-00-06-00_cosmicality_BC3E5845-FE3A-4BA1-B00F-45084C5D7BAA]]
+brew install pwgen
+# org_gcr_2019-01-14T09-58-00-06-00_cosmicality_BC3E5845-FE3A-4BA1-B00F-45084C5D7BAA ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB][org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB]]
 echo "Script complete"
 # org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB ends here

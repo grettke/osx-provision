@@ -1126,6 +1126,17 @@ brew install coreutils
 #+begin_src sh
 brew install joe
 #+end_src
+
+****** pwgen
+:PROPERTIES:
+:ID:       org_gcr_2019-01-14T09-58-00-06-00_cosmicality:3ADBE634-F163-40A9-A52A-9B39D54129A0
+:END:
+
+#+name: org_gcr_2019-01-14T09-58-00-06-00_cosmicality_BC3E5845-FE3A-4BA1-B00F-45084C5D7BAA
+#+begin_src sh
+brew install pwgen
+#+end_src
+
 ****** Complete
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:9C6C763C-5676-407E-8C14-77B2D6615873
