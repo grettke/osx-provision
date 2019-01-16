@@ -2267,12 +2267,18 @@ brew cask install libreoffice
 #+NAME: org_gcr_2017-05-12_mara_AB15F22E-D841-45AA-86A4-C61FB1486D29
 #+BEGIN_SRC org
 ,* Skype
+:PROPERTIES:
+:ID:       org_gcr_2019-01-15T21-26-25-06-00_cosmicality:CB7EC827-3D85-4B6F-8080-5DA25E07A279
+:END:
 
 ,*Only install on hosts*
 
 - Log in and disable notifications for log in and out
 
 ,* Dropbox
+:PROPERTIES:
+:ID:       org_gcr_2019-01-15T21-26-25-06-00_cosmicality:E5E7D91B-E5AC-4678-94BB-B3AE7549B1A9
+:END:
 
 ,*Only install on hosts*
 
@@ -2284,36 +2290,105 @@ brew cask install libreoffice
 - Pause it and copy everything over on a wired network
 
 ,* Chrome
+:PROPERTIES:
+:ID:       org_gcr_2019-01-15T21-26-25-06-00_cosmicality:52BA5FA1-20C8-49BE-9014-FC57715D337B
+:END:
 
 - Sign into Chrome
 - Let the settings sync
 - Log into gmail
 
 ,* Firefox
+:PROPERTIES:
+:ID:       org_gcr_2019-01-15T21-26-25-06-00_cosmicality:B7BC0115-7261-4ADE-A40A-74BB5DE8F678
+:END:
 
 - Install the standard plugins
   - NoScript
   - HTTPS Everywhere
 
 ,* FileZilla
+:PROPERTIES:
+:ID:       org_gcr_2019-01-15T21-26-25-06-00_cosmicality:B6EA5AD1-0100-4B20-A89F-819913432668
+:END:
 
 - Set up later
 
+,* Cyberduck
+:PROPERTIES:
+:ID:       org_gcr_2019-01-15T21-26-25-06-00_cosmicality:CE69CAF2-DD19-48B1-9131-7FDDEEFFC4B1
+:END:
+
+- General
+  - Save workspace: NO
+  - Open a new browser window on startup: YES
+  - Use Keychain: YES
+  - Confirm disconnect: YES
+  - Default protocol: SFTP
+- Browser
+  - General
+    - Show hidden files: YES
+    - Double click opens file in an external editor: NO
+      Return key selects folder or file to rename: NO
+    - Info window always shows current selection: NO
+    - Use spring-loaded folders when dragging files: NO
+  - Appearance
+    - Use alternating row color: YES
+    - Horizontal lines: YES
+    - Vertinal lines: NO
+  - Bookmarks
+    - Use Large Icons
+- Transfers
+  - Left alone
+- Editor
+  - Left alone
+- FTP
+  - Default app: Cyberduck
+- SFTP
+  - Default app: Cyberduck
+- S3
+  - Left alone
+- Bandwidth
+  - Left alone
+- Connection
+  - Left alone
+- Cryptomator
+  - Left alone
+- Update
+  - Left alone
+- Language
+  - Left alone
+
 ,* Kindle
+:PROPERTIES:
+:ID:       org_gcr_2019-01-15T21-26-25-06-00_cosmicality:139E332F-6A6B-4E8D-BF88-2353FD1D9FDC
+:END:
 
 - Login
 
 ,* Screenflow
+:PROPERTIES:
+:ID:       org_gcr_2019-01-15T21-26-25-06-00_cosmicality:3C4C2B7D-E41F-4BCB-9482-D8BC0C5E81D5
+:END:
 
 - Register
 
 ,* Deluge
+:PROPERTIES:
+:ID:       org_gcr_2019-01-15T21-26-25-06-00_cosmicality:25768AC4-B7CB-41B5-8DCC-851607B8D218
+:END:
 - Start on login
 
 ,* iSyncr Mac
+:PROPERTIES:
+:ID:       org_gcr_2019-01-15T21-26-25-06-00_cosmicality:37350F41-BD8F-4299-A051-1138FCCCDCD4
+:END:
 - Do not start at login
 
 ,* Textual
+:PROPERTIES:
+:ID:       org_gcr_2019-01-15T21-26-25-06-00_cosmicality:ABAE21B8-2647-41B4-A5A1-25FFCA040268
+:END:
 
 ,*Textual Preferences*
 

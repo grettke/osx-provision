@@ -32,6 +32,48 @@
 
 - Set up later
 
+* Cyberduck
+
+- General
+  - Save workspace: NO
+  - Open a new browser window on startup: YES
+  - Use Keychain: YES
+  - Confirm disconnect: YES
+  - Default protocol: SFTP
+- Browser
+  - General
+    - Show hidden files: YES
+    - Double click opens file in an external editor: NO
+      Return key selects folder or file to rename: NO
+    - Info window always shows current selection: NO
+    - Use spring-loaded folders when dragging files: NO
+  - Appearance
+    - Use alternating row color: YES
+    - Horizontal lines: YES
+    - Vertinal lines: NO
+  - Bookmarks
+    - Use Large Icons
+- Transfers
+  - Left alone
+- Editor
+  - Left alone
+- FTP
+  - Default app: Cyberduck
+- SFTP
+  - Default app: Cyberduck
+- S3
+  - Left alone
+- Bandwidth
+  - Left alone
+- Connection
+  - Left alone
+- Cryptomator
+  - Left alone
+- Update
+  - Left alone
+- Language
+  - Left alone
+
 * Kindle
 
 - Login
