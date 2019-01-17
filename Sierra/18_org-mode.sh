@@ -2,7 +2,7 @@
 rm -rf ~/src/org-mode
 cd ~/src
 echo `date +%Y-%m-%dT%H:%M:%S%z`
-git clone git@code.orgmode.org:bzg/org-mode.git
+git clone https://code.orgmode.org/bzg/org-mode.git
 echo `date +%Y-%m-%dT%H:%M:%S%z`
 cd org-mode
 make autoloads
