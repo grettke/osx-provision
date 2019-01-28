@@ -90,6 +90,7 @@ ln -s ~/src/help/.Xmodmap ~/.Xmodmap
 rm -rf ~/src/xml-rpc-el
 rm -rf ~/src/metaweblog
 rm -rf ~/src/org2blog
+rm -rf ~/src/org2blogwiki
 rm -rf ~/src/pretty-mode
 rm -rf ~/src/use-package
 rm -rf ~/src/reveal.js
@@ -108,6 +109,7 @@ cd ~/src
 git clone github-`whoami`:grettke/xml-rpc-el.git
 git clone github-`whoami`:org2blog/metaweblog.git
 git clone github-`whoami`:org2blog/org2blog.git
+git clone github-`whoami`:org2blog/org2blog.wiki.git org2blogwiki
 git clone github-`whoami`:grettke/pretty-mode.git
 git clone https://github.com/jwiegley/use-package.git
 git clone https://github.com/hakimel/reveal.js.git
