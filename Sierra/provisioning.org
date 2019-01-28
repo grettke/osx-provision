@@ -3832,6 +3832,7 @@ Get everything else that lives in =src=.
 rm -rf ~/src/xml-rpc-el
 rm -rf ~/src/metaweblog
 rm -rf ~/src/org2blog
+rm -rf ~/src/org2blogwiki
 rm -rf ~/src/pretty-mode
 rm -rf ~/src/use-package
 rm -rf ~/src/reveal.js
