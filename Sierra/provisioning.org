@@ -1810,16 +1810,6 @@ brew install figlet
 #+begin_src sh
 brew install toilet
 #+end_src
-***** Freemind
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:D5D0EF07-E6F0-4734-9D30-BF516B8F24AA
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_AC178F06-AA7B-413A-828D-605F120E7C2F
-#+BEGIN_SRC sh
-brew cask install freemind
-#+END_SRC
-
 ***** LAME
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:EAEC5141-5F69-4B55-A5E2-2654568DCFB4
@@ -3572,6 +3562,13 @@ sudo mktexlsr
     - Wireless
       - See Special Mode Settings
 #  LocalWords:  Plantronics Softphones Softphone
+
+**** Freeplane
+:PROPERTIES:
+:ID:       org_gcr_2019-01-27T20-26-44-06-00_cosmicality:7AA6BF14-67B0-4C17-99E7-5ED124583885
+:END:
+
+https://www.freeplane.org/wiki/index.php/Home
 
 *** SSH and Git
 :PROPERTIES:

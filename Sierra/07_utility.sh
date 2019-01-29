@@ -78,10 +78,6 @@ brew install figlet
 brew install toilet
 # org_gcr_2018-09-12T08-06-00-05-00_cosmicality_6949DCFE-4E10-41D7-813A-EBF737C4AD17 ends here
 
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_AC178F06-AA7B-413A-828D-605F120E7C2F][org_gcr_2017-05-12_mara_AC178F06-AA7B-413A-828D-605F120E7C2F]]
-brew cask install freemind
-# org_gcr_2017-05-12_mara_AC178F06-AA7B-413A-828D-605F120E7C2F ends here
-
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_F613FAE4-87A5-4922-B1DE-D2114686FDD3][org_gcr_2017-05-12_mara_F613FAE4-87A5-4922-B1DE-D2114686FDD3]]
 brew install lame
 # org_gcr_2017-05-12_mara_F613FAE4-87A5-4922-B1DE-D2114686FDD3 ends here
