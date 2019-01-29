@@ -2020,13 +2020,6 @@ fi
 
 No work to do: it is installed manually.
 
-***** Chromium
-
-#+name: org_gcr_2019-01-19T22-31-35-06-00_cosmicality_F6F1F3DB-3FA4-4EEE-BA26-E8D0DA6A16AB
-#+begin_src sh
-brew cask install chromium
-#+end_src
-
 ***** Lynx
 :PROPERTIES:
 :ID:       org_gcr_2018-11-28T21-54-38-06-00_cosmicality:B4E2424F-C734-4489-9DF3-5F8CA9504684
