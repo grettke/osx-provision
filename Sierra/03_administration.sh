@@ -101,6 +101,7 @@ brew install fortune
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-01-25_mara_9783633F-1314-4A17-B057-ECBE72BA782A][org_gcr_2018-01-25_mara_9783633F-1314-4A17-B057-ECBE72BA782A]]
 brew install coreutils
+brew install gnu-sed
 # org_gcr_2018-01-25_mara_9783633F-1314-4A17-B057-ECBE72BA782A ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-05-08T04-16-55-05-00_mara_5693091A-3304-4506-9B95-6615BEAB04E0][org_gcr_2018-05-08T04-16-55-05-00_mara_5693091A-3304-4506-9B95-6615BEAB04E0]]

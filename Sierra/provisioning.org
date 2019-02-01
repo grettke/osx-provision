@@ -1117,6 +1117,7 @@ brew install fortune
 #+NAME: org_gcr_2018-01-25_mara_9783633F-1314-4A17-B057-ECBE72BA782A
 #+BEGIN_SRC sh
 brew install coreutils
+brew install gnu-sed
 #+END_SRC
 ****** Joe
 :PROPERTIES:
