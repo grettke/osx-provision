@@ -19,7 +19,7 @@ function 22C8initsshdir {
 git config --global user.name "Grant Rettke"
 git config --global user.email gcr@wisdomandwonder.com
 git config --global color.ui true
-git config --global core.autocrlf
+git config --global core.autocrlf true
 git config --global alias.st status
 git config --global alias.ci commit
 git config --global svn.rmdir true
