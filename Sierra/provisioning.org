@@ -120,7 +120,7 @@ diskutil unmount /dev/disk0s8
       - *(Host)*: "Message", 5m
       - *(Guest)*: "Message", 5m
   - Dock
-    - Size: Largest
+    - Size: 50%
     - Magnification: Off
     - Position: Bottom
     - Maximize windows using: Genie Effect
