@@ -2793,6 +2793,16 @@ brew cask install dash
 #+BEGIN_SRC sh
 brew install the_silver_searcher
 #+END_SRC
+***** ripgrep
+:PROPERTIES:
+:ID:       org_gcr_2019-02-21T21-33-51-06-00_cosmicality:C94D075D-0C37-4BCE-8868-2F8AC93340B5
+:END:
+
+#+name: org_gcr_2019-02-21T21-33-51-06-00_cosmicality_50784847-46AD-4152-A00A-547173F18DDC
+#+begin_src sh
+brew install ripgrep
+#+end_src
+
 ***** shellcheck
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:2D9AF91E-3694-4D31-B9F2-569BD5E97882

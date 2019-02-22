@@ -95,6 +95,10 @@ brew cask install dash
 brew install the_silver_searcher
 # org_gcr_2017-05-12_mara_550D985C-BAE4-409E-9289-A712EA44B335 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-02-21T21-33-51-06-00_cosmicality_50784847-46AD-4152-A00A-547173F18DDC][org_gcr_2019-02-21T21-33-51-06-00_cosmicality_50784847-46AD-4152-A00A-547173F18DDC]]
+brew install ripgrep
+# org_gcr_2019-02-21T21-33-51-06-00_cosmicality_50784847-46AD-4152-A00A-547173F18DDC ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_1E6B3FB1-97E1-456D-A0CE-7D686FDF5E31][org_gcr_2017-05-12_mara_1E6B3FB1-97E1-456D-A0CE-7D686FDF5E31]]
 brew install shellcheck
 # org_gcr_2017-05-12_mara_1E6B3FB1-97E1-456D-A0CE-7D686FDF5E31 ends here
