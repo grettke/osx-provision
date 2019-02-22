@@ -3437,8 +3437,7 @@ Obvious settings.
     - NO: Highlight windows on displays without keyboard focus
   - Show when secondary display is connected? YES
   - Allow accessibility features? YES
-#+end_src
-***** BetterSnapTool
+,* BetterSnapTool
 :PROPERTIES:
 :ID:       org_gcr_2018-09-29T16-11-05-05-00_cosmicality:DC3C70B2-06B8-416C-8B78-EB06CEAD1CA9
 :END:
@@ -3452,8 +3451,9 @@ Obvious settings.
 - Snap Areas
   - If checked BetterSnapTool will use a bit more memory, but Snap Areas show up faster
 - Extras
-  - Double-click a windows' title-bar: show menu with all actions
+  - Double-click a windows' title-bar: Right two thirds
     - Restore old size & position after double-clicking again: YES
+#+end_src
 
 #  LocalWords:  BetterSnapTool
 
