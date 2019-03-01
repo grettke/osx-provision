@@ -6,14 +6,6 @@ brew cask install java8
 brew install maven
 # org_gcr_2018-06-12T21-48-52-05-00_mara_8D458C41-06C2-484B-9D17-8DDA6BDFFAD8 ends here
 
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_6E1474FB-6E85-4D0C-BC36-913CD2882548][org_gcr_2017-05-12_mara_6E1474FB-6E85-4D0C-BC36-913CD2882548]]
-brew install ditaa
-# org_gcr_2017-05-12_mara_6E1474FB-6E85-4D0C-BC36-913CD2882548 ends here
-
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_4C3BDEF1-5651-49FA-B627-A858E52A0888][org_gcr_2017-05-12_mara_4C3BDEF1-5651-49FA-B627-A858E52A0888]]
-brew install plantuml
-# org_gcr_2017-05-12_mara_4C3BDEF1-5651-49FA-B627-A858E52A0888 ends here
-
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_97BAD5BA-A7DF-49B5-BADF-632A7E329DD7][org_gcr_2017-05-12_mara_97BAD5BA-A7DF-49B5-BADF-632A7E329DD7]]
 brew install languagetool
 # org_gcr_2017-05-12_mara_97BAD5BA-A7DF-49B5-BADF-632A7E329DD7 ends here
@@ -21,10 +13,6 @@ brew install languagetool
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_60CE855B-D70B-415C-8850-BE34B07754E3][org_gcr_2017-05-12_mara_60CE855B-D70B-415C-8850-BE34B07754E3]]
 brew install aspell -all
 # org_gcr_2017-05-12_mara_60CE855B-D70B-415C-8850-BE34B07754E3 ends here
-
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_921EC70F-F3B3-4D5A-8EEA-1FFCD83CCFC3][org_gcr_2017-05-12_mara_921EC70F-F3B3-4D5A-8EEA-1FFCD83CCFC3]]
-brew install graphviz
-# org_gcr_2017-05-12_mara_921EC70F-F3B3-4D5A-8EEA-1FFCD83CCFC3 ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_37B0A99E-3144-4DB6-BF73-8CFAC09F2AF9][org_gcr_2017-05-12_mara_37B0A99E-3144-4DB6-BF73-8CFAC09F2AF9]]
 brew install pandoc
@@ -50,6 +38,30 @@ brew install icoutils
 brew install povray --with-openexr
 # org_gcr_2017-05-12_mara_02A7BE9E-D9BD-4BBD-BC55-094C22F8D8B9 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_6E1474FB-6E85-4D0C-BC36-913CD2882548][org_gcr_2017-05-12_mara_6E1474FB-6E85-4D0C-BC36-913CD2882548]]
+brew install ditaa
+# org_gcr_2017-05-12_mara_6E1474FB-6E85-4D0C-BC36-913CD2882548 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_4C3BDEF1-5651-49FA-B627-A858E52A0888][org_gcr_2017-05-12_mara_4C3BDEF1-5651-49FA-B627-A858E52A0888]]
+brew install plantuml
+# org_gcr_2017-05-12_mara_4C3BDEF1-5651-49FA-B627-A858E52A0888 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_921EC70F-F3B3-4D5A-8EEA-1FFCD83CCFC3][org_gcr_2017-05-12_mara_921EC70F-F3B3-4D5A-8EEA-1FFCD83CCFC3]]
+brew install graphviz
+# org_gcr_2017-05-12_mara_921EC70F-F3B3-4D5A-8EEA-1FFCD83CCFC3 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_7A14BC39-51C0-4656-B862-B13F226BA98D][org_gcr_2017-05-12_mara_7A14BC39-51C0-4656-B862-B13F226BA98D]]
+brew install figlet
+# org_gcr_2017-05-12_mara_7A14BC39-51C0-4656-B862-B13F226BA98D ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-12T08-06-00-05-00_cosmicality_6949DCFE-4E10-41D7-813A-EBF737C4AD17][org_gcr_2018-09-12T08-06-00-05-00_cosmicality_6949DCFE-4E10-41D7-813A-EBF737C4AD17]]
+brew install toilet
+# org_gcr_2018-09-12T08-06-00-05-00_cosmicality_6949DCFE-4E10-41D7-813A-EBF737C4AD17 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-11-04_mara_3DCBCE60-F036-49ED-999C-B972AF10C1E7][org_gcr_2017-11-04_mara_3DCBCE60-F036-49ED-999C-B972AF10C1E7]]
+brew install exiftool
+# org_gcr_2017-11-04_mara_3DCBCE60-F036-49ED-999C-B972AF10C1E7 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_DF529935-83C8-4FC4-8661-79D0DFB0C042][org_gcr_2017-05-12_mara_DF529935-83C8-4FC4-8661-79D0DFB0C042]]
 brew install libxml2
 # org_gcr_2017-05-12_mara_DF529935-83C8-4FC4-8661-79D0DFB0C042 ends here
@@ -69,14 +81,6 @@ brew install tree
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_4C14BEB6-4484-49FD-BC28-C7D935FE1AA5][org_gcr_2017-05-12_mara_4C14BEB6-4484-49FD-BC28-C7D935FE1AA5]]
 brew install archey
 # org_gcr_2017-05-12_mara_4C14BEB6-4484-49FD-BC28-C7D935FE1AA5 ends here
-
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_7A14BC39-51C0-4656-B862-B13F226BA98D][org_gcr_2017-05-12_mara_7A14BC39-51C0-4656-B862-B13F226BA98D]]
-brew install figlet
-# org_gcr_2017-05-12_mara_7A14BC39-51C0-4656-B862-B13F226BA98D ends here
-
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-12T08-06-00-05-00_cosmicality_6949DCFE-4E10-41D7-813A-EBF737C4AD17][org_gcr_2018-09-12T08-06-00-05-00_cosmicality_6949DCFE-4E10-41D7-813A-EBF737C4AD17]]
-brew install toilet
-# org_gcr_2018-09-12T08-06-00-05-00_cosmicality_6949DCFE-4E10-41D7-813A-EBF737C4AD17 ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_F613FAE4-87A5-4922-B1DE-D2114686FDD3][org_gcr_2017-05-12_mara_F613FAE4-87A5-4922-B1DE-D2114686FDD3]]
 brew install lame
@@ -102,10 +106,6 @@ brew install rename
 brew cask install djview
 # org_gcr_2017-10-21_mara_7745761B-ED11-48FD-9E73-A9AA38DFB70D ends here
 
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-11-04_mara_3DCBCE60-F036-49ED-999C-B972AF10C1E7][org_gcr_2017-11-04_mara_3DCBCE60-F036-49ED-999C-B972AF10C1E7]]
-brew install exiftool
-# org_gcr_2017-11-04_mara_3DCBCE60-F036-49ED-999C-B972AF10C1E7 ends here
-
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-04-25T02-34-33-05-00_mara_62A77131-8ECC-48C7-B13D-D1456A708266][org_gcr_2018-04-25T02-34-33-05-00_mara_62A77131-8ECC-48C7-B13D-D1456A708266]]
 brew install qpdf
 # org_gcr_2018-04-25T02-34-33-05-00_mara_62A77131-8ECC-48C7-B13D-D1456A708266 ends here
@@ -117,3 +117,7 @@ brew install uni2ascii
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E][org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E]]
 cry "Script is done"
 # org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-02-27T18-39-08-06-00_cosmicality_3D8C44F0-5DDC-401C-9348-631528E9A816][org_gcr_2019-02-27T18-39-08-06-00_cosmicality_3D8C44F0-5DDC-401C-9348-631528E9A816]]
+brew install gifsicle
+# org_gcr_2019-02-27T18-39-08-06-00_cosmicality_3D8C44F0-5DDC-401C-9348-631528E9A816 ends here

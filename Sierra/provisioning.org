@@ -1636,26 +1636,6 @@ brew cask install java8
 #+begin_src sh
 brew install maven
 #+end_src
-***** ditaa
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:E633B5AE-FD35-4911-9F38-59711EAB243B
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_6E1474FB-6E85-4D0C-BC36-913CD2882548
-#+BEGIN_SRC sh
-brew install ditaa
-#+END_SRC
-
-***** plantuml
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:A7FAF763-C298-485F-AA88-4BB71E10EDA2
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_4C3BDEF1-5651-49FA-B627-A858E52A0888
-#+BEGIN_SRC sh
-brew install plantuml
-#+END_SRC
-
 ***** languagetool
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:540336F1-B48D-421A-A473-96880172FB69
@@ -1672,14 +1652,6 @@ brew install languagetool
 #+NAME: org_gcr_2017-05-12_mara_60CE855B-D70B-415C-8850-BE34B07754E3
 #+BEGIN_SRC sh
 brew install aspell -all
-#+END_SRC
-***** graphviz
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:C2CB2DCC-754D-410A-90E2-CABDD4CC0BEC
-:END:
-#+NAME: org_gcr_2017-05-12_mara_921EC70F-F3B3-4D5A-8EEA-1FFCD83CCFC3
-#+BEGIN_SRC sh
-brew install graphviz
 #+END_SRC
 ***** pandoc
 :PROPERTIES:
@@ -1706,29 +1678,113 @@ brew install markdown
 #+BEGIN_SRC sh
 brew cask install marked
 #+END_SRC
-***** ImageMagic
+***** Graphics
+:PROPERTIES:
+:ID:       org_gcr_2019-02-27T18-39-08-06-00_cosmicality:1968B669-E751-4C64-B6C8-63DC0C9C6F13
+:END:
+****** ImageMagic
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:C09026A2-7FF4-472C-9D4B-669A4C69CD2B
 :END:
+
 #+NAME: org_gcr_2017-05-12_mara_0AF38E91-A81B-4D28-A834-0DF26F3898E3
 #+BEGIN_SRC sh
 brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
 #+END_SRC
-***** icoutils
+
+****** Scrot
+:PROPERTIES:
+:ID:       org_gcr_2019-02-27T18-39-08-06-00_cosmicality:AD4F1C7C-A423-4C10-B13E-DEEAD7074286
+:END:
+
+****** Gifsicle
+:PROPERTIES:
+:ID:       org_gcr_2019-02-27T18-39-08-06-00_cosmicality:AE624EDC-B2AD-4A81-90AF-D54CD37AAC92
+:END:
+
+#+name: org_gcr_2019-02-27T18-39-08-06-00_cosmicality_3D8C44F0-5DDC-401C-9348-631528E9A816
+#+begin_src shell
+brew install gifsicle
+#+end_src
+
+****** GIMP
+:PROPERTIES:
+:ID:       org_gcr_2019-02-27T18-39-08-06-00_cosmicality:901949A6-1BA1-49EE-8177-3D595C3D5102
+:END:
+
+****** icoutils
 :PROPERTIES:
 :ID:       org_gcr_2018-03-23T12-00-28-05-00_mara:9218E86D-B71F-4D62-BF14-297F52A5A8D8
 :END:
+
 #+name: org_gcr_2018-03-23T12-00-28-05-00_mara_E1EC5C26-75A4-444D-9D76-722808D6FE23
 #+begin_src sh
 brew install icoutils
 #+end_src
-***** povray
+
+****** povray
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:1BF19A26-CAF1-4A15-B468-975B2AAE3618
 :END:
+
 #+NAME: org_gcr_2017-05-12_mara_02A7BE9E-D9BD-4BBD-BC55-094C22F8D8B9
 #+BEGIN_SRC sh
 brew install povray --with-openexr
+#+END_SRC
+
+****** ditaa
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:E633B5AE-FD35-4911-9F38-59711EAB243B
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_6E1474FB-6E85-4D0C-BC36-913CD2882548
+#+BEGIN_SRC sh
+brew install ditaa
+#+END_SRC
+
+****** plantuml
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:A7FAF763-C298-485F-AA88-4BB71E10EDA2
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_4C3BDEF1-5651-49FA-B627-A858E52A0888
+#+BEGIN_SRC sh
+brew install plantuml
+#+END_SRC
+
+****** graphviz
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:C2CB2DCC-754D-410A-90E2-CABDD4CC0BEC
+:END:
+#+NAME: org_gcr_2017-05-12_mara_921EC70F-F3B3-4D5A-8EEA-1FFCD83CCFC3
+#+BEGIN_SRC sh
+brew install graphviz
+#+END_SRC
+****** figlet
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:7540AFCB-D93D-48B1-93C3-379E4D90250C
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_7A14BC39-51C0-4656-B862-B13F226BA98D
+#+BEGIN_SRC sh
+brew install figlet
+#+END_SRC
+
+****** toilet
+:PROPERTIES:
+:ID:       org_gcr_2018-09-12T14-42-11-05-00_cosmicality:98F2FCDA-7FE2-4CA9-A198-2E58ABB24737
+:END:
+#+name: org_gcr_2018-09-12T08-06-00-05-00_cosmicality_6949DCFE-4E10-41D7-813A-EBF737C4AD17
+#+begin_src sh
+brew install toilet
+#+end_src
+****** exiftool
+:PROPERTIES:
+:ID:       org_gcr_2017-11-04_mara:FB3E8377-EB76-48F0-AB54-ED25AC6991FA
+:END:
+#+NAME: org_gcr_2017-11-04_mara_3DCBCE60-F036-49ED-999C-B972AF10C1E7
+#+BEGIN_SRC sh
+brew install exiftool
 #+END_SRC
 ***** xmllint
 :PROPERTIES:
@@ -1793,24 +1849,6 @@ brew install tree
 brew install archey
 #+END_SRC
 
-***** figlet
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:7540AFCB-D93D-48B1-93C3-379E4D90250C
-:END:
-
-#+NAME: org_gcr_2017-05-12_mara_7A14BC39-51C0-4656-B862-B13F226BA98D
-#+BEGIN_SRC sh
-brew install figlet
-#+END_SRC
-
-***** toilet
-:PROPERTIES:
-:ID:       org_gcr_2018-09-12T14-42-11-05-00_cosmicality:98F2FCDA-7FE2-4CA9-A198-2E58ABB24737
-:END:
-#+name: org_gcr_2018-09-12T08-06-00-05-00_cosmicality_6949DCFE-4E10-41D7-813A-EBF737C4AD17
-#+begin_src sh
-brew install toilet
-#+end_src
 ***** LAME
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:EAEC5141-5F69-4B55-A5E2-2654568DCFB4
@@ -1860,14 +1898,6 @@ brew install rename
 #+NAME: org_gcr_2017-10-21_mara_7745761B-ED11-48FD-9E73-A9AA38DFB70D
 #+BEGIN_SRC sh
 brew cask install djview
-#+END_SRC
-***** exiftool
-:PROPERTIES:
-:ID:       org_gcr_2017-11-04_mara:FB3E8377-EB76-48F0-AB54-ED25AC6991FA
-:END:
-#+NAME: org_gcr_2017-11-04_mara_3DCBCE60-F036-49ED-999C-B972AF10C1E7
-#+BEGIN_SRC sh
-brew install exiftool
 #+END_SRC
 ***** qpdf
 :PROPERTIES:
