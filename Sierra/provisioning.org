@@ -1712,6 +1712,11 @@ brew install gifsicle
 :ID:       org_gcr_2019-02-27T18-39-08-06-00_cosmicality:901949A6-1BA1-49EE-8177-3D595C3D5102
 :END:
 
+#+name: org_gcr_2019-02-27T18-39-08-06-00_cosmicality_06C41F80-D210-415A-B2FE-D3B699416E6D
+#+begin_src shell
+brew cask install gimp
+#+end_src
+
 ****** icoutils
 :PROPERTIES:
 :ID:       org_gcr_2018-03-23T12-00-28-05-00_mara:9218E86D-B71F-4D62-BF14-297F52A5A8D8

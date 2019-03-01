@@ -121,3 +121,7 @@ cry "Script is done"
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-02-27T18-39-08-06-00_cosmicality_3D8C44F0-5DDC-401C-9348-631528E9A816][org_gcr_2019-02-27T18-39-08-06-00_cosmicality_3D8C44F0-5DDC-401C-9348-631528E9A816]]
 brew install gifsicle
 # org_gcr_2019-02-27T18-39-08-06-00_cosmicality_3D8C44F0-5DDC-401C-9348-631528E9A816 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-02-27T18-39-08-06-00_cosmicality_06C41F80-D210-415A-B2FE-D3B699416E6D][org_gcr_2019-02-27T18-39-08-06-00_cosmicality_06C41F80-D210-415A-B2FE-D3B699416E6D]]
+brew cask install gimp
+# org_gcr_2019-02-27T18-39-08-06-00_cosmicality_06C41F80-D210-415A-B2FE-D3B699416E6D ends here
