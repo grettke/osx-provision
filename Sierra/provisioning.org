@@ -64,7 +64,7 @@
     - Don't use location for timezone
     - Don't allow AppleID to reset this password
   - Disallow user analytics reporting.
-  - Don't allow Siri
+  - Allow Siri
 - Maybe install software updates, or do it later.
 - Install Google Chrome (manually)
 - Development Tools
@@ -204,20 +204,28 @@ diskutil unmount /dev/disk0s8
           - Everything else is: NO
   - Sound
     - Show volume in menubar
+  - Startup Disk: *NA*
   - iCloud: *NA*
   - Internet Accounts: *NA*
-  - Extensions: *NA*
+  - App Store: *NA*
   - Network: *NA*
   - Bluetooth *(Host)*
     - Show in menu bar
+  - Extensions: *NA*
   - Sharing: *NA*
   - Users & Groups: Enable Guest User without Parental Controls.
+  - Siri
+    - Enable Siri: Yes
+    - Language: English (US)
+    - Siri Voice: Australian Female
+    - Voice Feedback: On
+    - Mic Input: Internal Microphone
+    - Keyboard Shortcut: Hold Command Space
+    - Show Siri in menu bar: NO
   - Parental Controls: *NA*
-  - App Store: *NA*
   - Date & Time: *NA*
     - Time Zone
       - YES Set time zone automatically using current location.
-  - Startup Disk: *NA*
   - Time Machine: *NA*
   - Accessibility
     - Display
