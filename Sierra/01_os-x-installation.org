@@ -77,7 +77,7 @@ diskutil unmount /dev/disk0s8
     - Auto hide/show dock: Yes
     - Show indicator for open apps: Yes
   - Mission Control
-    - Displays have separate spaces: NO
+    - Displays have separate spaces: YES
   - Language & Region: *NA*
   - Security & Privacy: *NA*
   - Spotlight
