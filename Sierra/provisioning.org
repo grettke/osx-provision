@@ -1692,11 +1692,6 @@ brew cask install marked
 brew install imagemagick --with-fftw --with-fontconfig --with-webp --with-x11
 #+END_SRC
 
-****** Scrot
-:PROPERTIES:
-:ID:       org_gcr_2019-02-27T18-39-08-06-00_cosmicality:AD4F1C7C-A423-4C10-B13E-DEEAD7074286
-:END:
-
 ****** Gifsicle
 :PROPERTIES:
 :ID:       org_gcr_2019-02-27T18-39-08-06-00_cosmicality:AE624EDC-B2AD-4A81-90AF-D54CD37AAC92
