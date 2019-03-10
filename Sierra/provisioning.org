@@ -1146,6 +1146,16 @@ brew install joe
 brew install pwgen
 #+end_src
 
+****** GNU Tar
+:PROPERTIES:
+:ID:       org_gcr_2019-03-09T15-54-19-06-00_cosmicality:EB58F894-A396-407E-84DE-E639B7001123
+:END:
+
+#+name: org_gcr_2019-03-09T15-54-19-06-00_cosmicality_966E71A7-08B3-46D7-B3D4-1F844606BF6B
+#+begin_src sh
+brew install gnu-tar
+#+end_src
+
 ****** Complete
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:9C6C763C-5676-407E-8C14-77B2D6615873
@@ -3745,6 +3755,7 @@ Separate them to allow for easier copy-pasting.
 
 #+NAME: org_gcr_2017-05-12_mara_7DF422E7-EF5D-4D66-841A-F55AE00F0554
 #+begin_src sh
+
 ssh -T bitbucket-`whoami`
 read -p "Did it work? If not, fix it. [hit enter to continue]"
 #+end_src

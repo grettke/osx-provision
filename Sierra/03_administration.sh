@@ -112,6 +112,10 @@ brew install joe
 brew install pwgen
 # org_gcr_2019-01-14T09-58-00-06-00_cosmicality_BC3E5845-FE3A-4BA1-B00F-45084C5D7BAA ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-03-09T15-54-19-06-00_cosmicality_966E71A7-08B3-46D7-B3D4-1F844606BF6B][org_gcr_2019-03-09T15-54-19-06-00_cosmicality_966E71A7-08B3-46D7-B3D4-1F844606BF6B]]
+brew install gnu-tar
+# org_gcr_2019-03-09T15-54-19-06-00_cosmicality_966E71A7-08B3-46D7-B3D4-1F844606BF6B ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB][org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB]]
 echo "Script complete"
 # org_gcr_2017-05-12_mara_29BF003F-8B3B-499D-BD71-DEB8B37616FB ends here
