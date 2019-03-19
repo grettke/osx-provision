@@ -101,7 +101,7 @@ rm -rf ~/src/auto-capitalize
 rm -rf ~/src/corporate-bs-generator
 rm -rf ~/src/org-utf-to-xetex
 rm -rf ~/src/universal-emotions-emoticons
-rm -rf ~/src/org-utf-to-xetex
+rm -rf ~/src/affect-vs-effect
 rm -rf ~/src/megawin
 rm -rf ~/src/list
 rm -rf ~/src/hardware
@@ -119,7 +119,7 @@ git clone github-`whoami`:grettke/solarized-emacs.git
 git clone github-`whoami`:grettke/corporate-bs-generator.git
 git clone github-`whoami`:grettke/org-utf-to-xetex.git
 git clone github-`whoami`:grettke/universal-emotions-emoticons.git
-git clone github-`whoami`:grettke/org-utf-to-xetex.git
+git clone github-`whoami`:grettke/affect-vs-effect.git
 git clone github-`whoami`:grettke/megawin.git
 git clone https://github.com/yuutayamada/auto-capitalize-el.git auto-capitalize
 git clone gitlab-`whoami`:grettke/list.git
