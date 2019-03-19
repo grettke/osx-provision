@@ -2777,7 +2777,7 @@ alias emacs="open /usr/local/opt/emacs-mac/Emacs.app --new --args $1"
 #+END_SRC
 
 #+NAME: org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5
-#+BEGIN_SRC sh
+#+BEGIN_SRC sh :tangle no
 brew install emacs \
      --with-cocoa \
      --with-imagemagick@6 \
@@ -3048,6 +3048,13 @@ Steps
 :header-args: :tangle "15_manual.org"
 :ID:       org_gcr_2017-05-12_mara:BB9E3D7F-B9C2-4545-BE21-D612B37CFED2
 :END:
+**** Emacs
+:PROPERTIES:
+:ID:       org_gcr_2019-03-18T23-21-59-05-00_cosmicality:E89168AC-A5C4-40AE-BFB3-46F51264BF4D
+:END:
+
+Install the correct version for [[https://emacsformacosx.com/][Mac]].
+
 **** WNW
 :PROPERTIES:
 :ID:       org_gcr_2018-11-23T20-53-25-06-00_cosmicality:965130AA-5094-461B-814D-63F1D493AF11
@@ -3900,7 +3907,7 @@ rm -rf ~/src/auto-capitalize
 rm -rf ~/src/corporate-bs-generator
 rm -rf ~/src/org-utf-to-xetex
 rm -rf ~/src/universal-emotions-emoticons
-rm -rf ~/src/org-utf-to-xetex
+rm -rf ~/src/affect-vs-effect
 rm -rf ~/src/megawin
 rm -rf ~/src/list
 rm -rf ~/src/hardware
@@ -3918,7 +3925,7 @@ git clone github-`whoami`:grettke/solarized-emacs.git
 git clone github-`whoami`:grettke/corporate-bs-generator.git
 git clone github-`whoami`:grettke/org-utf-to-xetex.git
 git clone github-`whoami`:grettke/universal-emotions-emoticons.git
-git clone github-`whoami`:grettke/org-utf-to-xetex.git
+git clone github-`whoami`:grettke/affect-vs-effect.git
 git clone github-`whoami`:grettke/megawin.git
 git clone https://github.com/yuutayamada/auto-capitalize-el.git auto-capitalize
 git clone gitlab-`whoami`:grettke/list.git

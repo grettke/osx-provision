@@ -57,19 +57,6 @@ npm install -g jshint
 brew install gnu-apl
 # org_gcr_2017-05-12_mara_FACDF6BA-3CAA-4265-B1B3-563FF5D60151 ends here
 
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5][org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5]]
-brew install emacs \
-     --with-cocoa \
-     --with-imagemagick@6 \
-     --with-librsvg \
-     --with-mailutils \
-     --with-modules
-rm $(brew --prefix)/bin/emacs
-ln -s $(brew --prefix emacs)/bin/emacs $(brew --prefix)/bin/emacs
-rm $(brew --prefix)/bin/emacsclient
-ln -s $(brew --prefix emacs)/bin/emacsclient $(brew --prefix)/bin/emacsclient
-# org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5 ends here
-
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-07-30_mara_1F4656FC-2D17-4C4D-975B-DBC94ADAD23A][org_gcr_2017-07-30_mara_1F4656FC-2D17-4C4D-975B-DBC94ADAD23A]]
 brew install go
 brew install gox
