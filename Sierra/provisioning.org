@@ -1077,19 +1077,20 @@ Install them automatically.
 
 #+NAME: org_gcr_2017-05-12_mara_57293DFD-7465-4AE6-9FCB-AF240AFEA14C
 #+BEGIN_SRC sh
-brew cask install font-dejavu-sans
-brew cask install font-fira-mono
-brew cask install font-fira-sans
-brew cask install font-fontawesome
-brew cask install font-awesome-terminal-fonts
-brew cask install font-han-nom-a
-brew cask install font-icomoon
-brew cask install font-mfizz
-brew cask install font-montserrat
-brew cask install font-quivira
-brew cask install font-symbola
-brew cask install font-unifrakturcook
-brew cask install font-unifrakturmaguntia
+brew cask install \
+     font-awesome-terminal-fonts \
+     font-dejavu-sans \
+     font-fira-mono \
+     font-fira-sans \
+     font-fontawesome \
+     font-han-nom-a \
+     font-icomoon \
+     font-mfizz \
+     font-montserrat \
+     font-quivira \
+     font-symbola \
+     font-unifrakturcook \
+     font-unifrakturmaguntia 
 #+END_SRC
 
 Utilities.

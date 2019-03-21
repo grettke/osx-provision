@@ -70,19 +70,20 @@ brew tap caskroom/fonts
 # org_gcr_2017-05-12_mara_C4A8F02D-CF13-414E-B515-A9E6ADE8E5FC ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_57293DFD-7465-4AE6-9FCB-AF240AFEA14C][org_gcr_2017-05-12_mara_57293DFD-7465-4AE6-9FCB-AF240AFEA14C]]
-brew cask install font-dejavu-sans
-brew cask install font-fira-mono
-brew cask install font-fira-sans
-brew cask install font-fontawesome
-brew cask install font-awesome-terminal-fonts
-brew cask install font-han-nom-a
-brew cask install font-icomoon
-brew cask install font-mfizz
-brew cask install font-montserrat
-brew cask install font-quivira
-brew cask install font-symbola
-brew cask install font-unifrakturcook
-brew cask install font-unifrakturmaguntia
+brew cask install \
+     font-awesome-terminal-fonts \
+     font-dejavu-sans \
+     font-fira-mono \
+     font-fira-sans \
+     font-fontawesome \
+     font-han-nom-a \
+     font-icomoon \
+     font-mfizz \
+     font-montserrat \
+     font-quivira \
+     font-symbola \
+     font-unifrakturcook \
+     font-unifrakturmaguntia
 # org_gcr_2017-05-12_mara_57293DFD-7465-4AE6-9FCB-AF240AFEA14C ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-03-21T11-56-35-05-00_mara_9769893B-7CC8-4097-A9DF-19BB6532D1DA][org_gcr_2018-03-21T11-56-35-05-00_mara_9769893B-7CC8-4097-A9DF-19BB6532D1DA]]
