@@ -1,6 +1,14 @@
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54][org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54]]
+brew cask install deluge
+# org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A][org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A]]
+brew install speedtest_cli
+# org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_9CDCD936-A30A-4712-8A5F-780D8810FBDE][org_gcr_2017-05-12_mara_9CDCD936-A30A-4712-8A5F-780D8810FBDE]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-  brew cask install skype
+    brew cask install skype
 else
   echo "skype: Only install on hosts"
 fi
@@ -8,7 +16,7 @@ fi
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-13T21-22-30-05-00_cosmicality_D0AD1AFD-A6FA-46FF-8716-AC0E747D3028][org_gcr_2018-09-13T21-22-30-05-00_cosmicality_D0AD1AFD-A6FA-46FF-8716-AC0E747D3028]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-  brew cask install textual
+    brew cask install textual
 else
   echo "textual: Only install on hosts"
 fi
@@ -20,7 +28,7 @@ brew cask install pulse-sms
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_9217F137-CCF7-4B66-AE32-6ED72D2D629F][org_gcr_2017-05-12_mara_9217F137-CCF7-4B66-AE32-6ED72D2D629F]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-  brew cask install whatsapp
+    brew cask install whatsapp
 else
   echo "whatsapp: Only install on hosts"
 fi
@@ -28,7 +36,7 @@ fi
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-26T11-07-19-05-00_cosmicality_9E9EA4B2-C8CD-4493-937C-4389153F7E05][org_gcr_2018-09-26T11-07-19-05-00_cosmicality_9E9EA4B2-C8CD-4493-937C-4389153F7E05]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-  brew cask install slack
+    brew cask install slack
 else
   echo "slack: Only install on hosts"
 fi
@@ -36,7 +44,7 @@ fi
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_1F291E61-A8F1-43BE-A839-0E6997099AD4][org_gcr_2017-05-12_mara_1F291E61-A8F1-43BE-A839-0E6997099AD4]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-  brew cask install dropbox
+    brew cask install dropbox
 else
   echo "dropbox: Only install on hosts"
 fi
@@ -138,11 +146,3 @@ brew cask install jabref
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-12-13T12-04-08-06-00_cosmicality_9CDEA100-5E51-443D-9D4C-F003455A92C2][org_gcr_2018-12-13T12-04-08-06-00_cosmicality_9CDEA100-5E51-443D-9D4C-F003455A92C2]]
 brew cask install libreoffice
 # org_gcr_2018-12-13T12-04-08-06-00_cosmicality_9CDEA100-5E51-443D-9D4C-F003455A92C2 ends here
-
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54][org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54]]
-brew cask install deluge
-# org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54 ends here
-
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A][org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A]]
-brew install speedtest_cli
-# org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A ends here
