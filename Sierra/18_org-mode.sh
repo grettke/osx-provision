@@ -3,6 +3,7 @@ rm -rf ~/src/org-mode
 cd ~/src
 echo `date +%Y-%m-%dT%H:%M:%S%z`
 git clone https://code.orgmode.org/bzg/org-mode.git
+git fetch && git fetch --tags
 echo `date +%Y-%m-%dT%H:%M:%S%z`
 cd org-mode
 make autoloads
