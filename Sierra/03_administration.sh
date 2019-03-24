@@ -71,16 +71,19 @@ brew tap caskroom/fonts
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_57293DFD-7465-4AE6-9FCB-AF240AFEA14C][org_gcr_2017-05-12_mara_57293DFD-7465-4AE6-9FCB-AF240AFEA14C]]
 brew cask install \
+     font-anonymous-pro \
      font-awesome-terminal-fonts \
      font-dejavu-sans \
      font-fira-mono \
      font-fira-sans \
      font-fontawesome \
+     font-hack \
      font-han-nom-a \
      font-icomoon \
      font-mfizz \
      font-montserrat \
      font-quivira \
+     font-source-code-pro \
      font-symbola \
      font-unifrakturcook \
      font-unifrakturmaguntia
