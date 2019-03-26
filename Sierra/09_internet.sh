@@ -107,6 +107,11 @@ brew cask install scribus
 brew install librsvg
 # org_gcr_2017-07-11_mara_AB43CB70-381C-4C4D-AF4C-CC7C895D1848 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-03-23T18-53-15-05-00_cosmicality_67C6287C-F33F-4F7D-B8CF-365C6B2FEABA][org_gcr_2019-03-23T18-53-15-05-00_cosmicality_67C6287C-F33F-4F7D-B8CF-365C6B2FEABA]]
+b
+brew install libxml2
+# org_gcr_2019-03-23T18-53-15-05-00_cosmicality_67C6287C-F33F-4F7D-B8CF-365C6B2FEABA ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-03-31T20-45-48-05-00_mara_69E779D8-21A0-4275-ABFB-2A59DF6EC194][org_gcr_2018-03-31T20-45-48-05-00_mara_69E779D8-21A0-4275-ABFB-2A59DF6EC194]]
 brew install jpegoptim
 # org_gcr_2018-03-31T20-45-48-05-00_mara_69E779D8-21A0-4275-ABFB-2A59DF6EC194 ends here

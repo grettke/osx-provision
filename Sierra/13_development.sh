@@ -57,6 +57,18 @@ npm install -g jshint
 brew install gnu-apl
 # org_gcr_2017-05-12_mara_FACDF6BA-3CAA-4265-B1B3-563FF5D60151 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-03-23T18-53-15-05-00_cosmicality_9D3873FA-A7E0-4CAE-A7E9-5B956A2AAFF1][org_gcr_2019-03-23T18-53-15-05-00_cosmicality_9D3873FA-A7E0-4CAE-A7E9-5B956A2AAFF1]]
+brew install autoconf
+# org_gcr_2019-03-23T18-53-15-05-00_cosmicality_9D3873FA-A7E0-4CAE-A7E9-5B956A2AAFF1 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-03-23T18-53-15-05-00_cosmicality_ECCC8563-DF29-482E-8FFD-5AD0A8619DFC][org_gcr_2019-03-23T18-53-15-05-00_cosmicality_ECCC8563-DF29-482E-8FFD-5AD0A8619DFC]]
+brew install automake
+# org_gcr_2019-03-23T18-53-15-05-00_cosmicality_ECCC8563-DF29-482E-8FFD-5AD0A8619DFC ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-03-23T18-53-15-05-00_cosmicality_ADA70219-7C10-4F0A-9106-AFD641D604D4][org_gcr_2019-03-23T18-53-15-05-00_cosmicality_ADA70219-7C10-4F0A-9106-AFD641D604D4]]
+brew install gnutls
+# org_gcr_2019-03-23T18-53-15-05-00_cosmicality_ADA70219-7C10-4F0A-9106-AFD641D604D4 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-07-30_mara_1F4656FC-2D17-4C4D-975B-DBC94ADAD23A][org_gcr_2017-07-30_mara_1F4656FC-2D17-4C4D-975B-DBC94ADAD23A]]
 brew install go
 brew install gox

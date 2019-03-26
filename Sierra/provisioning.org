@@ -2202,6 +2202,17 @@ For ~rsvg-convert~.
 #+BEGIN_SRC sh
 brew install librsvg
 #+END_SRC
+***** libxml2
+:PROPERTIES:
+:ID:       org_gcr_2019-03-23T18-53-15-05-00_cosmicality:BE29351E-723A-4167-B378-E0DC8FD8ED7E
+:END:
+
+#+name: org_gcr_2019-03-23T18-53-15-05-00_cosmicality_67C6287C-F33F-4F7D-B8CF-365C6B2FEABA
+#+begin_src sh
+b
+brew install libxml2
+#+end_src
+
 ***** jpegoptim
 :PROPERTIES:
 :ID:       org_gcr_2018-03-31T20-45-48-05-00_mara:23F5C914-9092-4402-B248-0CCF38306022
@@ -2773,26 +2784,41 @@ brew install gnu-apl
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:9CE47B04-32B9-4C8F-A3D8-D5E82BE06D47
 :END:
-Set up this alias:
 
-#+NAME: org_gcr_2017-07-13_mara_8D285163-3967-4ABE-81F8-5F66CB250184
-#+BEGIN_SRC sh :tangle no
-alias emacs="open /usr/local/opt/emacs-mac/Emacs.app --new --args $1"
-#+END_SRC
+Build the version you want in the manual section.
 
-#+NAME: org_gcr_2017-05-12_mara_B4963484-93A3-4298-9852-8724504C53A5
-#+BEGIN_SRC sh :tangle no
-brew install emacs \
-     --with-cocoa \
-     --with-imagemagick@6 \
-     --with-librsvg \
-     --with-mailutils \
-     --with-modules
-rm $(brew --prefix)/bin/emacs
-ln -s $(brew --prefix emacs)/bin/emacs $(brew --prefix)/bin/emacs
-rm $(brew --prefix)/bin/emacsclient
-ln -s $(brew --prefix emacs)/bin/emacsclient $(brew --prefix)/bin/emacsclient
-#+END_SRC
+***** Autoconf
+:PROPERTIES:
+:ID:       org_gcr_2019-03-23T18-53-15-05-00_cosmicality:488733AE-B0B1-43F3-B1B4-F076768AAB2F
+:END:
+
+#+name: org_gcr_2019-03-23T18-53-15-05-00_cosmicality_9D3873FA-A7E0-4CAE-A7E9-5B956A2AAFF1
+#+begin_src sh
+brew install autoconf
+#+end_src
+
+***** Automake
+:PROPERTIES:
+:ID:       org_gcr_2019-03-23T18-53-15-05-00_cosmicality:EF02AA9A-AB56-4349-AAAB-416CAA32EA7F
+:END:
+
+#+name: org_gcr_2019-03-23T18-53-15-05-00_cosmicality_ECCC8563-DF29-482E-8FFD-5AD0A8619DFC
+#+begin_src sh
+brew install automake
+#+end_src
+
+***** gnutls
+:PROPERTIES:
+:ID:       org_gcr_2019-03-23T18-53-15-05-00_cosmicality:2C8E9AC3-555B-4B0E-A946-9616E323B819
+:END:
+
+#+name: org_gcr_2019-03-23T18-53-15-05-00_cosmicality_6D9D5484-3CA9-4397-8F89-C4829BE4CCA9
+
+#+NAME: org_gcr_2019-03-23T18-53-15-05-00_cosmicality_ADA70219-7C10-4F0A-9106-AFD641D604D4
+#+begin_src sh
+brew install gnutls
+#+end_src
+
 ***** go
 :PROPERTIES:
 :ID:       org_gcr_2017-07-30_mara:125CE9C7-3173-4F82-B27D-6E0F64042F3E
@@ -3052,12 +3078,6 @@ Steps
 :header-args: :tangle "15_manual.org"
 :ID:       org_gcr_2017-05-12_mara:BB9E3D7F-B9C2-4545-BE21-D612B37CFED2
 :END:
-**** Emacs
-:PROPERTIES:
-:ID:       org_gcr_2019-03-18T23-21-59-05-00_cosmicality:E89168AC-A5C4-40AE-BFB3-46F51264BF4D
-:END:
-
-Install the correct version for [[https://emacsformacosx.com/][Mac]].
 
 **** WNW
 :PROPERTIES:
@@ -3524,8 +3544,6 @@ Obvious settings.
     - Restore old size & position after double-clicking again: YES
 #+end_src
 
-#  LocalWords:  BetterSnapTool
-
 **** TeX
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:A0004B01-D7F4-4D4B-A42B-2F20B77D6A0B
@@ -3578,6 +3596,45 @@ The documents say to maybe do the following. I did it.
 sudo mktexlsr
 ,#+end_src
 #+END_SRC
+**** Emacs
+:PROPERTIES:
+:ID:       org_gcr_2019-03-18T23-21-59-05-00_cosmicality:E89168AC-A5C4-40AE-BFB3-46F51264BF4D
+:END:
+
+Build it manually.
+
+Order matters. The build uses Xcode, a bunch of Brew programs and libraries,
+and TeX Live that is installed manually.
+
+#+name: org_gcr_2019-03-23T18-53-15-05-00_cosmicality_75D1045E-C5B0-43DD-BC24-A11CBF45CDAB
+#+begin_src sh :tangle no
+cd ~/src
+rm -rf ./emacs
+git clone git://git.savannah.gnu.org/emacs.git
+cd emacs
+git checkout emacs-25
+PATH="/usr/local/texlive/2018/bin/x86_64-darwin:$PATH"
+gmake configure
+./configure --with-ns CFLAGS="-g3 -O2 -I $(brew --prefix libxml2)/include/libxml2/libxml"
+gmake
+gmake install
+gmake install-info
+#+end_src
+
+Start it like this:
+
+#+name: org_gcr_2019-03-23T18-53-15-05-00_cosmicality_D8BC8FC8-6649-4594-8F2A-A35519CE9F67
+#+begin_src sh :tangle no
+open --new ~/src/emacs/nextstep/Emacs.app --args --debug-init --no-init-file
+#+end_src
+
+Or this
+
+#+name: org_gcr_2019-03-23T18-53-15-05-00_cosmicality_CC582A3B-9C18-4603-B5B1-81BF3A98CFE0
+#+begin_src sh :tangle no
+~/src/emacs/src/emacs --no-init-file
+#+end_src
+
 **** Audacity
 :PROPERTIES:
 :ID:       org_gcr_2018-11-04T02-09-58-06-00_cosmicality:9CCD6F7B-1726-4288-BF7D-45006F17E781
