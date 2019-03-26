@@ -1189,7 +1189,7 @@ echo "Script complete"
     - Import the Solarized dark and light theme
     - The the default theme to light
   - Text
-    - Font: DejaVu Sans Mono: 18
+    - Font: Hack: 18
     - Cursor: block
   - Window
     - Yes: Working directory or document, and path
@@ -3021,7 +3021,7 @@ brew install nedit
         - Now show hard wrap
         - No line numbers
     - Font
-      - Font: DejaVu Sans Mono
+      - Font: Hack
         - Show only monospaced fonts? No
       - Size: 14
       - Fallback: Symbola
@@ -3049,7 +3049,7 @@ brew install nedit
       - Restore .RData: No
       - Save worksapce to .RData: No
     - Appearance
-      - Editor font: DejaVuSansMono
+      - Editor font: Hack
       - Font size: 12
       - Editor theme: Solarized Light
 ,* Rbenv

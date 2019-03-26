@@ -88,7 +88,7 @@
         - Now show hard wrap
         - No line numbers
     - Font
-      - Font: DejaVu Sans Mono
+      - Font: Hack
         - Show only monospaced fonts? No
       - Size: 14
       - Fallback: Symbola
@@ -116,7 +116,7 @@
       - Restore .RData: No
       - Save worksapce to .RData: No
     - Appearance
-      - Editor font: DejaVuSansMono
+      - Editor font: Hack
       - Font size: 12
       - Editor theme: Solarized Light
 * Rbenv

@@ -10,7 +10,7 @@
     - Import the Solarized dark and light theme
     - The the default theme to light
   - Text
-    - Font: DejaVu Sans Mono: 18
+    - Font: Hack: 18
     - Cursor: block
   - Window
     - Yes: Working directory or document, and path
