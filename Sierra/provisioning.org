@@ -3609,16 +3609,16 @@ and TeX Live that is installed manually.
 #+name: org_gcr_2019-03-23T18-53-15-05-00_cosmicality_75D1045E-C5B0-43DD-BC24-A11CBF45CDAB
 #+begin_src sh :tangle no
 cd ~/src
-rm -rf ./emacs
-git clone git://git.savannah.gnu.org/emacs.git
-cd emacs
+rm -rf ./emacs-25
+git clone git://git.savannah.gnu.org/emacs.git emacs-25
+cd emacs-25
 git checkout emacs-25
 PATH="/usr/local/texlive/2018/bin/x86_64-darwin:$PATH"
-gmake configure
-./configure --with-ns CFLAGS="-g3 -O2 -I $(brew --prefix libxml2)/include/libxml2/libxml"
-gmake
-gmake install
-gmake install-info
+mk configure
+./configure
+mk
+mk install
+mk install-info
 #+end_src
 
 Start it like this:
