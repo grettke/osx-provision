@@ -23,7 +23,7 @@ cd ~/git/github-anonymous
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-11-04T02-09-58-06-00_cosmicality_8E2C0260-F2EA-4656-B9F6-E0F374158ABE][org_gcr_2018-11-04T02-09-58-06-00_cosmicality_8E2C0260-F2EA-4656-B9F6-E0F374158ABE]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install karabiner-elements
+  brew cask install karabiner-elements
 else
   echo "karabiner-elements: Only install on hosts"
 fi
@@ -48,7 +48,7 @@ cd
 bash --version
 brew install bash
 if grep "/usr/local/bin/bash" /etc/shells > /dev/null; then
-    echo "brew bash already configured in shells; doing nothing"
+  echo "brew bash already configured in shells; doing nothing"
 else
   sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
   chsh -s /usr/local/bin/bash

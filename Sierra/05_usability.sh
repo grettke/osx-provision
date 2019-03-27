@@ -16,7 +16,7 @@ brew cask install bartender
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_3DA6A9C5-8086-4B61-B38F-A87E6A470345][org_gcr_2017-05-12_mara_3DA6A9C5-8086-4B61-B38F-A87E6A470345]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
-    brew cask install flux
+  brew cask install flux
 else
   echo "flux: Only install on hosts"
 fi
