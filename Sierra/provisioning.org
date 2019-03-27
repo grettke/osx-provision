@@ -3596,44 +3596,15 @@ The documents say to maybe do the following. I did it.
 sudo mktexlsr
 ,#+end_src
 #+END_SRC
+
 **** Emacs
 :PROPERTIES:
 :ID:       org_gcr_2019-03-18T23-21-59-05-00_cosmicality:E89168AC-A5C4-40AE-BFB3-46F51264BF4D
 :END:
 
-Build it manually.
+Install the build from [[https://emacsformacosx.com/builds][EmacsForMacOSX]].
 
-Order matters. The build uses Xcode, a bunch of Brew programs and libraries,
-and TeX Live that is installed manually.
-
-#+name: org_gcr_2019-03-23T18-53-15-05-00_cosmicality_75D1045E-C5B0-43DD-BC24-A11CBF45CDAB
-#+begin_src sh :tangle no
-cd ~/src
-rm -rf ./emacs-25
-git clone git://git.savannah.gnu.org/emacs.git emacs-25
-cd emacs-25
-git checkout emacs-25
-PATH="/usr/local/texlive/2018/bin/x86_64-darwin:$PATH"
-mk configure
-./configure
-mk
-mk install
-mk install-info
-#+end_src
-
-Start it like this:
-
-#+name: org_gcr_2019-03-23T18-53-15-05-00_cosmicality_D8BC8FC8-6649-4594-8F2A-A35519CE9F67
-#+begin_src sh :tangle no
-open --new ~/src/emacs/nextstep/Emacs.app --args --debug-init --no-init-file
-#+end_src
-
-Or this
-
-#+name: org_gcr_2019-03-23T18-53-15-05-00_cosmicality_CC582A3B-9C18-4603-B5B1-81BF3A98CFE0
-#+begin_src sh :tangle no
-~/src/emacs/src/emacs --no-init-file
-#+end_src
+Update the path and the aliases for it.
 
 **** Audacity
 :PROPERTIES:
