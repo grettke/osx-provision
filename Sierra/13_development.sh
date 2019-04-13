@@ -57,6 +57,10 @@ npm install -g jshint
 brew install gnu-apl
 # org_gcr_2017-05-12_mara_FACDF6BA-3CAA-4265-B1B3-563FF5D60151 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-04-13T14-03-50-05-00_cosmicality_37994C84-E3CC-4E99-B5CF-821D5FDDC8AB][org_gcr_2019-04-13T14-03-50-05-00_cosmicality_37994C84-E3CC-4E99-B5CF-821D5FDDC8AB]]
+brew cask install emacs
+# org_gcr_2019-04-13T14-03-50-05-00_cosmicality_37994C84-E3CC-4E99-B5CF-821D5FDDC8AB ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-03-23T18-53-15-05-00_cosmicality_9D3873FA-A7E0-4CAE-A7E9-5B956A2AAFF1][org_gcr_2019-03-23T18-53-15-05-00_cosmicality_9D3873FA-A7E0-4CAE-A7E9-5B956A2AAFF1]]
 brew install autoconf
 # org_gcr_2019-03-23T18-53-15-05-00_cosmicality_9D3873FA-A7E0-4CAE-A7E9-5B956A2AAFF1 ends here

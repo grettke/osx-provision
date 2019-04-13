@@ -2780,12 +2780,24 @@ npm install -g jshint
 #+BEGIN_SRC sh
 brew install gnu-apl
 #+END_SRC
-***** EMACS
+***** Emacs
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:9CE47B04-32B9-4C8F-A3D8-D5E82BE06D47
 :END:
 
-Build the version you want in the manual section.
+Install the build from [[https://emacsformacosx.com/builds][EmacsForMacOSX]].
+
+Update the path and the aliases for it.
+
+Setting up Emacs here went though revisions using Brew for the vanilla
+version, railwaycat port, emacs-plus, and then quitting it altogether to
+manually install the EmacsForMacOSX build. After Brew and Cask merged I
+switched to installing EmacsForMacOSX from Brew.
+
+#+name: org_gcr_2019-04-13T14-03-50-05-00_cosmicality_37994C84-E3CC-4E99-B5CF-821D5FDDC8AB
+#+begin_src sh
+brew cask install emacs
+#+end_src
 
 ***** Autoconf
 :PROPERTIES:
@@ -3596,15 +3608,6 @@ The documents say to maybe do the following. I did it.
 sudo mktexlsr
 ,#+end_src
 #+END_SRC
-
-**** Emacs
-:PROPERTIES:
-:ID:       org_gcr_2019-03-18T23-21-59-05-00_cosmicality:E89168AC-A5C4-40AE-BFB3-46F51264BF4D
-:END:
-
-Install the build from [[https://emacsformacosx.com/builds][EmacsForMacOSX]].
-
-Update the path and the aliases for it.
 
 **** Audacity
 :PROPERTIES:
