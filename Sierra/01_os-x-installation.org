@@ -95,10 +95,11 @@ diskutil unmount /dev/disk0s8
   - Displays *(Host)* \rarr Maximize resolution
   - Energy saver
     - *(Host)*
-      - On power
-        - Display off at 15m
       - On battery, Screen sleep 5m
         - Don't slightly dim the display on battery power
+      - On power
+        - Display off at 15m
+        - Disable Power Nap
     - *(Guest)*
       - Computer sleep: never
   - Keyboard *(Host)*
