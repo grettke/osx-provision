@@ -70,6 +70,10 @@ brew cask install daisydisk
 brew cask install contexts
 # org_gcr_2018-04-12T21-31-52-05-00_mara_B0101C87-2562-4D78-9BC0-11F49488ED1E ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-04-24T18-13-26-05-00_cosmicality_6C4FB56D-9B54-4029-992C-FC0A2BBD08F4][org_gcr_2019-04-24T18-13-26-05-00_cosmicality_6C4FB56D-9B54-4029-992C-FC0A2BBD08F4]]
+brew cask install coconutbattery
+# org_gcr_2019-04-24T18-13-26-05-00_cosmicality_6C4FB56D-9B54-4029-992C-FC0A2BBD08F4 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB][org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB]]
 echo "The Administration is complete."
 echo "Restart your Terminal to pick up the changes."

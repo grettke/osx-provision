@@ -1390,6 +1390,16 @@ brew cask install daisydisk
 #+begin_src sh
 brew cask install contexts
 #+end_src
+***** coconutBattery
+:PROPERTIES:
+:ID:       org_gcr_2019-05-04T21-38-22-05-00_cosmicality:40F8680F-64F4-456D-BE14-ED402D2F6F64
+:END:
+
+#+name: org_gcr_2019-04-24T18-13-26-05-00_cosmicality_6C4FB56D-9B54-4029-992C-FC0A2BBD08F4
+#+begin_src sh
+brew cask install coconutbattery
+#+end_src
+
 ***** Done
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:419E4ADD-30A3-470F-8858-0DA41B95598D
