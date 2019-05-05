@@ -90,6 +90,7 @@ diskutil unmount /dev/disk0s8
       - UN-CHECK Allow Spotlight Suggestions in Look up
     - Privacy
       - Big folders like DropBox or TimeMachine
+      - External disks especially snapshot partitions
   - Notifications: *NA*
   - Displays *(Host)* \rarr Maximize resolution
   - Energy saver
