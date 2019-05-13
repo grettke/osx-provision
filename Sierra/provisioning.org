@@ -173,10 +173,11 @@ diskutil unmount /dev/disk0s8
       - Keyboard
         - Move focus to next window: Command-Option-TAB
       - Screen Shots
+        - Save picture of screen as a file: F13
         - Change each one to a prefix of Control-Command-Option to keys 3 and 4
           - Add Shift to take a selection
       - Services
-        - Disable anything with control keybindings
+        - Disable everything
       - Accessibility: *NA*
   - Mouse
     - *(Host)* Connect Bluetooth mouse
