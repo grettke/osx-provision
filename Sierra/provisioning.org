@@ -1632,9 +1632,10 @@ Granting:
     - Search shortcuts: 3
     - Yes: Allow one mismatched character
   - Command-Tab
-    - There are a lot of defaults so I won't specify them, just leave them alone
-    - Yes: Typing characters starts Fast Search when Panel is visible
-    - Disable the other prefix bindings: command-backtick, option-tab, and option-backtick
+    - Disable all of them
+    - Add a new one for Control-Tab
+    - General settings
+      - Yes: Typing characters starts Fast Search when Panel is visible
   - Number Switcher
     - Change nothing
   - Gestures
