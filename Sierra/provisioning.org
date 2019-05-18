@@ -163,22 +163,17 @@ diskutil unmount /dev/disk0s8
       - NO Use F1,  F2,  etc.  keys as standard function keys
         - Do nothing to the modifier keys, everything will happen in Karabiner-Elements
     - Shortcuts
-      - Launchpad & Dock
-        - Turn Dock Hiding On/Off: Configure dock to appear on mouse-over.
-      - Mission Control
-        - Mission Control: –
-        - Application windows: –
-        - Show Desktop: C-8
-        - Show Dashboard: –
-      - Keyboard
-        - Move focus to next window: Command-Option-TAB
+      - Leave Display alone: retain all defaults
+      - Input Sources
+        - Select next: Control-Alt-Command-=
       - Screen Shots
-        - Save picture of screen as a file: F13
-        - Change each one to a prefix of Control-Command-Option to keys 3 and 4
-          - Add Shift to take a selection
-      - Services
-        - Disable everything
-      - Accessibility: *NA*
+        - Picture as file: F13
+        - Picture as file: Control-Command-Option-Shift-3
+        - Selection as file: Control-Command-Option-4
+        - Selection as file: Control-Command-Option-Shift-4
+      - Spotlight
+        - Show Spot light search: Control-Tab
+      - Everything else uncheck
   - Mouse
     - *(Host)* Connect Bluetooth mouse
     - Tracking Speed
@@ -1634,7 +1629,6 @@ Granting:
     - Yes: Allow one mismatched character
   - Command-Tab
     - Disable all of them
-    - Add a new one for Control-Tab
     - General settings
       - Yes: Typing characters starts Fast Search when Panel is visible
   - Number Switcher

@@ -212,7 +212,6 @@ Granting:
     - Yes: Allow one mismatched character
   - Command-Tab
     - Disable all of them
-    - Add a new one for Control-Tab
     - General settings
       - Yes: Typing characters starts Fast Search when Panel is visible
   - Number Switcher
