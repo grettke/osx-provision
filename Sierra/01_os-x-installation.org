@@ -112,7 +112,7 @@ diskutil unmount /dev/disk0s8
     - Shortcuts
       - Leave Display alone: retain all defaults
       - Input Sources
-        - Select next: Control-Alt-Command-=
+        - Select next: Akt-Command-=
       - Screen Shots
         - Picture as file: F13
         - Picture as file: Control-Command-Option-Shift-3
