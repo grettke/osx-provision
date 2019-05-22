@@ -164,15 +164,6 @@ Granting:
   - Scheduled Scans
     - Daily
 
-* Flycut
-- (Changed from default)
-- Preferences
-  - Launch Flycut on login: yes
-- HotKeys
-  - Key binding: C-M-s-v
-- Appearance
-  - White
-
 * Geekbench
 - Run it.
 - Accept license.
@@ -185,7 +176,8 @@ Granting:
 - Welcome
   - Yes: Launch Context at login
 - Appearance
-  - Theme: Subtle
+  - Theme: Vibrant Dark
+    - Same as Finder
   - Yes: Increase contrast
   - Text size: Large
 - Features
@@ -195,7 +187,7 @@ Granting:
     - Yes: When using multiple displays, use switching workaround
       Yes: Show app icon badges
   - Rules
-    - Group windows: By space
+    - Group windows: Manually
     - Yes: Show running apps which do not have any windows open
   - Sidebar
     - Show sidebar on: No display

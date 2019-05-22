@@ -164,13 +164,11 @@ diskutil unmount /dev/disk0s8
         - Do nothing to the modifier keys, everything will happen in Karabiner-Elements
     - Shortcuts
       - Leave Display alone: retain all defaults
-      - Input Sources
-        - Select next: Alt-Command-=
       - Screen Shots
-        - Picture as file: F13
-        - Picture as file: Control-Command-Option-Shift-3
-        - Selection as file: Control-Command-Option-4
-        - Selection as file: Control-Command-Option-Shift-4
+        - Screen as file: C-M-s-3
+        - Screen to clipboard: C-M-s-S-3
+        - Selection as file: C-M-s-S-4
+        - Selection to clipboard: C-M-s-S-4
       - Spotlight
         - Show Spot light search: Control-Tab
       - Everything else uncheck
@@ -1355,14 +1353,13 @@ brew install terminal-notifier
 #+BEGIN_SRC sh
 brew cask install malwarebytes
 #+END_SRC
-***** Flycut
+
+***** Copy'em Paste
 :PROPERTIES:
-:ID:       org_gcr_2017-11-12_mara:D83D07FB-1C76-4A0A-9016-51370AF4BD3D
+:ID:       org_gcr_2019-05-21T19-27-50-05-00_cosmicality:CC2F6950-233A-4C25-9AF7-F3E37039826E
 :END:
-#+NAME: org_gcr_2017-11-12_mara_978C02D7-9C7B-4B4F-8CC2-298B5329BF60
-#+BEGIN_SRC sh
-brew cask install flycut
-#+END_SRC
+
+See manual install.
 ***** Geekbench
 :PROPERTIES:
 :ID:       org_gcr_2018-01-23_mara:30A9E161-2D43-4B99-A6DE-B87335435D05
@@ -1581,15 +1578,6 @@ Granting:
   - Scheduled Scans
     - Daily
 
-,* Flycut
-- (Changed from default)
-- Preferences
-  - Launch Flycut on login: yes
-- HotKeys
-  - Key binding: C-M-s-v
-- Appearance
-  - White
-
 ,* Geekbench
 - Run it.
 - Accept license.
@@ -1602,7 +1590,8 @@ Granting:
 - Welcome
   - Yes: Launch Context at login
 - Appearance
-  - Theme: Subtle
+  - Theme: Vibrant Dark
+    - Same as Finder
   - Yes: Increase contrast
   - Text size: Large
 - Features
@@ -1612,7 +1601,7 @@ Granting:
     - Yes: When using multiple displays, use switching workaround
       Yes: Show app icon badges
   - Rules
-    - Group windows: By space
+    - Group windows: Manually
     - Yes: Show running apps which do not have any windows open
   - Sidebar
     - Show sidebar on: No display
@@ -3098,6 +3087,22 @@ Steps
 :header-args: :tangle "15_manual.org"
 :ID:       org_gcr_2017-05-12_mara:BB9E3D7F-B9C2-4545-BE21-D612B37CFED2
 :END:
+
+**** Copy'em Paste
+:PROPERTIES:
+:ID:       org_gcr_2019-05-21T19-27-50-05-00_cosmicality:DD1D046E-4A02-4677-B532-2C75638B1A31
+:END:
+
+- Shortcuts During Setup
+  - C-M-s-c: Copy to clipboard
+  - C-M-s-v: Paste from clipbard
+  - C-M-s-S-v: Paste as plain text
+- Preferences
+  - Install helper
+  - Launch at login
+  - Menubar icon: Not color
+  - Window Appearance: Midnight
+  - Window Position: Open near mouse pointer
 
 **** WNW
 :PROPERTIES:

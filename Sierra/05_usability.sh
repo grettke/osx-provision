@@ -54,10 +54,6 @@ brew install terminal-notifier
 brew cask install malwarebytes
 # org_gcr_2017-10-30_mara_F7594669-E656-4276-BCA0-70A239877046 ends here
 
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-11-12_mara_978C02D7-9C7B-4B4F-8CC2-298B5329BF60][org_gcr_2017-11-12_mara_978C02D7-9C7B-4B4F-8CC2-298B5329BF60]]
-brew cask install flycut
-# org_gcr_2017-11-12_mara_978C02D7-9C7B-4B4F-8CC2-298B5329BF60 ends here
-
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-01-23_mara_D2FA266D-85A3-4CA5-A196-4E80E7AC354B][org_gcr_2018-01-23_mara_D2FA266D-85A3-4CA5-A196-4E80E7AC354B]]
 brew cask install geekbench
 # org_gcr_2018-01-23_mara_D2FA266D-85A3-4CA5-A196-4E80E7AC354B ends here
