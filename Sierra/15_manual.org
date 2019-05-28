@@ -181,6 +181,6 @@ Set Dictation & Text to Speech to: Callie
 - Snap Areas
   - If checked BetterSnapTool will use a bit more memory, but Snap Areas show up faster
 - Extras
-  - Double-click a windows' title-bar: Right two thirds
+  - Double-click a windows' title-bar: Left two thirds
     - Restore old size & position after double-clicking again: YES
 # org_gcr_2018-04-04T12-17-23-05-00_mara_259C6998-F024-4F2E-AF69-7EAF2E656C62 ends here

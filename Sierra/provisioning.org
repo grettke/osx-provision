@@ -3565,7 +3565,7 @@ Obvious settings.
 - Snap Areas
   - If checked BetterSnapTool will use a bit more memory, but Snap Areas show up faster
 - Extras
-  - Double-click a windows' title-bar: Right two thirds
+  - Double-click a windows' title-bar: Left two thirds
     - Restore old size & position after double-clicking again: YES
 #+end_src
 
