@@ -2934,6 +2934,16 @@ cd ~/
 brew install nedit
 #+end_src
 
+***** Scrivener
+:PROPERTIES:
+:ID:       org_gcr_2019-05-21T19-27-50-05-00_cosmicality:FF631944-91BC-49C5-925A-91D25355642E
+:END:
+
+#+name: org_gcr_2019-05-21T19-27-50-05-00_cosmicality_4ADA3803-E3E9-417E-92EF-5D5599A3C8E6
+#+BEGIN_SRC sh
+brew cask install scrivener
+#+END_SRC
+
 **** Configure
 :PROPERTIES:
 :header-args: :tangle "14_development.org"

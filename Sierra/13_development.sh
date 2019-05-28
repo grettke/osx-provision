@@ -125,3 +125,7 @@ cd ~/
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-11-15T23-09-36-06-00_cosmicality_3BFA8986-0C02-4A52-B11C-274D0043FC53][org_gcr_2018-11-15T23-09-36-06-00_cosmicality_3BFA8986-0C02-4A52-B11C-274D0043FC53]]
 brew install nedit
 # org_gcr_2018-11-15T23-09-36-06-00_cosmicality_3BFA8986-0C02-4A52-B11C-274D0043FC53 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-05-21T19-27-50-05-00_cosmicality_4ADA3803-E3E9-417E-92EF-5D5599A3C8E6][org_gcr_2019-05-21T19-27-50-05-00_cosmicality_4ADA3803-E3E9-417E-92EF-5D5599A3C8E6]]
+brew cask install scrivener
+# org_gcr_2019-05-21T19-27-50-05-00_cosmicality_4ADA3803-E3E9-417E-92EF-5D5599A3C8E6 ends here
