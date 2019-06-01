@@ -286,7 +286,11 @@ diskutil unmount /dev/disk0s8
     - Downloads
     - tmp
     - Desktop
-    - Applications    -
+    - Applications
+  - View
+    - Show everything but preview
+      - Provisioner should set this up automatically, but it doesn't seem to
+        work anymore. 
         #+END_SRC
 
 **** Configuration
@@ -1392,6 +1396,16 @@ brew cask install contexts
 #+name: org_gcr_2019-04-24T18-13-26-05-00_cosmicality_6C4FB56D-9B54-4029-992C-FC0A2BBD08F4
 #+begin_src sh
 brew cask install coconutbattery
+#+end_src
+
+***** freefilesync
+:PROPERTIES:
+:ID:       org_gcr_2019-05-29T21-58-33-05-00_cosmicality:F2F987EF-16F1-451A-B454-039F1644E34E
+:END:
+
+#+name: org_gcr_2019-05-29T21-58-33-05-00_cosmicality_A5FD8FC7-333B-4B0B-9876-202C6375DBC9
+#+begin_src sh
+brew cask install freefilesync
 #+end_src
 
 ***** Done

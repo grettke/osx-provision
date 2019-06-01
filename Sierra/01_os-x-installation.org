@@ -233,5 +233,9 @@ diskutil unmount /dev/disk0s8
     - Downloads
     - tmp
     - Desktop
-    - Applications    -
+    - Applications
+  - View
+    - Show everything but preview
+      - Provisioner should set this up automatically, but it doesn't seem to
+        work anymore.
 # org_gcr_2017-05-12_mara_60B53D12-60D7-40ED-81AC-27902FE027FA ends here
