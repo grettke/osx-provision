@@ -3661,6 +3661,8 @@ sudo mktexlsr
 :ID:       org_gcr_2018-10-30T23-51-23-05-00_cosmicality:F9B0B9FB-862E-497F-9D0F-9546A3E84728
 :END:
 
+After you configure your device uninstall this and reboot: it's update services uses 1.5GB of memory.
+
 - Install the [[https://www.plantronics.com/us/en/support/downloads-apps/hub-desktop][Plantronics Hub]] software
 - [[https://www.plantronics.com/us/en/product/voyager-legend][VOYAGER LEGEND]]
   - Settings
