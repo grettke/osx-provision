@@ -3122,6 +3122,13 @@ Steps
 :ID:       org_gcr_2017-05-12_mara:BB9E3D7F-B9C2-4545-BE21-D612B37CFED2
 :END:
 
+**** Logitech C920
+:PROPERTIES:
+:ID:       org_gcr_2019-06-28T22-28-54-05-00_cosmicality:0E681FF9-1FEF-4E61-988A-063D41E10B94
+:END:
+
+Camera Settings app.
+
 **** Copy'em Paste
 :PROPERTIES:
 :ID:       org_gcr_2019-05-21T19-27-50-05-00_cosmicality:DD1D046E-4A02-4677-B532-2C75638B1A31
