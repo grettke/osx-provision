@@ -2131,6 +2131,16 @@ brew cask install filezilla
 brew cask install cyberduck
 #+end_src
 
+***** Mountain Duck
+:PROPERTIES:
+:ID:       org_gcr_2019-06-28T22-28-54-05-00_cosmicality:3907B134-6CAF-49FC-BEA7-4DFEC56E0DD0
+:END:
+
+#+name: org_gcr_2019-06-28T22-28-54-05-00_cosmicality_A381FFE2-9763-4546-BC0E-CB3701640D9E
+#+begin_src sh
+brew cask install mountain-duck
+#+end_src
+
 ***** Kindle
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:3EDFA35C-AFFD-4BD3-9F6B-76BC9C1E1349
@@ -3433,6 +3443,9 @@ Obvious settings.
    :END:
 
 ***** Sweet Home 3D
+:PROPERTIES:
+:ID:       org_gcr_2019-06-28T22-28-54-05-00_cosmicality:5B3F79C1-8678-4D8D-B1E7-F980BCCA9052
+:END:
 
 
 

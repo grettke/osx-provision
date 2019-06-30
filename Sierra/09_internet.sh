@@ -58,6 +58,10 @@ brew cask install filezilla
 brew cask install cyberduck
 # org_gcr_2019-01-14T09-58-00-06-00_cosmicality_6E544F75-1812-4A56-B873-2A30A2978583 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-06-28T22-28-54-05-00_cosmicality_A381FFE2-9763-4546-BC0E-CB3701640D9E][org_gcr_2019-06-28T22-28-54-05-00_cosmicality_A381FFE2-9763-4546-BC0E-CB3701640D9E]]
+brew cask install mountain-duck
+# org_gcr_2019-06-28T22-28-54-05-00_cosmicality_A381FFE2-9763-4546-BC0E-CB3701640D9E ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_A2BB25B5-F80B-44B1-84CA-3669F9FD04F2][org_gcr_2017-05-12_mara_A2BB25B5-F80B-44B1-84CA-3669F9FD04F2]]
 brew cask install kindle
 # org_gcr_2017-05-12_mara_A2BB25B5-F80B-44B1-84CA-3669F9FD04F2 ends here
