@@ -62,6 +62,10 @@ brew install toilet
 brew install exiftool
 # org_gcr_2017-11-04_mara_3DCBCE60-F036-49ED-999C-B972AF10C1E7 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-07-07T21-03-26-05-00_cosmicality_B913D790-DB93-484F-A59D-19B725E9FD70][org_gcr_2019-07-07T21-03-26-05-00_cosmicality_B913D790-DB93-484F-A59D-19B725E9FD70]]
+brew cask install pdf-images
+# org_gcr_2019-07-07T21-03-26-05-00_cosmicality_B913D790-DB93-484F-A59D-19B725E9FD70 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_DF529935-83C8-4FC4-8661-79D0DFB0C042][org_gcr_2017-05-12_mara_DF529935-83C8-4FC4-8661-79D0DFB0C042]]
 brew install libxml2
 # org_gcr_2017-05-12_mara_DF529935-83C8-4FC4-8661-79D0DFB0C042 ends here

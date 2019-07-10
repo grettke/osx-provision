@@ -1819,6 +1819,15 @@ brew install toilet
 #+BEGIN_SRC sh
 brew install exiftool
 #+END_SRC
+****** pdf-images
+:PROPERTIES:
+:ID:       org_gcr_2019-07-07T21-03-26-05-00_cosmicality:AFCAD79D-613E-4B49-81BA-8EE42EFA71E9
+:END:
+
+#+name: org_gcr_2019-07-07T21-03-26-05-00_cosmicality_B913D790-DB93-484F-A59D-19B725E9FD70
+#+begin_src sh
+brew cask install pdf-images
+#+end_src
 ***** xmllint
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:1354D5A4-A956-4A1F-B80D-C83EBF62FD33
