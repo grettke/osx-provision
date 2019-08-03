@@ -74,6 +74,10 @@ brew cask install coconutbattery
 brew cask install freefilesync
 # org_gcr_2019-05-29T21-58-33-05-00_cosmicality_A5FD8FC7-333B-4B0B-9876-202C6375DBC9 ends here
 
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-08-02T15-13-06-05-00_cosmicality_DDDFE93F-37E0-4861-BABC-D1DADE489419][org_gcr_2019-08-02T15-13-06-05-00_cosmicality_DDDFE93F-37E0-4861-BABC-D1DADE489419]]
+brew cask install path-finder
+# org_gcr_2019-08-02T15-13-06-05-00_cosmicality_DDDFE93F-37E0-4861-BABC-D1DADE489419 ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB][org_gcr_2017-05-12_mara_CFE8C328-2D5E-4367-9E36-8E76EF29F2BB]]
 echo "The Administration is complete."
 echo "Restart your Terminal to pick up the changes."

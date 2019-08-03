@@ -1408,6 +1408,16 @@ brew cask install coconutbattery
 brew cask install freefilesync
 #+end_src
 
+***** Path Finder
+:PROPERTIES:
+:ID:       org_gcr_2019-08-02T15-13-06-05-00_cosmicality:A1E1DD9A-D9B8-4593-B6A1-A64689412293
+:END:
+
+#+name: org_gcr_2019-08-02T15-13-06-05-00_cosmicality_DDDFE93F-37E0-4861-BABC-D1DADE489419
+#+BEGIN_SRC sh
+brew cask install path-finder
+#+END_SRC
+
 ***** Done
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:419E4ADD-30A3-470F-8858-0DA41B95598D
@@ -1640,6 +1650,10 @@ Granting:
     - Change nothing
 - License
 - About
+
+,* Path Finder
+
+todo
 #+END_SRC
 
 *** Utility
