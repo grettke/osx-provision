@@ -3972,7 +3972,7 @@ Set up my preferences.
 #+NAME: org_gcr_2017-05-12_mara_DA1B734B-8994-4465-AA58-08E2EF337770
 #+begin_src sh
 git config --global user.name "Grant Rettke"
-git config --global user.email gcr@wisdomandwonder.com
+git config --global user.email grant@wisdomandwonder.com
 git config --global color.ui true
 git config --global core.autocrlf input
 git config --global alias.st status
@@ -4058,17 +4058,10 @@ rm -rf ~/src/metaweblog
 rm -rf ~/src/org2blog
 rm -rf ~/src/org2blogwiki
 rm -rf ~/src/pretty-mode
-rm -rf ~/src/use-package
-rm -rf ~/src/reveal.js
-rm -rf ~/src/go-hydra
-rm -rf ~/src/emacs-batteries-included
-rm -rf ~/src/solarized-emacs
 rm -rf ~/src/auto-capitalize
 rm -rf ~/src/corporate-bs-generator
 rm -rf ~/src/org-utf-to-xetex
 rm -rf ~/src/universal-emotions-emoticons
-rm -rf ~/src/affect-vs-effect
-rm -rf ~/src/megawin
 rm -rf ~/src/list
 rm -rf ~/src/hardware
 cd ~/src
@@ -4077,17 +4070,9 @@ git clone github-`whoami`:org2blog/metaweblog.git
 git clone github-`whoami`:org2blog/org2blog.git
 git clone github-`whoami`:org2blog/org2blog.wiki.git org2blogwiki
 git clone github-`whoami`:pretty-mode/pretty-mode.git
-git clone https://github.com/jwiegley/use-package.git
-git clone https://github.com/hakimel/reveal.js.git
-git clone gitlab-`whoami`:grettke/go-hydra.git
-git clone github-`whoami`:grettke/emacs-batteries-included.git
-git clone github-`whoami`:grettke/solarized-emacs.git
 git clone github-`whoami`:grettke/corporate-bs-generator.git
 git clone github-`whoami`:grettke/org-utf-to-xetex.git
 git clone github-`whoami`:grettke/universal-emotions-emoticons.git
-git clone github-`whoami`:grettke/affect-vs-effect.git
-git clone github-`whoami`:grettke/megawin.git
-git clone https://github.com/yuutayamada/auto-capitalize-el.git auto-capitalize
 git clone gitlab-`whoami`:grettke/list.git
 git clone gitlab-`whoami`:grettke/hardware
 #+end_src

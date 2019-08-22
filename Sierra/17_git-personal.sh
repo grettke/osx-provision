@@ -1,23 +1,23 @@
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-13T22-20-14-05-00_cosmicality_8CA2B6E0-91D2-4769-84C1-2A3CA3E4CAE4][org_gcr_2018-09-13T22-20-14-05-00_cosmicality_8CA2B6E0-91D2-4769-84C1-2A3CA3E4CAE4]]
 function 22C8initsshdir {
-  cd ~/
-  local timestamp=`date +%Y%m%d%H%M%S`
-  local newdotssh="newssh$timestamp"
-  local olddotssh="oldssh$timestamp"
-  printf "Cloning .ssh directory from Git to %s\n" "$newdotssh"
-  git clone gitlab-gcr:grettke/dotssh.git "$newdotssh"
-  printf "Renaming local .ssh directory to %s\n" "$olddotssh"
-  mv .ssh "$olddotssh"
-  printf "Renaming new working copy %s to .ssh\n" "$newdotssh"
-  mv "$newdotssh" .ssh
-  printf "Leaving the backup in case there were any problems.\n"
+	cd ~/
+	local timestamp=`date +%Y%m%d%H%M%S`
+	local newdotssh="newssh$timestamp"
+	local olddotssh="oldssh$timestamp"
+	printf "Cloning .ssh directory from Git to %s\n" "$newdotssh"
+	git clone gitlab-gcr:grettke/dotssh.git "$newdotssh"
+	printf "Renaming local .ssh directory to %s\n" "$olddotssh"
+	mv .ssh "$olddotssh"
+	printf "Renaming new working copy %s to .ssh\n" "$newdotssh"
+	mv "$newdotssh" .ssh
+	printf "Leaving the backup in case there were any problems.\n"
 }
 22C8initsshdir
 # org_gcr_2018-09-13T22-20-14-05-00_cosmicality_8CA2B6E0-91D2-4769-84C1-2A3CA3E4CAE4 ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_DA1B734B-8994-4465-AA58-08E2EF337770][org_gcr_2017-05-12_mara_DA1B734B-8994-4465-AA58-08E2EF337770]]
 git config --global user.name "Grant Rettke"
-git config --global user.email gcr@wisdomandwonder.com
+git config --global user.email grant@wisdomandwonder.com
 git config --global color.ui true
 git config --global core.autocrlf input
 git config --global alias.st status
@@ -92,17 +92,10 @@ rm -rf ~/src/metaweblog
 rm -rf ~/src/org2blog
 rm -rf ~/src/org2blogwiki
 rm -rf ~/src/pretty-mode
-rm -rf ~/src/use-package
-rm -rf ~/src/reveal.js
-rm -rf ~/src/go-hydra
-rm -rf ~/src/emacs-batteries-included
-rm -rf ~/src/solarized-emacs
 rm -rf ~/src/auto-capitalize
 rm -rf ~/src/corporate-bs-generator
 rm -rf ~/src/org-utf-to-xetex
 rm -rf ~/src/universal-emotions-emoticons
-rm -rf ~/src/affect-vs-effect
-rm -rf ~/src/megawin
 rm -rf ~/src/list
 rm -rf ~/src/hardware
 cd ~/src
@@ -111,17 +104,9 @@ git clone github-`whoami`:org2blog/metaweblog.git
 git clone github-`whoami`:org2blog/org2blog.git
 git clone github-`whoami`:org2blog/org2blog.wiki.git org2blogwiki
 git clone github-`whoami`:pretty-mode/pretty-mode.git
-git clone https://github.com/jwiegley/use-package.git
-git clone https://github.com/hakimel/reveal.js.git
-git clone gitlab-`whoami`:grettke/go-hydra.git
-git clone github-`whoami`:grettke/emacs-batteries-included.git
-git clone github-`whoami`:grettke/solarized-emacs.git
 git clone github-`whoami`:grettke/corporate-bs-generator.git
 git clone github-`whoami`:grettke/org-utf-to-xetex.git
 git clone github-`whoami`:grettke/universal-emotions-emoticons.git
-git clone github-`whoami`:grettke/affect-vs-effect.git
-git clone github-`whoami`:grettke/megawin.git
-git clone https://github.com/yuutayamada/auto-capitalize-el.git auto-capitalize
 git clone gitlab-`whoami`:grettke/list.git
 git clone gitlab-`whoami`:grettke/hardware
 # org_gcr_2018-09-12T14-42-11-05-00_cosmicality_449B2EDF-1F14-4E08-B9F4-9469A71B9EE7 ends here
