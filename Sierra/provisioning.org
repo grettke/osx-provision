@@ -4113,6 +4113,17 @@ ln -s ~/src/aspell/.aspell.en.pws ~/.aspell.en.pws
 ln -s ~/src/aspell/.aspell.en.prepl ~/.aspell.en.prepl
 #+end_src
 
+macOS System Dictionary
+
+#+NAME: org_gcr_2019-08-24T11-58-31-05-00_cosmicality_317769B9-96FD-498D-8A30-DB5ACAFFA674
+#+BEGIN_SRC sh
+cd ~/src
+rm -rf ./macoslocaldictionary
+git clone glb:grettke/macoslocaldictionary.git
+rm ~/Library/Spelling/LocalDictionary | true
+ln -s ~/src/macoslocaldictionary/LocalDictionary ~/Library/Spelling/LocalDictionary
+#+END_SRC
+
 *** Org-Mode
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:0788FE76-2F16-4F66-9822-D4BDA3293CDD

@@ -137,3 +137,11 @@ rm ~/.aspell.en.prepl || true
 ln -s ~/src/aspell/.aspell.en.pws ~/.aspell.en.pws
 ln -s ~/src/aspell/.aspell.en.prepl ~/.aspell.en.prepl
 # org_gcr_2018-11-17T16-07-47-06-00_cosmicality_50DD5E72-371D-4304-814A-85DFD4AE6973 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-08-24T11-58-31-05-00_cosmicality_317769B9-96FD-498D-8A30-DB5ACAFFA674][org_gcr_2019-08-24T11-58-31-05-00_cosmicality_317769B9-96FD-498D-8A30-DB5ACAFFA674]]
+cd ~/src
+rm -rf ./macoslocaldictionary
+git clone glb:grettke/macoslocaldictionary.git
+rm ~/Library/Spelling/LocalDictionary | true
+ln -s ~/src/macoslocaldictionary/LocalDictionary ~/Library/Spelling/LocalDictionary
+# org_gcr_2019-08-24T11-58-31-05-00_cosmicality_317769B9-96FD-498D-8A30-DB5ACAFFA674 ends here
