@@ -1,5 +1,8 @@
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_BFEC18FA-40CF-4C90-A572-8700944EE344][org_gcr_2017-05-12_mara_BFEC18FA-40CF-4C90-A572-8700944EE344]]
 * PopChar
+:PROPERTIES:
+:ID:       org_gcr_2019-08-11T16-10-48-05-00_cosmicality:A4645B88-8730-43A6-B95D-70C9B223E709
+:END:
 
 - Register it
 - Preferences
@@ -19,6 +22,9 @@
     - Highlight recent: No
     - Insert HTML as: only numbers
 * Little Snitch
+:PROPERTIES:
+:ID:       org_gcr_2019-08-11T16-10-48-05-00_cosmicality:8BA10CF6-4417-4BA7-87F7-8843BEFD3A1A
+:END:
 
 - Run the installer
 - Start it
@@ -66,6 +72,9 @@ Granting:
   - Automatically check for updates daily
 
 * Bartender
+:PROPERTIES:
+:ID:       org_gcr_2019-08-11T16-10-48-05-00_cosmicality:86C875D1-5D80-4F83-B57A-13DDD6FF6ADB
+:END:
 
 - License it
 - GENERAL
@@ -76,12 +85,18 @@ Granting:
   - Menu bar icon: Star
   - Show when bartender bar is open: YES.
 * flux
+:PROPERTIES:
+:ID:       org_gcr_2019-08-11T16-10-48-05-00_cosmicality:259043E9-87B2-4C1F-9C4B-719BDD01B79F
+:END:
 
 - NA
 
 - Enable at startup
 
 * Tuxera NTFS
+:PROPERTIES:
+:ID:       org_gcr_2019-08-11T16-10-48-05-00_cosmicality:F19D1770-5EA4-43E9-B0B0-1183A6E0ABE2
+:END:
 
 - Install it
   - brew only downloads the installer
@@ -89,6 +104,9 @@ Granting:
 - License it
 
 * SwitchResX
+:PROPERTIES:
+:ID:       org_gcr_2019-08-11T16-10-48-05-00_cosmicality:5940C5DD-06F1-4A0E-B387-5F1FD329C651
+:END:
 
 - Open the Preferences Panel- License it
 - General Settings
@@ -98,6 +116,9 @@ Granting:
     - [X] Launch SwitchResX Daemon automatically after login
 
 * XQuartz
+:PROPERTIES:
+:ID:       org_gcr_2019-08-11T16-10-48-05-00_cosmicality:946F1EBD-8DA9-411E-AABC-F32FD038BE7D
+:END:
 
 - Preferences
   - Input
@@ -139,6 +160,9 @@ Granting:
     - Allow connections from network clients: NO
       - Was the default
 * Inkscape
+:PROPERTIES:
+:ID:       org_gcr_2019-08-11T16-10-48-05-00_cosmicality:F7270C1E-AE77-4ABD-8C07-CD7B0709D5C3
+:END:
 
 - Everything is store in Git
 - Notables follow
@@ -158,6 +182,9 @@ Granting:
         - Black point compensation: YES
 
 * Malwarebytes
+:PROPERTIES:
+:ID:       org_gcr_2019-08-11T16-10-48-05-00_cosmicality:C40DBC76-A87D-4094-BAE1-0F4B0787ABED
+:END:
 - License pro version
 - Enable Real-Time Protection
 - Preferences
@@ -165,14 +192,23 @@ Granting:
     - Daily
 
 * Geekbench
+:PROPERTIES:
+:ID:       org_gcr_2019-08-11T16-10-48-05-00_cosmicality:C4918DCD-AF6D-44B9-9ED5-9E96DF88B26E
+:END:
 - Run it.
 - Accept license.
 - Enter license.
 
 * DaisyDisk
+:PROPERTIES:
+:ID:       org_gcr_2019-08-11T16-10-48-05-00_cosmicality:44034479-AFC0-4B8B-ACB9-70BAB80357F1
+:END:
 - License it.
 
 * Contexts
+:PROPERTIES:
+:ID:       org_gcr_2019-08-11T16-10-48-05-00_cosmicality:3B0E7BF9-13FD-44A6-8360-80629C400E0E
+:END:
 - Welcome
   - Yes: Launch Context at login
 - Appearance
@@ -198,7 +234,7 @@ Granting:
     - No: Moving the cursor over Panel changes the selected item
     - No: Scrolling when Panel is visible changes the selected item
   - Search
-    - Search with: Option-Tab
+    - Search with: Control-Tab
     - Fast search with: Nothing (disable it)
     - Search shortcuts: 3
     - Yes: Allow one mismatched character
@@ -212,4 +248,11 @@ Granting:
     - Change nothing
 - License
 - About
+
+* Path Finder
+:PROPERTIES:
+:ID:       org_gcr_2019-08-11T16-10-48-05-00_cosmicality:D995CD76-01CD-4555-9CFA-0E1AF0B2D86E
+:END:
+
+todo
 # org_gcr_2017-05-12_mara_BFEC18FA-40CF-4C90-A572-8700944EE344 ends here

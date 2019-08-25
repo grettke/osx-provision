@@ -1,3 +1,11 @@
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-02-27T18-39-08-06-00_cosmicality_3D8C44F0-5DDC-401C-9348-631528E9A816][org_gcr_2019-02-27T18-39-08-06-00_cosmicality_3D8C44F0-5DDC-401C-9348-631528E9A816]]
+brew install gifsicle
+# org_gcr_2019-02-27T18-39-08-06-00_cosmicality_3D8C44F0-5DDC-401C-9348-631528E9A816 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-02-27T18-39-08-06-00_cosmicality_06C41F80-D210-415A-B2FE-D3B699416E6D][org_gcr_2019-02-27T18-39-08-06-00_cosmicality_06C41F80-D210-415A-B2FE-D3B699416E6D]]
+brew cask install gimp
+# org_gcr_2019-02-27T18-39-08-06-00_cosmicality_06C41F80-D210-415A-B2FE-D3B699416E6D ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_1ED4B68B-4C9C-420F-9C25-19A6F6812A66][org_gcr_2017-05-12_mara_1ED4B68B-4C9C-420F-9C25-19A6F6812A66]]
 brew cask install java
 # org_gcr_2017-05-12_mara_1ED4B68B-4C9C-420F-9C25-19A6F6812A66 ends here
@@ -121,11 +129,3 @@ brew install uni2ascii
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E][org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E]]
 cry "Script is done"
 # org_gcr_2017-05-12_mara_8E1A31DB-A46A-4C52-8529-69058AD9161E ends here
-
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-02-27T18-39-08-06-00_cosmicality_3D8C44F0-5DDC-401C-9348-631528E9A816][org_gcr_2019-02-27T18-39-08-06-00_cosmicality_3D8C44F0-5DDC-401C-9348-631528E9A816]]
-brew install gifsicle
-# org_gcr_2019-02-27T18-39-08-06-00_cosmicality_3D8C44F0-5DDC-401C-9348-631528E9A816 ends here
-
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2019-02-27T18-39-08-06-00_cosmicality_06C41F80-D210-415A-B2FE-D3B699416E6D][org_gcr_2019-02-27T18-39-08-06-00_cosmicality_06C41F80-D210-415A-B2FE-D3B699416E6D]]
-brew cask install gimp
-# org_gcr_2019-02-27T18-39-08-06-00_cosmicality_06C41F80-D210-415A-B2FE-D3B699416E6D ends here

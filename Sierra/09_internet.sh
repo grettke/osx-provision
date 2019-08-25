@@ -1,3 +1,11 @@
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54][org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54]]
+brew cask install deluge
+# org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54 ends here
+
+# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A][org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A]]
+brew install speedtest_cli
+# org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A ends here
+
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_9CDCD936-A30A-4712-8A5F-780D8810FBDE][org_gcr_2017-05-12_mara_9CDCD936-A30A-4712-8A5F-780D8810FBDE]]
 if [ ! -d "/Library/Application Support/VMware Tools" ]; then
   brew cask install skype
@@ -147,11 +155,3 @@ brew cask install jabref
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-12-13T12-04-08-06-00_cosmicality_9CDEA100-5E51-443D-9D4C-F003455A92C2][org_gcr_2018-12-13T12-04-08-06-00_cosmicality_9CDEA100-5E51-443D-9D4C-F003455A92C2]]
 brew cask install libreoffice
 # org_gcr_2018-12-13T12-04-08-06-00_cosmicality_9CDEA100-5E51-443D-9D4C-F003455A92C2 ends here
-
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54][org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54]]
-brew cask install deluge
-# org_gcr_2017-05-12_mara_62B02659-4FD3-4B03-97D0-7DB89B787D54 ends here
-
-# [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A][org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A]]
-brew install speedtest_cli
-# org_gcr_2017-05-12_mara_96300CD8-BC43-41F5-872C-1BF72220CB5A ends here

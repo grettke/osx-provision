@@ -1,16 +1,16 @@
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-13T22-20-14-05-00_cosmicality_8CA2B6E0-91D2-4769-84C1-2A3CA3E4CAE4][org_gcr_2018-09-13T22-20-14-05-00_cosmicality_8CA2B6E0-91D2-4769-84C1-2A3CA3E4CAE4]]
 function 22C8initsshdir {
-	cd ~/
-	local timestamp=`date +%Y%m%d%H%M%S`
-	local newdotssh="newssh$timestamp"
-	local olddotssh="oldssh$timestamp"
-	printf "Cloning .ssh directory from Git to %s\n" "$newdotssh"
-	git clone gitlab-gcr:grettke/dotssh.git "$newdotssh"
-	printf "Renaming local .ssh directory to %s\n" "$olddotssh"
-	mv .ssh "$olddotssh"
-	printf "Renaming new working copy %s to .ssh\n" "$newdotssh"
-	mv "$newdotssh" .ssh
-	printf "Leaving the backup in case there were any problems.\n"
+  cd ~/
+  local timestamp=`date +%Y%m%d%H%M%S`
+  local newdotssh="newssh$timestamp"
+  local olddotssh="oldssh$timestamp"
+  printf "Cloning .ssh directory from Git to %s\n" "$newdotssh"
+  git clone gitlab-gcr:grettke/dotssh.git "$newdotssh"
+  printf "Renaming local .ssh directory to %s\n" "$olddotssh"
+  mv .ssh "$olddotssh"
+  printf "Renaming new working copy %s to .ssh\n" "$newdotssh"
+  mv "$newdotssh" .ssh
+  printf "Leaving the backup in case there were any problems.\n"
 }
 22C8initsshdir
 # org_gcr_2018-09-13T22-20-14-05-00_cosmicality_8CA2B6E0-91D2-4769-84C1-2A3CA3E4CAE4 ends here

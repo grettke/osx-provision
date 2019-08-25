@@ -117,7 +117,7 @@ diskutil unmount /dev/disk0s8
         - Selection as file: C-M-s-S-4
         - Selection to clipboard: C-M-s-S-4
       - Spotlight
-        - Show Spot light search: Control-Tab
+        - Show Spot light search: Alt-Tab
       - Everything else uncheck
   - Mouse
     - *(Host)* Connect Bluetooth mouse
