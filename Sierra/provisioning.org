@@ -172,6 +172,9 @@ diskutil unmount /dev/disk0s8
       - Spotlight
         - Show Spot light search: Alt-Tab
       - Everything else uncheck
+    - Dictation: On
+      - Use Enhanced Dictation (Offline Enabled)
+      - Shortcut: Control-Command-D
   - Mouse
     - *(Host)* Connect Bluetooth mouse
     - Tracking Speed
@@ -216,7 +219,7 @@ diskutil unmount /dev/disk0s8
     - Siri Voice: Australian Female
     - Voice Feedback: On
     - Mic Input: Internal Microphone
-    - Keyboard Shortcut: Hold Command Space
+    - Keyboard Shortcut: Control-Command-R
     - Show Siri in menu bar: NO
   - Parental Controls: *NA*
   - Date & Time: *NA*
@@ -234,7 +237,7 @@ diskutil unmount /dev/disk0s8
         - Voice: CereProc Jess
           - Speaking Rate: Normal+%10
           - In the drop down add it to listed voices
-        - Speak selected text on key: Command-Command-Option-s
+        - Speak selected text on key: Command-Command-S
     - Zoom
       - NO Use keyboard shortcuts
       - YES Smooth images
@@ -242,9 +245,6 @@ diskutil unmount /dev/disk0s8
     - Descriptions: *NA*
     - Captions: *NA*
     - Audio: *NA*
-    - Dictation: On
-      - Use Enhanced Dictation (Offline Enabled)
-      - Shortcut: Control-Command-Option d
     - Keyboard: *NA*
     - Mouse & Trackpad
       - Trackpad Options
@@ -291,7 +291,7 @@ diskutil unmount /dev/disk0s8
     - Show everything but preview
       - Provisioner should set this up automatically, but it doesn't seem to
         work anymore.
-        #+END_SRC
+#+END_SRC
 
 **** Configuration
 :PROPERTIES:
@@ -728,10 +728,10 @@ defaults write 'NSGlobalDomain' NSTableViewDefaultSizeMode -bool true && killall
 Nlsv: List View
 clmv: Column View
 Flwv: Cover Flow View][Via]]
-  - icnv :: Icon View
-  - Nlsv :: List View
-  - clmv :: Column View
-  - Flwv :: Cover Flow View
+- icnv :: Icon View
+- Nlsv :: List View
+- clmv :: Column View
+- Flwv :: Cover Flow View
 #+NAME: org_gcr_2017-05-12_mara_C3B234B5-498F-4C29-B548-03DF4D57085A
 #+BEGIN_SRC sh
 defaults write 'com.apple.Finder' FXPreferredViewStyle Nlsv && killall Finder
@@ -2174,9 +2174,9 @@ name hasn't changed. Did a manual install instead.
 :END:
 Brew recipe doesn’t work so manually install. a
 ***** Filezilla
-   :PROPERTIES:
-   :ID:       org_gcr_2017-05-12_mara:CB43AE42-448D-455A-93F0-4D77BF1AFF75
-   :END:
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:CB43AE42-448D-455A-93F0-4D77BF1AFF75
+:END:
 
 #+NAME: org_gcr_2017-05-12_mara_F8797C4F-7492-441D-B8B2-A13C818672FB
 #+begin_src sh
@@ -3323,9 +3323,9 @@ Install the crontab.
   - Install the local libraries: source(".Rinstall.r")
 
 **** Microsoft Office
-    :PROPERTIES:
-    :ID:       org_gcr_2017-05-12_mara:78E3489E-DF5E-4887-86D1-494EDAA77DFD
-    :END:
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:78E3489E-DF5E-4887-86D1-494EDAA77DFD
+:END:
 
 #+NAME: org_gcr_2017-05-12_mara_AA02C112-ACBB-4415-813D-69BE649D4600
 
@@ -3351,9 +3351,9 @@ install it myself?
     - Save AutoRecover information after this number of minutes: 1
 #+END_SRC
 **** Visible Body
-    :PROPERTIES:
-    :ID:       org_gcr_2017-05-12_mara:B59FF468-DFB5-4A3D-AB6D-5BAE62C50658
-    :END:
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:B59FF468-DFB5-4A3D-AB6D-5BAE62C50658
+:END:
 
 #+NAME: org_gcr_2017-05-12_mara_A11DCB72-72E4-4B80-BF0C-D56FF6866E72
 #+BEGIN_SRC org
@@ -3370,9 +3370,9 @@ install it myself?
 #+END_SRC
 
 **** Entropy
-    :PROPERTIES:
-    :ID:       org_gcr_2017-05-12_mara:E9A1E948-8CB1-4824-B9E2-E3D5CDD0892C
-    :END:
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:E9A1E948-8CB1-4824-B9E2-E3D5CDD0892C
+:END:
 
 #+NAME: org_gcr_2017-05-12_mara_346129DB-CC0F-42DC-B5AE-5892008D4A67
 #+BEGIN_SRC org
@@ -3386,9 +3386,9 @@ install it myself?
 #+END_SRC
 
 **** Guitar Pro
-    :PROPERTIES:
-    :ID:       org_gcr_2017-05-12_mara:90556217-0181-4443-AE6C-934A96531761
-    :END:
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:90556217-0181-4443-AE6C-934A96531761
+:END:
 
 #+NAME: org_gcr_2017-05-12_mara_2E5C8692-189B-4125-B22F-62149679A0C2
 #+BEGIN_SRC org
@@ -3399,9 +3399,9 @@ install it myself?
 #+END_SRC
 
 **** Cepestral Callie & David
-    :PROPERTIES:
-    :ID:       org_gcr_2017-05-12_mara:0530264B-9C2B-4FDB-8B20-812F172980E9
-    :END:
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:0530264B-9C2B-4FDB-8B20-812F172980E9
+:END:
 
 #+NAME: org_gcr_2017-05-12_mara_F641981A-9788-46E2-BF9B-76E509A8E995
 #+BEGIN_SRC org
@@ -3507,9 +3507,9 @@ brew cask install gramps
 :END:
 Obvious settings.
 **** App Store Installs
-   :PROPERTIES:
-   :ID:       org_gcr_2017-05-12_mara:AC034850-5D7A-492F-B2E3-55167B7B1C25
-   :END:
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:AC034850-5D7A-492F-B2E3-55167B7B1C25
+:END:
 
 ***** Sweet Home 3D
 :PROPERTIES:
@@ -3539,9 +3539,9 @@ Obvious settings.
 - NA
 #+END_SRC
 ***** Microsoft Remote Desktop
-    :PROPERTIES:
-    :ID:       org_gcr_2017-05-12_mara:71D3C2E0-B185-4166-8D96-C9FABD67D43A
-    :END:
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:71D3C2E0-B185-4166-8D96-C9FABD67D43A
+:END:
 
 #+NAME: org_gcr_2017-05-12_mara_2341C9FA-93E8-4E03-BEE3-A0A1D616F474
 #+BEGIN_SRC org
@@ -3551,9 +3551,9 @@ Obvious settings.
 #+END_SRC
 
 ***** Text2Speech PRO
-    :PROPERTIES:
-    :ID:       org_gcr_2017-05-12_mara:0C26CAB0-02D1-4EAA-9128-6A0D692B2035
-    :END:
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:0C26CAB0-02D1-4EAA-9128-6A0D692B2035
+:END:
 
 #+NAME: org_gcr_2017-05-12_mara_A897EEBB-49AD-41E8-9890-AEBBDA0866B9
 #+BEGIN_SRC org
@@ -3568,9 +3568,9 @@ Obvious settings.
 #+END_SRC
 
 ***** PixelMator
-    :PROPERTIES:
-    :ID:       org_gcr_2017-05-12_mara:8E993645-78DC-488D-BA77-BBE59C7F3113
-    :END:
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:8E993645-78DC-488D-BA77-BBE59C7F3113
+:END:
 
 #+NAME: org_gcr_2017-05-12_mara_CF58A1FB-5BCD-4DE3-B24A-BD5B48CEB85C
 #+BEGIN_SRC org

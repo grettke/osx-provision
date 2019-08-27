@@ -119,6 +119,9 @@ diskutil unmount /dev/disk0s8
       - Spotlight
         - Show Spot light search: Alt-Tab
       - Everything else uncheck
+    - Dictation: On
+      - Use Enhanced Dictation (Offline Enabled)
+      - Shortcut: Control-Command-D
   - Mouse
     - *(Host)* Connect Bluetooth mouse
     - Tracking Speed
@@ -163,7 +166,7 @@ diskutil unmount /dev/disk0s8
     - Siri Voice: Australian Female
     - Voice Feedback: On
     - Mic Input: Internal Microphone
-    - Keyboard Shortcut: Hold Command Space
+    - Keyboard Shortcut: Control-Command-R
     - Show Siri in menu bar: NO
   - Parental Controls: *NA*
   - Date & Time: *NA*
@@ -181,7 +184,7 @@ diskutil unmount /dev/disk0s8
         - Voice: CereProc Jess
           - Speaking Rate: Normal+%10
           - In the drop down add it to listed voices
-        - Speak selected text on key: Command-Command-Option-s
+        - Speak selected text on key: Command-Command-S
     - Zoom
       - NO Use keyboard shortcuts
       - YES Smooth images
@@ -189,9 +192,6 @@ diskutil unmount /dev/disk0s8
     - Descriptions: *NA*
     - Captions: *NA*
     - Audio: *NA*
-    - Dictation: On
-      - Use Enhanced Dictation (Offline Enabled)
-      - Shortcut: Control-Command-Option d
     - Keyboard: *NA*
     - Mouse & Trackpad
       - Trackpad Options
