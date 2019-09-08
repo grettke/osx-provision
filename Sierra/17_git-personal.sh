@@ -100,17 +100,17 @@ rm -rf ~/src/say
 rm -rf ~/src/list
 rm -rf ~/src/hardware
 cd ~/src
-git clone github-`whoami`:grettke/xml-rpc-el.git
-git clone github-`whoami`:org2blog/metaweblog.git
-git clone github-`whoami`:org2blog/org2blog.git
-git clone github-`whoami`:org2blog/org2blog.wiki.git org2blogwiki
-git clone github-`whoami`:pretty-mode/pretty-mode.git
-git clone github-`whoami`:grettke/corporate-bs-generator.git
-git clone github-`whoami`:grettke/org-utf-to-xetex.git
-git clone github-`whoami`:grettke/universal-emotions-emoticons.git
-git clone gitlab-`whoami`:grettke/say.git
-git clone gitlab-`whoami`:grettke/list.git
-git clone gitlab-`whoami`:grettke/hardware
+git clone ghb:grettke/xml-rpc-el.git
+git clone ghb:org2blog/metaweblog.git
+git clone ghb:org2blog/org2blog.git
+git clone ghb:org2blog/org2blog.wiki.git org2blogwiki
+git clone ghb:pretty-mode/pretty-mode.git
+git clone ghb:grettke/corporate-bs-generator.git
+git clone ghb:grettke/org-utf-to-xetex.git
+git clone ghb:grettke/universal-emotions-emoticons.git
+git clone ghb:grettke/say.git
+git clone glb:grettke/list.git
+git clone glb:grettke/hardware
 # org_gcr_2018-09-12T14-42-11-05-00_cosmicality_449B2EDF-1F14-4E08-B9F4-9469A71B9EE7 ends here
 
 # [[file:~/git/github/osx-provision/Sierra/provisioning.org::org_gcr_2018-09-12T14-42-11-05-00_cosmicality_B7FE7813-593B-40D3-B3F8-BE15B898D81D][org_gcr_2018-09-12T14-42-11-05-00_cosmicality_B7FE7813-593B-40D3-B3F8-BE15B898D81D]]
