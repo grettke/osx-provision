@@ -96,6 +96,7 @@ rm -rf ~/src/auto-capitalize
 rm -rf ~/src/corporate-bs-generator
 rm -rf ~/src/org-utf-to-xetex
 rm -rf ~/src/universal-emotions-emoticons
+rm -rf ~/src/say
 rm -rf ~/src/list
 rm -rf ~/src/hardware
 cd ~/src
@@ -107,6 +108,7 @@ git clone github-`whoami`:pretty-mode/pretty-mode.git
 git clone github-`whoami`:grettke/corporate-bs-generator.git
 git clone github-`whoami`:grettke/org-utf-to-xetex.git
 git clone github-`whoami`:grettke/universal-emotions-emoticons.git
+git clone gitlab-`whoami`:grettke/say.git
 git clone gitlab-`whoami`:grettke/list.git
 git clone gitlab-`whoami`:grettke/hardware
 # org_gcr_2018-09-12T14-42-11-05-00_cosmicality_449B2EDF-1F14-4E08-B9F4-9469A71B9EE7 ends here
