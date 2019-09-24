@@ -3291,10 +3291,14 @@ Install the crontab.
 - Preferences
   - New Document
     - Default to: Rich Text
-    - Font Plain/Rich: 18—DJSM, DJ Serif
+    - Font Plain/Rich: Hack Regular 18 For Both
   - Open and Save
     - Opening a HTML or RTF, don't show the code, this isn't a code editor
     - DO add a text extension to plain text files
+  - Options DO
+    - Spelll as you type
+    - Grammar with spelling
+    - Smart copy paste
 **** PDFPenPro
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:23E72876-924E-4844-86F8-3CF2837C6217
