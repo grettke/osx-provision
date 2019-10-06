@@ -3,20 +3,6 @@
 
 - License it.
 - Set preferences for new comparisons (be sure of this, easy not to)
-  - General
-    - Date formatting: English (United States)
-    - Max available memory: 4096
-    - [X] Automatically find new updates and notify me
-    - Colors and Fonts
-      - Basic: DJSM 10
-        - Text Editor Block Selection Font
-        - Text Font
-      - Differences
-        - Colors:
-          - Addition: Green
-          - Change: Turqoise
-          - Conflict: Red
-          - Deletion: Purple
   - All Comparisons
     - [ ] Use text differencing optimized for speed
     - [X] Use text differencing optimized for accuracy
@@ -27,6 +13,23 @@
       - Interesting but default do care
     - [ ] Ignore differences in line endings (CF and LF)
       - Most systems don't care, but I do and should fix it
+  - General
+    - Date formatting: English (United States)
+    - Max available memory: 4096
+    - [X] Automatically find new updates and notify me
+    - Colors and Fonts
+      - Basic
+        - Banner Font: Hack 13
+        - Dialog Font: Hack 13
+        - Header Font: Hack 13
+        - Text Editor Block Selection Font: Hack 13
+        - Text Font: Hack 13
+      - Differences
+        - Addition color: Green
+        - Changecolor : Turqoise
+        - Conflict color: Red
+        - Deletion color: Purple
+        - Font: Hack 13
   - Text comparison
     - Editors
       - YES Show whitespace characters
