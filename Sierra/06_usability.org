@@ -223,6 +223,7 @@ Granting:
       Yes: Show app icon badges
   - Rules
     - Group windows: Manually
+    - Number of groups: 1
     - Yes: Show running apps which do not have any windows open
   - Sidebar
     - Show sidebar on: No display
@@ -242,7 +243,7 @@ Granting:
     - General settings
       - Yes: Typing characters starts Fast Search when Panel is visible
   - Number Switcher
-    - Change nothing
+    - Switch with: everything disabled
   - Gestures
     - Change nothing
 - License
