@@ -1650,8 +1650,7 @@ Granting:
 - Welcome
   - Yes: Launch Context at login
 - Appearance
-  - Theme: Vibrant Dark
-    - Same as Finder
+  - Theme: Subtle
   - Yes: Increase contrast
   - Text size: Large
 - Features
