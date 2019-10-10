@@ -3065,7 +3065,7 @@ brew cask install scrivener
       - Differences
         - Addition color: Green
         - Changecolor : Turqoise
-        - Conflict color: Red
+        - Conflict color: Orange
         - Deletion color: Purple
         - Font: Hack 13
   - Text comparison
