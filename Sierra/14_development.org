@@ -26,7 +26,7 @@
         - Text Font: Hack 13
       - Differences
         - Addition color: Green
-        - Change color : Blue
+        - Change color : Orange
         - Conflict color: Red
         - Deletion color: Cyan
         - Font: Hack 13
