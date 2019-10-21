@@ -954,7 +954,7 @@ Brew is [[http://brew.sh/][here]].
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 #+END_SRC
 
-BrewCask is [[http://caskroom.io][here]].
+BrewCask is [[https://brew.sh/][here]].
 
 #+NAME: org_gcr_2017-05-12_mara_A1A27177-989C-4DB3-8C8F-DF9CFA241DD0
 #+BEGIN_SRC sh
