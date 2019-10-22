@@ -32,21 +32,18 @@
 - Configure per below
 - Enable integration
 - Start at boot
-
-Granting:
-
-- *Always grant minimum required*
-- For known good TLD's, grant it forever
-  - Lots of connections to *.apple.com
-  - For apps that want to call homen do forever
-
+- Little Snitch Rules \rarr
+  - Only use the "global profile". It has no name. It only shows up if you create
+    another profile beyond this default one.
+  - Delete any other ones.
+- Preferences \rarr
 - Gen
-  - YES Show status in the menu bar
-  - YES Show inactive warning
-  - Operation mode: Alert
+  - ON: Filter
+  - YES: Show status in the menu bar
+  - YES: Show inactivity warning
+  - Operation mode: Silent Mode - Deny Connections
 - Alert:
-  - Yes: Confirm automatically
-    - Allow connection attempts
+  - NO: Confirm automatically
   - NO: Confirm with return and escape.
     - Can use control-return and command-return intead
   - Detail level: Show port and protocol details
@@ -57,19 +54,30 @@ Granting:
     - Show data rates numerically. Monochrome.
   - NO: Show auto when mouse enters. Hide in 2s.
 - APS
-  - Yes: Enable automatic profile switching
-    - When joining: Ask
+  - NO: Enable automatic profile switching
   - No: Save geolocation of networks.
-  - Yes: Distinguish OPenVPN remote servers
-- Security
+  - NO: Distinguish OPenVPN remote servers
+- Security (Only marked true are listed)
   - Allow rules and profile edit.
   - Allow profile switch.
   - Allow preference editing
   - Respect privacy.
+  - Ignore code signature for local network connections
 - Advanced
-  - Approve rules automatically.
+  - YES: Mark new rules as unapproved
+  - NO: Approve rules automatically.
 - Update
   - Automatically check for updates daily
+- Little Snitch Rules \rarr
+  - New Rules
+    - Right Click "Any Process" \rarr New Rule
+    - Deny Everything In
+      - Deny: Incoming Connections: From any server
+    - Deny Everything Out
+      - Deny: Incoming Connections: From any server
+- Little Snitch Rules \rarr
+  - Delete them all you are starting over from scratch reboot now
+
 
 * Bartender
 :PROPERTIES:
