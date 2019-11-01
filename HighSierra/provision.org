@@ -1,0 +1,1699 @@
+* Introduction
+:PROPERTIES:
+:ID:       org_gcr_2019-10-27T22-29-41-05-00_cosmicality:CE712FE5-0486-429E-8E12-BE2CD6C136AE
+:END:
+
+[[https://github.com/grettke/osx-provision][This repository]] holds three attempts ([[https://github.com/grettke/osx-provision/blob/master/C02M/provisioning.org][1]], [[https://github.com/grettke/osx-provision/blob/master/El-Capitan/provisioning.org][2]], [[https://github.com/grettke/osx-provision/blob/master/Sierra/provisioning.org][3]]) at making setting up a macOS
+computer simpler, faster, and less error-prone. Mostly I just wanted to free
+myself from the pain (tedious, error prone, and difficult) of setting up a new
+macOS box, see if it was worth the effort, practice [[https://en.wikipedia.org/wiki/Literate_programming][Literate Programming]] with
+[[https://orgmode.org/manual/Working-with-Source-Code.html#Working-with-Source-Code][Org mode]], and have some fun.
+
+Interested parties might include programmers, Mac Addicts, UNIX junkies,
+techies, and TeXnicians, and some combination thereof. Otherwise the content
+is so specialized that other readers reactions may range from finding it
+completely useless to drastically decreasing the quality of their life.
+
+All scripts should be idempotent.
+
+* Operating System
+:PROPERTIES:
+:ID:       org_gcr_2019-10-27T22-29-41-05-00_cosmicality:BFACE4AF-9893-4B86-A011-BBD1CB740B38
+:END:
+
+This section leaves you with a disk image that has the core of what you need to get started. When you are developing your provisioner it makes it easy to restore your system to a known state without wasting your time downloading a lot of stuff again.
+
+** Approach
+:PROPERTIES:
+:ID:       org_gcr_2019-10-27T22-29-41-05-00_cosmicality:DA01E7D7-15AD-4C56-A87D-54F40FEA56BB
+:END:
+
+- Maximize existing provisioner reuse
+  - These provisioiong documents used to be set up to run from a clean and
+    empty environment. After going through the provisioning process three
+    times though it always made sense to re-use at least some parts of the
+    setup on the previous system.
+- Refactor to reflect real flow
+  - Each time you write a provisioner it changes how you think and use your
+    computer. It gets simpler. Remember that
+- Snapshot against SPARSEBUNDLE disk images frequently to allow for easy fixes
+  - Learning how to utilize [[https://www.vmware.com/products/fusion.html][VMware Fusion Pro]] image snaphosts made it dawn on
+    me that I can do the same thing with physical partions using
+    [[https://bombich.com/][Carbon Copy Cloner]] (CCC) and wow does that make this whole process easier and fun.
+
+** OS Install
+:PROPERTIES:
+:ID:       org_gcr_2019-10-27T22-29-41-05-00_cosmicality:99055D99-E527-426C-B7D6-BFCE5B0C4362
+:END:
+
+- Prepare a [[https://support.apple.com/en-us/HT201372][macOS bootdisk]] USB
+- Plugin in to a power adapter
+- Plugin USB
+- Boot from USB using Option if powered off or select startup disk if powered
+  on
+- Erase HOST1 if you haven’t already
+  - HOST1 is the destination partition
+- Wizard begins
+- Install macOS
+- Install to HOST1
+- Settings are typical: regison USA, Keyboard US, wifi logicalization, data
+  and privacy: dont transfer data, set up aple id later, terms and conditions
+  agree, computer account usual, express setup: do customize settings, No
+  location services, time zone: Chicago. Analystics: Don’t share anything.
+  Disable Siri.
+- The flow of customizing and disabling is disjointed and proceeds
+- Keyboard
+- Boots up
+- Eject usb
+
+** Software Update
+:PROPERTIES:
+:ID:       org_gcr_2019-10-27T22-29-41-05-00_cosmicality:DD45E155-C1F4-4AC3-89B3-70829166775C
+:END:
+
+- Install all security updates
+
+** Snapshot
+:PROPERTIES:
+:ID:       org_gcr_2019-10-27T22-29-41-05-00_cosmicality:78065A67-88A3-4D66-ADB6-A580A8670BDD
+:END:
+
+- Re-Boot into RESCUE1
+  - This is another partition with CCC installed
+- Format (Erase) G-HOST1 as APFS
+- Clone HOST1 to G-HOST1
+- Snapshot G-HOST1 to /Volumes/STORAGE/gcr/CCC/Snapshots
+  - Choose to create a compressed read only disk image
+    named HostOne20191027HighSierraAPFSFreshInstallOnlyUpdates
+
+** How to test
+:PROPERTIES:
+:ID:       org_gcr_2019-10-27T22-29-41-05-00_cosmicality:83E88CC3-BA54-41A1-8879-728A393BBDC2
+:END:
+
+- Stay in RESCUE1
+- Erase HOST1
+- Verify it can’t boot: (Startup Disk Setting) it isn't listed
+- Restore HOST1 from G-HOST (clone)
+- Verity it can boot
+- Do the same thing now but using the disk image This is a disk to the backup
+  disk, back to the main disk test. And a diskimage from the backup disk, to a
+  disk image, and back to the main disk.
+- That tests both the physical hard drive backup and the disk image backup. The CCC
+  literature [[https://bombich.com/kb/ccc5/backing-up-disk-image][states]] that you should only rely on the hard drive backup since you
+  can't boot from a DMG.
+
+*** Problems Testing
+:PROPERTIES:
+:ID:       org_gcr_2019-10-27T22-29-41-05-00_cosmicality:5D937E30-3FFC-4D56-955D-5524D8B4B73A
+:END:
+
+- When I restored from the physical hard drive and tried to change the Startup Disk
+  I got the error [[https://bombich.com/kb/ccc5/help-my-clone-wont-boot]["Running bless to place boot files failed."]].
+- When I powered off and booted holding Option to Host1 I just got a "forbidden"
+  symbol and the machine rebooted into RESCUE1.
+- After reading search results I decided to start Disk Utility and do First Aid on
+  HOST1 then reboot at which point it worked fine.
+- Suspect that the HOST1 partition was still erroneously marked as Non Bootable but
+  I didn't bother investigating because it continues to work.
+
+* Bootstrapping
+:PROPERTIES:
+:ID:       org_gcr_2019-10-27T22-29-41-05-00_cosmicality:B634D04F-FCA7-4488-B2D9-163E21B9A22C
+:END:
+
+The goal here is to get enough of an evironment set up to easily and pleasantly:
+- Use a Terminal
+- Use Git with [[https://github.com/][GitHub]] and [[https://gitlab.com/][GitLab]]
+- Use Emacs
+- Develop the provisioner
+  - Make minor changes
+    - Need richer dev tools to start doing big changes (tangling is considered big)
+  - Rebuild the artifacts
+
+Making sense of it relies on you having done this before otherwise it isn't intuitive.
+
+** Manual Steps
+:PROPERTIES:
+:ID:       org_gcr_2019-10-27T22-29-41-05-00_cosmicality:0A69471A-0CF2-48C5-80F6-D7F07F240963
+:END:
+
+- To simplify working with the disks unmount partitions you don't care about which
+  is probably most of them.
+- Install [[https://www.google.com/chrome/browser/][Google Chrome]]: Log in. Yes Sync. Make default browser. Login to LastPass
+- Install [[https://sourcefoundry.org/hack/][Hack Font]]
+- Install [[https://pqrs.org/osx/karabiner/][Karabiner Elements]]
+  - After performing the scripted steps start it once and set it to start at login
+- Set up Terminal \rarr Preferences \rarr Profiles
+  - Profile bar on the left
+    - Create a new theme "Grant"
+    - Set it to the dfeault
+  - Text
+    - Font: Hack: 18
+  - Window
+    - Yes: Working directory or document, and path
+  - Shell
+    - When the shell exits: Close if the shell exited clearly
+  - Keyboard
+    - Use Option as Meta key: YES
+  - Advanced
+    - No Audible bell
+    - Yes visual bell (not just when sound is muted)
+    - NO Set locale environment variables on startup
+      - Set them in your =bashrc=, not here
+- Install [[https://emacsformacosx.com/builds][EmacsForMacOSX]] version 26.3
+- Open Terminal
+- Run ~xcode-select --install~
+
+** Scripted Steps
+:PROPERTIES:
+:header-args: :tangle "01_bootstrap.sh"
+:ID:       org_gcr_2019-10-27T22-29-41-05-00_cosmicality:0E80D0A8-AB2B-451E-BBC2-3EE7D350A2D3
+:END:
+
+#+NAME: org_gcr_2019-10-27T22-29-41-05-00_cosmicality_FCA5AA1E-A175-4973-8E78-F01B61A18DAF
+#+BEGIN_SRC sh
+read -p "Did you already perform the manual steps? If not, do them. [hit enter to continue or Control-C to abort]"
+
+mkdir -p ~/.config
+
+rm -rf ~/tmp
+mkdir ~/tmp
+
+sudo rm -rf /usr/local/
+sudo mkdir -p /usr/local/bin
+sudo mkdir -p /usr/local/include
+sudo mkdir -p /usr/local/lib
+sudo mkdir -p /usr/local/opt
+sudo mkdir -p /usr/local/share
+
+rm -rf ~/.config/karabiner || rm ~/.config/karabiner
+cd ~/src
+rm -rf ./maccadet
+git clone ghb:grettke/maccadet.git
+ln -s ~/src/maccadet ~/.config/maccadet
+
+rm ~/.gitignore_global
+echo .DS_Store > ~/.gitignore_global
+
+git config --global core.excludesfile ~/.gitignore_global
+
+rm -rf ~/.ssh
+cp -r /Volumes/Host\ 3/Users/gcr/.ssh ~/.ssh
+chmod 600 ~/.ssh/id_ed25519
+chmod 600 ~/.ssh/id_ed25519.pub
+ssh-add -K ~/.ssh/id_ed25519
+
+ssh -T glb
+read -p "Did it work? If not, fix it. [hit enter to continue or Control-C to abort]"
+ssh -T ghb
+read -p "Did it work? If not, fix it. [hit enter to continue or Control-C to abort]"
+
+function 22C8initsshdir {
+  cd ~/
+  local timestamp=`date +%Y%m%d%H%M%S`
+  local newdotssh="newssh$timestamp"
+  local olddotssh="oldssh$timestamp"
+  printf "Cloning .ssh directory from Git to %s\n" "$newdotssh"
+  git clone glb:grettke/dotssh.git "$newdotssh"
+  printf "Renaming local .ssh directory to %s\n" "$olddotssh"
+  mv .ssh "$olddotssh"
+  printf "Renaming new working copy %s to .ssh\n" "$newdotssh"
+  mv "$newdotssh" .ssh
+  chmod 600 ~/.ssh/id_ed25519
+  chmod 600 ~/.ssh/id_ed25519.pub
+  printf "Leaving the backup in case there were any problems.\n"
+}
+22C8initsshdir
+
+read -p "I just replaced your .ssh directory with your one from Git. Now testing: [hit enter to continue]"
+ssh -T glb
+read -p "Did it work? If not, fix it. [hit enter to continue or Control-C to abort]"
+ssh -T ghb
+read -p "Did it work? If not, fix it. [hit enter to continue or Control-C to abort]"
+
+rm -rf ~/src
+mkdir ~/src
+cd ~/src
+
+git clone ghb:grettke/bash.git
+cd bash
+git fetch && git fetch --tags
+git checkout highsierra
+cd ..
+git clone https://github.com/scriptingosx/GNU-bash-mac-installer.git
+
+git clone ghb:grettke/osx-provision.git
+cd osx-provision
+git fetch && git fetch --tags
+git checkout highsierra
+cd ..
+
+git clone ghb:grettke/auroramacs.git
+git clone ghb:grettke/myamacs.git
+cd myamacs
+git fetch && git fetch --tags
+git checkout highsierra
+cd ..
+git clone glb:grettke/amacsdotd.git
+git clone ghb:grettke/maccadet.git
+git clone ghb:grettke/help.git
+git clone glb:grettke/list.git
+git clone glb:grettke/license.git
+
+git clone ghb:org2blog/org2blog.git
+git clone https://github.com/hniksic/emacs-htmlize.git htmlize
+git clone https://github.com/abo-abo/hydra.git
+git clone https://github.com/hexmode/xml-rpc-el.git xml-rpc
+git clone ghb:magnars/s.el.git s
+git clone ghb:magnars/dash.el dash
+git clone https://github.com/alphapapa/org-make-toc.git
+git clone https://github.com/purcell/package-lint.git
+
+git clone ghb:grettke/wisdomandwonder.git
+
+cd
+
+rm ~/.emacs.el
+ln -s ~/src/myamacs/.emacs.el ~/.emacs.el
+rm -rf ~/.emacs.d
+rm ~/.emacs.d
+ln -s ~/src/amacsdotd ~/.emacs.d
+sudo rm /usr/local/bin/emacs
+sudo ln -s /Applications/Emacs.app/Contents/MacOS/Emacs /usr/local/bin/emacs
+
+rm -rf ~/src/org-mode
+cd ~/src
+git clone https://code.orgmode.org/bzg/org-mode.git
+cd org-mode
+git fetch && git fetch --tags
+git checkout release_9.0.9
+make autoloads
+
+cd ~/src/GNU-bash-mac-installer
+sh ./buildGNUbashPkg.sh
+read -p "BASH is ready to install. Install it now. When you are done come back here. [hit enter to continue]"
+sudo rm /usr/local/bin/bash
+sudo ln -s /usr/local/bin/bash5 /usr/local/bin/bash
+if grep "/usr/local/bin/bash$" /etc/shells > /dev/null; then
+  echo "/usr/local/bin/bash already configured in shells; doing nothing"
+else
+  sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+  chsh -s /usr/local/bin/bash
+fi
+
+cd ~/src/bash
+./deploy
+#+END_SRC
+
+* User System Preferences
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:E254382E-C76D-43B5-827C-A5994DAB198B
+:END:
+
+In this setup the Scripted Steps come before the Manual Steps because I always forget when I already configure the value in the script and it is easier to remember to change it in there instead of manually.
+
+** Scripted Steps
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:6CAAD80D-03A7-4385-8873-A693DE882D44
+:END:
+
+*** Configuration
+:PROPERTIES:
+:header-args: :tangle "02_user_system_preferences.sh" :tangle-mode (identity #o755)
+:ID:       org_gcr_2017-05-12_mara:A6A791A2-0BDD-45D0-A028-C7055E4E9686
+:END:
+
+**** Machine
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:F583C4D6-505C-436D-AB89-E17478183C3C
+:END:
+
+Set the computer's "names" ([[http://ilostmynotes.blogspot.com/2012/03/computername-vs-localhostname-vs.html][1]], [[http://osxdaily.com/2012/10/24/set-the-hostname-computer-name-and-bonjour-name-separately-in-os-x/][2]], [[http://hack.org/mc/writings/mac-survival.html][3]]).
+
+"Computer Name" and "Local Host Name" must be different.
+
+Decide on a "Logical Name" for your computer and use it with this template.
+
+The name is just for consistency: you can use any values you want here.
+
+- HostName
+  - <Logical name>.<domain>
+  - All lower case
+- LocalHostName
+  - <Logical name>
+  - All lower case
+- NetBIOS
+  - <Logical name>
+  - All lower case
+- ComputerName
+  - <Logical name>
+  - Mixed case
+
+Depending upon "who" is asking, your Mac has four names. If you want to set
+them all at once your can do it like this. I care most about the correct name
+showing up in the terminal.
+
+Finally I decided that sometimes the best thing to do is to give them all the
+same name so there is never a problem confusing them with another system.
+
+#+NAME: org_gcr_2017-05-12_mara_8082AC3B-7751-40C3-B8C3-E1C8B678F07A
+#+BEGIN_SRC sh
+sudo scutil --set HostName ""
+echo "Enter HostName (plain old hostname): "
+read vhn
+sudo scutil --set HostName $vhn
+sudo scutil --set LocalHostName ""
+echo "Enter LocalHostName (name for Bonjour services): "
+read vlhn
+sudo scutil --set LocalHostName $vlhn
+sudo defaults delete 'com.apple.smb.server' NetBIOSName
+echo "Enter NetBIOSName (name that Windows boxes will see): "
+read vnbn
+sudo defaults write 'com.apple.smb.server' NetBIOSName -string $vnbn
+sudo scutil --set ComputerName ""
+echo "Enter ComputerName (human friendly GUI name): "
+read vcn
+sudo scutil --set ComputerName $cn
+#+END_SRC
+
+Display login window as name and password.
+#+NAME: org_gcr_2017-05-12_mara_E7F0585C-736B-4B4F-8123-BEF176250886
+#+BEGIN_SRC sh
+sudo defaults write /Library/Preferences/com.apple.loginwindow.plist SHOWFULLNAME -bool true
+#+END_SRC
+
+Login message.
+#+NAME: org_gcr_2017-05-12_mara_D79CA624-89B0-4F92-877A-B0C2C14A4B2F
+#+BEGIN_SRC sh
+sudo defaults write /Library/Preferences/com.apple.loginwindow.plist LoginwindowText -string "
+All creativity is an extended form of a joke.
+          — Alan Kay"
+#+END_SRC
+
+Cycle through system information by clicking on the clock at the login
+screen[fn:1f8bbd98e464862a:https://apple.stackexchange.com/questions/155429/view-machine-name-on-login-screen].
+
+#+NAME: org_gcr_2017-05-12_mara_3290F2DF-990B-4CE3-8529-36521F720963
+#+BEGIN_SRC sh
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+#+END_SRC
+
+Disable Gatekeeper.
+#+NAME: org_gcr_2017-05-12_mara_AD487C53-1C16-4734-9275-B1B72F41D725
+#+BEGIN_SRC sh
+sudo spctl --master-disable
+#+END_SRC
+
+**** User
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:F95498B5-C927-4AD2-8CC5-2C846C4D6FA6
+:END:
+
+These commands are all [[https://github.com/kitchenplan/chef-osxdefaults/tree/master/recipes][copied from here]].
+
+***** Globals, Logical or Literal
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:06E5E4F8-6D2F-4404-A159-CE3FF95A08A5
+:END:
+
+Disable auto-correct.
+#+NAME: org_gcr_2017-05-12_mara_FECCE7E6-6F35-4DC3-8646-CD445EBFE430
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' NSAutomaticSpellingCorrectionEnabled -bool false
+#+END_SRC
+
+Expand print panel by default.
+#+NAME: org_gcr_2017-05-12_mara_0865BC69-697B-44F1-BAAD-8F0EA0F62E47
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' PMPrintingExpandedStateForPrint -bool true
+defaults write 'NSGlobalDomain' PMPrintingExpandedStateForPrint2 -bool true
+#+END_SRC
+
+Expand save panel by default.
+#+NAME: org_gcr_2017-05-12_mara_17B24F88-6FFB-4BC3-811F-546E4A875EA5
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' NSNavPanelExpandedStateForSaveMode -bool true
+defaults write 'NSGlobalDomain' NSNavPanelExpandedStateForSaveMode2 -bool true
+#+END_SRC
+
+Automatically quit printer app once the print jobs complete.
+#+NAME: org_gcr_2017-05-12_mara_C358FC0F-758F-4B87-9608-9AB34FA17B0A
+#+BEGIN_SRC sh
+defaults write 'com.apple.print.PrintingPrefs' 'Quit When Finished' -bool true
+#+END_SRC
+
+Auto-Hide the menubar.
+#+NAME: org_gcr_2017-05-12_mara_9F534597-1727-420D-BA53-09267E9EB7AB
+#+BEGIN_SRC sh
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+#+END_SRC
+
+Show battery percentage in menubar.
+#+NAME: org_gcr_2017-05-12_mara_35F6C8B1-4D7A-4823-A77E-DDA7F8060AFF
+#+BEGIN_SRC sh
+defaults write 'com.apple.menuextra.battery' ShowPercent -bool true
+#+END_SRC
+
+Add date in menubar clock.
+#+NAME: org_gcr_2017-05-12_mara_7B2BD1E7-4165-4E7F-92D1-C658E9804F51
+#+BEGIN_SRC sh
+defaults write 'com.apple.menuextra.clock' DateFormat -string "EEE MMM d  HH:mm"
+#+END_SRC
+
+Prevent Time Machine from prompting to use new hard drives as backup volume.
+#+NAME: org_gcr_2017-05-12_mara_FA0C8365-624A-4590-98D1-131671483174
+#+BEGIN_SRC sh
+defaults write 'com.apple.TimeMachine' DoNotOfferNewDisksForBackup -bool true
+#+END_SRC
+
+Avoid creating .DS_Store files on network volumes.
+#+NAME: org_gcr_2017-05-12_mara_4073FE48-C5ED-4074-84C9-212B5544CB05
+#+BEGIN_SRC sh
+defaults write 'com.apple.desktopservices' DSDontWriteNetworkStores -bool true
+#+END_SRC
+
+Save to disk (not to iCloud) by default.
+#+NAME: org_gcr_2017-05-12_mara_4D88B78D-92CA-46AE-AFBC-B69D78F46296
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' NSDocumentSaveNewDocumentsToCloud -bool false
+#+END_SRC
+
+Increase window resize speed for Cocoa applications.
+#+NAME: org_gcr_2017-05-12_mara_BD54854E-74A3-42C0-989A-F39C70D762F1
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' NSWindowResizeTime -float 0.001
+#+END_SRC
+
+Disable the “Are you sure you want to open this application?” dialog.
+#+NAME: org_gcr_2017-05-12_mara_CE6EBA74-B9B0-45AA-B741-7F2BF0F0AD24
+#+BEGIN_SRC sh
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+#+END_SRC
+
+Display ASCII control characters using caret notation in standard text views.
+Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`.
+#+NAME: org_gcr_2017-05-12_mara_F0EC81C0-85C3-401D-BADF-B7156B043B00
+#+BEGIN_SRC sh
+defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
+#+END_SRC
+
+Disable automatic termination of inactive apps.
+#+NAME: org_gcr_2017-05-12_mara_F839E739-239F-452B-BB09-557FBC539EF1
+#+BEGIN_SRC sh
+defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+#+END_SRC
+
+Disable the crash reporter.
+#+NAME: org_gcr_2017-05-12_mara_9D937F98-0106-444A-BC40-C37283FAB316
+#+BEGIN_SRC sh
+defaults write com.apple.CrashReporter DialogType -string "none"
+#+END_SRC
+
+Set Help Viewer windows to non-floating mode.
+#+NAME: org_gcr_2017-05-12_mara_6A505F3E-B686-46A7-A617-EEC6419C81A5
+#+BEGIN_SRC sh
+defaults write com.apple.helpviewer DevMode -bool true
+#+END_SRC
+
+Restart automatically if the computer freezes.
+#+NAME: org_gcr_2017-05-12_mara_10BE7A63-4C25-40AA-B9C8-60F2267FB5F6
+#+BEGIN_SRC sh
+sudo systemsetup -setrestartfreeze on
+#+END_SRC
+
+Check for software updates daily, not just once per week.
+#+NAME: org_gcr_2017-05-12_mara_24BCF9D2-732A-472C-855D-6AFAE6BE1967
+#+BEGIN_SRC sh
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+#+END_SRC
+
+Disable smart quotes.
+#+NAME: org_gcr_2017-05-12_mara_4F242371-3696-4DF2-AC94-22F2038E83BE
+#+BEGIN_SRC sh
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+#+END_SRC
+
+Disable smart dashes.
+#+NAME: org_gcr_2017-05-12_mara_B5E344AD-EF14-4F0D-BE99-E6717081917B
+#+BEGIN_SRC sh
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+#+END_SRC
+
+***** Hardware
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:86EF4EB5-CB24-4FAD-B21D-C7CFB233EE8B
+:END:
+
+Disable press-and-hold for keys in favor of key repeat.
+#+NAME: org_gcr_2017-05-12_mara_278431C8-F6C9-4648-9828-EC3C001265FE
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' ApplePressAndHoldEnabled -bool false
+#+END_SRC
+
+Increase sound quality for Bluetooth headphones/headsets.
+#+NAME: org_gcr_2017-05-12_mara_1535AE8C-9440-484F-8916-B3B1E0E367E9
+#+BEGIN_SRC sh
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+#+END_SRC
+
+***** Dock
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:97B586C1-CF32-410F-8763-9CEA8C72B556
+:END:
+
+Automatically hide and show the dock.
+#+NAME: org_gcr_2017-05-12_mara_92C03F93-F5AB-480A-9D11-AD4B0340175D
+#+BEGIN_SRC sh
+defaults write com.apple.dock autohide -bool true && killall Dock
+#+END_SRC
+
+Do not animate opening applications from the Dock.
+#+NAME: org_gcr_2017-05-12_mara_AED4ACD0-8AC0-4DA1-84C2-854352BF862E
+#+BEGIN_SRC sh
+defaults write com.apple.dock launchanim -bool false && killall Dock
+#+END_SRC
+
+Enable highlight hover effect for the grid view of a stack.
+#+NAME: org_gcr_2017-05-12_mara_0BBDBF25-1CD4-4E9A-9C30-2AC387CF4F8D
+#+BEGIN_SRC sh
+defaults write com.apple.dock mouse-over-hilte-stack -bool true && killall Dock
+#+END_SRC
+
+Make Dock icons of hidden applications translucent.
+#+NAME: org_gcr_2017-05-12_mara_9FE18292-E785-433D-901F-C6BA8673D4CC
+#+BEGIN_SRC sh
+defaults write com.apple.dock showhidden -bool true && killall Dock
+#+END_SRC
+
+Minimize to application.
+#+NAME: org_gcr_2017-05-12_mara_F97562F8-8DC4-4E1B-8E0C-A91ED6404138
+#+BEGIN_SRC sh
+defaults write com.apple.dock minimize-to-application -bool true && killall Dock
+#+END_SRC
+
+Move the Dock to the bottom side of the screen.
+#+NAME: org_gcr_2017-05-12_mara_7660A9DA-AAD9-4B44-A40A-4A9AD376DAA4
+#+BEGIN_SRC sh
+defaults write com.apple.dock orientation -string bottom && killall Dock
+#+END_SRC
+
+Remove the animation when hiding/showing the dock.
+#+NAME: org_gcr_2017-05-12_mara_CE835494-145D-494D-AA53-60BDE5132068
+#+BEGIN_SRC sh
+defaults write com.apple.Dock autohide-time-modifier -float 0 && killall Dock
+#+END_SRC
+
+Remove the auto-hiding Dock delay".
+#+NAME: org_gcr_2017-05-12_mara_FFFF9528-5771-410A-B554-CDEECE46223C
+#+BEGIN_SRC sh
+defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
+#+END_SRC
+
+Set the icon size of Dock items to 50 pixels.
+#+NAME: org_gcr_2017-05-12_mara_CC22C9D3-6537-48AB-9C73-3B3BFAE32571
+#+BEGIN_SRC sh
+defaults write com.apple.Dock tilesize -int 50 && killall Dock
+#+END_SRC
+
+Show indicator lights for open applications in the Dock.
+#+NAME: org_gcr_2017-05-12_mara_CC1758DF-1E34-4335-BE0A-A3ADFF94E289
+#+BEGIN_SRC sh
+defaults write com.apple.Dock show-process-indicators -bool true && killall Dock
+#+END_SRC
+
+Wipe all (default) app icons from Dock.
+#+NAME: org_gcr_2017-05-12_mara_2C282764-302C-48B3-8526-BCBBC68136D7
+#+BEGIN_SRC sh
+defaults write 'com.apple.dock' persistent-apps -array '' && killall Dock
+#+END_SRC
+
+Speed up Mission Control animations.
+#+NAME: org_gcr_2017-05-12_mara_51190ECF-96AF-41E5-A3D5-305733CB369B
+#+BEGIN_SRC sh
+defaults write 'com.apple.dock' expose-animation-duration -float 0.1 && killall Dock
+#+END_SRC
+
+***** Finder
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:7898D315-F4DB-44C8-87D7-95A386CE489C
+:END:
+
+Allow text selection in Quick Look.
+#+NAME: org_gcr_2017-05-12_mara_8A95C7A0-1FFC-4F4A-B85B-E615692D3DD0
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' QLEnableTextSelection -bool true && killall Finder
+#+END_SRC
+
+Automatically open a new Finder window when a volume is mounted.
+#+NAME: org_gcr_2017-05-12_mara_B0C608AD-9265-4878-AEBC-7E33A048F1A1
+#+BEGIN_SRC sh
+defaults write 'com.apple.frameworks.diskimages' auto-open-ro-root -bool true && killall Finder
+defaults write 'com.apple.frameworks.diskimages' auto-open-rw-root -bool true && killall Finder
+defaults write 'com.apple.finder' OpenWindowForNewRemovableDisk -bool true && killall Finder
+#+END_SRC
+
+Set finder to display full path in title bar.
+#+NAME: org_gcr_2017-05-12_mara_FD73E47E-42A4-4AB9-A599-12E44D822A79
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' _FXShowPosixPathInTitle -bool true && killall Finder
+#+END_SRC
+
+New Finder window shows the homefolder.
+#+NAME: org_gcr_2017-05-12_mara_2D637649-277F-4E7B-959E-924E88F046A6
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' NewWindowTarget -string PfHm && killall Finder
+#+END_SRC
+
+When performing a search, search the current folder by default.
+#+NAME: org_gcr_2017-05-12_mara_1A04F6F5-D673-4043-90B1-F6283FBEF5C9
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' FXDefaultSearchScope -string SCcf && killall Finder
+#+END_SRC
+
+Show all files in Finder.
+#+NAME: org_gcr_2017-05-12_mara_91DF78CB-D5A0-4F5D-AA66-C402BF61F1B4
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' AppleShowAllFiles -bool true && killall Finder
+#+END_SRC
+
+Show file extensions in Finder.
+#+NAME: org_gcr_2017-05-12_mara_47D3778D-108C-4FE8-8500-7219FDE66F65
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' AppleShowAllExtensions -bool true && killall Finder
+#+END_SRC
+
+Show path bar in Finder.
+#+NAME: org_gcr_2017-05-12_mara_E686D674-F91E-41C1-9AAC-CCAE9A045BE9
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' ShowPathbar -bool true && killall Finder
+#+END_SRC
+
+Show status bar in Finder.
+#+NAME: org_gcr_2017-05-12_mara_0A61D4B3-E473-4260-BC09-E7AE3466B3FF
+#+BEGIN_SRC sh
+defaults write 'com.apple.finder' ShowStatusBar -bool true && killall Finder
+#+END_SRC
+
+Sidebar icon size Small.
+#+NAME: org_gcr_2017-05-12_mara_0E915742-485B-4FD0-B884-D2D479803765
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' NSTableViewDefaultSizeMode -bool true && killall Finder
+#+END_SRC
+
+- Finder view style settings [[icnv: Icon View
+Nlsv: List View
+clmv: Column View
+Flwv: Cover Flow View][Via]]
+- icnv :: Icon View
+- Nlsv :: List View
+- clmv :: Column View
+- Flwv :: Cover Flow View
+#+NAME: org_gcr_2017-05-12_mara_C3B234B5-498F-4C29-B548-03DF4D57085A
+#+BEGIN_SRC sh
+defaults write 'com.apple.Finder' FXPreferredViewStyle Nlsv && killall Finder
+#+END_SRC
+
+[[https://gist.github.com/nickbudi/11277384][Via:]]
+Set item arrangement to none (enables folder dropdowns, 'Name' if you want to
+remove them)
+#+NAME: org_gcr_2017-05-12_mara_818E594F-4D81-43E3-9734-F52C4C827D77
+#+BEGIN_SRC sh
+defaults write com.apple.finder FXPreferredGroupBy -string "None"
+#+END_SRC
+
+Sort list view by kind in ascending order (Windows style).
+#+NAME: org_gcr_2017-05-12_mara_3A24B6A5-AA20-4377-9D5A-5544B7DA6C8E
+#+BEGIN_SRC sh
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettings:sortColumn kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettings:columns:4:ascending true" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ListViewSettings:sortColumn kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ListViewSettings:columns:kind:ascending true" ~/Library/Preferences/com.apple.finder.plist
+#+END_SRC
+
+Finder: disable window animations and Get Info animations.
+#+NAME: org_gcr_2017-05-12_mara_67D184D1-B9CC-4020-8E2C-DB4A308723D1
+#+BEGIN_SRC sh
+defaults write com.apple.finder DisableAllAnimations -bool true
+#+END_SRC
+
+Show nothing on the desktop.
+#+NAME: org_gcr_2017-05-12_mara_1F11E130-3D0F-4351-ADF1-A96F891B5055
+#+BEGIN_SRC sh
+defaults write com.apple.finder CreateDesktop -bool false
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+#+END_SRC
+
+***** Screen
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:DA95ADE8-F98C-45BC-843C-08AECC659BBC
+:END:
+
+Require password immediately after sleep or screen saver begins.
+#+NAME: org_gcr_2017-05-12_mara_058DEDDA-6F7B-4EC1-80EC-EDC032D321A8
+#+BEGIN_SRC sh
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+#+END_SRC
+
+Disable shadow in screenshots.
+#+NAME: org_gcr_2017-05-12_mara_C7F807FE-086C-4DAD-874B-663354851470
+#+BEGIN_SRC sh
+defaults write com.apple.screencapture disable-shadow -bool true
+#+END_SRC
+
+Save screenshots in PNG format.
+#+NAME: org_gcr_2017-05-12_mara_F453C1D8-DAD0-4EFC-B03C-5D502014F323
+#+BEGIN_SRC sh
+defaults write 'com.apple.screencapture' type -string png && killall SystemUIServer
+#+END_SRC
+
+Enable subpixel font rendering on non-Apple LCDs.
+#+NAME: org_gcr_2017-05-12_mara_E9B0CDED-1981-4EDC-8B79-7FF6D807347C
+#+BEGIN_SRC sh
+defaults write 'NSGlobalDomain' AppleFontSmoothing -int 2
+#+END_SRC
+
+[[https://github.com/robb/.dotfiles/blob/master/osx/defaults.install][Via]]
+#+NAME: org_gcr_2017-05-12_mara_C6FCF96E-90C8-42CF-86E9-028CCF471B92
+#+BEGIN_SRC sh
+mkdir -p ~/Screen\ Shots
+defaults write com.apple.screencapture location ~/Screen\ Shots
+#+END_SRC
+
+***** Spaces
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:3D29A9A2-2A19-4930-91AF-7190EFD610FA
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_CDD537A4-A928-4084-BC7A-22EE8DA50D23
+#+BEGIN_SRC sh
+# Don’t automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
+# Set edge-dragging delay to 0.7
+defaults write com.apple.dock workspaces-edge-delay -float 1.0
+#+END_SRC
+
+***** Terminal
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:9311984B-AF14-479D-8E8A-CE17CE468CE2
+:END:
+
+Only use UTF-8 in Terminal.app.
+
+#+NAME: org_gcr_2017-05-12_mara_B61838B5-13A9-4714-8702-C4BFDA5CE680
+#+BEGIN_SRC sh
+defaults write com.apple.terminal StringEncodings -array 4
+#+END_SRC
+
+***** Activity Monitor
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:4C594D4F-6FF8-4455-8D65-756511C905FA
+:END:
+
+Show the main window when launching Activity Monitor.
+#+NAME: org_gcr_2017-05-12_mara_0177C8D4-4113-4149-97DF-D83AEA5B65B6
+#+BEGIN_SRC sh :results output silent
+defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
+#+END_SRC
+
+Visualize CPU usage in the Activity Monitor Dock icon.
+#+NAME: org_gcr_2017-05-12_mara_E7775BEC-2D26-4D19-A8C9-0BCF9AA22230
+#+BEGIN_SRC sh :results output silent
+defaults write com.apple.ActivityMonitor IconType -int 5
+#+END_SRC
+
+Show all processes in Activity Monitor.
+#+NAME: org_gcr_2017-05-12_mara_5C9A0DEA-DBD3-46BA-A85C-A17CDC79826D
+#+BEGIN_SRC sh :results output silent
+defaults write com.apple.ActivityMonitor ShowCategory -int 0
+#+END_SRC
+
+Sort Activity Monitor results by CPU usageefaults write com.apple.ActivityMonitor Sort.Column -string "CPUUsage".
+#+NAME: org_gcr_2017-05-12_mara_51F2F5A5-7037-4458-8468-AD019892EBE9
+#+BEGIN_SRC sh :results output silent
+defaults write com.apple.ActivityMonitor SortDirection -int 0
+#+END_SRC
+
+***** Complete
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:5873CCFC-6E5A-43BB-96F3-10003F879BCB
+:END:
+
+#+NAME: org_gcr_2017-05-12_mara_4C582518-39DC-4D1A-BB0C-5499B4CA78D3
+#+BEGIN_SRC sh
+echo "Script complete"
+#+END_SRC
+** Manual Steps
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:086E173A-F635-4C0B-913D-17786B92FFEC
+:END:
+
+*** Installation
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:138B1DB1-7BE8-408E-B115-0D5FD63C7835
+:END:
+
+- Utility Scripts
+  - Mount only required volumes
+    - Clarify
+      - Spotlight suggests applications and files on those volumes and
+        you usually don't want that
+      - Applications get locks on files on non host volumes
+    - For =host1= that means =host1= and =Storage=
+  - Run the script at logon
+    - Customize this for the install partition
+    - When you restore a partition then the partition names change so you have to update this script again.
+  - The directory gets checked out in the DevOps section
+- System Preferences
+  - General
+    - NO: Close windows when quitting an app
+  - Desktop & Screensaver
+    - Desktop
+      - Whie
+    - Screensaver
+      - 5m
+  - Dock
+    - Size: Set in script
+    - Magnification: Off
+    - Position:  Set in script
+    - Maximize windows using: Genie Effect
+    - Double clicking a title bar: NO
+    - Minimize windows into application icon: Yes
+    - Animate opening apps: Yes
+    - Auto hide/show dock: Yes
+    - Show indicator for open apps: Yes
+  - Mission Control
+    - Displays have separate spaces: YES
+  - Language & Region: *NA*
+  - Security & Privacy: *NA*
+  - Spotlight
+    - Search Results
+      - Applications
+      - Calculator
+      - Documents
+      - Folders
+      - System Preferences
+      - UN-CHECK Allow Spotlight Suggestions in Look up
+    - Privacy
+      - Big folders like DropBox or TimeMachine
+      - External disks especially snapshot partitions
+  - Notifications: *NA*
+  - Displays: *NA*
+  - Energy saver
+    - On battery, Screen sleep 5m
+      - Don't slightly dim the display on battery power
+    - On power
+      - Display off at 15m
+      - Disable Power Nap
+  - Keyboard
+    - Keyboard
+      - YES Adjust keyboard brightness in low light
+      - YES Turn keyboard backlight off after 30s
+      - YES Show keyboard and emoji viewers in menu bar
+      - NO Use F1,  F2,  etc.  keys as standard function keys
+        - Do nothing to the modifier keys, everything will happen in Karabiner-Elements
+    - Shortcuts
+      - Leave Display alone: retain all defaults
+      - Screen Shots
+        - Screen as file: C-M-s-3
+        - Screen to clipboard: C-M-s-S-3
+        - Selection as file: C-M-s-S-4
+        - Selection to clipboard: C-M-s-S-4
+      - Spotlight
+        - Show Spot light search: Alt-Tab
+    - Dictation: On
+      - Use Enhanced Dictation (Offline Enabled)
+      - Shortcut: Control-Command-D
+  - Mouse
+    - Connect Bluetooth mouse
+    - Tracking Speed
+      - MBP Trackpad: 100%
+      - Anker Palm Mouse: 50%
+      - Dell Mouse: 80%
+  - Trackpad
+    - Point & Click
+      - Look up & data detectors: FALSE
+      - Secondary click: TRUE
+      - Tap to click: TRUE
+  - Printers & Scanners
+    - Canon MG6600
+      - Print
+        - Add it so it shows up.
+      - Scanner
+        - *DO NOT use Canon's software*. Apple has drivers for this printer and it will install them for you. The Canon software is wonky .
+        - Must scan something for it to automatically install Apple's scanning
+          driver.
+        - Scanning Setup
+          - Show Details
+          - Kind: Black & White
+          - Resolution DPI: 150
+          - Custom Size: Nope use Letter
+          - Scan To: ~/Documents
+          - Name: HEREISTHESCAN
+          - Format: PDF
+            - Combine into single document: YES
+          - Everything else is: NO
+  - Sound
+    - Show volume in menubar
+  - Startup Disk: *NA*
+  - iCloud: *NA*
+  - Internet Accounts: *NA*
+  - App Store: *NA*
+  - Network: *NA*
+  - Bluetooth
+    - Show in menu bar
+  - Extensions: *NA*
+  - Sharing: *NA*
+  - Users & Groups:
+    - Guest User
+      - YES: Allow guests
+      - NO: Parental Controls.
+    - NO: Allow guest users to connect to shared folders
+  - Siri
+    - Enable Siri: *NO*
+    - Language: English (US)
+    - Siri Voice: Australian Female
+    - Voice Feedback: On
+    - Mic Input: Internal Microphone
+    - Keyboard Shortcut: Control-Command-R
+    - Show Siri in menu bar: NO
+  - Parental Controls: *NA*
+  - Date & Time: *NA*
+  - Time Machine: *NA*
+  - Accessibility
+    - Display
+      - Increase contrast
+        - Automatically Reduces transparency
+      - Contrast: Normal
+      - Cursor size: 50%
+      - YES Shake mouse pointer to locate
+      - Speech
+        - Overview
+          - The CereProc voices are the best I've found so I installed them below and choose one here. Just noticed that Apple has enhanced quality voices so I install them Samantha and Alex (English United States). Each is 700MB so I'm pretty curious about the quality. Also I want to be able to share it as an option for a built in solution.
+        - Voice: CereProc Jess
+          - Speaking Rate: Normal+%10
+          - In the drop down add it to listed voices
+        - Speak selected text on key: Control-Command-S
+    - Zoom
+      - NO Use keyboard shortcuts
+      - YES Smooth images
+    - VoiceOver: *NA*
+    - Descriptions: *NA*
+    - Captions: *NA*
+    - Audio: *NA*
+    - Keyboard: *NA*
+    - Mouse & Trackpad
+      - Trackpad Options
+        - Enable Dragging: *Without* Drag Lock
+    - Switch Control: *NA*
+    - NO: Show Accessibility status in menu bar
+  - iCloud: *NA*
+    - Don't use the file store or the keychain
+  - SwitchResX: *NA*
+  - Tuxera NTFS: *NA*
+- Finder
+  - Preferences
+    - General
+      - SCRIPTED: Show nothing on the desktop
+      - SCRIPTED: New Finder windows show: Home dir
+      - YES: Open folders in tabs instead of new windows
+    - Sidebar
+      - Applications
+      - Desktop
+        - Stuff gets placed there automatically sometimes
+      - Documents
+      - Downloads
+      - Home
+      - Connected servers
+      - Bonjour computers
+      - This computer
+      - Hard disks
+      - External disks
+      - CDs, DVDs, and iPods
+  - Favorites
+    - Dropbox
+    - gcr
+    - Screenshots
+    - Documents
+    - src
+    - Downloads
+    - tmp
+    - Desktop
+    - Applications
+  - View
+    - SCRIPTED: Show everything but preview
+
+* Development
+:PROPERTIES:
+:ID:       org_gcr_2019-10-28T16-38-58-05-00_Grants-MBP:1D244002-B7D9-49B3-A1E3-F3F56C9A495E
+:END:
+
+** Manual Steps
+:PROPERTIES:
+:ID:       org_gcr_2019-10-28T16-38-58-05-00_Grants-MBP:7DA3EB0C-0882-47BF-863C-828C21770C1F
+:END:
+
+*** xquartz
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:DFD00D78-6B0D-4828-A9CB-80276178F239
+:END:
+
+- [[https://www.xquartz.org/][Download]] and install it
+- Copy and paste this into the Terminal
+  - Don't run any applications on startup.
+    #+name: org_gcr_2018-09-24T09-26-51-05-00_cosmicality_14FD75A6-624E-4AB7-94A8-C5EF341B62A8
+#+NAME: org_gcr_2019-10-28T16-38-58-05-00_Grants-MBP_A797FA4B-4B1F-4481-8D05-12E42E3CAB3B
+#+begin_src sh :tangle no
+defaults write org.macosforge.xquartz.X11 app_to_run /usr/bin/true
+#+end_src
+
+The font in application is too small.
+
+#+begin_example
+Default resolution too low? Fonts too small?
+
+Do your fonts come out too small in programs like Gimp? This and related
+problems are especially noticeable on the MacBook Pro with high-definition
+screen. The problem is that older versions of X11 use a resolution setting of
+75dpi (dots per inch), and even newer ones use 96dpi by default. Since X11
+2.3.2rc4, you can override this default and put in a value that suits your
+display. For example, for the MacBook Pro, the appropriate value is 133dpi. To
+do this, enter the following in the Terminal, and restart X11:
+
+You should replace 133 by some other number appropriate to your display if it
+is not 133dpi. How do you tell what the appropriate dpi setting is? One way
+(there may be simpler ones!) is to fire up Acrobat or Acrobat Reader, and look
+at Preferences -> Page Display, which will tell you what the System Setting
+for your resolution is in dpi.
+#+end_example
+
+#+name: org_gcr_2018-09-24T09-26-51-05-00_cosmicality_2EB565D2-70D7-4CE1-AD25-BB3BB28B62BB
+#+BEGIN_SRC sh :tangle no
+defaults write org.macosforge.xquartz.X11 dpi -int 105
+#+END_SRC
+**** Preferences
+:PROPERTIES:
+:ID:       org_gcr_2019-08-11T16-10-48-05-00_cosmicality:946F1EBD-8DA9-411E-AABC-F32FD038BE7D
+:END:
+
+- Preferences
+  - Input
+    - Emulate three button mouse: NO
+      - Already works don't need to emulate it
+    - Follow system keyboard layout: NO
+      - Was the default
+    - Enable key equivelants under X11: NO
+      - Must be disabled in order for Control-Option swap in XModMap to work
+    - Option keys send Alt_L and Alt_R: NO
+      - By using XModMap you can still use Option for special characters
+  - Output
+    - Full screen mode (using command-option-a): NO
+      - Possibly useful for possible lone-window recovery
+      - Not using it because it seem to only allow working in full screen mode
+        and toggle just switches you back to the Mac desktop.
+  - Pasteboard
+    - Enable syncing: YES
+      - Was the default
+    - Update Pasteboard when CLIPBOARD changes: NO
+      - So copy paste works correctly under X apps. Can't paste from X into
+        macOS now, but can still copy from macOS and paste into X.
+    - Update CLIPBOARD when Pasteboard changes: YES
+      - So you can copy from macOS to X (I think)
+    - Update PRIMARY (middle-click) when Pasteboard changes: YES
+      - Was the default
+    - Update Pasteboard immediately when new text is selected: NO
+      - Was the default
+  - Windows
+    - Click-through Inactive Windows: NO
+      - Was the default
+    - Focus Follows Mouse: NO
+      - I don't like it
+    - Focus On New Windows: YES
+      - So you know a new window started
+  - Security
+    - Authenticate connections: YES
+      - If you don't then you get a .Xauthority error when you 'ssh -y'
+    - Allow connections from network clients: NO
+      - Was the default
+
+**** XModMap
+
+Get the config.
+
+#+BEGIN_SRC sh
+cd ~/src
+rm -rf ./MacXmodmap
+git clone ghb:grettke/MacXmodmap.git
+rm ~/.Xmodmap
+ln -s ~/src/MacXmodmap/.Xmodmap ~/.Xmodmap
+#+END_SRC
+
+*** DeltaWalker
+:PROPERTIES:
+:ID:       org_gcr_2019-10-28T16-38-58-05-00_Grants-MBP:013D8FD9-4C28-480F-A287-77C4C38BE013
+:END:
+
+- [[https://www.deltawalker.com/][Install it]]
+- License it.
+- Set preferences for new comparisons (be sure of this, easy not to)
+  - All Comparisons
+    - [ ] Use text differencing optimized for speed
+    - [X] Use text differencing optimized for accuracy
+    - [X] Follow symbolic links
+    - [ ] Ignore differences in whitespace
+      - Want to know about tabs versus spaces
+    - [ ] Ignore differences in character case
+      - Interesting but default do care
+    - [ ] Ignore differences in line endings (CF and LF)
+      - Most systems don't care, but I do and should fix it
+  - General
+    - Date formatting: English (United States)
+    - [X] Automatically find new updates and notify me
+    - Colors and Fonts
+      - Basic
+        - Text Editor Block Selection Font: Hack 13
+        - Text Font: Hack 13
+      - Differences
+        - Addition color: Green
+        - Change color : Orange
+        - Conflict color: Red
+        - Deletion color: Cyan
+        - Font: Hack 13
+  - Text comparison
+    - Editors
+      - YES Show whitespace characters
+      - Appearance color options
+        - Current line highlight: Yellow
+          - So you can see the outline of the change while the current line
+            indication is still obvious
+- Set up the "Compare with DeltaWalker.workflow"
+  - Go to the =Extras= folder in the installer Disk Image
+  - Go to its [Cask location]/Extras
+  - Copy it to ~/Library/Services
+  - Opening it in Automator by double clicking it in Finder
+  - Immediately save it and close it
+- Before closing the disk image copy the sample files to Documents
+
+*** Sourcetree
+:PROPERTIES:
+:ID:       org_gcr_2019-10-28T16-38-58-05-00_Grants-MBP:0DDB2F37-B407-46E5-9524-ACDF4B9D3991
+:END:
+
+- [[https://www.sourcetreeapp.com/download-archives][Install it]]
+  - Version 3 runs on High Sierra Version 4 doesn't
+- Login is mandatory
+- First question pane
+  - Disallow SourceTree from modifying yoru global Git config file
+  - Don't send analytics
+- Preferences
+  - Diff
+    - Set font to Hack 9
+
+
+** Scripted Steps
+:PROPERTIES:
+:ID:       org_gcr_2019-10-28T16-38-58-05-00_Grants-MBP:8ACAE87E-3978-4640-9B43-19BADA8EB4DA
+:END:
+
+*** Git
+:PROPERTIES:
+:header-args: :tangle "mygit.sh"
+:ID:       org_gcr_2019-10-28T16-38-58-05-00_Grants-MBP:070CF8A4-F315-4C9F-B4BC-D5D85D8FF20B
+:END:
+
+Set up my preferences.
+
+#+NAME: org_gcr_2017-05-12_mara_DA1B734B-8994-4465-AA58-08E2EF337770
+#+begin_src sh
+git config --global user.name "Grant Rettke"
+git config --global user.email grant@wisdomandwonder.com
+git config --global color.ui true
+git config --global core.autocrlf input
+git config --global alias.st status
+git config --global alias.ci commit
+git config --global svn.rmdir true
+git config --global alias.dt difftool
+git config --global alias.mt mergetool
+git config --global diff.tool deltawalker
+git config --global difftool.deltawalker.cmd '/Applications/DeltaWalker.app/Contents/Resources/git-diff $LOCAL $REMOTE'
+git config --global difftool.prompt false
+git config --global merge.tool deltawalker
+git config --global mergetool.deltawalker.cmd '/Applications/DeltaWalker.app/Contents/Resources/git-merge $LOCAL $REMOTE $BASE $MERGED'
+git config --global mergetool.keepBackup false
+#+end_src
+
+* DevOps
+:PROPERTIES:
+:ID:       org_gcr_2019-10-28T16-38-58-05-00_Grants-MBP:A85676DC-A694-4EC4-9DE4-9507CBC5E2F4
+:END:
+
+** Manual Steps
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:6F280CEF-BF61-43F7-AC6A-E28ACC5FA7CD
+:END:
+
+- Install [[https://bombich.com/download][CarbonCopyCloner]]
+  - License it
+- Preferences (Adds to default)
+  - Software Update: Daily
+  - CCC User Agent
+    - Start at signon
+    - Flash menubar icon
+- Application Configuration
+  - First create a task for cloning the Storage partition but don't configure it
+  - Mirror the boot partition
+    - Identify and drag \rarr storage partition
+    - Identify and drag \rarr destination partition
+      - SafetyNet: ON
+    - Advanced Settings \rarr After Copying Files \rarr Run another task
+      - The clone Storage task
+    - Schedule the task
+      - Daily
+      - 4:00pm
+      - Defer to other writers
+      - If the system is off or sleeping when this task is scheduled to run:
+        - Run this task when the system next wakes
+      - If the source or destination is missing
+        - Run this task as soon as the missing volume reappears
+  - Do the same thing for storage minus calling the Storage task after finishing
+- Install [[https://my.vmware.com/web/vmware/login][VMWare Fusion Pro]]
+
+*** Utility Scripts
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:2231C4EB-FD9C-4A7D-B558-36448627F06B
+:END:
+
+#+NAME: org_gcr_2017-06-18_mara_4833AB48-1C15-4E4E-A767-F2711FFDAAE5
+#+BEGIN_SRC sh
+rm ~/util
+cd ~/src
+rm -rf ./util
+git clone glb:grettke/util.git
+ln -s ~/src/util ~/util
+#+END_SRC
+
+** Scripted Steps
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:98FF0433-8EA9-4BD9-AAC5-04C0DC72B20A
+:END:
+
+None.
+
+* Literature
+:PROPERTIES:
+:ID:       org_gcr_2019-10-28T16-38-58-05-00_Grants-MBP:C2E744D8-8129-43CD-8DF2-8A24982FE623
+:END:
+
+All things reading writing and publishing.
+
+** Manual Steps
+:PROPERTIES:
+:ID:       org_gcr_2019-10-28T16-38-58-05-00_Grants-MBP:D92E3669-D9DC-4FCF-97E2-92C9E9DDC9E9
+:END:
+
+- Install Fonts
+  - [[https://dejavu-fonts.github.io/][DejaVu]]
+- Install [[https://pandoc.org/installing.html][Pandoc]]
+- Install [[https://windjview.sourceforge.io/][WinDjView (aka MacDjView)]]
+- Install [[https://pandoc.org/installing.html][Pandoc]]
+*** macOS System Dictionary
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:370DF9EC-820F-4384-938D-24775D9397C9
+:END:
+
+#+NAME: org_gcr_2019-08-24T11-58-31-05-00_cosmicality_317769B9-96FD-498D-8A30-DB5ACAFFA674
+#+BEGIN_SRC sh
+cd ~/src
+rm -rf ./macoslocaldictionary
+git clone glb:grettke/macoslocaldictionary.git
+rm ~/Library/Spelling/LocalDictionary
+ln -s ~/src/macoslocaldictionary/LocalDictionary ~/Library/Spelling/LocalDictionary
+#+END_SRC
+
+*** Scrivener
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:CC7E2230-603D-4BAD-8EE8-259D8EEDF103
+:END:
+
+- [[https://www.literatureandlatte.com/scrivener/overview][Install]] & license
+
+*** PopChar
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:B6E29149-EF99-4517-893C-288A5270762E
+:END:
+
+- [[https://www.ergonis.com/products/popchar/][Install]]
+- Register it
+- Preferences
+  - Activation
+    - Location: Status item
+      - Hotkey: Can't figure out how to set this
+    - Animate window: No
+    - Close window then
+      - After selecting a char: No
+      - When mouse leaves window: No
+      - When clicking outside window: No
+    - Start at Login: Yes
+  - View & Insert
+    - Character size: About 50%
+    - Display shadows: Yes
+    - Recent fonts: 10
+    - Highlight recent: No
+    - Insert HTML as: only numbers
+*** TeX
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:A0004B01-D7F4-4D4B-A42B-2F20B77D6A0B
+:END:
+**** MacTeX 2019
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:8C2DD58B-618C-40BF-8B38-077A88A0F9A7
+:END:
+
+Install [[https://tug.org/mactex/mactex-download.html][MacTeX-2019]]. There might be a copy already downloaded.
+
+Like the page says: be sure to read that entire page.
+
+And [[https://tug.org/mactex/newfeatures.html][New Features]]. And [[https://tug.org/mactex/TeXLive2018+Changes.pdf][Changes.]]
+
+Start the TeX Live Utility and update /everything/.
+
+Set up my TeX stuff for KOMA-script. Backup the default configuration first.
+
+#+begin_src sh
+cd /usr/local/texlive/2019
+ls
+sudo cp texmf.cnf texmf.cnf-`date '+%Y_%m_%d__%H_%M_%S'`
+ls
+cd ~/src
+rm -rf ./texmf
+git clone glb:grettke/texmf.git
+sudo tlmgr conf texmf TEXMFhome ~/src/texmf
+#+end_src
+
+Check that the path is really updated: it should display the directory where it lives.
+
+#+begin_src sh
+kpsewhich KomaDefault.lco
+#+end_src
+
+The documents say to maybe do the following. I did it.
+
+#+begin_src sh
+sudo mktexlsr
+#+end_src
+
+** Scripted Steps
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:64BFE708-CFBA-4875-938D-3C17BA0E8A6B
+:END:
+
+None.
+
+* Operations
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T11-03-08-05-00_Grants-MBP:392F7388-A4B3-40F5-8516-ABB5F15BA81B
+:END:
+
+** Manual Steps
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:10DD0192-BD72-4470-AC8D-8170B7BDB3B6
+:END:
+
+- Install [[https://freefilesync.org/][FreeFileSync]]
+- Install [[https://daisydiskapp.com/][DaisyDisk]] the register
+- Install [[https://www.tuxera.com/products/tuxera-ntfs-for-mac/][TuxeraNtfs]] then register
+- Install [[https://www.dropbox.com/install][Dropbox]]
+  - Just point it at the existing folder
+
+*** ripgrep
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:DBBF176C-0B3A-42CC-B0F7-071D27C480C5
+:END:
+
+- Install [[https://github.com/BurntSushi/ripgrep/releases][ripgrep]]
+- Extract it
+- Rename it to just the version number
+- Move it to =/usr/local/opt=
+- Link a general name
+  - sudo ln -s /usr/local/opt/ripgrep-11.0.2 /usr/local/opt/ripgrep
+- Make links
+  #+NAME: org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP_4E829047-B550-4A24-97D7-C1C080C81A14
+  #+BEGIN_SRC sh
+cd /usr/local/bin
+sudo ln -s /usr/local/opt/ripgrep/rg rg
+  #+END_SRC
+
+*** ccrypt
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:ACF4A8CA-B227-498A-9708-F5626FDCB68F
+:END:
+
+- [[http://ccrypt.sourceforge.net/#downloading][Download]] it to =~/tmp=
+- Extract it
+- Rename it to just the version number
+- Move it to =/usr/local/opt=
+- Link a general name
+  - sudo ln -s /usr/local/opt/ccrypt-1.11 /usr/local/opt/ccrypt
+- Make links
+  #+NAME: org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP_2CCD20C6-6395-4FF2-B735-DC81DDD630CB
+  #+BEGIN_SRC sh
+cd /usr/local/bin
+sudo ln -s /usr/local/opt/ccrypt/ccrypt ccrypt
+sudo ln -s /usr/local/opt/ccrypt/ccrypt ccencrypt
+sudo ln -s /usr/local/opt/ccrypt/ccrypt ccdecrypt
+sudo ln -s /usr/local/opt/ccrypt/ccrypt ccat
+  #+END_SRC
+- Copy =ccrypt.1= to =/usr/local/share/man/man1=
+
+*** shellcheck
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:0AC465BB-C7A5-4995-980C-6F5BCDF36CF7
+:END:
+
+- [[https://github.com/koalaman/shellcheck][Download it]]
+- Extract it
+  - tar -xJf shellcheck-stable.darwin.x86_64.tar.xz
+- Move it to /usr/local/bin
+
+** Scripted Steps
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:006EC3A3-72D2-44B6-AE33-C873B123DBAD
+:END:
+
+None.
+
+* Audio & Visual
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:48240F0F-E472-45E4-A3A0-BF6C3FA15395
+:END:
+
+** Manual Steps
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:59F8A2A1-6E29-425B-A2A1-05CB6111D771
+:END:
+
+- Install [[http://www.jrtstudio.com/iSyncr-iTunes-for-Android][iSyncr]]
+  - Don't start automatically
+- Install [[https://zoom.us/download][Zoom]]
+  - Sign in
+  - Review settings
+- Install MacTaris's Webcam Settings app from the App Store
+  - Immediately create (empty) profiles for each camera
+  - Set the FaceTime camera to load on start (make it the default)
+- Install [[https://www.telestream.net/screenflow/overview.htm][ScreenFlow]]
+  - Don't send diagnostics
+  - Preferences
+    - General
+      - Interface Theme: Light
+    - Advanced
+      - Computer Audio: Install Driver
+
+*** Inkscape
+
+- [[https://inkscape.org/][Install]] it
+- Don't start it
+
+#+BEGIN_SRC
+cd ~/src
+rm -rf ./inkscape
+git clone glb:grettke/inkscape.git
+rm ~/.config/inkscape
+ln -s ~/src/inkscape ~/.config/inkscape
+#+END_SRC
+
+*** iTunes
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:0F8CEBE4-DCC6-4E64-8960-B687F21CBA0E
+:END:
+
+**** First
+
+- Start it once so that the default directories are created
+- Do not share library information
+- Stop it
+- Run this
+
+#+name: org_gcr_2018-09-12T14-42-11-05-00_cosmicality_B7FE7813-593B-40D3-B3F8-BE15B898D81D
+#+begin_src sh
+rm -rf ~/Music/iTunes
+rm ~/Music/iTunes
+cd ~/src
+rm -rf ./iTunes
+git clone glb:grettke/iTunes.git
+ln -s ~/src/iTunes ~/Music/iTunes
+#+end_src
+
+**** Then
+
+- General
+  - Library name has no spaces
+  - No star ratings
+  - Large list size
+  - No notifications
+  - CD Import settings
+    - AAC, 160kbps, Use VBR
+    - Use error correction
+- Playback
+  - na
+- Sharing
+  - everything
+- Downloads
+  - Only check download full-size and high-quality
+- Store
+  - Always require a password, automatically download artwork
+- Restrictions
+  - None and don't show content ratings
+- Devices
+  - na
+- Advanced
+  - Media folder location on Dropbox
+  - Keep it organized
+  - Copy files into it when adding
+  - Share iTunes library XML
+  - Keep miniplayer on top
+
+**** References
+
+- [[http://www.kenrockwell.com/apple/itunes.htm][Secrets of iTunes: A recording engineer's guide to importing CDs]]
+- [[http://www.lairware.com/guide/fix_damaged_library.html][How to fix a damaged iTunes library]]
+
+*** Color Sync
+:PROPERTIES:
+:ID:       org_gcr_2018-09-25T01-05-02-05-00_cosmicality:E2912738-C5C7-4816-9482-C1701039183B
+:END:
+
+Unless you already ran Color Sync at least once, run this first:
+
+#+BEGIN_SRC sh
+mkdir /Users/gcr/Library/ColorSync
+#+END_SRC
+
+Do this.
+
+#+name: org_gcr_2018-09-25T01-05-02-05-00_cosmicality_5651897E-0E74-4D17-BA7E-F1B42C11653E
+#+begin_src sh
+cd ~/src
+rm -rf ./colorsyncprofiles
+git clone glb:grettke/colorsyncprofiles.git
+rm ~/Library/ColorSync/Profiles || true
+ln -s ~/src/colorsyncprofiles ~/Library/ColorSync/Profiles
+#+end_src
+
+Then run ~ColorSync Utility~.
+
+It will start up with the =Profile First Aid= tab open. It explains to you why.
+
+Correct any issues and commit them.
+
+Choose the correct profile.
+
+** Scripted Steps
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:538EAA5F-7429-4941-AEFE-7DC672294639
+:END:
+
+None.
+
+* Usability
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:07F05074-C81D-4481-B3A4-717CD22B2D3C
+:END:
+
+** Manual Steps
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:F3EC07D7-0EB7-4B47-AC8B-03AEEC3D93E8
+:END:
+
+- Install [[https://www.malwarebytes.com/][Malwarebytes]]
+  - Register/Sign-In
+  - Preferences
+    - General
+      - Black & White Icon
+      - Don't share usage
+- Install Copy'em Paste from the App Store
+  - Install the [[https://apprywhere.com/copyem-paste-helper.html][helper app]] so you can paste correctly
+  - Default bindings, bindings I set, and notes from setup
+    - Shift-Command-V: Open Clippings Window
+    - Shift-Command-C: Copy and star clipping (Command-C copies without one)
+    - Click a clipping it is pasted, Command-Click and it is copied
+      - Hit the number by a clipping too
+    -"Create paste shortcuts" hmm?
+  - Drag and drop pastes
+  - Option-Click to paste as plain text or Shift-Option-Command-V
+    - I set that one
+  - Command-Click then paste multiple clippings
+  - Create favorite lists of stuff. Some management keybindings.
+  - Can rearrange them
+  - Can import and export clippings
+  - Can pause recording of clipping and even blacklist apps very nice
+  - Preferences
+    - Launch at login
+    - Menubar icon: Not color
+    - Window Appearance: Daylight
+- Install Better Snap Tool from the App Store
+  - General Settings
+    - Start BetterSnapTool every time your Mac starts up: YES
+  - Customization
+    - Advanced settings
+      - Increase snapping recognition areas by: 33 px (YES)
+        - Only increase if more than one monitor is connected: YES
+  - Keyboard Shortcuts: *NA*
+  - Snap Areas
+    - If checked BetterSnapTool will use a bit more memory, but Snap Areas show up   faster
+  - Extras: *NA*
+- Install [[http://www.eigenlogik.com/entropy/][Entropy]]
+  - License
+  - Open all zip files with Entropy
+    - Find a zip file, Get Info, Open With, Entropy, Change All
+- TextEdit
+  - Preferences
+    - New Document
+      - Default to: Rich Text
+      - Font Plain/Rich: DejaVu Serif 11 and 12
+      - Options: Only enabme Smart Copy Paste, nothing else
+    - Open and Save
+      - Opening a HTML or RTF, don't show the code, this isn't a code editor
+      - DO add a text extension to plain text files
+- Install [[https://www.madrau.com/][SwitchResX]]
+  - Open the Preferences Panel- License it
+  - General Settings
+    - Startup Settings
+      - YES: Launch SwitchResX Daemon automatically after login
+- Install [[https://www.microsoft.com/en-us/software-download/office][Office Mac Home and Student 2011 English]]
+  - May already have it downloaded
+  - License it
+    - Use the "Activation ID" because the licenser servers are probably down
+  - Help \rarr Check For Updates
+    - Weekly
+    - Check for updates: Can't connect to the server 😠
+
+** Scripted Steps
+:PROPERTIES:
+:ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:D5D39260-EF20-4FDC-BCB7-8E43DC3581F8
+:END:
+
+None.
