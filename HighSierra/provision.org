@@ -1478,6 +1478,15 @@ sudo ln -s /usr/local/opt/ccrypt/ccrypt ccat
 - Extract it
   - tar -xJf shellcheck-stable.darwin.x86_64.tar.xz
 - Move it to /usr/local/bin
+- Get it's config
+
+#+BEGIN_SRC sh
+cd ~/src
+rm -rf ./shellcheckrc
+git clone ghb:grettke/shellcheckrc.git
+rm ~/.shellcheckrc
+ln -s ~/src/shellcheckrc/.shellcheckrc ~/.shellcheckrc
+#+END_SRC
 
 ** Scripted Steps
 :PROPERTIES:
