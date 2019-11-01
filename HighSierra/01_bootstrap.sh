@@ -13,11 +13,11 @@ sudo mkdir -p /usr/local/lib
 sudo mkdir -p /usr/local/opt
 sudo mkdir -p /usr/local/share
 
-rm -rf ~/.config/karabiner || rm ~/.config/karabiner
+rm -rf ~/.config/karabiner
 cd ~/src
 rm -rf ./maccadet
 git clone ghb:grettke/maccadet.git
-ln -s ~/src/maccadet ~/.config/maccadet
+ln -s ~/src/maccadet ~/.config/karabiner
 
 rm ~/.gitignore_global
 echo .DS_Store > ~/.gitignore_global
