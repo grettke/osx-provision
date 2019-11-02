@@ -95,6 +95,11 @@ git clone ghb:magnars/s.el.git s
 git clone ghb:magnars/dash.el dash
 git clone https://github.com/alphapapa/org-make-toc.git
 git clone https://github.com/purcell/package-lint.git
+git clone ghb:grettke/pretty-mode.git
+git clone ghb:grettke/universal-emotions-emoticons.git
+git clone ghb:grettke/corporate-bs-generator.git
+git clone ghb:grettke/org-utf-to-xetex.git
+git clone ghb:grettke/say.git
 
 git clone ghb:grettke/wisdomandwonder.git
 
