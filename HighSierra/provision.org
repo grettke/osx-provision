@@ -1056,6 +1056,20 @@ echo "Script complete"
 :PROPERTIES:
 :ID:       org_gcr_2019-10-28T16-38-58-05-00_Grants-MBP:7DA3EB0C-0882-47BF-863C-828C21770C1F
 :END:
+- Emacs
+  #+BEGIN_SRC sh
+cd ~/src
+rm -rf ./pretty-mode
+git clone ghb:grettke/pretty-mode.git
+rm -rf ./universal-emotions-emoticons
+git clone ghb:grettke/universal-emotions-emoticons.git
+rm -rf ./corporate-bs-generator
+git clone ghb:grettke/corporate-bs-generator.git
+rm -rf ./org-utf-to-xetex
+git clone ghb:grettke/org-utf-to-xetex.git
+rm -rf ./say
+git clone ghb:grettke/say.git
+  #+END_SRC
 
 *** xquartz
 :PROPERTIES:
