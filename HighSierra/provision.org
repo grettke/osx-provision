@@ -1307,6 +1307,13 @@ git clone glb:grettke/util.git
 ln -s ~/src/util ~/util
 #+END_SRC
 
+#+NAME: org_gcr_2019-11-02T12-01-51-05-00_host1.org_16B71B23-ECA6-4311-95F8-8E50A5FD2179
+#+BEGIN_SRC sh
+cd ~/src
+rm -rf ./rgs
+git clone ghb:grettke/recursive-git-status-bash.git rgs
+#+END_SRC
+
 ** Scripted Steps
 :PROPERTIES:
 :ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:98FF0433-8EA9-4BD9-AAC5-04C0DC72B20A
