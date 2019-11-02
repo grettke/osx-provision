@@ -86,6 +86,7 @@ This section leaves you with a disk image that has the core of what you need to 
   - Choose to create a compressed read only disk image
     named HostOne20191027HighSierraAPFSFreshInstallOnlyUpdates
 - The next image you create will be a read-write sparse-bundle so you can update it as needed. As you version this document rename the file with a date and the Git commit hash.
+- Commit and push all Git working copies first
 
 ** How to test
 :PROPERTIES:
