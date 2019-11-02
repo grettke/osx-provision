@@ -1666,6 +1666,7 @@ None.
 :ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:F3EC07D7-0EB7-4B47-AC8B-03AEEC3D93E8
 :END:
 
+- Install [[https://joshuawise.com/horndis][HoRNDIS]]
 - Install [[https://www.malwarebytes.com/][Malwarebytes]]
   - Register/Sign-In
   - Preferences
