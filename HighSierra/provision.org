@@ -275,6 +275,7 @@ git clone ghb:grettke/universal-emotions-emoticons.git
 git clone ghb:grettke/corporate-bs-generator.git
 git clone ghb:grettke/org-utf-to-xetex.git
 git clone ghb:grettke/say.git
+git clone https://github.com/federicotdn/flymake-shellcheck.git
 
 git clone ghb:grettke/wisdomandwonder.git
 
