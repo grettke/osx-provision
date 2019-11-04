@@ -1065,6 +1065,8 @@ echo "Script complete"
 :ID:       org_gcr_2019-10-28T16-38-58-05-00_Grants-MBP:7DA3EB0C-0882-47BF-863C-828C21770C1F
 :END:
 
+- Install [[https://www.python.org/downloads/mac-osx/][Python Stable]]
+
 *** xquartz
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:DFD00D78-6B0D-4828-A9CB-80276178F239
