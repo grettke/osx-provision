@@ -81,7 +81,7 @@ git fetch && git fetch --tags
 git checkout highsierra
 cd ..
 
-git clone ghb:grettke/auroramacs.git
+git clone ghb:grettke/lolsmacs.git
 git clone ghb:grettke/myamacs.git
 cd myamacs
 git fetch && git fetch --tags

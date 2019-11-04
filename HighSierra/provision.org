@@ -257,7 +257,7 @@ git fetch && git fetch --tags
 git checkout highsierra
 cd ..
 
-git clone ghb:grettke/auroramacs.git
+git clone ghb:grettke/lolsmacs.git
 git clone ghb:grettke/myamacs.git
 cd myamacs
 git fetch && git fetch --tags
@@ -1462,6 +1462,7 @@ None.
   - For [[https://github.com/jay0lee/got-your-back/releases][macOS]]
   - The installation is per-user because it stores your credentials within it's own directory. Therefore don't install it to something like =/usr/local/opt=.
   - Adjust it for the correct version then do this
+    #+NAME: org_gcr_2019-11-03T22-17-37-06-00_host1.org_D4447D6D-A717-4A29-8C54-0CE3A6003A01
     #+BEGIN_SRC sh
 cd ~/Downloads/
 tar -xf gyb-1.31-osx-x86_64.tar.xz
