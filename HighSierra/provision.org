@@ -1458,6 +1458,16 @@ None.
 - Install [[https://www.tuxera.com/products/tuxera-ntfs-for-mac/][TuxeraNtfs]] then register
 - Install [[https://www.dropbox.com/install][Dropbox]]
   - Just point it at the existing folder
+- Install [[https://github.com/jay0lee/got-your-back/wiki][GotYourBack]]
+  - For [[https://github.com/jay0lee/got-your-back/releases][macOS]]
+  - The installation is per-user because it stores your credentials within it's own directory. Therefore don't install it to something like =/usr/local/opt=.
+  - Adjust it for the correct version then do this
+#+BEGIN_SRC sh
+cd ~/Downloads/
+tar -xf gyb-1.31-osx-x86_64.tar.xz
+mv gyb ~/opt/gyb-1.31
+ln -s ~/opt/gyb-1.31/gyb ~/bin/gyb
+#+END_SRC
 
 *** ripgrep
 :PROPERTIES:
