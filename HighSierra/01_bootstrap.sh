@@ -6,6 +6,12 @@ mkdir -p ~/.config
 rm -rf ~/tmp
 mkdir ~/tmp
 
+rm -rf ~/bin
+mkdir ~/bin
+
+rm -rf ~/opt
+mkdir ~/opt
+
 sudo rm -rf /usr/local/
 sudo mkdir -p /usr/local/bin
 sudo mkdir -p /usr/local/include
