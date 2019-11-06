@@ -1347,6 +1347,8 @@ All things reading writing and publishing.
 - Install [[https://pandoc.org/installing.html][Pandoc]]
 - Install [[https://windjview.sourceforge.io/][WinDjView (aka MacDjView)]]
 - Install [[https://pandoc.org/installing.html][Pandoc]]
+- Install [[https://smilesoftware.com/pdfpen][PDFpen PRO]] then license it 
+
 *** macOS System Dictionary
 :PROPERTIES:
 :ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:370DF9EC-820F-4384-938D-24775D9397C9
