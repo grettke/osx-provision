@@ -895,6 +895,7 @@ echo "Script complete"
     - Magnification: Off
     - Position:  Set in script
     - Maximize windows using: Genie Effect
+    - Prefer tabs when opening documents: Always
     - Double clicking a title bar: NO
     - Minimize windows into application icon: Yes
     - Animate opening apps: Yes
@@ -1347,7 +1348,7 @@ All things reading writing and publishing.
 - Install [[https://pandoc.org/installing.html][Pandoc]]
 - Install [[https://windjview.sourceforge.io/][WinDjView (aka MacDjView)]]
 - Install [[https://pandoc.org/installing.html][Pandoc]]
-- Install [[https://smilesoftware.com/pdfpen][PDFpen PRO]] then license it 
+- Install [[https://smilesoftware.com/pdfpen][PDFpen PRO]] then license it
 
 *** macOS System Dictionary
 :PROPERTIES:
