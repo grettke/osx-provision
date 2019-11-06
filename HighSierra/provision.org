@@ -1395,6 +1395,13 @@ ln -s ~/src/macoslocaldictionary/LocalDictionary ~/Library/Spelling/LocalDiction
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:A0004B01-D7F4-4D4B-A42B-2F20B77D6A0B
 :END:
+
+- Install Fonts
+  - [[https://downloads.sourceforge.net/vietunicode/hannomH.zip][HAN NOM A and B]]
+  - [[https://software.sil.org/annapurna/][ANNAPURNA SIL]]
+  - [[http://www.quivira-font.com/][Quivira]]
+  - [[http://users.teilar.gr/~g1951d/][Symbola]]
+
 **** MacTeX 2019
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:8C2DD58B-618C-40BF-8B38-077A88A0F9A7
