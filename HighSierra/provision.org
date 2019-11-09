@@ -301,7 +301,7 @@ cd ~/src
 git clone https://code.orgmode.org/bzg/org-mode.git
 cd org-mode
 git fetch && git fetch --tags
-git checkout release_9.0.9
+git checkout release_9.0.9 -b local9.0.9
 make autoloads
 
 cd ~/src/GNU-bash-mac-installer
@@ -1349,7 +1349,8 @@ All things reading writing and publishing.
 - Install [[https://windjview.sourceforge.io/][WinDjView (aka MacDjView)]]
 - Install [[https://pandoc.org/installing.html][Pandoc]]
 - Install [[https://smilesoftware.com/pdfpen][PDFpen PRO]] then license it
-
+- Copy over the =.netrc=
+  
 *** macOS System Dictionary
 :PROPERTIES:
 :ID:       org_gcr_2019-10-29T18-37-57-05-00_Grants-MBP:370DF9EC-820F-4384-938D-24775D9397C9
